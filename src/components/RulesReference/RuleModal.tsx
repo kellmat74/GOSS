@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { useRules } from "../../context/RulesContext";
 
 export function RuleModal() {
-  const { activeRule, history, closeRule, goBack, openRule } = useRules();
+  const { activeRule, history, closeRule, goBack, openRule, getRuleBySection } = useRules();
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -80,16 +80,22 @@ export function RuleModal() {
               <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-stone-500">
                 See Also
               </h4>
-              <div className="flex flex-wrap gap-2">
-                {activeRule.crossRefs.map((ref) => (
-                  <button
-                    key={ref}
-                    onClick={() => openRule(ref)}
-                    className="rounded bg-stone-800 px-2 py-1 text-xs font-mono text-amber-400 hover:bg-stone-700 hover:text-amber-300 transition-colors"
-                  >
-                    §{ref}
-                  </button>
-                ))}
+              <div className="flex flex-col gap-1.5">
+                {activeRule.crossRefs.map((ref) => {
+                  const refRule = getRuleBySection(ref);
+                  return (
+                    <button
+                      key={ref}
+                      onClick={() => openRule(ref)}
+                      className="flex items-baseline gap-2 rounded bg-stone-800 px-2 py-1.5 text-left text-xs hover:bg-stone-700 transition-colors"
+                    >
+                      <span className="shrink-0 font-mono text-amber-400">§{ref}</span>
+                      {refRule && (
+                        <span className="text-stone-400">{refRule.title}</span>
+                      )}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           )}
