@@ -639,7 +639,7 @@
     "section": "4.2.2",
     "title": "Taking Step Losses",
     "summary": "Mark unit step losses using specific procedures; a unit's PR, armor rating, AT rating and MA are unaffected by losses.",
-    "text": "Mark unit step losses using the below procedures:\n\n**Important:** A unit's PR, armor rating, AT rating and MA are unaffected by losses.\n\n**Z-step Units:** Eliminate the unit if it suffers any type of loss (4.1.3).\n\n**One-Step Units:** Eliminate the unit if it suffers one step loss.\n\n**Exception:** If the unit has a Z-step unit on its reverse side, flip the counter so that the Z-step side shows.\n\n**Two-Step Units:**\n\n**First Step Loss:** Flip the counter over so that its reduced side shows. The combat factors printed on the reduced side of the counter are its CS.\n\n**Second Step Loss:** Eliminate the unit when it suffers its second step loss.\n\n**Three Step Units:**\n\n**First Step Loss:** Flip the counter over so that its reduced side shows. The combat factors printed on the reduced side of the counter are its CS.\n\n**Second Step Loss:** The counter continues to have its reduced side showing. Place an ace of spade marker under the unit. Calculate the unit's CS by halving the combat factors shown on its reduced side.\n\n**Example:** If a three-step Bn. with a combat strength of **7-8** takes a step loss, flip it over so that its reduced side is up. The Bn. now has a CS of **5-6**. If the unit suffers a second step loss, place a hit marker under the unit. The Bn.'s CS would now be **3-3** (5÷2 = 2.5 and 6÷2 = 3).\n\n**Third Step Loss:** Eliminate the unit when it suffers its third step loss.\n\n• Players place eliminated units in the corresponding Eliminated Units Box.\n\n**a)** Players must keep units eliminated while isolated separate from other eliminated units (22.5.0).\n\n**b)** Players cannot resurrect eliminated HQ on the same GD of elimination. Place eliminated HQ in the next GD Box on the GTRT. Place them in the Eliminated Units Box at the beginning of that GD.\n\n**Important:** See 22.6.0 to determine hybrid step losses and replacements.",
+    "text": "Mark unit step losses using the below procedures:\n\n**Important:** A unit's PR, armor rating, AT rating and MA are unaffected by losses.\n\n**Z-step Units:** Eliminate the unit if it suffers any type of loss (4.1.3).\n\n**One-Step Units:** Eliminate the unit if it suffers one step loss.\n\n**Exception:** If the unit has a Z-step unit on its reverse side, flip the counter so that the Z-step side shows.\n\n**Two-Step Units:**\n\n**First Step Loss:** Flip the counter over so that its reduced side shows. The combat factors printed on the reduced side of the counter are its CS.\n\n**Second Step Loss:** Eliminate the unit when it suffers its second step loss.\n\n**Three Step Units:**\n\n**Second Step Loss:** The counter continues to have its reduced side showing. Place an ace of spade marker under the unit. Calculate the unit's CS by halving the combat factors shown on its reduced side.\n\n**Example:** If a three-step Bn. with a combat strength of **7-8** takes a step loss, flip it over so that its reduced side is up. The Bn. now has a CS of **5-6**. If the unit suffers a second step loss, place a hit marker under the unit. The Bn.'s CS would now be **3-3** (5÷2 = 2.5 and 6÷2 = 3).\n\n**Third Step Loss:** Eliminate the unit when it suffers its third step loss.\n\n• Players place eliminated units in the corresponding Eliminated Units Box.\n\n**a)** Players must keep units eliminated while isolated separate from other eliminated units (22.5.0).\n\n**b)** Players cannot resurrect eliminated HQ on the same GD of elimination. Place eliminated HQ in the next GD Box on the GTRT. Place them in the Eliminated Units Box at the beginning of that GD.\n\n**Important:** See 22.6.0 to determine hybrid step losses and replacements.",
     "crossRefs": [
       "4.1.3",
       "22.5.0",
@@ -1695,7 +1695,7 @@
     "section": "7.7.5",
     "title": "GenS Movement Restriction",
     "summary": "Units cannot move into a hex that they are unable to trace a line of GenS within three hexes of an enemy unit (i.e., two intervening hexes).",
-    "text": "Units cannot move into a hex that they are unable to trace a line of GenS (15.2.0 & 15.5.0) that is within three hexes of an enemy unit (i.e., two intervening hexes).\n\n**Exception:** CDO units and units in an MR bonus period are exempt from the above restriction.\n\n**Important:** This rule does not apply to units advancing or retreating after FS or GA (11.6.0, 11.7.0, 13.11.0 & 13.12.0).\n\n• A unit that begins a friendly Movement Phase in a situation that it cannot trace a line of supply to its PSS, may move towards a friendly supply source in violation of this rule.\n• A unit marked OoS cannot move into a hex adjacent to an enemy unit.\n\n**Exception:** CDO units and units in an MR bonus period are exempt from the above restriction.\n\n**Designer's Note:** This is a key element of the **GOSS** system. Players may not run units willy-nilly about behind enemy lines without having to also ensure they are able to maintain their supply lines. You will find that unlike other games, your cardboard troops are quite mindful of the precariousness of being out of supply. The exception for advancing/retreating units allows for troops to take ground they have been fighting over at the small risk of being temporarily only one hex outside of normal supply. Units in MR mode have loaded up on supplies as part of their time off the line and are prepared for a deep exploitation of enemy lines, but even that extra supply only lasts two days.",
+    "text": "Units cannot move into a hex that they are unable to trace a line of GenS (15.2.0 & 15.5.0) that is within three hexes of an enemy unit (i.e., two intervening hexes).\n\n**Exception:** CDO units and units in an MR bonus period are exempt from the above restriction.\n\n**Important:** This rule does not apply to units advancing or retreating after FS or GA (11.6.0, 11.7.0, 13.11.0 & 13.12.0).\n\n• A unit that begins a friendly Movement Phase in a situation that it cannot trace a line of supply to its PSS, may move towards a friendly supply source in violation of this rule.\n• A unit marked OoS cannot move into a hex adjacent to an enemy unit.\n\n**Designer's Note:** This is a key element of the **GOSS** system. Players may not run units willy-nilly about behind enemy lines without having to also ensure they are able to maintain their supply lines. You will find that unlike other games, your cardboard troops are quite mindful of the precariousness of being out of supply. The exception for advancing/retreating units allows for troops to take ground they have been fighting over at the small risk of being temporarily only one hex outside of normal supply. Units in MR mode have loaded up on supplies as part of their time off the line and are prepared for a deep exploitation of enemy lines, but even that extra supply only lasts two days.",
     "crossRefs": [
       "15.2.0",
       "15.5.0",
@@ -1959,12 +1959,49 @@
     ]
   },
   {
+    "id": "7.12.4c",
+    "section": "7.12.4c",
+    "title": "Allied Engineer Units",
+    "summary": "Allied Eng units are normally Leg class units (Exception: Allied Inf Eng), however, each Allied Leg class Eng unit possesses its own inherent transport capability. Players may not transfer this capability to other units. Allied Eng units do not require the use of army TP or Allied inherent transport. They are subject to the combat restrictions in 7.12.5.",
+    "text": "Allied Eng units are normally Leg class units (**Exception:** Allied Inf Eng), however, each Allied Leg class Eng unit possesses its own inherent transport capability.\n\n• Players may not transfer this capability to other units.\n\n• Allied Eng units do not require the use of army TP or Allied inherent transport.\n\n• They are subject to the combat restrictions in 7.12.5.",
+    "crossRefs": [
+      "7.12.5",
+      "7.12.3a",
+      "7.12.3b"
+    ]
+  },
+  {
+    "id": "7.12.5",
+    "section": "7.12.5",
+    "title": "Transported Units & Combat",
+    "summary": "Units motorized using any of the methods outlined in 7.12.3 cannot participate in an overrun, be attack designated, contribute to RIB, be CR designated, or conduct a FS mission. They may defend against a GA normally if a personnel type unit, and defend against a GA with a defensive strength of one if an AT or Art unit.",
+    "text": "Units motorized using any of the methods outlined in 7.12.3 cannot:\n\n**a)** Participate in an overrun.\n**b)** Be attack designated (marked with a TA or PA marker).\n**c)** Contribute to RIB.\n**d)** Be CR designated.\n**e)** Conduct a FS mission.\n\nUnits motorized as above:\n\n**a)** Defend against a GA normally if a personnel type unit.\n**b)** Defend against a GA with a defensive strength of one, if an AT or Art unit.",
+    "crossRefs": [
+      "7.12.3",
+      "7.12.3a",
+      "7.12.3b",
+      "7.12.4c"
+    ]
+  },
+  {
     "id": "7.13.0",
     "section": "7.13.0",
     "title": "Delay Markers",
     "summary": "Games in the series may provide delay markers for one side or the other. To deploy a delay marker a unit must meet several requirements including being a personnel type unit with a defensive PR of 5 or greater.",
     "text": "Games in the series may provide delay markers for one side or the other. To deploy a delay marker a unit must:\n\n**a)** Be a personnel type unit (Leg or Mech class).\n**b)** Have a defensive PR of 5 or greater.\n**c)** Have at least two steps remaining.\n**d)** Begin the Movement Phase in a hex containing allowed terrain as called for by the game's scenario rules.\n**e)** Be in GenS and in command.\n**f)** Be in Tac mode.\n\n**7.13.1 Creating Delay Units**\n\nThe number of delay markers provided with each game is the maximum number of delay markers that can be in play at any given time.\n\n**Important:** Players may not remove delay markers and use them again in the same Movement Phase.\n\n• A unit may attempt to place delay markers during the friendly Movement Phase if it meets the requirements in 7.13.0 and has not for any reason expended MP during the current Movement Phase.\n• A unit can only attempt to create one delay marker per GT.\n• A player may only make one delay marker attempt in each hex per GT.\n• To place a delay marker, the attempting unit expends one-half of its available MA (round up) and then must pass a PRC (use the unit's defensive PR).\n  **a)** If the attempt was successful, the owning player randomly picks a delay marker. Place the marker with DRM face down in the hex.\n  **b)** If the attempt fails, do not place a marker.\n• MPs expended to create a delay marker during a rest GT, do not count against a unit's total MP expenditure for fatigue purposes.\n• Units that successfully create a delay marker must vacate the hex of attempted placement using Mech road or non-road movement. Movement must be toward the unit's source of GenS.\n• After attempting to place a delay marker, a unit may not expend MP for any other purpose except movement.",
     "crossRefs": [
+      "7.13.2",
+      "7.13.3"
+    ]
+  },
+  {
+    "id": "7.13.1",
+    "section": "7.13.1",
+    "title": "Creating Delay Units",
+    "summary": "The number of delay markers provided with each game is the maximum number that can be in play at any given time. A unit may attempt to place a delay marker during the friendly Movement Phase if it meets the requirements in 7.13.0 and has not expended any MP during the current Movement Phase.",
+    "text": "The number of delay markers provided with each game is the maximum number of delay markers that can be in play at any given time.\n\n**Important:** Players may not remove delay markers and use them again in the same Movement Phase.\n\n• A unit may attempt to place delay markers during the friendly Movement Phase if it meets the requirements in 7.13.0 and has not for any reason expended MP during the current Movement Phase.\n• A unit can only attempt to create one delay marker per GT.\n• A player may only make one delay marker attempt in each hex per GT.\n• To place a delay marker, the attempting unit expends one-half of its available MA (round up) and then must pass a PRC (use the unit's defensive PR).\n\n**a)** If the attempt was successful, the owning player randomly picks a delay marker. Place the marker with DRM face down in the hex.\n**b)** If the attempt fails, do not place a marker.\n\n• MPs expended to create a delay marker during a rest GT, do not count against a unit's total MP expenditure for fatigue purposes.\n• Units that successfully create a delay marker must vacate the hex of attempted placement using Mech road or non-road movement. Movement must be toward the unit's source of GenS.\n• After attempting to place a delay marker, a unit may not expend MP for any other purpose except movement.",
+    "crossRefs": [
+      "7.13.0",
       "7.13.2",
       "7.13.3"
     ]
@@ -2004,6 +2041,32 @@
       "7.13.0",
       "7.14.3",
       "7.14.4"
+    ]
+  },
+  {
+    "id": "7.14.1",
+    "section": "7.14.1",
+    "title": "Eligible Bridges",
+    "summary": "Prior to conducting any movement, the phasing player must designate the target bridge for the CdM. The bridge must cross a major or great river hexside, be intact, be more than five hexes from any friendly unit, and have an enemy unit on the opposite side of the bridge.",
+    "text": "Prior to conducting any movement, the phasing player must designate the target bridge for the CdM. To be eligible for a CdM attempt the bridge must:\n\n**a)** Cross a major or great river hexside; and,\n**b)** Be intact (not destroyed); and,\n**c)** Be more than five hexes from any unit friendly to the attempting side; and,\n**d)** Have an enemy unit on the opposite side of the bridge (in the hex with the bridge hexside).",
+    "crossRefs": [
+      "7.14.0",
+      "7.14.2",
+      "7.14.3"
+    ]
+  },
+  {
+    "id": "7.14.2",
+    "section": "7.14.2",
+    "title": "CdM Unit Requirements",
+    "summary": "After designating the bridge, the phasing player must designate the unit(s) attempting the CdM. A player can only attempt one CdM per bridge per phase and may only designate one unit per attempt. The attempting unit must have enough MPs to enter the CdM hex and may be from an unsupported formation.",
+    "text": "After designating the bridge, the phasing player must designate the unit(s) attempting the CdM.\n\n• A player can only attempt one CdM per bridge in each Movement or Exploit Phase.\n• A player can only designate one unit per attempt.\n\n**Important:** When using 6.2.0 to move multiple units as one unit, the player can only use a maximum of three steps to perform the CdM.\n\nThe unit(s) attempting the CdM movement:\n\n**a)** Must have enough MPs to enter the CdM hex.\n**b)** The designated unit may be from an unsupported formation; however, they suffer all the penalties outlined in 15.4.3, including the requirement to expend AmP.\n**c)** Ignore all MH requirements created by the units in the CdM target hex. This includes a halt required by the units themselves or their ability to spot for Art units.\n**d)** Ignore the MP cost for moving adjacent to the enemy units occupying the CdM target hex.",
+    "crossRefs": [
+      "6.2.0",
+      "7.14.0",
+      "7.14.1",
+      "7.14.3",
+      "15.4.3"
     ]
   },
   {
@@ -3633,7 +3696,7 @@
     "section": "13.10.4c",
     "title": "Conduct Full Retreat",
     "summary": "All participating units must retreat the maximum distance allowed. Units cannot stop their retreat prior to fulfilling all discretionary hits unless they have no other options.",
-    "text": "All participating units must retreat the maximum distance allowed.\n\n• Units cannot stop their retreat prior to fulfilling all discretionary hits unless they have no other options.\n\n**Important:** If a longer alternate retreat path is available, a player cannot choose to retreat into a hex that would require halting a retreat prior to retreating the maximum distance allowed.\n\n• If after resolving all mandatory hits there is only one discretionary hit to resolve, attack designated units may withdraw into a DW occupying their hex.\n\n**Important:** This option does not require that all attacking units occupy a hex with a DW. Units that do not occupy a hex with a DW must follow the below procedure.\n\n• The owning player must retreat one hex (up to the unit's maximum retreat distance) for each discretionary hit.\n• If the units cannot retreat a minimum of one hex, for any reason, the owning player resolves discretionary hits in the following order:\n\n**1)** Inflict step losses on all units, up to the Max step loss limit (previous losses count).\n\n**2)** If the units meet the Max step loss limit and there are remaining discretionary hits, the player must convert remaining discretionary hits into fatigue hits on all units. A player may convert a maximum of two discretionary hits into fatigue hits.\n\n**3)** If the player has applied two fatigue hits and there are remaining discretionary hits, ignore all remaining discretionary hits.\n\n**4)** If part of a retreating force retreats enough hexes to fulfill all discretionary hits and another part cannot, the units that were unable to fulfill the total discretionary hits as retreats apply all remaining hits using steps 1 through 3 above.\n\n• If all units can retreat at least one hex, but are all unable to retreat (for any reason, including maximum retreat distance) the number of hexes needed to fulfill all discretionary hits, the owning player must absorb remaining discretionary hits in the following order:\n\n**1)** Inflict step losses on all units, up to the Max step loss limit (previous losses count).\n\n**2)** If the units meet the Max step loss limit and there are remaining discretionary hits, the player must convert remaining discretionary hits into fatigue hits on all units. A player may convert a maximum of two discretionary hits into fatigue hits.\n\n**3)** If the player has applied two fatigue hits and there are remaining discretionary hits, ignore all remaining discretionary hits.\n\n**4)** If part of a retreating force retreats enough hexes to fulfill all discretionary hits and another part cannot, the units that were unable to fulfill the total discretionary hits as retreats apply remaining hits using steps 1 through 3 above.",
+    "text": "All participating units must retreat the maximum distance allowed.\n\n• Units cannot stop their retreat prior to fulfilling all discretionary hits unless they have no other options.\n\n**Important:** If a longer alternate retreat path is available, a player cannot choose to retreat into a hex that would require halting a retreat prior to retreating the maximum distance allowed.\n\n• If after resolving all mandatory hits there is only one discretionary hit to resolve, attack designated units may withdraw into a DW occupying their hex.\n\n**Important:** This option does not require that all attacking units occupy a hex with a DW. Units that do not occupy a hex with a DW must follow the below procedure.\n\n• The owning player must retreat one hex (up to the unit's maximum retreat distance) for each discretionary hit.\n• If the units cannot retreat a minimum of one hex, for any reason, the owning player resolves discretionary hits in the following order:\n\n**1)** Inflict step losses on all units, up to the Max step loss limit (previous losses count).\n\n**2)** If the units meet the Max step loss limit and there are remaining discretionary hits, the player must convert remaining discretionary hits into fatigue hits on all units. A player may convert a maximum of two discretionary hits into fatigue hits.\n\n**3)** If the player has applied two fatigue hits and there are remaining discretionary hits, ignore all remaining discretionary hits.\n\n**4)** If part of a retreating force retreats enough hexes to fulfill all discretionary hits and another part cannot, the units that were unable to fulfill the total discretionary hits as retreats apply all remaining hits using steps 1 through 3 above.\n\n• If all units can retreat at least one hex, but are all unable to retreat (for any reason, including maximum retreat distance) the number of hexes needed to fulfill all discretionary hits, the owning player must absorb remaining discretionary hits in the following order:\n\n**4)** If part of a retreating force retreats enough hexes to fulfill all discretionary hits and another part cannot, the units that were unable to fulfill the total discretionary hits as retreats apply remaining hits using steps 1 through 3 above.",
     "crossRefs": []
   },
   {
