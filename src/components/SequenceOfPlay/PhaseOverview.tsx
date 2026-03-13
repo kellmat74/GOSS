@@ -33,7 +33,7 @@ export function PhaseOverview({
                   !phaseActive
                     ? "text-stone-300 line-through dark:text-stone-600"
                     : isCurrent
-                    ? "bg-amber-100 font-semibold text-amber-900 dark:bg-amber-900/30 dark:text-amber-200"
+                    ? "bg-accent-100 font-semibold text-accent-900 dark:bg-accent-900/30 dark:text-accent-200"
                     : isPast
                     ? "text-stone-400 dark:text-stone-500"
                     : "text-stone-600 hover:bg-stone-200 dark:text-stone-400 dark:hover:bg-stone-700"
@@ -65,7 +65,7 @@ export function PhaseOverview({
                             !subActive
                               ? "text-stone-300 line-through dark:text-stone-600"
                               : isSubCurrent
-                              ? "bg-amber-50 font-semibold text-amber-800 dark:bg-amber-900/20 dark:text-amber-300"
+                              ? "bg-accent-50 font-semibold text-accent-800 dark:bg-accent-900/20 dark:text-accent-300"
                               : isSubPast
                               ? "text-stone-400 dark:text-stone-500"
                               : "text-stone-500 hover:bg-stone-200 dark:text-stone-400 dark:hover:bg-stone-700"

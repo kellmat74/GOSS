@@ -82,7 +82,7 @@ export function SoPFlowchart() {
             onClick={() => selectTab(def.id)}
             className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
               activeId === def.id
-                ? "bg-amber-600 text-white"
+                ? "bg-accent-600 text-white"
                 : "bg-stone-700 text-stone-300 hover:bg-stone-600"
             }`}
           >
@@ -97,7 +97,7 @@ export function SoPFlowchart() {
       {/* Legend */}
       <div className="mb-4 flex flex-wrap gap-4 text-xs text-stone-400">
         <span className="flex items-center gap-1">
-          <span className="inline-block h-3 w-3 rounded bg-amber-600" /> Start/End
+          <span className="inline-block h-3 w-3 rounded bg-accent-600" /> Start/End
         </span>
         <span className="flex items-center gap-1">
           <span className="inline-block h-3 w-3 rounded bg-blue-600" /> Decision/Loop
@@ -112,7 +112,7 @@ export function SoPFlowchart() {
           <span className="inline-block h-3 w-3 rounded bg-purple-700" /> Logistics
         </span>
         <span className="flex items-center gap-1">
-          <span className="inline-block h-3 w-3 rounded border border-amber-400 bg-transparent" /> Click to drill down
+          <span className="inline-block h-3 w-3 rounded border border-accent-400 bg-transparent" /> Click to drill down
         </span>
       </div>
 

@@ -97,11 +97,11 @@ export function PhaseStepper({
 
       {/* Sub-phase indicator */}
       {subPhase && (
-        <div className="mb-4 rounded-lg border border-amber-200 bg-amber-50 p-3 dark:border-amber-800 dark:bg-amber-900/20">
-          <div className="text-xs font-medium uppercase tracking-wide text-amber-600 dark:text-amber-400">
+        <div className="mb-4 rounded-lg border border-accent-200 bg-accent-50 p-3 dark:border-accent-800 dark:bg-accent-900/20">
+          <div className="text-xs font-medium uppercase tracking-wide text-accent-600 dark:text-accent-400">
             Sub-Phase
           </div>
-          <div className="mt-0.5 text-lg font-semibold text-amber-900 dark:text-amber-200">
+          <div className="mt-0.5 text-lg font-semibold text-accent-900 dark:text-accent-200">
             {subPhase.name}
           </div>
           {subPhase.ruleRef && (
@@ -163,7 +163,7 @@ export function PhaseStepper({
                       type="checkbox"
                       checked={checked}
                       onChange={() => onToggleChecklist(key)}
-                      className="mt-0.5 h-4 w-4 rounded border-stone-300 text-amber-600 focus:ring-amber-500"
+                      className="mt-0.5 h-4 w-4 rounded border-stone-300 text-accent-600 focus:ring-accent-500"
                     />
                     <RuleInlineText
                       text={item}
@@ -197,14 +197,14 @@ export function PhaseStepper({
         {isAtEnd ? (
           <button
             onClick={onAdvanceTurn}
-            className="rounded-lg bg-amber-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-amber-700"
+            className="rounded-lg bg-accent-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-700"
           >
             Next Turn &rarr;
           </button>
         ) : (
           <button
             onClick={onNext}
-            className="rounded-lg bg-amber-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-amber-700"
+            className="rounded-lg bg-accent-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-700"
           >
             Next &rarr;
           </button>

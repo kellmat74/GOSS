@@ -99,7 +99,7 @@ export function ReactFlowChart({ def, onDrillDown }: ReactFlowChartProps) {
               onClick={() => setEditMode((e) => !e)}
               className={`rounded px-3 py-1.5 text-xs font-medium transition-colors ${
                 editMode
-                  ? "bg-amber-600 text-white"
+                  ? "bg-accent-600 text-white"
                   : "bg-stone-700 text-stone-300 hover:bg-stone-600"
               }`}
             >

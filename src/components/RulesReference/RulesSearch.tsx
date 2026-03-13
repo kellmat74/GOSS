@@ -31,7 +31,7 @@ export function RulesSearch({ rules }: RulesSearchProps) {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search rules by title, section number, or content..."
-        className="mb-2 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500 dark:border-stone-600 dark:bg-stone-800"
+        className="mb-2 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 dark:border-stone-600 dark:bg-stone-800"
       />
 
       <p className="mb-4 text-xs text-stone-500">
@@ -56,7 +56,7 @@ export function RulesSearch({ rules }: RulesSearchProps) {
                 onClick={() => openRule(rule.section)}
                 className="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-stone-50 dark:hover:bg-stone-700/50 transition-colors"
               >
-                <span className="shrink-0 rounded bg-stone-700 px-1.5 py-0.5 text-xs font-mono text-amber-400">
+                <span className="shrink-0 rounded bg-stone-700 px-1.5 py-0.5 text-xs font-mono text-accent-400">
                   {rule.section}
                 </span>
                 <div className="min-w-0 flex-1">

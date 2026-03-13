@@ -1,1 +1,44 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-accent-50: var(--accent-50);
+  --color-accent-100: var(--accent-100);
+  --color-accent-200: var(--accent-200);
+  --color-accent-300: var(--accent-300);
+  --color-accent-400: var(--accent-400);
+  --color-accent-500: var(--accent-500);
+  --color-accent-600: var(--accent-600);
+  --color-accent-700: var(--accent-700);
+  --color-accent-800: var(--accent-800);
+  --color-accent-900: var(--accent-900);
+}
+
+/* Light theme: olive green accents from GOSS 2020 rules PDF */
+:root {
+  --accent-50: #f4f6ee;
+  --accent-100: #e4e9d5;
+  --accent-200: #c8d3ab;
+  --accent-300: #a5b87a;
+  --accent-400: #7d9a4e;
+  --accent-500: #4B5320;
+  --accent-600: #3d4419;
+  --accent-700: #2f3513;
+  --accent-800: #22270e;
+  --accent-900: #151809;
+}
+
+/* Dark theme: amber accents */
+.dark {
+  --accent-50: #fffbeb;
+  --accent-100: #fef3c7;
+  --accent-200: #fde68a;
+  --accent-300: #fcd34d;
+  --accent-400: #fbbf24;
+  --accent-500: #f59e0b;
+  --accent-600: #d97706;
+  --accent-700: #b45309;
+  --accent-800: #92400e;
+  --accent-900: #78350f;
+}

@@ -54,7 +54,7 @@ export function RuleModal() {
                   ←
                 </button>
               )}
-              <span className="rounded bg-amber-600/20 px-2 py-0.5 font-mono text-sm text-amber-400">
+              <span className="rounded bg-accent-600/20 px-2 py-0.5 font-mono text-sm text-accent-400">
                 §{activeRule.section}
               </span>
             </div>
@@ -89,7 +89,7 @@ export function RuleModal() {
                       onClick={() => openRule(ref)}
                       className="flex items-baseline gap-2 rounded bg-stone-800 px-2 py-1.5 text-left text-xs hover:bg-stone-700 transition-colors"
                     >
-                      <span className="shrink-0 font-mono text-amber-400">§{ref}</span>
+                      <span className="shrink-0 font-mono text-accent-400">§{ref}</span>
                       {refRule && (
                         <span className="text-stone-400">{refRule.title}</span>
                       )}
@@ -239,7 +239,7 @@ function InlineText({ text, onRuleClick }: { text: string; onRuleClick: (ref: st
                 e.stopPropagation();
                 onRuleClick(part.ref);
               }}
-              className="font-mono text-amber-400 hover:text-amber-300 hover:underline"
+              className="font-mono text-accent-400 hover:text-accent-300 hover:underline"
             >
               ({part.ref})
             </button>

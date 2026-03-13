@@ -21,7 +21,7 @@ export function TurnInfo({ timeOfDay, onChangeTimeOfDay }: TurnInfoProps) {
           onClick={() => onChangeTimeOfDay(opt.value)}
           className={`rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${
             timeOfDay === opt.value
-              ? "bg-amber-600 text-white"
+              ? "bg-accent-600 text-white"
               : "text-stone-500 hover:bg-stone-100 dark:text-stone-400 dark:hover:bg-stone-700"
           }`}
         >

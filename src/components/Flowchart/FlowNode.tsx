@@ -12,7 +12,7 @@ const variantStyles: Record<string, string> = {
   default:
     "bg-stone-800 border-stone-600 text-stone-100",
   "start-end":
-    "bg-amber-600 border-amber-500 text-white",
+    "bg-accent-600 border-accent-500 text-white",
   phasing:
     "bg-green-700 border-green-600 text-white",
   "non-phasing":
@@ -41,7 +41,7 @@ export function FlowNode({ data }: NodeProps) {
     <div
       className={`relative rounded-lg border-2 px-4 py-2 text-center text-sm shadow-md transition-all ${
         variantStyles[variant]
-      } ${hasDrill ? "cursor-pointer ring-2 ring-amber-400/40 hover:ring-amber-400" : ""}`}
+      } ${hasDrill ? "cursor-pointer ring-2 ring-accent-400/40 hover:ring-accent-400" : ""}`}
     >
       <Handle type="target" position={Position.Top} className="!bg-stone-500 !w-2 !h-2" />
 

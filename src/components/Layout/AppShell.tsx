@@ -1,16 +1,35 @@
 import { useState, type ReactNode } from "react";
 
+export interface TabDef {
+  key: string;
+  label: string;
+}
+
 interface AppShellProps {
   sidebar: ReactNode;
   children: ReactNode;
   turnInfo: ReactNode;
+  tabs: TabDef[];
+  activeTab: string;
+  onTabChange: (key: string) => void;
+  theme: "light" | "dark";
+  onToggleTheme: () => void;
 }
 
-export function AppShell({ sidebar, children, turnInfo }: AppShellProps) {
+export function AppShell({
+  sidebar,
+  children,
+  turnInfo,
+  tabs,
+  activeTab,
+  onTabChange,
+  theme,
+  onToggleTheme,
+}: AppShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-stone-50 text-stone-900 dark:bg-stone-900 dark:text-stone-100">
+    <div className="flex h-screen bg-white text-stone-900 dark:bg-stone-900 dark:text-stone-100">
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
         <div
@@ -21,11 +40,11 @@ export function AppShell({ sidebar, children, turnInfo }: AppShellProps) {
 
       {/* Sidebar */}
       <aside
-        className={`fixed z-40 h-full w-72 transform overflow-y-auto border-r border-stone-200 bg-stone-100 transition-transform dark:border-stone-700 dark:bg-stone-800 lg:static lg:translate-x-0 ${
+        className={`fixed z-40 h-full w-72 transform overflow-y-auto border-r border-stone-200 bg-stone-50 transition-transform dark:border-stone-700 dark:bg-stone-800 lg:static lg:translate-x-0 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="sticky top-0 z-10 border-b border-stone-200 bg-stone-100 p-3 dark:border-stone-700 dark:bg-stone-800">
+        <div className="sticky top-0 z-10 border-b border-stone-200 bg-stone-50 p-3 dark:border-stone-700 dark:bg-stone-800">
           <h1 className="text-lg font-bold tracking-tight">GOSS Assistant</h1>
           <div className="mt-1 text-sm text-stone-500 dark:text-stone-400">
             Wacht am Rhein
@@ -37,17 +56,55 @@ export function AppShell({ sidebar, children, turnInfo }: AppShellProps) {
       {/* Main content */}
       <div className="flex min-w-0 flex-1 flex-col">
         {/* Top bar */}
-        <header className="flex items-center gap-3 border-b border-stone-200 bg-white px-4 py-2 dark:border-stone-700 dark:bg-stone-800">
+        <header className="flex items-center border-b border-stone-200 bg-white px-3 py-2 dark:border-stone-700 dark:bg-stone-800">
+          {/* Left: hamburger + time of day */}
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              className="rounded p-1.5 hover:bg-stone-100 dark:hover:bg-stone-700 lg:hidden"
+              aria-label="Toggle sidebar"
+            >
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            {turnInfo}
+          </div>
+
+          {/* Center: tabs */}
+          <div className="flex flex-1 items-center justify-center gap-1">
+            {tabs.map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => onTabChange(tab.key)}
+                className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                  activeTab === tab.key
+                    ? "bg-accent-500 text-white"
+                    : "text-stone-500 hover:bg-stone-100 dark:text-stone-400 dark:hover:bg-stone-700"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Right: theme toggle */}
           <button
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="rounded p-1.5 hover:bg-stone-100 dark:hover:bg-stone-700 lg:hidden"
-            aria-label="Toggle sidebar"
+            onClick={onToggleTheme}
+            className="rounded-md p-1.5 text-stone-500 hover:bg-stone-100 dark:text-stone-400 dark:hover:bg-stone-700"
+            aria-label="Toggle theme"
+            title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
           >
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            {theme === "dark" ? (
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            ) : (
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            )}
           </button>
-          {turnInfo}
         </header>
 
         {/* Main area */}
