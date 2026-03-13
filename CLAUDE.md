@@ -15,7 +15,7 @@ Interactive companion app for the **GOSS (Grand Operational Simulation Series) 2
 
 ### Key Data Files
 - `src/data/goss/sequence.json` — Sequence of Play phases, sub-phases, checklists, notes
-- `src/data/goss/rules.json` — 590 extracted rule entries (sections 1.0–26.0, GOSS System Rules 2020)
+- `src/data/goss/rules.json` — 595 extracted rule entries (sections 1.0–26.0, GOSS System Rules 2020)
 - `docs/Bx_GOSS_Rules_2020-WEB.pdf` — Source PDF for rule extraction
 
 ### Views (tabs in AppShell)
@@ -41,6 +41,13 @@ Interactive companion app for the **GOSS (Grand Operational Simulation Series) 2
 - Reset button in checklist header for manual clear
 - State persisted to localStorage via `useSoPProgress` hook
 
+### Time of Day Toggle
+- Header bar has AM / PM / Night / ENA segmented toggle (replaces old Turn/Date display)
+- `GameTurn` type simplified to just `{ timeOfDay: TimeOfDay }` — no turn number or date (physical board tracks that)
+- ENA = Extended Night Action (scenario-dependent)
+- `useSoPProgress` migrates old localStorage format automatically
+- "Next Turn" button at end of sequence cycles AM→PM→Night→AM and resets to phase 1
+
 ## Lessons Learned
 
 ### PDF Extraction
@@ -61,13 +68,12 @@ Interactive companion app for the **GOSS (Grand Operational Simulation Series) 2
 - For iPad testing, use new incognito tabs after deploy (Safari caches aggressively within sessions)
 
 ## Current State (March 2026)
-- 590 rules extracted covering all 26 sections of GOSS 2020 System Rules
-- 5 minor sub-sections still unresolved from crossRefs (7.12.1a-related)
+- 595 rules extracted covering all 26 sections of GOSS 2020 System Rules, zero unresolved crossRefs
 - Clickable rule references in: Flowchart nodes, Flowchart info panel, Steps view (description, notes, checklists), Breadcrumb, Sidebar
 - Rule modal with cross-ref navigation and history stack
 - No scenario-specific rules yet (WaR, Hurtgen, Atlantic Wall, Lucky Forward) — data model supports it via `module` field
 
 ## Future Work
 - Scenario-specific rules (WaR etc.) with game selector
-- Rule text improvements (some extraction artifacts remain)
+- Time-of-day-aware phase filtering (skip/highlight phases based on AM/PM/Night/ENA)
 - Enhanced search (fuzzy matching, section tree navigation)

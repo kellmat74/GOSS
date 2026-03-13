@@ -28,6 +28,7 @@ function App() {
     prevStep,
     toggleChecklist,
     clearChecklist,
+    setTimeOfDay,
     advanceTurn,
   } = useSoPProgress(phases);
 
@@ -71,7 +72,7 @@ function App() {
     <RulesProvider rules={allRules}>
       <AppShell
         sidebar={sidebar}
-        turnInfo={<TurnInfo turn={progress.gameTurn} />}
+        turnInfo={<TurnInfo timeOfDay={progress.gameTurn.timeOfDay} onChangeTimeOfDay={setTimeOfDay} />}
       >
         {view === "sop" && (
           <PhaseStepper

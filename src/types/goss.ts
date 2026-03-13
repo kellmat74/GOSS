@@ -39,10 +39,10 @@ export type PhaseTiming =
   | "am-pm-only"
   | "conditional";
 
+export type TimeOfDay = "AM" | "PM" | "Night" | "ENA";
+
 export interface GameTurn {
-  turnNumber: number;
-  date: string;
-  timeOfDay: "AM" | "PM" | "Night";
+  timeOfDay: TimeOfDay;
 }
 
 export interface RuleEntry {

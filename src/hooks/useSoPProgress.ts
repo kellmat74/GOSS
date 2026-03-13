@@ -1,11 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
-import type { SoPProgress, Phase, GameTurn } from "../types/goss";
+import type { SoPProgress, Phase, GameTurn, TimeOfDay } from "../types/goss";
 
 const STORAGE_KEY = "goss-sop-progress";
 
 const defaultTurn: GameTurn = {
-  turnNumber: 1,
-  date: "Dec 16, 1944",
   timeOfDay: "AM",
 };
 
@@ -19,7 +17,14 @@ const defaultProgress: SoPProgress = {
 function loadProgress(): SoPProgress {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) return JSON.parse(saved);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      // Migrate old format: strip turnNumber/date if present
+      if (parsed.gameTurn && ("turnNumber" in parsed.gameTurn || "date" in parsed.gameTurn)) {
+        parsed.gameTurn = { timeOfDay: parsed.gameTurn.timeOfDay ?? "AM" };
+      }
+      return parsed;
+    }
   } catch {
     // ignore
   }
@@ -139,24 +144,21 @@ export function useSoPProgress(phases: Phase[]) {
     setProgress(defaultProgress);
   }, []);
 
+  const setTimeOfDay = useCallback((tod: TimeOfDay) => {
+    setProgress((p) => ({
+      ...p,
+      gameTurn: { timeOfDay: tod },
+    }));
+  }, []);
+
   const advanceTurn = useCallback(() => {
     setProgress((p) => {
-      const t = p.gameTurn;
-      let next: GameTurn;
-      if (t.timeOfDay === "AM") {
-        next = { ...t, timeOfDay: "PM" };
-      } else if (t.timeOfDay === "PM") {
-        next = { ...t, timeOfDay: "Night" };
-      } else {
-        next = {
-          turnNumber: t.turnNumber + 1,
-          date: t.date, // user can update manually
-          timeOfDay: "AM",
-        };
-      }
+      const tod = p.gameTurn.timeOfDay;
+      const next: TimeOfDay =
+        tod === "AM" ? "PM" : tod === "PM" ? "Night" : "AM";
       return {
         ...defaultProgress,
-        gameTurn: next,
+        gameTurn: { timeOfDay: next },
       };
     });
   }, []);
@@ -171,6 +173,7 @@ export function useSoPProgress(phases: Phase[]) {
     toggleChecklist,
     clearChecklist,
     resetProgress,
+    setTimeOfDay,
     advanceTurn,
   };
 }

@@ -1,24 +1,33 @@
-import type { GameTurn } from "../../types/goss";
+import type { TimeOfDay } from "../../types/goss";
+
+const options: { value: TimeOfDay; label: string; icon: string }[] = [
+  { value: "AM", label: "AM", icon: "☀" },
+  { value: "PM", label: "PM", icon: "⛅" },
+  { value: "Night", label: "Night", icon: "☾" },
+  { value: "ENA", label: "ENA", icon: "☾" },
+];
 
 interface TurnInfoProps {
-  turn: GameTurn;
+  timeOfDay: TimeOfDay;
+  onChangeTimeOfDay: (tod: TimeOfDay) => void;
 }
 
-export function TurnInfo({ turn }: TurnInfoProps) {
-  const todIcon =
-    turn.timeOfDay === "AM" ? "\u2600" : turn.timeOfDay === "PM" ? "\u26C5" : "\u263E";
-
+export function TurnInfo({ timeOfDay, onChangeTimeOfDay }: TurnInfoProps) {
   return (
-    <div className="flex items-center gap-3 text-sm">
-      <span className="font-semibold">
-        Turn {turn.turnNumber}
-      </span>
-      <span className="text-stone-400">|</span>
-      <span>{turn.date}</span>
-      <span className="text-stone-400">|</span>
-      <span>
-        {todIcon} {turn.timeOfDay}
-      </span>
+    <div className="flex items-center gap-1">
+      {options.map((opt) => (
+        <button
+          key={opt.value}
+          onClick={() => onChangeTimeOfDay(opt.value)}
+          className={`rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${
+            timeOfDay === opt.value
+              ? "bg-amber-600 text-white"
+              : "text-stone-500 hover:bg-stone-100 dark:text-stone-400 dark:hover:bg-stone-700"
+          }`}
+        >
+          {opt.icon} {opt.label}
+        </button>
+      ))}
     </div>
   );
 }
