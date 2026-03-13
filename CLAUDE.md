@@ -50,6 +50,12 @@ Interactive companion app for the **GOSS (Grand Operational Simulation Series) 2
 
 ## Lessons Learned
 
+### Rules Data (`src/data/goss/rules.json`)
+When adding or editing rule entries in `rules.json`, **always include rule section references in parenthesized format** `(X.Y.Z)` so they render as clickable links in the UI. The modal's `InlineText` parser matches both `(X.Y.Z)` in parentheses and bare `X.Y.Z` (3-part only). Bold text `**like this (3.0)**` also has refs parsed via `InlineRefs`. Examples:
+- Good: `"**Artillery (Art) (5.6.0):** Art units can conduct FS missions."`
+- Good: `"See 13.7.4b for the effect of Eng units on GA."`
+- Bad: `"Artillery Art 5.6.0: Art units can conduct FS missions."` (missing parens/bold, won't link)
+
 ### PDF Extraction
 - Large PDF extraction should use many small parallel agents (9 worked well) writing to separate fragment files, then merge
 - Page boundaries cause missed sections — always verify completeness and do a follow-up pass
