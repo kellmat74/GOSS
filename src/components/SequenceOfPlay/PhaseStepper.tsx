@@ -1,7 +1,8 @@
-import type { Phase, SubPhase, SoPProgress } from "../../types/goss";
+import type { Phase, SubPhase, SoPProgress, TimeOfDay } from "../../types/goss";
 import { Breadcrumb, type BreadcrumbItem } from "../Breadcrumb";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
+import { isActiveForTimeOfDay } from "../../utils/timingFilter";
 
 interface PhaseStepperProps {
   phase: Phase | null;
@@ -14,6 +15,7 @@ interface PhaseStepperProps {
   onClearChecklist: () => void;
   onAdvanceTurn: () => void;
   onGoToPhase: (phaseIndex: number, subPhaseIndex?: number) => void;
+  timeOfDay: TimeOfDay;
 }
 
 export function PhaseStepper({
@@ -27,6 +29,7 @@ export function PhaseStepper({
   onClearChecklist,
   onAdvanceTurn,
   onGoToPhase,
+  timeOfDay,
 }: PhaseStepperProps) {
   if (!phase) {
     return (
@@ -104,6 +107,14 @@ export function PhaseStepper({
           {subPhase.ruleRef && (
             <RuleRefBadge ruleRef={subPhase.ruleRef} className="mt-0.5" />
           )}
+        </div>
+      )}
+
+      {/* Skipped banner */}
+      {!isActiveForTimeOfDay(active === subPhase ? subPhase?.timing : phase.timing, timeOfDay) && (
+        <div className="mb-4 rounded-lg border border-stone-300 bg-stone-100 p-3 text-center text-sm text-stone-500 dark:border-stone-600 dark:bg-stone-800">
+          ⏭ This {subPhase ? "sub-phase" : "phase"} is skipped during{" "}
+          <span className="font-semibold">{timeOfDay}</span> turns
         </div>
       )}
 

@@ -62,6 +62,7 @@ function App() {
           phases={phases}
           currentPhaseIndex={progress.currentPhaseIndex}
           currentSubPhaseIndex={progress.currentSubPhaseIndex}
+          timeOfDay={progress.gameTurn.timeOfDay}
           onSelectPhase={goToPhase}
         />
       )}
@@ -86,6 +87,7 @@ function App() {
             onClearChecklist={clearChecklist}
             onAdvanceTurn={advanceTurn}
             onGoToPhase={goToPhase}
+            timeOfDay={progress.gameTurn.timeOfDay}
           />
         )}
         {view === "flowchart" && <SoPFlowchart />}
