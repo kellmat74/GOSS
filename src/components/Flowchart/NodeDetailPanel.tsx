@@ -1,5 +1,6 @@
 import type { Phase } from "../../types/goss";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
+import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
 export type NodeDetail = {
   name: string;
@@ -51,7 +52,7 @@ export function NodeDetailPanel({ detail, onClose }: NodeDetailPanelProps) {
 
       {/* Description */}
       <p className="mb-4 text-sm leading-relaxed text-stone-300">
-        {detail.description}
+        <RuleInlineText text={detail.description} />
       </p>
 
       {/* Notes */}
@@ -67,7 +68,7 @@ export function NodeDetailPanel({ detail, onClose }: NodeDetailPanelProps) {
                 className="flex gap-2 text-sm text-stone-400"
               >
                 <span className="mt-0.5 text-stone-600">&bull;</span>
-                <span>{note}</span>
+                <RuleInlineText text={note} />
               </li>
             ))}
           </ul>
@@ -87,7 +88,7 @@ export function NodeDetailPanel({ detail, onClose }: NodeDetailPanelProps) {
                 className="flex gap-2 text-sm text-stone-300"
               >
                 <span className="mt-0.5 text-stone-500">☐</span>
-                <span>{item}</span>
+                <RuleInlineText text={item} />
               </li>
             ))}
           </ul>
