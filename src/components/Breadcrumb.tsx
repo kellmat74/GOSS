@@ -21,7 +21,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
           <span key={i} className="flex items-center gap-1">
             {i > 0 && <span className="text-stone-500">›</span>}
             {isLast ? (
-              <span className="font-medium text-accent-400">
+              <span className="font-medium text-accent-700 dark:text-accent-400">
                 {item.label}
                 {item.ruleRef && (
                   <RuleRefBadge ruleRef={item.ruleRef} className="ml-1" />
@@ -30,7 +30,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
             ) : (
               <button
                 onClick={item.onClick}
-                className="text-stone-400 hover:text-accent-400 transition-colors"
+                className="text-stone-400 hover:text-accent-700 dark:hover:text-accent-400 transition-colors"
               >
                 {item.label}
               </button>

@@ -17,11 +17,11 @@
 
 /* Light theme: olive green accents from GOSS 2020 rules PDF */
 :root {
-  --accent-50: #f4f6ee;
-  --accent-100: #e4e9d5;
-  --accent-200: #c8d3ab;
-  --accent-300: #a5b87a;
-  --accent-400: #7d9a4e;
+  --accent-50: #f0f2e8;
+  --accent-100: #dfe4d0;
+  --accent-200: #b8c49a;
+  --accent-300: #8a9a5e;
+  --accent-400: #3b5010;
   --accent-500: #4B5320;
   --accent-600: #3d4419;
   --accent-700: #2f3513;

@@ -56,7 +56,7 @@ export function RulesSearch({ rules }: RulesSearchProps) {
                 onClick={() => openRule(rule.section)}
                 className="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-stone-50 dark:hover:bg-stone-700/50 transition-colors"
               >
-                <span className="shrink-0 rounded bg-stone-700 px-1.5 py-0.5 text-xs font-mono text-accent-400">
+                <span className="shrink-0 rounded bg-accent-500 px-1.5 py-0.5 text-xs font-mono text-white dark:bg-stone-700 dark:text-accent-400">
                   {rule.section}
                 </span>
                 <div className="min-w-0 flex-1">

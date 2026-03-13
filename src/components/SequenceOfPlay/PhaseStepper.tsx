@@ -97,11 +97,11 @@ export function PhaseStepper({
 
       {/* Sub-phase indicator */}
       {subPhase && (
-        <div className="mb-4 rounded-lg border border-accent-200 bg-accent-50 p-3 dark:border-accent-800 dark:bg-accent-900/20">
-          <div className="text-xs font-medium uppercase tracking-wide text-accent-600 dark:text-accent-400">
+        <div className="mb-4 rounded-lg border border-accent-300 bg-accent-500 p-3 dark:border-accent-800 dark:bg-accent-900/20">
+          <div className="text-xs font-medium uppercase tracking-wide text-accent-200 dark:text-accent-400">
             Sub-Phase
           </div>
-          <div className="mt-0.5 text-lg font-semibold text-accent-900 dark:text-accent-200">
+          <div className="mt-0.5 text-lg font-semibold text-white dark:text-accent-200">
             {subPhase.name}
           </div>
           {subPhase.ruleRef && (

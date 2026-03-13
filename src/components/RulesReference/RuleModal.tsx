@@ -40,31 +40,31 @@ export function RuleModal() {
       onClick={handleOverlayClick}
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4 animate-in fade-in duration-150"
     >
-      <div className="relative flex max-h-[85vh] w-full max-w-2xl flex-col rounded-xl border border-stone-700 bg-stone-900 shadow-2xl">
+      <div className="relative flex max-h-[85vh] w-full max-w-2xl flex-col rounded-xl border border-stone-200 bg-white shadow-2xl dark:border-stone-700 dark:bg-stone-900">
         {/* Header */}
-        <div className="flex items-start justify-between border-b border-stone-700 px-6 py-4">
+        <div className="flex items-start justify-between border-b border-stone-200 px-6 py-4 dark:border-stone-700">
           <div className="flex-1">
             <div className="flex items-center gap-2">
               {history.length > 0 && (
                 <button
                   onClick={goBack}
-                  className="rounded p-1 text-stone-400 hover:bg-stone-700 hover:text-stone-200 transition-colors"
+                  className="rounded p-1 text-stone-400 hover:bg-stone-100 hover:text-stone-600 dark:hover:bg-stone-700 dark:hover:text-stone-200 transition-colors"
                   title="Go back"
                 >
                   ←
                 </button>
               )}
-              <span className="rounded bg-accent-600/20 px-2 py-0.5 font-mono text-sm text-accent-400">
+              <span className="rounded bg-accent-500/20 px-2 py-0.5 font-mono text-sm text-accent-700 dark:text-accent-400">
                 §{activeRule.section}
               </span>
             </div>
-            <h2 className="mt-2 text-xl font-bold text-stone-100">
+            <h2 className="mt-2 text-xl font-bold text-stone-900 dark:text-stone-100">
               {activeRule.title}
             </h2>
           </div>
           <button
             onClick={closeRule}
-            className="ml-4 rounded p-1.5 text-stone-400 hover:bg-stone-700 hover:text-stone-200 transition-colors"
+            className="ml-4 rounded p-1.5 text-stone-400 hover:bg-stone-100 hover:text-stone-600 dark:hover:bg-stone-700 dark:hover:text-stone-200 transition-colors"
           >
             ✕
           </button>
@@ -76,7 +76,7 @@ export function RuleModal() {
 
           {/* Cross-references */}
           {activeRule.crossRefs.length > 0 && (
-            <div className="mt-6 border-t border-stone-700 pt-4">
+            <div className="mt-6 border-t border-stone-200 pt-4 dark:border-stone-700">
               <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-stone-500">
                 See Also
               </h4>
@@ -87,11 +87,11 @@ export function RuleModal() {
                     <button
                       key={ref}
                       onClick={() => openRule(ref)}
-                      className="flex items-baseline gap-2 rounded bg-stone-800 px-2 py-1.5 text-left text-xs hover:bg-stone-700 transition-colors"
+                      className="flex items-baseline gap-2 rounded bg-stone-100 px-2 py-1.5 text-left text-xs hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 transition-colors"
                     >
-                      <span className="shrink-0 font-mono text-accent-400">§{ref}</span>
+                      <span className="shrink-0 font-mono text-accent-700 dark:text-accent-400">§{ref}</span>
                       {refRule && (
-                        <span className="text-stone-400">{refRule.title}</span>
+                        <span className="text-stone-500 dark:text-stone-400">{refRule.title}</span>
                       )}
                     </button>
                   );
@@ -103,7 +103,7 @@ export function RuleModal() {
 
         {/* Footer with history indicator */}
         {history.length > 0 && (
-          <div className="border-t border-stone-700 px-6 py-2 text-xs text-stone-500">
+          <div className="border-t border-stone-200 px-6 py-2 text-xs text-stone-500 dark:border-stone-700">
             {history.length} rule{history.length !== 1 ? "s" : ""} in history · Press Esc to go back
           </div>
         )}
@@ -119,7 +119,7 @@ function RuleText({ text, onRuleClick }: { text: string; onRuleClick: (ref: stri
   const paragraphs = text.split("\n\n").filter(Boolean);
 
   return (
-    <div className="space-y-3 text-sm leading-relaxed text-stone-300">
+    <div className="space-y-3 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
       {paragraphs.map((para, i) => (
         <RuleParagraph key={i} text={para} onRuleClick={onRuleClick} />
       ))}
@@ -227,7 +227,7 @@ function InlineText({ text, onRuleClick }: { text: string; onRuleClick: (ref: st
         if (typeof part === "string") return <span key={i}>{part}</span>;
         if (part.type === "bold")
           return (
-            <strong key={i} className="font-semibold text-stone-100">
+            <strong key={i} className="font-semibold text-stone-900 dark:text-stone-100">
               {part.text}
             </strong>
           );
@@ -239,7 +239,7 @@ function InlineText({ text, onRuleClick }: { text: string; onRuleClick: (ref: st
                 e.stopPropagation();
                 onRuleClick(part.ref);
               }}
-              className="font-mono text-accent-400 hover:text-accent-300 hover:underline"
+              className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
             >
               ({part.ref})
             </button>

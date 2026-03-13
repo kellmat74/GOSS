@@ -48,7 +48,7 @@ export function RuleInlineText({ text, className }: RuleInlineTextProps) {
               e.preventDefault();
               openRule(part.ref);
             }}
-            className="font-mono text-accent-400 hover:text-accent-300 hover:underline"
+            className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
           >
             ({part.ref})
           </button>
