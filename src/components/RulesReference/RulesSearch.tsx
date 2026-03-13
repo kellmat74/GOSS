@@ -61,9 +61,6 @@ export function RulesSearch({ rules }: RulesSearchProps) {
                 </span>
                 <div className="min-w-0 flex-1">
                   <span className="font-medium">{rule.title}</span>
-                  <p className="mt-0.5 text-xs text-stone-500 truncate">
-                    {rule.summary}
-                  </p>
                 </div>
                 {rule.crossRefs.length > 0 && (
                   <span className="shrink-0 text-xs text-stone-500">
