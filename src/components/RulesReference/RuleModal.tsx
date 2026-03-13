@@ -180,6 +180,53 @@ function RuleParagraph({ text, onRuleClick }: { text: string; onRuleClick: (ref:
   );
 }
 
+/** Render rule refs inside already-bold text (no bold parsing to avoid recursion) */
+function InlineRefs({ text, onRuleClick }: { text: string; onRuleClick: (ref: string) => void }) {
+  const parts: (string | { ref: string })[] = [];
+  let remaining = text;
+
+  while (remaining.length > 0) {
+    const parenMatch = remaining.match(/\((\d+\.\d+(?:\.\d+)?(?:[a-z])?)\)/);
+    const bareMatch = remaining.match(/(?<![.\d])(\d+\.\d+\.\d+(?:[a-z])?)(?![.\d])/);
+    const parenIdx = parenMatch?.index ?? Infinity;
+    const bareIdx = bareMatch?.index ?? Infinity;
+    const minIdx = Math.min(parenIdx, bareIdx);
+
+    if (minIdx === Infinity) {
+      parts.push(remaining);
+      break;
+    }
+
+    if (parenIdx <= bareIdx && parenMatch) {
+      parts.push(remaining.slice(0, parenIdx));
+      parts.push({ ref: parenMatch[1] });
+      remaining = remaining.slice(parenIdx + parenMatch[0].length);
+    } else if (bareMatch) {
+      parts.push(remaining.slice(0, bareIdx));
+      parts.push({ ref: bareMatch[1] });
+      remaining = remaining.slice(bareIdx + bareMatch[0].length);
+    }
+  }
+
+  return (
+    <>
+      {parts.map((part, i) =>
+        typeof part === "string" ? (
+          <span key={i}>{part}</span>
+        ) : (
+          <button
+            key={i}
+            onClick={(e) => { e.stopPropagation(); onRuleClick(part.ref); }}
+            className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+          >
+            ({part.ref})
+          </button>
+        )
+      )}
+    </>
+  );
+}
+
 /** Render inline text with bold markers and rule references */
 function InlineText({ text, onRuleClick }: { text: string; onRuleClick: (ref: string) => void }) {
   // Parse **bold**, *Important:*, and (X.Y.Z) rule references
@@ -228,7 +275,7 @@ function InlineText({ text, onRuleClick }: { text: string; onRuleClick: (ref: st
         if (part.type === "bold")
           return (
             <strong key={i} className="font-semibold text-stone-900 dark:text-stone-100">
-              {part.text}
+              <InlineRefs text={part.text} onRuleClick={onRuleClick} />
             </strong>
           );
         if (part.type === "ref")
