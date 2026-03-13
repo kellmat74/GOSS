@@ -11,6 +11,7 @@ interface PhaseStepperProps {
   onNext: () => void;
   onPrev: () => void;
   onToggleChecklist: (key: string) => void;
+  onClearChecklist: () => void;
   onAdvanceTurn: () => void;
   onGoToPhase: (phaseIndex: number, subPhaseIndex?: number) => void;
 }
@@ -23,6 +24,7 @@ export function PhaseStepper({
   onNext,
   onPrev,
   onToggleChecklist,
+  onClearChecklist,
   onAdvanceTurn,
   onGoToPhase,
 }: PhaseStepperProps) {
@@ -128,9 +130,17 @@ export function PhaseStepper({
       {/* Checklist */}
       {checklistItems.length > 0 && (
         <div className="mb-6 rounded-lg border border-stone-200 bg-white p-4 dark:border-stone-700 dark:bg-stone-800">
-          <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-stone-400">
-            Checklist
-          </h3>
+          <div className="mb-2 flex items-center justify-between">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-stone-400">
+              Checklist
+            </h3>
+            <button
+              onClick={onClearChecklist}
+              className="text-xs text-stone-400 hover:text-stone-200 transition-colors"
+            >
+              Reset
+            </button>
+          </div>
           <ul className="space-y-2">
             {checklistItems.map((item, i) => {
               const key = `${phase.id}.${subPhase?.id ?? "main"}.${i}`;

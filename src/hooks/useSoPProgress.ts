@@ -50,25 +50,39 @@ export function useSoPProgress(phases: Phase[]) {
     []
   );
 
+  // Helper: clear checklist keys for a given phase/subphase
+  const clearCurrentChecklist = (p: SoPProgress): Record<string, boolean> => {
+    const phase = phases[p.currentPhaseIndex];
+    if (!phase) return p.completedChecklist;
+    const prefix = `${phase.id}.`;
+    const cleaned: Record<string, boolean> = {};
+    for (const [k, v] of Object.entries(p.completedChecklist)) {
+      if (!k.startsWith(prefix)) cleaned[k] = v;
+    }
+    return cleaned;
+  };
+
   const nextStep = useCallback(() => {
     setProgress((p) => {
       const phase = phases[p.currentPhaseIndex];
       if (!phase) return p;
+      const cleaned = clearCurrentChecklist(p);
 
       // If we're at phase level and there are sub-phases, go to first sub-phase
       if (p.currentSubPhaseIndex === -1 && phase.subPhases.length > 0) {
-        return { ...p, currentSubPhaseIndex: 0 };
+        return { ...p, completedChecklist: cleaned, currentSubPhaseIndex: 0 };
       }
 
       // If we're in a sub-phase and there are more, go to next
       if (p.currentSubPhaseIndex < phase.subPhases.length - 1) {
-        return { ...p, currentSubPhaseIndex: p.currentSubPhaseIndex + 1 };
+        return { ...p, completedChecklist: cleaned, currentSubPhaseIndex: p.currentSubPhaseIndex + 1 };
       }
 
       // Move to next phase
       if (p.currentPhaseIndex < phases.length - 1) {
         return {
           ...p,
+          completedChecklist: cleaned,
           currentPhaseIndex: p.currentPhaseIndex + 1,
           currentSubPhaseIndex: -1,
         };
@@ -80,12 +94,14 @@ export function useSoPProgress(phases: Phase[]) {
 
   const prevStep = useCallback(() => {
     setProgress((p) => {
+      const cleaned = clearCurrentChecklist(p);
+
       // If in a sub-phase, go back
       if (p.currentSubPhaseIndex > 0) {
-        return { ...p, currentSubPhaseIndex: p.currentSubPhaseIndex - 1 };
+        return { ...p, completedChecklist: cleaned, currentSubPhaseIndex: p.currentSubPhaseIndex - 1 };
       }
       if (p.currentSubPhaseIndex === 0) {
-        return { ...p, currentSubPhaseIndex: -1 };
+        return { ...p, completedChecklist: cleaned, currentSubPhaseIndex: -1 };
       }
 
       // Go to previous phase's last sub-phase
@@ -93,6 +109,7 @@ export function useSoPProgress(phases: Phase[]) {
         const prevPhase = phases[p.currentPhaseIndex - 1];
         return {
           ...p,
+          completedChecklist: cleaned,
           currentPhaseIndex: p.currentPhaseIndex - 1,
           currentSubPhaseIndex: prevPhase
             ? prevPhase.subPhases.length - 1
@@ -113,6 +130,10 @@ export function useSoPProgress(phases: Phase[]) {
       },
     }));
   }, []);
+
+  const clearChecklist = useCallback(() => {
+    setProgress((p) => ({ ...p, completedChecklist: clearCurrentChecklist(p) }));
+  }, [phases]);
 
   const resetProgress = useCallback(() => {
     setProgress(defaultProgress);
@@ -148,6 +169,7 @@ export function useSoPProgress(phases: Phase[]) {
     nextStep,
     prevStep,
     toggleChecklist,
+    clearChecklist,
     resetProgress,
     advanceTurn,
   };

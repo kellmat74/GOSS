@@ -27,6 +27,7 @@ function App() {
     nextStep,
     prevStep,
     toggleChecklist,
+    clearChecklist,
     advanceTurn,
   } = useSoPProgress(phases);
 
@@ -81,6 +82,7 @@ function App() {
             onNext={nextStep}
             onPrev={prevStep}
             onToggleChecklist={toggleChecklist}
+            onClearChecklist={clearChecklist}
             onAdvanceTurn={advanceTurn}
             onGoToPhase={goToPhase}
           />
