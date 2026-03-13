@@ -1,6 +1,7 @@
 import type { Phase, SubPhase, SoPProgress } from "../../types/goss";
 import { Breadcrumb, type BreadcrumbItem } from "../Breadcrumb";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
+import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
 interface PhaseStepperProps {
   phase: Phase | null;
@@ -106,7 +107,7 @@ export function PhaseStepper({
 
       {/* Description */}
       <p className="mb-4 leading-relaxed text-stone-600 dark:text-stone-300">
-        {active.description}
+        <RuleInlineText text={active.description} />
       </p>
 
       {/* Notes */}
@@ -118,7 +119,7 @@ export function PhaseStepper({
               className="flex gap-2 text-sm text-stone-500 dark:text-stone-400"
             >
               <span className="mt-0.5 text-stone-300">&bull;</span>
-              <span>{note}</span>
+              <RuleInlineText text={note} />
             </li>
           ))}
         </ul>
@@ -143,15 +144,14 @@ export function PhaseStepper({
                       onChange={() => onToggleChecklist(key)}
                       className="mt-0.5 h-4 w-4 rounded border-stone-300 text-amber-600 focus:ring-amber-500"
                     />
-                    <span
+                    <RuleInlineText
+                      text={item}
                       className={
                         checked
                           ? "text-stone-400 line-through"
                           : "text-stone-700 dark:text-stone-200"
                       }
-                    >
-                      {item}
-                    </span>
+                    />
                   </label>
                 </li>
               );
