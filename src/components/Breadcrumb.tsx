@@ -1,0 +1,43 @@
+export interface BreadcrumbItem {
+  label: string;
+  ruleRef?: string;
+  onClick?: () => void;
+}
+
+interface BreadcrumbProps {
+  items: BreadcrumbItem[];
+}
+
+export function Breadcrumb({ items }: BreadcrumbProps) {
+  if (items.length <= 1) return null;
+
+  return (
+    <nav className="mb-4 flex flex-wrap items-center gap-1 text-sm">
+      {items.map((item, i) => {
+        const isLast = i === items.length - 1;
+        return (
+          <span key={i} className="flex items-center gap-1">
+            {i > 0 && <span className="text-stone-500">›</span>}
+            {isLast ? (
+              <span className="font-medium text-amber-400">
+                {item.label}
+                {item.ruleRef && (
+                  <span className="ml-1 rounded bg-stone-700 px-1 py-0.5 text-xs text-stone-400">
+                    {item.ruleRef}
+                  </span>
+                )}
+              </span>
+            ) : (
+              <button
+                onClick={item.onClick}
+                className="text-stone-400 hover:text-amber-400 transition-colors"
+              >
+                {item.label}
+              </button>
+            )}
+          </span>
+        );
+      })}
+    </nav>
+  );
+}

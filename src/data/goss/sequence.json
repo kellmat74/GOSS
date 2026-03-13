@@ -1,0 +1,533 @@
+{
+  "phases": [
+    {
+      "id": "joint-pre-game-day-activities",
+      "name": "Joint Player Pre-Game Day Activities",
+      "ruleRef": "3.3.1",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Both sides conduct the below phases prior to the AM Allied Player Turn. The Joint Weather Phase (3.3.1b) and the Joint Fuel Value Determination Phase (3.3.1e) are performed before every GT.",
+      "notes": [],
+      "subPhases": [
+        {
+          "id": "joint-air-allocation-phase",
+          "name": "Joint Air Allocation Phase",
+          "ruleRef": "3.3.1a",
+          "timing": "am-only",
+          "player": "both",
+          "description": "Scenario rules determine the number of AP available and any operational restrictions. See 20.0 for the use of AP.",
+          "notes": [],
+          "checklist": [
+            "Determine APs available for the GD (20.1.0).",
+            "Allocate available AP to specific missions (20.1.1).",
+            "Both sides may return withdrawn Flak units to the map (20.7.2).",
+            "Both sides may withdraw Flak units to protect against supply interdiction attacks (20.7.2)."
+          ]
+        },
+        {
+          "id": "joint-weather-phase",
+          "name": "Joint Weather Phase",
+          "ruleRef": "3.3.1b",
+          "timing": "every-turn",
+          "player": "both",
+          "description": "Conduct each GT prior to start of Allied Player Turn. Determine atmospheric condition, ground condition, and precipitation for the current GT (19.0).",
+          "notes": [
+            "Clear: No adverse effect.",
+            "Partial Overcast: LOS not affected; each AP counts as 1/2; Air Observation reduced to 3 hexes.",
+            "Overcast: Max LOS for ground units is 2 hexes; each AP counts as 1/4; Air Observation cannot be used.",
+            "Storm: LOS same as night GT; APs not available; Air Observation cannot be used."
+          ],
+          "checklist": [
+            "Determine atmospheric condition, ground condition, and precipitation for the GT (19.0).",
+            "Determine Ground Interdiction values (20.3.1)."
+          ]
+        },
+        {
+          "id": "joint-command-phase",
+          "name": "Joint Command Phase",
+          "ruleRef": "3.3.1c",
+          "timing": "am-only",
+          "player": "both",
+          "description": "Both sides perform command assignments, rest GT designation, and various joint segments.",
+          "notes": [],
+          "checklist": [
+            "Rest GT Designation Segment: Both sides secretly designate rest GTs (3.5.0).",
+            "Command Segment: Attach and/or detach units/formations (9.6.0).",
+            "Command Segment: Change corps and army boundaries (9.2.0).",
+            "Command Segment: Enter/release formations to/from refit (22.4.0).",
+            "Command Segment: Enter/release formations to/from army reserve (25.0).",
+            "Naval Unit Assignment Segment: Determine available naval units (11.9.0).",
+            "Lull Determination Segment: Declare lulls (24.1.0).",
+            "Ldr Activation Segment: Activate Ldrs (23.1.0).",
+            "Surrender Segment: Determine unit surrender (15.7.1)."
+          ]
+        },
+        {
+          "id": "joint-logistics-phase",
+          "name": "Joint Logistics Phase",
+          "ruleRef": "3.3.1d",
+          "timing": "am-only",
+          "player": "both",
+          "description": "Both sides perform logistics segments with each of their armies.",
+          "notes": [
+            "Important: Both sides should determine if there are any modifications to this phase by consulting the scenario rules."
+          ],
+          "subPhases": [
+            {
+              "id": "truck-point-assignment-segment",
+              "name": "Truck Point Assignment Segment",
+              "ruleRef": "16.1.2",
+              "player": "both",
+              "description": "Determine TP available and allocate to tasks.",
+              "notes": [],
+              "checklist": [
+                "Determine the total number of TP available to each army (16.1.0).",
+                "Allocate TP to one of the three tasks (16.1.2): Ammo, Fuel, Motorization."
+              ]
+            },
+            {
+              "id": "supply-interdiction-segment",
+              "name": "Supply Interdiction Segment",
+              "ruleRef": "20.4.0",
+              "player": "both",
+              "description": "Both sides may conduct supply interdiction attacks.",
+              "notes": [],
+              "checklist": [
+                "Conduct supply interdiction attacks (20.4.0)."
+              ]
+            },
+            {
+              "id": "ammo-delivery-segment",
+              "name": "Ammo Delivery Segment",
+              "ruleRef": "16.3.0",
+              "player": "both",
+              "description": "Determine AmPs delivered and the ADV for each army and corps.",
+              "notes": [
+                "ADV determined in this phase applies to all GTs in the current GD."
+              ],
+              "checklist": [
+                "Determine AmPs delivered for each army and corps (16.2.0 & 16.3.0)."
+              ]
+            },
+            {
+              "id": "fuel-delivery-segment",
+              "name": "Fuel Delivery Segment",
+              "ruleRef": "16.4.0",
+              "player": "both",
+              "description": "Determine number of FPs delivered to each army and allocate FP to HQs.",
+              "notes": [],
+              "checklist": [
+                "Determine number of FPs delivered to each army (16.4.0).",
+                "Allocate FP to HQs as desired (16.4.2)."
+              ]
+            },
+            {
+              "id": "depot-placement-segment",
+              "name": "Depot Placement Segment",
+              "ruleRef": "15.8.0",
+              "player": "both",
+              "description": "Move or place new depots.",
+              "notes": [],
+              "checklist": [
+                "Move or place new depots (15.8.0)."
+              ]
+            },
+            {
+              "id": "replacement-point-segment",
+              "name": "Replacement Point Segment",
+              "ruleRef": "22.0",
+              "player": "both",
+              "description": "Both sides convert Inf and Arm losses to replacement points and determine RePs for the current GD.",
+              "notes": [],
+              "checklist": [
+                "Convert Inf/Arm recycle steps to Inf and Arm ReP (22.2.1).",
+                "Determine the type and number of RePs received for the current GD (22.3.0)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "joint-fuel-value-determination-phase",
+          "name": "Joint Fuel Value Determination Phase",
+          "ruleRef": "3.3.1e",
+          "timing": "every-turn",
+          "player": "both",
+          "description": "Conduct each GT prior to start of Allied player turn. Both sides determine the fuel value for all HQ with low or no fuel (16.4.5).",
+          "notes": [],
+          "checklist": [
+            "Determine the fuel value for all HQ with low or no fuel (16.4.5)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "allied-player-turn",
+      "name": "Allied Player Turn",
+      "ruleRef": "3.3.2",
+      "timing": "every-turn",
+      "player": "phasing",
+      "description": "Allied side is the active player. Axis side is the inactive player.",
+      "notes": [],
+      "subPhases": [
+        {
+          "id": "allied-mode-determination-phase",
+          "name": "Mode Determination Phase",
+          "ruleRef": "3.3.2a",
+          "player": "phasing",
+          "description": "Determine unit modes for this GT (5.0). All units must be in 1 of 5 modes.",
+          "notes": [
+            "Tactical (5.1.0)",
+            "Prepared Assault (5.2.0)",
+            "Exploit (5.3.0)",
+            "Maneuver Reserve (5.4.0)",
+            "Strategic (5.5.)"
+          ],
+          "checklist": [
+            "Assign mode to each unit/formation.",
+            "Place Art units in-battery or out-of-battery (5.6.0)."
+          ]
+        },
+        {
+          "id": "allied-construction-phase",
+          "name": "Construction Phase",
+          "ruleRef": "3.3.2b",
+          "player": "phasing",
+          "description": "Conduct construction of fieldworks and bridges (17.3.0).",
+          "notes": [],
+          "checklist": [
+            "Step 1: Complete FW & bridge construction.",
+            "Step 2: Advance construction of bridges.",
+            "Step 3: Start construction of FWs & bridges.",
+            "Demolition Segment: Eng units may conduct prepared bridge demolition (17.3.2c)."
+          ]
+        },
+        {
+          "id": "allied-movement-phase",
+          "name": "Movement Phase",
+          "ruleRef": "3.3.2c",
+          "player": "phasing",
+          "description": "The active player moves units. Combat Reserve Designation, Movement, and Quick Construction segments.",
+          "notes": [],
+          "subPhases": [
+            {
+              "id": "allied-combat-reserve-designation-segment",
+              "name": "Combat Reserve Designation Segment",
+              "ruleRef": "5.8.0",
+              "player": "phasing",
+              "description": "Place CR markers on eligible units, as desired.",
+              "notes": [],
+              "checklist": [
+                "Place CR markers on eligible units (5.8.0)."
+              ]
+            },
+            {
+              "id": "allied-movement-segment",
+              "name": "Movement Segment",
+              "ruleRef": "7.2.2",
+              "player": "phasing",
+              "description": "The active player conducts steps 1 through 5 in order.",
+              "notes": [],
+              "checklist": [
+                "Step 1: Place reinforcements (21.0) & conduct required withdrawals (21.4.0). Player may conduct emergency command changes (9.4.1). Active player conducts enemy GI attacks during Step 2 through 4 against moving units (20.3.0).",
+                "Step 2: Units in Strat mode may move (5.5.0).",
+                "Step 3: Active player declares & conducts CdM attacks (7.14.0).",
+                "Step 4: Move units in Tac mode (5.1.0): 1) Mech class using Mech road movement (7.10.0), 2) All units using non-road movement (7.11.0). During step 4: a) Breakdown (18.4.0) and recombine (18.7.0), b) Mount and dismount (7.12.0), c) Place delay markers (7.13.0).",
+                "Step 5: Units in PA mode may move (5.2.0).",
+                "Command Status Segment: Determine command status of all friendly units and HQs (9.0).",
+                "Quick Construction Segment: Complete eligible FW construction (17.3.3)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "axis-inactive-exploit-phase",
+          "name": "Inactive Player Exploit Phase",
+          "ruleRef": "3.3.2d",
+          "player": "non-phasing",
+          "description": "Axis formations in MR mode may enter Exploit mode. Exploit units may move and conduct overruns and CdM attacks.",
+          "notes": [
+            "Exploit units must move in the same order as Tac mode units during the Movement Phase (7.5.2).",
+            "AM or PM GT: May move up to 1/2 of their MA in each friendly Exploit Phase during the current GT.",
+            "Night GT and ENA Period: The inactive player must choose to move in either the Inactive Exploit Phase or Active Exploit Phase. During the selected phase units may move their full MA."
+          ],
+          "checklist": [
+            "Step 1: Formations in MR mode may enter Exploit mode (5.3.0).",
+            "Step 2: The inactive player declares CdM attacks (7.14.0).",
+            "Step 3: Units in Exploit may move (5.3.4) and conduct overruns (5.3.4b). Units moving may be subject to GS attacks (5.3.4c) and Art FS missions when conducting an overrun (5.2.4)."
+          ]
+        },
+        {
+          "id": "allied-combat-phase",
+          "name": "Combat Phase",
+          "ruleRef": "3.3.2e",
+          "player": "phasing",
+          "description": "The Allied side conducts combat including attack designation, fire support, and ground assaults.",
+          "notes": [],
+          "subPhases": [
+            {
+              "id": "allied-attacker-designation-segment",
+              "name": "Tactical Assault Designation Segment",
+              "ruleRef": "10.2.0",
+              "player": "phasing",
+              "description": "Designate tactical assaults and attempt to remove delay markers.",
+              "notes": [],
+              "checklist": [
+                "Designate units that will make tactical assaults (5.1.2 & 10.2.0).",
+                "Attempt to remove delay markers (7.13.3)."
+              ]
+            },
+            {
+              "id": "allied-replacement-segment",
+              "name": "Replacement Segment",
+              "ruleRef": "22.5.0",
+              "player": "phasing",
+              "description": "Eligible units may receive RePs.",
+              "notes": [],
+              "checklist": [
+                "Eligible units may receive RePs (22.5.0)."
+              ]
+            },
+            {
+              "id": "allied-fire-support-segment",
+              "name": "Fire Support (FS) Segment",
+              "ruleRef": "11.0",
+              "player": "both",
+              "description": "Both sides perform FS missions in order.",
+              "notes": [],
+              "checklist": [
+                "Offensive Air Support: Active player conducts ground support (GS) missions (20.2.0).",
+                "Defensive Support: Inactive player conducts FS missions; Art first (11.0), then either GS (20.2.0) and/or NGS (11.0).",
+                "Offensive Support: Active player conducts FS missions; Art first, followed by NGS (11.0)."
+              ]
+            },
+            {
+              "id": "allied-attacker-status-adjustment-segment",
+              "name": "Attacker Status Adjustment Segment",
+              "ruleRef": "12.0",
+              "player": "phasing",
+              "description": "Remove attack designation markers from units no longer adjacent to enemy and adjust excess designations.",
+              "notes": [],
+              "checklist": [
+                "Remove TA & PA markers from units not adjacent to enemy units.",
+                "Remove excess attack designations (TA and/or PA) not in compliance with ADV limits (12.1.0).",
+                "Voluntarily attempt to remove attack designation from units adjacent to enemy (12.2.0)."
+              ]
+            },
+            {
+              "id": "allied-ground-assault-segment",
+              "name": "Ground Assault (GA) Segment",
+              "ruleRef": "13.0",
+              "player": "phasing",
+              "description": "Active player conducts GAs against enemy units. Check for bridge demolition, collapse, and surrender of isolated defending units.",
+              "notes": [],
+              "checklist": [
+                "Conduct GAs against enemy units (13.0).",
+                "Check for: a) Hasty bridge demolition (17.3.2b), b) Bridge collapse (17.3.2a), c) Surrender of isolated defending units (15.7.1).",
+                "AS Marker Removal Segment: Remove all AS markers from the map (13.13.0)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "allied-active-exploit-phase",
+          "name": "Active Player Exploit Phase",
+          "ruleRef": "3.3.2f",
+          "player": "phasing",
+          "description": "The active player conducts this phase using the procedures in 3.3.2d.",
+          "notes": [],
+          "checklist": [
+            "Conduct Exploit phase using same procedures as Inactive Player Exploit Phase (3.3.2d)."
+          ]
+        },
+        {
+          "id": "allied-administrative-phase",
+          "name": "Administrative Phase",
+          "ruleRef": "3.3.2g",
+          "player": "phasing",
+          "description": "Administrative activities including air resupply, supply determination, ammo replenishment, fatigue recovery, and delay marker removal.",
+          "notes": [],
+          "subPhases": [
+            {
+              "id": "allied-air-resupply-segment",
+              "name": "Air Resupply Segment",
+              "ruleRef": "20.5.0",
+              "timing": "am-and-pm",
+              "player": "phasing",
+              "description": "Active player conducts air supply missions (20.5.0).",
+              "notes": [],
+              "checklist": [
+                "Conduct air supply missions (AM & PM GTs only)."
+              ]
+            },
+            {
+              "id": "allied-supply-determination-segment",
+              "name": "Supply Determination Segment",
+              "ruleRef": "15.0",
+              "player": "phasing",
+              "description": "Active player checks the GenS state of all HQs and then all units. Mark HQ/units OhS, OoS, and isolated as required.",
+              "notes": [],
+              "checklist": [
+                "Check GenS state of all HQs.",
+                "Check GenS state of all units.",
+                "Mark HQ/units OhS, OoS, and isolated as required (15.0)."
+              ]
+            },
+            {
+              "id": "allied-ammo-replenishment-segment",
+              "name": "Ammo Replenishment Segment",
+              "ruleRef": "16.3.7",
+              "player": "both",
+              "description": "Both sides replenish AD Art units.",
+              "notes": [],
+              "checklist": [
+                "Step 1: Active side expends AmP to replenish AD Art (16.3.7a).",
+                "Step 2: Active side rolls 1d10 to replenish AD Art units (16.3.7b).",
+                "Step 3: Inactive player may replenish AD Art units by expending AmP (16.3.7a)."
+              ]
+            },
+            {
+              "id": "allied-fatigue-recovery-segment",
+              "name": "Fatigue Recovery Segment",
+              "ruleRef": "14.3.0",
+              "player": "phasing",
+              "description": "Active player may remove one fatigue level from all eligible units.",
+              "notes": [],
+              "checklist": [
+                "Remove one fatigue level from eligible units (14.3.0)."
+              ]
+            },
+            {
+              "id": "allied-delay-marker-removal-segment",
+              "name": "Delay Marker Removal Segment",
+              "ruleRef": "7.13.3",
+              "player": "both",
+              "description": "The owning player may remove any delay markers. The non-owning player may remove enemy delay markers if friendly units occupy the hex.",
+              "notes": [],
+              "checklist": [
+                "Owning player may remove delay markers (player's choice).",
+                "Non-owning player may remove enemy delay markers if friendly units occupy the delay marker hex (7.13.3)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "axis-player-turn",
+      "name": "The Axis Player Turn",
+      "ruleRef": "3.3.3",
+      "timing": "every-turn",
+      "player": "phasing",
+      "description": "The Axis turn is identical to the Allied turn, except the Axis player is the active player & the Allied player is the inactive player.",
+      "notes": [
+        "After conducting the Axis Player Turn, the GT is complete."
+      ],
+      "subPhases": [
+        {
+          "id": "axis-mode-determination-phase",
+          "name": "Mode Determination Phase",
+          "ruleRef": "3.3.2a",
+          "player": "phasing",
+          "description": "Determine the mode each Axis unit will be in for this GT.",
+          "notes": [],
+          "checklist": [
+            "Assign mode to each unit/formation.",
+            "Place Art units in-battery or out-of-battery (5.6.0)."
+          ]
+        },
+        {
+          "id": "axis-construction-phase",
+          "name": "Construction Phase",
+          "ruleRef": "3.3.2b",
+          "player": "phasing",
+          "description": "The Axis side conducts construction of fieldworks and bridges.",
+          "notes": [],
+          "checklist": [
+            "Step 1: Complete FW & bridge construction.",
+            "Step 2: Advance construction of bridges.",
+            "Step 3: Start construction of FWs & bridges.",
+            "Demolition Segment: Eng units may conduct prepared bridge demolition (17.3.2c)."
+          ]
+        },
+        {
+          "id": "axis-movement-phase",
+          "name": "Movement Phase",
+          "ruleRef": "3.3.2c",
+          "player": "phasing",
+          "description": "The Axis side moves units.",
+          "notes": [],
+          "checklist": [
+            "Combat Reserve Designation Segment: Place CR markers (5.8.0).",
+            "Movement Segment: Conduct steps 1–5 as per Allied turn.",
+            "Quick Construction Segment: Complete eligible FW construction (17.3.3)."
+          ]
+        },
+        {
+          "id": "allied-inactive-exploit-in-axis-turn",
+          "name": "Inactive Player Exploit Phase",
+          "ruleRef": "3.3.2d",
+          "player": "non-phasing",
+          "description": "Allied formations in Exploit mode move and may conduct overruns and CdM attacks.",
+          "notes": [],
+          "checklist": [
+            "Step 1: Formations in MR mode may enter Exploit mode (5.3.0).",
+            "Step 2: Inactive player declares CdM attacks (7.14.0).",
+            "Step 3: Exploit units may move and conduct overruns."
+          ]
+        },
+        {
+          "id": "axis-combat-phase",
+          "name": "Combat Phase",
+          "ruleRef": "3.3.2e",
+          "player": "phasing",
+          "description": "The Axis side conducts combat.",
+          "notes": [],
+          "checklist": [
+            "Tactical Assault Designation Segment (10.2.0).",
+            "Replacement Segment (22.5.0).",
+            "Fire Support (FS) Segment (11.0).",
+            "Attacker Status Adjustment Segment (12.0).",
+            "Ground Assault (GA) Segment (13.0).",
+            "AS Marker Removal Segment (13.13.0)."
+          ]
+        },
+        {
+          "id": "axis-active-exploit-phase",
+          "name": "Active Player Exploit Phase",
+          "ruleRef": "3.3.2f",
+          "player": "phasing",
+          "description": "Axis Exploit units move and may conduct overruns.",
+          "notes": [],
+          "checklist": [
+            "Conduct Exploit phase using same procedures as Inactive Player Exploit Phase (3.3.2d)."
+          ]
+        },
+        {
+          "id": "axis-administrative-phase",
+          "name": "Administrative Phase",
+          "ruleRef": "3.3.2g",
+          "player": "phasing",
+          "description": "Axis side conducts air resupply, supply determination, ammo replenishment, fatigue recovery, and delay marker removal.",
+          "notes": [],
+          "checklist": [
+            "Air Resupply Segment (AM and PM only) (20.5.0).",
+            "Supply Determination Segment (15.0).",
+            "Ammo Replenishment Segment (16.3.7).",
+            "Fatigue Recovery Segment (14.3.0).",
+            "Delay Marker Removal Segment (7.13.3)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "update-game-turn-indicator",
+      "name": "Update Game Turn Indicator",
+      "ruleRef": "3.3.4",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "If the last turn in the scenario is complete or if one player meets a sudden death victory condition, the game is over. If none of the above apply, advance the GT marker to the next GT and start a new GT.",
+      "notes": [],
+      "subPhases": []
+    }
+  ]
+}

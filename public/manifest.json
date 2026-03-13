@@ -1,0 +1,21 @@
+{
+  "name": "GOSS Assistant - Wacht am Rhein",
+  "short_name": "GOSS",
+  "description": "Procedural play assistant for the Grand Operational Simulation Series",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#292524",
+  "theme_color": "#d97706",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
