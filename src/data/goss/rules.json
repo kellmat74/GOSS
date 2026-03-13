@@ -5983,7 +5983,15 @@
     "section": "26.0",
     "title": "Definitions, Abbreviations & Acronyms",
     "summary": "All rule sections refer players back to this section. Players need to thoroughly familiarize themselves with the definitions, acronyms and abbreviations contained here.",
-    "text": "All rule sections refer players back to this section. Players need to thoroughly familiarize themselves with the definitions, acronyms and abbreviations contained here.\n\nImportant: European unit size identifiers were often different from their Yankee counterparts. To reduce confusion in terminology, the rules refer to all battalion-sized units and regimental-sized formations as battalions and regiments.\n\nA\n\nActive (side or units): The side performing the activities listed during a segment or a phase within a game turn. An active unit is a unit belonging to that side. The other sides' units are inactive.\n\nAfternoon Game Turn (PM) (3.0): The second game turn (GT) of any given game day (GD) includes the hours from noon to early evening.\n\nAir Point (AP) (20.0): Unit of measure used to represent the air assets available to each player side.\n\nAir Transport Point (ATP) (20.5.0): A type of AP used to deliver supply.\n\nAllied Side or Player: Term used to describe all forces (or players controlling those forces) aligned against the Axis.\n\nAmmunition Depletion (AD) (11.8.0): Game status representing Art units which have exhausted their supply of ammunition.\n\nAmmunition Depletion Value (ADV): The numerical value that shows the level of ammunition supply available to an army or corps. Corps ADV determines the maximum number of allowable GAs for each formation (16.3.3). An army/corps' ADV determines if an Art unit becomes AD or successfully replenishes (15.4.0 & 16.3.7).\n\nAmmunition Point (AmP): Unit of measure used to; replenish AD Art units, conduct intensive barrages (11.4.1g) and to decrease/increase the ADV of an army (16.3.2).\n\nAnti-Tank (AT) Factors: The strength of a defending unit's AT weapons against attacking AFV units (13.8.4). See UTC.",
+    "text": "All rule sections refer players back to this section. Players need to thoroughly familiarize themselves with the definitions, acronyms and abbreviations contained here.\n\nImportant: European unit size identifiers were often different from their Yankee counterparts. To reduce confusion in terminology, the rules refer to all battalion-sized units and regimental-sized formations as battalions and regiments.",
+    "crossRefs": []
+  },
+  {
+    "id": "26.0.A",
+    "section": "26.0.A",
+    "title": "Definitions — A",
+    "summary": "Glossary definitions starting with A",
+    "text": "**Active (side or units):** The side performing the activities listed during a segment or a phase within a game turn. An active unit is a unit belonging to that side. The other sides' units are inactive.\n\n**Afternoon Game Turn (PM) (3.0):** The second game turn (GT) of any given game day (GD) includes the hours from noon to early evening.\n\n**Air Point (AP) (20.0):** Unit of measure used to represent the air assets available to each player side.\n\n**Air Transport Point (ATP) (20.5.0):** A type of AP used to deliver supply.\n\n**Allied Side or Player:** Term used to describe all forces (or players controlling those forces) aligned against the Axis.\n\n**Ammunition Depletion (AD) (11.8.0):** Game status representing Art units which have exhausted their supply of ammunition.\n\n**Ammunition Depletion Value (ADV):** The numerical value that shows the level of ammunition supply available to an army or corps. Corps ADV determines the maximum number of allowable GAs for each formation (16.3.3). An army/corps' ADV determines if an Art unit becomes AD or successfully replenishes (15.4.0 & 16.3.7).\n\n**Ammunition Point (AmP):** Unit of measure used to; replenish AD Art units, conduct intensive barrages (11.4.1g) and to decrease/increase the ADV of an army (16.3.2).\n\n**Anti-Tank (AT) Factors:** The strength of a defending unit's AT weapons against attacking AFV units (13.8.4). See UTC.\n\n**Armor (Arm) Factors (13.8.4):** The rating of an AFV equipped unit's weapon and armor protection in battle. See UTC.\n\n**Armored Fighting Vehicle (AFV) (4.0 & UTC):** An armor protected vehicle (usually tracked) capable of combat against the enemy at close range. All units displaying an armor silhouette have AFVs and are either pure AFV units (if they only have an AFV symbol) or hybrid (mixed) units (if they have both an AFV and an Inf or Recon symbol).\n\nException: Recon units with an armored car silhouette or the Arm Recon symbol are mixed armor for all purposes, they are never AFV.\n\n**Armored Infantry (Arm Inf):** Units transported in armored type vehicles (i.e. halftracks, armored cars, and light armored vehicles). Arm Inf is a personnel type unit and includes panzergrenadier and armored engineers. Arm Inf can dismount. All Arm Inf units are mixed armor for FS mission DRM purposes (11.5.3), unless dismounted (7.12.1).\n\n**Army:** Represents a collection of one or more corps, divisions, BGs and/or individual units, assigned directly to a specific army HQ.\n\n**Army Group (AG):** A collection of one or more armies. AG HQ do not appear in the game. See scenario rules.\n\n**Army Reserve (25.0):** Formations in army reserve receive refit benefits and can perform limited hidden movement.\n\n**Artillery (Art) (5.6.0):** Art units can conduct FS missions. See the UTC for information on artillery counter marking and types. The front side of an Art unit shows the unit's in-battery (ready to fire) mode and the reverse is its out-of-battery (ready to move) mode.\n\n**Artillery Barrage (11.0):** A FS mission conducted by Art units using their ability to engage an enemy target using indirect fire.\n\n**Artillery Shift (AS) (11.6.1):** A term used to represent the morale and shock effect due to FS missions.\n\n**Assigned:** Are units and Rgts that were historically subordinate to a specific HQ. All units of a division or independent smaller formation (BG) have a color box behind their superior HQ identification.\n\nImportant: Players cannot change a unit's original assignment, although, a scenario may reassign specific units.\n\n**Attachment (9.6.0):** A unit or units assigned to one HQ and temporarily subordinated (for combat, supply, and movement) to another HQ.\n\n**Attack Designated (5.1.2 & 5.2.0):** Units marked with a tactical assault or prepared assault marker are attack designated. A unit can only conduct an attack if it is attack designated.\n\n**Attacker:** A player whose units are conducting a FS mission, GA or overrun.\n\n**Axis Side or Player:** Term used to describe all forces (or players controlling those forces) aligned with Germany.",
     "crossRefs": [
       "3.0",
       "20.0",
@@ -5992,9 +6000,333 @@
       "16.3.3",
       "15.4.0",
       "16.3.7",
-      "11.4.1",
       "16.3.2",
-      "13.8.4"
+      "13.8.4",
+      "4.0",
+      "11.5.3",
+      "7.12.1",
+      "25.0",
+      "5.6.0",
+      "11.0",
+      "11.6.1",
+      "9.6.0",
+      "5.1.2",
+      "5.2.0"
+    ]
+  },
+  {
+    "id": "26.0.B",
+    "section": "26.0.B",
+    "title": "Definitions — B",
+    "summary": "Glossary definitions starting with B",
+    "text": "**Barrage Factor (BF) (11.4.1):** Each Art unit has a BF shown on the counter (UTC). Each point of a unit's BF equals one FS mission point.\n\nImportant: An Art unit does not have an offensive combat factor. The number is instead that Art unit's barrage factor.\n\n**Battalion (Bn.) (4.1.1):** Bn.'s are the standard unit of maneuver. Most units in the game are Bn. sized.\n\n**Battle Group (BG) (9.3.3a):** The term used to define a Rgt, Bde, CC or KG not currently attached to a Div.\n\n**Breakdown Unit (BU) (18.0):** Players may create Co.-sized, or zero step (Z-step) units from a larger parent unit.\n\n**Bridgeheads (BH) (15.9.0):** Simulates the ability of an army to ferry supplies across a major river, supporting Leg class units that would otherwise be OoS. Unlike normal Eng ferried supply (15.2.1) BHs do not require the use of Eng units.\n\n**Brigade (Bde) (9.3.3 & 9.6.2e):** A collection of units historically assigned and attached to an HQ that is smaller than a Div. A Bde containing an HQ is an independent formation assigned directly to a corps or army. All Bdes not attached to a division HQ are BGs for all game purposes.\n\nImportant: Not all historic independent CW Bdes have HQ units.",
+    "crossRefs": [
+      "11.4.1",
+      "4.1.1",
+      "9.3.3",
+      "18.0",
+      "15.9.0",
+      "15.2.1",
+      "9.6.2"
+    ]
+  },
+  {
+    "id": "26.0.C",
+    "section": "26.0.C",
+    "title": "Definitions — C",
+    "summary": "Glossary definitions starting with C",
+    "text": "**Captured (Cap):** Appears on various Art Bn. counters. Denotes captured guns of various types ranging from 88mm to 155mm. Treat as 150mm for purposes of IB Art movement (5.6.1).\n\n**Cavalry Group (CvGp) (9.6.2d):** A grouping of two or more US Army Recon Bn.'s.\n\n**Column Shifts (13.7.0):** Are applied to the initial ground assault column on the GAT.\n\n**Combat Reserve (CR) (5.8.0):** Units in combat reserve are eligible to support a given GA.\n\n**Combat Strength (CS) (4.2.2):** A unit's attack and defense factors after any reductions due to step losses but before any other modifications.\n\n**Command (9.0):** The chain of command that exists from HQ to unit.\n\n**Commando (CDO) (4.6.6):** The term commando includes all units with a CDO unit type symbol. Unless a rule stated otherwise, a rule applies to all CDO units.\n\n**Commonwealth (CW):** Term used to define countries that were part of the British Empire, Commonwealth and allied nations primarily equipped by the British Army.\n\n**Company (Co.) (4.1.2):** A unit with a white band across its unit type symbol (it may also display a Co. (I) size symbol) is a company.\n\n**Constricted Terrain (6.4.0 & 7.11.1 through 7.11.3):** Represents bluffs, steep canyons, or very rugged terrain that severely restricts movement. Dashed lines drawn from one hexside to another in the same hex is constricted terrain.\n\n**Corps (9.3.2):** Represents a collection of one or more divisions, BGs and/or independent units assigned directly to a corps HQ. A corps is normally subordinate to an army.\n\n**Coup de Main (CdM) (7.14.0):** A player may attempt to capture bridges over printed major or great rivers during any friendly Movement or Exploit Phases.\n\n**Covering Terrain (CT) (8.2):** Represents terrain in which units are more difficult to detect or engage. There are two kinds of CT, movement CT (MCT) and observation CT (OCT).",
+    "crossRefs": [
+      "5.6.1",
+      "9.6.2",
+      "13.7.0",
+      "5.8.0",
+      "4.2.2",
+      "9.0",
+      "4.6.6",
+      "4.1.2",
+      "6.4.0",
+      "7.11.1",
+      "9.3.2",
+      "7.14.0",
+      "8.2"
+    ]
+  },
+  {
+    "id": "26.0.D",
+    "section": "26.0.D",
+    "title": "Definitions — D",
+    "summary": "Glossary definitions starting with D",
+    "text": "**Defender (Def):** A player whose unit(s) is the target of a barrage, airstrike, naval gunfire support, ground assault, or overrun, is the defender.\n\n**Defensive Works (DW) (17.4.0):** Term used to describe all types of man-made defensive positions, including Fieldworks, Forts and Ft Area hexes. Forts and Ft Area hexes cannot be constructed within the context of the game.\n\n**Deployed Heavy Bridge (17.3.1c):** A heavy bridge unit that is under construction or fully constructed.\n\n**Detachment (9.6.0):** A unit or units of one formation that are no longer subordinate to their assigned formation. Detached units may subordinate (attach) themselves to another formation or they may function as an independent unit or BG.\n\n**Die Roll (DR):** DRs always consist of one of two types.\n1d10: Roll one ten-sided die. Results can range from 0 to 9 (result of 0 is a zero not a 10).\n2d10: Roll two ten-sided dice (one die being the tens and the other die the ones). Results can range from 00–99. Recommend that players use two different colored dice.\n\n**Die Roll Modifier (DRM):** A numerical value either added or subtracted from a DR result to represent specific conditions present that would affect the variable outcome of a given circumstance. Unless noted otherwise, all DRMs are cumulative.\n\n**Discretionary Hit (13.10.4):** Hits garnered during ground assault resolution that may be resolved as a retreat and/or step losses.\n\n**Division (Div) (9.3.3):** A formation consisting of two or more Rgt sized formations and supporting (asset) units assigned to a Div HQ.",
+    "crossRefs": [
+      "17.4.0",
+      "17.3.1",
+      "9.6.0",
+      "13.10.4",
+      "9.3.3"
+    ]
+  },
+  {
+    "id": "26.0.E",
+    "section": "26.0.E",
+    "title": "Definitions — E",
+    "summary": "Glossary definitions starting with E",
+    "text": "**Engineer (Eng):** Eng units have construction/demolition capabilities (17.3.0), ferry GenS (15.2.1) and units across streams/rivers (17.2.0) and provide combat effects against DWs and cities (13.7.4b). Pioneer (Pio) is a term used to denote some German Eng units, the terms Eng and Pio are interchangeable.\n\n**Entrenchment (ET–2 & ET–3) (17.3.3):** Are a form of fieldwork representing improved communications, fields of fire and temporary emplacements or improvements in existing structures that offer more protection for defending units.\n\n**Exploitation (Exploit) Mode (5.3.0):** Term used to define a unit mode that allows a side to take advantage of a breakthrough or to react to enemy movement. Units in Exploit mode can only move during Exploit Phases.\n\n**Extended Night Activity (ENA) (3.4.0):** Is a scenario permitted GT conducted after the Night GT. ENA simulates a unit's ability to conduct extended operations at night when they normally would be sleeping or refitting. Not all games allow ENA periods.",
+    "crossRefs": [
+      "17.3.0",
+      "15.2.1",
+      "17.2.0",
+      "13.7.4",
+      "17.3.3",
+      "5.3.0",
+      "3.4.0"
+    ]
+  },
+  {
+    "id": "26.0.F",
+    "section": "26.0.F",
+    "title": "Definitions — F",
+    "summary": "Glossary definitions starting with F",
+    "text": "**Fatigue (F) (14.0):** Fatigue represents the physical limit of pushing soldiers and their military organizations beyond the limits of human and material endurance, and the disruptive nature of combat. There are two fatigue levels, fatigue one and fatigue two.\n\n**Fieldworks (FW) (17.3.3):** Entrenchments (ET) and improved positions (IP) are FWs. Players may construct FWs during a game.\n\n**Final Assault Column (FAC) (13.7.0):** The column on the Ground Assault Table (after all column shifts) used to resolve ground assaults.\n\n**Fire Support (FS) (11.0):** The term used to describe conducting a barrage using AP, Art units or NGS points against an enemy occupied target hex.\n\n**Fire Support Charts & Tables (11.0):** This group of charts and tables provides the variables and process for conducting all types of FS missions.\n\n**Fog of War (FoW) (8.4.0):** Simulates the confusion and uncertainty of battlefield conditions. FoW rules limit the level of information an opposing player can determine.\n\n**Formation (9.3.3):** A generic term used to describe divisions and independent BG.\n\n**Fortifications (Fort) (17.6.0):** Represent hardened defensive positions built prior to the commencement of a game.\n\n**Fortified Area Hexes (Ft Area) (17.4.0 & 17.5.0):** Represent extensive hardened defensive positions printed on the map.\n\n**Free French (FF):** Military forces that continued to fight against the Axis powers after the fall of France. Unless stated otherwise, all rules referring to US units apply to FF units.\n\n**Fuel Point (FP) (16.4.0):** A unit of measure used to quantify the fuel requirements of mechanized formations and or units.",
+    "crossRefs": [
+      "14.0",
+      "17.3.3",
+      "13.7.0",
+      "11.0",
+      "8.4.0",
+      "9.3.3",
+      "17.6.0",
+      "17.4.0",
+      "17.5.0",
+      "16.4.0"
+    ]
+  },
+  {
+    "id": "26.0.G",
+    "section": "26.0.G",
+    "title": "Definitions — G",
+    "summary": "Glossary definitions starting with G",
+    "text": "**Game Day (GD):** Unit of measure to determine the historical dates of a given game. GDs consist of three regular GTs (AM, PM, and Night) and a possible ENA period.\n\n**Game Turn (GT) (3.0):** Unit of measure used to regulate the flow of play during any given GD.\n\n**Game Turn Record Track (GTRT) (3.1.1):** The track used to record GTs and GDs.\n\n**General Supply (GenS) (15.0):** Form of supply, based upon tracing a supply path from a primary supply source through a set of HQs to individual units.\n\n**GenS Path (15.2.0):** A path of hexes (of a certain length) traced from a unit's PSS through the chain of successively lower HQ until finally reaching an individual unit.\n\n**German:** In the context of the game, a term used to describe all military branches of Germany.\n\n**Ground Assault (GA) (13.0):** The term used to describe the act of attacking enemy units from adjacent hexes.\n\n**Ground Assault Table (GAT) (13.1.0):** Use this table to resolve GAs. Unlike other games both the attacker and defender each roll to see what results they achieve against enemy forces.\n\n**Ground Assault Value (GAV) (13.6.0):** Value obtained by comparing the attacker's final CS to that of the defender's final CS.\n\n**Ground Interdiction (GI) (20.3.0):** GI missions interdict enemy ground unit movement behind the front lines.\n\n**Ground Interdiction Value (20.3.1):** The number of MPs a unit can expend prior to being subject to ground interdiction missions.\n\n**Ground Support (GS) (20.2.0):** A FS mission conducted using APs.",
+    "crossRefs": [
+      "3.0",
+      "3.1.1",
+      "15.0",
+      "15.2.0",
+      "13.0",
+      "13.1.0",
+      "13.6.0",
+      "20.3.0",
+      "20.3.1",
+      "20.2.0"
+    ]
+  },
+  {
+    "id": "26.0.H",
+    "section": "26.0.H",
+    "title": "Definitions — H",
+    "summary": "Glossary definitions starting with H",
+    "text": "**Headquarters (HQ) Units (9.0, 15.0 & 16.0):** Represent the command structure of a given formation or chain of command. HQs are the focal point for logistical support and command functions.\n\n**Heavy Bomber (HB) (See Scenario Rules):** Represent HB fighter escorts used to conduct carpet bombing. Scenario rules will describe their use.\n\n**High Vantage Point (HVP) (8.1.2d):** Games may have terrain features that are more prominent than a VP. In game terms these features are HVP.\n\n**Hybrid Unit (4.1.4 & 22.6.0):** A Mech class unit that is a mixture of AFVs and Inf (includes units with the Recon symbol).",
+    "crossRefs": [
+      "9.0",
+      "15.0",
+      "16.0",
+      "8.1.2",
+      "4.1.4",
+      "22.6.0"
+    ]
+  },
+  {
+    "id": "26.0.I",
+    "section": "26.0.I",
+    "title": "Definitions — I",
+    "summary": "Glossary definitions starting with I",
+    "text": "**Improved Position (IP) (17.3.3a):** Represent defensive positions, such as rudimentary fox holes, designated fields of fire and an improved communications network.\n\n**Independent Unit (9.0):** A unit not assigned and/or attached to any formation. Corps and army asset units are independent units, but may be attached to formations.\n\n**In-Battery (IB) (5.6.0):** Art units deployed in a way to conduct maximum fire support. Most IB Art units cannot move. Exceptions: IB one hex movement (5.6.1) & SPA units (5.6.0).",
+    "crossRefs": [
+      "17.3.3",
+      "9.0",
+      "5.6.0",
+      "5.6.1"
+    ]
+  },
+  {
+    "id": "26.0.K",
+    "section": "26.0.K",
+    "title": "Definitions — K",
+    "summary": "Glossary definitions starting with K",
+    "text": "**Kampfgruppe (KG) (9.0):** A German term used to describe ad-hoc formations of less than divisional sized grouped together to complete a specific mission. German formations may consist of KG named for the Ldr historically associated with the group.",
+    "crossRefs": [
+      "9.0"
+    ]
+  },
+  {
+    "id": "26.0.L",
+    "section": "26.0.L",
+    "title": "Definitions — L",
+    "summary": "Glossary definitions starting with L",
+    "text": "**Leader (23.0) (Ldr):** Ldr counters are Ldrs (and their staff) that had a significant impact on operations in each game.\n\n**Lead Unit (13.8.1 & 13.8.4):** When conducting a GA each side must select units to determine the proficiency (lead PR unit) and Arm/AT ratings (lead Arm/AT unit) of the attacking or defending units. There is no requirement that these two types of leads be the same unit.\n\n**Leg Movement Class Units (Leg class units) (4.3.1):** Represent units that move primarily by foot (UTC).\n\n**Line of Sight (LOS) (8.1.0):** A straight line from the center of a spotter's hex to the center of the target hex.\n\n**Logistics Charts and Tables (15.0 & 16.0):** This group of charts and tables provides the variables and process for managing the game's logistic procedures.",
+    "crossRefs": [
+      "23.0",
+      "13.8.1",
+      "13.8.4",
+      "4.3.1",
+      "8.1.0",
+      "15.0",
+      "16.0"
+    ]
+  },
+  {
+    "id": "26.0.M",
+    "section": "26.0.M",
+    "title": "Definitions — M",
+    "summary": "Glossary definitions starting with M",
+    "text": "**Mandatory Hit (13.10.3):** Hits garnered during ground assault resolution that normally require a specific number of step losses to be taken from participating units.\n\n**Maneuver Reserve (MR) Mode (5.4.0):** A mode that a formation may enter that represents a time that the formation may rest its personnel and repair equipment allowing the formation to operate at a higher level of performance for a given time after exiting MR mode.\n\n**Maximum Step Loss (Max step loss) (4.2.1a):** A single unit cannot suffer more than one step loss per combat result unless the rule states that Max step loss does not apply.\n\n**Mechanized Class Movement Units (Mech class units) (4.3.2):** Represent units that move using tracked, motorized or horse drawn vehicles.\n\n**Mech Road Movement (7.10.0):** Allows Mech class units to take advantage of roads while moving. Only Mech class units can move using this type of movement.\n\n**Mixed Armor:** When determining FS mission DRMs, any unit with the armor symbol is mixed armor.\n\n**Morning Game Turn (AM) (3.0):** The first GT of any given GD including the hours from just before sunrise to noon.\n\n**Movement Allowance (MA) (7.1.0):** Each unit counter has a printed MA (UTC). A unit's MA is the maximum number of movement points a unit can expend in a single Movement Phase. Conditions, such as fuel, ground condition, unit mode and GenS may modify a unit's printed MA.\n\n**Movement Charts & Tables (7.0):** This group of charts and tables provides the variables and process for conducting all types of movement, including construction.\n\n**Movement Halt (MH) (7.7.0): GOSS** does not use the concept of zones of control. Instead, a player may normally move units adjacent to (and past) enemy units without any restrictions. A unit must immediately stop moving if it encounters a MH. Exception: CDOs (4.5.0).\n\n**Movement Point (MP) (7.2.0):** Unit of measure used to determine how much of a unit's MA it must use to enter a hex or perform other functions.",
+    "crossRefs": [
+      "13.10.3",
+      "5.4.0",
+      "4.2.1",
+      "4.3.2",
+      "7.10.0",
+      "3.0",
+      "7.1.0",
+      "7.0",
+      "7.7.0",
+      "4.5.0",
+      "7.2.0"
+    ]
+  },
+  {
+    "id": "26.0.N",
+    "section": "26.0.N",
+    "title": "Definitions — N",
+    "summary": "Glossary definitions starting with N",
+    "text": "**Naval Gunfire Support (NGS) (11.3.2 & 11.4.2):** A FS mission conducted using naval assets.\n\n**Night Game Turn (3.0):** The third GT of any given GD from early evening to the start of the next GD.\n\n**Non-Road Movement (7.11.0):** Non-road movement allows Mech and Leg class units to move through most types of terrain without the benefit of roads.\n\n**Numerical Hits (11.6.2):** Term used to represent casualties inflicted from FS missions.",
+    "crossRefs": [
+      "11.3.2",
+      "11.4.2",
+      "3.0",
+      "7.11.0",
+      "11.6.2"
+    ]
+  },
+  {
+    "id": "26.0.O",
+    "section": "26.0.O",
+    "title": "Definitions — O",
+    "summary": "Glossary definitions starting with O",
+    "text": "**Observed (8.0):** A term used to denote the status of a unit that is subject to an enemy unit being able to direct a FS mission onto an observed unit. Observation is not automatically reciprocal.\n\n**On Hand Supply (OhS) (15.5.0):** The supply status of a unit or HQ showing the unit/HQ is unable to trace a valid GenS path to its superior HQ but still has a limited amount of supply present.\n\n**Open Terrain (8.2.0):** Any terrain that is not covering terrain, such as clear, rough and marsh.\n\n**Out-of-Battery (OoB) (5.6.0):** Art units deployed in a way to conduct movement.\n\n**Out of Command (OoC) (9.8.0):** Used to describe the status of a unit or HQ which is outside its superior HQ's zone of operations (ZOP).\n\n**Out of Supply (OoS) (15.6.0):** The supply status of a unit or HQ showing the unit/HQ is unable to trace a valid GenS path to its superior HQ and does not have OhS.\n\n**Other Terrain in Hex (OTIH):** Term used on various charts to note that the terrain listed does not affect play in this case.\n\n**Overcast (Ovr) (8.1.2c & 19.3.3):** An atmospheric condition that affects observation and available AP.",
+    "crossRefs": [
+      "8.0",
+      "15.5.0",
+      "8.2.0",
+      "5.6.0",
+      "9.8.0",
+      "15.6.0",
+      "8.1.2",
+      "19.3.3"
+    ]
+  },
+  {
+    "id": "26.0.P",
+    "section": "26.0.P",
+    "title": "Definitions — P",
+    "summary": "Glossary definitions starting with P",
+    "text": "**Panzer (Pz):** German term describing AFVs and associated weapon types.\n\n**Panzergrenadier (PzG):** German term to denote armored infantry.\n\n**Partial Overcast (POvr) (8.1.2c & 19.3.2):** An atmospheric condition that can affect observation and available AP.\n\n**Personnel Type Units:** A unit consisting of personnel supported with a mix of vehicles and support weapons. Personnel units may be Leg or Mech class units. See the UTC for full listing of personnel type units.\n\n**Population Feature:** Term to denote a location, village, town, or city.\n\n**Prepared Assault (PA) Mode (5.2.0):** A mode that combat units must enter to conduct a GA from more than one hex. PA mode allows greater support and coordination between units.\n\n**Primary Supply Source (PSS) (15.2.0):** A position on the game map or a location off map that army, corps, and formation HQs use to determine their GenS status.\n\n**Proficiency Rating (PR) (4.4.0):** A value that measures a unit's performance in combat. Most units have an offensive and defensive PR.\n\n**Proficiency Rating Check (PRC) (4.4.1):** A 1d10 DR (may be subject to DRMs) made against either the offensive or defensive PR of a unit. A PRC is successful if the modified DR is less than the PR of the unit.\n\n**Pure Armor Unit:** A unit that contains only AFVs. Pure AFV units have the silhouette of the AFV type on their counter with no other symbol present.\n\nException: Recon Co.'s (those with armored car silhouette or Arm Recon symbol), are mixed armor for all purposes, they are never pure AFV units.",
+    "crossRefs": [
+      "8.1.2",
+      "19.3.2",
+      "5.2.0",
+      "15.2.0",
+      "4.4.0",
+      "4.4.1"
+    ]
+  },
+  {
+    "id": "26.0.R",
+    "section": "26.0.R",
+    "title": "Definitions — R",
+    "summary": "Glossary definitions starting with R",
+    "text": "**Railroads (RR):** Individual games may depict railroads on the game map. Unless stated otherwise, RRs are trails for movement purposes.\n\n**Rear Echelon (RE) Units (4.6.3):** Represent training detachments, security forces and other units that are not normally committed to combat.\n\n**Reconnaissance Units (Recon) (8.4.1):** Represent a unit containing light AFVs, jeeps, and/or other wheeled or tracked vehicles (UTC). Units with an Arm cavalry symbol or silhouette of an armored car are vehicular type units and qualify for the mixed AFV FS DRM (11.5.3). Units with other type symbols noted as Recon, Rec or Auf are personnel type units, they do not qualify for the mixed armor FS DRM. Recon units have special capabilities as explained throughout the rules.\n• Exploit Mode (5.3.1).\n• Stacking (6.2.3).\n• Fog of War (8.4.1).\n• Regimental Integrity Bonus (13.8.3b).\n• Conversion of mandatory step losses (13.10.2).\n• Advance after combat (13.12.3).\n\n**Regiment (Rgt) (9.0):** A collection of two or more Bn. sized units. Rgts may also contain Co. sized asset units such as Eng, AT, Flak or Art. Units assigned to a Rgt will have the regimental name as part of their unit identification. For game purposes the term regiment defines Bdes, Rgts, CG and KG assigned and/or attached to a Div HQ. Rgts not attached to a division HQ are BGs for all game purposes.\n\nNote: Commonwealth terminology notes Bn.-sized Rgts, and Rgt-sized as Bdes, GOSS uses US regimental system terminology throughout the rules.\n\n**Regimental Integrity Bonus (RIB) (13.8.3):** A DRM awarded to a GA (both attacking and defending) representing the ability of formations to better coordinate attack and defensive actions when either most or all the units involved are part of the same Rgt.\n\n**Reinforcement (21.0):** Reinforcements are new formations and units that appear for each side during play. A scenario may require players to withdraw units or formations.\n\n**Replacement Point (ReP) (22.0):** A unit of measure used to quantify personnel and/or equipment returned to a unit that is not at full strength.",
+    "crossRefs": [
+      "4.6.3",
+      "8.4.1",
+      "11.5.3",
+      "5.3.1",
+      "6.2.3",
+      "13.8.3",
+      "13.10.2",
+      "13.12.3",
+      "9.0",
+      "21.0",
+      "22.0"
+    ]
+  },
+  {
+    "id": "26.0.S",
+    "section": "26.0.S",
+    "title": "Definitions — S",
+    "summary": "Glossary definitions starting with S",
+    "text": "**Self-Propelled Artillery (SPA):** Represents Art units with guns mounted on a self-motorized platform (typically a tracked vehicle). SPA units have a red or white box around their MA. SPA may move and fire while in or out of battery. US SPAs were known as Armored Field Artillery (AFA).\n\n**Sequence of Play (SoP) (3.2.0):** Dictates the order of actions taken during a GT.\n\n**Soft Ground, Marsh, & Swamp:** Soft ground, marsh, and swamp are special terrain types that may combine with other types of terrain. Not all soft ground, marsh & swamp are equal. Scenario rules will detail specific differences.\n\n**Spotting Unit (11.2.1):** A term used to describe a unit that can observe the target hex when conducting a FS mission. Players may use air observation in place of a spotting unit (8.3.0).\n\n**Static Class Unit (4.3.3):** Units that cannot move unless transported by army level truck points.\n\n**Steps (4.2.0):** A quantification of the strength (in Co. equivalents) a unit possesses.\n\n**Strategic (Strat) Mode (5.5.0):** Strat mode allows units to move at a faster rate, while sacrificing the ability to quickly react to enemy actions. Streams: See Rivers.\n\n**Subordinate (9.0):** In the context of the game, subordinate refers to all HQ and units currently assigned and attached to the HQ discussed.",
+    "crossRefs": [
+      "3.2.0",
+      "11.2.1",
+      "8.3.0",
+      "4.3.3",
+      "4.2.0",
+      "5.5.0",
+      "9.0"
+    ]
+  },
+  {
+    "id": "26.0.T",
+    "section": "26.0.T",
+    "title": "Definitions — T",
+    "summary": "Glossary definitions starting with T",
+    "text": "**Tactical Assault (TA) (5.1.2):** A TA is GA conducted by no more than one unit or stack. It is not a mode. Mark units conducting a TA during the Tactical Assault Designation Segment of the Combat Phase.\n\n**Tac mode (Tac) (5.1.0):** A unit's default mode when not marked by a mode marker.\n\n**Terrain Effects Charts (TEC):** Summarizes the effects of terrain on movement, observation, and combat. For convenience, the TEC appears on multiple player aid cards, with each table depicting the pertinent data required to show the effect of terrain on that function.\n\nImportant: Hexes may depict more than one terrain type. The amount of each type of terrain in a hex has no bearing on the type of terrain used.\na) The defending player (both GA and FS) always chooses the type of terrain used during combat resolution.\nb) When determining movement costs when moving into or out of a hex, always use the hex or hexside terrain requiring the highest MP expenditure unless the moving unit(s) are using a Mech road movement or if a Leg class unit is moving along a road.\nc) If a hex has marsh or swamp terrain, always use the marsh/swamp terrain when determining CS modifiers for attacking out of or into the hex (13.6.1), even if the defender has chosen a different terrain type.\n\n**Truck Point (TP) (16.1.0):** A unit of measure used to represent the ability of an army to transport fuel, ammunition and units.\n\n**Towed:** Term used to describe weapon systems (primarily Art) pulled by wheeled (or tracked vehicles) and horses.",
+    "crossRefs": [
+      "5.1.2",
+      "5.1.0",
+      "13.6.1",
+      "16.1.0"
+    ]
+  },
+  {
+    "id": "26.0.U",
+    "section": "26.0.U",
+    "title": "Definitions — U",
+    "summary": "Glossary definitions starting with U",
+    "text": "**Unit Breakdown Chart (UBC) (18.0):** Displays how a unit may breakdown into smaller units called breakdown units or breakdown Co.'s.\n\n**Unit Mode (5.0):** All units must be in one of five modes. Unit modes affect unit movement and combat abilities.\n\n**Unit Movement Class (4.3.0):** There are three movement classes used in **GOSS**; Mechanized (Mech), Leg and Static.\n\n**Unit Replacement Chart (URC) (22.0):** Summarizes the number of ReP required to replace losses and to rebuild units. The chart also provides the number of recycle points required for unit step losses.\n\n**Unit Type Chart (UTC):** Gives examples of every type of unit, value, and symbol used on the unit counters.\n\n**Unmodified DR:** The original DR prior to applying any DRMs.\n\n**Unobserved (8.0 & 11.22):** A term used to describe a FS mission conducted without a qualified spotting unit or air observation.\n\n**United States (US):** In the context of the game, a term used to describe all units of the US army/Air Corps and allied nations primarily equipped by the United States.",
+    "crossRefs": [
+      "18.0",
+      "5.0",
+      "4.3.0",
+      "22.0",
+      "8.0"
+    ]
+  },
+  {
+    "id": "26.0.V",
+    "section": "26.0.V",
+    "title": "Definitions — V",
+    "summary": "Glossary definitions starting with V",
+    "text": "**Vantage Points (VP) (8.0):** Represent terrain that offers a significant height advantage to units in the hex. VP affect observation, FS mission capacity (11.2.4d) and GAs (13.7.0).\n\n**Vehicular Type Units (Veh):** A unit with weapon systems that are vehicular or horse-drawn in nature.\n\nExample: Artillery, anti-tank, anti-aircraft (both towed and self-propelled); AFVs, Armored Recon and HQ are all vehicular type units.\n\n**Volley (11.4.1):** Increments of eight or less FS mission points that require a 1d10 to resolve.",
+    "crossRefs": [
+      "8.0",
+      "11.2.4",
+      "13.7.0",
+      "11.4.1"
+    ]
+  },
+  {
+    "id": "26.0.Z",
+    "section": "26.0.Z",
+    "title": "Definitions — Z",
+    "summary": "Glossary definitions starting with Z",
+    "text": "**Zero Step Unit (Z-step) (4.1.3, 6.1.0 & 18.8.0):** Z-Step units represent units of approximately one-half of a Co.\n\n**Zone of Operations (ZOP) (9.2.0):** The area within the corps or army boundaries forms a ZOP in which the units and formations of a corps, army or army group may operate.",
+    "crossRefs": [
+      "4.1.3",
+      "6.1.0",
+      "18.8.0",
+      "9.2.0"
     ]
   }
 ]
