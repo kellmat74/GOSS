@@ -61,9 +61,6 @@ export function RuleModal() {
             <h2 className="mt-2 text-xl font-bold text-stone-100">
               {activeRule.title}
             </h2>
-            {activeRule.summary && !activeRule.text.startsWith(activeRule.summary) && (
-              <p className="mt-1 text-sm text-stone-400">{activeRule.summary}</p>
-            )}
           </div>
           <button
             onClick={closeRule}
