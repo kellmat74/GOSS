@@ -189,24 +189,35 @@ function InlineText({ text, onRuleClick }: { text: string; onRuleClick: (ref: st
   while (remaining.length > 0) {
     // Find next special token
     const boldMatch = remaining.match(/\*\*(.+?)\*\*/);
-    const refMatch = remaining.match(/\((\d+\.\d+(?:\.\d+)?(?:[a-z])?)\)/);
+    // Match (X.Y.Z) in parens OR bare X.Y.Z preceded by word boundary (not mid-number)
+    const parenRefMatch = remaining.match(/\((\d+\.\d+(?:\.\d+)?(?:[a-z])?)\)/);
+    // Bare refs require 3-part (X.Y.Z) to avoid false positives on "1.5 miles" etc.
+    const bareRefMatch = remaining.match(/(?<![.\d])(\d+\.\d+\.\d+(?:[a-z])?)(?![.\d])/);
 
     const boldIdx = boldMatch?.index ?? Infinity;
-    const refIdx = refMatch?.index ?? Infinity;
+    const parenRefIdx = parenRefMatch?.index ?? Infinity;
+    const bareRefIdx = bareRefMatch?.index ?? Infinity;
 
-    if (boldIdx === Infinity && refIdx === Infinity) {
+    // Pick the earliest match
+    const minIdx = Math.min(boldIdx, parenRefIdx, bareRefIdx);
+
+    if (minIdx === Infinity) {
       parts.push(remaining);
       break;
     }
 
-    if (boldIdx <= refIdx && boldMatch) {
+    if (boldIdx === minIdx && boldMatch) {
       parts.push(remaining.slice(0, boldIdx));
       parts.push({ type: "bold", text: boldMatch[1] });
       remaining = remaining.slice(boldIdx + boldMatch[0].length);
-    } else if (refMatch) {
-      parts.push(remaining.slice(0, refIdx));
-      parts.push({ type: "ref", ref: refMatch[1] });
-      remaining = remaining.slice(refIdx! + refMatch[0].length);
+    } else if (parenRefIdx === minIdx && parenRefMatch) {
+      parts.push(remaining.slice(0, parenRefIdx));
+      parts.push({ type: "ref", ref: parenRefMatch[1] });
+      remaining = remaining.slice(parenRefIdx + parenRefMatch[0].length);
+    } else if (bareRefMatch) {
+      parts.push(remaining.slice(0, bareRefIdx));
+      parts.push({ type: "ref", ref: bareRefMatch[1] });
+      remaining = remaining.slice(bareRefIdx + bareRefMatch[0].length);
     }
   }
 
