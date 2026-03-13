@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import type { RuleEntry } from "../../types/goss";
+import { useRules } from "../../context/RulesContext";
 
 interface RulesSearchProps {
   rules: RuleEntry[];
@@ -7,7 +8,7 @@ interface RulesSearchProps {
 
 export function RulesSearch({ rules }: RulesSearchProps) {
   const [query, setQuery] = useState("");
-  const [expanded, setExpanded] = useState<string | null>(null);
+  const { openRule } = useRules();
 
   const filtered = useMemo(() => {
     if (!query.trim()) return rules;
@@ -29,55 +30,47 @@ export function RulesSearch({ rules }: RulesSearchProps) {
         type="search"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search rules..."
-        className="mb-4 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500 dark:border-stone-600 dark:bg-stone-800"
+        placeholder="Search rules by title, section number, or content..."
+        className="mb-2 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500 dark:border-stone-600 dark:bg-stone-800"
       />
+
+      <p className="mb-4 text-xs text-stone-500">
+        {filtered.length} of {rules.length} rules
+        {query.trim() ? ` matching "${query}"` : ""}
+      </p>
 
       {filtered.length === 0 ? (
         <p className="py-8 text-center text-stone-400">
           {rules.length === 0
-            ? "No rules loaded yet. Rules will be added from the rulebook."
+            ? "No rules loaded yet."
             : "No matching rules found."}
         </p>
       ) : (
-        <ul className="space-y-2">
+        <ul className="space-y-1">
           {filtered.map((rule) => (
             <li
               key={rule.id}
               className="rounded-lg border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-800"
             >
               <button
-                onClick={() =>
-                  setExpanded(expanded === rule.id ? null : rule.id)
-                }
-                className="flex w-full items-center justify-between px-4 py-3 text-left"
+                onClick={() => openRule(rule.section)}
+                className="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-stone-50 dark:hover:bg-stone-700/50 transition-colors"
               >
-                <div>
-                  <span className="mr-2 text-sm font-mono text-amber-600 dark:text-amber-400">
-                    {rule.section}
-                  </span>
-                  <span className="font-medium">{rule.title}</span>
-                </div>
-                <span className="text-stone-400">
-                  {expanded === rule.id ? "\u25B2" : "\u25BC"}
+                <span className="shrink-0 rounded bg-stone-700 px-1.5 py-0.5 text-xs font-mono text-amber-400">
+                  {rule.section}
                 </span>
-              </button>
-
-              {expanded === rule.id && (
-                <div className="border-t border-stone-200 px-4 py-3 dark:border-stone-700">
-                  <p className="mb-2 text-sm font-medium text-stone-500">
+                <div className="min-w-0 flex-1">
+                  <span className="font-medium">{rule.title}</span>
+                  <p className="mt-0.5 text-xs text-stone-500 truncate">
                     {rule.summary}
                   </p>
-                  <p className="whitespace-pre-wrap text-sm leading-relaxed text-stone-600 dark:text-stone-300">
-                    {rule.text}
-                  </p>
-                  {rule.crossRefs.length > 0 && (
-                    <div className="mt-3 text-xs text-stone-400">
-                      See also: {rule.crossRefs.join(", ")}
-                    </div>
-                  )}
                 </div>
-              )}
+                {rule.crossRefs.length > 0 && (
+                  <span className="shrink-0 text-xs text-stone-500">
+                    {rule.crossRefs.length} refs
+                  </span>
+                )}
+              </button>
             </li>
           ))}
         </ul>

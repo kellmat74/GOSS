@@ -1,5 +1,6 @@
 import type { Phase, SubPhase, SoPProgress } from "../../types/goss";
 import { Breadcrumb, type BreadcrumbItem } from "../Breadcrumb";
+import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 
 interface PhaseStepperProps {
   phase: Phase | null;
@@ -84,9 +85,7 @@ export function PhaseStepper({
         </div>
         <h2 className="mt-1 text-2xl font-bold">{phase.name}</h2>
         {phase.ruleRef && (
-          <span className="inline-block mt-0.5 rounded bg-stone-700 px-1.5 py-0.5 text-xs text-stone-400">
-            Rule {phase.ruleRef}
-          </span>
+          <RuleRefBadge ruleRef={phase.ruleRef} className="mt-0.5" />
         )}
       </div>
 
@@ -100,9 +99,7 @@ export function PhaseStepper({
             {subPhase.name}
           </div>
           {subPhase.ruleRef && (
-            <span className="inline-block mt-0.5 rounded bg-amber-200/30 px-1.5 py-0.5 text-xs text-amber-600 dark:bg-amber-900/30 dark:text-amber-400">
-              Rule {subPhase.ruleRef}
-            </span>
+            <RuleRefBadge ruleRef={subPhase.ruleRef} className="mt-0.5" />
           )}
         </div>
       )}

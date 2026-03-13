@@ -1,4 +1,5 @@
 import type { Phase } from "../../types/goss";
+import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 
 interface PhaseOverviewProps {
   phases: Phase[];
@@ -37,9 +38,7 @@ export function PhaseOverview({
                 </span>
                 {phase.name}
                 {phase.ruleRef && (
-                  <span className="ml-1 text-xs text-stone-400">
-                    ({phase.ruleRef})
-                  </span>
+                  <RuleRefBadge ruleRef={phase.ruleRef} className="ml-1" />
                 )}
               </button>
 

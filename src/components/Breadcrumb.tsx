@@ -1,3 +1,5 @@
+import { RuleRefBadge } from "./RulesReference/RuleRefBadge";
+
 export interface BreadcrumbItem {
   label: string;
   ruleRef?: string;
@@ -22,9 +24,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
               <span className="font-medium text-amber-400">
                 {item.label}
                 {item.ruleRef && (
-                  <span className="ml-1 rounded bg-stone-700 px-1 py-0.5 text-xs text-stone-400">
-                    {item.ruleRef}
-                  </span>
+                  <RuleRefBadge ruleRef={item.ruleRef} className="ml-1" />
                 )}
               </span>
             ) : (

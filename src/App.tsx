@@ -4,15 +4,16 @@ import { PhaseOverview } from "./components/SequenceOfPlay/PhaseOverview";
 import { PhaseStepper } from "./components/SequenceOfPlay/PhaseStepper";
 import { TurnInfo } from "./components/SequenceOfPlay/TurnInfo";
 import { RulesSearch } from "./components/RulesReference/RulesSearch";
+import { RuleModal } from "./components/RulesReference/RuleModal";
 import { SoPFlowchart } from "./components/Flowchart/SoPFlowchart";
+import { RulesProvider } from "./context/RulesContext";
 import { useSoPProgress } from "./hooks/useSoPProgress";
 import sequenceData from "./data/goss/sequence.json";
 import gossRules from "./data/goss/rules.json";
-import warRules from "./data/war/rules.json";
 import type { Phase, RuleEntry } from "./types/goss";
 
 const phases = sequenceData.phases as Phase[];
-const allRules = [...(gossRules as RuleEntry[]), ...(warRules as RuleEntry[])];
+const allRules = gossRules as RuleEntry[];
 
 type View = "sop" | "flowchart" | "rules";
 
@@ -66,26 +67,29 @@ function App() {
   );
 
   return (
-    <AppShell
-      sidebar={sidebar}
-      turnInfo={<TurnInfo turn={progress.gameTurn} />}
-    >
-      {view === "sop" && (
-        <PhaseStepper
-          phase={currentPhase}
-          subPhase={currentSubPhase}
-          progress={progress}
-          totalPhases={phases.length}
-          onNext={nextStep}
-          onPrev={prevStep}
-          onToggleChecklist={toggleChecklist}
-          onAdvanceTurn={advanceTurn}
-          onGoToPhase={goToPhase}
-        />
-      )}
-      {view === "flowchart" && <SoPFlowchart />}
-      {view === "rules" && <RulesSearch rules={allRules} />}
-    </AppShell>
+    <RulesProvider rules={allRules}>
+      <AppShell
+        sidebar={sidebar}
+        turnInfo={<TurnInfo turn={progress.gameTurn} />}
+      >
+        {view === "sop" && (
+          <PhaseStepper
+            phase={currentPhase}
+            subPhase={currentSubPhase}
+            progress={progress}
+            totalPhases={phases.length}
+            onNext={nextStep}
+            onPrev={prevStep}
+            onToggleChecklist={toggleChecklist}
+            onAdvanceTurn={advanceTurn}
+            onGoToPhase={goToPhase}
+          />
+        )}
+        {view === "flowchart" && <SoPFlowchart />}
+        {view === "rules" && <RulesSearch rules={allRules} />}
+      </AppShell>
+      <RuleModal />
+    </RulesProvider>
   );
 }
 

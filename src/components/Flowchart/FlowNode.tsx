@@ -1,4 +1,5 @@
 import { Handle, Position, type NodeProps } from "@xyflow/react";
+import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 
 export type FlowNodeData = {
   label: string;
@@ -26,8 +27,9 @@ export function FlowNode({ data }: NodeProps) {
   const hasDrill = !!d.drillTo;
   const hasInfo = !!d.ruleRef;
 
-  const handleInfoClick = (e: React.MouseEvent) => {
+  const handleInfoClick = (e: React.MouseEvent | React.TouchEvent) => {
     e.stopPropagation();
+    e.preventDefault();
     if (d.ruleRef) {
       window.dispatchEvent(
         new CustomEvent("flownode-info", { detail: { ruleRef: d.ruleRef } })
@@ -56,7 +58,9 @@ export function FlowNode({ data }: NodeProps) {
 
       <div className="font-medium leading-tight">{d.label}</div>
       {d.ruleRef && (
-        <div className="mt-0.5 text-xs opacity-70">{d.ruleRef}</div>
+        <div className="mt-0.5">
+          <RuleRefBadge ruleRef={d.ruleRef} />
+        </div>
       )}
       {hasDrill && (
         <div className="mt-1 text-[10px] uppercase tracking-wider opacity-60">

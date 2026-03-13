@@ -36,8 +36,11 @@ export function ReactFlowChart({ def, onDrillDown }: ReactFlowChartProps) {
   const [editMode, setEditMode] = useState(false);
 
   const onNodeClick: NodeMouseHandler = useCallback(
-    (_event, node) => {
+    (event, node) => {
       if (editMode) return; // don't drill down while editing
+      // Don't drill down if user clicked a button (e.g., RuleRefBadge or info button)
+      const target = event.target as HTMLElement;
+      if (target.closest("button")) return;
       const data = node.data as FlowNodeData;
       if (data.drillTo) {
         onDrillDown(data.drillTo);

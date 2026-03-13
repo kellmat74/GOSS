@@ -1,4 +1,5 @@
 import type { Phase } from "../../types/goss";
+import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 
 export type NodeDetail = {
   name: string;
@@ -23,9 +24,7 @@ export function NodeDetailPanel({ detail, onClose }: NodeDetailPanelProps) {
         <div>
           <h3 className="text-lg font-bold text-stone-100">{detail.name}</h3>
           {detail.ruleRef && (
-            <span className="inline-block mt-0.5 rounded bg-stone-700 px-1.5 py-0.5 text-xs text-stone-400">
-              Rule {detail.ruleRef}
-            </span>
+            <RuleRefBadge ruleRef={detail.ruleRef} className="mt-0.5" />
           )}
         </div>
         <button
