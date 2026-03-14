@@ -1,0 +1,2134 @@
+[
+  {
+    "id": "aw-1.0",
+    "section": "1.0",
+    "title": "Game Components",
+    "text": "These rules add to, and may modify the rules in the GOSS rulebook. In all cases, the rules in this book take precedence over any in the GOSS rules.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.1",
+    "section": "1.1",
+    "title": "Game Rules",
+    "text": "These rules add to, and may modify the rules in the GOSS rulebook. In all cases, the rules in this book take precedence over any in the GOSS rules.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2",
+    "section": "1.2",
+    "title": "Game Map",
+    "text": "The Normandy area contains numerous unique terrain features. The following rules define the unique terrain and rules pertaining to them.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.1",
+    "section": "1.2.1",
+    "title": "Roads",
+    "text": "",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.1a",
+    "section": "1.2.1a",
+    "title": "Railroads (RR)",
+    "text": "RRs are depicted on the Battlefield Map and the Strategic Map. They are used to move reinforcements from their starting point, on the Strategic Map onto the Battlefield Map. There are some hexes that show constricted terrain along a RR. These are considered RR embankments. Treat them as constricted terrain for all purposes except stacking.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.1b",
+    "section": "1.2.1b",
+    "title": "Trails leading off Beaches",
+    "text": "All trails from a beach sub-area landing hex to the first primary or secondary road hex are considered secondary roads when tracing GenS only.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.2",
+    "section": "1.2.2",
+    "title": "Rivers & Streams",
+    "text": "There are two major rivers in the game; the Dives River starting with hexside C6216/6315 and ending at the sea (C6413) and the Orne River starting with hexside C4423/4523 and ending at the sea (C5415).",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.5",
+    "section": "1.2.5",
+    "title": "Marsh Hexes",
+    "text": "In Atlantic Wall there is no \"soft ground\" Use the Marsh rules and Marsh line on all charts.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.6",
+    "section": "1.2.6",
+    "title": "Cherbourg",
+    "text": "Cherbourg was a key objective in the Allied planning.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.6a",
+    "section": "1.2.6a",
+    "title": "Cherbourg Garrison",
+    "text": "Units labeled with a \"CH\" are units assigned to garrison Cherbourg. Cherbourg garrison units are restricted as follows:\n- Units with a MA of zero may not leave their initial set up hex.\n- Cherbourg Garrison units are activated when Landefront Cherbourg is declared or if US units occupy three or more Landefront Defensive hexes.\n- Activated units must remain within the Cherbourg perimeter.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.6b",
+    "section": "1.2.6b",
+    "title": "Landefront Defenses",
+    "text": "The ET symbols that are printed on map A in the vicinity of Cherbourg represent the Cherbourg Landefront Defenses. The Landefront defenses represent the Cherbourg perimeter. These hexes are considered fortified area hexes with the following exceptions:\n- They function as ET-2 for all purposes.\n- They may not be destroyed and may be used by either side.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.6c",
+    "section": "1.2.6c",
+    "title": "Cherbourg Supply Path",
+    "text": "Until Landefront Cherbourg is declared, German formation HQ may trace a GenS path no longer than 18 Mech class MP to hex A3609, then another 18 Mech class MP to their superior corps HQ.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.6d",
+    "section": "1.2.6d",
+    "title": "Landefront Cherbourg",
+    "text": "After the Cherbourg has been isolated from the rest of the France, the Axis side must declare Landefront Cherbourg. Cherbourg is considered isolated when a GenS path of any length cannot be traced from another PSS to A3609. Units that can trace a GenS path of any length from Cherbourg (hex A3609), but cannot trace a GenS path from any other German PSS are considered part of Landefront Cherbourg. Hex A3609 functions as a PSS and corps HQ for all units in the Landefront once Landefront Cherbourg is declared. HQ may trace directly to the PSS.\n- A maximum of three formations plus 12 corps asset units (do not count StP and WN) may be subordinate to this command. Units that are part of the Cherbourg garrison are not counted when determining maximum units.\n- If more than three formations are within the Landefront, reduce the Cherbourg start ADV by one.\n- If more than 12 corps asset units are within Landefront, mark the additional units with a \"on hand supply\" marker. Unless they are later attached to a formation, they can never be considered in GenS. Follow all the procedures for OhS units.\n- Cherbourg ADV starts at four. Decrease this number by one every 21 GTs after the Landefront has been declared. Continue this reduction until the ADV reaches zero at which time all units must check for surrender as if they were OoS and isolated.\n- All Mech units are considered fully fueled for the first GD that Landefront Cherbourg is declared. Beginning the second GD, all HQs (including Cherbourg) are marked with a \"low fuel\" marker.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.6e",
+    "section": "1.2.6e",
+    "title": "Cherbourg Morale",
+    "text": "All units within Landefront Cherbourg have their offensive and defensive PR values affected as follows:\n- -1; The GT that a US unit captures one of the Cherbourg Perimeter hexes.\n- -2; if any Cherbourg town or city hex is occupied by the Allies.\n- Reduced to one; if C3609 has been captured by a US unit.\nOn the first AM GT (and all following AM GTs) after hex C3609 is occupied by a US unit, all German units in the peninsula must make a surrender check (GOSS 15.7.2). This includes all remaining WN and StP.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "15.7.2"
+    ]
+  },
+  {
+    "id": "aw-1.2.6f",
+    "section": "1.2.6f",
+    "title": "Allied Use of Cherbourg",
+    "text": "Cherbourg port facilities were virtually destroyed by the German garrison prior to surrendering. Once the Allies have repaired the port, Cherbourg becomes a PSS for the US 3rd US Army.\n- Cherbourg port is composed of the hexes C3609, C3709, C3809, and C3909. In the Command Phase of the GD after all four of these hexes are controlled by the Allies, the port may begin the process of becoming operational.\n- Repairs require 21 GDs. Place an ace of spade marker on the GTRT 21 days from the current GD. On the 21st GD, Cherbourg is operational and may be used as a PSS for the 3rd Army. It makes no difference which GT the last hex is captured.\n- Allied units may not land at Cherbourg.\n**Designer's note**: Historically very few Allied units landed at Cherbourg. The port when finally, repaired was used primarily for the off-loading of supplies and material, hence the ability to activate Third Army. Additionally, for those wondering where the Pluto pipeline is at, it is built into the ability of the Allies to increase FP deliveries with the addition of the 3rd US and 1st Canadian Armies.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.7",
+    "section": "1.2.7",
+    "title": "Bocage & Hedgerow",
+    "text": "Bocage and Hedgerow terrain were some of the key terrain features that influenced the Normandy Campaign. To assist players in remembering all the effects, they are listed here rather than spread throughout the rules.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.7a",
+    "section": "1.2.7a",
+    "title": "Movement & Observation",
+    "text": "- Hedgerow and Bocage hexes are movement covering terrain.\nException: Hedgerow or Bocage are not MCT if an adjacent enemy unit is on a vantage point or if AW 1.2.8 applies. They are still considered OCT.\n- Marsh hexes that also contain Hedgerow terrain are treated as MCT.\n- Delay markers may only be created in Bocage and Hedgerow hexes. When attempting to place a delay marker in Bocage, apply a -1 DRM to the unit's PR check. The DRM is no longer applicable after hedgerow cutter tanks are available.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "1.2.8"
+    ]
+  },
+  {
+    "id": "aw-1.2.7b",
+    "section": "1.2.7b",
+    "title": "Combat",
+    "text": "- German units defending in Bocage or Hedgerow hexes may convert one mandatory hit to one discretionary hit. This is not cumulative with the other conversions in GOSS 13.9.2b.\n- Defending units in Bocage may treat an ET-2 as an ET-3 for the purpose of reducing FS numerical hits and mandatory hits in GA (GOSS 11.6.2 & 13.9.2b).\n- Bocage is treated the same as a Village when conducting FS missions. Use line 3 on the Ground Assault Table.\n- Hedgerow is treated the same as Woods when conducting FS missions. Use line 2 on the Ground Assault Table.\n- If the defenders occupy a Bocage hex, advancing units are restricted to a one hex advance (i.e., the defender's hex). In this case roads do not negate the required halt.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "13.9.2b",
+      "11.6.2"
+    ]
+  },
+  {
+    "id": "aw-1.2.7c",
+    "section": "1.2.7c",
+    "title": "Construction",
+    "text": "- Any two steps of non-Art/non-HQ or one step of engineers may place an IP in a Bocage hex at the beginning of a friendly Movement Phase. The IP does not require any construction time. The unit may move during the same Movement Phase. If at least one engineer step is not present, the two non-Art/non-HQ steps must be of the same unit. (i.e., it takes a two-step unit.)\n- Construction of an ET-2 in a Bocage hex does not require the presence of an IP.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.7d",
+    "section": "1.2.7d",
+    "title": "Hedgerow Cutter Tanks",
+    "text": "- Starting on the July 15 AM GT and each successive AM GT thereafter until successful, the Allied side rolls 1d10 to determine if hedge cutter blades have been fitted to enough armor to have an operational effect on combat.\n- Modify the DR by -1 for each GD after July 22.\nExample: On the July 23 AM GT, the DR would receive a -1 DRM, on the July 24 AM GT the DRM would be -2.\n- If the modified DR result is 0-1, the attempt is successful. Beginning that GT and until the end of any scenario the following modifications are made to Bocage effects:\n- If at least one step of Sherman Tanks participates in the GA (they may not be in a stand-off status) and accompany the advancing units, the units may advance a maximum of two Bocage hexes. German units may not convert one mandatory hit to a discretionary hit.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.2.8",
+    "section": "1.2.8",
+    "title": "High Vantage Point Hexes",
+    "text": "There are two hexes with a high vantage point.\n- E4306 has a LOS of nine hexes.\n- C3926 has a LOS of six hexes.\n- These hexes negate Bocage and Hedgerow movement covering terrain ability out to one-half the LOS for the high vantage point hex. These hexes are still considered OCT.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.3",
+    "section": "1.3",
+    "title": "Game Charts & Tables",
+    "text": "There are numerous new charts and tables included with Atlantic Wall, they are explained the appropriate rules sections.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.3.7",
+    "section": "1.3.7",
+    "title": "Beach Displays",
+    "text": "There are five beach displays that each depicts one named invasion beach. Amphibious Invasion Stage activity occurs on these beach displays. When each beach is totally cleared of German units, activity ceases for that beach and its display is no longer used. The beach displays are described in detail in the Amphibious Invasion Module.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.3.8",
+    "section": "1.3.8",
+    "title": "Strategic Map",
+    "text": "The Strategic Map is used to manage the flow of German reinforcements to the Normandy battlefield map. Once an Allied breakout has occurred, the Strategic Map also allows both sides to conduct high-level maneuver as the Allies race through Brittany and toward the Seine River. Use of the Strategic Map is not necessary for many of the scenarios. In the longer campaign scenarios, players can also choose to use rules that take the place of using the Strategic Map.\n- Activity only occurs on the Strategic Map once per GD, during the AM GT. This is an abstraction of the entire day's activity. Night GTs are factored into this activity.\nException: June 6 AM, PM, and Night GTs.\n- Units on the Strategic Map move during their friendly Strategic Movement Segment and may initiate an abstract form of combat against enemy units occupying the same location box.\n- APs that have been allocated to the Strategic Map are unavailable for use on the Battlefield Map for the entire GD.\n- The only terrain features affecting combat on the Strategic Map are towns, cities, and Forts.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.4",
+    "section": "1.4",
+    "title": "The Playing Pieces",
+    "text": "Several new types of units and markers are used for the Atlantic Wall game due to unique aspects of the campaign. These new counters are listed below and described within the text of the rules.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.4.2",
+    "section": "1.4.2",
+    "title": "Unit Nationalities & Sides",
+    "text": "The Allied side is a coalition of nationalities whose units are organized into two commands: The Twelfth Army Group (12AG) and the Twenty-First Army Group (21AG). Historically, until the Third United States (US) Army was activated, all forces were commanded by 21AG and Marshall Montgomery. For all game purposes; US forces and the 2nd Free French Armored Division are treated separately from the Commonwealth (CW) units. Each nationality is represented by color-coding all of its units with a unique color scheme.\nAllied Units:\n- **21st Army Group (21AG)**:\nBritish Units: black or dark red type on light tan background\nCanadian Units: white or dark type on a light olive background\nPolish Units: white type on a red background.\n- **12th Army Group (12AG)**:\nUS Units: black or white type on dark green background.\nFree French Units: black or white type on blue background.\nNote: Other Allied nations who participating in the invasion are shown using British unit colors, or US unit colors depending on which forces they typically operated with.\nThe German side is composed of three different military and political branches of service (for simplicity, the Kriegsmarine units are not differentiated from Wehrmacht units).\n- German Units:\nWehrmacht Units: black type on field grey background\nLuftwaffe Units: black type on a light blue field.\nWaffen SS Units: white type on a black field\nIf a rule applies to all Allied units, the terms \"Allied\" or \"Allied Side\" will be used. If a rule applies to a specific Allied nation or grouping of Allies, the national name or CW (referring to British and Canadian) will be used. If a rule applies to all German units, the term \"German\" or \"German Side\" will be used. If a rule applies to a specific branch of the German forces, that branch name will be used (i.e. Luftwaffe, SS, etc.).",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.4.3",
+    "section": "1.4.3",
+    "title": "Airborne Assault Counters",
+    "text": "- Airborne Assault Coys: (Fog of War side & Unit Side)\n- Dummy Airborne Counters\n- Drop Zone Counters",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.4.4",
+    "section": "1.4.4",
+    "title": "Amphibious Invasion Counters",
+    "text": "- German: Wiederstandnesten (WN), Heavy AT, and infantry units.\n- Allied (CW and US) Invasion Assault Units: infantry, engineer, tank, DD tank, ranger, commando, leader, and AVRE/Centurion, units.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.4.5",
+    "section": "1.4.5",
+    "title": "Battlefield Map Counters",
+    "text": "- Wiederstandnesten (WN)\n- Strongpoint (StP)\n- Kangaroo transport units\n- Delay Markers",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.6",
+    "section": "1.6",
+    "title": "Terms & Abbreviations",
+    "text": "**Beach**: Throughout the rules the term \"Beach\" signifies the area that was designated by the Allies as a Beach (i.e. from west to east, Utah, Omaha, Gold, Juno, and Sword Beaches).\n**Beach Sub-area**: Are areas within a Beach that are designated as landing areas for the initial assault and follow on reinforcements. Sub-area beach hexes are marked with a number that corresponds to a landing box on the Battlefield Map. Sub-area landing hexes are designated with an \"asterisk\". They are adjacent and in some cases the same hex as the Sub-area beach hex.\n**Wiederstandnesten (WN)**: These units represent the hardened infantry and light gun emplacements located near the Normandy coastline that were placed to resist amphibious landings. They are depicted as pointed black stars on a red background. They are considered Forts, except they are treated as ET-2 when determining FS mission DRM, and GA column shifts.\n**Strongpoint (StP)**: Strongpoints are treated as Forts for all purposes. StP are depicted by a black hexagonal polygon printed over a red background.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-1.8.0",
+    "section": "1.8.0",
+    "title": "Inventory of Game Parts",
+    "text": "A complete game of Atlantic Wall includes:\n- Six maps labeled A through F. Map F, has two smaller sections that attach to it (sections F1 and F2. Collectively, these six maps are referred to as the Battlefield Map to distinguish it from displays and the Strategic Map (see below).\n- One Strategic Map Display\n- Five Amphibious Invasion Module Beach Displays: (Sword, Juno, Gold, Omaha, and Utah beaches).\n- Sixteen Counter sheets (4,480 counters)\n- Three Army Record Tracks Displays (one each for the CW, US and German armies).\n- Ground Assault Chart/Fire Support Chart\n- Combat Results Table/Movement Chart\n- Transport & Logistic Tables/Unit Replacement Chart\n- Unit Breakdown Chart/Unit Type Chart\n- Two Allied Beach & Logistics Displays\n- CW & US Airborne Assault Display\n- Airborne Assault Chart/Amphibious Fire Chart\n- Atlantic Wall Game Turn Record Track\n- One GOSS Rules Booklet\n- One Scenario Rules Booklet\n- Two ten-sided dice\n- Storage Bags\nIf your game has any missing or damaged items please contact: Decision Games Customer Service, PO Box 21598 Bakersfield CA 93390 or online at www.decisiongames.com using the Customer Service form. This game is supported on talk.consimworld.com.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-2.0",
+    "section": "2.0",
+    "title": "Setting Up the Game",
+    "text": "The maps are designed so that they overlap seamlessly when they are placed together. Each map is identified by the letter code A through F placed in the lower right corner of the map under the title block. When placed together correctly, the roads and terrain features should align properly along the hexes on the edges of the maps. Map F extension is placed first, with map F overlaying it. Then map E Overlays F, and D Overlays E. For the next row, place map C, over maps E & F, and then map B over Maps D & E & C. Finally, map A overlays map B.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-3.0",
+    "section": "3.0",
+    "title": "The Game Turn",
+    "text": "",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-3.2",
+    "section": "3.2",
+    "title": "Sequence of Play",
+    "text": "There are two modules in which game activity can occur before and/or during the regular GTs on June 6. These are the Airborne Assault Stage and the Amphibious Assault Stage Modules. Each stage follows its own sequence of play. These modules are described in AW 41.0 and 42.0. The Allied player will conduct the Airborne then the Amphibious Assault Stage simulating the invasion and the seizure/consolidation of those beaches.\n**Player's Note**: The Amphibious Assault Stage Module is a solitaire exercise conducted by the Allied player, unless the German player moves units onto a Beach Display before it can be cleared.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "41.0",
+      "42.0"
+    ]
+  },
+  {
+    "id": "aw-3.2.2",
+    "section": "3.2.2",
+    "title": "Airborne Assault Stage",
+    "text": "June 6 AM GT, the Allied side conducts the planned airborne landings. Both sides have an opportunity to conduct limited movement and combat (AW 41.0).\nNote: On the June 6 PM GT and June 7 AM GT there are Glider units that arrive using the glider procedures. These units arrive at the beginning of the Allied Movement Phase.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "41.0"
+    ]
+  },
+  {
+    "id": "aw-3.2.3",
+    "section": "3.2.3",
+    "title": "Amphibious Assault Stage",
+    "text": "The Allied side conducts the AM GT Amphibious Assault Stage. If an invasion beach is not cleared of German units and beach area markers still remain to be placed at the conclusion of a GT, then the Amphibious Assault Stage is conducted at the beginning of the next GT. This process continues until all beaches are considered cleared (AW 42.0).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "42.0"
+    ]
+  },
+  {
+    "id": "aw-3.3",
+    "section": "3.3",
+    "title": "Game Turn Sequence Outline",
+    "text": "There are several additions to some phases or segments to take into account unique aspects of the Normandy campaign.\nNote: Some phases will be listed as happening only in certain GTs of the GD; e.g. \"AM\" means that this phase will only happen on AM game turns.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-3.3.1",
+    "section": "3.3.1",
+    "title": "Air Allocation Phase (AM)",
+    "text": "• Both sides determine the number of APs available for the entire GD (AW 20.0).\n• Both sides assign available APs to missions. These points can then be used throughout the AM and PM GT of that GD. Adjust the AP markers to reflect the number of APs that have been assigned to each mission.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "20.0"
+    ]
+  },
+  {
+    "id": "aw-3.3.2",
+    "section": "3.3.2",
+    "title": "Weather Determination Phase",
+    "text": "**Weather Segment:** Determine the atmospheric condition, ground condition, and precipitation for the current GT (AW 19.0).\n**Ground Interdiction Value Segment:** Allied air interdiction values are determined (AW 20.3.0).\n**Naval Unit Assignment Segment:** The Allied side determines the number of naval units available this GD (AW 11.9.0).\n**Lull Determination Segment:** Lull declarations are made (GOSS 24.0).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "19.0",
+      "20.3.0",
+      "11.9.0",
+      "24.0"
+    ]
+  },
+  {
+    "id": "aw-3.3.3",
+    "section": "3.3.3",
+    "title": "Command Phase (AM)",
+    "text": "**Command Segment**\n• The Axis side secretly designates which GT will be the Axis rest GT.\n• Both sides may change or create new command assignments and boundaries (GOSS 9.0 & AW 9.2.0).\n• Both sides determine the supply status of all HQ (GOSS 15.0).\n**Leader Activation Segment:** Both sides attempt to activate leaders (GOSS 23.1.0).\n**Surrender Segment:** Both sides determine if isolated units surrender (GOSS 15.7.0 & AW 1.2.6d & e).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "9.0",
+      "9.2.0",
+      "15.0",
+      "23.1.0",
+      "15.7.0",
+      "1.2.6d"
+    ]
+  },
+  {
+    "id": "aw-3.3.4",
+    "section": "3.3.4",
+    "title": "Transport & Logistics Phase (AM)",
+    "text": "**Naval Transit Segment:** The Allied side conducts the following actions in the order given. Boxes are located on the appropriate Naval Transit Display.\n• Units in the Transit and Embarked Boxes are moved forward one box.\n• Allied side consults the US and CW Activation Lists (AW 40.0) to determine which units are eligible for activation. Activated units are placed in the Activated Units Box.\n• Units in the Activated Units Box may embark. Place them in the Embarkation Box.\n**Truck Point Assignment Segment:** Determine the total number of TP available to each army and allocate these points to one of the three tasks (AW 15.0 or 16.0 & GOSS 16.1.0): ammunition, fuel, and/or motorization.\n**Air Supply Segment:** The Allied player may allocate air transport points to deliver fuel points or AmP directly to the beach (AW 20.5.2c).\n**Ammo Delivery Segment:** Determine the ADV for each army. Refer to the Logistics Table to obtain the number of AmP received by each army (GOSS 16.2.0, 16.3.0 & AW 15.0 or 16.0).\n**Fuel Delivery Segment:** Refer to the Logistics Table to obtain the number of fuel points received by each army (GOSS 16.2.0 & AW 15.0 or 16.0). Assign FP to HQ as desired (GOSS 16.4.0).\n**Depot Placement Segment:** Move or place new depots (GOSS 15.8.0 & AW 15.9.0).\n**Replacement Point Segment:** Both sides cull losses and receive replacement points (RePs) (GOSS & AW 22.0).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "40.0",
+      "15.0",
+      "16.0",
+      "16.1.0",
+      "20.5.2c",
+      "16.2.0",
+      "16.3.0",
+      "16.4.0",
+      "15.8.0",
+      "15.9.0",
+      "22.0"
+    ]
+  },
+  {
+    "id": "aw-3.3.5",
+    "section": "3.3.5",
+    "title": "Allied Player Turn",
+    "text": "The Allied side is the active player; the Axis side is the inactive player.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-3.3.5a",
+    "section": "3.3.5a",
+    "title": "Allied Mode Determination Phase",
+    "text": "• Roll 1d10 for each HQ marked \"low\" or \"no\" fuel. Consult the Fuel Level Table to determine the effect (GOSS 16.4.5).\n• Determine the mode each unit will be in for this GT (GOSS 5.0).\n• Artillery units are placed in-battery or out-of-battery (GOSS 5.6.0).\nNote: Allied units may not enter PA mode on the June 6 GD.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "16.4.5",
+      "5.0",
+      "5.6.0"
+    ]
+  },
+  {
+    "id": "aw-3.3.5b",
+    "section": "3.3.5b",
+    "title": "Allied Construction Phase",
+    "text": "The Allied side conducts construction of fieldworks and bridges (GOSS 17.3.0 & AW 17.3.3c).\n• All FW and bridge markers eligible to be finished are flipped to their \"completed\" sides.\n• Advance the construction of bridges by removing hit markers from \"under construction\" markers.\n• Start construction of bridges and FWs by placing \"under construction\" markers of the appropriate type in hexes where the construction is being initiated. If time of construction is greater than one GT, place hit markers equal to the number of GTs required to complete the construction.\n**Demolition Segment:** Engineer units may attempt to destroy bridges (GOSS 17.3.2).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "17.3.0",
+      "17.3.3c",
+      "17.3.2"
+    ]
+  },
+  {
+    "id": "aw-3.3.5c",
+    "section": "3.3.5c",
+    "title": "Allied Movement Phase",
+    "text": "The Allied side moves units. Units in **maneuver reserve** (MR) (5.4.0) or **exploitation** (Exploit) mode (5.3.0) may not move.\n**Strategic Movement Segment (AM):** The Allied side may conduct movement and combat on the Strategic Map (AW 27.0). Units entering the Battlefield Map from the Strategic Map may, if allowed by AW 27.3.1d, 27.3.2d, & 27.3.3c, move onto the Battlefield Map.\n**Combat Reserve Designation Segment:** Eligible units may have a combat reserve (CR) marker placed on them (GOSS 7.9.1 & 13.7.3). Units designated CR may not move.\n**Movement Segment:** Units are moved in strict order (GOSS 7.2.2). Ground Interdiction may take place during this segment (GOSS 20.3.0). Delay markers may also be placed (GOSS 7.9.5).\n• Units in **Tactical Mode** (GOSS 5.1.0)\n  • Strategic road movement (GOSS 7.7.0)\n  • Tactical road movement (GOSS 7.6.0)\n  • Tactical non-road movement (GOSS 7.4.0)\n• Units in PA mode (GOSS 7.5.0)\n• Units in Beach Landing Boxes may be moved into their corresponding Beach Sub-Area Landing hex and if allowed moved inland.\n• Units in Anchorage Boxes on the Naval Transit Display may be unloaded in the appropriate \"In the Que\" Landing Boxes (AW 21.6.0).\n**Quick Construction Segment:** The Allied side may finish FWs eligible to be completed at this time (GOSS 17.3.3).\nNote: The only form of combat that may occur during the Movement Phase is enemy air interdiction attacks against moving units.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "5.4.0",
+      "5.3.0",
+      "27.0",
+      "27.3.1d",
+      "27.3.2d",
+      "27.3.3c",
+      "7.9.1",
+      "13.7.3",
+      "7.2.2",
+      "20.3.0",
+      "7.9.5",
+      "5.1.0",
+      "7.7.0",
+      "7.6.0",
+      "7.4.0",
+      "7.5.0",
+      "21.6.0",
+      "17.3.3"
+    ]
+  },
+  {
+    "id": "aw-3.3.5d",
+    "section": "3.3.5d",
+    "title": "Axis Exploitation Phase",
+    "text": "Axis formations in **Maneuver Reserve** (MR) mode may enter **Exploitation** (Exploit) mode (GOSS 5.4.5).\nNote: Axis formations may have entered Exploit mode during a friendly Mode Determination Phase.\n• Axis units in Exploit mode may move up to one-half of their MA, and may conduct overruns (GOSS 7.3.1b & 7.11.0).\n• Exploit units may be subject to ground support attacks and if conducting an overrun to artillery FS missions (GOSS 20.2.2 & 7.11.0).\nNote: During night GTs, a unit in Exploit mode may be moved its full MA, but each side only gets one Exploit Movement Phase (GOSS 3.3.8).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "5.4.5",
+      "7.3.1b",
+      "7.11.0",
+      "20.2.2",
+      "3.3.8"
+    ]
+  },
+  {
+    "id": "aw-3.3.5e",
+    "section": "3.3.5e",
+    "title": "Allied Combat Phase",
+    "text": "The steps used to resolve combat occur in the following order:\n**Attacker Designation Segment:** The Allied side designates which units will make tactical assaults (GOSS 10.2.0) and then attempts to remove delay markers (GOSS 7.9.5c).\n**Replacement Segment:** Eligible Allied units may receive RePs (GOSS 22.0). See national restrictions (AW 22.0).\n**Fire Support (FS) Segment:** Both sides may perform air (GOSS 20.2.0), artillery (GOSS 11.0), and naval (AW 11.9.0) FS missions. The below sequence must be followed in order.\n**Offensive Air Support:** The Allied side conducts ground support air missions.\n**Defensive Support:** The Axis side conducts artillery, then ground support air missions.\n**Offensive Support:** The Allied side conducts artillery and then naval missions.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "10.2.0",
+      "7.9.5c",
+      "22.0",
+      "20.2.0",
+      "11.0",
+      "11.9.0"
+    ]
+  },
+  {
+    "id": "aw-3.3.5e-attacker-status",
+    "section": "3.3.5e.1",
+    "title": "Attacker Status Adjustment Segment",
+    "text": "The Allied side removes attack designation markers (both Tactical and PA) from units that are no longer adjacent to enemy units and who meet the requirements in GOSS 12.0. The Allied side may then voluntarily remove attack designation markers from units that are adjacent to enemy units.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "12.0"
+    ]
+  },
+  {
+    "id": "aw-3.3.5e-ga",
+    "section": "3.3.5e.2",
+    "title": "Ground Assault (GA) Segment",
+    "text": "The Allied side attacks Axis units using GA (GOSS 13.0). Hasty demolition (GOSS 17.3.2b) and collapse (GOSS 17.3.2c) of bridges may occur during GAs. Isolated defenders may surrender (GOSS 15.7.2). After completion of combat, remove all AS markers.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "13.0",
+      "17.3.2b",
+      "17.3.2c",
+      "15.7.2"
+    ]
+  },
+  {
+    "id": "aw-3.3.5f",
+    "section": "3.3.5f",
+    "title": "Allied Exploitation Phase",
+    "text": "Allied formations in **Maneuver Reserve** (MR) mode may enter **Exploitation** (Exploit) mode (GOSS 5.4.5).\nNote: Allied formations may have entered Exploit mode during a friendly Mode Determination Phase.\n• Allied units in Exploit mode may move up to one-half of their MA, and may conduct overruns (GOSS 7.3.1b & 7.11.0).\n• Exploit units may be subject to ground support attacks and if conducting an overrun to artillery FS missions.\nNote: During night GTs, a unit in Exploit mode may be moved its full MA, but each side only gets one Exploit Movement Phase (GOSS 3.3.8).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "5.4.5",
+      "7.3.1b",
+      "7.11.0",
+      "3.3.8"
+    ]
+  },
+  {
+    "id": "aw-3.3.5g",
+    "section": "3.3.5g",
+    "title": "Administrative Phase",
+    "text": "The Administrative Phase activity occurs in the following order:\n**Air Resupply Segment (AM and PM):** The Allied side may conduct standard air supply missions (GOSS 20.5.0).\n**Supply Determination Segment:** The supply status of Allied units (not HQs) is checked. Mark units with on-hand supply (OhS) Isolated, and out of supply (OoS) markers as required (GOSS 15.0).\n**Mutual Ammo Replenishment Segment:** The Allied side may replenish depleted artillery units by conducting DRs or expending AmP. The Axis side may only replenish artillery units by expending AmP (GOSS 16.3.4).\n**Airborne Regroup Segment:** Beginning the June 7 AM GT, the Allied side may attempt to regroup friendly airborne units that are still on their Fog of War (FoW) sides. Then Allied units in the extended scatter box, move to the next lower box and then roll 1d10 to determine survival.\n**Fatigue Recovery Segment:** Allied units in tactical mode may be eligible to remove one level of fatigue (GOSS 14.0).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "20.5.0",
+      "15.0",
+      "16.3.4",
+      "14.0"
+    ]
+  },
+  {
+    "id": "aw-3.3.6",
+    "section": "3.3.6",
+    "title": "Axis Player Turn",
+    "text": "The Axis player turn is identical to the Allied player turn, with all roles being reversed. Once this player turn is over, the current GT is finished. The following changes, however, are in effect:",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-3.3.6a",
+    "section": "3.3.6a",
+    "title": "Axis Strategic Map Movement",
+    "text": "Axis players ignore references to naval transport and beach landing procedures. Activated Axis units are placed and all movement on the Strategic Map is conducted during the strategic movement segment of the Axis Movement Phase on AM GTs only. Axis units entering the Battlefield Map may be eligible to move (AW 27.0).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "27.0"
+    ]
+  },
+  {
+    "id": "aw-3.3.7",
+    "section": "3.3.7",
+    "title": "Update Game Turn Indicator",
+    "text": "If the last turn in the scenario is finished, the game is over; determine who won. If the scenario being played has sudden death victory conditions, determine if those conditions have been triggered. Otherwise, the GT marker is advanced to the next turn and a new GT begins.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-3.4",
+    "section": "3.4",
+    "title": "Extended Night Activity",
+    "text": "There is no extended night activity in Atlantic Wall. Ignore all references to this in GOSS.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-3.5",
+    "section": "3.5",
+    "title": "Resting GTs",
+    "text": "GOSS 3.5.0 applies except:\n• Both sides are exempt from a resting GT on the June 6 GD.\n• Simonds (II Canadian Corps) allows units under his command to conduct limited PA attacks at night (AW 23.2.2a).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "3.5.0",
+      "23.2.2a"
+    ]
+  },
+  {
+    "id": "aw-4.0",
+    "section": "4.0",
+    "title": "Unit Characteristics",
+    "text": "This section covers special unit types and formations unique to the Atlantic Wall scenario.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.4.4",
+    "section": "4.4.4",
+    "title": "US Green Divisions",
+    "text": "This rule should only be used in the campaign scenarios. Any division already on the Battlefield Map at the start of a scenario is considered to have passed its check unless specifically noted in the scenario rules. The divisions listed below are NOT considered \"green\" and thus not affected by this rule.\n1st Infantry Division\n2nd Infantry Division\n4th Infantry Division\n5th Infantry division\n8th Infantry division\n9th Infantry division\n29th Infantry Division\n79th Infantry division\n101st Airborne Division\n82nd Airborne Division",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.5.0",
+    "section": "4.5.0",
+    "title": "Special Units & Formations",
+    "text": "There are four Pz Btn markers available to the Axis side. The German player may remove three steps of pure armor that are all either MkIV or MkV types and substitute them with one Btn counter of the same type.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.5.1",
+    "section": "4.5.1",
+    "title": "German Panzer Battalions",
+    "text": "There are four Pz Btn markers available to the Axis side. The German player may remove three steps of pure armor that are all either MkIV or MkV types and substitute them with one Btn counter of the same type.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.5.2",
+    "section": "4.5.2",
+    "title": "III Flak Korps",
+    "text": "This is a special Luftwaffe formation composed of four flak regiments (Rgt): the 1st, 2nd, 3rd, and 4th Flak Rgts. GOSS 4.5.2 applies except:\n• While on the Strategic Map these units do not require fuel and may move as Mech units.\n• The GD after they enter the Battlefield Map they do require fuel.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "4.5.2"
+    ]
+  },
+  {
+    "id": "aw-4.5.3",
+    "section": "4.5.3",
+    "title": "Rear Echelon Units",
+    "text": "The below types of units are considered RE units:\n• Cherbourg Garrison units\n• Security units\n• Ost Btns\nNote: Scenario instructions may require Ost Btns to start a scenario broken down.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.5.4",
+    "section": "4.5.4",
+    "title": "Nebelwerfer Brigades",
+    "text": "GOSS 4.5.4 applies.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "4.5.4"
+    ]
+  },
+  {
+    "id": "aw-4.5.5",
+    "section": "4.5.5",
+    "title": "Kangaroos",
+    "text": "There are three Kangaroo transport units provided in the game. The CW player may use the Kangaroo markers starting on the August 7 AM GT.\n• The first use of a Kangaroo unit must be with an infantry unit assigned to the Canadian II Corps.\n• Only CW units may use Kangaroos.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.5.6",
+    "section": "4.5.6",
+    "title": "Rangers & Commandos",
+    "text": "Modify 4.5.6 as follows:\n• Commandos receive a -2 DRM when attempting to ignore movement halts.\n• The British 6AB Division may have up to six commando units attached.\n• CDO treats WN and StP as if they were forts for the purpose of a CDO being the lead unit in a GA.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "4.5.6"
+    ]
+  },
+  {
+    "id": "aw-4.5.6a",
+    "section": "4.5.6a",
+    "title": "CDO Special Assaults",
+    "text": "At the end of the friendly Movement Phases on the June 6 AM, PM, and Night GTs, the Allied side may declare a special commando attack against a WN or StP. The attack must consist of at least one ranger/CDO Btn of more than one step. The attack may only be launched from one hex, and only one special attack per WN or StP is allowed per GT. Resolve the attack as follows:\n• Total the number of ranger/Cdo, engineer and pure AFV steps conducting the assault. Do not count any other steps.\n• Roll 1d10, if the result is equal to or less than the above total, one hit is achieved against the WN or StP. If the DR is greater than the total, subtract the total from the DR, the attacking force must take that number of step losses (max step loss applies). The ranger/CDO must take the first step loss.\n• One hit eliminates one step of the WN or StP and inflicts one discretionary hit on any other enemy units in the hex.\nIf the Allied player chooses to use the CDO assault option, he may still conduct a standard tactical against the same hex that GT, however the units that that attempted the special assault may not participate.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.5.7",
+    "section": "4.5.7",
+    "title": "Engineer Tanks",
+    "text": "The units of the 79th Armored Division are present in two forms: Amphibious Invasion Unit and the Battlefield Map Coy unit.\n• On the June 7 AM GT if all British invasion beaches have been cleared, all units of the 79th Division units on the displays are removed (AW 42.11.7).\n• On each beach (Sword, Juno, and Gold) place one Flail, one AVRE, and one Flam Tank Coy (shown on the Amphibious Unit Display) on the Battlefield Map within one hex of the corresponding beach area markers.\n• Losses suffered during the Amphibious Stage are ignored and all Coys appear at full strength.\n• There are three types of Coys: flail tanks, assault engineer tanks (AVRE) and flamethrower tanks. All three types function as outlined in GOSS 4.5.7.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "42.11.7",
+      "4.5.7"
+    ]
+  },
+  {
+    "id": "aw-4.5.9",
+    "section": "4.5.9",
+    "title": "Wiederstandnesten (WN)",
+    "text": "**WN** represent hardened infantry and gun emplacements located near the coastline. They may absorb one step loss as if a combat unit.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.5.9a",
+    "section": "4.5.9a",
+    "title": "WN Capabilities",
+    "text": "WNs are placed prior to the start of a scenario and may not be constructed in context of the game. WN are treated as an ET-2 for all purposes, except:\n• WNs are considered a one-step unit for all purposes. They may absorb step losses normally.\n• A friendly unit does not have to be in WN for it to remain on the map.\n• WN have an intrinsic defense strength that is printed on the counter.\n• WN may not participate in a GA as an attacker.\n• WN have a defensive PR of five.\n• WN may observe for FS missions. They are considered to be occupied by a Btn sized unit in an ET-2 for mission capacity purposes. They may observe for any one formation.\n• WNs do not check for GenS until the AM GT of June 12. Beginning that GD all GenS rules apply. They may trace a GenS path of any length from the closest formation or corps HQ.\n• Some WN have emplaced artillery, they are handled in the same manner as STP (AW 4.5.10b).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "4.5.10b"
+    ]
+  },
+  {
+    "id": "aw-4.5.9b",
+    "section": "4.5.9b",
+    "title": "WNs & Disbanding",
+    "text": "Beginning the June 7 AM GT, WN may be disbanded (removed from the map) during the Axis Administrative Phase. Once disbanded, WN can never be rebuilt.\n• For every two WN that the German player voluntarily removes from the map, one Inf ReP can immediately be used to replace one step in any German leg infantry unit with a defensive PR of six or less.\n• Both WN must be able to trace a movement path to the Inf unit receiving the ReP that is no longer than six Leg MP.\n• RePs garnered in this manner may not be used to resurrect eliminated units or create a breakdown Coy.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.5.10",
+    "section": "4.5.10",
+    "title": "Strongpoints (StP)",
+    "text": "StPs are a stronger form of emplacement. Except as noted below they are treated as Forts (GOSS 17.6.0).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "17.6.0"
+    ]
+  },
+  {
+    "id": "aw-4.5.10a",
+    "section": "4.5.10a",
+    "title": "StP Capabilities",
+    "text": "If a StP is ground assaulted thru any hexside that is not in its arc of fire (AW 4.5.10b), the StP is treated as an ET-2 for GA purposes. It is still considered a Fort for FS missions.\n• StPs have a defensive PR of six.\n• StPs do not check for GenS until the AM GT of June 12. Beginning that GD all GenS rules apply. They may trace a GenS path of any length from the closest formation or corps HQ.\n• StPs may observe for FS missions. They are considered to be occupied by a Btn sized unit in a Fort for mission capacity purposes. They may observe for any one formation.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "4.5.10b"
+    ]
+  },
+  {
+    "id": "aw-4.5.10b",
+    "section": "4.5.10b",
+    "title": "WN & StP Artillery",
+    "text": "Some WN and StP may have artillery as part of their weaponry. If so, the battery ID, barrage factor, range, and defensive factor are printed on the counter.\n• StP and WN do not check for AD until the AM GT of June 12. They use the closest Axis corps to determine their ADV.\n• If an arc of fire is depicted on the StP or WN, the unit may only participate in a FS mission if the target lies within the arc of fire.\n• If the Allied side allocates a naval unit against a WN or StP, during the AM GT, that position's barrage factor is zero for both the AM and PM GT (mark the WN/StP with a red \"ace of spades\" marker).\n• StP and WN that are ammo depleted (AD) may not participate in FS missions. They defend against GA normally.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.5.11",
+    "section": "4.5.11",
+    "title": "German Artillery Batteries",
+    "text": "Some German artillery Btns begin scenarios with batteries detached. These artillery batteries are zero-step units. They have the same capabilities as artillery Btns. They are considered z-step units for all other purposes.\nNote: Artillery batteries require truck points to move (white wheels depicted on the battery counter).\n• Artillery Btns with detached batteries are shown in the June 6 initial setup as having step losses and the Btn itself is marked with a step loss marker for each battery that has been detached.\n• The artillery Btn is reduced in strength by one FS mission and one defensive strength point for each detachment.\nBeginning the June 7 AM GT, in the Axis Mode Determination Phase, batteries may be incorporated into reduced artillery Btns.\n• The artillery Btn must be able to trace a movement path to the battery no longer than six Mech MP. The battery's guns must be of the same or smaller type than the Art Btn. Batteries do not have to be incorporated into their original Btns.\n• Remove one step loss marker from the artillery Btn for each incorporated battery.\n• These Art Btns may be brought up to strength using the standard replacement rules. To replace either one or two steps expend the same ReP cost as if rebuilding the unit.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.5.11a",
+    "section": "4.5.11a",
+    "title": "Transferring StP/WN Artillery",
+    "text": "Beginning the June 7 AM GT, in the Axis Mode Determination Phase, the artillery component of a StP/WN may be transferred into reduced artillery Btns.\n• The artillery Btn must be able to trace a movement path to the StP/WN no longer than six Mech MP.\n• StPs/WNs are restricted as to type of guns that may be transferred.\n• 100, 105, and 122mm guns transfer into 100, 105, or Mxd Art Btn.\n• 150 thru 155mm guns transfer into 150mm artillery Btn.\n• 170, 203, and 210mm guns transfer into 170 or 210mm artillery Btn.\nNo other types of guns may be used in this process.\nNote: This process is used only to rebuild those artillery Btns that started the June 6 GD with step losses and artillery Btns that started the game in the breakdown box. Artillery Btns that are eliminated prior to being brought back to full strength may not use this process.\n• The StP or WN providing the guns is flipped to the side of the counter that has no guns.\n• StPs/WNs retain all other functions.\n• Reduce the number of step losses in artillery Btns by one for each StP/WN that transfer their guns into that Btn.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-4.5.12",
+    "section": "4.5.12",
+    "title": "French Armored Division",
+    "text": "The 2nd French Armored Division must exit the Battlefield Map and move toward the Paris Location Box, using the most direct route when any Allied forces, from either army group enter the following locations on the Strategic Map:\n• Le Mans",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-5.0",
+    "section": "5.0",
+    "title": "Unit Modes",
+    "text": "See subsections.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-5.8.0",
+    "section": "5.8.0",
+    "title": "Fog of War Units",
+    "text": "Airborne units that have not reorganized are called Fog of War units. Their use is covered in the Airborne Assault Module (AW 41.0).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "41.0"
+    ]
+  },
+  {
+    "id": "aw-7.0",
+    "section": "7.0",
+    "title": "Movement",
+    "text": "See subsections.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-7.9.5",
+    "section": "7.9.5",
+    "title": "Delay Markers",
+    "text": "The German side may begin placing delay markers the June 7 AM GT. Delay markers may only be created in Bocage and Hedgerow hexes. When attempting to place a delay marker in Bocage, apply a -1 DRM to the unit's PR check. The DRM is no longer applicable after hedge cutter tanks are available.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-7.9.6",
+    "section": "7.9.6",
+    "title": "Enter & Exit Beach Displays",
+    "text": "The rules for entering or exiting Beach Displays are covered in AW 42.0.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "42.0"
+    ]
+  },
+  {
+    "id": "aw-9.0",
+    "section": "9.0",
+    "title": "Command",
+    "text": "See subsections.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-9.2",
+    "section": "9.2",
+    "title": "Command Boundaries",
+    "text": "GOSS 9.2.0 applies except:\nThe Allied side has two army groups. The 21st Army Group (21AG) which controls all Commonwealth and minor Allied units; and the 12th Army Group (12AG) which controls all US forces and the 2nd French Armored Division. On the June 6 AM GT and until both Vire hexes (E2517 & E2618) are captured by the Allies, this boundary is fixed. The boundary is as follows:\n• Begin at C2007 (Port-en-Bessin) and proceed in a straight line directly south to C2031, then follow a southwest direction until reaching E2502 (le Hauts Champs) and then direct south to the south map edge.\n• Once Vire is captured, the Allied side may adjust the army group boundary so that, starting at Vire, the boundary proceeds to the east edge of map F. This line may have no more than two turns in it, except where it can follow a well-defined river line or primary road.\n• As an exception to the above rules, the AG boundary may be moved two hexes left or right of the original boundary. The Allied side is limited to one move every three GDs.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "9.2.0"
+    ]
+  },
+  {
+    "id": "aw-9.2.1",
+    "section": "9.2.1",
+    "title": "US Army Boundaries",
+    "text": "After the Third US Army is activated, the US player must define the boundary between the First and Third US armies.\nThis boundary must exist completely within the 12AG operational sector.\n• The 3rd Army sector must exist in such a manner that Brittany and the area south falls within Third Army's operational zone.\n• Both armies may use the same primary roads from their individual army depots through to Avranches to trace GenS paths and move units in transit to each of their sectors.\n• Once the boundary is established, it may only be changed once every three GDs.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-9.2.2",
+    "section": "9.2.2",
+    "title": "CW Army Boundaries",
+    "text": "After the First Canadian Army is activated, the CW player must define the boundary between it and the Second British Army.\n• This boundary must exist completely within the 21AG operational sector.\n• Once the boundary is established, it may only be changed once every three GDs.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-9.2.3",
+    "section": "9.2.3",
+    "title": "German Boundaries",
+    "text": "When PG West arrives, the German side may set the boundary between PG West and 7th Army as they desire.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-11.0",
+    "section": "11.0",
+    "title": "Fire Support Missions",
+    "text": "See subsections.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-11.4.3",
+    "section": "11.4.3",
+    "title": "Air FS Mission Points",
+    "text": "A maximum of three AP may be assigned to each FS mission. On August 1 GD, the US maximum increases to four.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-11.9.0",
+    "section": "11.9.0",
+    "title": "Naval Unit Availability",
+    "text": "Only the Allied side has naval units. The Allied side determines the number and type of naval units available for the current GD as follows:\n• There are five types of naval units available as shown at the top of the Naval Unit Availability chart. The five types are: Battleship (BB), Monitor (MN), Heavy Cruiser (CA), Light Cruiser (CL), and Destroyer (DD).\n• Below each type are two numbers or dashes separated by a slash. Left of the slash is for the western task force (US). Right is for the eastern task force (CW).\n• On the left of the chart is one column representing DR results from 0 to 9.\n• Each nationality rolls 1d10 for each type of naval unit. The result is the number of naval units of that type available to that task force.\n• Beginning the July 1 GD, the Western TF loses all naval units except for DD.\n• Beginning the July 8 GD, the Eastern TF may have a maximum of 1 BB or 1 Mon, 1 CA, 2 CL and 4 DD. The CW player rolls normally, however Eastern TF may not have more naval units than listed above.\n• Record the number and type of naval units available for that GD on the AP Track Record.\n• Scenario instructions may set limits on number of naval units available.\n• Naval units are subject to ammunition depletion. Their ADV is four; this value may not be modified. If a naval unit fails to pass the AD check, it may not be used again that GD. This check does not affect availability for following GDs.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-11.9.1",
+    "section": "11.9.1",
+    "title": "Task Force Sectors & Range",
+    "text": "The Western TF may only support US forces, and the Eastern TF may only support CW forces. Naval units trace their range from any full sea hex (the naval unit is considered to occupy that hex).",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-14.0",
+    "section": "14.0",
+    "title": "Fatigue",
+    "text": "See subsections.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-14.1.2",
+    "section": "14.1.2",
+    "title": "Fatigue Due to ENA",
+    "text": "Ignore this section there is no ENA in Atlantic Wall.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-15.0",
+    "section": "15.0",
+    "title": "Allied Full Logistics",
+    "text": "The procedures in AW 15.0 are used when playing any scenario with the full logistic rules.\n\n*Developer's Note: To ease the pain (and words) in tracking logistics the standard GOSS rule numbering has been ignored so that the information can be listed in a reasonable manner. I have consolidated both GenS and logistic rules.*",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-15.0-overview",
+    "section": "15.0",
+    "title": "Allied Logistics Overview",
+    "text": "The Allied logistic system is impacted by two issues. First, everything and everybody needed to fight the war in France has to come by sea over the beaches and through captured ports. The infrastructure to do this has to be built from scratch and then rapidly upgraded to support multiple armies. The second issue is that each of the two main partners of the Anglo-American Allied Coalition requires its own network of supply to fully maximize their war-fighting effort.\nGOSS supply rules for the Allies are modified to represent the transition from an amphibious logistical system to that of a continental system.\n• Each AG is considered a separate organization for all purposes.\n• Under no circumstances may an AG transfer ammunition, fuel, or trucks to another AG.\n• Each AG is originally divided into two corps. Until the arrival of the first corps HQ the below beaches act as the PSS and corps HQ for:\n  • Utah Beach: US VII Corps\n  • Omaha Beach: US V Corps\n  • Gold Beach: CW XXX Corps\n  • Juno Beach: CW I Corps.\n• Airborne formation GenS, ADV and fuel values are handled separately from the amphibious elements of the invasion from June 6 until the arrival of the first Allied corps HQ (June 10). Until then they trace GenS from each division's main DZ as listed below.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "16.3.2"
+    ]
+  },
+  {
+    "id": "aw-15.1.0",
+    "section": "15.1.0",
+    "title": "GenS & Arriving Units",
+    "text": "Units and formations arriving on the Battlefield Map are handled as follows. Determination of being on the map is made at the beginning of the Transport and Logistics Phase. On the map includes all landing boxes.\n• Units assigned to a formation whose HQ is not on the map are considered corps assets or may be formed into BG.\n• HQs are not counted against the total formations for ADV purposes until determined to be on the map.\n• Units arriving on the Battlefield Map after the Transport and Logistics Phase do not require fuel and are considered in GenS until the next Transport and Logistics Phase.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-15.2.0",
+    "section": "15.2.0",
+    "title": "Amphibious Logistics",
+    "text": "The Allied side is required to use the logistics table beginning June 7. These procedures are used until the GD that there is an active depot on the map at the beginning of the Transport and Logistics Phase. Each army group has six TP to allocate for ammunition and fuel delivery.\n• These TP may not be used for any other purpose.\n• The number of TP available each GD may be reduced or increased. The number can never be reduced to less than two or increased to more than eight.\n• At least one TP must be allocated to each type of delivery in each AG.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-15.2.1",
+    "section": "15.2.1",
+    "title": "Reduction of Available TP",
+    "text": "The number of TP can be reduced in two ways.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-15.2.1a",
+    "section": "15.2.1a",
+    "title": "Embarked Units",
+    "text": "The Allied side is required to track the number of unit steps embarked on the Naval Transit Display (AW 21.6.0). Units starting the June 6 GD on the Naval Transit Display do not count against this total. Ignore them when determining reductions. Modify the number of TP available by:\n• +1: if the embarked unit total is zero.\n• -1: for every multiple of 50 steps embarked.\n• If there is a remainder, multiply that number by two. Roll 2d10 (00-99) if the result is less than or equal to the remainder doubled, apply an additional -1 to the number of TP available.\n• Reduce the number of embarked steps as units are removed from the Naval Transit Display. Once they are on the Battlefield Map (including Landing Boxes) they do not count against total embarked steps.\nExample: The US player has a total of 125 steps embarked. He divides the total by 50 resulting in a -2, he has 25 steps remaining, and he then multiplies 25 by 2 resulting in 50 and rolls 2d10. The DR is 24. Since that number is less than the remainder multiplied by two, he applies another -1 to his total TP. The US player now has three TP to allocate to ammunition and fuel delivery.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "21.6.0"
+    ]
+  },
+  {
+    "id": "aw-15.2.1b",
+    "section": "15.2.1b",
+    "title": "Weather Reduction",
+    "text": "Reduce the number of TP available by two if Storm Conditions exist in the weather sector the AG is located in (AW 19.0).\nExample: Continuing from above, after reducing the number of TP by three for embarked units, the weather for the current GT is Storm, he would then reduce the number of TP another two, however the number of TP can never be reduced to less than two. The US player has two TP to allocate to ammunition and fuel delivery.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "19.0"
+    ]
+  },
+  {
+    "id": "aw-15.2.2",
+    "section": "15.2.2",
+    "title": "Determine Delivery Results",
+    "text": "• The Allied player now decides how many of those TP will be used for ammunition and fuel delivery. Players may allocate these TP as desired as long as at least one TP is allocated to each.\n• Use the procedures outlined in GOSS 16.2.0.\nNote: The DR may be modified if using the optional \"Early Activation rule\" (AW 26.5.1).\nExample: After all reductions the US player has 4 TP available. He decides to allocate 1 TP to AmP delivery and 3 TP to fuel delivery. Early Activation is not being used. The US player rolls 1d10 for AmP delivery with a result of 4 and receives a -2 to his AmP delivery. He rolls a second 1d10 for fuel delivery with a result of 6, receiving 6 FP.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "16.2.0",
+      "26.5.1"
+    ]
+  },
+  {
+    "id": "aw-15.2.3",
+    "section": "15.2.3",
+    "title": "Distribution of AmP & Fuel",
+    "text": "Distribute the total AmP and FP obtained to each corps within the AG. The total AmP and FP distributed cannot exceed the AmP and FP received.\nExample: The US player receives 2 AmP. He could allocate one to the V Corps and one to the VII Corps or he could allocate both to one of the corps and none to the other corps.\n• Players record this number by using the corps AmP markers provided.\n• AmP and FP, once assigned to a corps, may not be transferred from one corps to another.\n• Corps may create AmP using the same procedure as an army HQ (GOSS 16.3.2).\n• Corps may adjust their ADV based on supported formations.\n• Do not adjustment for the number of corps (army HQ is not active).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "16.3.2"
+    ]
+  },
+  {
+    "id": "aw-15.3.0",
+    "section": "15.3.0",
+    "title": "June 6 Game Day",
+    "text": "• Formation HQ must remain within one hex of a landing hex (hexes with asterisk) on the beach they arrived.\n• The Allied side as an ADV of 5. Do not make any adjustments to this value.\n• There is no AmP in stockpile.\n• All units are in a \"normal\" fuel status. Each army group has one fuel point in stockpile. This FP may be distributed to the corps as desired.\n• Allied units are not required to trace GenS. All units are considered in GenS.\n• There are no TP available for motorization. Allied divisions cannot utilize their inherent truck point, however Allied Engineer and AT units retain their self-motorization capability (GOSS 7.9.3 & 7.9.4).\n• Airborne units must remain within 6 hexes of any DZ. Units that landed outside the 6 hex limit must move towards the closest DZ.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "7.9.3",
+      "7.9.4"
+    ]
+  },
+  {
+    "id": "aw-15.4.0",
+    "section": "15.4.0",
+    "title": "June 7 Game Day",
+    "text": "Allied Beachhead/corps AmP and fuel delivery is determined using AW 15.2.0.\n• Each corps has an ADV of 2. This value may be adjusted by logistic procedures and by creating and/or expending AmP.\n• Airborne divisions have an ADV of 2. Do not make any adjustments to this value. Artillery units subordinate to airborne divisions may not use AmP to replenish.\n*Designer's note: The airborne divisions were kept in a reasonable state of supply by a combination of airlifts and some support from the beachheads. In many games Allied airborne units are allowed to wander all over the map without regard to operational doctrine of the time. In Atlantic Wall, airborne units are restricted in how far they can stray from their drop zones (DZ) thus simulating the actual operation limitation imposed at the time.*\n• Standard GOSS fuel requirements apply. Use the procedures outlined in GOSS 16.4.0. Corps HQ (even though not on the map) must be allocated fuel as normal.\n• Beachheads/corps HQ may stockpile up to 4 AmP and 4 FP.\n• Airborne divisions are considered in a \"low fuel\" state. Fuel points may not be allocated to those formations.\n• Formation HQ must remain within one hex of a landing hex (hexes with asterisk) on the beach they arrived.\n• GenS path from formation HQ to subordinate units may be no longer than 6 Mech or 9 Leg MP. Corps Extended supply paths may not be used.\n• GenS path from an AB HQ to its subordinate units may be no longer than 6 Leg or 6 Mech MP. Airborne HQ must remain within one hex of their assigned primary DZ. The June 6 restriction on AB unit distance from a DZ is no longer in affect. Extended supply paths may not be used.\n• Beachheads/corps HQ may stockpile up to 4 AmP and 4 FP.\n• 1TP is assigned to each beachhead/corps HQ for motorization only. Divisions cannot utilize their inherent truck point. Engineer and AT units retain their self-motorization capability.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "15.2.0",
+      "16.4.0"
+    ]
+  },
+  {
+    "id": "aw-15.5.0",
+    "section": "15.5.0",
+    "title": "June 8 & 9 Game Days",
+    "text": "All of the procedures listed in AW 15.4.0 remain in force, except:\n• HQ may move normally.\n• Sword Beach is no longer a PSS.\n• Formations may be assigned to any active corps HQ.\n• GenS path from the beach PSS to a formation HQ may be no longer than 6 Mech MP. Airborne HQ and unit GenS remain the same as June 7.\n• Replacements are received starting June 8. Allied corps HQ may only save up to five steps of each type of RePs from one GD to the next. RePs over the above limits are eliminated.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "15.4.0"
+    ]
+  },
+  {
+    "id": "aw-15.6.0",
+    "section": "15.6.0",
+    "title": "June 10 Game Day",
+    "text": "The procedures listed in AW 15.5.0 remain in force. Each AG receives two corps HQ.\n• Corps HQ must remain in their placement hex.\n• GenS path from a Corps HQ to a subordinate HQ may be no longer than 6 Mech MP.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "15.5.0"
+    ]
+  },
+  {
+    "id": "aw-15.6.1",
+    "section": "15.6.1",
+    "title": "Activation of Corps HQ",
+    "text": "Corps HQs do not use the naval transit system. During the Command Phase of June 10, simply place them within one landing hex (hexes with asterisk) on following beaches. These beaches are considered PSS. Once placed corps HQ may trace to any beach within that AG's area.\n  • Utah Beach: US VII Corps\n  • Omaha Beach: US V Corps\n  • Gold Beach: CW XXX Corps\n  • Juno Beach: CW I Corps.\nIf additional corps HQ arrive prior to the activation of an army HQ, the new corps HQ is placed as outlined above at any beach area in its AG area. If players wish to activate the corps HQ they may do so, however fuel points and AmP must be divided between all activated corps HQ.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-15.7.0",
+    "section": "15.7.0",
+    "title": "June 11 to Army Activation",
+    "text": "All of the procedures listed in AW 15.6.0 remain in force, except:\n• Corps HQ may move normally.\n• GenS path from a PSS to a corps HQ may be no longer than 4 Mech MP.\n• Airborne divisions no longer trace to their DZ; they are treated as any other formation.\n• ATP may be allocated to deliver AmP and/or FP directly to each national group (AW 20.5.2c).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "15.6.0",
+      "20.5.2c"
+    ]
+  },
+  {
+    "id": "aw-15.8.0",
+    "section": "15.8.0",
+    "title": "Army HQ Activation",
+    "text": "Army HQs do not arrive via the naval transport system. In each Transport and Logistics Phase during the depot placement segment, starting on June 12 GD, each AG determines if it has met the army activation requirements in AW 15.8.1 & 15.8.2. If met, the army HQ is placed on the Battlefield Map. Once an army HQ is activated there is no longer a requirement to continue to meet the army activation conditions. In the Transport and Logistics Phase after an army HQ is on the Battlefield Map and until that army activates its first depot, the following applies:\n• Each Army HQ has an ADV of 3.\n• Use the amphibious procedures in AW 15.2.0, ignore AW 15.2.3. Fuel and AmP are now handled at the army level (GOSS 16.3.0 & 16.4.0).\n• Army HQ may stockpile up to 20 AmP and 20 FP. AmPs and FPs are no longer stockpiled at the corps level. Any stockpiles at the corps level are transferred to their superior army HQ.\n• The army HQ has 3 TP. These TP may only be used to motorize units. TPs assigned to corps HQs are no longer available.\n• Divisions can utilize their inherent truck point. Engineer and AT units retain their self-motorization capability.\n• Army HQ may not move until a depot has been activated for that army. Extended GenS may not be used. Trace GenS as follows:\n  • PSS to army HQ can be of any length along a primary or secondary road.\n  • Army HQ to corps HQ can be no more than 9 Mech MP.\n  • Corps HQ to subordinate HQ can be no more than 6 Mech MP.\n  • HQ to subordinate units can be no more than 9 Mech or 12 Leg MP.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "15.8.1",
+      "15.8.2",
+      "15.2.0",
+      "15.2.3",
+      "16.3.0",
+      "16.4.0"
+    ]
+  },
+  {
+    "id": "aw-15.8.1",
+    "section": "15.8.1",
+    "title": "US Army Activation",
+    "text": "See subsections for each US army's activation requirements.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-15.8.1a",
+    "section": "15.8.1a",
+    "title": "US 1st Army Activation",
+    "text": "The 1st US Army HQ may be placed in either Isigny or Carentan if:\n• Omaha and Utah are linked by an Allied controlled primary or secondary road.\n• No portion of the road is within seven hexes of a non-isolated German unit.\n• Both Isigny and Carentan must be Allied controlled and a non-isolated German unit may not be within seven hexes of either city.\n• 1st Army PSS is any US Beach Sub-Area Marker on Omaha Beach not adjacent to an enemy unit.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-15.8.1b",
+    "section": "15.8.1b",
+    "title": "US 3rd Army Activation",
+    "text": "The 3rd US Army HQ and one depot may be placed in any town or city hex that is within 18 Mech MP of Cherbourg (A3709) if:\n• The US 1st Army has an active depot.\n• Cherbourg is operational (AW 1.2.6f).\n• No portion of the road between Cherbourg and the hex the 3rd Army HQ will be placed is within seven hexes of a non-isolated German unit.\n• 3rd US Army PSS is Cherbourg.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "1.2.6f"
+    ]
+  },
+  {
+    "id": "aw-15.8.2",
+    "section": "15.8.2",
+    "title": "CW Army Activation",
+    "text": "See subsections for each CW army's activation requirements.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-15.8.2a",
+    "section": "15.8.2a",
+    "title": "British 2nd Army Activation",
+    "text": "The 2nd British Army HQ may be placed in any hex in Bayeux or Caen if:\n• All three CW beaches (Sword, Juno, & Gold) are linked by an Allied controlled primary or secondary road and no portion of the road is within seven hexes of a non-isolated German unit.\nNote: This does not mean a German unit cannot be within seven hexes of a Beach Area, however at least one Beach Area Marker on each beach must be at least seven hexes from an un-isolated German unit.\n• All hexes of Bayeux or Caen must be Allied controlled and a non-isolated German unit may not be within seven hexes of the city chosen to place the HQ.\n• 2nd Army PSS is any CW Beach Sub-Area marker not adjacent to an enemy unit. The army must identify which beach it is using for its PSS (either Gold or Juno).",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-15.8.2b",
+    "section": "15.8.2b",
+    "title": "Canadian 1st Army Activation",
+    "text": "The 1st Canadian Army HQ and one depot may be placed in either Caen or Bayeux if:\n• The 2nd British Army has an active depot.\n• All city and town hexes of both Caen and Bayeux are Allied controlled.\n• The II Canadian Corps and one British corps must be assigned to the 1st Canadian Army.\n• The city chosen for placement may not be the same city the 2nd British Army HQ currently occupies.\n• Each army may use either Gold or Juno as their PSS. Only one army can use a beach area.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-15.9.0",
+    "section": "15.9.0",
+    "title": "Depot Activation",
+    "text": "Each Allied army HQ may have up to two depots in its GenS path (GOSS 15.8.0). A location on the Strategic map is treated as a hex for depot placement. Depot activation is conducted in the depot placement segment of the Transport and Logistics Phase.\n• When placing an army's first depot, apply GOSS 15.8.2. Do not deduct the required TPs and ignore the GD delay.\n• An army may not activate a second depot until seven GDs have elapsed since activating its first depot.\n• GOSS 15.8.2 applies when activating a second depot and when relocating depots.\n• Beginning the first Transport and Logistics Phase after an AG's first depot has been activated:\n  • All armies subordinate to that AG have an ADV of 4.\n  • The AG does not use the amphibious logistic procedures (AW 15.2.0). GOSS 15.0 & 16.0 apply. In addition to the GOSS Logistical DRMs, modify the DR for the weather sector the PSS is located.\n    • -1: Overcast with rain condition.\n    • -2: Storm condition.\n    • The DR may be modified if using the optional \"Early Activation\" rule.\n• The AG has 10 TP available. The first GD that an AG has two active army HQs it has 20 TP. These TP may be divided between each army as desired. Each army must have at least one TP assigned to deliver fuel, and for each supported corps subordinate to an army there must be one TP assigned to AmP delivery.\n• An army HQ with at least one active depot may stockpile up to 40 AmP and 40 FP.\n• Use standard GOSS GenS paths (GOSS 15.0). Extended supply paths may be used.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "15.8.0",
+      "15.8.2",
+      "15.2.0",
+      "15.0",
+      "16.0"
+    ]
+  },
+  {
+    "id": "aw-15.9.1",
+    "section": "15.9.1",
+    "title": "US Depot Activation",
+    "text": "• The 1st US Army depot may not be activated until Landefront Cherbourg has been declared. All requirements for army HQ activation (AW 15.8.1a) must also be met at this time.\n• The 3rd US Army automatically (no FP required) activates one depot when the army HQ is activated (AW 15.8.1b).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "15.8.1a",
+      "15.8.1b"
+    ]
+  },
+  {
+    "id": "aw-15.9.2",
+    "section": "15.9.2",
+    "title": "CW Depot Activation",
+    "text": "• The 2nd British Army depot may not be activated until all Caen town and city hexes north and west of the Orne River, are Allied controlled. All requirements for army HQ activation (AW 15.8.2a) must also be met at this time.\n• The 1st Canadian Army automatically (no FP required) activates one depot when the army is activated (AW 15.8.2b).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "15.8.2a",
+      "15.8.2b"
+    ]
+  },
+  {
+    "id": "aw-16.0",
+    "section": "16.0",
+    "title": "German Full Logistics",
+    "text": "The procedures in 16.0 are used when playing any scenario with the full logistic rules.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-16.0-overview",
+    "section": "16.0",
+    "title": "German Logistical Overview",
+    "text": "The German logistical system is affected by Allied airpower and the French Resistance. The longer the campaign goes on the harder it will be for the German side to maintain a reasonable ammunition and fuel level. Most of this affect is shown by a gradual lowering of the German ADV and number of trucks available to transport ammunition and fuel.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-16.1.0",
+    "section": "16.1.0",
+    "title": "Primary Supply Sources",
+    "text": "• German PSS are:\n  • St. Lo (B5627)\n  • Caen (C4522)\n  • Falaise (F3414)\n  • Avranches (E2929)\n  • Alencon (F2-5257).\n  • Any South or East primary road hex.\n• The on map locations function as PSS until occupied by an Allied unit.\n• To function as a PSS, the Battlefield Map locations must be connected by a primary road, of any length, to a hex on the south or east side of the map. An Allied unit may not be on or adjacent to any hex used to trace this path.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-16.1.1",
+    "section": "16.1.1",
+    "title": "LXXXVI Corps",
+    "text": "The LXXXVI Corps was historically assigned to the 15th Army, for game purposes it may be assigned to either the 7th Army or PG West. Use the below procedures for the LXXXVI Corps:\n• PSS for the corps is any east edge map hex on a primary road. The corps HQ does not have to trace from an army HQ.\n• A maximum of six corps asset units, two infantry formations and one Mech formation may be subordinate to the corps.\n• Corps ADV is handled normally, however the corps does not count against the number of corps supported by its superior army (7th or PG West).\n• The corps HQ is automatically in a \"low fuel\" status (no FP required). The corps HQ may be placed in \"normal\" fuel by allocating one-half a FP.\n• Subordinate Mech formations receive fuel from its superior army (7th or PG West).",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-16.2.0",
+    "section": "16.2.0",
+    "title": "June 6 Game Day",
+    "text": "• All German units are in GenS. All units cannot be isolated, and do not check for GenS.\n• German ADV is 7. No adjustments are made to this value. StP and WN do not check for ammunition depletion.\n• All formations have normal fuel.\n• The 7th Army has three TP available for motorization only.\n• The 7th Army begins with 8 FP and 8 AmP in stockpile. German armies may stockpile up to 20 AmP and 20 FP.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-16.3.0",
+    "section": "16.3.0",
+    "title": "June 7 Game Day",
+    "text": "All of the procedures listed in AW 16.2.0 remain in force, except:\n• German ADV is 5. No adjustments are made to this value. StP and WN do not check for ammunition depletion.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "16.2.0"
+    ]
+  },
+  {
+    "id": "aw-16.4.0",
+    "section": "16.4.0",
+    "title": "June 8 through June 11",
+    "text": "Begin using the standard GOSS logistic rules with the additions listed below.\n• German ADV is 4. StP and WN do not check for ammunition depletion.\n• Six TP are available for army logistics (GOSS 16.0). One additional TP is available for motorization of units on the Strategic Map. Units using this TP may continue to use them after entering the Battlefield Map until they start a friendly Movement Phase within six hexes of an enemy unit.\n• Standard GOSS fuel requirements apply. Use the procedures outlined in GOSS 16.4.0 and, if using the Strategic Map, AW 27.3.2b to allocate available FPs.\n• If the Allied side does not assign a minimum of 32 AP to Strategic Interdiction a +1 DRM is applied to both logistic DRs that GD.\n• One FP is available each GD, for use on the Strategic Map only (AW 27.3.2a). This FP may not be stockpiled and may only be used to fuel units that start the GD on the Strategic Map.\n• One FP is added to one army's stockpile if the atmospheric condition in the eastern weather sector is clear or POvr. If the atmospheric condition is Ovr or Storm, add two fuel points. FPs may be split between armies.\n• Standard GOSS GenS path must be traced from a valid PSS to 7th Army HQ or directly from a PSS (AW 16.1.0) to a corps HQ. GenS is then traced normally in accordance with GOSS. Exception: Landefront Cherbourg.\n• Corps HQ that trace directly from a Battlefield Map PSS are still subordinate to an army HQ when determining ADV and fuel allocations.\n• Replacements are received starting June 8.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "16.0",
+      "16.4.0",
+      "27.3.2b",
+      "27.3.2a",
+      "16.1.0"
+    ]
+  },
+  {
+    "id": "aw-16.5.0",
+    "section": "16.5.0",
+    "title": "June 12 through July 1",
+    "text": "All of the procedures listed in AW 16.4.0 remain in force, except:\n• German ADV is 3. StP and WN now check for ammunition depletion and must trace GenS (AW 4.5.9 & 4.5.10).\n• One AmP is added to one army's stockpile unless the atmospheric condition in the eastern weather sector is Storm.\n• If Storm, add two AmP. AmPs may be split between armies.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "16.4.0",
+      "4.5.9",
+      "4.5.10"
+    ]
+  },
+  {
+    "id": "aw-16.6.0",
+    "section": "16.6.0",
+    "title": "July 2 through July 31",
+    "text": "All of the procedures listed in AW 16.5.0 remain in force, except;",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "16.5.0"
+    ]
+  },
+  {
+    "id": "aw-16.7.0",
+    "section": "16.7.0",
+    "title": "August 1 to End of Game",
+    "text": "All of the procedures listed in AW 16.6.0 remain in force, except;\n• German ADV is 2.\n• Five TP are available for army logistics. The additional TP used for motorization on the Strategic Map is no longer available.\n• Additional AmPs that were added to army's stockpile are no longer available.\n• The additional one FP for use on the Strategic Map is no longer available.\n**Designer's Note:** Yes, I know Panzer Group West existed prior to July 2 and that it was renamed 5th Panzer Army. Due the historical destruction of most of **Panzer Group West's Headquarters** on June 10th and the resultant command problems suffered by the Germans, it was decided to not have the army HQ show up until July 2nd and to just keep one counter with the name PG West.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "16.6.0"
+    ]
+  },
+  {
+    "id": "aw-17.0",
+    "section": "17.0",
+    "title": "ENGINEERS",
+    "text": "",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-17.3.3c",
+    "section": "17.3.3c",
+    "title": "ET-3 Construction",
+    "text": "Beginning the June 8 AM GT, both sides may construct ET-3s.\n• Each side may replace one ET-2 marker with an under construction ET-3 marker at the beginning of a friendly Construction Phase.\n• ET-3 can only be placed in hexes that are in GenS and contain a village, town, or city.\n• The ET-3 is completed at the beginning of the next friendly Construction Phase.\n• Each side may only place one ET-3 every three GDs.\nExample: The German player replaces an ET-2 marker with an ET-3 marker in any GT on June 8. The German side may not place another ET-3 until the June 11 GD (any GT).\n• Each side has 10 ET-3 available in the counter mix. They may recycle those ET-3 counters for their side, but may not have more than 10 ET-3 on the Map at any one time.\n• On GDs in which an ET-3 may be placed, a player may instead remove a completed ET-3, and substitute it with a completed ET-2 marker. The ET-3 marker is returned to the counter mix and may be placed in three GDs.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-18.0",
+    "section": "18.0",
+    "title": "UNIT BREAKDOWN",
+    "text": "",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-18.2.0",
+    "section": "18.2.0",
+    "title": "Units Allowed to Breakdown",
+    "text": "In addition to the restrictions listed in GOSS 18.0, the following are in effect.\n• Some one-step Coys are depicted with a Z-step unit on the back side of the counter and others do not. If a Z-step unit exists in the counter mix, a Coy may breakdown into two Z-step units, even if the not back printed with a Z-step.\n• Parachute, Airborne Eng, and Glider Btns once formed into Btns, use Infantry/engineer breakdown Coys.\n• The CW Z-step Art/AT units not displayed on the Airborne Display may be used as breakdowns for like units. Historical affiliations do not need to be followed.\n• In some cases Polish, Canadian, French breakdown Coys were not included in the counter mix, those Btns may use CW (French use US) breakdown Coys.\n• The 17th MG and Sturm Btns may not breakdown.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "18.0"
+    ]
+  },
+  {
+    "id": "aw-19.0",
+    "section": "19.0",
+    "title": "WEATHER",
+    "text": "Due to the size of the campaign area and the differing weather possible over the scope of the maps, the weather rules have been modified to reflect these conditions.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.2.0",
+    "section": "19.2.0",
+    "title": "How Weather is Determined",
+    "text": "There are no historical weather conditions in the campaign games except for June 6 and 7. After these two days, the weather is determined at the start of each GT using the weather table DRs; one for each weather sector. Additional DRs may be required to check for the possibility of rain.\nNote: Specific scenarios may require the use of historical weather only. Those weather conditions are listed in each scenario.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.2.1",
+    "section": "19.2.1",
+    "title": "Historical Weather",
+    "text": "In the campaign or in any scenario beginning on June 6, the following weather conditions are in place. These conditions are for both weather sectors.\nJune 6 GD: Partial overcast with dry ground conditions.\nJune 7 AM GT: Overcast with dry ground conditions.\nJune 7 PM and Night GT: Clear with dry ground conditions.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.2.2",
+    "section": "19.2.2",
+    "title": "Variable Weather",
+    "text": "",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.2.2a",
+    "section": "19.2.2a",
+    "title": "Weather Sectors",
+    "text": "The Battlefield Map has two weather sectors; an eastern and a western sector. The weather boundary is printed on the Battlefield map. The weather must be determined for each sector at the beginning of every GT (including night turns). The western sector weather is always determined first.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.2.2b",
+    "section": "19.2.2b",
+    "title": "Weather Table",
+    "text": "The weather table has two sections, one for each weather sector. Each sector has a DR column and a weather column. The DR column displays 2d10 results from 00-99. To the right of the DR result range, is an atmospheric condition. The Allied side makes a DR for each sector (Western Sector first) and applies all applicable DRMs (consult the table for DRMs).\nNote: Previous turn's weather, weather patterns, and GD can affect the current weather.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.2.4",
+    "section": "19.2.4",
+    "title": "Weather Patterns",
+    "text": "To prevent one side or the other from having a long string of favorable weather, if the same weather conditions persist after two consecutive GDs (in all GTs) the DR is modified by a DRM of plus or minus 15.\nExample: On the June 9 and June 10 GDs (all GTs) the weather condition is overcast with no rain. On the June 11 AM GT, apply a -15 DRM (overcast conditions favor the German side). If during the same time period the weather condition was clear, the DRM would be +15 (clear conditions favor the Allied side).",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.3.0",
+    "section": "19.3.0",
+    "title": "Atmospheric Conditions",
+    "text": "There are four atmospheric conditions in Atlantic Wall: Clear, Partial Overcast, Overcast, and Storm. Until the June 12 AM GT Weather Determination Phase, all DRs resulting in a storm condition, are treated as overcast with rain (no rain DR is required).",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.3.4a",
+    "section": "19.3.4a",
+    "title": "Storm Patterns",
+    "text": "A long stretch of storm (or no storms at all) can severely affect play balance, therefore;\n• No more than one storm can be generated per calendar month; if another storm is rolled; it is treated as overcast with rain.\n• Once a storm condition has been generated, it will automatically persist until the next AM GT. Do not make any further weather condition DRs in that sector that GD.\n• In the GT after a Storm has been generated in either sector, both sectors are automatically Storm.\n• In the Weather Determination Phase of the AM GT after a Storm has been generated, the Allied side must determine the number of GDs that will pass before the storm ends.\n• Roll 1d10; halve the result (round up). If the DR is zero \"0,\" the result is automatically one. The number generated is the number of GDs that pass before the Allied side can attempt to end the storm (including the current GD).\n• On the AM GT of the GD determined above, the Allied side rolls 1d10, a result of 0-6 the storm ends and the weather condition is set to overcast with no rain in both sectors. If the DR result is 7-9 the storm condition remains in effect the remainder of the GD in both sectors.\n• Each successive AM GT after the first storm end check, apply a -2 DRM for each GD.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.4.0",
+    "section": "19.4.0",
+    "title": "Rain Conditions",
+    "text": "If scenario rules, or when playing any campaign game, the Allied side will be required to make a separate DR to determine if rain conditions exist.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.4.1",
+    "section": "19.4.1",
+    "title": "Determining Rain Conditions",
+    "text": "After determining the atmospheric condition for a weather sector, if the atmospheric condition is POvr or Ovr, that sector's rain condition must be determined.\n• Roll 1d10 and consult the Rain Determination Table. Apply the DRMs listed next to the table. If the modified DR falls within the listed DR range, rain condition exists in that sector for that GT.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.5.0",
+    "section": "19.5.0",
+    "title": "Ground Conditions",
+    "text": "There are three ground conditions in Atlantic Wall: Dry, Wet, and Mud. The ground condition is dependent upon the previous GT's ground condition and the rain condition for both the previous and current GTs. Always determine rain condition in each sector prior to determining ground conditions.\n• The current rain condition (rain or no rain) is listed on the left of the Ground Condition Matrix.\n• The previous GD's rain condition and the previous GD's ground condition are list on the top of the Matrix.\n• Cross reference the current rain condition with the previous GD's rain and ground condition to determine the current GD's ground condition.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.6.0",
+    "section": "19.6.0",
+    "title": "Weather Effect on Beaches",
+    "text": "The Allies ability to continue to unload combat units and supply over the beaches was significantly reduced due to inclement weather.\n• During Overcast with rain GTs:\n  • The capacity of each beach area marker is five.\n  • After an army group has an active army HQ and depot all logistic DR receive a -1 DRM.\n• During Storm GTs:\n  • The capacity of each beach area marker is three.\n  • After an army group has an active army HQ and depot all logistic DR receive a -2 DRM.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-19.7.0",
+    "section": "19.7.0",
+    "title": "Weather Effects on Strategic Map",
+    "text": "Allied interdiction DRM on the Strategic Map is affected by weather conditions on the Battlefield Map.\n• Sector A is effected by conditions in the eastern weather area.\n• Sector B is affected by conditions in the western weather area.\n• Sectors C and D are not affected by weather.\n• Weather DRMs are:\n  • +1: Partial Overcast\n  • +2: Overcast\n  • +3: Storm",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.0",
+    "section": "20.0",
+    "title": "AIRPOWER",
+    "text": "In Atlantic Wall, ground interdiction and carpet bombing missions have been modified for the unique conditions of the Normandy campaign. Allied airpower also has a great effect on German Strategic Map movement.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.1",
+    "section": "20.1",
+    "title": "AP Availability",
+    "text": "The US and CW forces each operate with their own allocation of AP. CW AP represent the Air Defense of Britain, 2nd Tactical AF, and Bomber Command. US AP represents the IX and XIX TAF, plus the air units of Eighth AF. The few German APs represent aircraft assigned to Luftflotte 3.\n• Scenario instructions will describe AP availability.\n• Consult the Air Point Availability Chart (printed on Map D) to determine the number of AP available for campaign games.\n• Under certain conditions, the number of available AP may be increased (AW 20.1.1c).\n• Carpet bombing mission will reduce the number of AP available (AW 20.8.6).\n• Atmospheric conditions affect the AP usage (GOSS 19.3.0) on the Battlefield Map. It does not apply on the Strategic Map (do not adjust the number of AP assigned to any mission on the Strategic Map).\n• German AP may only be assigned to GS missions. Each AP is subject to an abort procedure. Roll 1d10 for each AP attempting to conduct a GS mission, on a DR of 0-8 the AP aborts. Aborted AP may not attempt another mission that GD.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "20.1.1c",
+      "20.8.6",
+      "19.3.0"
+    ]
+  },
+  {
+    "id": "aw-20.1.1",
+    "section": "20.1.1",
+    "title": "Assignment of AP",
+    "text": "Each AM GT all available AP are assigned to specific missions. The number of AP assigned to each type of mission in each sector can be recorded on the AP Record Track using the appropriate mission markers.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.1.1a",
+    "section": "20.1.1a",
+    "title": "Battlefield Map Air Sectors",
+    "text": "Each AG has two air sectors on the Battlefield Map: the northern sector and the southern sector.\n• US sectors: The northern sector includes all hexes west of the AG boundary and on or north of the xx14 hex row (near Falaise). The southern sector which includes all hexes west of the AG boundary and south of the xx14 hex row. Only US AP can be assigned to the above sectors.\n• CW sectors: The northern sector, which includes all hexes east of the AG boundary and along the same east/west line as the US sectors. Only CW AP can be assigned to these sectors.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.1.1b",
+    "section": "20.1.1b",
+    "title": "Strategic Map Air Sectors",
+    "text": "Each Strategic Map air sector is defined by the dashed lines on the strategic map.\n• Sector A is to the east southeast of the Battlefield Map, south of the Seine River (except it does not include the Amiens and Rouen location boxes). Only CW AP can be assigned to sector A. US AP may be assigned to this sector when the US player has captured Rennes and Laval location boxes.\n• Sector B is to the south and south east of the Battlefield Map (it includes the Brittany Peninsula). Only US AP may be assigned to sector B.\nNote: Sector B is divided into two areas for interdiction DR purposes, however AP assigned to sector B are used in both areas.\n• Sector C includes the area north of the Seine River, excepting the Amiens and Rouen location boxes. CW and US AP may only be assigned to sector C if more than two location boxes in sector A are occupied by Allied units (of any nationality).\n• Sector D includes the Biscay, Nantes and South of France boxes. CW and US AP may only be assigned to sector D if an Allied unit occupies any location box adjacent to sector D.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.1.1c",
+    "section": "20.1.1c",
+    "title": "Allied Air Effort",
+    "text": "In the campaign games, during the Air Allocation Phase, both AGs may increase their available AP.\n• The US player automatically increases his total available AP by 16 on the AM GT after Cherbourg is fully operational. This is a permanent increase with no penalties.\n• On August 1 through August 15 GDs, the total available AP available for the US player is reduced by 20. This applies to the total US AP, including additions.\n• The US player may increase his total available AP by 32 at any time, if the following conditions are met.\n  • The 3rd Army is active.\n  • There are no German units on Map B.\n  • Each GD that the US player uses these AP the total number of TP available to the 12AG is reduced by four.\n• The CW player may increase his total available AP by 30, if the following condition is met.\n  • The 1st Canadian Army is active.\n  • There are no German units west of hex row 59xx on Map C.\n  • Each GD that the CW player uses these AP the total number of TP available to the 21AG is reduced by four.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.2.1",
+    "section": "20.2.1",
+    "title": "Conducting GS Missions",
+    "text": "All GOSS rules referencing GS missions are in effect, except;\n• GS missions may be flown with maximum strength of three AP.\n• Aug 1 GD, US maximum increased to four AP.\nNote: Do not forget to adjust for atmospheric conditions (19.3.0). The above maximum strength is number of AP after adjustment for weather.\n**Designer's note:** The maximum number of AP that can be committed to a GS mission has been reduced from previous games in this series. At this point in the campaign, air to ground close air support was in its infancy, and had not yet reached the level of cooperation experienced later in the war.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "19.3.0"
+    ]
+  },
+  {
+    "id": "aw-20.2.2e",
+    "section": "20.2.2e",
+    "title": "GS on the Strategic Map",
+    "text": "APs may be assigned to GS missions on the Strategic Map (AW 27.4.1).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "27.4.1"
+    ]
+  },
+  {
+    "id": "aw-20.3",
+    "section": "20.3",
+    "title": "Ground Interdiction (GI)",
+    "text": "The Allied player may assign AP to GI missions against sectors on the Battlefield and Strategic Maps.\n• No more than 32 AP may be assigned to one Battlefield Map Sector.\n• No more than 64 AP may be assigned to one Strategic Map Sector.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.3.1e",
+    "section": "20.3.1e",
+    "title": "Strategic Map GI Missions",
+    "text": "German Movement on the Strategic Map is outlined in AW 27.0. The DRMs listed below are used to modify the movement DRs.\n• -1 DRM for every 16 AP assigned to a GI mission in that sector.\n• +1 DRM for every eight (or fraction thereof) HB that are committed to a carpet bombing mission.\nA DRM track is printed on the Strategic Map to denote interdiction and weather DRM.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "27.0"
+    ]
+  },
+  {
+    "id": "aw-20.4",
+    "section": "20.4",
+    "title": "Supply Interdiction (SI) Missions",
+    "text": "SI missions are conducted in accordance with GOSS procedures with the following exceptions:\n• A maximum of two SI missions can be flown against each German army.\n• The weather in the western sector is used when US AP are conducting SI missions and the weather in the eastern sector is used when CW AP conduct the mission.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.5",
+    "section": "20.5",
+    "title": "Air Supply Missions",
+    "text": "Beginning the June 11 AM GT, the Allied side has six air transport points (ATP) available each GD.\n**Designer's Note:** Until June 10th the Allied ATP capability is busy supporting Allied airborne bridgeheads.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.5.2c",
+    "section": "20.5.2c",
+    "title": "AmP & Fuel",
+    "text": "In addition to the GOSS rules pertaining to air drops, ATP may be allocated to deliver AmP and/or FP directly to each national group.\n• Missions are flown during the Transport and Logistic Phase.\n• ATP conducting this mission are not available for standard air supply missions during the Administrative Phase.\n• Atmospheric condition must be clear or POvr.\n• Allied player must declare which AG each ATP is supporting and if fuel or AmP is being carried.\n• Each ATP may transport 0.5 FP or 1 AmP.\n• Roll 1d10 for each ATP, if the result is 0-7, the cargo is delivered to the AG.\n• +1 DRM is applied to the DR if the current weather is POvr.\n• If successful the AmP and or FP are added to any corps or army stockpile associated with that AG.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.6",
+    "section": "20.6",
+    "title": "Air Superiority (ASup)",
+    "text": "Ignore GOSS 20.6.0 and all references to air superiority. If conducting a SI mission, the Allied side can commit AP assigned to ground support to provide Flak suppression as outlined in GOSS 20.7.2. A maximum of four AP can be assigned to each SI mission as escorts.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "20.6.0",
+      "20.7.2"
+    ]
+  },
+  {
+    "id": "aw-20.8.0",
+    "section": "20.8.0",
+    "title": "Carpet Bombing Missions",
+    "text": "Carpet bombing (CB) missions involve the use of HB AP as a form of ground support.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.8.1",
+    "section": "20.8.1",
+    "title": "CB Mission Planning",
+    "text": "In order to conduct a CB mission, the Allied player must plan the CB attack four GDs in advance. Note the planned mission GT, the target hex, nationality (CW or US), and number of HB committed on a piece of paper.\n• A minimum of three HB point must be committed to a CB mission.\n• The mission may be canceled at any time prior to the planned mission date, however any change to the planned mission results in a four-day delay between planning and mission execution (i.e. you must start the cycle all over).",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.8.2",
+    "section": "20.8.2",
+    "title": "CB Mission Limits",
+    "text": "Beginning on the July 1 GD, the Allied side may conduct one CB mission per week in each AG area.\n• CB missions may be planned four days prior to the July 1 GD.\n• Missions can be conducted in either the AM or PM GT.\n• CW and US HB AP can participate in the same CB mission or they may conduct CB missions separately.\n• The weather on the GT of the mission must be clear. If the weather is not clear, the mission can be postponed until the next GT (those postponed on a PM GT will move the next AM GT) this delay may be taken until the weather is clear.\n• HBs awaiting clear weather are considered committed to the CB mission.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.8.3",
+    "section": "20.8.3",
+    "title": "CB Mission Conduct",
+    "text": "Each mission is resolved in the Allied player turn during the Offensive Air Support sub-segment of the Combat Phase prior to any other GS mission.\n• GS and naval missions cannot be conducted in the hexes that are targeted by carpet bombing.\n• Each HB AP assigned to the CB mission, allows the Allied side to conduct a CB mission against one hex. Place a blue spade marker in the planned target hex (AW 20.8.1). The hex does not have to be observed.\n• For each additional HB committed to the CB mission, one additional marker can be placed. The second marker must be placed in a hex adjacent to the planned target hex. The third and any additional markers must be placed in a hex adjacent to at least two other CB target hexes.\n• For each CB target hex, three volleys are conducted. The only DRMs to these FS missions are:\n  • -3, if the hex contains an ET, WN, or is a Cherbourg fortified area hex.\n  • -6, if a STP is in the hex.\n  • -1, if a pure AFV unit is in the hex.\n  • Density DRMs apply.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "20.8.1"
+    ]
+  },
+  {
+    "id": "aw-20.8.4",
+    "section": "20.8.4",
+    "title": "CB Volley Strength",
+    "text": "The strength of each volley against a target hex is dependent upon the total number of prior CB missions conducted (i.e. 1st, 2nd, 3rd CB mission conducted). These strengths are listed on the Carpet Bombing Table.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.8.5",
+    "section": "20.8.5",
+    "title": "CB Mission Resolution",
+    "text": "• All units in each target hex suffer one AS hit in addition to normal mission results. Maximum of one AS hit still applies.\n• Target units may not retreat.\n• Max step loss does not apply. Target units must take all numerical hits as step losses.\n• If there are more units than there are hits, the German player must randomly determine which units suffer step losses.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-20.8.6",
+    "section": "20.8.6",
+    "title": "CB Missions & AP Availability",
+    "text": "On the GD that a CB mission is conducted, the number of available Allied AP is halved for both AG.\nDesigners Note: These planes are busy flying AA suppression for the carpet bombing mission.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-21.0",
+    "section": "21.0",
+    "title": "REINFORCEMENTS",
+    "text": "Unlike most of the other games in the GOSS series, the arrival of reinforcements during the campaign scenarios is somewhat flexible, with each side managing the journey for practically all units committed to Normandy. Allied units are sent across the channel from England and have to wait to unload. German units must traverse the Allied air gauntlet on the roads to Normandy.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-21.1.3",
+    "section": "21.1.3",
+    "title": "German Reinforcements",
+    "text": "Units enter the Battlefield Map at a map edge hex that contains a road or railroad line. See AW 27.0 for Strategic Map procedures.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "27.0"
+    ]
+  },
+  {
+    "id": "aw-21.1.3a",
+    "section": "21.1.3a",
+    "title": "Map Entry on Roads",
+    "text": "Some road links from the Strategic Map location boxes are labeled with a fractional value of two-thirds or three-quarters.\n• Units entering on these roads must expend that fractional amount of their full MA to prior to entering the Battlefield Map.\n• If the road link is not labeled with a fractional value, the unit is considered to have expended one-half of its current MA to enter at that road link.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-21.1.3b",
+    "section": "21.1.3b",
+    "title": "Map Entry via Railroad",
+    "text": "A unit entering by railroad is placed on the Battlefield Map in the terminus hex (shown on the Strategic Map). Follow the procedures in AW 27.3.1d for movement after detraining. Normal stacking restrictions do not apply until the GT after the units enter the Battlefield Map.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "27.3.1d"
+    ]
+  },
+  {
+    "id": "aw-21.1.4",
+    "section": "21.1.4",
+    "title": "Allied Reinforcements",
+    "text": "Allied reinforcements begin in England and those that are not being air transported will arrive at one of the invasion beaches.\nNote: Smaller scenario reinforcements sometimes have fixed dates of arrival and may appear at a specific location or map edge as specified in the scenario rules.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-21.3",
+    "section": "21.3",
+    "title": "Activation Lists",
+    "text": "Each side has an activation list. When playing a campaign game (from any start point) both sides refer to the appropriate Activation List. In either case, the lists show when and where units are available. Additionally, the activation list gives a GT of arrival for units moving to Normandy. Those GTs are only used when not playing the full logistic rules. A player may choose not to activate a unit and may withhold it past its historical Normandy arrival date. The unit can be released any time after the activation date.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-21.3.3",
+    "section": "21.3.3",
+    "title": "Allied Activation Lists",
+    "text": "There are two Allied Activation Lists, one for US and one for CW forces. Units are listed with a specific date of activation, name of the unit or formation/sub-formation and the historical beach that they landed on. Units are available on the AM GT of their activation date and remain eligible for embarkation from that GT until the end of the game. If using the optional Early Activation rule, Allied divisions may be activated up to five days early (corps/army assets and independent units are activated on the date given).\nNote: The rules for embarkation and moving reinforcements from England are covered in AW 21.6.0.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "21.6.0"
+    ]
+  },
+  {
+    "id": "aw-21.3.4",
+    "section": "21.3.4",
+    "title": "German Activation List",
+    "text": "German reinforcements generally start scattered throughout France and Western Europe before being activated for movement to Normandy. Certain conditions or optional scenario rules may accelerate or delay the activation of a German unit. Once activated, German units are placed on the Strategic Map and may begin moving to the Battlefield Map. The German Activation List notes the location box in which unit appears. These locations and rules pertaining to their movement are explained in the Strategic Map rules section (AW 27.0).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "27.0"
+    ]
+  },
+  {
+    "id": "aw-21.3.5",
+    "section": "21.3.5",
+    "title": "15th Army Activation",
+    "text": "If any one of the following conditions are met, units of the German 15th Army and OKW panzer reserves may be activated early.\n• An Allied unit (not a FoW unit) ends any GT east of the Dives River on map C.\n• A location box in sector A on the Strategic Map is Allied occupied before the July 15 GD.\n• An Allied airborne unit (not a FoW unit) ends a June 6 or June 7 GT in a hex, in or adjacent to any Caen or Falaise town or city hex.\nIf any one of the above conditions is met, divisions listed in AW 26.5.2 may activate up to 10 GDs early.\n• Ignore divisions that have already been activated.\n• Any division that is already within the 10 GD period activates the GT the condition is met.\n• Pz divisions listed in AW 26.5.2a activate on the early activation date given in that section. No DR is required; ignore all other conditions of AW 26.5.0.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "26.5.2",
+      "26.5.2a",
+      "26.5.0"
+    ]
+  },
+  {
+    "id": "aw-21.4",
+    "section": "21.4",
+    "title": "Withdrawal of US Airborne",
+    "text": "Unless otherwise noted in the scenario, the Allied side must conduct the following withdrawals during the timeline listed.\n• 101st Airborne Division must begin withdrawing on the June 27 GD. Withdrawal must be complete no later than the June 29 AM GT.\n• 82nd Airborne Division must begin withdrawing on the July 9 GD. Withdrawal must be complete no later than the July 11 AM GT.\n• If Cherbourg is not Allied controlled (all city and town hexes) either or both of the above divisions may delay their withdrawal until Cherbourg has been occupied. If this option is used, two GDs after the capture of all Cherbourg city and town hexes, any division that was previously scheduled to withdraw must withdraw.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-21.4.1",
+    "section": "21.4.1",
+    "title": "Withdrawal Procedure",
+    "text": "• On the GD that withdrawal begins, no unit of the affected division may move adjacent to an enemy unit if it not already adjacent.\n• If a unit is not adjacent to an enemy unit, players may simply remove the unit from the Map.\n• All units must be removed by the end of the friendly Movement Phase on the GT the withdrawal is scheduled to be complete.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-21.5.0",
+    "section": "21.5.0",
+    "title": "Scenario Reinforcements",
+    "text": "In some scenarios players may be instructed to ignore the Activation Lists and simply put units into play at a given location. The Strategic Map and Naval Transit Displays may not be required to play such scenarios. The same scenarios may allow players to start the campaign game on dates after June 6. In both cases, if the full Logistic and reinforcement rules are not used, the Strategic Map and Naval Transit Displays will not be used. Instructions in each scenario will detail how and when units arrive.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-21.6.0",
+    "section": "21.6.0",
+    "title": "Allied Naval Transit System",
+    "text": "Because the shipment of units is closely tied into the naval transit and beach capacity mechanism, the rules for those systems are presented here in the order in which the individual actions are taken during the GT. All actions except moving onto beach landing hexes takes place during the Naval Transit Segment of the Transport and Logistics.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-21.6.1",
+    "section": "21.6.1",
+    "title": "Transit & Embarkation Boxes",
+    "text": "Movement on the Naval Transit Display is conducted in the following order:\nStep 1: Units in the transit box are divided into groups of six. If there are less than six units after grouping they form one group of less than six. Roll 1d10 for each group.\n• DR 0-4: Group is placed in the AM GT Anchorage Box.\n• DR 5-9: Group is placed in the PM GT Anchorage Box.\nStep 2: Units in the Embarkation Box are moved into one of the Transit Boxes corresponding to a specific beach area.\nNote: Except for units starting June 6 on the Naval Transit Display, players are free to choose which beach a unit lands on.\nNote: Units may not be placed in the Anchorage Boxes on Sword Beach beginning the June 10 AM GT.\nStep 3: Consult the US and CW Activation Lists to determine which units are eligible for activation. Units are placed in the Activated Units Box. US units are placed on the US Naval Transit Display.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-22.0",
+    "section": "22.0",
+    "title": "Replacements",
+    "text": "",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-22.1.1",
+    "section": "22.1.1",
+    "title": "Replacement Table",
+    "text": "There are separate sections for German, US and CW forces.\n• Roll 1d10 for each of the three groups.\n• RePs received are tracked for each national group.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-22.1.3",
+    "section": "22.1.3",
+    "title": "Recycling Step Losses",
+    "text": "Each scenario will state if players can recycle step losses. Use the values in GOSS 22.1.3. Step losses are tracked beginning June 6. Both sides may not cull or receive RePs until June 8.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "22.1.3"
+    ]
+  },
+  {
+    "id": "aw-22.1.6",
+    "section": "22.1.6",
+    "title": "Allied Daily ReP Limits",
+    "text": "RePs for the separate nationalities within the CW and US forces are built into the Replacement Table, however certain nationalities are limited by how many replacements they can receive each GD.\n\n**Canadian units**; Use CW Inf and armor RePs. They may receive a maximum of two Inf ReP each GD.\n\n**Polish units**; Use CW Inf and armor RePs. They may receive a maximum of one Inf ReP each GD.\n\n**French 2nd Armored Division**; Use US Inf and armor RePs. They may receive a maximum of one Inf ReP each GD. There are no limits to the number of armor RePs the above nationalities can receive.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-22.1.7",
+    "section": "22.1.7",
+    "title": "Luftwaffe",
+    "text": "Luftwaffe units (FJ, LW, and Flak units); receive one Inf ReP per GD in addition to the normal replacement rate. The Luftwaffe Inf ReP may simply be taken by any Luftwaffe Inf type unit; these RePs cannot be accumulated.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-22.1.8",
+    "section": "22.1.8",
+    "title": "Replacement Restrictions",
+    "text": "In addition to RE units, the following units do not add points to the loss total.\n• 17th MG Btn, Sturm Btn, and any unit not specifically listed on the Replacement Table.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-22.6",
+    "section": "22.6",
+    "title": "German Divisional Refit",
+    "text": "",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-22.6.3",
+    "section": "22.6.3",
+    "title": "Refit Benefits",
+    "text": "Ignore GOSS 22.6.0 refit ReP benefits. Divisional formations in refit receive the following ReP in addition to the normal RePs:\n• Infantry divisions: one Inf ReP per GD.\n• Pz or PzGd divisions: one Inf Rep and one-half armor ReP per GD.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "22.6.0"
+    ]
+  },
+  {
+    "id": "aw-22.6.4",
+    "section": "22.6.4",
+    "title": "Refit Restrictions & Release",
+    "text": "An army may have no more than one formation per subordinate corps in refit at any given time.\n• If an Allied unit ends movement closer than 20 hexes from any unit of the formation, the German player may attempt to release the formation early. At the start of each German Movement Phase, the German player rolls 1d10. If the roll is 8 or higher, the division is released. DRMs are:\n+3, if the enemy unit is between 10 and 14 hexes away.\n+6 if the enemy unit is between five and nine hexes away\n• If an enemy unit is within four hexes the division is automatically released.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-23.0",
+    "section": "23.0",
+    "title": "Leaders",
+    "text": "",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-23.2.1",
+    "section": "23.2.1",
+    "title": "Formation Leader Benefits",
+    "text": "In addition, (this means they retain the GOSS benefits) to the standard formation leader benefits listed in the 23.2.1, the below formation leaders have the following benefits.\n\nNote: Remember only one leader can provide combat benefits to GA. Subordinate units are those units assigned or attached to the listed formation.\n\nNote: Unless stated otherwise in the scenario instructions, leaders always arrive with their HQ or formation. All leaders are automatically activated the GD of arrival.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "23.2.1"
+    ]
+  },
+  {
+    "id": "aw-23.2.1d",
+    "section": "23.2.1d",
+    "title": "Allied Formation Leaders",
+    "text": "**Frost** (British, 1st Airborne Div): if stacked with subordinate units, he awards two additional MP to those units. Subordinate units stacked with Frost receive one shift in their favor and may ignore one discretionary hit if defending against a GA in a town or city. This shift is awarded in addition to his normal formation leader shift.\n\n**Gale** (British, 6th Airborne Div): if stacked with the 6th AB Div HQ, he awards up to three defensive combat shifts per combat phase and two offensive shifts per combat phase to any subordinate units. No more than two such shifts may be applied to any one combat.\n\n**Gavin** (US, 82nd Airborne Div): If stacked with subordinate units, he awards two favorable combat shifts to those units. This is in place of the normal one shift. When stacked with subordinate leg class units, he awards two additional MP to those units.\n\n**Ridgeway** (US, 82nd Airborne Div), if stacked with the 82nd Div HQ, one subordinate sub-formation has its PR values raised one point (maximum of nine).\n\n**Roberts** (British, 11th Armored Div), if stacked with 11th Arm Div HQ, he awards a one hex bonus advance after GA to all units subordinate to the 11th Arm Div.\n\n**Robertson** (US, 2nd Infantry Div), if stacked with the 2nd Inf Div HQ, all the division's attached units may perform their movement in any order they wish.\n\n**Taylor** (US, 101st Airborne Div) awards a one-point increase to PR values (both offensive and defensive) to any units subordinate to the 101st AB Div that he is adjacent to or stacked with (maximum of nine).",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-23.2.1e",
+    "section": "23.2.1e",
+    "title": "German Formation Leaders",
+    "text": "**Meyer** (12th SS Pz Division), if stacked with the 12SS Pz Div HQ, Meyer:\n• If stacked with or adjacent to a unit assigned to the 12SS Div, he awards up to two favorable combat shifts instead of one to those units. Shifts may be split between two different GAs.\n• Negates multi-formation combat penalties for the stack, when stacked with at least one unit assigned to the 12SS Pz Div.\n• Pure AFV units stacked with Meyer may advance one additional hex after a GA and may ignore all movement halts generated by enemy units.\n• If he is stacked with any unit assigned to the 12SS Pz Div, that unit and all units in the stack may conduct one overrun during a regular friendly Movement Phase. The units must be in tactical mode.\n\n**Wunsche** (12th SS Pz Division)\n• If he is stacked with any unit subordinate to the 12SS Pz Div, one unit of that stack may advance one extra hex after a GA.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-23.2.2",
+    "section": "23.2.2",
+    "title": "Corps & Army Leaders",
+    "text": "",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-23.2.2a",
+    "section": "23.2.2a",
+    "title": "Allied Corps/Army Leaders",
+    "text": "**Collins** (US VII Corps): If he is stacked with a Div HQ subordinate to the VII Corps, all of that division's attached units may perform their movement in any order they wish.\n\n**Horrocks** (British XXX Corps), if stacked with XXX Corps HQ, he allows one Inf Div and one Arm Div subordinate to the XXX Corps to negate the multi-formation combat penalty. Those divisions may observe for FS missions for each other.\n\n**Simonds** (II Canadian Corps), if stacked with II Canadian Corps HQ, he allows:\n• Up to two formations assigned to the II Canadian Corps to negate Allied night GT restrictions. The two formations must use the German procedures for determining which GT will be a rest turn (GOSS 3.5.0). Starting on the Aug 1 night GT, night attacks may be supported with a carpet bombing attack.\n• Any stack(s) accompanied by Flail or AVRE AFVs to ignore movement halts generated by enemy units and the night advance restriction.\n• Two defensive combat shifts during night GTs only.\n\n**Patton** (US Third Army), if stacked with a corps HQ assigned to the 3rd Army, Patton allows:\n• One Div subordinate to that corps to perform overruns during the regular Movement Phase. A maximum of two stacks may conduct overruns.\n• Units of that same Div increase their advance after GA by one hex.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "3.5.0"
+    ]
+  },
+  {
+    "id": "aw-23.2.2b",
+    "section": "23.2.2b",
+    "title": "German Corps/Army Leaders",
+    "text": "**Eberbach** (Pz Grp West), if stacked with a panzer corps HQ, he allows all formations subordinate to that corps to attack without being subject to the multi-division attack penalty. He also awards one attack combat shift for up to two panzer divisions (each division gets one shift). This is in addition to any formation leader shifts.\n\n**Marcks** (LXXXIV Corps), if stacked with the LXXXIV Corps HQ, he awards two defensive combat shifts to any units subordinate that corps. The shifts may both be given to one GA, or split between two GAs. This is in addition to any formation leader shifts.\n\n**vLuettwitz** (XLVII Pz Corps), if stacked with any Div HQ subordinate to that corps, he awards one favorable combat shift to one GA to any units subordinate to that division. This is in addition to any formation leader shifts.\n\n**Meindl** (IIFJ Corps), if stacked with the corps HQ, he awards one favorable combat shift to one GA to any units subordinate to the corps. This is in addition to any formation leader shifts.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-25.0",
+    "section": "25.0",
+    "title": "Army Reserve",
+    "text": "Beginning on the June 12 AM GT, both sides may create a hidden reserve. GOSS 25.0 is modified as follows.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "25.0"
+    ]
+  },
+  {
+    "id": "aw-25.1.0a",
+    "section": "25.1.0a",
+    "title": "Allied Reserve",
+    "text": "• A maximum of two formations may be armored.\n• Each formation must be allocated four FP prior to entering reserve.\n• Independent BG must be allocated two FP prior to entering reserve.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-25.1.0b",
+    "section": "25.1.0b",
+    "title": "German Reserve",
+    "text": "• A maximum of three divisions may be Pz or PzGd divisions.\n• Mech Formations must be allocated four FPs and two AmPs prior to entering reserve.\n• Independent Mech BG must be allocated two FP and one AmP prior to entering reserve.\n• Leg formations or sub-formations must be allocated one AmP prior to entering reserve.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-26.0",
+    "section": "26.0",
+    "title": "Optional Rules",
+    "text": "Prior to starting a campaign game, both sides need to agree on which if any of the optional rules will be in effect.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-26.5.0",
+    "section": "26.5.0",
+    "title": "Variable Division Activation",
+    "text": "",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-26.5.1",
+    "section": "26.5.1",
+    "title": "Allied Early Activation",
+    "text": "Allied divisions may be activated up to five GDs early.\n• Early activations may not be conducted prior to the June 10 AM GT.\n• For every GD that a division is activated early that national group (either US or CW) receives a -1 DRM on both logistic DRs.\n• A maximum total of -9 DRM is allowed.\n• On each GD prior to deciding to activate a division early, the Allied side reduces the current early activation DRM by one (move the marker on space to the left).\n\nExample: On the June 14 AM GT the US player decides to activate the 83rd Division, which normally would be available on June 19. Since June 14 is five GDs prior to the 83rd's normal activation of 19 June, the US player places a marker in the \"-5\" box on the \"Total DRM\" track of the US Transit Naval Display. The US player would receive a -5 DRM to both his fuel and AmP DRs that GD. On the June 13 AM GT, the US player would move the DRM marker one space to the left reducing the DRM for that GD to -4. The US player could activate another division early as long as the total DRM (the current -4 DRM plus the DRM for the next early activation) does not exceed -9 DRM.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-26.5.2",
+    "section": "26.5.2",
+    "title": "German Early Activations",
+    "text": "The German side may attempt early activation starting with the June 10 GD.\n• Only those divisions listed below may attempt early activation.\n• The German side may attempt early activation of one division every three GDs.\n• A division may attempt early activation up to 10 GDs before it was historically activated.\n• The divisions must be taken in the order they appear below.\n• During each Combat Phase, the German side rolls 1d10 to attempt to activate one division early.\n• The next division in line cannot be rolled for until the one above it has been activated.\n\nThe first column contains the division name; the second column is the actual date the division was activated. The third column is the DR needed for activation.\n\nDivision | Historical Date | DR\n16LW | 6/20 | 0-4\n266 | 6/22 | 0-4\n276 | 6/23 | 0-4\n277 | 6/23 | 0-4\n272 | 7/2 | 0-5\n271 | 7/4 | 0-5\n331 | 7/4 | 0-5\n326 | 7/14 | 0-5\n363 | 7/20 | 0-5\n89 | 7/30 | 0-5\n84 | 8/2 | 0-6\n85 | 8/4 | 0-6\n344 | 8/8 | 0-6\n17LW | 8/14 | 0-7\n18LW | 8/15 | 0-7\n\nIf the German side activated any division early, beginning the Command Phase of the July 1 GD and continuing every other GD until the July 30 GD, conduct the following procedure:\n• Roll 1d10 for each division that was activated early.\nExample: If two divisions have been activated early, the German player would roll 2d10.\n• For each result of 0-1, one division, starting with the 331st is removed from the order of battle and thus not available for activation.\nExample: On the July 1 GD, the German side has previously activated two divisions early. The German player rolls 2d10 with a \"1\" and a \"0\" results. The 331st and the 326th Divisions would no longer be available for activation.\n• If a division that is removed from the order of battle is already in play, remove the next inactive division below it on the list.\n• If all divisions are already in play, one division must be withdrawn from the Battlefield or Strategic Map. Start with the 331st Div and then move down the list.\n• If a division is on the Battlefield or Strategic Map and all units of that division are more than three hexes from an Allied unit or, if on the Strategic Map, not in the same Location Box as an Allied unit simply remove all units assigned to the division.\n• If any of the assigned units of the division are within three hexes of an Allied unit or in the same Location Box, those units must be immediately moved to a position that meets the above distance from an Allied unit.\n\nNote: If a division has not activated by the time of its historical release, it is automatically activated.\n\n**Designer's Note**: Activating formations early creates the risk of the German high command using later reinforcing divisions on the eastern front instead of in the west, as they have become convinced that Normandy is the real invasion and can use 15th Army as a resource for both fronts.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-26.5.2a",
+    "section": "26.5.2a",
+    "title": "Early Activation of Pz Divisions",
+    "text": "The Germans may also attempt to activate Pz divisions for early commitment to Normandy. Using the nearly the same procedure as above, the following panzer divisions may attempt early activation:\n\nDivision | Date | Date | DR\n2 Pz | 6/9 | 6/11 | 0-4\n1SS Pz | 6/20 | 6/30 | 0-2\n116 Pz | 7/7 | 7/20 | 0-3\n9 Pz | 7/20 | 8/2 | 0-2\n\nThe above list differs from the previous list in that the first column is the earliest date that activation may be attempted and the second column is the historical activation date. The activation DR needed for each formation is in the fourth column.\n\nFor each Pz Div that is activated early, the German player rolls 1d10, if the result of the DR is 0-3, the next complete infantry division eligible for activation is withdrawn and may not be activated.\n• If there are no more infantry divisions available for activation, then one Pz Div (starting with the 9th Pz and working up the list) from the above list is withdrawn and may not be activated.\n\nNote: If a division has not activated by the time of its historical release, it is activated on its printed date.\n\nExample: All infantry divisions have been activated. The German player activates the 116th Pz Div on the July 18 GD. The 9th Pz is withdrawn and not available for activation.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "26.5.2"
+    ]
+  },
+  {
+    "id": "aw-26.5.2b",
+    "section": "26.5.2b",
+    "title": "Gross Deutschland Pz Division",
+    "text": "The German players may choose to take this formation as part of the OKW reserve. This decision must be made before the start of the game. If it is taken, the unit's location is randomly determined after the conclusion of the June 6 AM GT. The locations are listed below, roll 1d10:\n\nDR | Location\n0-2 | Germany Location Box\n3-4 | Benelux Location Box\n5-6 | Pas de Calais Location Box\n7 | Rennes Location Box\n\nFor all of the above results, the Recon Btn and one PzGd Rgt activate on the Jun 7 PM GT, with the remaining units activating on Jun 8 AM GT.\n\n8: Within three hexes of Alencon, entire division activates June 6 night GT.\n9: Within six hexes of St Lo. The Recon Btn and one PzGd Rgt activate on the June 6 AM GT. The remainder of the division activates on the June 6 PM GT.\n\nIf the Gross Deutschland Div is activated, conduct the following procedure:\n• Beginning on the June 25 AM GT and continuing each GD, until the July 2 AM GT, the German player rolls 1d10.\n• The first time a 0-2 is rolled, the 9SS Pz division is withdrawn and does not activate, or if already active, is withdrawn.\n• The second time a 0-2 is rolled, the 10SS Pz Div and the IISS Pz Korps HQ are withdrawn and do not activate, or if already active, are withdrawn from the Map.\n• The third time a 0-2 is rolled the Gross Deutschland Div is withdrawn.\n\nNote: Follow the procedures in AW 26.5.2 when withdrawing active divisions.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "26.5.2"
+    ]
+  },
+  {
+    "id": "aw-26.5.2c",
+    "section": "26.5.2c",
+    "title": "2nd FJ & 708th Divisions",
+    "text": "If Avranches (D2929) is still German controlled on the August 2 AM GT, and a continuous German frontline exists from there to Tinchebray (E3524) the German player may activate the 2nd FJ division at",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.0",
+    "section": "27.0",
+    "title": "Strategic Map",
+    "text": "The Strategic Map has 57 location boxes that are each individually named and linked to other boxes by lines representing road and rail connections. The outline of the Battlefield Map is shown on the Strategic Map along with the Battlefield Map entry location hexes used by both sides to move between the Battlefield and Strategic Maps. German depot locations and fortified cities are also found in some location boxes.\nNote: Most location boxes contain a town or city. Those locations that have a direct link to the Battlefield Map have a four-pointed star symbol.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.1.0",
+    "section": "27.1.0",
+    "title": "Stacking on the Strategic Map",
+    "text": "A side may never have more than 48 units in a location box.\n• Players may not attempt to move units into a location box that would violate the above stacking limit.\n• If at the end of a Strategic Movement Segment a location box is found to be overstacked, the opposing side selects which units are considered in violation of stacking and moves those units one location box until all overstacks have been corrected.\nException: The German side may violate stacking limits when placing activated units. No other units may enter that location box until the over stack is corrected.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.2.0",
+    "section": "27.2.0",
+    "title": "Strategic Map Sectors",
+    "text": "There are four sectors on the Strategic Map, labeled A, B, C, and D. Sector B is divided into two sub-sectors with the western sub-sector representing the Brittany area of France. Each sub-sector has its own interdiction values. APs assigned to Sector B are considered to be in both sub-sectors.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.0",
+    "section": "27.3.0",
+    "title": "Strategic Map Movement",
+    "text": "With the exception of units leaving the Battlefield Map, all Strategic Map movement is conducted in the AM GT of each GD only.\nException: When German units activate, they may be eligible for limited movement that GT. Consult the German Activation List for instructions.\n• Units move from location box to location box using the transportation lines that link them together.\n• German units may use leg, Mech or rail movement.\n• Allied units may use leg or Mech movement.\n• Units moving on the Strategic Map (including those exiting the Battlefield Map) are divided into movement groups. Each movement group must consist of units conducting the same type of movement (leg, movement, or rail).\n• Each group may contain no more than six units. Groups of less than six units are still counted as one movement group.\n• Movement groups can be reformed each Strategic Movement Segment as long as all of the units are located in the same box.\nNote: Capacity and air interdiction may restrict movement for German units. Fuel considerations may restrict Mech movement for both sides.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.1",
+    "section": "27.3.1",
+    "title": "German Rail Movement",
+    "text": "German units may move by rail using the crosshatched rail transportation lines on the Strategic Map.\n• Units may not entrain while on the Battlefield Map, they must first move to a location box on the Strategic Map that contains a rail line.\n• Units moving by rail may not enter a location box that contains enemy units.\n• If Allied units move into a box containing entrained German units, the units are detrained at the moment of combat in the Strategic Combat Segment. They defend at half strength.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.1a",
+    "section": "27.3.1a",
+    "title": "Rail Movement Groups",
+    "text": "Count Mech and artillery Btns as two units when creating rail movement groups. Mark each rail group with a red Ace of Spades marker.\nExample: There are eight units in a location box within sector B. Two of the units are Mech Btns, one is Mech two-step Coy, one is an Art Btn, and four are leg Inf Btns. The German player wishes to rail move all these units.\n• He creates one group containing both Mech Btns (2 Mech Btns x 2 = 4 units) and two leg infantry units (2 leg Inf Btns x 1 = 2); a total of (4 + 2 = 6) six units.\n• He then creates a second group consisting of the Art Btn (2 units), the two-step Mech Coy (non-Btn Mech units equal 1 unit) and the two remaining leg movement units (any size) for a total of five units.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.1b",
+    "section": "27.3.1b",
+    "title": "Rail Capacity",
+    "text": "To move by rail, units must first entrain. Units are entrained prior to any movement groups (all types) being moved. The total number of entrained groups on the Strategic Map at any one time is limited. Maximum groups are:\n• June: 12 groups.\n• July: 10 groups.\n• August: 8 groups.\nEach Strategic Map Sector has a maximum number of groups that may be entrained at any given time in that sector. Sector capacity is shown on the Strategic Map and like the total capacity it is reduced over time.\n• The number of groups allowed in each sector may be exceeded, as long as the total number of groups for the Strategic Map is not exceeded.\n• Apply a -1 DRM to all German logistic DR for each group that exceeds a sector's rail capacity.\nExample: In June the German player may entrain a total of 12 groups on the Strategic Map. He could entrain 4 (max of 4) in sector A, 5 (max of 4) in sector B, and 3 in sector C (max of 6). He could not entrain any more groups as he has reached his maximum total groups for the Strategic Map. He has exceeded his capacity in sector B by one, so he would apply a -1 DRM to his Logistic DRs.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.1c",
+    "section": "27.3.1c",
+    "title": "Rail Movement Procedure",
+    "text": "Rail movement groups may make four movement attempts. Each successful attempt allows the group to move from one location box to another or from a location box to the Battlefield Map. A group may make four attempts to move even if one or all of the first three attempts fail.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.1d",
+    "section": "27.3.1d",
+    "title": "Entering the Battlefield Map",
+    "text": "A rail movement group that enters the Battlefield Map is placed on a rail line at the named location (terminus) on the Battlefield Map that shows a connection to the rail line on the Strategic Map.\n• Units entering may move no further until the next friendly Movement Phase.\n• Prior to moving on the Battlefield Map, those units may be placed on the closest road hex to the terminus. They begin their movement from that hex. Stacking limits do not apply until the end of that Movement Phase.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.1e",
+    "section": "27.3.1e",
+    "title": "Rail Movement Restrictions",
+    "text": "The Seine River has only one rail crossing point (Paris to Versailles).\n• To cross the Seine River using rail movement, groups must begin the Strategic Movement Segment in either Paris or Versailles, and use their full rail movement to cross the Seine River. They may make up to four attempts, but may move no further than one location box (from Paris to Versailles or Versailles to Paris).\n• Groups that start in the South of France Box may only move one box, to the Biscay, Orleans, or Tours Location Box. They may make four attempts to enter one of those boxes. To move to the South of France Box, units must start in one of the above locations.\n• Once an Allied unit enters a Strategic Map Sector (A, B, C, or D) the German rail capacity for that sector is lost and may never again be utilized. The total rail capacity for the Strategic Map does not change.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.2",
+    "section": "27.3.2",
+    "title": "Mech Movement",
+    "text": "Both sides can use Mech movement on the Strategic Map. Movement groups may enter and or exit the Battlefield Map using Mech movement.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.2a",
+    "section": "27.3.2a",
+    "title": "Mech Movement Groups",
+    "text": "Each Mech movement group can consist of up to six units of any size. All units count as one unit.\nNote: GOSS 6.1.2 thru 6.1.4 do not apply.\n• The German side has one truck point available for use on the Strategic Map. Units motorized by this TP may continue to use the TP on the Battlefield Map. When the units using the TP dismount, the TP is available for use on the Strategic Map on the AM GT of the next GD.\n• Leg units wishing to use Mech movement must be transported by motorization TP allocated from any army HQ or the Strategic Map TP listed above.\n• Leg units are motorized at the beginning of the Strategic Movement Segment.\n• Mech units can be assigned to a leg movement group, however they then move as a leg unit.\n• Players may create a Mech movement group of less than six units, however that group still counts as one group for fuel purposes.\n• Mark Mech movement groups with a blue spade marker.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "6.1.2",
+      "6.1.4"
+    ]
+  },
+  {
+    "id": "aw-27.3.2b",
+    "section": "27.3.2b",
+    "title": "Fuel Requirements",
+    "text": "Each Mech movement group requires one-half a FP.\n• Mech movement groups that do not receive the required amount of FP move as a leg movement group.\n• Players may allocate FP to a Div (use the Battlefield Map fuel requirements).\n• The division must be allocated enough FP to be in a \"Normal\" fuel state.\n• All Mech movement groups containing only units subordinate to that division may move as a Mech groups.\n• Units belonging to a Mech groups that were fueled on the Strategic Map are considered in a \"Normal Fuel\" state for the entire GD when entering the Battlefield Map.\n• If a division has assigned units on both the Strategic and Battlefield Maps at the start of the AM GT, the German player must allocate fuel as if the whole formation was on the Battlefield Map.\n• If the formation is not allocated enough FP to be in a normal fuel state, those units still on the Strategic Map must move as leg movement groups.\n• The German player could establish independent BG(s) for those units on the map. Fuel would be handled as normal for each BG on the Battlefield and for each movement group on the Strategic Map.\n• Fuel points used on the Strategic Map may be drawn from either German Army.\n• The German side receives one FP for use on the Strategic Map each GD. This FP can only be used on the Strategic Map and may not be accumulated from GD to GD. Divisions that are present on the Battlefield and Strategic Map, being fueled as a division may use this FP.\nExample 1: The Pz Lehr Division consists of 22 Mech units. Four units have already entered the Battlefield Map. The German player could expend one and one-half FP (one-half for each Mech group) to fuel the 18 units on the Strategic Map, and then designate the four units on the Battlefield Map as independent BG. He could then allocate fuel to that BG separately.\nExample 2: Using the same situation in example 1, the German player could fuel the Lehr division as a division, but because part of the division is still on the Strategic Map, the division would have to be allocated enough FP to achieve a normal fuel status (i.e. two FP).",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.2c",
+    "section": "27.3.2c",
+    "title": "Mech Movement Procedure",
+    "text": "Mech movement groups may make two movement attempts. Each successful attempt allows the group to move from one location box to another or from a location box to the Battlefield Map. A group may make two attempts to move even if the first attempt fails.\n• Mech groups may use any transportation line on the Strategic Map.\n• Mech groups may enter enemy occupied location boxes.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.2d",
+    "section": "27.3.2d",
+    "title": "Entering the Battlefield Map",
+    "text": "• Mech groups that begin the Strategic Movement Segment in an entry location box (those locations with a four pointed star symbol) and who pass their interdiction DR are placed in the corresponding entry hex and may immediately move, using no more than one-half of their MA.\n• Mech groups that start the Strategic Movement Segment not in an entry location box, but who manage to move onto the Battlefield Map must stop at the Battlefield Map entry hex. They may not move any further that Movement Phase.\n• Mech units that exit the Battlefield Map and enter the Strategic Map must stop at the first location box and may move no further that GD.\nNote: Some entry locations have MA reductions marked along the line entering the map. Use that reduction rather than the standard one-half for other locations when entering the Battlefield Map.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.2e",
+    "section": "27.3.2e",
+    "title": "Mech Movement Restrictions",
+    "text": "Mech groups may cross the Seine River at any transportation line.\n• To cross the Seine River Mech groups must begin the Strategic Movement Segment in a location box adjacent to the Seine River and use their full Mech movement to cross the Seine River. They may make up to two attempts, but may move no further than one location box.\n• Groups that start in the South of France Box may only move one box, to the Biscay, Orleans, or Tours Location Box. They may make two attempts to enter one of those boxes. To move to the South of France Box, units must start in one of the above locations.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.3",
+    "section": "27.3.3",
+    "title": "Leg Movement",
+    "text": "Both sides can use leg movement on the Strategic Map. Movement groups may enter and or exit the Battlefield Map using leg movement.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.3a",
+    "section": "27.3.3a",
+    "title": "Leg Movement Groups",
+    "text": "Any unit may be assigned to a leg group. No more than six units of any size or type may be assigned to a leg movement group. Each unit counts as one unit for leg movement. Mech movement groups that are not allocated fuel move as leg groups.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.3b",
+    "section": "27.3.3b",
+    "title": "Leg Movement Procedure",
+    "text": "Leg groups may use any transportation line on the Strategic Map. There is no need to place a marker on leg groups. Groups without a marker are assumed to be a leg group.\n• Leg groups may make one attempt to move per Strategic Movement Segment.\n• Leg groups may enter enemy occupied location boxes.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.3c",
+    "section": "27.3.3c",
+    "title": "Entering the Battlefield Map",
+    "text": "Leg groups that enter the Battlefield Map during the Strategic Movement Segment may move up to one-half of their full MA on the Battlefield Map.\nNote: Some entry locations have MA reductions marked along the line entering the map. Use that reduction rather than the standard one-half for other locations when entering the Battlefield Map.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.3d",
+    "section": "27.3.3d",
+    "title": "Leg Movement Restrictions",
+    "text": "Leg groups may not move to and from the South of France Box. Leg units in sector D must be assigned TP and moved as Mech groups or entrained and move as a rail group.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.4",
+    "section": "27.3.4",
+    "title": "German Interdiction Values",
+    "text": "Each time a German movement group wishes to move on the Strategic Map, it must check for interdiction. Roll 1d10 for each movement group attempting to move. The modified result must be higher than the interdiction level for that type of movement group. Each sector has a set of interdiction numbers printed on the Strategic Map. Sector B is divided into two sub-areas with different interdiction values for each sub-area.\n• There are two interdiction values for each area. The value to the left of the slash is the interdiction value for leg and Mech groups, the value to the right of the slash is the interdiction value for rail groups.\n• To successfully leave a box, the DR must be greater than the interdiction value for that type of group. When crossing from one sector to another use the interdiction values for the sector the group is entering.\n• Weather conditions on the Battlefield Map modify interdiction DRs. Sector B is affected by the weather condition in the western weather area and sector A is affected by the weather in the eastern weather area. Sections C and D are not affected by weather. The DR modifiers are printed on the Strategic Map.\n• Allocation of Allied APs to Strategic Map interdiction will also affect the DR (AW 20.3.0 and the Strategic Map).",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "20.3.0"
+    ]
+  },
+  {
+    "id": "aw-27.3.5",
+    "section": "27.3.5",
+    "title": "Allied Interdiction Values",
+    "text": "Allied movement groups are subject to a reduced interdiction value. This value simulates minor German garrisons and the infrastructure damage caused by Allied bombing.\n• Each movement group rolls 1d10 and on a DR of 1-9 the units succeed in moving to an adjacent location box.\n• DRMs awarded to the German side due to weather are subtracted from the DR rather than added to the DR.\n• Allied units may not move into Honfleur, Lisieux, and Amiens location boxes.\n**Designer's note**: The 15th German Army was located in those areas and if any Allied units had attempted to the 15th Army would have defended those areas.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.6",
+    "section": "27.3.6",
+    "title": "Movement Restrictions",
+    "text": "Mech and leg movement groups may enter boxes containing enemy units.\n• Groups entering an enemy occupied location box must then halt their movement in that box.\n• If a group starts a Strategic Movement Segment in a box with enemy units, those friendly units may only move to a box that does not contain other enemy units.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.3.7",
+    "section": "27.3.7",
+    "title": "Exiting the Battlefield Map",
+    "text": "Units exit the Battlefield Map using the same access hexes that groups do when they enter the Battlefield Map. Units may exit during their regular or Exploitation Movement Phases if they have at least half of their MA remaining. Units must halt their movement when entering the first location box and may not move until the next Strategic Movement Segment. All rules pertaining to strategic movement apply at that time.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.4.0",
+    "section": "27.4.0",
+    "title": "Strategic Map Combat",
+    "text": "Combat on the Strategic Map is handled in an abstract manner.\n• Combat occurs in each friendly Movement Phase, once per GD between opposing units in the same location box.\n• Units can only initiate combat during their friendly Strategic Movement Segment after all of that side's movement is complete.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.4.1",
+    "section": "27.4.1",
+    "title": "Combat Procedure",
+    "text": "If both sides have at least one group in the same location box, combat must occur. The side that is conducting their Movement Phase is the attacker.\nException: If Allied units move into a location box that contains a fortress symbol, and there are German units occupying that location, The German units may withdraw into the fortress. Once they do so, the Allied player may declare a siege and remain in the location box without attacking.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.4.1a",
+    "section": "27.4.1a",
+    "title": "Combat Strength",
+    "text": "Combat is resolved one location box at a time. Each side totals the combat strength of all units in the location box.\n• The attacker uses his unit's offensive current unit combat strength and the barrage strength of all artillery units.\n• The defender uses his unit's defensive current unit combat strength and the barrage strength of all artillery units.\n• The attacker and defender may use APs that were allocated to the GS role. A maximum of eight AP may be committed to one location box. Each AP committed adds two points of combat strength to the owning side.\n• The combat strength of HQs is not counted unless they are the only type of units in the location box.\n• Current combat strengths of all units are modified as follows:\n• Mech units that are part of a leg movement group have their current combat strengths halved.\n• Units that are in a OoS status have their current combat strength halved.\n• Units in rail groups halve their current combat strength. (they may not attack). After completion of the combat, they are immediately detrained.\n• If the defending units occupying a location box with a town symbol multiply their total strength by 1.5.\n• If the defending units occupy a location box with a city symbol multiply their total strength by 2.\nNote: All of the above are cumulative. Fractions are rounded up after computing the total combat strength.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.4.1b",
+    "section": "27.4.1b",
+    "title": "Final Combat Value",
+    "text": "After determining combat strength, add the following to appropriate side's combat strength.\n• +2 to the larger force if it is at least twice the combat strength of the other.\n• +4 to the larger force if it is at least three times the combat strength of the other.\n• +6 to the larger force if it is at least four times the combat strength of the other.\nNote: The above modifiers are not cumulative.\n• Both sides choose a lead PR and each side adds that value to their combat strength.\n• Both sides choose their armor or AT lead unit. The attacker can only choose an AT value if none of his units have an armor value and the defender is using an armor value. Add the armor or AT value of each side.\n• +1 to either side with at least one active leader in the box.\n• +1 to the defender if that side occupies a location box with a city.\n• +2 to the defender if that side occupies a location box with a fortress.",
+    "module": "atlantic-wall",
+    "crossRefs": []
+  },
+  {
+    "id": "aw-27.4.2",
+    "section": "27.4.2",
+    "title": "Combat Resolution",
+    "text": "After both sides total the factors in AW 27.4.1b, the side with the smaller combat strength subtracts their value from the larger; the result is the combat value.\n• If the combat value is one or less the combat is considered a draw, and each side takes one step loss, and neither side retreats.\n• If the combat value is greater than one, the side with the lower combat strength is considered the loser.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "27.4.1b"
+    ]
+  },
+  {
+    "id": "aw-27.4.2a",
+    "section": "27.4.2a",
+    "title": "Losing Side Results",
+    "text": "The losing side determines if his units will retreat or remain in the current location box.\n• If the losing side elects not to retreat or does not have a valid path of retreat (27.4.2c), the combat value becomes the number of step losses that side must incur.\n• If the units have a valid path of retreat (27.4.2c) the losing side may retreat one location box, or if no other path is available and the entry hex(s) are not enemy occupied, he may retreat back onto the Battlefield Map.\n• He then divides the combat value by two (rounding fractions up) the resulting number is the number of step losses the retreating units incur.\n• Defending German units occupying a location box containing a fortress symbol have their losses halved and are not required to retreat.\nNo unit can take more than one step loss until all units on the losing side have taken at least one loss. Artillery and HQ units cannot take losses until all other types of units have taken at least one step loss.",
+    "module": "atlantic-wall",
+    "crossRefs": [
+      "27.4.2c"
+    ]
+  }
+]

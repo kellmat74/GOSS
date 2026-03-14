@@ -129,7 +129,7 @@ function ModalBody({
         <div key={rule.id} className="mt-4">
           <div className="mb-3 flex items-center gap-2 border-t border-blue-200 pt-3 dark:border-blue-800">
             <span className="rounded bg-blue-500/20 px-1.5 py-0.5 text-xs font-semibold text-blue-700 dark:text-blue-400">
-              {rule.module === "war" ? "Wacht am Rhein" : rule.module === "hurtgen" ? "Hurtgen" : rule.module === "lucky-forward" ? "Lucky Forward" : rule.module}
+              {rule.module === "war" ? "Wacht am Rhein" : rule.module === "hurtgen" ? "Hurtgen" : rule.module === "lucky-forward" ? "Lucky Forward" : rule.module === "atlantic-wall" ? "Atlantic Wall" : rule.module}
             </span>
             {rule.title !== baseRule?.title && (
               <span className="text-xs text-stone-500">{rule.title}</span>

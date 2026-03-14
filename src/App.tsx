@@ -16,6 +16,7 @@ import gossRules from "./data/goss/rules.json";
 import warRules from "./data/war/rules.json";
 import hurtgenRules from "./data/hurtgen/rules.json";
 import lfRules from "./data/lucky-forward/rules.json";
+import awRules from "./data/atlantic-wall/rules.json";
 import type { Phase, RuleEntry } from "./types/goss";
 
 const phases = sequenceData.phases as Phase[];
@@ -24,6 +25,7 @@ const scenarioRuleSets: Record<string, RuleEntry[]> = {
   war: warRules as RuleEntry[],
   hurtgen: hurtgenRules as RuleEntry[],
   "lucky-forward": lfRules as RuleEntry[],
+  "atlantic-wall": awRules as RuleEntry[],
 };
 
 type View = "sop" | "flowchart" | "rules" | "ask";

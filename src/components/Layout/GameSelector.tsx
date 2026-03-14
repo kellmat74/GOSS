@@ -10,7 +10,7 @@ const GAME_OPTIONS: GameOption[] = [
   { value: null, label: "GOSS Base" },
   { value: "war", label: "Wacht am Rhein" },
   { value: "hurtgen", label: "Hurtgen" },
-  { value: "atlantic-wall", label: "Atlantic Wall", disabled: true },
+  { value: "atlantic-wall", label: "Atlantic Wall" },
   { value: "lucky-forward", label: "Lucky Forward" },
 ];
 
