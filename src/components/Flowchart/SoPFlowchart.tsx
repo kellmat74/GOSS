@@ -4,12 +4,14 @@ import { ReactFlowChart } from "./ReactFlowChart";
 import { flowchartDefs, getFlowchartDef } from "./flowLayouts";
 import { Breadcrumb, type BreadcrumbItem } from "../Breadcrumb";
 import { NodeDetailPanel, findDetailByRuleRef, type NodeDetail } from "./NodeDetailPanel";
+import { useRules } from "../../context/RulesContext";
 import sequenceData from "../../data/goss/sequence.json";
 import type { Phase } from "../../types/goss";
 
 const phases = sequenceData.phases as Phase[];
 
 export function SoPFlowchart() {
+  const { getRuleBySection } = useRules();
   const [history, setHistory] = useState<string[]>([]);
   const [activeId, setActiveId] = useState("game-turn");
   const [detail, setDetail] = useState<NodeDetail | null>(null);
@@ -21,13 +23,27 @@ export function SoPFlowchart() {
     const handler = (e: Event) => {
       const ruleRef = (e as CustomEvent).detail?.ruleRef;
       if (ruleRef) {
-        const found = findDetailByRuleRef(phases, ruleRef);
+        let found = findDetailByRuleRef(phases, ruleRef);
+        if (!found) {
+          // Fall back to rule entry from rules.json
+          const rule = getRuleBySection(ruleRef);
+          if (rule) {
+            found = {
+              name: rule.title,
+              ruleRef: rule.section,
+              description: rule.text || rule.summary,
+              notes: [],
+              checklist: [],
+              player: "both",
+            };
+          }
+        }
         setDetail(found);
       }
     };
     window.addEventListener("flownode-info", handler);
     return () => window.removeEventListener("flownode-info", handler);
-  }, []);
+  }, [getRuleBySection]);
 
   const navigateTo = useCallback(
     (targetId: string) => {
