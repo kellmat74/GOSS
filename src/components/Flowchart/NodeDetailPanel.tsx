@@ -98,36 +98,31 @@ export function NodeDetailPanel({ detail, onClose }: NodeDetailPanelProps) {
   );
 }
 
-/** Look up phase/subphase detail by ruleRef from sequence data */
+/** Look up phase/subphase detail by ruleRef from sequence data (recursive) */
 export function findDetailByRuleRef(
   phases: Phase[],
   ruleRef: string
 ): NodeDetail | null {
-  for (const phase of phases) {
-    if (phase.ruleRef === ruleRef) {
-      return {
-        name: phase.name,
-        ruleRef: phase.ruleRef,
-        description: phase.description,
-        notes: phase.notes,
-        checklist: [],
-        timing: phase.timing,
-        player: phase.player,
-      };
-    }
-    for (const sub of phase.subPhases) {
-      if (sub.ruleRef === ruleRef) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function search(items: any[]): NodeDetail | null {
+    for (const item of items) {
+      if (item.ruleRef === ruleRef) {
         return {
-          name: sub.name,
-          ruleRef: sub.ruleRef,
-          description: sub.description,
-          notes: sub.notes,
-          checklist: sub.checklist,
-          timing: sub.timing,
-          player: sub.player,
+          name: item.name,
+          ruleRef: item.ruleRef,
+          description: item.description,
+          notes: item.notes ?? [],
+          checklist: item.checklist ?? [],
+          timing: item.timing,
+          player: item.player,
         };
       }
+      if (item.subPhases) {
+        const found = search(item.subPhases);
+        if (found) return found;
+      }
     }
+    return null;
   }
-  return null;
+  return search(phases);
 }
