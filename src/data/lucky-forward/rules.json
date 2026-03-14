@@ -1,0 +1,1066 @@
+[
+  {
+    "id": "lf-1.0",
+    "section": "1.0",
+    "title": "Game Components",
+    "summary": "",
+    "text": "The rules are in a numbered case format, with higher numbered rules within the same section always taking precedence over lowered numbered rules. Rules in the scenario booklet may change, add to, and always supersede any rules found in the basic rules set. Rule references to **GOSS** rules will be preceded by \"**GOSS**\" and those to **Lucky Forward** rules will be preceded by \"**LF**\".",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-1.1",
+    "section": "1.1",
+    "title": "Game Rules",
+    "summary": "",
+    "text": "The rules are in a numbered case format, with higher numbered rules within the same section always taking precedence over lowered numbered rules. Rules in the scenario booklet may change, add to, and always supersede any rules found in the basic rules set. Rule references to **GOSS** rules will be preceded by \"**GOSS**\" and those to **Lucky Forward** rules will be preceded by \"**LF**\".",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-1.2",
+    "section": "1.2",
+    "title": "The Game Map",
+    "summary": "",
+    "text": "**Lucky Forward Game Turn Track Errata:**\n- GDs 62, 63 & 64 US ADV should read 2/3\n- GD 65 through GD 70 US ADV should read 2/5.\n- GD 71 through GD 87 US ADV should read 4/5.\n\n**Map Clarification:** On map 3, Hexside 2313/2314, ignore the bridge symbols. They cross a stream and should just show the railroad and road crossing the stream. They cannot be demolished unless flood conditions are in effect.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-1.2.1",
+    "section": "1.2.1",
+    "title": "The Moselle River",
+    "summary": "",
+    "text": "The only major river in the game is the Moselle River. The Moselle starts at hexside 4-3735/3835 and runs north to the map edge near the city of Trier (2-1801).",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-1.2.2",
+    "section": "1.2.2",
+    "title": "Rough-2 Terrain",
+    "summary": "",
+    "text": "Rough-2 has been added to the list of terrain types to account for high hills and low mountainous terrain. Rough-2 terrain has the following characteristics:\n\n**a)** Rough-2 terrain provides additional LOS range (**LF** 8.1.2d).\n\n**Important:** Rough-2 terrain does not award VP FS DRMs unless the hex also contains a VP, nor GA column shifts.\n\n**b)** Treat rough-2 terrain as constricted terrain for movement and stacking purposes. When moving into or out of a rough-2 hex there are no hexsides (unless using a road) that a unit would be exempt from the constricted terrain penalty.\n\n**c)** Treat rough-2 hexes as normal rough hexes for MCT/OCT purposes.\n\n**Example:** Map 2, hex 4009",
+    "crossRefs": [
+      "8.1.2d"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-1.7",
+    "section": "1.7",
+    "title": "Inventory of Game Parts",
+    "summary": "",
+    "text": "A complete game of **Lucky Forward** includes:\n- Five map sheets: numbered from 1 to 5.\n- Eight **Lucky Forward** counter sheets (2240 counters).\n- Four **GOSS** Utility counter sheets (standard **GOSS** Markers) (1120 counters).\n- One **GOSS** Rules Booklet.\n- One **Lucky Forward** Scenario Booklet.\n- Two ten-sided dice.\n- Storage bags.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-2.0",
+    "section": "2.0",
+    "title": "Setting Up the Game",
+    "summary": "",
+    "text": "The five map sections have been designed so that they overlap each other when they are placed together. Each map is identified by a number one through five. Not all maps are used in each scenario. When placed together the roads and terrain features should align properly along the hexes on the edges of the maps. Place Map 3, then Map 2, then Map 1, then Map 4, then Map 5 and finally the Map 5 Kaiserslautern Extension.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-2.2",
+    "section": "2.2",
+    "title": "Setting up the Map & Pieces",
+    "summary": "",
+    "text": "The five map sections have been designed so that they overlap each other when they are placed together. Each map is identified by a number one through five. Not all maps are used in each scenario. When placed together the roads and terrain features should align properly along the hexes on the edges of the maps. Place Map 3, then Map 2, then Map 1, then Map 4, then Map 5 and finally the Map 5 Kaiserslautern Extension.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-3.0",
+    "section": "3.0",
+    "title": "The Game Turn",
+    "summary": "",
+    "text": "Use the **GOSS** standard sequence of play (GOSS 3.3.0).",
+    "crossRefs": [
+      "3.3.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-3.1.1",
+    "section": "3.1.1",
+    "title": "Game Turn Record Track",
+    "summary": "",
+    "text": "Each calendar day is shown as a GD. There are 103 GDs in **Lucky Forward**. Throughout the rules, a GD will be listed using the GD number.\n\n**Example:** September 5, 1944 will appear as GD 1.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-3.4",
+    "section": "3.4",
+    "title": "Extended Night Activity",
+    "summary": "",
+    "text": "Players may use ENA (GOSS 3.4.0) on or after GD 83.",
+    "crossRefs": [
+      "3.4.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-4.0",
+    "section": "4.0",
+    "title": "Unit Characteristics",
+    "summary": "",
+    "text": "",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-4.3.3",
+    "section": "4.3.3",
+    "title": "Static Class Units",
+    "summary": "",
+    "text": "Unless directed otherwise by scenario instructions, static Art and AT units may only be placed in any fort, West Wall (WW) or town/city hex adjacent to a WW hex.\n\n**Important:** Players cannot move static Art and AT units once placed on the map (GOSS 4.3.3) unless motorized by army TP.",
+    "crossRefs": [
+      "4.3.3"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-4.5.0",
+    "section": "4.5.0",
+    "title": "Green Divisions (optional)",
+    "summary": "",
+    "text": "US divisions arriving throughout the campaign were entering combat for the first time. If players use this rule the following divisions enter as Raw Divs:\n- 10th Arm Div\n- 14th Arm Div\n- 26th Inf Div\n- 44th Inf Div\n- 87th Inf Div\n- 95th Inf Div\n- 100th Inf Div",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-4.6.3",
+    "section": "4.6.3",
+    "title": "Rear Echelon Units",
+    "summary": "",
+    "text": "All fortress units (any type), MG Bn.'s, training (A&E) units, security (Sec) units, and police units are rear echelon units.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-4.6.3a",
+    "section": "4.6.3a",
+    "title": "Metz NCO Schools",
+    "summary": "",
+    "text": "The vSgr (three Bn.'s) and Wa NCO (two Bn.'s) Rgts were composed of first-rate soldiers who were being trained to become NCOs. As such, their loss in combat would not be proportional to any gain they could achieve.\n\n- These units cannot receive RePs nor may they be reconstituted if eliminated.\n- The Allied player receives 2VPs (as listed in the scenarios) for each step loss these units incur.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-7.0",
+    "section": "7.0",
+    "title": "Movement",
+    "summary": "",
+    "text": "",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-7.10.2b",
+    "section": "7.10.2b",
+    "title": "Fords Over Major Rivers",
+    "summary": "",
+    "text": "During any GT occurring during the month of Sept, fords over the Moselle River may be discovered and used by Allied units.\n\n- When an Allied unit moves adjacent to the Moselle River and occupies a hex that is within two hexes of a city or town hex, all Moselle River hexsides adjacent to that unit's hex may be checked for the existence of a ford (the hexside could contain an intact or destroyed bridge).\n- Roll 1d10 for each of the above hexsides. If the result is zero a ford is discovered (otherwise no effect). Place a ford marker in the hex to represent the ford.\n- Each Allied occupied hex may only discover one ford (i.e. if a ford is discovered in any adjacent hexside do not roll for any further fords adjacent to that hex).\n- Each hexside can only be checked one time. Players should either write down the hex numbers of the hexes that share the river hexside or mark them on the map.\n- A hexside cannot contain a ford if either hex sharing that hexside already has a discovered ford.\n- The ford may be used by Leg class units only (Mech class units cannot cross nor use the ford to attack across the river).\n- Leg supply paths may be traced across the ford (Mech supply paths may not be traced across a discovered ford).\n- Remove all discovered ford markers at the beginning of GD 27 (Oct 1). Do not make any further ford checks.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-7.13.0",
+    "section": "7.13.0",
+    "title": "Delay Markers",
+    "summary": "",
+    "text": "The German player is limited to a maximum of 12 delay markers on the map until GD 48, at which point this restriction is removed.\n\n- Starting GD 1 and continuing until the German player begins deploying mines (**LF** 7.13.4a) the German player may have a maximum of 12 delay markers on the map at any given time.\n- The nine delay markers placed at the beginning of the Sept scenario count towards this total.\n- Until **LF** 7.13.4 goes into effect delay markers may be placed in any type of MCT.\n- During Sept, delay markers are placed and removed using **GOSS** 7.13.1 and 7.13.3.",
+    "crossRefs": [
+      "7.13.1",
+      "7.13.3"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-7.13.4",
+    "section": "7.13.4",
+    "title": "Minefield (Delay) Markers",
+    "summary": "",
+    "text": "The latter half of the Lorraine campaign was punctuated by the extensive German usage of minefields. These minefields did not usually result in casualties that would be significant at the unit scale of **GOSS**, but the delay they imposed on advancing US forces was pronounced enough to warrant a game effect. The term minefield will be substituted for delay markers in this rules section, even though delay markers are used to indicate minefields.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-7.13.4a",
+    "section": "7.13.4a",
+    "title": "Minefield Deployment",
+    "summary": "",
+    "text": "The German player may begin placing minefields on GD 48 (AM GT). Follow the below procedures.\n\n**At Start:** When playing the Nov or Dec scenario, the German player places all minefield markers in the minefield pool and then randomly picks one minefield marker for each ET-3 that begins the game on the map.\n\n- Minefields are placed with their numerical side down. Neither side can examine the minefield value.\n- No more than one minefield can be placed in each hex.\n- Minefields must be setup adjacent to deployed ET-3 markers.\n- Up to two minefield markers may be deployed adjacent to each ET3. They may be placed in any type of terrain.\n- Minefields cannot be deployed in a hex containing an ET-3 or Fort counter.\n\n**Note:** *It is possible that more than two minefields could be placed adjacent to an ET-3, if the placement of the ET-3 are such that it would allow the placement of additional minefields.*\n\n**During Play:** The German player may lay mines during any German Construction Phase.\n\n- Mines may be laid in any hex not containing a Fort counter and not observed by Allied ground units.\n- When laying minefields, the Eng unit(s) are treated as being in an open hex for observation purposes (no matter the terrain).\n- Mine laying requires one full GT.\n\n**Example:** The German player places the minefield marker at the beginning of the German Construction Phase of the AM GT. During the German Construction Phase of the PM GT the mines are fully deployed.\n\n- During a lull, in the German AM Construction Phase, the German player may lay one minefield per GD for each divisional formation (GOSS 9.3.3) that is under full lull condition. This is automatic and does not require the use of Eng units or a PRC. An enemy ground unit cannot observe the placement hex, nor can the placement hex be adjacent to an enemy unit.\n\n**Important:** Friendly Mech units cannot enter a hex that has Eng units currently laying mines.\n\n**Important:** The German player cannot lay more minefields than the number of delay markers provided in the game.\n\n**Important:** The hex where the marker is placed cannot be observed by an Allied ground unit. At any other time during the construction period, the hex may be observed.\n\n- The hex must contain two Eng steps that are in GenS and not fatigued.\n- The player must conduct a PRC using the defensive PR of any one Eng unit laying the mines (player's choice).\n\n**Important:** Only one mine laying attempt can be made in each hex during a single GT.\n\n- If the Eng unit passes the PRC, the German player randomly picks one minefield marker from the pool and places it in the hex with a spade marker on top to indicate the minefield is in the process of being laid.",
+    "crossRefs": [
+      "9.3.3"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-7.13.4b",
+    "section": "7.13.4b",
+    "title": "Minefield Effects",
+    "summary": "",
+    "text": "All German units expend one additional MP to enter and exit a completed minefield hex. Minefields affect all Allied units as follows:\n\n- Allied units entering a minefield hex must immediately halt their movement or advance. Leader advance bonuses cannot be used to advance through a minefield.\n- Allied GenS can be traced into but not through a minefield hex. This does not preclude GenS to adjacent Allied units (GOSS 15.2.3).\n- When tracing a German GenS path, a minefield hex imposes one additional MP to enter and one additional MP to exit.\n- Allied units cannot leave a minefield hex until:\n  **a)** The minefield is cleared.\n  **b)** They retreat during their Attacker Adjustment Segment.\n  **c)** They retreat due to an enemy FS/GA.\n  However, they suffer the following penalties:\n  **FS:** The retreating unit must choose the option to take the first numerical hit as a step loss (GOSS 11.6.2a) and are considered to automatically fail their PR check in step 2.\n  **GA:** Units must hold the position (GOSS 13.10.4a) and automatically fail the PRC.\n- Allied units can move into a minefield hex in any mode (including PA).\n- Allied units currently in a minefield cannot be attack designated.\n- Allied units that advance into a minefield hex due to a FS mission result immediately remove their attack designation (they cannot conduct a GA that turn).\n- Allied units in a minefield cannot spot for any type of FS mission.\n- Allied Art units cannot enter a minefield hex while in-battery and cannot go in-battery while in a minefield hex.\n- Allied units in a minefield cannot conduct any type of construction.\n- Allied units in a minefield hex that are not attempting to clear the mines can retreat during a friendly Attacker Adjustment Segment even though they are not marked with a TAC assault or PA marker. The owning player makes one PRC using the offensive PR (use the unit with the lowest PR) for all units attempting to retreat from that hex.\n  **Pass:** The unit or stack may retreat one hex.\n  **Fail:** The unit or stack must remain in the hex.",
+    "crossRefs": [
+      "15.2.3",
+      "11.6.2a",
+      "13.10.4a"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-7.13.4c",
+    "section": "7.13.4c",
+    "title": "Clearing/Lifting Minefields",
+    "summary": "",
+    "text": "Minefields can only be removed from a hex by being cleared or lifted. An enemy minefield is cleared, while a friendly minefield is lifted. Ignore the delay marker removal procedures outlined in **GOSS** 7.13.3. Follow the below procedures for clearing/lifting minefields.\n\n**Clearing:** At the end of the Allied Attack Designation Segment, the Allied player may attempt to clear minefields. The hex containing the minefield must be occupied by:\n**a)** At least one step of an Inf or Eng type unit.\n**b)** Units clearing must be in GenS and not be fatigued.\n\n- If the above requirements are met, follow the below procedures:\n  **a)** If the Axis player cannot trace a LOS to the minefield hex, the Allied player automatically removes the minefield marker.\n  **b)** If an Axis unit can trace a LOS to the minefield hex, the Allied player selects one Allied Inf or Eng unit in the hex to be cleared and follows the below procedure:\n  **1)** Reveal the minefield marker and conduct a PRC applying the modifier on the marker.\n  **2)** Apply a -1 DRM for each Eng step in the hex.\n  **3)** If the unit conducting the PRC is in PA mode apply a -1 DRM.\n  **4)** If the unit passes the PRC the minefield marker is removed.\n  **5)** If the unit fails the PRC, the minefield marker remains in place and if the units in the hex are in PA mode the PA marker is removed. The units cannot then be designated with TA marker.\n\n**Important:** An unmodified mine clearance DR of 9 always fails.\n\n**Lifting:** The German player may remove a minefield using the reverse of the process used to create the minefield during play (7.13.4.a). The minefield marker is returned to the minefield pool.",
+    "crossRefs": [
+      "7.13.3"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-7.15.0",
+    "section": "7.15.0",
+    "title": "Railroad Movement",
+    "summary": "",
+    "text": "**Lucky Forward** contains German Art units marked with a \"R\" in place of their MA. These represent heavy railroad Art units. They are subject to the following special rules.\n\n- They may move up to 30 hexes along connected friendly controlled railroad hexes.\n- They only move during the Strat movement portion of the Movement Phase. Do not mark them with a Strat movement marker.\n- If forced to retreat for any reason, they are automatically eliminated.\n- They do not garner recycle points (GOSS 22.2.0) and once eliminated they may not be resurrected.",
+    "crossRefs": [
+      "22.2.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-8.0",
+    "section": "8.0",
+    "title": "Observation & Visibility",
+    "summary": "",
+    "text": "",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-8.1.2d",
+    "section": "8.1.2d",
+    "title": "High Vantage Points",
+    "summary": "",
+    "text": "In **Lucky Forward** high vantage points (HVP) are marked with the vantage point triangle and a red diamond below the VP symbol. Vantage Points in Rough-2 terrain provide even greater LOS range than normal VPs. See below for the possible VP/Terrain LOS combinations in **Lucky Forward**.\n\n- A VP, not in rough-2 terrain, has a LOS of 3.\n- Rough-2 terrain (without a VP symbol) has a LOS of 3.\n- An HVP (not in rough-2 terrain) has a LOS of 4 hexes.\n- Rough-2 terrain, with a VP, has a LOS of 5.\n- Rough-2 terrain, with an HVP has a LOS of 6.\n\nWhen determining blocking terrain, the above points are only blocked by terrain that has an equal or greater LOS range.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.0",
+    "section": "9.0",
+    "title": "Command",
+    "summary": "",
+    "text": "",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.6.2g",
+    "section": "9.6.2g",
+    "title": "German Pz Brigades",
+    "summary": "",
+    "text": "German Pz Bdes may not be attached to other formations, nor may individual units of a Pz Bde be detached and attached to another formation until the AM GT of GD 50.\n\n- Beginning GD 50, units of a Pz Bde may be used to rebuild and/or resurrect units assigned to Pz and PzG Divs that have been eliminated.\n  **a)** The receiving formation must be in refit (GOSS 22.4.0).\n  **b)** The units must be within 3 hexes of the receiving formation's HQ.\n  **c)** Each GD, two units from a Pz Bde may be used to replace eliminated units.\n  **d)** Each unit removed allows the receiving formation to receive the number of steps of the same type unit (ignore PR values) to rebuild or resurrect a unit assigned to the receiving formation. The steps garnered must be used immediately.\n- If all a Pz Bde's units have been removed or eliminated, the Bde HQ is immediately removed from the game and may not be rebuilt, this removal does not garner recycle steps.\n\n**Important:** Units assigned to a Pz Bde cannot receive any type of RePs, however they garner recycle steps normally (GOSS 22.2.0). If eliminated they are permanently removed from the game.",
+    "crossRefs": [
+      "22.4.0",
+      "22.2.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.10.0",
+    "section": "9.10.0",
+    "title": "Allied Command Restrictions",
+    "summary": "",
+    "text": "",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.10.1",
+    "section": "9.10.1",
+    "title": "Allied Armies",
+    "summary": "",
+    "text": "**Important:** See scenario instructions for GenS, logistical and command boundary information.\n\n**Important:** Do not track replacements or recycle steps by army. Each side maintains a total number of replacements and/or recycle steps. Players may use them to replace losses in any friendly army.\n\nThere are three Allied armies in the game; 1st, 3rd and 7th. The 3rd Army is the predominant Allied army.\n\n**1st and 7th US Armies:** Only those units of the US 1st and 7th Armies that were near the US 3rd Army are present in the game.\n\n- Both armies will always operate with separate logistic values listed in each scenario.\n- Players may not change the army boundary depicted on the set-up and game maps.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.10.2",
+    "section": "9.10.2",
+    "title": "US 83rd Inf Div",
+    "summary": "",
+    "text": "This division is a special case. It was given to 3rd Army for limited use. Bradley had stipulated that the division was not to be committed to heavy combat, as it was eventually going to be turned over to Hodges' 1st Army. Planning was underway to cross the Moselle River with it in a drive to clear the Saar Moselle Triangle. The day before the November offensive, Bradley withdrew the use of this division.\n\n- The 83rd Div arrives on GD 16 and may operate normally until the end of the Sept Scenario (GD 26) with the following restrictions:\n- **a)** It must be assigned to the XX Corps.\n- **b)** Attacks by units assigned and/or attached to the 83rd Div do not count towards the US assault training (**LF** 17.6.3c).\n- **c)** The division may not attack across or cross to the east side of the Moselle River.\n\n- If playing the Sep Extended or Campaign Scenarios, beginning the AM GT of GD 27 the 83rd Div deactivates. At that time, the 83rd Div must:\n- **a)** Immediately begin to move to a position to assume the northern most divisional position along the XX Corps front along the Moselle River.\n- **1)** Beginning at the 1st/3rd Army boundary line (blue dashed line on Map 1) all hexes on the western side of the Moselle must be occupied by or adjacent to a unit assigned or attached to the 83rd Div.\n- **2)** The Allied player is free to decide how far along the Moselle River the 83rd Div extends its front to the south.\n- **3)** If the area along this front is not clear of German units, the 83rd Div may operate normally to clear that area.\n\n**Important:** Beginning GD 28 the 83rd Div may not conduct GAs unless the Div is conducting operations as above.\n\n- **4)** Once the area to the west of the Moselle River is clear of German units, the 83rd Div must de-activate within two GDs.\n- **5)** The Allied player must rebuild and/or reconstitute all units of the 83rd Div (including the attached Tk Bn.) prior to using any RePs to replace other units.\n- **6)** No units may be detached from the Div while inactive and any assigned units detached while the Div is active must immediately be returned to the Div when the Div is deactivated.\n\n- If the Allied player fails to meet the above requirements, the Allied player must subtract 50 VP from the Allied total at the end of any scenario.\n\n- The Div must remain inactive unless one of the following occur:\n- **a)** German units conduct a GA against any units assigned to the 83rd Div. In this case, the 83rd Div is then activated and may operate without restriction.\n- **b)** The Allied player may activate the 83rd Div any time after GD 57. If the Allied player activates the division in this manner, subtract 50 victory points from the Allied total. If activated, it may operate without any restrictions.\n- **c)** If the German player does not maintain a continuous front against the 83rd Div, the Allied player may activate the division in a limited manner as follows:\n\n*Note: The game defines a continuous front as; having a German unit placed so that each frontline WW hex is either occupied or adjacent to a hex occupied by a German non-artillery/non-HQ unit.*\n\n- **1)** The division may operate normally between the northern boundary of 3rd Army and a line drawn from 1-4121 direct to 2-2321 then direct to 2-4927.\n- **2)** This activation does not incur the victory point penalty.\n- **3)** However, if the German player establishes a continuous frontline in the WW hexes to the east of the Saar River or the third belt of WW hexes starting in 2-2503, the Div may only advance to a point that its units are adjacent to that line and then must be de-activated until such time as the German player does not maintain a continuous frontline.\n- **4)** If the above occurs, the player may once again activate the 83rd with no victory point penalty. The division then remains active until the end of the Dec Scenario.",
+    "crossRefs": [
+      "17.6.3c"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.10.3",
+    "section": "9.10.3",
+    "title": "German Armies",
+    "summary": "",
+    "text": "**Important:** See scenario instructions for GenS, logistical and command boundary information.\n\nThe Germans had up to four different armies (1st, 7th, 5th Pz and 19th) operating on the map during the campaign.\n\n- The 1st Army is the predominant army for the game.\n- The 5th Pz Army arrives on GD 8 and is withdrawn on GD 46. While on the map the 5th Pz Army's ZOP is created out of part of the 1st Army ZOP.\n\n**7th & 19th Armies:** Only those units of the German 7th and 19th Armies that were near the German 1st Army are present in the game.\n- Both armies will always operate with separate logistic values listed in each scenario.\n- Players may not change army boundaries depicted on the set-up and game maps unless scenario rules state otherwise.\n- Players may not reassign formations and units to and from the 7th or 19th Armies unless scenario instructions state otherwise.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.10.4",
+    "section": "9.10.4",
+    "title": "Fort & Fort Unit Command",
+    "summary": "",
+    "text": "At the beginning of any scenario that includes Metz forts as part of the set-up, the German player must designate a formation HQ as the Metz *Festung* HQ. In addition to the HQ's assigned units, that HQ treats the below units as assigned units:\n- **a)** Any number of forts and fort designated units (those with Fort in their unit ID), and,\n- **b)** All fort Art units in Metz forts; and,\n- **c)** All Metz garrison units (units with the yellow stripe).\n\n- The HQ may not attach additional units (**GOSS** 9.6.1).\n- Units assigned to the Metz *Festung* HQ, may not be assigned or attached to other formations.\n\n**Exception:** *The German player must assign the two forts near Thionville (Illange and G.F. Koenigs) to a single formation HQ which may be different than the formation HQ designated as the Metz Festung HQ.*\n\n- The above units operate as part of the designated HQ and are not subject to the following:\n- **a)** They do not suffer the multi-formation penalty when stacked with the HQ's assigned units.\n- **b)** Forts and fort Art may spot for FS missions as if attached to the designated HQ.",
+    "crossRefs": [
+      "9.6.1"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.11.0",
+    "section": "9.11.0",
+    "title": "Command Boundary Garrisons",
+    "summary": "",
+    "text": "Players may not modify Army boundaries unless scenario instructions state otherwise. In game terms, this would create non-historical situations as each army advances. To preclude players from ignoring army open flanks the following garrison rules are in effect in all scenarios and the campaign game.\n\n- At the beginning of each player's GT, each army must determine if it has an open flank with an adjacent enemy army. A road hex meeting all criteria outlined below is an open flank hex.\n- **1)** A primary or secondary road hex that is on the army boundary and passes into an enemy army's ZOP behind that enemy army's frontline; and,\n- **2)** That hex is greater than 6 Mech MP from the nearest friendly unit that is adjacent to an enemy unit (on the frontline); and,\n- **3)** That hex is more than two hexes from a friendly non-headquarters/non-Art unit.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.11.1",
+    "section": "9.11.1",
+    "title": "US Army Boundaries",
+    "summary": "",
+    "text": "**US 1st Army/3rd Army:** Garrison requirements are in place while the 1st Army is active (GD 1 to GD 25).\n\n**US 3rd Army/7th Army (XV Corps):** Garrison requirements are in effect at the beginning of GD 9 and continue until the end of the Dec scenario or campaign game.\n\n**Important:** *Even though XV Corps is assigned to the 3rd Army for the Sept scenario, the Allied player must treat the future 7th Army boundary as if it were in play because higher command was already making plans to transfer XV Corps to 7th Army.*",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.11.2",
+    "section": "9.11.2",
+    "title": "German Army Boundaries",
+    "summary": "",
+    "text": "**German 7th Army/1st Army Boundary:** German Garrison requirements are only in place while 7th Army is active (GD 1 to GD 25).\n\n**German 1st or 5th Pz Army/19th Army:** Garrison requirements are in place throughout all scenarios and the campaign game.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.11.3",
+    "section": "9.11.3",
+    "title": "Garrison Requirements",
+    "summary": "",
+    "text": "- If a player's units have advanced to a point where they create an open flank hex, that army must garrison all open flank secondary and primary road hexes within one GT of the open hex being created.\n- Armies must garrison each open flank secondary and primary road hex with a minimum of two steps of any non-headquarters/non-artillery unit. Each step of Recon (any type) counts as two steps for garrison purposes.\n- Garrison units must be placed within two hexes of the enemy army boundary and within two hexes of the open flank hex.\n- The distance between each garrison unit and/or a qualifying front line unit can be no more than 10 hexes. This requirement may mean that additional garrison units are required.\n- Mark all garrison units with a spade marker, a garrison cannot move unless:\n- **1)** The garrison unit is attacked (FS or GA); or,\n- **2)** The frontline has moved so that the hex it is garrisoning is no longer an open flank hex.\n- Garrison units can be replaced by other units. Once the new garrison unit is in place, the original garrison unit may move normally.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-9.11.4",
+    "section": "9.11.4",
+    "title": "Failure to Garrison Penalty",
+    "summary": "",
+    "text": "If, at the end of the Command Phase, either side has not met the above garrison requirement, the opposing player selects the number of infantry steps from the closest available unit(s) (units can be broken down) to meet the garrison requirement. Once selected the owning player places those steps within the open boundary to meet the garrison requirements.\n\n**Important:** *Players must manage their army flanks. They are not allowed to send deep penetrations into enemy territory without having to make provisions to deal with potential counterattack threats from adjacent enemy armies. This rule allows individual corps/divisions of an army to outpace each other as long as they are solely within the players army's ZOP and not creating an open flank with an enemy army's ZOP. Likewise, players may not ignore deep enemy penetrations which threaten an army's flank.*",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-15.0",
+    "section": "15.0",
+    "title": "Supply",
+    "summary": "",
+    "text": "See Scenario instructions for PSS and GenS procedures for both the Allied and German side.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-15.5.3",
+    "section": "15.5.3",
+    "title": "German City OhS",
+    "summary": "",
+    "text": "Any city that meets all the following requirements can be a source of OhS for the German side:\n- **a)** It began the scenario in German control; and,\n- **b)** It cannot trace a GenS path of any length to any primary road hex on the eastern edge of map two, three or five; and,\n- **c)** Consists of at least three city hexes.\n\n- If a city meets these requirements in a friendly Administrative Phase, the city has six OhS points and two FP that the player may distribute to any HQ(s) that can trace an OhS supply path to at least one of the three required city hexes.\n- The player must use the city FP prior to any conversion of other OhS to FP (**GOSS** 15.5.1a).\n- Other than the above, treat city OhS and FP garnered from conversion as per **GOSS** 15.5.0.\n- The city OhS points are in addition to the HQ OhS points received per **GOSS** 15.5.1b.\n- If an OhS city can, in any Supply Determination Segment, once again trace GenS as per b) above, all stockpiles OhS and FP are lost and if in a subsequent GT it is found to meet the requirement above, it may once again garner and use city OhS.",
+    "crossRefs": [
+      "15.5.1a",
+      "15.5.0",
+      "15.5.1b"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-15.9.0a",
+    "section": "15.9.0a",
+    "title": "Major River Bridgeheads",
+    "summary": "",
+    "text": "Players may not place bridgehead markers in a hex occupied by a Metz fort.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-16.0",
+    "section": "16.0",
+    "title": "Logistics & Trucks",
+    "summary": "",
+    "text": "See Scenario instructions for logistic procedures for both the Allied and German side.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-16.4.1a",
+    "section": "16.4.1a",
+    "title": "Fuhrer Ammo/Fuel Reserve",
+    "summary": "",
+    "text": "Hitler had special stocks of ammo and fuel being set aside for the Ardennes Offensive. Had the Allies threatened to breakthrough, he would (and did to a minor extent) have released these stocks to halt them. Starting with GD 58 (Nov 1), the German player may call on this reserve. There is a total of 12 AmP and 12 FP available in the reserve. Drawn AmP and FP are added to the 1st Army stockpiles at the beginning of the Joint Logistic Phase.\n\n- For each AmP drawn from the reserve, the Allied player receives one victory point.\n- For each FP drawn from the reserve, the Allied player receives two victory points.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-16.5.0",
+    "section": "16.5.0",
+    "title": "Fuel & Reinforcements",
+    "summary": "",
+    "text": "If scenario instructions specify that reinforcements enter in a low or no fuel state, then all reinforcement units/sub-formations/formations must roll their fuel value as listed below. Reinforcements must always use option 1 in **GOSS** 16.4.5b.\n\n- **a)** Use the current army and/or corps HQ fuel value for all corps/army asset units arriving in the corps/army's ZOP.\n- **b)** If a formation has assigned units on the map, any additional units arriving as reinforcements on the current GD arrive with the fuel value of the units on the map.\n- **c)** If an arriving formation does not already have units on the map, the player must determine the fuel value for the formation.",
+    "crossRefs": [
+      "16.4.5b"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.0",
+    "section": "17.0",
+    "title": "Engineers & Defensive Works",
+    "summary": "",
+    "text": "",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.3.1c",
+    "section": "17.3.1c",
+    "title": "German Heavy Bridges",
+    "summary": "",
+    "text": "**a)** If a German Hvy bridge(s) is not stacked with another type of German unit and it is the subject of Allied GA, it is automatically captured (eliminated). The maximum number of constructed bridges (**LF** 17.3.1d) is affected as follows:\n- **1)** The Allied player increases the Allied bridge construction limit by two for each Hvy bridge unit captured.\n- **2)** The German player reduces the German bridge construction limit by one for each Hvy bridge unit captured by the Allied side.\n\n**b)** If a Hvy bridge(s) unit is stacked with another German unit that defends in a GA, the Hvy bridge unit must suffer the first mandatory step loss (if any) suffered by that stack. In this case the German side suffers the same penalty as above, however the Allied side does not gain an increase to the Allied bridge construction limit.\n\n**c)** In both \"a\" and \"b\" the Allied player also receives one victory point for each Hvy bridge unit captured or eliminated.\n\n**Important:** *If the German player moves a Hvy bridge unit off the map, the bridge unit is considered abandoned and counts as captured with the effects defined in case a) and c) above.*",
+    "crossRefs": [
+      "17.3.1d"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.3.1d",
+    "section": "17.3.1d",
+    "title": "Bridge Construction Limit",
+    "summary": "",
+    "text": "Both sides have a limited capability to build or repair bridges.\n- Sept thru Oct (GT 1 through GT 57), the Allies may build and/or repair a maximum of 10 bridges.\n- GT 1 through GT 102, the Germans may build and/or repair a maximum of six bridges.\n\n**Important:** *Bridges built or repaired by German heavy bridging units do not count against the German total.*\n\n- Demolished or collapsed bridges over any type of river that have been repaired count as one-half a bridge.\n- Bridges built across a river where a bridge did not exist (not noted on the map) count as one bridge.\n- Bridges built across a major river where a bridge did not exist (not noted on the map) count as two bridges.\n\n**Important:** *Both sides should keep a side record of the number of bridges built during their side's limited capacity period. Players may, at the end of a friendly Construction Phase freely remove any placed bridge marker (place a bridge destroyed marker on a previously repaired bridge). That previously placed bridge no longer counts against that side's total bridge construction limit.*\n\n*Design Note: At this stage of the campaign, both sides had only limited bridging materials in the campaign operational area. Third Army would eventually build up enough bridging stock to alleviate this problem for its November offensive.*",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.3.3c",
+    "section": "17.3.3c",
+    "title": "German ET-3",
+    "summary": "",
+    "text": "Beginning Oct 1, GD 27 or (if playing the scenarios) on the first GD of the Nov and Dec scenarios, the German side may replace one ET-2 with an ET-3 on every other GD.\n\n**Important:** *If an ET-3 is not placed during an eligible GD, that ET-3 may not be placed (i.e., you cannot bank unused ET-3).*\n\n- During a friendly Construction Phase the German player may replace a completed ET-2 marker with an under-construction ET-3 marker if:\n- **1)** The hex is in GenS and contains a village, town or city; and,\n- **2)** Two Eng steps are present in the hex.\n\n- In the next friendly Construction Phase, the ET-3 is flipped to its constructed side.\n- Quick construction may not be used. All other rules pertaining to the construction of ETs apply.\n- ET-3s may be recycled. During a friendly Construction Phase, the German player may remove an ET-3 that is on the map. The marker is available in the next friendly Construction Phase. The removed ET-3 marker may be replaced with an ET-2, or just removed.\n- The number of ET-3 allowed on the map at any one time is limited to the **Lucky Forward** counter mix (24).",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.5.0",
+    "section": "17.5.0",
+    "title": "West Wall Fortified Areas",
+    "summary": "",
+    "text": "Due to years of neglect, the Westwall was not battle-ready early in September.\n\n- On GD 1 and continuing until the end of GD 7 German defending units only receive one left shift when defending against GA in a WW hex.\n- Beginning GD 8 and continuing until the end of GD 15 German defending units only receive 2 left shifts when defending against GA in a WW hex.\n- On GD 16 and through the end of any scenario, German defending units receive the full three left shifts when defending against GA.\n- WW hexes remain subject to the -7 Ft Area FS DRM on all GDs.\n- All WW hexes are intact (even those in hexes west of the German front line on GD 1).",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.5.1",
+    "section": "17.5.1",
+    "title": "Bitche Forts",
+    "summary": "",
+    "text": "The immediate area around Bitche (5-2330) featured a fort complex that was originally part of the Maginot line. The Germans refurbished these facilities and they proved tough to crack, although not as difficult as the Metz fortifications.\n\n- Prior to starting play in any scenario, the Bitche Forts are placed on the map and are functional.\n- Place the Bitche forts (name side showing) in the hex numbers as noted on the back of the counters.\n- **Ft Sim.:** 5-2129  **Ft Hohen.:** 5-2929\n- **Ft Schl.:** 5-2329  **Bitche:** 5-2630\n- **Ft Otterb.:** 5-2429\n\n- The Bitche forts do not need to remain occupied by friendly units to remain on the map. They have an inherent garrison and all movement halt requirements for enemy units remain in effect.\n- Bitche forts do not contain inherent artillery.\n- An Allied unit cannot move into an unoccupied Bitche fort. Bitche forts must be eliminated by a GA or FS mission. An unoccupied Bitche fort that is the subject of a GA has a defense strength equal to its current number of steps and a defensive PR of 4.\n- Each Bitche fort confers the number of GA shifts and DW FS DRMs equal to the number shown on the counter (even if unoccupied).\n- Any type of unit(s) may be placed in a Bitche fort. If a Bitche fort is occupied by any German unit(s), the German player can select one of those units as the lead PR unit.\n\n**Important:** *Bitche forts are treated as FW for all stacking purposes and other than the above listed properties are treated as an ET-2.*\n\n- When a Bitche fort is the subject of a GA or FS, all step losses must be taken from the fort, prior to applying any step losses to units in the fort. Each step loss reduces the fort by one factor (use step loss markers to show losses).\n\n**Important:** *The German player ignores discretionary hits, until the Bitche fort has been destroyed. If a fort is eliminated and there are mandatory and or discretionary hits remaining, they are then treated normally.*\n\n**Example:** Ft Sim is at full strength (4) and suffers one step loss. The German player would place an ace of spades marker under the fort to denote it has taken one step loss. If the fort suffered a second step loss, remove the ace of spade marker and the fort would be flipped to show a strength of 2.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.0",
+    "section": "17.6.0",
+    "title": "Metz Forts",
+    "summary": "",
+    "text": "Unlike other games in the series, **Lucky Forward** includes a major fortress complex unlike any other seen in WW2. These are the forts and fortresses of the Metz-Thionville complex. In the game, Fort markers come in three classes:\n- **Class A** (the strongest)\n- **Class B**\n- **Class C** (the weakest)\n\n- Each marker may represent more than one fort in the same area that has been abstracted into others for ease of play. All **GOSS** rules applying to forts, including movement halts and adjacent movement apply unless stated otherwise in the following rules.\n- Class A forts are those forts with a solid hexagon icon on their counter. These forts have a defensive PR of 8.\n- Class B forts are those with only the hexagon outline. Class B forts have a defensive PR of 7.\n- Class C forts use a variation of the entrenchment icon but is printed in black on a red field. Class C forts have a defensive PR of 6.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.1",
+    "section": "17.6.1",
+    "title": "Metz Fort Placement",
+    "summary": "",
+    "text": "The fort markers are placed on the map according to the hex numbers appearing on the backs of their counters and on the Fort Track. Blue ace of spade markers are used on the Fort Track to record the actual strength of the forts.\n\n- Each numbered box on a fort's track represents one step.\n- As steps are gained or lost, move the marker into the appropriate strength box.\n- When starting with the Sept scenario, the fort strength markers begin in the numbered boxes that contain the red square beneath the strength numbers on their tracks. In all other scenarios all forts start at full strength unless specifically noted in scenario rules.\n- Beginning on GD 7 and every six days thereafter, during the Joint Logistics Phase (Replacement Point Segment) move the strength marker for each fort up one box (to a higher strength) if there is no US unit occupying the fort's hex. Once the strength marker reaches the box with the fort's icon, it can no longer be moved to a greater number.\n\n**Example:** Forts may increase their steps on GD 7, GD 13 & GD 19.\n\n- If a fort incurs a hit prior to reaching its maximum strength, place a red ace of spade marker in the fort's box showing the icon (the maximum strength of the fort). Move the marker to the next lower box each time it receives an additional hit until the red marker is in the same box as the blue marker. That box signifies the maximum strength of the damaged fort. Remove the red marker at that time and then use the blue marker to record additional losses.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.2",
+    "section": "17.6.2",
+    "title": "Stacking",
+    "summary": "",
+    "text": "German units in a hex with a fort may be inside or outside of the fort.\n\n**Important:** Only Leg class or Static units may be inside a fort. Mech units in a hex containing a fort must be stacked outside the fort unless dismounted.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.2a",
+    "section": "17.6.2a",
+    "title": "Inside the Metz Fort",
+    "summary": "",
+    "text": "Units that are in the fort may be placed on the Fort Track in the appropriate fort box or simply placed under the fort marker.\n\n- There is no cost in MP to move into or out of a fort.\n- Units stacked in a fort do not count against maximum stacking limits for units in the hex outside the fort, however both (those inside and those outside) do count for FS mission density purposes (GOSS 11.5.4).\n- Forts with a current strength of four or more may contain up to six steps of leg type units.\n- Forts with a current strength of three or less can contain up to three steps of leg type units.\n- Static fortress Art units can be placed in a fort.\n  **a)** Only one fortress Art unit can be placed in each fort.\n  **b)** Each fortress Art step counts as two leg steps when determining stacking within the fort.\n- If the fort's strength falls below the number of units currently inside the fort, then the owning player must place those excess SP outside the fort. This may cause the hex to become overstacked.\n\n**Exception:** If a fort contains a fortress Art unit and is reduced to one step, the fortress Art unit must be eliminated.\n\n- Units inside the fort and the fort itself cannot be subjected to GA, unless there are no friendly units outside the fort.\n- Units inside the fort and the fort itself are not affected nor do they participate when friendly units outside the fort participate in a GA (either offensively or defensively).",
+    "crossRefs": [
+      "11.5.4"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.2b",
+    "section": "17.6.2b",
+    "title": "Outside the Metz Fort",
+    "summary": "",
+    "text": "Normal stacking limits apply outside the fort. Units inside the fort do not count against the normal **GOSS** stacking limits. If subject to a GA that results in a retreat, units stacked outside the fort may retreat into the fort, however, fort stacking restrictions (LF 17.6.2a) still apply. If all units that were outside the fort can retreat and do retreat into the fort, this in-hex retreat resolves all discretionary hits taken as a retreat.",
+    "crossRefs": [
+      "17.6.2a"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.3",
+    "section": "17.6.3",
+    "title": "Special Metz Fort Rules",
+    "summary": "",
+    "text": "Due to the nature of the forts depicted in **LF**, the following rules apply.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.3a",
+    "section": "17.6.3a",
+    "title": "FS Missions & Metz Forts",
+    "summary": "",
+    "text": "German units inside and outside the fort must be attacked separately. For FS mission targeting purposes, the units inside (and the fort) and units outside are considered to occupy separate hexes. However, **GOSS** 11.5.4, unit density always applies to all units in the hex.\n\n**Important:** Forts themselves do not count for density purposes.\n\n- When conducting an FS mission against a fort hex, the Allied player must declare if the mission is against the fort and any units inside or against those units outside the fort.\n- **GOSS** 11.4.1f does not apply. All FS numerical hits against forts and the units inside the fort, are converted to AS hits. Maximum of two AS hits still applies.\n\n**Exception:**\n  **a)** If at least one heavy Art unit participated in the FS mission; and,\n  **b)** The volley strength was 8; and,\n  **c)** If at least one un-modified DR of 9 is rolled (no matter the number of volleys or even if total the number of DRMs would automatically preclude any result).\n- Then one step loss is applied to the fort in addition to any AS results obtained. A maximum of one step loss may be applied in this manner no matter how many original DR of nine are rolled during a qualified FS mission/volley.\n- When determining FS mission capacity (GOSS 11.2.4) treat an unoccupied Metz fort to be occupied by a Bn.\n- When conducting a FS mission against a Fort hex containing both a Fort (including units in the Fort) and Allied units:\n  **a)** Allied units in the fort hex automatically qualify as an observer for an Allied heavy capacity FS mission, no matter their current mode or unit size.\n\n**Important:** Allied units in a fort hex are always able to observe the fort, no matter the terrain, or if the Allied units are attack designated or not.\n\n  **b)** The Allied units are ignored when determining FS mission DRMs (they cannot be targeted nor are they affected by any Allied FS mission.\n  **c)** The Fort or units within the Fort automatically qualify as an observer for a heavy capacity FS mission.\n  **d)** German FS missions do not effect Forts and units within the Fort, nor do they count when determining FS mission DRMs.\n  **e)** GS support missions cannot be conducted into hexes containing both Allied units and German Fort counters.",
+    "crossRefs": [
+      "11.5.4",
+      "11.4.1f",
+      "11.2.4"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.3b",
+    "section": "17.6.3b",
+    "title": "GA Against Metz Forts",
+    "summary": "",
+    "text": "Units outside a fort can be assaulted normally (they do not receive any benefits from the fort). If units outside a fort retreat, the attackers cannot advance into the fort hex even if there are no German units in the fort.\n\n- To conduct a GA against a fort (and the units inside the fort), there cannot be any German units outside the fort in the hex.\n- Allied units attempting to conduct a GA against a fort, must be in PA mode and must start the Movement Phase in the same hex or in an adjacent hex to the fort.\n- Once in the fort hex, they may remain there until voluntarily or involuntarily moved away.\n  **a)** Allied units moving out of a fort hex may only move one hex (into an adjacent hex) and then must halt their movement. This is an exception to **GOSS** (7.9.0).\n  **b)** Allied units may only exit an intact fort hex using tactical non-road movement.\n  **c)** When leaving a hex with a fort, the hex entered may not be adjacent to any other fort.\n- Allied units may not conduct a GA against a fort and units inside a fort, unless stacked in the same hex as the fort. Units in adjacent hexes may not participate in this GA.\n- After all FS missions and Allied attack adjustments and if there are no German units stacked outside the fort, Allied units in PA mode may enter the fort's hex. Allied stacking is not affected by the fort or units inside the fort, however Allied stacking is limited to the standard stacking limits for the terrain in the hex.\n- The defense strength of a fort is equal to its current strength plus the defensive strength of all units in the fort.\n- Ignore all discretionary hits on the fort and units in the fort.\n- Mandatory hits affect the fort and then the units in the fort as follows:\n  **1)** The German player must take all mandatory hits (Max step loss does not apply) against the fort itself until:\n\n**Important:** Each mandatory hit reduces the fort's strength by one. Adjust the fort's marker on the track accordingly.\n\n  **a)** The number of units in the fort exceeds the fort's current stacking strength (LF 17.6.2a), or;\n  **b)** The fort is eliminated.\n  **2)** In either of the above, remaining mandatory hits (if any) are taken against the units in the fort. Max step loss applies (GOSS 4.2.1a).\n  **3)** If, after \"1\" and \"2\" above are completed and the fort stacking is still exceeded or the fort has been eliminated, the units in the fort must immediately conduct a PRC. The +1 to PR value applies even if the fort was eliminated.\n  **Pass:** Units exceeding the current fort stacking must retreat one hex. If the fort was eliminated all units in the fort must retreat. This retreat is subject to all the restrictions and penalties due to terrain and adjacent enemy units.\n\n**Exception:** Enemy units in the fort hex are not considered for this purpose.\n\n  If all hexes adjacent to the fort's hex are enemy occupied all retreating units are eliminated (surrender).\n\n**Important:** Surrendered units are treated as isolated units. They do not generate recycle steps and pay extra RePs to resurrect.\n\n  **Fail:** All units greater than the current fort stacking are eliminated. If the fort was eliminated all units that were in the fort are eliminated (surrender).\n- Allied units that are forced to retreat or voluntarily retreat are subject to **GOSS** (11.6.3c).\n- When conducting a GA against a fort, Allied units cannot advance after combat even if the fort and all German units in the fort are eliminated. Ldr advance bonuses do not apply.\n\n**Important:** Treat all hexes adjacent to a fort as open terrain to the fort (for all purposes) when conducting a retreat out of a fort hex.\n\n- GAs against a fort are conducted without using modifications for the following:\n  **Attacker armor bonuses:** The attacker cannot receive armor bonuses; however, the defender may use AT bonuses against attacking armor.\n\n**Exception:** If the US side has at least one step of M36 TDs participating, he receives a minimum of one bonus if none of the German units in the fort have an AT value.\n\n  **RIB, CR, and Leaders:** Neither side receives any of these modifications or bonuses.\n  **PR:** A maximum of one PR bonus may be applied to either side.\n  **Engineers:** During the entire month of September, Eng bonuses do not apply (attacker or defender). See LF 17.6.3c for effect of assault training.\n  **Defender Shifts:** A fort does not receive adjacent defender shifts. All other applicable defender shifts do apply.",
+    "crossRefs": [
+      "7.9.0",
+      "17.6.2a",
+      "4.2.1a",
+      "11.6.3c",
+      "17.6.3c"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.3c",
+    "section": "17.6.3c",
+    "title": "US Assault Training",
+    "summary": "",
+    "text": "The Metz Fort complex was a uniquely challenging assault problem. The Allied player can gain experience over time to enable his Eng units to earn the ability to gain combat shifts, and even train Leg Inf units to temporarily utilize Eng combat abilities.\n\n- Immediately after the completion of each GA against a fort (no matter the result), move the US fort attack marker one box higher on the US Fort Attack Track.\n- If the marker is moved into a red box (with a DR value) and at least one Eng step participated in the attack, roll 1d10.\n  **a)** If the result is less than the number shown in the box, the Allied player receives the ability to gain one engineering combat shift.\n\n**Important:** In the 4 Box, if the result is less than or equal to 1, move the marker one box to the right. All other red boxes require a DR less than the printed number.\n\n  **b)** If the DR is equal to or greater than the box number, the marker is immediately moved one box lower until another GA is made against a fort.\n  **c)** If the marker moved into a red box and no Eng step participated immediately move the marker one box lower.\n- Training checks can be made for every eligible GA during a GT at which time the Allied player makes another attempt to increase his level of training.\n- Additional shift gains on the Fort Attack Track are immediately available.\n- Each shift requires the presence of one Eng/ranger step. A maximum of five shifts can be gained subject to the number allowed on the US Fort Attack Track.\n\n**Important:** This is an exception to **GOSS** (13.7.3, m) in that the US may count multiple Eng steps in the stack attacking the fort to possibly not only negate the fort's defensive shifts but actually achieve a net positive number of shifts depending on the number of Eng steps involved in the attack.",
+    "crossRefs": [
+      "13.7.3"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.3d",
+    "section": "17.6.3d",
+    "title": "Allied Divisional Assault Training",
+    "summary": "",
+    "text": "After five available Eng shifts have been achieved on the US Fort Attack Track the Allied player may begin training Leg class Inf steps as combat Eng steps by conducting Fort assault training for a Div.\n\n- Once divisional training is complete, all that division's assigned Leg class Inf steps are treated as combat Eng for the purposes of assaulting forts.\n- To train an Allied Div, it must be an Inf Div that has two Inf Bn.'s in CR for a minimum of 18 GTs.\n- Any number of Allied Inf Divs may conduct training at the same time.\n- If the units marked as CR are attacked or used to modify any GA, the training cycle is interrupted until the CR requirement is met again, although any GTs of training already completed still count.\n- In addition to the above, if the US player initiates a lull (LF 24.0), at the end of the lull, for every six (round down) GDs that the lull lasted, he may designate one Div as fort assault trained. When using this rule, there is no requirement for units to be in CR, however the Div cannot be voluntarily active during the lull (GOSS 24.2.0).\n- An assault trained Div loses its assault training capabilities 15 GDs after any unit assigned to the Div takes part in an offensive GA.\n\n**Designer's Note:** There are not enough survivors of combat left to consider the division specially assault trained anymore.",
+    "crossRefs": [
+      "24.2.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.3e",
+    "section": "17.6.3e",
+    "title": "Metz Fort Artillery",
+    "summary": "",
+    "text": "German Metz forts possess an inherent Art strength. They function like Art units.\n\n**Exception:** Bitche forts do not contain inherent Art.\n\n**Important:** If a fort (and the units in the fort) are isolated (LF 17.6.3f), that fort may only fire its Art against enemy units that are in the same hex assaulting that fort. The fort may not fire at any other hex, although if there is a fort Art unit in the fort, that unit may fire normally.\n\n**Ammo Depletion:** A fort and any fortress Art unit in the fort do not check for ammo depletion and may not be marked AD even if they fired with non-fort Art units in an FS mission, unless they are in fort supply (LF 17.6.3f).\n\n**Intensive Fire:** Forts and fortress Art in a fort cannot use intensive fire.\n\n**Range:** Range of all fort Art is three hexes. For observation purposes only:\n  **a)** A fort can always observe enemy units in the fort's own hex. This even applies during night GTs and if fog is present in the fort's hex.\n  **b)** A fort can always observe enemy units in hexes adjacent to the fort itself, regardless of terrain/FW.\n\n**Exception:** During night GTs or if fog is present in an adjacent hex normal observation rules are in effect.\n\n**Important:** This observation capability does not affect FS mission DRMs for group A and B (GOSS 11.5.1 & 11.5.2).\n\n**Spotting Restrictions:** German static fortress Art units are considered attached to the nearest formation HQ when determining formation requirements for spotting FS missions (GOSS 11.2.5). For all other purposes they are considered corps/army assets.\n\n**Important:** Forts and static Art units that are assigned to the Metz Festung HQ (LF 9.10.4) may spot for FS missions as if they were divisional units of that HQ.\n\n**Barrage Strength:** The Art strength of a fort is equal to the number of steps it currently possesses. Forts may participate in an FS mission with other Art units and other forts within range.\n\n**FS Target Restrictions:** Fortress Art units that are stacked in a fort, and who conduct a FS mission must fire at the same target as the fort (if the fort is firing).\n- If they do conduct a FS mission in conjunction with the fort, they use their printed barrage strengths.\n- If the fort is not conducting a FS mission they may fire separately, however their printed barrage strength is halved (round up).\n- Forts and fortress Art can conduct FS missions against enemy units in their hex.\n\n**Important:** If an Allied unit is in the fort hex, the fort and any fortress Art unit in the fort, can only conduct FS missions against the Allied units in the fort hex.",
+    "crossRefs": [
+      "17.6.3f",
+      "11.5.1",
+      "11.5.2",
+      "11.2.5",
+      "9.10.4"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.3f",
+    "section": "17.6.3f",
+    "title": "Metz Fort Supply",
+    "summary": "",
+    "text": "If a fort cannot trace GenS in accordance with **GOSS** 15.2.0 the fort may attempt to trace fort supply using the below rules.\n\n- Fort supply is determined in the Supply Determination Segment of a friendly Administrative Phase.\n- Forts and units inside the fort may trace a fort supply path no longer than ten hexes to either Metz (any city hex) or Thionville (any hex east of the Moselle).\n\n**Important:** This path is in hexes, not MP. The path cannot:\n  **1)** Cross an unbridged Moselle River hexside.\n  **2)** Be traced into or through an enemy occupied hex.\n  **3)** Be traced through a hex adjacent to an enemy unit unless that hex is MCT.\n\n- If tracing to a Metz hex, that hex does not need to be able to trace a GenS path to a PSS.\n- If tracing to a Thionville hex, that hex must be able to trace a GenS path to PSS of any length.\n- A fort cannot trace GenS or fort supply if there are Allied units in the fort hex, and there are no German non-fort units adjacent to the fort hex.\n- If the fort can trace the above path it is in fort supply.\n- Forts and the units in forts tracing supply using a fort supply path are affected as follows:\n  **a)** Attack strength is quartered.\n  **b)** Defense strength is unaffected.\n  **c)** ADV of the forts and Art units in the forts is equal to the current strength of the fort.\n- If a fort is unable to trace a GenS path or a fort supply path, the fort and units in the fort are isolated and must use the below OhS procedure.",
+    "crossRefs": [
+      "15.2.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.3g",
+    "section": "17.6.3g",
+    "title": "Metz Fort Surrender",
+    "summary": "",
+    "text": "Isolated forts (including the units in the fort) that have expended all their fort OhS points and are adjacent to an Allied unit must check for surrender (PR check) at the beginning of the Surrender Segment of the AM Command Phase.\n\n**Important:** **GOSS** 15.7.1 DRM apply.\n\n- If there are no units in the fort, use the fort's current strength as the fort's PR for the surrender check.\n- If there are units in the fort, the German may (his choice) use the offensive PR of any unit in the fort as the fort's PR for the surrender check.\n- If the fort passes the surrender check there is no effect.\n- If the fort fails the surrender check the fort or one of the units in the fort must take one step loss.\n- When the fort's strength is reduced to zero, the fort and any units remaining in the fort are eliminated.",
+    "crossRefs": [
+      "15.7.1"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.3h",
+    "section": "17.6.3h",
+    "title": "German Units in a Fort",
+    "summary": "",
+    "text": "German units inside a fort cannot move out of the fort if there are Allied units in the hex.\n\n- They may exit the fort to conduct ground assault against Allied units outside the fort. In this case they would remain in the hex and be marked with a PA marker.\n- German units in adjacent hexes can participate in the GA normally.\n- If the Allied units are eliminated or retreated out of the hex, units that exited the fort may advance after combat out of the fort hex.\n- If all Allied units have not exited the fort hex, the German units in the hex must immediately withdraw into the Fort. This withdrawal satisfies all discretionary hits.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.3i",
+    "section": "17.6.3i",
+    "title": "Allied Units in Metz Fort Hex",
+    "summary": "",
+    "text": "Allied units in a hex with a fort may not receive replacements or remove fatigue hits.\n\n- Allied HQ are permitted to trace supply to units in a fort hex but must count the hex adjacent to the fort as well as the fort hex itself as two total hexes adjacent to enemy units (GOSS 15.2.1).",
+    "crossRefs": [
+      "15.2.1"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-17.6.4",
+    "section": "17.6.4",
+    "title": "Maginot Line",
+    "summary": "",
+    "text": "After the fall of France, the Maginot Line system of fortifications had been stripped of guns and equipment. Additionally, the Maginot Line (in most cases) was designed to defend against attack from the east. To reflect the following is in effect.\n\n**a) During all GTs,** Allied units treat Maginot Line hexes as Bocage hexes for movement purposes only unless using road movement along printed roads.\n\n**b) GD 1 through GD 57:** Maginot Line hexes have the following capabilities:\n- Any German non-HQ or non-artillery unit that begins a friendly Movement Phase in a Maginot Line hex receives all the benefits of an IP (place an IP marker on the unit).\n- German units may treat Maginot Line hexes as a village, town or city hex when constructing ET-2 (GOSS 17.3.3b).\n- Non-attack designated German units in a Maginot Line hex are not required to conduct a GA mandatory PRC (GOSS 13.10.2), and they automatically pass.\n\n**c) GD 58 through GD 102:**\n- During the Command Phase of each GD the German player rolls 2d10 (percentage). If the result is 50 or greater, the Maginot Line has been upgraded. The German player may place an ET-2 marker in any Maginot Line hex occupied by a non-HQ/non-Art type German unit at the beginning of a friendly Movement Phase. The ET-2 remains in place as long as a German unit of any type occupies the hex.\n\n**Important:** When playing the Dec scenario, the Maginot Line has been upgraded.",
+    "crossRefs": [
+      "17.3.3b",
+      "13.10.2"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-18.0",
+    "section": "18.0",
+    "title": "Unit Breakdown",
+    "summary": "",
+    "text": "German static AT units cannot be broken down.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-18.3.0",
+    "section": "18.3.0",
+    "title": "Units Allowed to Breakdown",
+    "summary": "",
+    "text": "German static AT units cannot be broken down.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.0",
+    "section": "19.0",
+    "title": "Weather",
+    "summary": "",
+    "text": "**Lucky Forward** does not list historical weather.\n\n**Exception:** Scenarios may have set weather for specific GTs.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.2.0",
+    "section": "19.2.0",
+    "title": "How Weather is Determined",
+    "summary": "",
+    "text": "**Lucky Forward** does not list historical weather.\n\n**Exception:** Scenarios may have set weather for specific GTs.\n\n**Important:** Unlike other games in the series, **LF** does not contain separate DRs or listings for precipitation (GOSS 19.5.0). When determining DRM to the Interdiction Value Table use the POvr with rain modifier when the atmospheric condition is POvr, and the Ovr with rain when the atmospheric condition is Ovr.\n\nFollow the below steps to determine the Atmospheric, ground and any special weather conditions.\n\n**1)** Consult the **Lucky Forward** Atmospheric Table to determine atmospheric condition each GT. Use the PM portion of the chart when determining the weather for Night GTs.\n- Roll 2d10 and cross reference the current month, date and GT (AM or PM) with the result. Move the atmospheric marker to the appropriate box.\n- If the rolled result is POvr, determine if fog conditions exist (LF 19.3.5).\n  **2)** Consult the Ground Condition Modifier Table.\n- Roll 1d10 and cross reference the DR with the current month and condition modifier (at the top of the table).\n- The derived modifier determines the direction the player will move the ground condition (GC) marker along the Ground Conditions Track. See **LF** Weather Determination Player Aid Card for procedures.",
+    "crossRefs": [
+      "19.5.0",
+      "19.3.5"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.3.0",
+    "section": "19.3.0",
+    "title": "Atmospheric Conditions",
+    "summary": "",
+    "text": "See **GOSS** 19.3.0 for the effects of atmospheric conditions.",
+    "crossRefs": [
+      "19.3.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.3.5",
+    "section": "19.3.5",
+    "title": "Fog",
+    "summary": "",
+    "text": "During all AM and PM GTs there is a chance that ground fog exists in all hexes adjacent to all rivers.\n\n**Exception:** Fog does not apply to streams, even if Flood 2 effects are in place (LF 19.4.6c).\n\n- The atmospheric condition must be POvr.\n- Roll 1d10, if the result is equal to or less than the fog value (the number in parenthesis in the POvr column), fog exists.\n- If fog conditions exist, treat all hexes adjacent to any type of river hexside (not streams) as if night conditions exist in that hex. All **GOSS** rules pertaining to night movement, observation, air operations, and combat apply in the hex where fog exists.\n\n**Exception:** Ignore fog conditions if attempting to trace a LOS through a fog hex. Fog conditions only apply when determining LOS traced into a fog hex.",
+    "crossRefs": [
+      "19.4.6c"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.3.6",
+    "section": "19.3.6",
+    "title": "Snow Atmospheric Condition",
+    "summary": "",
+    "text": "Treat snow atmospheric conditions as storm (GOSS 19.3.4).\n\n**Important:** Do not confuse snow ground conditions (GOSS 19.4.5) with snow atmospheric conditions. Each condition occurs independently and may or may not appear at the same time.",
+    "crossRefs": [
+      "19.3.4",
+      "19.4.5"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.4.0",
+    "section": "19.4.0",
+    "title": "Ground Conditions",
+    "summary": "",
+    "text": "Prior to starting a scenario, place the ground conditions marker on the Ground Conditions Track in the box noted in the scenario rules. To reflect the unique conditions encountered during November and December 1944, **LF** adds a deep mud ground condition. Use **GOSS** 19.4.0 for all other ground condition effects.",
+    "crossRefs": [
+      "19.4.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.4.3b",
+    "section": "19.4.3b",
+    "title": "Deep Mud",
+    "summary": "",
+    "text": "The effects of deep mud are the same as mud with the following exceptions:\n\n- Trails and railroads have no effect on movement. They cease to exist for all purposes except for RR movement.\n\n**Exception:** Trails and railroads that cross streams, and any type of river are treated as fords, unless Flood-1 or Flood-2 is in effect (LF 19.4.6c).\n\n- Road improvement (GOSS 17.7.0) has no affect on trails/railroads during deep mud conditions.\n- GenS paths traced along primary and secondary roads are reduced to using the standard Mech movement cost along roads (i.e., one-half and one respectively).\n\n**Important:** Extended supply paths cannot be used in deep mud.\n\n- GenS path distance from HQs to units is one-half the normal MPs. This reduction is in place of the three MP supply path reduction from mud in **GOSS** 15.2.6.\n- The MA of all units is reduced to one-third of their printed MA when not moving solely along primary or secondary roads.\n- The MA of all units is reduced by one-half when moving solely along primary and secondary roads.\n- Mech units cannot enter PA mode unless on a primary or secondary road hex at the start of the Mode Determination Phase.\n- PA movement for all units is one hex (primary and secondary roads have no effect).\n\n**Important:** Mech units cannot conduct PA movement unless that movement is along a primary or secondary road hex. They can attack into a non-road hex.\n\n- All GA attacks suffer a one-column shift to the left if all attacking units are not in a town or city hex.\n- Maximum advance after GA is one hex, unless advancing entirely along a primary road.\n- Maximum advance after GA is two hexes if advancing entirely along a primary road.",
+    "crossRefs": [
+      "19.4.6c",
+      "17.7.0",
+      "15.2.6"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.4.5",
+    "section": "19.4.5",
+    "title": "Snow Ground Conditions",
+    "summary": "",
+    "text": "Snow ground conditions only exist if both the atmospheric condition is snow and the ground condition modifier is freeze. **GOSS** 19.4.5 and **GOSS** 15.2.6 apply. See **LF** Weather Determination Player Aid Card for procedures on when snow ground conditions exist.\n\n**Important:** *Do not confuse snow ground conditions (GOSS 19.4.5) with snow atmospheric conditions. Each condition occurs independently and may or may not appear at the same time.*",
+    "crossRefs": [
+      "19.4.5",
+      "15.2.6"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.4.6",
+    "section": "19.4.6",
+    "title": "Flood Conditions",
+    "summary": "",
+    "text": "November 1944 had the heaviest rainfall in Europe for that period in 35 years; Rivers and streams became swollen, raging torrents of water that washed out all but one of the 3rd Army's Eng-constructed bridges over the Moselle (the exception being the bridge at Pont Mousson). At one point, the Moselle River was more than a mile wider than its normal width. Due to this flooding, the game requires special rules for November and December river and ground conditions.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.4.6a",
+    "section": "19.4.6a",
+    "title": "Determine Flood Conditions",
+    "summary": "",
+    "text": "See **LF** Weather Determination Player Aid Card for procedures to determine when flooding occurs.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.4.6b",
+    "section": "19.4.6b",
+    "title": "Flood Track",
+    "summary": "",
+    "text": "On the GT that flooding occurs, place the flood marker on the track in the Flood 1 Box.\n\n**Important:** *Flooding can only occur once in a scenario (including Campaign Scenarios).*\n\nFollow the Flood Conditions Track Adjustment procedures on the **LF** Weather Determination Player Aid Card.\n\n**Important:** *Each Flood Box on the River Flood Track (on map) has the word Flood followed by a superscript number. The number represents the flood state. Move the flood marker to the right, and then the left to represent the rise and descent of flood waters.*",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.4.6c",
+    "section": "19.4.6c",
+    "title": "Flood Effects",
+    "summary": "",
+    "text": "**Important:** See **GOSS** 17.3.1d to determine if a constructed (not repaired) bridge is a trail or secondary road bridge.\n\nThe effects of each level of flooding are as follows:\n\n**F0:** All watercourses require an additional +1 MP to cross if the unit is not using:\n**a)** Mech road movement; or,\n**b)** A bridge if a Leg class unit following a road; or,\n**c)** Ferrying operations.\n\n**Important:** *The player must expend the additional MP if using a ford or trail bridge across a stream.*\n\n**F1:** All units expend double the MP cost to cross any watercourse unless crossing along a primary road, secondary road or railroad bridge.\n- Trail bridges and fords that cross any type of watercourse are not usable.\n- Units crossing streams along a secondary road or railroad bridge incur a +1 MP penalty. Units cross normally at primary roads.\n- Add one GT to all bridge construction times.\n- Any bridges under construction immediately add one GT to their construction time.\n\n**Important:** *Only apply the additional GT once to each construction the first time F1 conditions occur, do not apply for each GD that F1 is in effect.*\n\n**F2:** Treat all streams as rivers, all rivers as major rivers and major rivers as great rivers for movement and combat purposes.\n- Remove all completed bridge markers.\n- Remove all bridge under construction markers.\n- Trail/railroad bridges and fords that cross any type of watercourse are not usable.\n- Secondary road bridges across streams are not usable.\n- Units crossing streams along primary roads incur a +1 MP penalty.\n- Players may not construct bridges using bridge markers or heavy bridge units.\n- Until flood conditions recede to F1, players may not repair demolished printed:\n**a)** Secondary bridges crossing any watercourse.\n**b)** Primary road bridges crossing major or great rivers.\n- All bridge construction has two GTs added to its construction time.\n\n**Important:** *Only apply the additional GTs once to each construction, do not apply for each GD that F2 is in effect.*\n\n- All marsh hexes are in flood. Ground units cannot enter flooded hexes until F1 conditions once again exist.\n- In the first friendly Movement Phase after F2 conditions go into effect, all units that are in a flooded hex must move one hex directly to a non-flooded hex, or if unable to move directly to a non-flooded hex, they must move one hex maximum per GT towards the closest non-flooded hex each GT until entering a non-flooded hex.\n- Ignore all minefields in flooded hexes. Minefields do remain in place.\n- Players must immediately remove all FWs in flooded hexes.",
+    "crossRefs": [
+      "17.3.1d"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-19.4.6d",
+    "section": "19.4.6d",
+    "title": "Maximum Retreat During Deep Mud",
+    "summary": "",
+    "text": "- Maximum retreat is one hex unless retreating entirely along a primary road.\n- Maximum retreat is two hexes if the retreat is entirely along a primary road.\n- Ldr bonuses may modify advance/retreat limits during deep mud.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-20.0",
+    "section": "20.0",
+    "title": "Airpower",
+    "summary": "",
+    "text": "The GTRT provides the number of AP available to both sides for each GD. All **GOSS** airpower rules (GOSS 20.0) are in effect.\n\nBoth sides check the GTRT to determine the number of AP available each GD.\n\n- Players may allocate AP to all missions listed in **GOSS** 20.0.\n\n**Exception:** *Carpet Bombing is not available.*\n\n- The Axis side does not have ATP.\n- The Allied side has two ATP available on all GDs after GD 26. This applies to all scenarios (including Campaign Scenarios).\n- Each side may conduct a maximum of three supply interdiction missions each GD.\n- Players may allocate a maximum of 4 AP (after weather reductions) to a single GS mission.\n- Treat all maps as one air sector when conducting ASup, GI and German GS missions.\n- The Allied player must assign AP allocated to GS missions to specific corps in the Joint Air Allocation Phase. AP designated to provide GS to a corps, may conduct those missions anywhere in that corps ZOP.",
+    "crossRefs": [
+      "20.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-21.0",
+    "section": "21.0",
+    "title": "Reinforcements",
+    "summary": "",
+    "text": "**Important:** *In all scenarios, unless scenario instructions specifically state otherwise, all reinforcements may enter in Tac mode or Strat mode (player's choice).*",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-21.2.1",
+    "section": "21.2.1",
+    "title": "Placement",
+    "summary": "",
+    "text": "Units designated to arrive on hexes not on a map edge, are considered to arrive in sequence. Treat the hex as a map edge hex (**GOSS** 21.2.0).",
+    "crossRefs": [
+      "21.2.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-21.2.2",
+    "section": "21.2.2",
+    "title": "Assignment of Reinforcements",
+    "summary": "",
+    "text": "All arriving reinforcements may be assigned to any corps/army unless scenario instructions assign the formation and/or units to the US 1st or 7th Armies or the German 7th or 19th Armies.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-21.4",
+    "section": "21.4",
+    "title": "Withdrawals",
+    "summary": "",
+    "text": "The procedure in **GOSS** 21.4.0 applies. Units in the Eliminated Units Pool belonging to a withdrawn formation are removed from the pool. When a formation or unit is withdrawn, from the map the formation or unit must contain at least 50% of the number of total steps as it contained when it arrived or started the scenario.\n\n- If the formation or unit does not contain the required steps, the owning player determines the difference. Subtract the withdrawn step strength from 50% of the beginning/arriving step strength (round down).\n- He must then expend one Inf ReP for each missing step.\n- If the required number of Inf ReP are not available, the owning player may not use any Inf RePs until the difference has been made up.\n\n**Important:** *The type of steps has no bearing on calculating the number of steps. Missing steps are always accounted for by expending Inf RePs regardless of the type of step(s) lost.*\n\n**Example:** *In the December scenario the Pz Lehr Div set up with 15 steps. When the division is withdrawn it contains 6 steps. 50% of 15, rounded down is 7. The German player must expend 1 Inf ReP (either in stockpile or future Inf RePs)*",
+    "crossRefs": [
+      "21.4.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-22.0",
+    "section": "22.0",
+    "title": "Replacements",
+    "summary": "",
+    "text": "Replacements are received per **GOSS** 22.0. **GOSS** German and Allied recycle rates are used in all scenarios and/or campaign games, unless stated otherwise in scenario rules. Both sides may roll for replacements and convert recycle steps (**GOSS** 22.2.1) beginning GD 3. Step losses are accumulated beginning GD 1. Free French forces are treated as US units for replacement and recycle purposes.",
+    "crossRefs": [
+      "22.0",
+      "22.2.1"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-22.4",
+    "section": "22.4",
+    "title": "Refit",
+    "summary": "",
+    "text": "Modify **GOSS** Refit RePs (**GOSS** 22.4.3) as follows:\n**a)** Allied non-Arm Divs receive 4 Inf ReP each GD.\n**b)** Allied Arm Divs receive 3 Inf Rep and 2 Arm ReP.\n\n**Important:** *Non-activated German divisions may enter refit prior to being activated.*",
+    "crossRefs": [
+      "22.4.3"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-22.5.2c",
+    "section": "22.5.2c",
+    "title": "Resurrecting with RE Units",
+    "summary": "",
+    "text": "RE units may reorganize into regular infantry type Bn.'s beginning GD 6. The German side may resurrect one Bn. using a RE unit every two GDs. **GOSS** 22.5.2c applies.\n\n**Exception:** *Static fortress Art and all units listed as Metz fortress units (those units with the yellow band) cannot be used to resurrect units nor can they transfer steps (GOSS 22.5.1b).*",
+    "crossRefs": [
+      "22.5.2c",
+      "22.5.1b"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-23.0",
+    "section": "23.0",
+    "title": "Leaders",
+    "summary": "",
+    "text": "",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-23.2.2",
+    "section": "23.2.2",
+    "title": "Corps & Army Leaders",
+    "summary": "",
+    "text": "**Important:** *All formation leader bonuses listed in **GOSS** 23.2.1 apply normally.*",
+    "crossRefs": [
+      "23.2.1"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-23.2.2a",
+    "section": "23.2.2a",
+    "title": "Allied Leaders",
+    "summary": "",
+    "text": "**Patton (3rd Army):** If Patton starts the AM GT stacked with a formation HQ, all units of that formation may perform twice the number of PA assaults allowed by **GOSS** 16.3.3. Additionally, those units may advance after GA one hex further than normal (**GOSS** 13.12.3).\n\n**Haislip (XV Corps):** If Haislip starts the AM GT stacked with a formation HQ assigned to the XV Corps, that formation may conduct movement in any order the player wishes (except for CdM movement). Additionally, that division receives two extra GA shifts (offensive and defensive) during any friendly and/or enemy GA segment. These shifts may be used/split in any way the owning player desires.\n\n**John Wood (4th Arm Div):** Instead of providing one combat shift, Wood may provide two combat shifts (attack or defense) to any GAs involving Mech units that participated in an offensive GA, that Wood provided a combat shift may advance one additional hex than results allow provided the advance is along a road of any type.\n\n**Bob Grow (6th Arm Div):** If Grow starts the AM turn stacked with the division HQ, all that division's units may increase their advance after GA by one hex.\n\n**Muehlen (559 VG Div):** Muehlen awards 2 MPs to any units of his division that he starts a friendly movement phase stacked with. Additionally, Muehlen may provide one GA combat shift to any one GA involving units of his division that are within two hexes of his location.",
+    "crossRefs": [
+      "16.3.3",
+      "13.12.3",
+      "13.11.1"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-23.2.2b",
+    "section": "23.2.2b",
+    "title": "German Leaders",
+    "summary": "",
+    "text": "**Manteuffel (5Pz Army):** If Manteuffel starts an AM turn stacked with a corps HQ assigned to the 5Pz Army, one Mech formation assigned to that HQ receives an extra MP for both the AM and PM GTs of that day and one GA (attack or defense) per turn involving units of that formation receives a column shift in its favor. He may not add that shift to a GA already receiving a shift from another leader.\n\n**v. Knobelsdorff (1st Army):** If v. Knobelsdorff starts the AM GT stacked with an assigned corps HQ, up to two column shifts (per GT) may be awarded to defensive GAs involving units of any formation assigned to that corps HQ. The shifts may be used for the same GA or split between two different combats.\n\n*Designer's Note: V. Knobelsdorff was replaced on Dec 4 by Hans von Obstfelder. Keep the V. Knobelsdorff counter in play (if he hasn't been killed).*\n\n**v. Luettwitz (47Pz Korps):** If vLuettwitz starts the AM GT stacked with a formation HQ, one GA (attack or defense) per GT may be given a favorable column shift if a unit from that formation is involved. He may not add that shift to a combat already receiving a shift from another leader.\n\n**Bayerlein (Pz Lehr Div):** If Bayerlein starts the AM GT stacked with the Lehr Div's HQ, one GA (attack or defense) per GT may be awarded a favorable column shift if a unit from that division is involved. Additionally, all MU of his division may increase their maximum retreat after a GA by one hex (**GOSS** 13.11.1).\n\n**v. Luck (21st Pz Div):** If v Luck starts the AM GT stacked with the 21Pz Div HQ, one GA (attack or defense) per GT may be awarded a favorable column shift if a unit from that division is involved. Additionally, all MU of his division may increase their maximum retreat distance after GA by one hex (**GOSS** 13.11.1).",
+    "crossRefs": [
+      "13.11.1"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-24.0",
+    "section": "24.0",
+    "title": "Lulls",
+    "summary": "",
+    "text": "**Important:** *See Oct and Nov scenario instructions for the effects of no lull or of a lull that does not last 28 GDs.*\n\nWhen playing the campaign game (Sept through Nov at a minimum) either or both sides may declare a lull at any time.\n\nTo receive the logistic benefits listed in **LF** 17.6.3c, 29.3.8b, 29.4.3, 29.4.4, 29.5.5 and 20.5.7 the Allied player must declare a lull on or prior to GD 36 and the lull must last a minimum of 28 GDs. **GOSS** 24.0 applies with the following exceptions:\n\n**a)** The German player must grant the lull.\n**b)** The German player cannot launch a counter offensive until the lull has been in effect for a minimum of 10 GDs. If the German player launches a counter offensive after the above GD, the German side does not gain the logistic benefits of the lull, however the Allied side does.\n- Minefields may be laid during a lull (**LF** 7.13.4).\n- If the Allied player maintains the lull for a full 28 GDs, the effects of **LF** 17.6.3c, 29.3.8b, 29.4.3, 29.4.4, 29.5.5 and 29.5.7 go into effect the first AM GT after the lull ends and remain in effect for a full 15 GDs.\n- If the Allied player does not declare a lull on or prior to GD 36, neither side receives the listed logistic benefits.",
+    "crossRefs": [
+      "24.0",
+      "17.6.3c",
+      "29.3.8b",
+      "29.4.3",
+      "29.4.4",
+      "29.5.5",
+      "29.5.7",
+      "7.13.4"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-24.2",
+    "section": "24.2",
+    "title": "Lulls & Truck Points",
+    "summary": "",
+    "text": "During a lull, both sides must still maintain a minimum number of TPs on fuel and ammo delivery to sustain their armies.\n\n- In addition to the requirements in **GOSS** 16.1.2b, each side must assign at least one TP to transport fuel.\n- The Allied side can allocate no more than two TP to bring in units from the Allied Reinforcement (**LF** 29.3.11).",
+    "crossRefs": [
+      "16.1.2b",
+      "29.3.11"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-24.4",
+    "section": "24.4",
+    "title": "Lull Effects & Barrage",
+    "summary": "",
+    "text": "In addition to the First GT effects listed in **GOSS** 24.4.0, the following rules are used.\n\n**First GT After Lull Ends:** The player ending the lull conducts FS missions prior to the in-active players defensive FS missions.\n\n**First GD After Lull Ends:** The player ending the lull modifies unobserved FS missions from a -4 to a -2 modifier if the target hex is OCT due to FW, fortified area, or fort.",
+    "crossRefs": [
+      "24.4.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-27.0",
+    "section": "27.0",
+    "title": "Exclusive Rules",
+    "summary": "",
+    "text": "These rules pertain only to **Lucky Forward** and have no corresponding case number in **GOSS**.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-27.1.0",
+    "section": "27.1.0",
+    "title": "Map Intervals",
+    "summary": "",
+    "text": "The problem of the SE map edge for **Lucky Forward** is that US VI Corps (7th Army) did not advance with XV Corps uniformly throughout the campaign. This failure to do so meant that there were times when XV Corps' right flank would be extended and open to enemy contact-which then required Allied units (usually the 2nd French Arm Div) to mask or garrison this flank. This dilemma is represented by dividing the area in map intervals in hexes adjacent to these intervals to prevent German units from leaking back into the Allied rear areas near the SE map edge.\n\nAn open interval is an active edge that German units may enter from if not masked by Allied units. A closed interval occurs when a date has been reached whereby VI Corps is now considered to have advanced all along that interval edge, closing off any ability of the Germans to re-enter units along that interval.",
+    "crossRefs": [],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-27.1.1",
+    "section": "27.1.1",
+    "title": "Map Intervals",
+    "summary": "",
+    "text": "There are four such intervals on the game map.\n\n- An interval is defined as open when an Allied unit assigned to the XV corps enters any hex on or east of the western boundary of that interval.\n- On the GT following an interval opening, the Allied player must assign a minimum of nine non-HQ/non-artillery steps to mask that interval. Steps designated as the masking force must move adjacent to any map edge hex within that interval. They remain there until replaced by another unit with an equal number of steps or until the interval is no longer open.\n- Intervals run from one map edge hex (as listed below) along the map edge to the next designated hex.\n- All intervals are open until their closed date listed below.\n\n**Interval One:** From hex 4-2453 to 4-4552 and is closed in the Joint Command Phase of GD 27.\n**Interval Two:** From 4-4653 to 3-2352 and closed in the Joint Command Phase of GD 58.\n**Interval Three:** From 3-2453 to 3-2740 and is closed in the Joint Command Phase of GD 63.\n**Interval Four:** From 3-2739 to 5-3258 and is open until the turn following the exit of the 2nd French Arm Div CC along the SE map edge from 3-3730 to 5-1158 (**LF** 27.2.0). Once Interval Four is closed implement the following:\n- The German 19th Army is deactivated and removed in the Joint Command Phase of the first GD after this interval is closed. All units/formations previously assigned (or later received as reinforcements) to the 19th Army immediately become part of the German 1st Army on that GD.\n- The area marked out of play (bounded by the orange dashed line) on the southeast corner of Map 3 goes out of play. Any Allied units within this area must exit the area as soon as possible. German units within this area are removed from play.",
+    "crossRefs": [
+      "27.2.0"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-27.1.2",
+    "section": "27.1.2",
+    "title": "Open Map Interval Effects",
+    "summary": "",
+    "text": "If a map interval is open and not masked, the German player may do the following:\n\n- Beginning on the first turn that such an interval is open and not masked, the German player may enter as a reinforcement any one regiment from the 716th Infantry Div plus division asset units per (**GOSS** 21.1.0) anywhere along the map edge of that interval. The division HQ is considered six supply MP away from that map edge.\n- Beginning on the third consecutive turn that the interval is unmasked, the German player may commit another regiment from the same division plus its division slice and the fusilier Bn.\n- Beginning on the sixth consecutive turn, if the interval is still unmasked (remember, the units that have already entered may prevent the Allied player from closing that interval), the German player may bring in the remainder of the 716th Div two turns after the second regiment entered.\n- At any time after the first units of the 716th Div entered the map using this rule, all surviving units able to trace a path of hexes free of enemy units to an open interval map edge hex may be withdrawn by immediately removing it from the map. All such units withdrawn may enter the game again only via **LF** 27.3.1 and units of the 716th Div may no longer enter the game via the open interval process.\n\n**Important:** *Withdrawn units cannot reenter due to 27.3.1 until 2 GDs after they were withdrawn. Step losses suffered by withdrawn units are fully replaced at that time.*",
+    "crossRefs": [
+      "21.1.0",
+      "27.3.1"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-27.2.0",
+    "section": "27.2.0",
+    "title": "2nd Free French Arm Div.",
+    "summary": "",
+    "text": "The goal for Leclerc and his division was the great city of Strasbourg on the Upper Rhine river. If the division is in play on the map board, its goal and purpose is to cross into the Alsatian Plain to the east of the Vosges on the way to Strasbourg. The only way to do this in the game is to capture the town of Saverne and the related gap in the Vosges Mountains it gives its name to. As such, this division must always be fighting toward this goal, and it is the best use of this division in the game to do so.\n\n- One CC from this division must exit the SE map edge between hexes 3-3730 to 5-1158 no later than 2 GTs after the Allied frontline has advanced to any hex on or east of Map 5 hex column 12xx.\n- All units of the exited CC may then reenter Map 5 between hex 1858 and 2858 (inclusive) two GTs later. If a unit of the CC can trace a GenS path (of any length) to a map edge hex on Map 5, hex 1858 to 2858 (inclusive), that unit is in GenS and command.\n\n**Example:** *The CC exited GD 87. It may reenter on GD 89.*\n\n- Once the above CC has reentered on Map 5, the Allied player may move the remainder of the 2nd FF Div off the map using the same procedures.\n- Once within the Alsatian Plain area, Allied units cannot exit the area except to meet the requirements of 27.3.2.",
+    "crossRefs": [
+      "27.3.2"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-27.3.0",
+    "section": "27.3.0",
+    "title": "The Alsatian Plain",
+    "summary": "",
+    "text": "The area to the east of the Saverne Gap and the Vosges Mountains is the Alsatian Plain.\n\n- The Alsatian Plain is defined as; all hexes on or south, southeast of Map 5-1258, 1256, 2350, 2340, 3226.\n- When playing the campaign game or the Nov scenario the area is out of play the GT after the Allied requirements in **LF** 27.3.2 have been met.\n- When playing the Dec scenario, the area is out of play.",
+    "crossRefs": [
+      "27.3.2"
+    ],
+    "module": "lucky-forward"
+  },
+  {
+    "id": "lf-27.3.1",
+    "section": "27.3.1",
+    "title": "German Deployment",
+    "summary": "",
+    "text": "On the GT that any Allied unit enters the Alsatian Plain area or at least one 2nd FF Arm Div unit has exited the map (**LF** 27.2.0) the 716th German VG Div is placed anywhere within the Alsatian Plain area on or north of the xx53 hex row. Units cannot be placed adjacent to an Allied unit.\n\n**Exception:** *If the 716th is activated due to Allied units entering this area, the Allied player must immediately halt his movement in the first hex entered within the area. The German player then places all available units of the 716th Div. Once all German units are placed, the Allied player may continue his movement.*",
+    "crossRefs": [
+      "27.2.0"
+    ],
+    "module": "lucky-forward"
+  }
+]

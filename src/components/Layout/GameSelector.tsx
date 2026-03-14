@@ -11,7 +11,7 @@ const GAME_OPTIONS: GameOption[] = [
   { value: "war", label: "Wacht am Rhein" },
   { value: "hurtgen", label: "Hurtgen" },
   { value: "atlantic-wall", label: "Atlantic Wall", disabled: true },
-  { value: "lucky-forward", label: "Lucky Forward", disabled: true },
+  { value: "lucky-forward", label: "Lucky Forward" },
 ];
 
 interface GameSelectorProps {
