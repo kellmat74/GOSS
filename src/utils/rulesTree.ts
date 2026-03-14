@@ -12,23 +12,35 @@ export interface TreeNode {
  * Special case: 26.0.A-Z glossary entries are children of 26.0
  */
 export function buildRulesTree(rules: RuleEntry[]): TreeNode[] {
-  // Index rules by section for fast lookup
+  // Use rule.id as key (unique even when base + scenario share a section)
   const nodeMap = new Map<string, TreeNode>();
+  // Track first node per section for parent lookups
+  const sectionToFirstId = new Map<string, string>();
   const topLevel: TreeNode[] = [];
 
   // Create all nodes
   for (const rule of rules) {
-    nodeMap.set(rule.section, { rule, children: [] });
+    nodeMap.set(rule.id, { rule, children: [] });
+    if (!sectionToFirstId.has(rule.section)) {
+      sectionToFirstId.set(rule.section, rule.id);
+    }
   }
+
+  // Helper: find a parent node by section (returns first matching node)
+  const getNodeBySection = (section: string): TreeNode | undefined => {
+    const id = sectionToFirstId.get(section);
+    return id ? nodeMap.get(id) : undefined;
+  };
 
   // Build hierarchy
   for (const rule of rules) {
-    const node = nodeMap.get(rule.section)!;
+    const node = nodeMap.get(rule.id)!;
     const parentKey = getParentSection(rule.section);
 
     // Try exact parent, then with .0 suffix (e.g., "4.1" → "4.1.0")
     const parent =
-      parentKey && (nodeMap.get(parentKey) ?? nodeMap.get(parentKey + ".0"));
+      parentKey &&
+      (getNodeBySection(parentKey) ?? getNodeBySection(parentKey + ".0"));
 
     if (parent) {
       parent.children.push(node);

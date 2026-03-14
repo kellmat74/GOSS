@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { useRules } from "../../context/RulesContext";
 
 export function RuleModal() {
-  const { activeRule, history, closeRule, goBack, openRule, getRuleBySection } = useRules();
+  const { activeRule, history, closeRule, goBack, openRule, getRuleBySection, getRulesForSection } = useRules();
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -72,33 +72,12 @@ export function RuleModal() {
 
         {/* Body */}
         <div ref={contentRef} className="flex-1 overflow-y-auto px-6 py-4">
-          <RuleText text={activeRule.text} onRuleClick={openRule} />
-
-          {/* Cross-references */}
-          {activeRule.crossRefs.length > 0 && (
-            <div className="mt-6 border-t border-stone-200 pt-4 dark:border-stone-700">
-              <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-stone-500">
-                See Also
-              </h4>
-              <div className="flex flex-col gap-1.5">
-                {activeRule.crossRefs.map((ref) => {
-                  const refRule = getRuleBySection(ref);
-                  return (
-                    <button
-                      key={ref}
-                      onClick={() => openRule(ref)}
-                      className="flex items-baseline gap-2 rounded bg-stone-100 px-2 py-1.5 text-left text-xs hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 transition-colors"
-                    >
-                      <span className="shrink-0 font-mono text-accent-700 dark:text-accent-400">§{ref}</span>
-                      {refRule && (
-                        <span className="text-stone-500 dark:text-stone-400">{refRule.title}</span>
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
+          <ModalBody
+            activeRule={activeRule}
+            getRulesForSection={getRulesForSection}
+            getRuleBySection={getRuleBySection}
+            openRule={openRule}
+          />
         </div>
 
         {/* Footer with history indicator */}
@@ -110,6 +89,84 @@ export function RuleModal() {
       </div>
     </div>,
     document.body
+  );
+}
+
+/** Combined view: base rule + scenario overlays + cross-refs */
+function ModalBody({
+  activeRule,
+  getRulesForSection,
+  getRuleBySection,
+  openRule,
+}: {
+  activeRule: import("../../types/goss").RuleEntry;
+  getRulesForSection: (section: string) => import("../../types/goss").RuleEntry[];
+  getRuleBySection: (section: string) => import("../../types/goss").RuleEntry | undefined;
+  openRule: (sectionOrId: string) => void;
+}) {
+  // Get all rules for this section (base + scenario overlays)
+  const allForSection = getRulesForSection(activeRule.section);
+  // If the active rule is a scenario rule, show it alone first, then base
+  // If the active rule is a base rule, show it first, then scenario overlays
+  const baseRule = allForSection.find((r) => !r.module);
+  const scenarioRules = allForSection.filter((r) => r.module);
+
+  // Collect all cross-refs from all versions
+  const allRefs = new Set<string>();
+  for (const r of allForSection) {
+    for (const ref of r.crossRefs) allRefs.add(ref);
+  }
+
+  return (
+    <>
+      {/* Base rule text */}
+      {baseRule && (
+        <RuleText text={baseRule.text} onRuleClick={openRule} />
+      )}
+
+      {/* Scenario overlays */}
+      {scenarioRules.map((rule) => (
+        <div key={rule.id} className="mt-4">
+          <div className="mb-3 flex items-center gap-2 border-t border-blue-200 pt-3 dark:border-blue-800">
+            <span className="rounded bg-blue-500/20 px-1.5 py-0.5 text-xs font-semibold text-blue-700 dark:text-blue-400">
+              {rule.module === "war" ? "Wacht am Rhein" : rule.module}
+            </span>
+            {rule.title !== baseRule?.title && (
+              <span className="text-xs text-stone-500">{rule.title}</span>
+            )}
+          </div>
+          <RuleText text={rule.text} onRuleClick={openRule} />
+        </div>
+      ))}
+
+      {/* If no base rule (scenario-only section), nothing extra to show */}
+
+      {/* Cross-references */}
+      {allRefs.size > 0 && (
+        <div className="mt-6 border-t border-stone-200 pt-4 dark:border-stone-700">
+          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-stone-500">
+            See Also
+          </h4>
+          <div className="flex flex-col gap-1.5">
+            {Array.from(allRefs).map((ref) => {
+              const refRule = getRuleBySection(ref);
+              return (
+                <button
+                  key={ref}
+                  onClick={() => openRule(ref)}
+                  className="flex items-baseline gap-2 rounded bg-stone-100 px-2 py-1.5 text-left text-xs hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 transition-colors"
+                >
+                  <span className="shrink-0 font-mono text-accent-700 dark:text-accent-400">§{ref}</span>
+                  {refRule && (
+                    <span className="text-stone-500 dark:text-stone-400">{refRule.title}</span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

@@ -12,18 +12,34 @@ export function RulesSearch({ rules }: RulesSearchProps) {
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const { openRule } = useRules();
 
-  const tree = useMemo(() => buildRulesTree(rules), [rules]);
+  const tree = useMemo(() => {
+    // For the tree, hide scenario rules that overlay a base section
+    // (they're shown in the combined modal). Keep scenario-only sections.
+    const baseSections = new Set(
+      rules.filter((r) => !r.module).map((r) => r.section)
+    );
+    const treeRules = rules.filter(
+      (r) => !r.module || !baseSections.has(r.section)
+    );
+    return buildRulesTree(treeRules);
+  }, [rules]);
 
   const filtered = useMemo(() => {
     if (!query.trim()) return [];
     const q = query.toLowerCase();
-    return rules.filter(
-      (r) =>
-        r.title.toLowerCase().includes(q) ||
-        r.section.toLowerCase().includes(q) ||
-        r.summary.toLowerCase().includes(q) ||
-        r.text.toLowerCase().includes(q)
+    // Filter out scenario overlays that duplicate a base section
+    const baseSections = new Set(
+      rules.filter((r) => !r.module).map((r) => r.section)
     );
+    return rules
+      .filter((r) => !r.module || !baseSections.has(r.section))
+      .filter(
+        (r) =>
+          r.title.toLowerCase().includes(q) ||
+          r.section.toLowerCase().includes(q) ||
+          r.summary.toLowerCase().includes(q) ||
+          r.text.toLowerCase().includes(q)
+      );
   }, [rules, query]);
 
   const toggleExpand = useCallback((section: string) => {
@@ -52,7 +68,7 @@ export function RulesSearch({ rules }: RulesSearchProps) {
       <p className="mb-4 text-xs text-stone-500">
         {hasQuery
           ? `${filtered.length} of ${rules.length} rules matching "${query}"`
-          : `${rules.length} rules in 26 sections`}
+          : `${rules.length} rules`}
       </p>
 
       {hasQuery ? (
@@ -98,12 +114,17 @@ function RuleRow({
   return (
     <li className="rounded-lg border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-800">
       <button
-        onClick={() => onOpen(rule.section)}
+        onClick={() => onOpen(rule.id)}
         className="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-stone-50 dark:hover:bg-stone-700/50 transition-colors"
       >
-        <span className="shrink-0 rounded bg-accent-500 px-1.5 py-0.5 text-xs font-mono text-white dark:bg-stone-700 dark:text-accent-400">
+        <span className={`shrink-0 rounded px-1.5 py-0.5 text-xs font-mono text-white ${rule.module ? "bg-blue-500 dark:bg-blue-700" : "bg-accent-500 dark:bg-stone-700 dark:text-accent-400"}`}>
           {rule.section}
         </span>
+        {rule.module && (
+          <span className="shrink-0 rounded bg-blue-500/20 px-1 py-0.5 text-[10px] font-medium text-blue-700 dark:text-blue-400">
+            {rule.module === "war" ? "WaR" : rule.module}
+          </span>
+        )}
         <div className="min-w-0 flex-1">
           <span className="font-medium">{rule.title}</span>
         </div>
@@ -158,12 +179,17 @@ function TreeRow({
 
           {/* Rule content — opens modal */}
           <button
-            onClick={() => onOpen(node.rule.section)}
+            onClick={() => onOpen(node.rule.id)}
             className="flex flex-1 items-center gap-3 py-3 pr-4 text-left hover:bg-stone-50 dark:hover:bg-stone-700/50 transition-colors min-w-0"
           >
-            <span className="shrink-0 rounded bg-accent-500 px-1.5 py-0.5 text-xs font-mono text-white dark:bg-stone-700 dark:text-accent-400">
+            <span className={`shrink-0 rounded px-1.5 py-0.5 text-xs font-mono text-white ${node.rule.module ? "bg-blue-500 dark:bg-blue-700" : "bg-accent-500 dark:bg-stone-700 dark:text-accent-400"}`}>
               {node.rule.section}
             </span>
+            {node.rule.module && (
+              <span className="shrink-0 rounded bg-blue-500/20 px-1 py-0.5 text-[10px] font-medium text-blue-700 dark:text-blue-400">
+                {node.rule.module === "war" ? "WaR" : node.rule.module}
+              </span>
+            )}
             <div className="min-w-0 flex-1">
               <span className="font-medium">{node.rule.title}</span>
             </div>

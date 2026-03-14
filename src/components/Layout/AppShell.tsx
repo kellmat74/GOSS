@@ -9,6 +9,7 @@ interface AppShellProps {
   sidebar: ReactNode;
   children: ReactNode;
   turnInfo: ReactNode;
+  gameSelector: ReactNode;
   tabs: TabDef[];
   activeTab: string;
   onTabChange: (key: string) => void;
@@ -20,6 +21,7 @@ export function AppShell({
   sidebar,
   children,
   turnInfo,
+  gameSelector,
   tabs,
   activeTab,
   onTabChange,
@@ -47,7 +49,7 @@ export function AppShell({
         <div className="sticky top-0 z-10 border-b border-stone-200 bg-stone-50 p-3 dark:border-stone-700 dark:bg-stone-800">
           <h1 className="text-lg font-bold tracking-tight">GOSS Assistant</h1>
           <div className="mt-1 text-sm text-stone-500 dark:text-stone-400">
-            Wacht am Rhein
+            Grand Operational Simulation Series
           </div>
         </div>
         {sidebar}
@@ -69,6 +71,7 @@ export function AppShell({
               </svg>
             </button>
             {turnInfo}
+            {gameSelector}
           </div>
 
           {/* Center: tabs */}

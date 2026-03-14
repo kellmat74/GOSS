@@ -1,1 +1,1402 @@
-[]
+[
+  {
+    "id": "war-1.0",
+    "section": "1.0",
+    "title": "Game Components",
+    "summary": "Overview of the game components and how WAR scenario rules interact with the base GOSS rules.",
+    "text": "These rules add to and may modify the rules in the GOSS rulebook. In all cases, the rules in this book take precedence over any rules in GOSS. Rule references to GOSS are preceded by a GOSS or if the reference is contained in this booklet, WAR.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-1.1",
+    "section": "1.1",
+    "title": "Game Rules",
+    "summary": "WAR scenario rules add to and may modify the base GOSS rules, with WAR taking precedence.",
+    "text": "These rules add to and may modify the rules in the GOSS rulebook. In all cases, the rules in this book take precedence over any rules in GOSS. Rule references to GOSS are preceded by a GOSS or if the reference is contained in this booklet, WAR.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-1.2",
+    "section": "1.2",
+    "title": "Game Map",
+    "summary": "The game map consists of four map sheets forming the Ardennes battlefield.",
+    "text": "The game map consists of four map sheets that together form the Ardennes battlefield.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-1.2.1",
+    "section": "1.2.1",
+    "title": "Rivers & Streams",
+    "summary": "The only major river in the game is the Meuse River.",
+    "text": "The only major river in the game is the Meuse River.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-1.2.2",
+    "section": "1.2.2",
+    "title": "Soft Ground",
+    "summary": "Marsh/Swamp terrain does not exist in WAR; all such hexes are treated as Soft Ground.",
+    "text": "Marsh/Swamp does not exist in WAR. Treat all hexes showing the symbol for Soft Ground/Marsh/Swamp as Soft Ground.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-1.4",
+    "section": "1.4",
+    "title": "The Playing Pieces",
+    "summary": "Description of Allied and German unit types, nationalities, and color schemes used on counters.",
+    "text": "**Important:** 268/V FA Bn. counter is not used.\n\nThe Allied side is a coalition of nationalities. US units are treated separately from the Commonwealth (CW) units. Each nationality is represented by color-coding all its units with a unique color scheme.\n\nAllied Units:\n\u2022 British Units: Black or dark red type on light tan background\n\u2022 US Units: Black or white type on dark green background\n\u2022 Free French Units: White type on light blue background.\n\nNote: Other Allied nations who participated in the battle are shown using British unit colors, or US unit colors depending on which forces they typically operated with.\n\nThe German side is composed of three different military and political branches of service (for simplicity, Kriegsmarine units are not differentiated from Wehrmacht units).\n\nGerman Units:\n\u2022 Wehrmacht Units: Black type on field grey background\n\u2022 Luftwaffe Units: Black type on light blue\n\u2022 Waffen SS Units: White type on black.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-1.7",
+    "section": "1.7",
+    "title": "Inventory of Game Parts",
+    "summary": "List of all physical components included in the boxed game.",
+    "text": "**Important:** The below list is the list of components that comes with the boxed game. Players can download the current GOSS rules from http://decisiongames.com/wpsite/e-rules/.\n\nA complete game includes:\n\u2022 Four map sheets: NE, NW, SW and SE.\n\u2022 Four US-Allied counter sheets 1 to 4 (1120 counters; there are German units on these sheets).\n\u2022 Three German counter sheets 5 to 7 (840 counters).\n\u2022 Two identical utility marker counter sheets (560 counters).\n\u2022 Two Game Turn Record Tracks (one US & one German).\n\u2022 Two Army Level Record Tracks (one US & one German).\n\u2022 Two 11 x 17-inch Game Charts (two-sided).\n\u2022 Two 8.5 x 11-inch Unit Breakdown Charts/Unit Type Charts (two-sided).\n\u2022 One 8.5 x 11-inch Gameplay Flowchart/Master Reinforcement List (two-sided).\n\u2022 One 8.5 x 11-inch Random Events Table & German Transport Table/Miscellaneous Table (two-sided).\n\u2022 One rules booklet.\n\u2022 One scenario booklet.\n\u2022 Two ten-sided dice.\n\n**Important:** Except for the Terrain Key, ignore all charts and tracks printed on the map. The separate Game Turn Record Tracks are used; however, the Reinforcement Lists are not correct. Use the list provided with each scenario or the Master List at the end of these rules.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-2.0",
+    "section": "2.0",
+    "title": "Setting Up the Game",
+    "summary": "Instructions for assembling the four map sections and proper map placement order.",
+    "text": "The four map sections have been designed so that they overlap each other when they are placed together. Each map is identified by a compass heading: NW, SW, NE, and SE.\n\n**Errata:** The SW Map is incorrectly labeled NW.\n\nThe NE map should be placed on the table first. Next, the SE map should be placed so that it overlaps with the NE map. The NW map is then placed over the NE map so that it overlaps it. Finally, the SW map is fitted over the NW and SE map. When placed together correctly, the roads and terrain features should align properly along the hexes on the edges of the maps.\n\n**Example:** Bitburg is in hex number 6319 on the SE map, denoted in the setup manifests as SE6319.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-3.0",
+    "section": "3.0",
+    "title": "The Game Turn",
+    "summary": "Overview of the game turn structure for WAR scenarios.",
+    "text": "The Game Turn.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-3.1",
+    "section": "3.1",
+    "title": "Scenario First Turn Rules",
+    "summary": "The first game turn of all Dec 16 scenarios is a special pre-dawn surprise turn followed by the Dec 16 AM turn.",
+    "text": "The first GT of all Dec 16 scenarios is a special pre-dawn surprise turn. This turn is followed by the Dec 16 AM turn.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-3.3",
+    "section": "3.3",
+    "title": "Game Turn Sequence Outline",
+    "summary": "WAR uses the standard GOSS game turn sequence of play with scenario-specific restrictions by date.",
+    "text": "Use the standard GOSS game turn (GT) SoP (GOSS 3.3.0).\n\n**Important:** Unless stated otherwise the below restrictions are used in all scenarios beginning on Dec 16.",
+    "crossRefs": [
+      "3.3.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-3.3.1a",
+    "section": "3.3.1a",
+    "title": "Joint Air Allocation Phase",
+    "summary": "WAR air allocation has been modified to use the updated GOSS rules.",
+    "text": "The WAR air allocation has been modified to use the updated GOSS rules. See (WAR 20.0).",
+    "crossRefs": [
+      "20.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-3.3.1b",
+    "section": "3.3.1b",
+    "title": "Joint Weather Phase",
+    "summary": "WAR weather determination has been modified to use the updated GOSS rules.",
+    "text": "The WAR weather determination has been modified to use the updated GOSS rules. See (WAR 19.0).",
+    "crossRefs": [
+      "19.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-3.3.1c",
+    "section": "3.3.1c",
+    "title": "Joint Command Phase",
+    "summary": "Restrictions on command segments including corps/army assignments, leader activation, and surrender checks by scenario start date.",
+    "text": "**Command Segment:** (GOSS 9.1.0 & 9.2.0)\nDec 16 Scenarios: Neither side may alter corps/army assignments or boundaries until the Dec 19 AM GT.\nDec 21 Scenarios:\nDec 28 Scenarios:\n\n**Important:** Formations may attach and/or detach units (GOSS 9.6.0) normally.\n\n**Leader Activation Segment:** (GOSS 23.1.0)\nDec 16 Scenarios: Neither side may attempt to activate leaders (Ldrs) until the Dec 17 AM GT.\n\n**Exception:** Peiper (1SS Panzer Division) is automatically activated on the Dec 16 AM GT.\n\nDec 21 and 28 Scenarios: Players may activate leaders normally.\n\n**Surrender Segment:** (GOSS 13.5.1 & 15.7.1)\nDec 16 Scenarios: Neither side checks for unit surrender until the Dec 18 AM GT (GOSS 13.5.1 & 15.7.1).\nDec 21 and 28 Scenarios: Surrender checks are made normally.",
+    "crossRefs": [
+      "9.1.0",
+      "9.2.0",
+      "9.6.0",
+      "23.1.0",
+      "13.5.1",
+      "15.7.1"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-3.3.1d",
+    "section": "3.3.1d",
+    "title": "Joint Logistics Phase",
+    "summary": "Restrictions on logistic rules for both Allied and German sides in early scenarios.",
+    "text": "Allied (all scenarios): The Allied side does not use the full logistic rules (GOSS 16.0). See specific scenario rules.\nGerman: The German side does not use the full logistic rules (GOSS 16.0) until the Dec 20 AM GT.",
+    "crossRefs": [
+      "16.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-3.3.2b",
+    "section": "3.3.2b",
+    "title": "Construction Phase",
+    "summary": "Restrictions on Allied construction of bridges and demolition timing in early game turns.",
+    "text": "**Construction Segment:** The Allied side may not begin construction of bridges (GOSS 17.3.1a) and/or FW (GOSS 17.3.3) until the Dec 17 AM GT.\n\n**Demolition Segment:** The Allied side:\n1) May not conduct prepared bridge demolition (GOSS 17.3.2c) until the Dec 17 AM GT.\n2) May not conduct hasty bridge demolition (GOSS 17.3.2b) until the Dec 16 PM GT.",
+    "crossRefs": [
+      "17.3.1a",
+      "17.3.3",
+      "17.3.2c",
+      "17.3.2b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-3.4",
+    "section": "3.4",
+    "title": "Extended Night Activity",
+    "summary": "Extended Night Activity (ENA) is in effect for WAR scenarios.",
+    "text": "Extended Night Activity (ENA) is in effect.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-3.5",
+    "section": "3.5",
+    "title": "Rest Game Turns",
+    "summary": "Rest GT rules begin on Dec 20 AM GT and apply to all scenarios.",
+    "text": "Rest GT rules go into effect beginning the Dec 20 AM GT. They are in effect on all other GDs in all scenarios.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.0",
+    "section": "4.0",
+    "title": "Unit Characteristics",
+    "summary": "Overview of WAR-specific unit characteristics and modifications.",
+    "text": "Unit Characteristics.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.3.3",
+    "section": "4.3.3",
+    "title": "Static Class Units",
+    "summary": "German Art units with range 18+ are static and cannot move or be transported by army truck points.",
+    "text": "German Art units with a range of 18 or greater cannot be transported by army truck points (TPs). They are static and cannot move.\n\n**Important:** Ignore the printed MA on their OoB sides.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.5.0",
+    "section": "4.5.0",
+    "title": "Green Divisions",
+    "summary": "US divisions in WAR do not use GOSS 4.4.0 green division rules; PR ratings are pre-adjusted.",
+    "text": "Do not use (GOSS 4.4.0). While US divisions may fit this category, in WAR, their PR has been adjusted to account for this. Within context of the game, these units cannot improve their PR ratings.\n\n**Important:** Do not use Rear Echelon Units rule (GOSS 4.6.3).",
+    "crossRefs": [
+      "4.4.0",
+      "4.6.3"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.4",
+    "section": "4.6.4",
+    "title": "German Nebelwerfer & Artillery (Art) Bdes/Rgts",
+    "summary": "German 150mm Nebelwerfer NW Bn.'s are self-propelled and may move while in battery.",
+    "text": "German 150mm Nebelwerfer (NW) Bn.'s are self-propelled (SP). They may move while in battery (IB).\n\n**Important:** The NW Bn.'s are shown with a zero MA on their IB side. They have an IB MA of 6. Out of battery NW have a BF of one-half (round up) of their IB side.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.8",
+    "section": "4.6.8",
+    "title": "Allied Construction Bn.'s",
+    "summary": "Allied construction engineer units have special restrictions on offensive operations, CR entry, and defensive shifts.",
+    "text": "All US Eng Bn.'s with a white crossed pick and shovel symbol in their unit type symbol are construction Eng units. Construction Eng.'s:\n\u2022 Do not confer offensive or defensive GA shifts.\n\u2022 Possess all construction abilities.\n\u2022 May not conduct an offensive GA if not stacked with another Allied unit capable of conducting a GA.\n\u2022 May not be the lead PR unit in an offensive GA and may only be the defensive lead PR unit if not stacked with another unit.\n\u2022 May not enter CR.\n\u2022 May not provide adjacent defender shifts.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.9",
+    "section": "4.6.9",
+    "title": "Von Der Heydte",
+    "summary": "Rules for the German paradrop operation behind V Corps lines, including timing and procedures.",
+    "text": "The Germans planned to drop von Der Heydte and his parachutists behind V Corps lines to prevent US reinforcements from linking up. The drop was not successful. See scenario rules to determine if the following rules apply.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.9a",
+    "section": "4.6.9a",
+    "title": "Determine Drop GT",
+    "summary": "Procedure to determine when the von Der Heydte paradrop occurs based on a die roll.",
+    "text": "In the Dec 16 AM GT Joint Command Phase, during the Leader Activation Segment the German player rolls 1d10:\n1) If the result is zero, the German player immediately conducts the von Der Heydte paradrop.\n2) On any other result, the paradrop is conducted during the Joint Command Phase of the Dec 17 AM GT.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.9b",
+    "section": "4.6.9b",
+    "title": "Drop Procedure",
+    "summary": "Detailed procedure for conducting the von Der Heydte paradrop including placement, survival rolls, and scatter.",
+    "text": "The German player selects three 1-2-6 Inf BU Co.'s and places them in or adjacent to hex NE4212 (all units must be in the same hex). That hex is the drop zone (DZ).\n\u2022 The German player then rolls 1d10 for each unit and applies the below results:\n  0-5: Unit eliminated (no RePs)\n  6-9: Unit survives.\n\u2022 For each unit that survived the drop, roll a second 1d10 to determine scatter.\n  0: Unit lands one hex north of the DZ.\n  1-2: Unit lands one hex northeast of the DZ.\n  3: Unit lands one hex southeast of the DZ.\n  4-5: Unit lands one hex south of the DZ.\n  6: Unit lands one hex southwest of the DZ.\n  7-8: Unit lands one hex northwest of the DZ.\n  9: Unit lands in the DZ.\n\u2022 If a unit's landing hex is occupied by an Allied unit, roll 1-10, on a roll of zero to five, the German unit is eliminated. On a roll of six to nine, the German unit lands in any adjacent hex (Allied player's choice).",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.9c",
+    "section": "4.6.9c",
+    "title": "On the Ground",
+    "summary": "Rules for surviving von Der Heydte paratroopers including movement restrictions and GenS status.",
+    "text": "Surviving units function as any leg unit, including movement during the ensuing German Movement Phase, with the below exceptions:\n  a) They are automatically in GenS the GT of the drop.\n  b) On the next GT they are marked as OoS if they cannot trace a GenS path to a German formation or BG HQ.\n  c) They are not considered attached to that formation/BG until the following AM GT.\n  d) They cannot observe for FS missions until attached to a formation or BG.\n  e) They cannot enter or capture fuel depots hexes until attached to a formation or BG.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.10",
+    "section": "4.6.10",
+    "title": "Einheit Stielau",
+    "summary": "Otto Skorzeny's jeep commando teams (Truppeneinheit) placement and removal rules.",
+    "text": "Otto Skorzeny's jeep commando teams that were part of Operation Grief are represented by the six German units labeled Truppeneinheit.\n\u2022 They are placed on the map at the beginning of the German Movement Phase of the Dec 16 PM GT at any of the 6th Pz Army's PSS.\n\u2022 All Truppeneinheit units are permanently removed from play during the Command Phase of the Dec 20 AM GT.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.10a",
+    "section": "4.6.10a",
+    "title": "The Units",
+    "summary": "Truppeneinheit unit capabilities: no combat, up to 18 hex road movement, and special stacking/movement restrictions.",
+    "text": "The units have no combat abilities and may not attack or be attacked. Truppeneinheit units:\n  a) May move up to 18 hexes (not MP) along any type of road (including trails) during each German Movement Phase.\n\n**Important:** These units cannot move from a hex into a hex not connected by a type of road. Stacking does not apply to these units.\n\n  b) May not be activated for ENA.\n  c) Are exempt from all GenS and OoC affects.\n  d) Cannot be used to establish German control of a hex, nor may they be used to capture or destroy US fuel dumps.\n\u2022 Each time one of these units moves into a US occupied hex, roll 1d10. If the roll is zero, the unit is eliminated.\n\u2022 Allied units may enter and move through hexes occupied by Truppeneinheit units; however, see (WAR 4.5.10b).",
+    "crossRefs": [
+      "4.5.10b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.10b",
+    "section": "4.6.10b",
+    "title": "Effects",
+    "summary": "Truppeneinheit units affect bridge demolition attempts and can redirect Allied unit movement.",
+    "text": "Truppeneinheit units have two effects on Allied operations.\n\n**Bridge Demolition:**\nIf a Truppeneinheit unit occupies a hex with a hexside(s) containing bridges and an Allied unit attempts to demolish (hasty or prepared) any of those bridges, the US player adds +1 to the bridge demolition attempt.\n\u2022 If the demolition attempt succeeds, the Truppeneinheit unit is eliminated.\n\u2022 If the attempt fails the Truppeneinheit unit is not affected and may interfere with any other demolition attempts against any other bridges along its hexsides.\n\n**Redirect Movement:**\nAny time a US unit(s) enters a hex containing a Truppeneinheit unit, the German player may attempt to redirect that US unit's movement.\n\u2022 The hex may not contain a town or city.\n\u2022 If an active US leader is stacked with the Allied units, there is no effect, ignore the presence of Truppeneinheit unit.\n\u2022 If neither of the above are true, the German player rolls 1d10. Add one to the DR for each GD after Dec 18 and apply the modified result.\n  0-4: The German player may move the Allied unit(s) along any connected road or trail hexes he wishes, expending any remaining MP the Allied unit(s) had after entering the Truppeneinheit's hex. It does not matter what type of movement the Allied units were using the German player automatically moves them as if they were using Mech road movement rates.\n  5-7: There is no effect, the Allied unit(s) may continue movement normally.\n  8-9 or greater: The Truppeneinheit is eliminated. The Allied unit(s) is unaffected.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.11",
+    "section": "4.6.11",
+    "title": "150th Panzer Brigade",
+    "summary": "Special rules for the 150th Pz Bde which had units disguised as US forces, with unique capabilities and withdrawal requirements.",
+    "text": "This unit, commanded by Otto Skorzeny, contained two mechanized units with special capabilities based on an attempt to make them appear to be US units (panthers designed to look like M-10 TDs).",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.11a",
+    "section": "4.6.11a",
+    "title": "The Units",
+    "summary": "150th Pz Bde units have restrictions on recycle steps, replacements, movement near enemy, and movement halts.",
+    "text": "Hard/600/150x Mot Inf Bn. and Hard/150x PzV KG have the following special abilities and restrictions:\n  a) They do not garner recycle steps (GOSS 22.2.0) nor may they replace step losses in any way (GOSS 22.5.0).\n  b) They do not expend MPs to move adjacent to enemy units (GOSS 7.8.0).\n  c) They may ignore movement halts (MHs) due to enemy units (GOSS 7.7.0). The German player rolls 1d10 (for each unit) and applies the below results.\n  0-3: The unit(s) ignore the movement halt.\n  4-9: The unit(s) must halt their movement.",
+    "crossRefs": [
+      "22.2.0",
+      "22.5.0",
+      "7.8.0",
+      "7.7.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-4.6.11b",
+    "section": "4.6.11b",
+    "title": "Withdrawal",
+    "summary": "150th Pz Bde must be withdrawn by Dec 27 PM GT or the Allied side receives victory points.",
+    "text": "In any scenario or campaign game that continues past the Dec 27 PM GT, all units assigned to the 150th Pz Bde must be withdrawn during the German Administrative Phase on the Dec 27 PM GT.\n\u2022 Remove all surviving units from the map, regardless of location or supply status (including if adjacent to enemy units).\n\u2022 If the German player does not withdraw the Bde during the Dec 27 PM GT:\n  1) The Allied side immediately receives five victory points; and,\n  2) All units of the 150th Pz Bde no longer have any of the special capabilities listed in (WAR 4.6.11a).\n\u2022 If the German player withdraws the Bde at the above time the Allied player is awarded:\n  a) Five victory points if all units of the Bde have been eliminated.\n  b) Three victory points if the Bde has lost one-half or more of the Bde's total number steps assigned on Dec 16.",
+    "crossRefs": [
+      "4.6.11a"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-5.0",
+    "section": "5.0",
+    "title": "Unit Modes",
+    "summary": "Overview of WAR-specific unit mode rules.",
+    "text": "Unit Modes.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-5.5.7",
+    "section": "5.5.7",
+    "title": "Strat Mode & Assembly Areas",
+    "summary": "Assembly areas are mandatory in WAR for units/formations in Strat mode, with rules for designation, movement, and relocation.",
+    "text": "**Important:** Assembly areas are normally an optional rule. When playing WAR, players should use the rule as written. If players do not use this rule, game balance will be affected.\n\nPlayers must assign an assembly area to units or formations when placing a unit or formation into Strat mode.\n\nNote: Players may assign assembly areas by formation, Rgt or unit. Players may assign separate assembly areas to Rgt's subordinate to the same formation HQ.\n\n\u2022 The owning player secretly writes down the hex number of an assembly area, noting the identity of the units assigned to that assembly area.\n\u2022 Units must move as directly as possible to their assigned assembly area.\n\u2022 A unit cannot voluntarily remove its Strat mode marker until it begins a friendly Movement Phase within three hexes of its assembly area hex.\n\u2022 Players may change the location of an assembly area at the start of a friendly Movement Phase if:\n  a) The assembly area is within three hexes of an enemy unit; or,\n  b) If the assembly area is unreachable by those units. Use common sense and be fair to your opponent.\n\u2022 An assembly area may also be re-designated during the AM Command Phase at the owning player's option.\n\u2022 The new assembly area must be within 10 hexes of the previous one.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-7.0",
+    "section": "7.0",
+    "title": "Movement",
+    "summary": "Overview of WAR-specific movement rules.",
+    "text": "Movement.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-7.10.2a",
+    "section": "7.10.2a",
+    "title": "Bridge Bottlenecks",
+    "summary": "Bridge bottleneck rule is in effect from Dec 16 through the PM GT of Dec 19 for all scenarios.",
+    "text": "The bridge bottleneck rule (GOSS 7.10.2a) is in effect for all scenarios beginning Dec 16. On the PM GT of Dec 19 bridge bottlenecks are no longer in effect.\n\n**Designer's Note:** The rule should be used throughout the game (feel free to do so), however since the biggest impact was during the early stages of the campaign, I decided to simplify play by ending the effect on the 19th.",
+    "crossRefs": [
+      "7.10.2a"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-7.10.4",
+    "section": "7.10.4",
+    "title": "Traffic Congestion",
+    "summary": "Rules for simulating traffic congestion experienced by both sides early in the battle.",
+    "text": "To simulate the degree of traffic congestion experienced by both sides early in the battle, in all scenarios",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.0",
+    "section": "9.0",
+    "title": "Command",
+    "summary": "Rules governing command structure, army boundaries, and corps assignments for the WaR scenario.",
+    "text": "This section covers command rules specific to the Wacht am Rhein scenario, including army boundaries, corps boundaries, and special command restrictions.",
+    "crossRefs": [
+      "9.2.0",
+      "9.2.1",
+      "9.2.2"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2",
+    "section": "9.2",
+    "title": "Command Boundaries",
+    "summary": "At-start army boundaries for all scenarios are depicted on the scenario map diagrams. Players may adjust boundaries as play proceeds.",
+    "text": "At start army boundaries for all scenarios are depicted on the scenario map diagrams. The boundaries for all scenarios starting on Dec 16 are also printed on the game maps. As play proceeds for each scenario, players may adjust army/corps boundaries using the below rules.\n\n**Important:** In any scenario that corps ZOP are not defined, players must designate corps ZOP prior to the start of play. Unless stated otherwise in scenario instructions, units/formations may not be reassigned to other corps/armies until Dec 19 AM GT.\n\n**Important:** When playing Dec 16 group scenarios, corps ZOP designated prior to play may not be changed until the Dec 19 AM GT.",
+    "crossRefs": [
+      "9.2.1",
+      "9.2.2"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.1",
+    "section": "9.2.1",
+    "title": "German Army Boundaries",
+    "summary": "German army boundaries for Dec 16 scenarios are printed on the map and remain in effect until the Joint Command Phase of Dec 19 AM GT.",
+    "text": "The German army boundaries for the Dec 16 scenarios are all printed on the map and are in effect until the Joint Command Phase of the Dec 19 AM GT.\n\n\u2022 The 6th/5th Panzer Army boundary is the xx27 hex row on the NE map, out to the 59xx column of hexes on the NW map.\na) The 6th Panzer Army ZOP encompasses all hexes on or north of the boundary line.\nb) The 5th Panzer Army ZOP is all hexes south of the boundary line to all hexes on or north of the 5th Pz/7th Army boundary.\n\n\u2022 The 5th Panzer/7th Army boundary is the xx20 hex row on the SE map, out to the 63xx column of hexes on the SW map.\na) The 7th Army ZOP encompasses all hexes south of the boundary line to the southern map edge.\n\n**Exception:** 5th FJ Division units may operate east of the Clerf River up to five hexes north (inclusive) of the 7th/5th Pz Army boundary line without suffering out of command penalties.\n\n**Exception:** Lehr Pz Division may operate east of the Clerf River up to five hexes south (inclusive) of the 7th/5th Pz Army boundary without suffering out of command penalties.\n\n\u2022 Beginning the Command Phase of the Dec 19 AM GT, the German player may adjust army boundaries and reassign units/formations to corps/armies as desired.\n\n\u2022 The Dec 21 and Dec 28 scenario starting army boundaries are depicted on the respective scenario diagrams. Players may adjust these boundaries during the Joint Command Phase of Dec 22 and Dec 29 AM GTs, respectively.",
+    "crossRefs": [
+      "9.2.1a"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.1a",
+    "section": "9.2.1a",
+    "title": "7th Army Mech Restrictions",
+    "summary": "The 7th Army may never have more than one BG sized Mech formation assigned. This restriction is lifted beginning Dec 20 AM GT if fuel requirements are met.",
+    "text": "In all scenarios beginning Dec 16, the 7th Army may never have more than one BG sized Mech formation assigned. This restriction is lifted beginning Dec 20 AM GT if the 7th Army has:\na) One TP assigned to transport fuel for each Mech division assigned to the army; and,\nb) One TP assigned to transport fuel for every two BG sized formations assigned to the army. Divide the number of BG sized formations by two and round up to determine the number of TP required.\n\n**Designer's Note:** This reflects the non-mechanized role assigned to the 7th Army and its orphan status concerning mechanized assets. If a player wants to assign more mechanized formations to the 7th Army, the player must assign a higher priority of mechanized logistic support to this army.",
+    "crossRefs": [
+      "9.6.2"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.2",
+    "section": "9.2.2",
+    "title": "Allied Army Boundaries",
+    "summary": "In all scenarios beginning Dec 16, the US 1st Army ZOP covers all Allied areas on all four maps until Montgomery takes command or 3rd Army is activated.",
+    "text": "In all scenarios beginning on Dec 16, the US 1st Army ZOP covers all Allied areas on all four maps. All corps on the map are assigned to the 1st Army until:\n1) Montgomery Takes Command (WAR 9.2.2a); or,\n2) 3rd Army is activated on Dec 21 AM GT.\n\n\u2022 In either of the above cases, the Allied player must establish a boundary between the 1st and 3rd Armies.\n1) The command boundary between the 3rd and 1st Armies must be within two hexes hex row xx02 on the SE and SW maps.\n2) All corps HQ located south of the line are assigned to the 3rd Army and all corps HQ located on or north of the line remain assigned to the 1st Army. Corps ZOP may be adjusted to fall within the new army ZOPs.\n\n**Exception:** No matter the location of the V or VIII Corps HQs, the V Corps must be assigned to the 1st Army, and the VIII Corps must be assigned to the 3rd Army.\n\na) Units and/or formations that would normally be OoC due to the new boundary lines may operate normally during all GTs of the Dec 21 GD without regard for the army boundary line.\nb) During the Joint Command Phase of Dec 22 all units must within each army's ZOP must be assigned to the army in which ZOP they are currently located.\n\n**Important:** Units/formations not assigned to the correct army at this time are marked OoC.\n\n**Important:** In all scenarios in the Dec 21 and Dec 28 scenario groups, the split between the 1st and 3rd Armies has already taken place and Montgomery has taken command.",
+    "crossRefs": [
+      "9.2.2a",
+      "9.2.1"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.2a",
+    "section": "9.2.2a",
+    "title": "Montgomery Takes Command",
+    "summary": "In scenarios beginning Dec 16, Montgomery takes command when specific conditions are met regarding German unit positions and supply paths.",
+    "text": "In any scenario beginning on Dec 16 (unless otherwise stated in the scenario rules), Montgomery takes command if:\n1) It is the Dec 17 Night GT or later; and,\n2) At least four units of a single German formation/BG is on or west of the 26xx hex row on the NE or SE map; and,\n3) Those units can trace a GenS path (may be an extended path) to its PSS.\n\n**Important:** Once the German player has met the above requirement the command change will go into effect. There is no requirement for the German unit(s) to continue to meet the requirement.\n\n\u2022 If the above requirement is met, Montgomery Takes Command in the first Joint Command Phase after the condition is met.\n\u2022 If the 3rd Army has not been activated, it is automatically activated during the above Joint Command Phase and the Allied player must establish the 3rd Army ZOP (WAR 9.2.2).\n\u2022 At the beginning of the Joint Command Phase of the GD after Montgomery takes command, the Allied player must declare a strategic withdrawal. The Allied player must:\n\n**Example:** Montgomery takes command during the Joint Command Phase on Dec 21. In the Joint Command Phase of Dec 22, the Allied player declares the strategic withdrawal.\n\n1) Identify one US corps assigned to the 1st Army. The corps must have at least one assigned division and six corps assets assigned.\n2) During all GTs that day units assigned to that corps:\na) May not enter PA mode.\nb) May move normally, but may not move closer to a German unit, unless the Allied unit is moving in a westerly direction.\n\n**Exception:** If any units assigned to the withdrawing corps are isolated, the Allied player may place units in PA mode and conduct up to two GAs per GT using units in PA mode to attempt to break out the isolated units. These units may move in any direction.\n\n3) Do not require a rest GT.\n4) At the end of the Night GT the GD that the strategic withdrawal is declared, the Allied player must conduct an ENA period (GOSS 3.4.0).\na) All units of that corps are automatically activated.\n\n**Important:** Any units assigned to the withdrawing corps that are marked with an isolated marker are not required to activate, although the owning play is free activate them.\n\nb) The Allied side is automatically the first player.\nc) All Allied activated units must move up to the limit of their printed MA in such a manner as to move away from the closest German unit and closer to their PSS.\nd) Activated units are not subject to ENA fatigue.\n\n\u2022 During the Joint Command Phase of the GD following the above ENA period, the Allied player must select one corps assigned to the 1st Army and declare a corps level lull (GOSS 24.0). The German player cannot refuse the lull.\n\u2022 Use the procedures in GOSS 24.0 with the following exceptions:\na) The lull must last for at least five GDs. Neither side can break prior to the full five GDs.\n\n**Example:** If the lull goes into effect on Dec 22, it continues through the Dec 26 Night GT.\n\nb) Neither side may activate any units (GOSS 24.2.0).\nc) The Allied player may conduct GS missions normally. The lull has no effect on GI, SI, ASup or air supply missions.\nd) On the AM GT of the sixth GD of the lull the Allied player rolls 1d10 and implements the result:\n0-4: The Allied player may end the lull. If the Allied player does not end the lull, the German player may launch a counter offensive (GOSS 24.5.0).\n5-8: The German side may end the lull. If the German player does not end the lull, the lull continues as below.\n9: The lull continues until the AM GT of the next GD. Follow the above procedures on the next GD. Apply a -1 DRM to the DR for each GD after the first DR.",
+    "crossRefs": [
+      "9.2.2",
+      "3.4.0",
+      "24.0",
+      "24.2.0",
+      "24.5.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.2b",
+    "section": "9.2.2b",
+    "title": "US Communication Zone",
+    "summary": "Beginning Dec 16 GD, the area west of the Meuse River from Herstal to Sedan is the US Communication Zone (COMZ) with special restrictions.",
+    "text": "Beginning on Dec 16 GD until elements of the British XXX Corps arrive, the area west of the Meuse River running from Herstal (NE2101) to Namur (NW4114) to Sedan (SW4034) is the ZOP of the US Communication Zone (COMZ).\n\u2022 All units with a CZ printed in the upper left corner of their counter are assigned to COMZ.\n\u2022 Units assigned to COMZ may not move east of the Meuse River unless released by scenario instructions.\n\n\u2022 If a German unit crosses the Meuse River and enters the COMZ ZOP, the COMZ unit movement restrictions are lifted and the COMZ ZOP is abolished. All COMZ units may be reassigned to either the 1st or 3rd Armies (WAR 9.2.1).\n\u2022 The COMZ boundary is changed to the boundary shown on the Dec 21 scenario map at the beginning of the Joint Command Phase if a unit of British XXX Corps occupies Givet (SW3703).",
+    "crossRefs": [
+      "9.2.1"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.3",
+    "section": "9.2.3",
+    "title": "Dec 16 Scenario Group Allied Corps Boundary Restrictions VIII/V Corps",
+    "summary": "The boundary line for VIII/V Corps is printed on the NE map with restrictions on crossing until Dec 18 Night GT.",
+    "text": "The boundary line is printed on the NE map.\na) US units that start the Dec 16 scenarios on the map may not cross the VIII/V Corps boundary until the Dec 18 Night GT.\nb) Units that enter the map as reinforcements are not affected by this rule until they reach their assembly areas.\nc) The Allied player may modify this boundary beginning the Joint Command Phase of Dec 19.\n\nOther US Corps: As additional US corps arrive the Allied player must designate corps boundaries during the first AM Command Phase after the corps HQ arrives.\n\n**Example:** The US XVIII Corps HQ arrives on the Dec 18 AM GT. The corps boundary must be set during the Joint Command Phase on Dec 19.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.4",
+    "section": "9.2.4",
+    "title": "British XXX Corps",
+    "summary": "All British units are under command of XXX Corps, originally near Hasselt, Belgium, serving as a backstop reserve for the US Army.",
+    "text": "All the British units in the game are under command of XXX Corps. The corps was originally near Hasselt, Belgium, resting and refitting for the upcoming 21st Army Group offensive in February. They were committed as a backstop to the US Army in case the Germans should approach or cross the Meuse River. As such, they represent a vital and important reserve, but one that was not to be squandered needlessly.",
+    "crossRefs": [
+      "9.2.4a",
+      "9.2.4b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.4a",
+    "section": "9.2.4a",
+    "title": "Corps Boundary & ZOP",
+    "summary": "Scenario maps for Dec 21 and Dec 28 depict the ZOP for XXX Corps with specific restrictions on British unit movement and activation.",
+    "text": "The scenario description maps for Dec 21 and Dec 28 scenario groups depict the ZOP for XXX Corps.\n\u2022 On the Dec 20 PM GT the first British unit arrives, that unit must move by the most direct route to Givet (SW3703).\n\u2022 Once an XXX Corps unit occupies Givet (SW3703), all the area west of the Meuse River from Herstal (NE2101) to the Dec 21 COMZ boundary becomes the ZOP for XXX Corps.\n\u2022 Arriving formation/sub-formation HQ must be assigned an assembly point. Once the HQ occupies its assembly point all subordinate units must remain within 12 hexes of their HQ.\n\u2022 Within the above restrictions, British units may move freely in the XXX Corps ZOP, however they may not cross the Meuse River or leave the XXX Corps ZOP until activated.\n\u2022 The Allied player may freely attach and detach units assigned to XXX Corps. Units/formations may not be reassigned to US corps.\n\u2022 Non-activated units may not conduct any type of construction or demolition.\n\u2022 If attacked, non-activated units defend normally.",
+    "crossRefs": [
+      "9.2.4b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.4b",
+    "section": "9.2.4b",
+    "title": "XXX Corps Activation",
+    "summary": "All XXX Corps units are inactive until activated by scenario instructions, automatic triggers, or German actions crossing the Meuse River.",
+    "text": "All XXX Corps units are inactive and must abide by the restrictions in WAR 9.2.4a until activated. XXX Corps units are activated by:\n1) Scenario instructions.\n2) If not activated in previous GTs, the British 29th Arm Bde is automatically activated at the beginning of the Dec 25 PM GT.\na) The Bde may operate normally within the XXX Corps ZOP and within three hexes of the eastern side of the Meuse River.\nb) No additional units may be attached to this Bde.\nc) The Bde may attack normally, however if a German unit violates 4) below, that act does not activate additional XXX Corps units.\n3) A German unit conducting an FS mission or GA (including overrun (GOSS 5.3.5) and/or CDM (GOSS 7.14.0) against a unit of the XXX Corps. In this case, the British formation whose subordinate unit(s) were attacked, and all corps asset units are activated at the beginning of the next Allied player turn.\n4) A German unit occupying any hex west/northwest of the Meuse River that is in the ZOP of XXX Corps or COMZ ZOP. In this case, all or part of XXX Corps may activate: at the beginning of the next Allied Player turn:\na) The British Div sized formation HQ closest to a German unit (that that has met the above condition) is automatically activated. All subordinate units to that HQ are also activated.\nb) If two or more HQ are equidistant from a German unit, the Allied player may choose the HQ to activate.\nc) If German units have crossed at more than one point, and those points are separated by at least 10 hexes (do not count the German occupied hexes). Then the Allied player may activate one British division for each separate point.\n5) During the first Joint Command Phase after any XXX Corps units are activated by 3) or 4) above, the Allied player rolls 1d10 and modifies the DR by adding the number of German units that have crossed the Meuse River to the DR.\n1) If the modified result is 9 or greater, all remaining units assigned to the XXX Corps are activated.\n2) If the modified result is 8 or less, no additional units are activated.\n\n\u2022 The Allied player may attempt to activate all the XXX Corps in each successive Allied Administrative Phase.\n\u2022 In the first Joint Command Phase after a unit assigned to XXX Corps crosses the Meuse River (Exception: If the 29th Arm Bde is activated using 2), the Allied player must create an XXX Corps ZOP east of Meuse River.\n\u2022 The ZOP cannot be within the 3rd Army or COMZ ZOP and cannot extend east of the Ourthe River.\n\u2022 US units and formations may not be assigned to the XXX Corps and must exit that corps ZOP as soon as possible.\n\n**Designer's Note:** Players need to agree upon when the US units must be out of the XXX Corps ZOP.",
+    "crossRefs": [
+      "9.2.4a",
+      "5.3.5",
+      "7.14.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.5",
+    "section": "9.2.5",
+    "title": "German Corps Boundaries",
+    "summary": "The German player may set corps boundaries as they see fit unless restricted by specific scenario rules.",
+    "text": "The German player may set the boundaries of individual corps as they see fit unless restricted by specific scenario rules.\n\n**Exception:** In all Dec 16 scenarios, the German player must designate corps boundaries prior to the start of play. The German player may not modify these boundaries until the Joint Command Phase of Dec 19.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.6",
+    "section": "9.2.6",
+    "title": "Out of Play Area",
+    "summary": "The northeast area of the NE map is not active during the battle. Specific hexes are out of play in all scenarios.",
+    "text": "The northeast area of the NE map was not active during the time of the battle. To reflect this the following hexes on the northeast map are out of play in all scenarios: Hex 5201 to 5203 to 6409 to 7006. No units are placed, nor may they enter the above section of the map. See Dec 16 scenario group (WAR 30.0) for additional out of play areas.\n\n**Important:** If players decide to include the units set up in the out of play area, German units within that area cannot enter PA mode during the Dec 16 Pre-dawn GT.",
+    "crossRefs": [
+      "30.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.7",
+    "section": "9.2.7",
+    "title": "Southern Map Edge",
+    "summary": "Rules dealing with the US southern operational area, addressing the lack of US units and proximity to Luxembourg City.",
+    "text": "These rules deal with the situation of the US southern operational area (initially the 4th Inf Div and 9th Arm Div) being so devoid of US units and at the same time, being close to Luxembourg City. This was a sensitive issue for the US command. If not accounted for, non-historical game play abuse may occur if it is not specifically restricted.\n\n**Designer's Note:** I have seen too many games in which the US player just writes off defending the south because there is no reason to stay adjacent to the Sauer River or defend the entry zones for 3rd Army early in the game. Conversely, putting victory point goals along that map edge gives the Germans too much incentive for thrusting out that far with 7th Army.",
+    "crossRefs": [
+      "9.2.7a",
+      "9.2.7b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.7a",
+    "section": "9.2.7a",
+    "title": "Movement On/Off the Southern Map Edge",
+    "summary": "Allied units retreating or exiting off the SE or SW map edge may not reenter until the second Allied Movement Phase of the second GT after exiting.",
+    "text": "If an Allied unit retreats or exits anywhere off the SE or SW map edge, that unit may not reenter the map until the second Allied Movement Phase of the second GT after exiting the map.\n\n**Example:** A US unit is retreated off the map during the German Player Turn of the Dec 18 AM GT. The unit would be eligible to reenter the map during the Allied Movement Phase of Dec 18 Night GT.\n\n\u2022 A returning unit may enter the map on any hex not occupied by or adjacent to a German unit.\n\u2022 Allied units can never enter east of the Dec 16 frontline.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.7b",
+    "section": "9.2.7b",
+    "title": "Clearing the Southern Map Edge",
+    "summary": "If no Allied units are within 10 hexes of the south map edge, US reinforcements entering through those areas are delayed.",
+    "text": "1) If at the beginning of any GT there are no Allied units within 10 hexes of the south map edge east of hex row 35xx, all US reinforcements due to enter reinforcement areas A through D are delayed for six GTs.\n2) If at the beginning of any GT there are no Allied units within 10 hexes of the south map edge between hex row 22xx and hex row 40xx, all reinforcements scheduled to enter reinforcement areas A through D, are delayed three GTs.\n3) If both the above conditions are true, the stated reinforcements would be delayed nine GTs.\n4) At the beginning of any GT that any Allied non-Art/non-HQ unit has occupied the area for one complete GT, the reinforcement delay ends.\n\n**Important:** Each reinforcement delay can only occur one time.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.8",
+    "section": "9.2.8",
+    "title": "4th Infantry Division",
+    "summary": "The 4th Infantry Division is tied to its initial area of operations, holding the Sauer River line while other regiments are in reserve or continuing south.",
+    "text": "This division presents a unique situation: part of it is being used to hold the line of the Sauer River on the map, while the other two regiments are either in reserve or continuing the line off map to the south. As such, it is not available to be moved elsewhere on the map and is tied to its initial area of operations listed below.",
+    "crossRefs": [
+      "9.2.8a"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.8a",
+    "section": "9.2.8a",
+    "title": "Area of Operations",
+    "summary": "The 4th Inf Div HQ is off map and its units have specific movement restrictions tied to the Sauer River area.",
+    "text": "The division's HQ does not enter play, it is located off map (historically the town of Consthum).\n\u2022 Units subordinate to the 4th Inf Div, can trace GenS path no longer than nine Mech MP to any map edge marked with an \"A\".\n\u2022 Units assigned to the 4th Inf Div may not voluntarily move east of the 47xx hex row and south of the Sauer River.\n\u2022 If units assigned to the division are involuntarily moved out of the above area, they must move to exit the map as soon as possible. Once exited they may reenter on any hex not occupied by a German unit, anywhere within the above area on the immediately following GT.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.9",
+    "section": "9.2.9",
+    "title": "9th Arm Div Restrictions",
+    "summary": "The 9th Arm Div was split across the Ardennes with CCB and CCR acting as corps reserve. Special rules simulate historical use.",
+    "text": "Historically the 9th Arm Div was split up across the area of the Ardennes Forest with CCB and CCR acting as corps reserve and CCA in the line between the 4th Inf and 28th Inf Divisions to gain battle experience. To simulate the historical use of the Div, the three combat commands all operate as BG or may be attached to other divisions.\n\u2022 CCB and CCR may not be reattached to the 9th Div HQ until the Dec 26 AM GT.\n\u2022 9th Arm Div HQ, may attach units assigned to any Inf Div, up to the limit imposed by GOSS 9.6.2.",
+    "crossRefs": [
+      "9.2.9a",
+      "9.2.9b",
+      "9.6.2"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.9a",
+    "section": "9.2.9a",
+    "title": "CCA",
+    "summary": "CCA/9A units were assigned to support the 4th Inf Div area with specific movement restrictions tied to the Sauer River.",
+    "text": "The Div HQ and all units of CCA/9A (including the BU units listed in the Dec 16 scenario group) were assigned an area of the front prior to the battle to gain experience and then after the battle were kept in the area to support the 4th Inf Div and the remnants of the 28th Inf Div that retreated south across the Alzette River.\n\u2022 Beginning the Dec 17 AM GT, if any German unit occupies a hex south of the Sauer between the 41xx and 50xx hex rows CCA/9A must remain:\n1) South/southeast of the area bordered by Alzette and Sauer Rivers; or,\n2) Within six hexes of Colmar (SE4130).\n\u2022 If at any time after the Dec 18 AM GT there are no German units in the above area and if at least one Allied non-Art/non-HQ occupies Ettlebruck (SE 4126), CCA/9th Arm (including the Div HQ and BU units assigned to CCA is freed from this restriction.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.9b",
+    "section": "9.2.9b",
+    "title": "CCB & CCR",
+    "summary": "Both combat commands have activation restrictions beginning Dec 16, with specific conditions for when they may be activated and where they must move.",
+    "text": "In any scenario/campaign beginning Dec 16 both combat commands operate with the below restrictions:\n\u2022 Neither combat command can be activated until Dec 16 Night GT, unless a German unit has conducted a GA against a unit assigned to CCB and/or CCR. In this case only those units that were the target of the GA or those units adjacent to a German unit that conducted the GA may be activated.\n\u2022 During the Dec 16 Night GT, one of the two (Allied player's choice) combat commands may be activated.\n\u2022 During the Dec 17 AM GT, if not already activated, both combat commands are automatically activated.\na) When activated CCB:\n1) Is attached to the 106th Inf Div and all units assigned to that combat command must move to within two hexes of St Vith (NE4430). If blocked by the presence of German units, it must move as close as possible.\n2) Must remain attached to, and within GenS distance of the 106th Inf Div HQ until the beginning of the Command Phase on Dec 18. At that time, the Allied player may detach the combat command to operate as a BG, or attach it to another Div.\nb) When activated CCR:\n1) May not (any unit assigned to CCR) move onto the NE map until the Dec 18 AM GT.\n2) May operate as a BG or be attached to any Div assigned to the VIII Corps if the above movement restriction if met.\n\n**Important:** CCR and CCB may not operate as part of the 9th Arm Div at any time. They must remain as independent BGs or be attached to other divisions.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.10",
+    "section": "9.2.10",
+    "title": "7th US Arm Div",
+    "summary": "The 7th Arm Div enters from the north in Strat mode with assembly areas near Rodt, with restrictions on movement and assembly area changes.",
+    "text": "Historically, the 7th Arm Div entered the area map from the north early in the battle ordered to assemble near St. Vith and aid the forward regiments of the 106th Inf Div in the Schnee Eiffel. In a given game, this action may not be the best use of these units, but to allow free use of the division to the US player allows him the use of knowledge that the US command did not have at the time. As such, the 7A is restricted in its movements when it enters the map.\n\n\u2022 In any scenario/campaign beginning Dec 16, all units of the 7th Arm Div must enter the map in Strat mode and assign assembly areas (WAR 21.1.1b).\n\u2022 All 7th Arm Div assembly areas must be within three hexes of Rodt (NE4129).\n\u2022 All units must move their maximum number of MP towards those assembly areas using the most direct route possible.\n\u2022 During the Command Phase of Dec 17, the Allied player rolls 1d10 to determine if the assembly areas may be altered:\n0 or 1: The Allied player may freely change the assembly areas.\n2 through 9: The Allied player must retain the original assembly areas.\n\u2022 If the assembly areas are retained the Allied player must continue to move along a route that avoids contact with enemy units, even if not the most direct route.\n\n**Important:** If at any time, a German unit is within three hexes of Rodt, the Allied player is free to select new assembly areas.",
+    "crossRefs": [
+      "21.1.1b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.11",
+    "section": "9.2.11",
+    "title": "CCA, 5th US Arm Div",
+    "summary": "The 5th Arm Div's CCA functioned as a reserve with movement restrictions. Units are released progressively starting Dec 16 Night GT.",
+    "text": "The 5th Arm Div has one combat command (CCA) on the map. This combat command functioned as a reserve for the duration of the battle, is under the following movement restrictions:\n\n**Exception:** The 95/5A AFA Bn. is attached to the 78th Inf Div. It cannot be attached to any other formation (including the 5th Arm) for the duration of the game.\n\n\u2022 One two-company hybrid unit of CCA is released on the Dec 16 Night GT to backstop the position at Monschau.\n\u2022 It must move to Monschau and remain within one hex of Monschau (NE5111) unless Monschau and is at any time occupied by German units. unless forced to abandon this position. If so, it is free from any movement restrictions.\n\u2022 The remainder of CCA is released the Dec 17 AM GT; however, no unit (except the above) may move more than 10 hexes from Eupen (NE4105).\n\u2022 If German units (other than those of Von der Heydte Para drop (WAR 4.6.9) and Truppeneinheit (WAR 4.6.10)) move to within 10 hexes of Eupen, all units of CCA/5A are freed from all movement restrictions.",
+    "crossRefs": [
+      "4.6.9",
+      "4.6.10"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.12",
+    "section": "9.2.12",
+    "title": "1st US Inf Div",
+    "summary": "The Big Red One is billeted near Herve. If German units approach Eupen or Verviers, all units of the 1st Inf Div are immediately reinforced.",
+    "text": "The Big Red One was billeted in the vicinity of Herve (NE2904) after its grueling fight in the Hurtgen Forest.\n\u2022 If any German unit (other than those of Von der Heydte Para drop (WAR 4.6.9) and Truppeneinheit (WAR 4.6.10)) moves within eight hexes of Eupen or Verviers (NE4105 or NE3208), all units of the 1st Inf Div that have not already arrived as reinforcements, are immediately placed on the map within two hexes of Herve (NE2904).",
+    "crossRefs": [
+      "4.6.9",
+      "4.6.10"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.13",
+    "section": "9.2.13",
+    "title": "Dec 28 Scenarios & US V Corps",
+    "summary": "US V Corps is a peculiar case in Dec 28 scenarios, with specific restrictions on unit assignments and out of play areas.",
+    "text": "**Designer's Note:** US V Corps is a peculiar case because it holds the corner of the northern shoulder and is in the closest position to launch an offensive from which to cut off the German penetration at its base. Yet the corps' divisions never fully attacked after December 22. Supply was one factor, but Monty's reluctance to do so was another.\n\nIn the game, especially when starting with the Dec 28 scenarios,\n\u2022 The out of play area contains the 99th, 2nd, 9th and 78th US Inf Divs, which are all part of V Corps.\n\u2022 Additionally, no V Corps Art Bn.'s (those marked with V Corps) can be assigned any other Allied corps.\n\u2022 If the Allied player is allowed the option of to attack the base of the German salient, The Allied player may place the 9th US Inf Div within three hexes of Herve (NE2904).",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.14",
+    "section": "9.2.14",
+    "title": "German LXVII Corps",
+    "summary": "LXVII Corps was reassigned to 15th Army after Elsenborn Ridge failed. The area from Bullingen to Kesternich was also assigned to 15th Army's Corps.",
+    "text": "This corps was reassigned to 15th Army when it became obvious no breakthrough was going to be made on Elsenborn Ridge. The area to the northeast of Bullingen (NE5121) all the way to Kesternich (NE5608) was also put under command of another of 15th Army's Corps.\n\u2022 If Elsenborn (NE5018), Kalterherberg (NE5014) and Mutzenich (NE5011) have not been captured by the Dec 22 AM GT, the section of the front marked as \"Out of Play\" on the Dec 28 scenario map immediately goes out of play.\n\n**Important:** All units/formations subordinate to the V Corps within the out of play area are deactivated.\n\n\u2022 During the German Movement Phase of the Dec 22 PM GT, the following German formations/units enter the in-play area between hexes NE5123 and NE5129:\nLXVII Corps HQ\n12th VG Div\n3rd PzG Div\n\n**Important:** Both the 12th VG and 3rd PzG arrive with any step losses suffered previously to the Dec 22 AM GT.\n\n**Designer's Note:** Keeping those areas in play would mean an excessive amount of overhead for little activity. If players wish, they may continue to keep those areas active, but the Germans should then receive 18 Inf RePs during the Command Phase of Dec one more VG Div equivalent of troops (you can use replacement steps for that purpose).",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.15",
+    "section": "9.2.15",
+    "title": "10SS & 11 Pz Divs",
+    "summary": "These divisions were held in OKW reserve for use after German armored spearheads reached and crossed the Meuse River.",
+    "text": "These divisions were held in OKW reserve for use after the German armored spearheads had reached and crossed the Meuse River. The 10SS Div was going to be part of 15th Army's Sp\u00e4tlese offensive but was still refitting on Dec 16. The 11th Pz Div was held in reserve against the southern portion of 3rd Army's sector, to be used if Nordwind went well or to reinforce 5th Pz Army. Both of those divisions are unavailable until 22 Dec.",
+    "crossRefs": [
+      "9.2.15a",
+      "9.2.15b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.15a",
+    "section": "9.2.15a",
+    "title": "10SS Pz Div",
+    "summary": "This division arrives in the 6th Pz Army ZOP on the east edge of the NE map after specific conditions involving Mech Div units crossing the Meuse River are met.",
+    "text": "This division arrives in the 6th Pz Army ZOP on the east edge of the NE map on the GT after any Mech Div assigned to the 6th Pz Army has at least 75% of all surviving assigned units (round down) across the Meuse River and at least one unit assigned to the 6th Pz Army has exited the western or northern map edge of the NW map.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.15b",
+    "section": "9.2.15b",
+    "title": "11th Pz Div",
+    "summary": "This division arrives in the 5th Pz army ZOP on the east edge of the SE map after specific conditions involving Mech Div units crossing the Meuse River are met.",
+    "text": "This division arrives in the 5th Pz army ZOP on the east edge of the SE map on the GT after any Mech Div assigned to the 5th Pz Army has at least 75% of all surviving assigned units (round down) across the Meuse River and at least one unit assigned to the 5th Pz Army has exited the western or northern map edge of the NW map.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-9.2.16",
+    "section": "9.2.16",
+    "title": "II SS Pz Corps",
+    "summary": "The II SS Pz Corps consists of the 9th SS Pz Div and 2nd SS Pz Div, with arrival dependent on German control of specific hexes.",
+    "text": "The II SS Pz Corps consists of the 9th SS Pz Div and the 2nd SS Pz Div. Their GT of arrival is dependent on the progress that the offensive has made.\n\u2022 If all the following hexes are German controlled the corps HQ and all units of both divisions arrive on the Dec 18 AM GT:\nMalmedy (NE4020)\nSPA (NE3215)\nWerbomont (NE2220)\n\u2022 If the above hexes are not German controlled on the Dec 18 AM GT, the corps HQ and both divisions arrive in the Dec 19 PM GT. The division HQs arrive with low fuel. The German player must roll on the Fuel Level Table to determine the fuel level of the formation.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-15.0",
+    "section": "15.0",
+    "title": "Supply",
+    "summary": "Supply rules for Wacht am Rhein scenarios.",
+    "text": "15.0 SUPPLY",
+    "crossRefs": [
+      "15.2.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-15.2.0",
+    "section": "15.2.0",
+    "title": "Primary Supply Sources",
+    "summary": "Defines primary supply sources (PSS) for all WaR scenarios, including Allied and German PSS locations.",
+    "text": "Unless stated otherwise in scenario instructions, the below PSS apply to all scenarios.\n\n**Important:** Allied Army HQ are not used in WAR. Corps HQ trace directly to any of the above PSS.\n\n**15.2.0a Allied PSS**\nBastogne (SE2215 or 2216): US corps HQ may use Bastogne if:\n1) A GenS path of any length can be traced from either Bastogne hex exclusively along primary road hexes to any west map edge on the SW or NW maps; and,\n2) Neither of the Bastogne hexes have never been occupied by a German unit.\n\nMap Edge: All Allied corps may trace GenS from their PSS to corps HQ GenS from the below primary road map edge hexes:\n1) The western edge of the SW and NW maps; or,\n2) The south edge of the SW or SE maps on or west of the primary road south of SE5333; or,\n3) The north edge of the NW or NE map on or west of NE4401.\n\n**Exception:** A primary road hex that is occupied by or adjacent to a German unit cannot be used as a PSS.\n\n**15.2.0b German PSS**\nEach German army has a specific set of map edge hexes or cities that may be used as a PSS.\n7th Army: Tier (SE6834), Bitburg (SE6319) or any primary/secondary road map edge hex labeled with \"7A.\"\n5th Pz Army: Prum (SE5902) or any primary/secondary road map edge hex labeled with \"5P.\"\n6th Pz Army: Schleiden (NE6313) or Stadtkyll (NE6526) or any primary road map edge hex labeled with \"6P.\".\n\n**Important:** Each army can trace to only one PSS each GD. Players are free to choose which PSS they will use during the current GD.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-15.2.1",
+    "section": "15.2.1",
+    "title": "General Supply (GenS)",
+    "summary": "Rules for general supply checks, automatic supply periods, and Art unit supply status in WaR.",
+    "text": "In all scenarios beginning Dec 16, all units on both sides are in automatic GenS until the end of the Dec 17 Night GT (including the ENA period).\n\u2022 Beginning the Dec 18 AM GT both sides must check GenS and conform to all GenS rules unless stated otherwise in these rules.\n\n**Important:** Art units are considered in GenS when checking for AD or replenishment.\n\n\u2022 Units are not subject to surrender checks during the Joint Command Phase, Surrender Segment (GOSS 15.7.1) or during the unit status step of the GA process (GOSS 13.5.1) until the Joint Command Phase of Dec 18.",
+    "crossRefs": [
+      "15.7.1",
+      "13.5.1"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-15.2.2a",
+    "section": "15.2.2a",
+    "title": "German HQ to HQ GenS Path",
+    "summary": "German army HQ east of the start line may trace extended GenS paths to corps HQ without penalties.",
+    "text": "If a German army HQ is located east of the Dec 16 German start line, German army HQ to corps HQ (only) GenS paths may be up to 24 Mech class MP. They do not suffer the extended supply path penalties (GOSS 15.2.4).\n\n**Important:** This rule applies to the army HQ GenS paths, not PSS to army or corps to formation HQ GenS paths.",
+    "crossRefs": [
+      "15.2.4"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-15.2.7",
+    "section": "15.2.7",
+    "title": "German Bastogne-St. Vith Supply Complex",
+    "summary": "Conditions for establishing the Bastogne-St. Vith supply complex and its benefits for German supply.",
+    "text": "If both hexes of Bastogne (SE2215 and 2216) and St. Vith (NE4403) are German controlled and if the Germans can trace a HQ to HQ GenS path (GOSS 15.2.2) between St. Vith and Bastogne; Bastogne may be used a PSS for the 5th Pz Army and St. Vith may be used as a PSS for either the 5th Pz or the 6th Pz Army (not both).",
+    "crossRefs": [
+      "15.2.2"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-15.2.7a",
+    "section": "15.2.7a",
+    "title": "Bastogne-St. Vith Supply Complex Procedure",
+    "summary": "Procedure for validating the Bastogne-St. Vith supply complex each Supply Determination Segment.",
+    "text": "During each Supply Determination Segment, as the first action of the segment, the German player must check to see if the supply complex route is valid. To be valid both the following must be true.\n1) No Allied unit can be within three hexes of the three town hexes (2 for Bastogne and 1 for St. Vith) listed above, nor can an Allied unit be within three hexes of any primary road hex used to trace the GenS path between the towns; and,\n2) A German unit must occupy or been the last unit to occupy all three of the above town hexes.\n\u2022 If the above conditions apply the supply complex is found to be valid, the supply complex immediately becomes operational and may be used in the to determine GenS in the current segment.\n\u2022 The supply complex remains operational until the conditions are no longer met (checks are made during each Supply Determination Segment).\n\u2022 If the requirements above are not met in any subsequent segment, the complex immediately becomes inactive. The supply complex may be reestablished if the conditions are once again met.\n\n**Designer's Note:** The Germans had intended to put the rail line from Germany to St. Vith\u2013Bastogne back into service and use those two towns as supply railheads. Taking the two towns and clearing the primary road between them will immensely improve the German supply situation.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-15.2.7b",
+    "section": "15.2.7b",
+    "title": "Bastogne-St. Vith Supply Complex Benefits",
+    "summary": "The operational supply complex adds 2 to all German fuel and ammunition delivery die rolls.",
+    "text": "If the Bastogne-St Vith supply complex is operational, the German side adds 2 to all fuel and ammunition delivery die rolls (GOSS 16.3.0 & 16.4.0).",
+    "crossRefs": [
+      "16.3.0",
+      "16.4.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-15.10.0",
+    "section": "15.10.0",
+    "title": "German Rollbahnen (Optional)",
+    "summary": "Optional rule for designated German supply roads with increased GenS movement costs when shared.",
+    "text": "Each German Pz Div initially had a designated supply road for its own use.\n\u2022 Beginning on the AM GT of Dec 18 during the Supply Determination Segment and continuing until through Dec 20 AM GT the following is in effect:\na) When tracing a GenS path from a German corps HQ to a Pz Div HQ if any part of that GenS path is being used to trace a GenS for another Mech formation the GenS movement cost for the HQ conducting the GenS check is increased by one MP for each hex where both formations are tracing their GenS path.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-16.0",
+    "section": "16.0",
+    "title": "Logistics & Trucks",
+    "summary": "Overview of logistics rules for WaR. Allied armies do not use the Logistic Table.",
+    "text": "**Important:** Allied armies do not use the Logistic Table.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-16.1.1",
+    "section": "16.1.1",
+    "title": "Truck Availability",
+    "summary": "Truck Point allocations for scenarios using all four maps; Allied and German TP availability by date.",
+    "text": "The following TP allocations are used when playing any scenario that uses all four maps. The Allied player may not transfer TP from one army to another.",
+    "crossRefs": [
+      "16.1.1a",
+      "16.1.1b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-16.1.1a",
+    "section": "16.1.1a",
+    "title": "Allied TP Available",
+    "summary": "Allied Truck Points are for motorization only, with specific allocations by date for the 1st Army.",
+    "text": "Allied TP are used for motorization purposes only (GOSS 7.8.0).\nDec 16 through Dec 18: 6 TP (1st Army).\nDec 19 through Dec 20: 12 TP (1st Army).\n\n**Important:** All Leg class units of the 82nd and 101st AB Divs arriving as reinforcements are motorized using TP until arriving at the assembly areas. These TP do not count against the army TP level.\n\n**Exception:** If Montgomery takes command prior to Dec 21, each army has 6 TP.\n\nDec 21 through Dec 23:\n1st Army: 8 TP\n3rd Army: 6 TP\nDec 24 through Jan 8:\n1st Army: 10 TP\n3rd Army: 8 TP",
+    "crossRefs": [
+      "7.8.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-16.1.1b",
+    "section": "16.1.1b",
+    "title": "German TP Available",
+    "summary": "German Truck Points for motorization only until Dec 20 AM GT, with allocations by date and army.",
+    "text": "German TP are used for motorization purposes only until the AM GT of Dec 20. The German player may not transfer the below TP between armies.\n\nDec 16: No TP are available.\nDec 17 through Dec 19:\n6th Pz Army: 2 TP\n5th Pz Army: 2 TP\n7th Army: 1 TP\nDec 20 through Jan 8: 16 TP, the German player may divide these TP between the three German armies as desired and assign them to tasks as per GOSS 16.1.2. TP may be reassigned to armies as standard GOSS procedures.",
+    "crossRefs": [
+      "16.1.2"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-16.2.1b",
+    "section": "16.2.1b",
+    "title": "Allied Logistics",
+    "summary": "Allied side does not use full logistic rules; all Allied HQ/units are fully fueled with no fuel points.",
+    "text": "The Allied side does not use the full logistic rules in any scenario or campaign.\n\u2022 All Allied HQ/units are fully fueled and do not use fuel points during any scenario or campaign.\n\n**Exception:** Beginning the AM GT of Dec 18 OhS rules apply (GOSS 15.5.0).\n\n\u2022 When playing any scenario with a Dec 16 start, check the scenario rules to determine Allied ADV on Dec 16. Do not adjust Allied ADV based on supported corps. AmP cannot be created.\n\u2022 Beginning the AM GT of Dec 17, all Allied armies have a base ADV of 5, unless modified by scenario instructions.\n\n**Important:** Allied Army HQ do not appear in WAR; however, players must still determine army and corps ADV using the standard GOSS rules outlined in GOSS 16.0, modified as below.\n\n1) Allied army/corps ADV is adjusted using the procedures outlined in GOSS 16.3.2, skip Step 5.\n\n**Important:** When determining the number of supported corps HQ (GOSS 15.4.1 & 16.3.4 step 4), the 3rd Army must support one off map corps in addition to any on map corps assigned.\n\n2) The Allied side only gains AmP by reducing army ADV (GOSS 16.3.2 Step 3). Apply GOSS 16.3.6 to determine maximum stockpile limits.\n3) Allied armies may not transfer AmP (GOSS 16.3.5).",
+    "crossRefs": [
+      "15.5.0",
+      "16.0",
+      "16.3.2",
+      "15.4.1",
+      "16.3.4",
+      "16.3.6",
+      "16.3.5"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-16.2.1c",
+    "section": "16.2.1c",
+    "title": "British Logistics",
+    "summary": "XXX Corps uses Allied logistic procedures with specific TP and AmP allowances.",
+    "text": "XXX Corps uses the Allied logistic procedures listed in WAR 16.2.1b beginning the GT that the first division of the XXX Corps is activated. On that GT use the following procedures:\n\u2022 The corps has 3 TP available for motorization only.\n\n**Important:** All British Leg class units arriving as reinforcements are motorized using TP until arriving at the assembly areas. These TP do not count against the corps TP level.\n\n\u2022 The corps determines ADV independently of the 1st Army. Do not count this corps as part of 1st Army when determining ADV for 1st Army.\n\u2022 The corps may stockpile 10 AmP.",
+    "crossRefs": [
+      "16.2.1b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-16.2.1d",
+    "section": "16.2.1d",
+    "title": "German Logistics",
+    "summary": "German logistic rules phase in over time, starting with full fuel and transitioning to full logistic rules on Dec 20 AM GT.",
+    "text": "In all scenarios beginning Dec 16, the German player does not use the full logistic rules (GOSS 16.0). The German side begins using the full logistic rules beginning the Dec 20, AM GT.\n\n**Exception:** Beginning the AM GT of Dec 18 OhS rules apply (GOSS 15.5.0).\n\nDec 16 through Dec 19: The following rules are in affect:\n1) All German HQ/units are fully fueled.\n2) German base ADV is set by scenario instructions (WAR XXX).\n3) Beginning the AM GT of Dec 17, the German ADV is adjusted using the procedures outlined in GOSS 16.3.2, skip Step 5.\n4) The German side only gains AmP by reducing army ADV (GOSS 16.3.2 Step 3). Apply GOSS 16.3.6 to determine maximum stockpile limits.\n5) Available TP are used for motorization purposes only.\n\nDec 20 through Jan 8: Unless modified by scenario instructions, the following rules are in effect:\n1) The German side uses the full logistic rules (GOSS 16.0).\n2) The base ADV for all armies is 3.\n3) See WAR 15.2.7 for modifications to the logistic DRs if the Bastogne-St Vith supply complex is operational.",
+    "crossRefs": [
+      "16.0",
+      "15.5.0",
+      "16.3.2",
+      "16.3.6",
+      "15.2.7"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-16.3.6",
+    "section": "16.3.6",
+    "title": "German AmP Stockpiles",
+    "summary": "German armies are limited to a maximum of 10 AmP in stockpile at the beginning of a Logistics Phase.",
+    "text": "All German armies are limited to a maximum of 10 AmP in stockpile at the beginning of a Logistics Phase.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-16.3.6a",
+    "section": "16.3.6a",
+    "title": "Starting AmP Stockpiles",
+    "summary": "Starting German AmP stockpiles for each four-map campaign scenario with availability dates.",
+    "text": "Unless stated otherwise in specific scenario instructions the German side has the following stockpiles available at the beginning of each four map campaign scenario. There are also two dates that additional AmP may be added to the German stockpiles.\n\n**Important:** The number of AmP listed may be divided between the three German armies in any manner that the German player desires.\n\n\u2022 If playing the Dec 16 campaign game, the German player begins the game with 10 AmP in stockpile.\n\n**Important:** These AmP cannot be used during the Pre-Dawn Special GT.\n\n\u2022 These AmP cannot be used to modify the German base ADV on Dec 16.\n\u2022 They may be used to conduct intensive fire and/or replenish Art units (GOSS 16.3.7).\n\u2022 Beginning the AM GT of Dec 17, stockpiled AmP may be used to increase the German ADV.\n\nAll Scenarios beginning Dec 21 AM GT: 6 AmP. When playing any four-map campaign game starting Dec 16 or Dec 21, add eight AmP on the Dec 22 AM GT.\n\nAll Scenarios beginning Dec 28 AM GT: 10 AmP. When playing any four-map campaign game starting Dec 16, Dec 21, or Dec 28, add:\n1) 8 AmP on the Dec 29 AM GT.\n2) 6 AmP on the Jan 5 AM GT.\n\n**Important:** When playing any of the smaller scenarios, the number of AmP initially available to the Germans is given in the scenario listings.",
+    "crossRefs": [
+      "16.3.7"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-16.4.1b",
+    "section": "16.4.1b",
+    "title": "Starting FP Stockpiles",
+    "summary": "No German army starts a scenario with FP in stockpile unless specified in scenario instructions.",
+    "text": "Unless stated specifically in scenario instructions, no German army starts a scenario with FP in stockpile.\n\n**Important:** All German armies, corps and formations have normal fuel in all scenarios starting Dec 16.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-16.6.0",
+    "section": "16.6.0",
+    "title": "Fuel Dumps",
+    "summary": "Rules for US Army fuel dumps that can be captured by German forces for fuel benefits.",
+    "text": "The US Army had large supply dumps in the urban areas near the V Corps, with Liege being the 1st Army main supply dump. Those dumps contained food, ammo, and fuel, with fuel being the critical element for the German Army. Capturing town or city hexes within that area will increase the chances of capturing a fuel dump.",
+    "crossRefs": [
+      "16.6.1",
+      "16.6.2",
+      "16.6.3"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-16.6.1",
+    "section": "16.6.1",
+    "title": "Fuel Dump Placement",
+    "summary": "Allied player places fuel dumps at specified hex locations at scenario start.",
+    "text": "If scenario instructions state fuel dumps are available. The Allied player can mark the hexes or note on a piece of paper the location of each dump.\nNE3618 (Francorchamps)\nNE3710 (Jalhay)\nNE3413 (Tiege)\nNE3215 (Spa)\nNE2412 (Louveigne)\nNE2305 (Fleron)\nNE2911 (Theux)\nNE3208 (Verviers)\n\n**Important:** The Verviers location counts as two fuel dumps for evacuation purposes.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-16.6.2",
+    "section": "16.6.2",
+    "title": "Fuel Dump Evacuation",
+    "summary": "Beginning Dec 19 AM GT, Allied player may evacuate three fuel dumps each Joint Logistics Phase.",
+    "text": "Beginning the Dec 19 AM GT, in the Joint Logistics Phase, the Allied player may evacuate (remove) three fuel dumps each Joint Logistics Phase until all dumps are evacuated. Once evacuated they no longer can provide the benefits listed in WAR 16.6.3.\n\n**Important:** The Verviers fuel dump counts as two dumps.",
+    "crossRefs": [
+      "16.6.3"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-16.6.3",
+    "section": "16.6.3",
+    "title": "Fuel Dump Capture",
+    "summary": "Procedure for German capture of fuel dumps including die roll mechanics and effects on both sides.",
+    "text": "If at any time, a German unit enters a fuel dump location and that fuel dump has not been evacuated, the following occurs:\n\u2022 The German player immediately rolls 1d10, if the DR is being made due to the Verviers dump being captured apply a -1 DRM.\na) If the modified result is a zero, the main 1st Army fuel dump has been captured. Do not check for the 1st Army dump again.\nb) Any other result is a no effect. The German player may continue conducting this check each time a dump is captured.\n\u2022 Capturing the 1st Army fuel dump has the following effects:\nGerman: In the first Joint Logistics Phase after the 1st Army dump is captured, all German HQ (including army/corps HQ) that can trace a GenS path from the dump location to the location of that HQ are considered in normal fuel for that GD (no FP need be expended).\n\n**Important:** The dump location must be occupied by a German unit at this time and each HQ must trace directly to the dump and cannot use an extended supply path.\n\nAllied: In the first Joint Logistics Phase after the 1st Army dump is captured, all corps and formation HQ assigned to the 1st Army (including army assets) are automatically in low fuel for that GD. Follow the procedures in GOSS 16.4.5 to determine the fuel value for each HQ.\n\u2022 If the dump captured is not the 1st Army dump, the following is in effect:\nGerman: In the first Joint Logistics Phase after the dump was captured, the German player can declare one Mech formation or two Mech BG (assigned to the 6th Pz Army) have normal fuel for that GD without the expenditure of FP. In this case a GenS path is not required.\nAllied: No effect.\n\n**Important:** In either of the above cases, the German player cannot delay the use of the dump's affects.",
+    "crossRefs": [
+      "16.4.5"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-17.0",
+    "section": "17.0",
+    "title": "Engineers",
+    "summary": "Engineer rules for WaR covering bridges, heavy bridges, and fortified area hexes.",
+    "text": "17.0 ENGINEERS",
+    "crossRefs": [
+      "17.3.0",
+      "17.3.1c",
+      "17.5.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-17.3.0",
+    "section": "17.3.0",
+    "title": "Bridges",
+    "summary": "Scenarios may start with demolished bridges along the frontline rivers.",
+    "text": "Scenarios may start with demolished bridges.\n\nIn all scenarios beginning Dec 16:\nAll bridges along the frontline (the dotted black line on the scenario maps running along the Our and Sauer Rivers south of hex 4307 on the SE map) are demolished.\n\nIn all scenarios beginning Dec 21:\nAll those along the Our and Sauer Rivers (as noted above) except where the Germans have constructed new bridges (See Dec 21 German setup instructions). Additionally, the following bridges are demolished.\nNortheast Map: 3521/3522, 3322/3323, 3224/3324, 3120/3121, 2920/2921 and all bridges (3) in 3223.\nSoutheast Map: 1014/1114, 1907/1908, 4126/4127 and 4426/4427.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-17.3.1c",
+    "section": "17.3.1c",
+    "title": "Heavy Bridges",
+    "summary": "All GOSS rules apply for heavy bridges with restrictions on construction by army-level engineer battalions.",
+    "text": "All GOSS rules apply.\n\n**Exception:** Heavy bridges can only be constructed or dismantled by Eng Bn.'s assigned as army level assets.\n\n**Example:** An Eng Bn. with an army formation ID in the upper right corner of the counter.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-17.5.0",
+    "section": "17.5.0",
+    "title": "Fortified Area Hexes",
+    "summary": "Westwall hexes marked as destroyed in all scenarios beginning Dec 16.",
+    "text": "Westwall (WW) hexes are Ft area hexes. The following WW hexes are marked as destroyed in all scenarios beginning Dec 16.\nNortheast Map: All WW hexes that run from 4601 to 5209, 5213, 5515, 5617, 5618, 5730, 5731, 5632, 5532, 5433.\nSoutheast Map: 4507",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-19.0",
+    "section": "19.0",
+    "title": "Weather",
+    "summary": "Players choose variable or historical weather before starting a scenario.",
+    "text": "Players decide before starting a scenario whether to use variable or historical weather. Historical weather is shown on the Turn Record Tracks.\n\n**Important:** When using historical weather conditions, the ground condition is dry unless specifically listed as thaw, freeze, or snow.\n\n**Important:** To remain consistent with updated GOSS rules, treat the following ground conditions as:\nNormal: Dry",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-19.2.2",
+    "section": "19.2.2",
+    "title": "Variable Weather Determination",
+    "summary": "Procedure for determining atmospheric and ground conditions using variable weather during the Joint Weather Phase.",
+    "text": "Determine atmospheric and ground conditions for the GT during the Joint Weather Phase.\n\n**Important:** The German Turn Record Track lists the applicable DRMs to apply for that GT.\n\n**Example:** Dec 17 AM GT is shown as a +4/0, with the number to the left of the slash the atmospheric DRM and the number to the right, the ground DRM.\n\n\u2022 The Allied player consults the Weather Table on the German Turn Record Track and rolls 1d10 for atmospheric condition and then ground condition. Apply the applicable GT modifiers to each DRM.\n\u2022 For night GTs use the modifiers for the preceding PM GT and increase the ground condition modifier by +5.\n\u2022 Do not roll during ENA periods. The Night GT weather remains in effect.\n\u2022 Beginning the PM GT of Dec 27, if the atmospheric condition is determined to be POvr, Roll 1d10:\n  a) If the result is 0-4, the atmospheric condition is Ovr.\n  b) If the result is 5 or greater, the atmospheric condition remains POvr.\n\n**Important:** There are no modifiers for this second DR.\n\n\u2022 Beginning the AM GT of Dec 28, treat all ground condition results of normal as snow if the atmospheric condition is Ovr.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-20.0",
+    "section": "20.0",
+    "title": "Airpower",
+    "summary": "Rules governing airpower allocation and usage in WaR.",
+    "text": "20.0 AIRPOWER",
+    "crossRefs": [
+      "20.1.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-20.1",
+    "section": "20.1",
+    "title": "Air Point Availability",
+    "summary": "Each side receives zero or more APs to use each GT or GD depending on weather type.",
+    "text": "Each side will receive zero or more APs to use each GT or GD (depending on if using historical or variable weather).",
+    "crossRefs": [
+      "20.1.0a",
+      "20.1.0b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-20.1.0a",
+    "section": "20.1.0a",
+    "title": "Historical Weather AP Availability",
+    "summary": "When using historical weather, AP availability is read directly from the GRTs for each AM and PM GT.",
+    "text": "When playing with historical weather, the number of APs granted to each side is shown for each AM and PM GT on the GRTs. Total the number of AP shown as available on the GRT. The result is number of AP available for that GD.\n\n**Important:** The number of AP shown has already been adjusted for atmospheric conditions (GOSS 19.3.0). Do not use those adjustments.\n\n**Errata:** The AP values shown on the US GTRT for GTs 20 and 21 should be zero, not four.\n\n**Important:** The reduction used for historical weather could reduce the number of AP to below zero, treat that result as zero.",
+    "crossRefs": [
+      "19.3.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-20.1.0b",
+    "section": "20.1.0b",
+    "title": "Variable Weather AP Availability",
+    "summary": "When using variable weather, AP availability is listed by date range and players must use GOSS 19.3.0 adjustments.",
+    "text": "When playing with the variable weather option, the number of APs available is listed below. Player must use GOSS 19.3.0 AP adjustments.\n\nAllied AP Availability:\n  Dec 16: 0 AP\n  Dec 17 to Dec 19: 10 APs per GD.\n  Dec 20 to Jan 8: 50 APs per GD.\n\nGerman AP Availability:\n  Dec 16: 0 AP\n  Dec 17 to Dec 22: 8 APs per GD.\n  Dec 23 to Jan 8: 6 APs per GD.",
+    "crossRefs": [
+      "19.3.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-20.1.0c",
+    "section": "20.1.0c",
+    "title": "Operation Bodenplatte (Base Plate)",
+    "summary": "On January 1, 1945, the Germans launched a surprise airstrike against Allied airfields, temporarily disrupting Allied air efforts.",
+    "text": "On January 1, 1945, the Germans launched a surprise airstrike against Allied airfields called Operation Bodenplatte that temporarily disrupted Allied air efforts.\n\n**Historical Weather:** If using this option, the operation occurs on the Jan 1 AM GT.\n\n**Variable Weather:** If using this option, the operation occurs on the first AM GT on or after the Jan 1 that has an atmospheric condition of clear or POvr.\n\u2022 On the above listed GD, the German player can choose to conduct Bodenplatte or to cancel the operation.\n\n**Conduct Bodenplatte:**\n  a) All further German AP availability is set at zero (including the AP for the current GD).\n  b) The Allied player rolls 1d10 and applies the below result to the current and all remaining GDs:\n\n**Important:** If using historical weather, the below reductions are made to the total AP derived in (WAR 20.1.0a).\n\n0-3: The Allied AP availability is reduced by 18 AP per GD.\n4-6: The Allied AP availability is reduced by 10 per GD.\n7-9: The Allied AP availability is reduced by 6 AP per GD.\n\n**Important:** The reduction used for historical weather could reduce the number of AP to below zero, treat that result as zero.\n\n**Cancel Bodenplatte:** The Allied AP availability is not affected.\n\u2022 On the Jan 1 GD, the German side has 24 AP available. There is no other effect.",
+    "crossRefs": [
+      "20.1.0a"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-20.1.1",
+    "section": "20.1.1",
+    "title": "Assignment of Air Points",
+    "summary": "Rules for assigning Allied and German air points to armies and mission types.",
+    "text": "**Allied Air Points:**\n\u2022 In all scenarios beginning Dec 16 until 3rd Army is activated (WAR 9.2.2), all Allied AP are assigned to the 1st Army and may conduct operations anywhere on all four maps.\n\u2022 On the AM GT that 3rd Army is activated, Allied AP that are assigned to ground support (GS) missions must be divided between the 1st and 3rd Armies. These AP are limited to conducting GS missions in the ZoP of their assigned army.\n\u2022 AP assigned to supply interdiction (SI), air superiority (ASup), ground interdiction (GI) and ATP are not divided between the two armies and are not limited to conducting missions in a single army ZoP.\n\u2022 A maximum of two SI missions may be conducted against each German army.\n\u2022 The maximum number of AP assigned to each GS mission is 4.\n\n**German Air Points:** Are not assigned to specific German armies. They may operate freely anywhere on all four maps.\n\n**Important:** The German player may withdraw Heavy Flak Co.'s to protect against SI missions (GOSS 20.7.2). Withdrawn Flak units must be designated to each army when withdrawn. Once placed they cannot be transferred to another army.",
+    "crossRefs": [
+      "9.2.2",
+      "20.7.2"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-20.5",
+    "section": "20.5",
+    "title": "Air Supply",
+    "summary": "Air supply rules for WaR, referencing GOSS procedures with modifications for Allied and German ATP availability.",
+    "text": "GOSS 20.5.0 and 15.5.0 apply.\n\n**Exception:** See (WAR 20.5.4).\n\n**Allied Air Transport Points (ATP):**\n  Dec 18 to Dec 20 (inclusive): One ATP available each GD.\n  Dec 21 to Jan 8 (inclusive): Four ATP each GD. Each ATP may be used once per GD.\n\n**German ATP:**\n  Dec 18 to Jan 8 (inclusive): One ATP each GD. The ATP can only be used once per GD.",
+    "crossRefs": [
+      "20.5.4",
+      "20.5.0",
+      "15.5.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-20.5.4",
+    "section": "20.5.4",
+    "title": "German Air Supply",
+    "summary": "The German ability to conduct air supply is severely limited. Modifies GOSS 15.5.1b procedures.",
+    "text": "The German ability to conduct air supply was severely limited by this time in the war. Use the standard air supply procedures outlined in GOSS 20.5.0. GOSS 15.5.1b is modified as follows.\n\u2022 A successful drop allows the German player to remove 10 OoS markers from any units (except HQ) within three hexes of the drop zone hex.",
+    "crossRefs": [
+      "20.5.0",
+      "15.5.1b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-21.0",
+    "section": "21.0",
+    "title": "Reinforcements",
+    "summary": "Reinforcements are normally assigned an entry code, with units arriving at a specific entry code entering on or between the listed map edge codes.",
+    "text": "Reinforcements are normally assigned an entry code, units arriving at a specific entry code may enter on any road on or between the same entry code notation on the map.\n\n**Important:** Corrections to the reinforcement lists on the TRT are on the last page of these rules.",
+    "crossRefs": [
+      "21.1.1a"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-21.1.1a",
+    "section": "21.1.1a",
+    "title": "Reinforcements & Entry Mode",
+    "summary": "Allied reinforcements enter in Strat mode; German player may bring reinforcements in Strat mode without assembly points. Tac mode entry options also described.",
+    "text": "**Important:** There are Allied and German unit counters in the counter mix that do not appear in WAR. These units were provided for future variants.\n\nAllied reinforcements normally enter the map in Strat mode (GOSS 5.5.0). The Allied player may choose to bring in units in Tac mode; however, units not brought onto the map in Strat mode will be delayed (see below).\n\n**Important:** The German player may bring reinforcements onto the map in Strat mode however the player is not required to assign assembly points.\n\n\u2022 Reinforcements arriving in Strat road movement must be assigned an assembly point (WAR 21.1.1b).\n\n**Important:** Assembly points are normally an optional rule (see Decision Games Living Rules section on their website to download GOSS optional rules). When playing WAR to keep players from taking advantage of hindsight and affecting play balance, it should be considered mandatory.\n\n\u2022 The Allied player may choose to bring reinforcements onto the map in Tac mode.\n\u2022 Reinforcements entering in Tac mode:\n  a) Automatically enter one GT later than their listed entry GT.\n  b) May enter using Mech road movement, or tactical non-road movement.\n  c) May be brought onto any hex within three hexes of their original entry hex(es).",
+    "crossRefs": [
+      "5.5.0",
+      "21.1.1b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-21.1.1b",
+    "section": "21.1.1b",
+    "title": "Assembly Areas",
+    "summary": "Players must assign assembly areas to units entering in Strat mode. Units move toward their assembly area and cannot remove Strat mode markers until within three hexes.",
+    "text": "Players must assign an assembly area to units or formations when placing a unit or formation into Strat mode. Players may assign assembly areas by formation, Rgt or unit. Players may assign separate assembly areas to *Rgt's* subordinate to the same formation HQ.\n\n**Note:** Players may assign assembly areas by formation, Rgt or unit.\n\n\u2022 The owning player secretly writes down the hex number of an assembly area, noting the identity of the units assigned to that assembly area.\n\u2022 Units must move as directly as possible to their assigned assembly area.\n\u2022 A unit cannot voluntarily remove its Strat mode marker until it begins a friendly Movement Phase within three hexes of its assembly area hex.\n\u2022 Players may change the location of an assembly area at the start of a friendly Movement Phase if:\n  a) The assembly area is within three hexes of an enemy unit; or,\n  b) If the assembly area is unreachable by those units. Use common sense and be fair to your opponent.\n\u2022 An assembly area may also be re-designated during the Command Phase at the owning player's option.\n\u2022 The new assembly area must be within 10 hexes of the previous one.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-21.1.2",
+    "section": "21.1.2",
+    "title": "Blocked Allied Entry Hexes",
+    "summary": "If an Allied entry hex is occupied by German units, reinforcements use WAR 21.1.1a Tac mode entry procedure instead.",
+    "text": "If an Allied entry hex is occupied by German units, any reinforcements due to enter at that hex can be brought on using (WAR 21.1.1a), Reinforcements entering in Tac mode procedure.",
+    "crossRefs": [
+      "21.1.1a"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-21.1.3",
+    "section": "21.1.3",
+    "title": "Map Edge Entry Codes",
+    "summary": "Reinforcements are grouped by entry areas indicated by codes along map edges. Describes how Allied and German entry codes work.",
+    "text": "Reinforcements for a given GT are grouped by entry areas.\n\u2022 Entry areas are indicated by a code along specific map edges.\n\u2022 The entry areas are indicated by map edge codes.\n\u2022 Map edge codes indicate the set of roads where the group may enter.\n\u2022 German units may enter on any hex on or between the same entry code notation on the map.\n\u2022 Allied codes are listed within brackets following the group entry.\n\u2022 Allied entry codes may include more than one entry area code.\n\u2022 Allied reinforcement entry groups are preceded by a letter (N, W, S) to indicate which side of the map the entry codes of the group lie on.\n\n**Example:** NE [H-I]: 193 FA/VII.\n\n\u2022 All US units listed as SW reinforcements may use the primary road that runs from 2733SW to 4333SW as though it ran through full hexes.\n\u2022 German entry codes are aligned to the three armies.\n\n**Example:** 5P: 9th Panzer Division.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-21.1.3a",
+    "section": "21.1.3a",
+    "title": "Condition Codes",
+    "summary": "Entries on reinforcement lists may have special condition codes indicated by asterisks, gray highlighting, or green highlighting.",
+    "text": "Entries on the reinforcement list may have special conditions associated with them:\n  a) If the entry code is marked with an asterisk (*), the unit may not move south or east of the Meuse River until released.\n  b) A gray highlighted entry means the unit is part of XXX Corps.\n  c) A green highlighted entry means the unit is released from a previous movement restriction.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-21.1.3b",
+    "section": "21.1.3b",
+    "title": "British Reinforcements",
+    "summary": "All British leg unit reinforcements entering in Strat mode move as Mech units until reaching their assembly points and/or exiting Strat mode.",
+    "text": "All British leg unit reinforcements entering in Strat mode move as Mech units until they reach their assembly points (WAR 21.1.1b) and/or exit Strat mode.\n\n**Important:** Units entering using the above rule do not require allocation of TP.\n\n**Designer's Note:** XXX Corps and 21st Army Group used motor assets to move these troops to their Meuse River guarding points.",
+    "crossRefs": [
+      "21.1.1b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-21.4.1",
+    "section": "21.4.1",
+    "title": "US VIII Corps Art Withdrawal",
+    "summary": "In scenarios starting Dec 16 or Dec 21, US Art units with VIII Corps designation not assigned to 3rd Army are removed at GT 39.",
+    "text": "When playing a scenario or campaign that began on Dec 16, or Dec 21, all in GenS US Art units with a printed VIII Corps designation that are not assigned to the 3rd Army or a corps subordinate to the 3rd Army are removed from the map at the beginning of GT 39 (Dec 28 PM GT).\n\n**Important:** If any of the above units are not in GenS, are eliminated. They do not garner recycle points; however, they may be resurrected (GOSS 22.5.2).\n\n\u2022 All withdrawn Art units may reenter the map along any map edge hex on the SW map on or after the Jan 1 AM GT Allied Movement Phase. They may be assigned to 3rd Army or any corps HQ subordinate to the 3rd Army.",
+    "crossRefs": [
+      "22.5.2"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-21.4.2",
+    "section": "21.4.2",
+    "title": "US Arm Div Withdrawals",
+    "summary": "Rules governing the withdrawal of US armored division units during the campaign.",
+    "text": "US Arm Div Withdrawals.",
+    "crossRefs": [
+      "21.4.2a",
+      "21.4.2b"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-21.4.2a",
+    "section": "21.4.2a",
+    "title": "CCB/9A Withdrawal",
+    "summary": "CCB/9Arm units must be withdrawn from the map on the first AM GT after 3rd Army activates, with specific conditions for unit placement and penalties.",
+    "text": "CCB/9Arm (including the BU units listed on the Dec 16 set up) must be withdrawn (removed from the map) on the first AM GT after 3rd Army activates (WAR 9.2.2a).\n\u2022 The units must be at least 2 hexes from the closest German unit and must in be in GenS.\n\n**Important:** Units that do not meet the above criteria must move by the shortest route possible to be able to meet the criteria. These units may not conduct any form of attack or observe for offensive FS missions.\n\n\u2022 These units may not return to play.\n\u2022 For every unit of CCB/9A that was eliminated prior to the withdrawal, one unit of CCA/5A must be withdrawn.\n\u2022 If all units of CCB/9A (or CCA/5A) are not withdrawn within two GTs, the German side receives 5 VP.",
+    "crossRefs": [
+      "9.2.2a"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-21.4.2b",
+    "section": "21.4.2b",
+    "title": "US 10th Arm Withdrawal",
+    "summary": "During Dec 28 PM GT Movement Phase, the Allied player must withdraw all units of the 10th Arm Div meeting specific criteria.",
+    "text": "During the Movement Phase of the Dec 28 PM GT, the Allied player must withdraw all units of the 10th Arm Div that:\n  1) Can trace a GenS path of any length to their PSS; and,\n  2) Are not adjacent to enemy units.\n\u2022 These units may not be returned to play.\n\u2022 Units subordinate to the 10th Arm Div that do not meet the requirement in 1 and 2 above, must be moved via the shortest possible route to meet the two requirements.\n\u2022 The Allied player must withdraw all units that now meet the requirements\n\u2022 If the Allied player does not withdraw all of the 10th Arm Div by the end of GT 42, the German side receives 5 VP.\n\n**Designer's Note:** US commanders disliked not having a mechanized reserve for each corps command. Additionally, the planners were already thinking ahead to the need for fresh armored divisions in the coming weeks.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-22.0",
+    "section": "22.0",
+    "title": "Replacements",
+    "summary": "Rules for scheduled replacements, replacement pools, recycle steps, and refit procedures in WaR.",
+    "text": "22.0 REPLACEMENTS",
+    "crossRefs": [
+      "22.1.1",
+      "22.1.1a",
+      "22.1.2",
+      "22.2.0",
+      "22.2.1",
+      "22.4.3",
+      "22.5.1",
+      "22.5.2"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-22.1.1",
+    "section": "22.1.1",
+    "title": "Scheduled RePs",
+    "summary": "The TRT lists the number of Inf and Arm RePs each side receives each GT, following GOSS 22.1.1 procedures.",
+    "text": "The TRT for each side lists the number of Inf and Arm RePs each side receives each GT. Follow the procedures in GOSS 22.1.1 and the those listed below.\n\n**Important:** Ignore the specialist notation on the German TRT and the Art, Eng, ArmC, Recon notation on the Allied TRT.",
+    "crossRefs": [
+      "22.1.1"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-22.1.1a",
+    "section": "22.1.1a",
+    "title": "Allied Armor ReP Pool",
+    "summary": "During the Replacement Point Segment of Dec 29 (GT 41), the Allied player receives eight Arm RePs with specific usage restrictions.",
+    "text": "During the Replacement Point Segment of 29 Dec (GT 41), the Allied player receives eight Arm RePs.\n\u2022 These RePs must be used during GT 41. They cannot be carried over to any later GT. If not used this GT they are lost.\n\u2022 These RePs can only be used to rebuild or resurrect US units.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-22.1.2",
+    "section": "22.1.2",
+    "title": "British ReP",
+    "summary": "The British XXX Corps does not receive Inf ReP but maintains a separate ReP pool from US forces, with Arm RePs starting after activation.",
+    "text": "The British XXX Corps does not receive Inf ReP (it may recycle Inf step losses as per (WAR 22.2.0)).\n\u2022 The corps maintains a separate ReP pool from the US forces.\n\u2022 Beginning the first AM GT after any unit of the British XXX Corps is activated the British receive one Arm ReP each AM GT.\n\n**Important:** British units cannot use US Arm and Inf ReP.",
+    "crossRefs": [
+      "22.2.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-22.2",
+    "section": "22.2",
+    "title": "Recording Recycle Steps",
+    "summary": "Both sides track recycle steps as a total for all armies unless scenario instructions state otherwise.",
+    "text": "Unless scenario instructions state otherwise, both sides track recycle steps.\n\u2022 Recycle steps for all armies on each side are recorded as a total. Do not track recycle steps separately for each army.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-22.2.1",
+    "section": "22.2.1",
+    "title": "Converting Recycle Steps",
+    "summary": "Recycle steps are converted to RePs at specified rates for German, US, and British forces.",
+    "text": "Recycle steps are converted at the below rates:\n\n**German:**\n  Inf: One Inf ReP for every five Inf recycle steps.\n  Arm: One Arm ReP for every six Arm recycle steps.\n\n**US:**\n  Inf: One Inf ReP for every four Inf recycle steps.\n  Arm: One Arm ReP for every three Arm recycle steps.\n\n**British:**\n  Inf: One Inf ReP for every five Inf recycle steps.\n  Arm: One Arm ReP for every three Arm recycle steps.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-22.4.3",
+    "section": "22.4.3",
+    "title": "Refit RePs",
+    "summary": "Refit RePs are modified: German formations do not receive refit RePs, and Allied non-Arm formations receive one Inf ReP.",
+    "text": "Due to the lack of replacements and duration of the campaign, refit RePs are modified as follows:\n  a) German formations do not receive refit RePs.\n  b) Allied non-Arm formations receive one Inf ReP (both Div and BG).\n\n**Important:** Do not use RE units (GOSS 22.5.1b) or resurrecting with RE units (GOSS 22.6.2c).",
+    "crossRefs": [
+      "22.5.1b",
+      "22.6.2c"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-22.5.1",
+    "section": "22.5.1",
+    "title": "Rebuilding On-map Units",
+    "summary": "German units with an attack or defense PR of 9 require double the normal ReP expenditure to replace each step.",
+    "text": "German units with an attack or defense PR of 9 require double the normal ReP expenditure to replace each step.\n\n**Example:** The German player is replacing a step of Mot Inf with a defense PR of 9. The player would expend 4 Inf ReP.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-22.5.2",
+    "section": "22.5.2",
+    "title": "Resurrecting Units",
+    "summary": "Eliminated units with either an attack or defense PR of 9 may not be resurrected if eliminated.",
+    "text": "Eliminated units with either an attack or defense PR of 9 may not be resurrected if eliminated.\n\n**Important:** German AT, Flak, Art, and PzVI units cannot be resurrected.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-23.0",
+    "section": "23.0",
+    "title": "Leaders",
+    "summary": "Both sides possess Ldr counters. Leaders not listed in scenario instructions arrive stacked with their assigned HQ.",
+    "text": "Both sides possess Ldr counters. Ldrs not listed in the scenario instructions in the at start section arrive stacked with their assigned HQ.\n\n**(Exception: Patton, who arrives on the December 20 Night GT).**\n\n**Important:** Peiper is a formation Ldr, however his benefits only apply to units marked as KG Peiper.",
+    "crossRefs": [
+      "23.2.2"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-23.2.2",
+    "section": "23.2.2",
+    "title": "Corps & Army Ldrs",
+    "summary": "Corps and Army leader benefits only apply if the Ldr is activated and moved using the Ldr's activation move in GOSS 23.1.0.",
+    "text": "**Important:** The below Ldr benefits only apply if the Ldr is activated and moved using the Ldr's activation move in GOSS 23.1.0.",
+    "crossRefs": [
+      "23.1.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-23.2.2a",
+    "section": "23.2.2a",
+    "title": "German Leaders",
+    "summary": "Special abilities for German army and corps leaders including Dietrich, Manteuffel, Brandenburg, v.Luettwitz, and Kreuger.",
+    "text": "**Dietrich (6th Pz Army):** If Dietrich starts a GT stacked with an SS Div HQ and if all units participating in an offensive GA are subordinate to that Div, the Allied player automatically converts any mandatory PRC result received (asterisk) to a discretionary hit (no PRC).\n\n**Manteuffel (5th Pz Army):** If Manteuffel starts an AM GT stacked with a subordinate corps HQ, one Mech formation (Div or BG) subordinate to that HQ:\n  1) Adds one additional MP to all subordinate units for both the AM and PM GT of that GD. This addition is added after adjusting for ground conditions and fuel value; and,\n  2) If at least one one-unit subordinate to that formation participates in GA (offensively or defensively) the German player is awarded one favorable column shift. The award may only be used once per GD.\n\u2022 This award may be in addition to the formation's Ldr benefits.\n\n**Brandenburg (7th Army):** If Brandenburg starts an AM GT stacked with a subordinate formation HQ (Div or BG) and if all units participating in a defensive GA are subordinate to that HQ, the German player may award up to two favorable column shifts to that GA.\n\u2022 The German player may use both column shifts in one GA or, apply one shift to two defensive GAs.\n\u2022 The above award may be used each GT if Brandenburg is stacked with the same formation HQ.\n\u2022 This award cannot combine with other Ldr benefits.\n\n**v.Luettwitz (XLVII Pz Corps):** If vLuettwitz starts an AM GT stacked with a subordinate formation HQ (Div or BG) and if all units participating in the GA are subordinate to that HQ, the German player may award one favorable column shift (attack or defense) to two GAs per GD.\n\u2022 This award cannot combine with other Ldr benefits.\n\n**Kreuger (LVIII Pz Corps):** If Krueger starts an AM GT stacked with a subordinate formation HQ (Div or BG) and if all units participating in the GA are subordinate to that HQ, the German player may award one favorable column shift (attack or defense) per GD.\n\u2022 This award may be in addition to the formation's Ldr benefits.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-23.2.2b",
+    "section": "23.2.2b",
+    "title": "Allied Leaders",
+    "summary": "Special abilities for Allied leaders including Patton and Collins.",
+    "text": "**Patton (3rd Army):** If Patton is stacked with a subordinate formation HQ (Div or BG), all that formation's units may advance after GA one additional hex (beyond that conferred by their combat result). The units must be in PA mode and all other maximum advance limits apply.\n\n**Collins (VII Corps):** If Collins starts an AM GT stacked with a subordinate formation HQ (Div or BG), all of that formation's units may perform their movement during a friendly Movement Phase in any order they wish regardless of the type of movement used.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-24.0",
+    "section": "24.0",
+    "title": "Lulls",
+    "summary": "At the start of Dec 24 AM GT, if a strategic withdrawal has not been declared by Montgomery, players check for mandatory lulls.",
+    "text": "At the start of the Dec 24 AM GT if a strategic withdrawal has not yet been declared by Montgomery (WAR 9.2.2a), then players must check to see if a mandatory lull occurs.\n\n**Important:** During the PM and Night GTs of Dec 23, the Allied player must track if a unit of each on map army has been the subject of a German GA.\n\n**Designer's Note:** US V Corps went quiet after Dec 21 and did not go back on the offensive until Jan 14. The German 7th Army only had one corps (LIII) engaged in offensive activity after Dec 21. You cannot be attacking everywhere all the time.",
+    "crossRefs": [
+      "9.2.2a",
+      "24.1.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-24.1",
+    "section": "24.1",
+    "title": "When a Mandatory Lull Occurs",
+    "summary": "During the Joint Command Phase of Dec 24 AM GT, if certain army units were not subject to a GA, the Allied player must declare a corps lull.",
+    "text": "During the Joint Command Phase of the Dec 24 AM GT if at least one unit assigned to an army has not been the subject of a GA during the PM and/or Night GT of Dec 23, the Allied player must choose one corps of the affected army(s) and declare a corps lull for that corps.\n\u2022 The corps selected must have at least two formations assigned. If no such corps exists, the Allied player is free to choose which corps goes into a lull.\n\u2022 The lull goes into effect immediately.\n\n**Important:** Each Army could be required to declare a corps lull.\n\n\u2022 The German player must accept the corps lull.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-24.2",
+    "section": "24.2",
+    "title": "Corps Lull Effects",
+    "summary": "When a corps is in a mandatory lull, specific restrictions apply to activation, assaults, PR ratings, and unit reassignment.",
+    "text": "If a corps is in a mandatory lull, the following effects are in place within the subject corps' ZOP:\n  1) Neither side can activate any units/formations (GOSS 24.2.0); and,\n  **Exception:** (WAR 24.2.6).\n  2) Neither side can conduct PA assaults, and,\n  2) Each side may conduct a maximum of two tactical assaults per formation each GT; and,\n  3) The offensive PR rating for all Allied units subject to the lull are reduced by one; and,\n  4) Units/formations under lull conditions may be reassigned to other corps, however if reassigned those units and/or formations remain under lull effects until the lull ends; and,\n  5) Units/formations may be assigned to a corps HQ that is in a lull, however those units and/or formations are immediately subject to all lull rules; and,\n  6) The corps boundary of the Allied corps in a lull may not be changed until the first Joint Command Phase after the lull has ended.\n\u2022 All other lull affects Listed in GOSS 24.2.1 through 24.25 are in effect.\n\n**Exception:** Ignore the instructions in 24.2.4 concerning reinforcements.",
+    "crossRefs": [
+      "24.2.0",
+      "24.2.6",
+      "24.2.1",
+      "24.2.4"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-24.2.6",
+    "section": "24.2.6",
+    "title": "Third Army Lull Effects",
+    "summary": "Patton's army is less affected by lulls. A Third Army corps in a lull may still activate one division, and the German player is limited to activating only one formation.",
+    "text": "Patton was a much more aggressive commander than any of the other army commanders on the Allied side, therefore his army is less affected by a required lull.\n\u2022 When a Third Army corps is affected by a lull, that corps one division (Allied player's choice) may be activated (GOSS 24.2.0).\n\u2022 The German player is side two and may conduct operations as per GOSS 24.2.0.\n\n**Exception:** The German player may activate only one formation.\n\n\u2022 The Allied and German player may activate a different formation during each Command Phase during the lull. Ignore the instruction in GOSS 24.2.0 concerning activation.",
+    "crossRefs": [
+      "24.2.0"
+    ],
+    "module": "war"
+  },
+  {
+    "id": "war-24.3",
+    "section": "24.3",
+    "title": "Ending a Lull",
+    "summary": "Mandatory lulls may be ended in one of three ways during the Joint Command Phase.",
+    "text": "Mandatory lulls may be ended in one of three ways during the Joint Command Phase:\n  1) During the Command Phase after the lull has been in effect for 15 GTs, the Allied player may (his choice) roll 1d10 during that and each subsequent Command Phase. On a result of 0-4, the lull is ended. On a 5 or greater the lull continues.\n  2) If at any time during the lull, any German unit enters the lull corps ZOP, the lull immediately ends.\n  3) The Allied player may end the lull at any time by declaring the end of the lull during a Joint Command Phase. The German player receives 5 VP.",
+    "crossRefs": [],
+    "module": "war"
+  }
+]

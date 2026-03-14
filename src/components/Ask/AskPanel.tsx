@@ -49,7 +49,7 @@ export function AskPanel({ rules }: AskPanelProps) {
     <div className="mx-auto max-w-2xl">
       <h2 className="mb-1 text-2xl font-bold">Ask the Rules</h2>
       <p className="mb-4 text-sm text-stone-500">
-        Search all 595 GOSS 2020 rules by keyword or topic
+        Search {rules.length} rules by keyword or topic
       </p>
 
       {/* Search input */}
@@ -113,7 +113,7 @@ export function AskPanel({ rules }: AskPanelProps) {
               className="rounded-lg border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-800"
             >
               <button
-                onClick={() => openRule(rule.section)}
+                onClick={() => openRule(rule.id)}
                 className="w-full px-4 py-3 text-left hover:bg-stone-50 dark:hover:bg-stone-700/50 transition-colors"
               >
                 {/* Header row */}

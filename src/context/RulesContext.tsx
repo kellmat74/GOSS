@@ -3,12 +3,14 @@ import type { RuleEntry } from "../types/goss";
 
 interface RulesContextValue {
   rules: RuleEntry[];
-  openRule: (sectionId: string) => void;
+  openRule: (sectionOrId: string) => void;
   closeRule: () => void;
   goBack: () => void;
   activeRule: RuleEntry | null;
   history: RuleEntry[];
   getRuleBySection: (sectionId: string) => RuleEntry | undefined;
+  /** Get all rules for a section (base + any scenario overlays) */
+  getRulesForSection: (section: string) => RuleEntry[];
 }
 
 const RulesContext = createContext<RulesContextValue | null>(null);
@@ -28,41 +30,67 @@ export function RulesProvider({ rules, children }: RulesProviderProps) {
   const [activeRule, setActiveRule] = useState<RuleEntry | null>(null);
   const [history, setHistory] = useState<RuleEntry[]>([]);
 
-  // Build lookup map for fast access
-  const ruleMap = useMemo(() => {
-    const map = new Map<string, RuleEntry>();
+  // Build lookup maps for fast access
+  const { sectionMap, idMap, sectionMultiMap } = useMemo(() => {
+    const sMap = new Map<string, RuleEntry>();
+    const iMap = new Map<string, RuleEntry>();
+    const multiMap = new Map<string, RuleEntry[]>();
     for (const r of rules) {
-      map.set(r.section.toLowerCase(), r);
-      // Also index without trailing .0 for convenience (e.g., "3.0" matches "3")
+      iMap.set(r.id.toLowerCase(), r);
+      // Multi-map: all rules per section
+      const key = r.section.toLowerCase();
+      const list = multiMap.get(key) ?? [];
+      list.push(r);
+      multiMap.set(key, list);
+      // For section lookup, prefer base rules (first occurrence = no module)
+      if (!sMap.has(key) || !r.module) {
+        sMap.set(key, r);
+      }
+      // Also index without trailing .0
       const alt = r.section.replace(/\.0$/, "");
-      if (alt !== r.section) map.set(alt.toLowerCase(), r);
+      if (alt !== r.section) {
+        const altKey = alt.toLowerCase();
+        const altList = multiMap.get(altKey) ?? [];
+        altList.push(r);
+        multiMap.set(altKey, altList);
+        if (!sMap.has(altKey) || !r.module) {
+          sMap.set(altKey, r);
+        }
+      }
     }
-    return map;
+    return { sectionMap: sMap, idMap: iMap, sectionMultiMap: multiMap };
   }, [rules]);
 
   const getRuleBySection = useCallback(
     (sectionId: string): RuleEntry | undefined => {
       const key = sectionId.toLowerCase().trim();
-      // Try exact match first
-      const exact = ruleMap.get(key);
+      const exact = sectionMap.get(key);
       if (exact) return exact;
-      // Try stripping trailing .0 from query (e.g., "9.6.0" -> "9.6")
       const stripped = key.replace(/\.0$/, "");
-      if (stripped !== key) return ruleMap.get(stripped);
-      // Try adding .0 (e.g., "9.6" -> "9.6.0")
-      return ruleMap.get(key + ".0");
+      if (stripped !== key) return sectionMap.get(stripped);
+      return sectionMap.get(key + ".0");
     },
-    [ruleMap]
+    [sectionMap]
+  );
+
+  const getRulesForSection = useCallback(
+    (section: string): RuleEntry[] => {
+      const key = section.toLowerCase().trim();
+      return sectionMultiMap.get(key) ?? sectionMultiMap.get(key + ".0") ?? [];
+    },
+    [sectionMultiMap]
   );
 
   const openRule = useCallback(
-    (sectionId: string) => {
-      const rule = getRuleBySection(sectionId);
+    (sectionOrId: string) => {
+      // Try by ID first (for direct clicks from tree/search with specific rule)
+      const byId = idMap.get(sectionOrId.toLowerCase().trim());
+      const rule = byId ?? getRuleBySection(sectionOrId);
       if (!rule) return;
       setHistory((h) => (activeRule ? [...h, activeRule] : h));
       setActiveRule(rule);
     },
-    [getRuleBySection, activeRule]
+    [idMap, getRuleBySection, activeRule]
   );
 
   const closeRule = useCallback(() => {
@@ -80,8 +108,8 @@ export function RulesProvider({ rules, children }: RulesProviderProps) {
   }, []);
 
   const value = useMemo(
-    () => ({ rules, openRule, closeRule, goBack, activeRule, history, getRuleBySection }),
-    [rules, openRule, closeRule, goBack, activeRule, history, getRuleBySection]
+    () => ({ rules, openRule, closeRule, goBack, activeRule, history, getRuleBySection, getRulesForSection }),
+    [rules, openRule, closeRule, goBack, activeRule, history, getRuleBySection, getRulesForSection]
   );
 
   return <RulesContext.Provider value={value}>{children}</RulesContext.Provider>;
