@@ -1,0 +1,668 @@
+[
+  {
+    "id": "hurtgen-1.0",
+    "section": "1.0",
+    "title": "Game Components",
+    "summary": "",
+    "text": "These rules add to and may modify the rules in the GOSS rulebook. In all cases, the rules in this book take precedence over any rules in GOSS.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-1.1",
+    "section": "1.1",
+    "title": "Game Rules",
+    "summary": "",
+    "text": "These rules add to, and may modify the rules in the GOSS rulebook. In all cases, the rules in this book take precedence over any in the GOSS rules.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-1.2",
+    "section": "1.2",
+    "title": "Game Map",
+    "summary": "",
+    "text": "The following rules define the unique terrain and rules pertaining to them.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-1.2.2",
+    "section": "1.2.2",
+    "title": "Rivers & Streams",
+    "summary": "",
+    "text": "The Meuse (Maas) is a major river. The Rhine River is a great river. All other rivers are considered minor rivers.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-1.2.5",
+    "section": "1.2.5",
+    "title": "Marsh Hexes",
+    "summary": "",
+    "text": "There is no \"soft ground\" Use the Marsh rules and March line on all charts.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-1.8",
+    "section": "1.8",
+    "title": "Inventory of Game Parts",
+    "summary": "",
+    "text": "A complete game of Hurtgen: Hell's Forest includes:\n\n- Two Map sheets: East(E) and West(W) maps. A Game Turn Record Track is printed on these maps. Furthermore, reinforcements are keyed to this track on separate charts.\n- Seven counter sheets (1950 counters)\n- Two Army Level Record Tracks (one US & one German)\n- Two 11 x 17in. game charts (two-sided)\n- Two 8.5 x 11 in. unit breakdown charts/unit type charts (two-sided)\n- One 8.5 x 11 US & German Transport Table/Miscellaneous Table (two-sided)\n- One rules booklet\n- One scenario rules booklet\n- One full color setup & example of play booklet\n- Two ten-sided dice",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-2.0",
+    "section": "2.0",
+    "title": "Setting Up the Game",
+    "summary": "",
+    "text": "The two map sections have been designed so that they overlap each other when they are placed together. Each map is identified by a compass heading: East or West. The West map contains the city of Aachen at hex 2826, while the East map shows the Rhine River. The East map should be placed on the table first. Next, the West map should be placed so that it overlaps with the East map. When placed together correctly, the roads and terrain features will align properly along the hexes on the edges of the maps.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-3.0",
+    "section": "3.0",
+    "title": "The Game Turn",
+    "summary": "",
+    "text": "Use the standard GOSS Sequence of Play.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-3.4",
+    "section": "3.4",
+    "title": "Extended Night Activity",
+    "summary": "",
+    "text": "Extended Night Activity is used. Either side may choose to activate units during this period. Rest GTs have no effect on ENA.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-3.5",
+    "section": "3.5",
+    "title": "Rest GTs",
+    "summary": "",
+    "text": "GOSS 3.5.0 applies.",
+    "crossRefs": ["3.5"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-4.0",
+    "section": "4.0",
+    "title": "Unit Characteristics",
+    "summary": "",
+    "text": "GOSS 4.4.4 (Green Divisions) and GOSS 4.5.5 (Kangaroos) are not used.",
+    "crossRefs": ["4.4.4", "4.5.5"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-4.5.3",
+    "section": "4.5.3",
+    "title": "German Rear Echelon Units",
+    "summary": "",
+    "text": "All fortress battalions, static Luftwaffe Flak companies, MG battalions, training units (A&E), Landwehr (Lnds) units, security units (Sec), police units, and the units labeled \"Hennecke\" and \"Stomach\" are rear echelon units. Many of these units were under direct command of the training army and Wehrkreis VI. They are identifiable by a white box behind the unit size symbol.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-4.5.3a",
+    "section": "4.5.3a",
+    "title": "NCO Schools Duren and Julich",
+    "summary": "",
+    "text": "These two battalions were composed of first-rate soldiers who were being trained to become NCOs. As such, their loss in combat would not be proportional to any gain they could achieve. The Allied player receives 2VPs (as listed in the scenarios) for each step loss these units incur. Additionally, as soon as they are reduced to their final steps, each unit must be withdrawn from further play. Simply remove them from the map when this happens. These units may not receive replacement steps.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-7.0",
+    "section": "7.0",
+    "title": "Movement",
+    "summary": "",
+    "text": "Movement rules for Hurtgen: Hell's Forest.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-7.10.2",
+    "section": "7.10.2",
+    "title": "Static Artillery/Flak Units",
+    "summary": "",
+    "text": "The fortress AT Btns and Static Flak Coys are considered army/corps asset units.\n\n- The 503 and 504 fortress AT Btns may breakdown into two Z-unit detachments each.\n- When received as reinforcements, the Fortress AT Btns may be placed in any Westwall hex or town/city hex adjacent to a Westwall hex. The hex they are placed in must be in GenS. Hvy Flak Coys are placed according to scenario instructions.\n- These units are always in command and GenS as long as they can trace a GenS path from any friendly divisional HQ.\n- Luftwaffe Flak Coys are considered Hvy Flak. GOSS 11.4.1b applies.\n\n**Designer's Note:** The Luftwaffe units tended to be under the administration and command of the Reich defense command, so command of these units should be no problem.",
+    "crossRefs": ["11.4.1b"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-9.0",
+    "section": "9.0",
+    "title": "Command",
+    "summary": "",
+    "text": "Command rules for Hurtgen: Hell's Forest.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-9.2",
+    "section": "9.2",
+    "title": "Command Boundaries",
+    "summary": "",
+    "text": "All initial army and corps boundaries are shown on the scenario setup maps. Players may change these boundaries (unless prohibited by any rules below) as they see fit, but may only do so once per game day.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-9.2.1",
+    "section": "9.2.1",
+    "title": "1st US Army",
+    "summary": "",
+    "text": "Until the AM GT of October 22 (GD 41), the US 1st Army controls all US units on the map. This includes any units designated as being subordinated to the US Ninth Army.\n\n- The First Army boundary stretches from the southern map edges of maps E and W north to the 21st Army Group boundary.\n- On the AM GT of October 22 (GD 41), a boundary between the 1st and 9th Armies must be established. The boundary may be any straight line of hexes running west to east that is north of the city of Aachen (W2926).\n- 1st Army PSS is any primary road hex on the west edge of map W within the 1st Army's zone of operations (ZOP).\n- On the AM GT of October 15 (GD 34) the 1st Army may use Liege (W0335) as a PSS.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-9.2.2",
+    "section": "9.2.2",
+    "title": "9th US Army",
+    "summary": "",
+    "text": "The Ninth US Army is activated on the AM GT of October 22 (GD 41).\n\n- Ninth Army HQ and the 11th Cavalry (CavGrp) are placed in Maastricht during the Command Phase of the AM GT of October 22. See (21.5.1) for the composition of the 11th Cav Grp.\n- The US XIX Corps and all assigned formations/units are immediately subordinated to Ninth US Army.\n- All units designated as Ninth Army assets must immediately move into the Ninth Army ZOP and are assigned to the Ninth Army. Mark all such units OoC until such time as they enter the Ninth Army ZOP. They move as if they were normal fuel and may use their full MA.\n- The 9th Army ZOP extends south from the 21st AG October boundary (shown on the game map) to the 1st Army northern boundary (9.2.1).\n- 9th Army PSS is any primary road hex on the west edge of map W within the ZOP of 9th Army.\n- On the AM GT of November 2 (GD 52) the 9th Army may use Maastricht (W0820) as a PSS.\n- When the US XIII Corps arrives on November 8 (GD 58) it must be subordinated to Ninth Army. The 102nd Division which arrives the same GD must be assigned to the XIII Corps.",
+    "crossRefs": ["9.2.1", "21.5.1"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-9.2.3",
+    "section": "9.2.3",
+    "title": "US V Corps",
+    "summary": "",
+    "text": "Historically during September and October the V Corps was involved in holding the line south of the game maps. Because of this, only the 102nd CavGrp of V Corps (4x units) and the 62/V AFA Btn are allowed on the map when it arrives on October 5 (GD 24). The CavGrp may operate within 6 hexes of the south map edge.\n\n- On the first GT in October or November that an Allied initiated lull ends, the Allied player may move the V Corps boundary north to a line from W1445 direct to W3435, then to W4032 and from there due east (line shown in part on the November set up map). The corps boundary may not be shifted again.\n- The V Corps HQ is located off the southern edge of map W. V Corps formations trace their GenS path no longer than 12 MP from Kalterherberg (W3545) or W2845.\n- The V Corps is counted as a supported corps for the 1st Army for the GD that the corps boundary is moved. It cannot be listed as not supported. It is considered to have three formations assigned.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-9.2.3a",
+    "section": "9.2.3a",
+    "title": "Additional V Corps Units",
+    "summary": "",
+    "text": "Throughout the course of the game, the Allied may commit additional V Corps assets and assign a limited number of divisions to the V Corps. The below additions may be made the AM GT of the GD listed.\n\n- October 31 (GD 50) the Allied player may assign any one division to the V Corps. The Allied player also randomly selects six V Corps artillery Btns from the V Corps assets held aside in (21.5.1); the 20th, 146th and 1340th combat engineer (CE) Btns. The corps asset units arrive on any primary road hex on the south edge of map W. Ignore the GTRT entry points for the above three CE Btns.\n- November 11 (GD 61) CCR of the 5th Armored Division, including the 47th AFA Btn and, one Coy each of M-10, ArmC, and Armored Engineers (ArmE) may be assigned to the V Corps.\n- December 2 (GD 82) one additional division may be assigned to the V Corps. Two corps artillery Btns and two CE Btns may be selected from the available V Corps asset units. The corps asset units arrive on any primary road hex on the south edge of map W.\n- If in any AM GT the Allied side has units on the east side of the Roer River and those units are in GenS, all of the remaining V Corps assets arrive as reinforcements on any primary road hex on the south edge of map W. One additional division may be assigned to the V Corps. If the 4th or 28th Divisions have already been withdrawn, one of these divisions may be selected as the additional division and may reenter the map at any primary road hex on the south edge of map W. The 5th Armored Division also enters at the same points, assigned to the V Corps.\n\n**Designer's Note:** Historically, the 8th and 78th infantry divisions and one combat command of 5th Armored operated in this area during December.",
+    "crossRefs": ["21.5.1"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-9.2.4",
+    "section": "9.2.4",
+    "title": "British 21st AG Boundary",
+    "summary": "",
+    "text": "The boundary between the British 21st Army Group and the US 12th Army Group separates most US forces from those of the British. This boundary is shown on each of the scenario maps and on the game maps as the 21st AG Boundary.\n\n- When playing one of the three monthly scenarios, the boundary line may not be moved by the players. It must remain as shown on the scenario and game maps for that month.\n- If playing the full campaign game, the boundary may be changed once each calendar month. The line may never be moved south of that shown for November or north of that shown for October.\n- British units may never cross the Maas River to the east unless they are moving into already controlled friendly territory that is within the 21AG boundary.\n- The PSS for all British units and US units attached to the XXX Corps is any primary road hex west of the MAAS River within the 21st AG ZOP.\n\n**Note:** Some US formations may be temporarily assigned to 21AG. If so, these formations may operate within that boundary.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-9.2.4a",
+    "section": "9.2.4a",
+    "title": "XXX Corps",
+    "summary": "",
+    "text": "The XXX Corps ZOP is from the 21st AG boundary to the northern map edge. XXX Corps units may not make ground assaults against German units east of the November 16th start line with the exception of hexes within four hexes of Geilenkirchen (W3113), or if a XXX Corps reaction has been triggered.\n\n**Designer's Note:** This area was actually the ZOP of more than one British corps at one time or another, but for ease of play, XXX Corps is used to represent these various corps.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-9.2.4b",
+    "section": "9.2.4b",
+    "title": "XXX Corps & US Units",
+    "summary": "",
+    "text": "One US Cav Grp may be assigned to the XXX Corps. It may operate in the XXX Corps ZOP. The Cav Grp may not make ground assaults against German units in FWs east of the Maas River. No other US unit or formations may operate in XXX Corps ZOP, unless a XXX Corps reaction has been triggered (see below).\n\n- XXX Corps units or formations may not operate in any US ZOP. Unless specifically allowed, US units may not enter XXX Corps ZOP.\n- US reinforcements may move through the XXX Corps ZOP using Strat movement to reach the US ZOP.\n- If units are forced across the 21st AG boundary, they are out of command until they reenter the appropriate ZOP.\n- November 1 (GD 51) one US infantry division may be attached to XXX Corps. The division may remain assigned to XXX Corps until the town of Geilenkirchen, (W3113) is controlled by the Allied player. Geilenkirchen must be the immediate objective of this division.\n- The division must be released back to the 9th US Army (XIII Corps) the GT after Geilenkirchen is Allied controlled.\n- The division may draw GenS from the nearest US Corps, but it is not counted against that corps' command limit, nor does it matter if that corps is in a lull period.\n- While assigned to the XXX Corps, any number of units from the British 8th Armored Brigade and the 79th Armored Division may stack and operate with this division with no restrictions.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-9.2.4c",
+    "section": "9.2.4c",
+    "title": "British Reaction",
+    "summary": "",
+    "text": "The British ZOP on the map was not the focus of Allied operations and the Germans were generally happy to keep it dormant.\n\n- During the month of September, German units that did not start the scenario west of the Maas River, may not move to the west side of that river.\n- October 1 (GD 20), this restriction is lifted, however, if any German unit is west of the Maas River, or within one hex of Geleen (W1712), the Allied player checks to see if XXX Corps becomes fully active.\n- At the start of each GT, if any German units are in violation of the above restrictions, the US 7th Armored Division arrives as a reinforcement on any primary road W0301 and W1601. The division is assigned to the XXX Corps. It may be reassigned one GD later to the US corps that is adjacent to the XXX Corps ZOP.\n- While assigned to the XXX Corps the 7th Division uses ammunition and fuel values of the XXX Corps. XXX Corps' HQ is considered to be six MP off the map from any of the above entry hexes.\n- On the first AM GT after the 7th Division arrives, and each AM GT thereafter, if there are still German units violating the September or October restrictions, the Allied player may attempt to activate additional British units. All units arrive at the same locations as the 7th Division.\n- Count the number of German divisions that have assigned or attached units violating the restrictions (count independent BG as one formation). For each division roll 1d10. If any DR is greater than 4, the Guards Armored Division is activated.\n- On the GT the Guards Armored Division arrives, the XXX Corps HQ, all six of the 5 AGRA artillery Btns, XXX CE Btn, both XXX AT Coy units, two XXX Recon Btns, and three Coys of the 79th Armored Division arrive.\n- On the GD after the arrival of the XXX Corps HQ, the British 43rd Division and the 8th Armored Brigade arrive.\n- On the GT that there are no German units in violation of the restrictions, The Gds Arm Division, three 5 AGRA artillery Btns, and all but two corps independent units must withdraw to the west side of the Maas River. These units may not conduct offensive ground assaults, participate in FS missions, or move east of the Maas River unless the German side once again violates the original restrictions.\n- The 43rd Infantry Division, 8th Armored Brigade, any three artillery Btns, two XXX Corps independent units and the corps HQ may remain east of the Maas River within the XXX Corps ZOP.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-9.2.5",
+    "section": "9.2.5",
+    "title": "German Boundaries",
+    "summary": "",
+    "text": "German boundaries are initially placed as shown in the scenario diagrams. They may be modified in accordance with GOSS 9.2.0. When playing the campaign game, the German side may ignore October and November scenario diagrams. Corps and army boundaries must be identified the first AM GT after an HQ arrives.",
+    "crossRefs": ["9.2"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-15.0",
+    "section": "15.0",
+    "title": "Supply",
+    "summary": "",
+    "text": "Supply rules for Hurtgen: Hell's Forest.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-15.3",
+    "section": "15.3",
+    "title": "Primary Supply Source",
+    "summary": "",
+    "text": "The Allied Primary Supply Sources are detailed in (9.2.1), (9.2.2) & (9.2.4). The German PSS are as follows:\n\n- Any city hex east of the Roer River connected to hexes east of the Rhein by primary road hexes.\n- Any primary road hex on the northern map edge east of the Roer River.\n- Any Aachen city hex can provide six on hand supply points (OhS) and two Fuel Points (FP) to any one German formation HQ if the HQ is isolated and has a valid OhS supply path to any German controlled Aachen city hex. GOSS 15.5.0 applies.",
+    "crossRefs": ["9.2.1", "9.2.2", "9.2.4", "15.5"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-16.0",
+    "section": "16.0",
+    "title": "Logistics & Trucks",
+    "summary": "",
+    "text": "Except as noted below, both sides use the GOSS logistic rules covered in 16.0.",
+    "crossRefs": ["16.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-16.2.2",
+    "section": "16.2.2",
+    "title": "US Logistics",
+    "summary": "",
+    "text": "Both the 1st and 9th (when activated) track fuel and ammunition. TP are assigned by scenario.\n\n- Beginning November 15 (GD 65) both US armies are no longer required to use the fuel point logistic procedures. All formations/units in GenS are considered to have normal fuel. All TP may be assigned to ammunition delivery and motorization.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-16.2.3",
+    "section": "16.2.3",
+    "title": "British Logistics",
+    "summary": "",
+    "text": "The 21st AG does not use the Logistic Table to determine ammunition or fuel points.\n\n- During all GTs in September and October, all formations/units assigned to the XXX Corps are considered \"Low\" Fuel.\n- Beginning November 1 (GD 51) all formations/units are considered to be \"Normal\" Fuel.\n- If the German player triggers XXX Corps reaction (9.2.4c) all formations/units assigned to the XX Corps have \"Normal\" Fuel for the remainder of the game.\n- XXX Corps has an ADV of 5. There are no adjustments made for number of formations assigned to the corps. The Allied player may create a maximum of two AmP per GD after XXX Corps HQ arrives on the map.",
+    "crossRefs": ["9.2.4c"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-16.2.4",
+    "section": "16.2.4",
+    "title": "The Fuhrer Ammo Reserve",
+    "summary": "",
+    "text": "Hitler had special stocks of ammo and fuel being set aside for the Ardennes Offensive. Had the Allies threatened to breakthrough, he would (and did to a minor extent) release some of these stocks to halt them.\n\n- Beginning November 1 (GD 51) the Germans may draw on this reserve.\n- TP are not required, simply add the number of AmP or FP drawn from the reserve to the German stockpile.\n- There are 12 AmP and 12 Fuel Points in this stockpile. For each AmP or FP the German player draws from the reserve, he must subtract one VP from his total. No more than 12 points of each may be drawn from the reserve.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-16.2.5",
+    "section": "16.2.5",
+    "title": "Truck Points & Lulls",
+    "summary": "",
+    "text": "During a lull, both sides must still maintain a minimum number of TPs on fuel and AmP delivery to sustain their armies. Each army must assign at least one TP to carry fuel and one TP to carry AmP. No more than two TPs per GD can ever be assigned to bring in units from the Allied Reinforcement Pool (21.5.0).",
+    "crossRefs": ["21.5"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-17.0",
+    "section": "17.0",
+    "title": "Engineers",
+    "summary": "",
+    "text": "Engineer rules for Hurtgen: Hell's Forest.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-17.3.3b",
+    "section": "17.3.3b",
+    "title": "ET-2 Construction",
+    "summary": "",
+    "text": "GOSS 17.3.3b is modified as follows:\n\n- Only the Axis side is allowed to construct an ET-2 without previously constructing an IP in the hex.\n- The village, town or city hex must be within the borders of Germany (see map).\n- All clear terrain hexes east of and adjacent to the Roer River and Erf Canal, may be treated as a village, town or city hex for this purpose.",
+    "crossRefs": ["17.3.3b"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-17.3.3c",
+    "section": "17.3.3c",
+    "title": "ET-3 Construction",
+    "summary": "",
+    "text": "Only the German player may build and/or occupy ET-3.\n\n- Beginning September 26 (GD 15), the German player may replace one ET-2 with one under construction ET-3 at the beginning of a friendly Construction Phase.\n- This may only be done every other GD.\n- ET-3 can only be placed in hexes that are in GenS, contain a village, town or city and are within the borders of Germany.\n- The ET-3 is completed at the beginning of the next friendly Construction Phase.\n- There may never be more than ten ET-3 on the map at any given time.\n- On GDs in which an ET-3 may be placed, the German player may instead remove one ET-3 and replace it with an ET-2. The removed ET-3 is available for placement two GDs later, as noted above.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-17.5",
+    "section": "17.5",
+    "title": "Fortified Area Hexes",
+    "summary": "",
+    "text": "The only fortified area hexes in Hurtgen are Westwall hexes. GOSS 7.3.5 & 17.4.1f apply. The location of the Westwall is printed on the map (see the TEC). Only German units may receive the full benefit of intact Westwall hexes.",
+    "crossRefs": ["7.3.5", "17.4.1f"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-17.5.1",
+    "section": "17.5.1",
+    "title": "Westwall Upgrade",
+    "summary": "",
+    "text": "Due to years of neglect, the Westwall was not battle-ready in September. When playing any scenario that starts in September, all Westwall hex ground assault combat benefits are reduced as follows (FS DRMs are not affected):\n\n- From September 12 (GD 1) to September 14 (GD 3) defending German units receive one column shift in their favor.\n- Beginning the AM GT of September 15 (GD 4) they receive two column shifts in their favor.\n- On the AM GT of September 18 (GD 7) the full three shift bonus is awarded.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-19.0",
+    "section": "19.0",
+    "title": "Weather",
+    "summary": "",
+    "text": "Weather rules for Hurtgen: Hell's Forest.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-19.2.1",
+    "section": "19.2.1",
+    "title": "Historical Weather",
+    "summary": "",
+    "text": "Historical weather is shown on the Game Turn Record Track (GTRT). The Turn Record Key explains the format. The atmospheric condition is shown for the AM GT, then the PM GT. The ground condition shown is for the entire GD.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-19.2.2",
+    "section": "19.2.2",
+    "title": "Variable Weather Determination",
+    "summary": "",
+    "text": "Variable weather is determined by using the chart and DR modifiers listed on the Weather Table depicted on the GTRT. Either player can roll for weather. Always determine atmospheric conditions prior to determining ground conditions. Apply all GD DRMs to both DR. Ground condition DRMs are used based on current GT ground condition. Previous GT ground condition, influences the DR range for determining ground conditions in the current GT. Determine Night GT and ENA ground condition by using the Night Ground Condition chart at the bottom of the Weather Table.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-20.0",
+    "section": "20.0",
+    "title": "Airpower",
+    "summary": "",
+    "text": "Airpower rules for Hurtgen: Hell's Forest.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-20.1.1",
+    "section": "20.1.1",
+    "title": "Assignment of Air Points",
+    "summary": "",
+    "text": "There are no separate air sectors. AP assigned to missions may support any friendly army anywhere on the map.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-20.3",
+    "section": "20.3",
+    "title": "Ground Interdiction (GI)",
+    "summary": "",
+    "text": "Apply a +1 DRM to all Ground Interdiction Value DRs.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-20.4",
+    "section": "20.4",
+    "title": "Supply Interdiction (SI)",
+    "summary": "",
+    "text": "A maximum of three missions may be conducted each GD.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-20.8",
+    "section": "20.8",
+    "title": "Carpet Bombing",
+    "summary": "",
+    "text": "On the GD that an Allied requested lull ends (they were Side 1), the Allied player may conduct a carpet bombing mission. The mission may be conducted during the AM or PM GT as the first action taken in the Fire Support Segment. Only one Carpet Bombing attack is allowed. The Allied player takes 16 markers of any kind (preferably the blue ace of spade markers) and places them as follows:\n\n- Four in any city hexes within 14 hexes of a friendly unit.\n- 12 in any hexes within two hexes of a friendly unit. These 12 markers may be split into two groups of six or retained as a single group of 12. All markers in a group must form a straight line of hexes along whatever axis is chosen (SW to NE or NW to SE). The groups may be set side by side (i.e., two lines of six markers).\n- After all markers have been placed, the Allied player rolls 1d10 for each marker. Apply the following DRMs:\n  +2: Hex is an intact Westwall hex.\n  +1: Hex has an Axis ET present.\n- If the modified DR is a 0-4 the marker remains on the map. Remove the marker on a modified DR of 5-9.\n- Roll 1d10 for each marker still on the map. If the result is 0-1, one step is eliminated from the hex, and if the result is 2-4 place an AS marker on the units. The choice of what steps are lost is made by the owning player.\n- The Carpet Bombing markers remain in place until the Administrative Phase. Any (of either side) unit using Exploit Movement into a hex that contains one of these markers must expend two additional MPs.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.0",
+    "section": "21.0",
+    "title": "Reinforcements",
+    "summary": "",
+    "text": "Reinforcement rules for Hurtgen: Hell's Forest.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.5",
+    "section": "21.5",
+    "title": "US Asset Reinforcements",
+    "summary": "",
+    "text": "US Corps and Army asset units (all of those independent artillery, combat engineer, and armor/TD battalions) arrive by being randomly picked from a Reinforcement Pool. Scenario instructions may call for them to start on the map or arrive at a specified time and place.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.5.1",
+    "section": "21.5.1",
+    "title": "September Reinforcement Pool",
+    "summary": "",
+    "text": "Separate out the following corps and army asset units. They are placed or arrive via scenario instructions.\n\n- 4/VII Cav Grp (4ArmC Btn, 24ArmC Btn, 2x 4C M-5 Coys, 759/VII M-5 Btn, 87/VII AFA Btn, & 297/VII CE Btn); 991/VII AFA Btn; 237/VII CE Btn; 238/VII CE Btn.\n- All V Corps asset units (22 units).\n- 11/XIII Cav Grp (36ArmC Btn, 44ArmC Btn, 2x11C M-5 Coys); 251/XIII CE Btn.\n- 113/XIX Cav Grp (113ArmC Btn, 125ArmC Btn, 744/XIX M-5 Btn, 2x113C M-5 Coys); 178/XIX CE Btn.\n- 92/9a Chem Btn, 264/9a FA Btn, 265/9a FA Btn, 266/9a FA Btn, 269/9a FA Btn, and 557/9a FA Btn.\n\nPlace the following 58 corps and army assets into an opaque cup. This is the September Reinforcement Pool.\n\n- 1st Army (12 units) This includes the 99th Inf Btn and 2nd Ranger Btn.\n- VII Corps (18 units)\n- XIX Corps (23 units)\n- 9th Army (5 units)\n\nThe following units are set aside they are not used.\n\n- Remaining XIII Corps' asset units (18 units).",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.5.2",
+    "section": "21.5.2",
+    "title": "Campaign Game US Reinforcement Pool",
+    "summary": "",
+    "text": "If a September or October scenario is being played into November or beyond, use the following procedures to adjust the US Reinforcement Pool.\n\n- On the AM GT of October 19 (GD 38), place all remaining Ninth Army and ten randomly drawn XIII corps' asset units into the reinforcement pool. Follow the procedures in (21.5.5).\n- On the AM GT of November 8 (GD 58) add the remaining XIII Corps' asset units to the pool. The Allied player draws one unit from the pool each AM GT. The units arrive stacked with or adjacent to the Ninth Army HQ. TP allocation is not required.",
+    "crossRefs": ["21.5.5"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.5.5",
+    "section": "21.5.5",
+    "title": "Reinforcement Pool Procedures",
+    "summary": "",
+    "text": "The Allied player may randomly withdraw units from the Reinforcement Pool. At the start of the Transport and Logistics Phase, the Allied player may expend TP to bring in corps/army asset units in the pool. The TP may not be used for any other purpose that GD. For each TP expended, the Allied player randomly selects three units from the pool. The units appear during any friendly Movement Phase that GD. They are placed on any road hex on the western edge of the map W.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.6",
+    "section": "21.6",
+    "title": "German Reinforcement Pools",
+    "summary": "",
+    "text": "The German side receives most of its non-divisional reinforcements by randomly picking units from the Reinforcement Pools. The German player rolls 1d10 during the Transport and Logistics Phase. During all GDs in September a +1 DRM is applied to the DR. The number of units that may be randomly selected from the pools is determined as follows:\n\n- DR 0-1 = 1 unit\n- DR 2-5 = 2 units\n- DR 6-8 = 3 units\n- DR 9+ = 4 units\n\nThe German player may draw units as follows:\n\n- All units may be drawn from Group A (21.6.1a), or he may;\n- Forego one selection in Group A and then draw one unit from Group B (21.6.1b). Only one draw may be made from Group B.\n- If there are not enough units left in Group A to complete the allowed draw, all remaining units may be drawn from Group B.\n- On November 1 (GD 51), if there are no units remaining in Group A and B, units may be drawn from Group C (21.6.1c).\n\nUnits are placed in the following hexes if German controlled and in GenS. No more than one unit may appear at each location.\n\n- Julich (E0317)\n- Duren (E0925)\n- Eschweiler (W3823)\n- Heinsberg (W3006)\n- Euskirchen (E2435)\n- Erkelenz (E0205).",
+    "crossRefs": ["21.6.1a", "21.6.1b", "21.6.1c"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.6.1",
+    "section": "21.6.1",
+    "title": "September Reinforcement Pool",
+    "summary": "",
+    "text": "The German Reinforcement Pool for September consists of three groups: Group A, Group B & Group C. The following units are not placed in the pool and start the scenario on the map:\n\n- 416/176 and 426/176 Training Rgts (each with 4 units).\n- 211/526 (4 units), 253/526 (3 units), and 536/526 (4 units) Training Rgts.\n- 16Sec, 526Sec, 547Sec, 736Sec, 863Sec Btns.\n- 11th Luftwaffe Fortress Battalion\n- Aachen A&E Btn\n- Hennecke and Duren police units.\n- Julich and Duren NCO Btns.\n- Six Luftwaffe Static Hvy Flak Coys.\n\nThis is a total of 36 units. All remaining rear echelon units and army/corps asset units are placed in the three pools as detailed in (21.6.1a) thru c.",
+    "crossRefs": ["21.6.1a"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.6.1a",
+    "section": "21.6.1a",
+    "title": "Group A. Reinforcement Pool",
+    "summary": "",
+    "text": "Place the following 43 units into the Group A1 pool:\n\n- Luftwaffe Fortress Btns (16)\n- Heer Fortress Btns (6)\n- Landwehr Btns (8)\n- Training (A&E) Btns (4)\n- MG Btns (7)\n- 626Sec Btn\n- Stomach Btn",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.6.1b",
+    "section": "21.6.1b",
+    "title": "Group B. Reinforcement Pool",
+    "summary": "",
+    "text": "Place the following 29 units into the Group B. pool:\n\n- All artillery units labeled 7A (6 units), 81K (3 units), and 74K (2 units); Total (11 units).\n- Fortress AT Btns (6 units)\n- Luftwaffe Static Hvy Flak Coys (12 units).\n\n**Note:** The 503 and 504 fortress AT units each have two counters that allow them to split into two smaller units. Set the breakdown counters aside until used.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.6.1c",
+    "section": "21.6.1c",
+    "title": "Group C. Reinforcement Pool",
+    "summary": "",
+    "text": "The German player randomly selects ten units from Group A and places them in the Group C pool. He also places the two XII SS Corps artillery units into this pool.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.7",
+    "section": "21.7",
+    "title": "6th Pz Army & Early Activation",
+    "summary": "",
+    "text": "Sixth Panzer Army was refitting near the city of Koln during the month of November in preparation for Hitler's planned counteroffensive in December. If the Allies had gotten beyond the Roer River, it is likely that part of this army and other divisions would have been committed to halt any further advance on the Rhine.\n\n- Beginning the AM GT of November 5 (GD 55), anytime an Allied unit, in GenS, is east of the Roer River or within 10 hexes of Euskirchen (E2435), the German player may attempt to activate elements of the 6th Pz Army.\n- Roll 1d10, result of 2 or more; ISS Pz Corps HQ, two 6SS Army artillery Btns and the 12SS Pz Division are activated. They are placed on the map in any German controlled hex within ten hexes of Koln (E3117).\n- After activation, but prior to placing the 12SS Pz Division, roll 1d10. The result is the number of step losses the 12SS Pz Division's infantry type units have previously suffered. Roll a second 1d10 and halve the result. The result is the number of Pz steps previously suffered. For each seven GDs after the November 5 (GD 55), apply a -2 DRM to each step loss DR.\n- If on any GD after November 5, there are elements (any single unit) from a second Allied division that meet the activation trigger, all units of the 2SS Pz Division may be activated. The 2SS is subject to the same step loss DR as the 12SS.\n- Once activated, these units remain in play until the German player wishes to withdraw them.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-21.7.1",
+    "section": "21.7.1",
+    "title": "German 347th Infantry Division",
+    "summary": "",
+    "text": "The six units of the German 347th Infantry Division are a potential reinforcement. This reinforcement is triggered if the Allied player moves units east of the W3700 hex row and is within 10 hexes of the southern map edge. If triggered, the German player receives the 347th Division as reinforcements from anywhere on the south edge of the maps east of hex row W3500. These units arrive one GT after being triggered.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-22.0",
+    "section": "22.0",
+    "title": "Replacements",
+    "summary": "",
+    "text": "Replacement rules for Hurtgen: Hell's Forest.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-22.3.4",
+    "section": "22.3.4",
+    "title": "Resurrecting with RE Units",
+    "summary": "",
+    "text": "The German player may not resurrect units using RE units prior to the AM GT of September 15 (GD 4).",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-22.7",
+    "section": "22.7",
+    "title": "Luftwaffe Static Flak Coys",
+    "summary": "",
+    "text": "Eliminated Luftwaffe Static Flak Coys may not be replaced using RePs nor do they garner RePs when eliminated. Beginning the AM GT of October 1 (GD 20) one Static Flak Coy may be removed from the eliminated units box and placed on the map in any German controlled city or town hex within the borders of Germany. Only one Coy can be placed every seven GDs. There is no cost in ReP.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-23.0",
+    "section": "23.0",
+    "title": "Leaders",
+    "summary": "",
+    "text": "Leader rules for Hurtgen: Hell's Forest.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-23.4.1",
+    "section": "23.4.1",
+    "title": "Allied Leaders",
+    "summary": "",
+    "text": "All leaders have the same bonuses as detailed in GOSS 23.0. In addition, the below leaders have the following benefits.\n\n**Collins (VII Corps):** If Collins starts the AM GT stacked with a formation HQ subordinate to the VII Corps, that division's subordinate units may perform their movement during a Friendly Movement Phase in any order desired, regardless of the type of movement used.\n\n**Terry de la Mesa Allen (104th Inf Div):** If Allen is stacked with the 104th HQ, any infantry unit subordinate to the 104th Inf Div HQ may automatically activate during an ENA period. Additionally, PAs made by his division during night GTs do not suffer the -1 column shift to the left.\n\n**Maurice Rose (3rd Arm Division):** If Rose is stacked with any armor unit subordinate to the 3rd Arm Div, all units in that stack, with any type of AFV symbol and subordinate to the 3rd Arm Div may advance after GA as though they were a Recon unit (GOSS 13.10.2a).\n\n**Ernest Harmon (2nd Armored Division):** If Harmon is stacked with the division HQ, all subordinate units may increase their advance after combat by one hex (both PA and tactical). If stacked with or adjacent to any subordinate unit conducting an offensive GA, Harmon may provide two favorable column shifts to that one GA.",
+    "crossRefs": ["23.0", "13.10.2a"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-23.4.2",
+    "section": "23.4.2",
+    "title": "German Leaders",
+    "summary": "",
+    "text": "**Manteuffel (5Pz Army):** If Manteuffel starts an AM GT stacked with any corps HQ, all units of one Mech division subordinate to that corps HQ receive one additional MP during both the AM and PM GTs of that GD. He also confers a favorable one column shift to any units of that division when attacking or defending in a GA. He may not add that shift to a combat already receiving favorable shifts from any other leader.\n\n**Brandenburg (7th Army):** If Brandenburg starts a GT stacked with a division HQ that is subordinate to the 7th Army, he may award up to two favorable column shifts to any defensive GA involving units of that division. The shifts may be used for the same GA or split between two different combats and may be combined with other leader generated favorable shifts.\n\n**vLuettwitz (XLVII Pz Corps):** If vLuettwitz starts an AM GT stacked with a division HQ that is subordinate to the XLVII Pz Corps, he confers one favorable shift to one GA (attack or defense) per GD to any unit subordinate to that division HQ. He may not add that shift to a combat already receiving favorable shifts from any other leader.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-27.0",
+    "section": "27.0",
+    "title": "Special Rules",
+    "summary": "",
+    "text": "These rules deal with special situations not covered or organized in the series rulebooks.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-27.1",
+    "section": "27.1",
+    "title": "Roer River Dams",
+    "summary": "",
+    "text": "The Roer River Dams have a potentially huge effect on the course of the battle. With the floodgate valves opened and then destroyed, flood conditions on the Roer River would have existed for at least 12+ full game days (as actually happened in 1945). Temporary bridging and assault crossings would not have been possible during this period, thus greatly complicating any Allied effort east of the river for some time.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-27.1.1",
+    "section": "27.1.1",
+    "title": "Location of Dams",
+    "summary": "",
+    "text": "There are two critical dams, the Urft (E0539/E0540) and Schwamanuel Dams (E0637/E0737). As long as the German player controls at least one of the above listed hexes on both dams, he may open the floodgates.\n\n**Designer's Note:** It is very unlikely that the Germans would have actually destroyed the dams.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-27.1.2",
+    "section": "27.1.2",
+    "title": "Opening the Dam Floodgates",
+    "summary": "",
+    "text": "At any time in the game that the German player wishes, he simply announces that he has opened the floodgates. The effect is irreversible by either player. The German player must control both dams to open the floodgates.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-27.1.3",
+    "section": "27.1.3",
+    "title": "Roer River Flood Stage",
+    "summary": "",
+    "text": "Two GTs after the floodgates have been opened, the Roer River is in flood stage.\n\n- Secondary or trail road bridges that cross the Roer are not usable during flood stage.\n- The blue tinted hexes on either side of the Roer River are considered to be marsh hexes except where a town or city hex exists.\n- Any FWs that either side has built in the blue tinted hexes are removed (including those in town and city hexes). FW may not be built in these hexes until flood stage is over (27.1.4).\n- No unit may cross the Roer River unless using a primary road with an intact bridge (engineers may not ferry).\n- Bridge markers are destroyed (remove them from the map). No bridges may be built across the Roer during flood stage.\n- GenS paths may not be traced over the Roer River unless using an intact bridge as described above.",
+    "crossRefs": ["27.1.4"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-27.1.4",
+    "section": "27.1.4",
+    "title": "Flood Stage Ends",
+    "summary": "",
+    "text": "At the start of the tenth GD of flood stage, the German player rolls 1d10. On a roll of 9 or more, flood stage immediately ends. A +2 DRM applies for each GD after the tenth GD. Beginning the GD, the flood stage ends apply the following affects:\n\n- The blue tinted areas are treated as marsh for two additional GDs (current GD +1).\n- Secondary road bridges across the Roer are immediately available for all uses.\n- The Roer is considered a minor river for all purposes.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-28.0",
+    "section": "28.0",
+    "title": "Victory Points",
+    "summary": "",
+    "text": "The victory points and instant victory conditions listed in this section are applicable to scenario 2, 3, 4 and the campaign game.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-28.1",
+    "section": "28.1",
+    "title": "Cities & Towns",
+    "summary": "",
+    "text": "The below listed cities and/or town hexes are worth VPs to the Allied player. The Allied player must control all town or city hexes associated with the named location listed below.\n\n- Roetgen (W3435) — 5 VP\n- Monschau (W3642) — 5 VP\n- Lammersdorf (W3837) — 5 VP\n- Grosshau (E0530) — 10 VP\n- Mariadorf (W3520) — 10 VP\n- Eilendorf (W3226) — 10 VP\n- Stolberg (W3728) — 10 VP\n- Eschweiler (W3823) — 10 VP\n- Alsdorf (W3319) — 10 VP\n- Heerlen (W2418) — 10 VP\n- Aachen (W2926) — 10 VP\n- Linnich (W3912) — 10 VP\n- Heinsberg (W3006) — 10 VP\n- Julich (E0317) — 15 VP\n- Duren (E0925) — 15 VP\n- Euskirchen (E2435) — 15 VP\n- Schleiden (E0844) — 15 VP\n- Erkelenz (E0205) — 20 VP\n- Bonn (E3931) — 40 VP\n- Koln (E3416) — 50 VP",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-28.2",
+    "section": "28.2",
+    "title": "Roer River Floodgates",
+    "summary": "",
+    "text": "The Allied side receives 40 victory points if the German player opens the floodgates.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hurtgen-28.3",
+    "section": "28.3",
+    "title": "Instant Allied Victory",
+    "summary": "",
+    "text": "The Allied side wins an instant victory if one of the below requirements is met.\n\n- At the end of September (GD 19) the Allied player has at least one combat unit, in GenS on the east side of the Roer River.\n- There is at least one Allied combat unit in GenS that is adjacent to the Rhein River for more than one complete GT. The unit or units must have been adjacent to the Rhein for two friendly Administration Phases.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  }
+]

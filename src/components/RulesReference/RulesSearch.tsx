@@ -122,7 +122,7 @@ function RuleRow({
         </span>
         {rule.module && (
           <span className="shrink-0 rounded bg-blue-500/20 px-1 py-0.5 text-[10px] font-medium text-blue-700 dark:text-blue-400">
-            {rule.module === "war" ? "WaR" : rule.module}
+            {rule.module === "war" ? "WaR" : rule.module === "hurtgen" ? "HHF" : rule.module}
           </span>
         )}
         <div className="min-w-0 flex-1">
@@ -187,7 +187,7 @@ function TreeRow({
             </span>
             {node.rule.module && (
               <span className="shrink-0 rounded bg-blue-500/20 px-1 py-0.5 text-[10px] font-medium text-blue-700 dark:text-blue-400">
-                {node.rule.module === "war" ? "WaR" : node.rule.module}
+                {node.rule.module === "war" ? "WaR" : node.rule.module === "hurtgen" ? "HHF" : node.rule.module}
               </span>
             )}
             <div className="min-w-0 flex-1">
