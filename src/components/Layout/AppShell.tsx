@@ -8,7 +8,6 @@ export interface TabDef {
 interface AppShellProps {
   sidebar: ReactNode;
   children: ReactNode;
-  turnInfo: ReactNode;
   gameSelector: ReactNode;
   tabs: TabDef[];
   activeTab: string;
@@ -20,7 +19,6 @@ interface AppShellProps {
 export function AppShell({
   sidebar,
   children,
-  turnInfo,
   gameSelector,
   tabs,
   activeTab,
@@ -70,7 +68,6 @@ export function AppShell({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-            {turnInfo}
             {gameSelector}
           </div>
 

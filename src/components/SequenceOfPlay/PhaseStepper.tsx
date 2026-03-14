@@ -1,8 +1,7 @@
-import type { Phase, SubPhase, SoPProgress, TimeOfDay } from "../../types/goss";
+import type { Phase, SubPhase, SoPProgress } from "../../types/goss";
 import { Breadcrumb, type BreadcrumbItem } from "../Breadcrumb";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
-import { isActiveForTimeOfDay } from "../../utils/timingFilter";
 
 interface PhaseStepperProps {
   phase: Phase | null;
@@ -15,7 +14,6 @@ interface PhaseStepperProps {
   onClearChecklist: () => void;
   onAdvanceTurn: () => void;
   onGoToPhase: (phaseIndex: number, subPhaseIndex?: number) => void;
-  timeOfDay: TimeOfDay;
 }
 
 export function PhaseStepper({
@@ -29,7 +27,6 @@ export function PhaseStepper({
   onClearChecklist,
   onAdvanceTurn,
   onGoToPhase,
-  timeOfDay,
 }: PhaseStepperProps) {
   if (!phase) {
     return (
@@ -80,7 +77,7 @@ export function PhaseStepper({
           </span>
           {phase.timing && phase.timing !== "every-turn" && (
             <span className="rounded bg-blue-100 px-1.5 py-0.5 text-xs font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
-              {phase.timing.replace("-", " ").toUpperCase()}
+              {phase.timing.replace(/-/g, " ").toUpperCase()}
             </span>
           )}
           {phase.player !== "both" && (
@@ -104,17 +101,16 @@ export function PhaseStepper({
           <div className="mt-0.5 text-lg font-semibold text-white dark:text-accent-200">
             {subPhase.name}
           </div>
-          {subPhase.ruleRef && (
-            <RuleRefBadge ruleRef={subPhase.ruleRef} className="mt-0.5" />
-          )}
-        </div>
-      )}
-
-      {/* Skipped banner */}
-      {!isActiveForTimeOfDay(active === subPhase ? subPhase?.timing : phase.timing, timeOfDay) && (
-        <div className="mb-4 rounded-lg border border-stone-300 bg-stone-100 p-3 text-center text-sm text-stone-500 dark:border-stone-600 dark:bg-stone-800">
-          ⏭ This {subPhase ? "sub-phase" : "phase"} is skipped during{" "}
-          <span className="font-semibold">{timeOfDay}</span> turns
+          <div className="mt-1 flex items-center gap-2">
+            {subPhase.ruleRef && (
+              <RuleRefBadge ruleRef={subPhase.ruleRef} />
+            )}
+            {subPhase.timing && subPhase.timing !== "every-turn" && (
+              <span className="rounded bg-blue-100 px-1.5 py-0.5 text-xs font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+                {subPhase.timing.replace(/-/g, " ").toUpperCase()}
+              </span>
+            )}
+          </div>
         </div>
       )}
 
@@ -125,7 +121,11 @@ export function PhaseStepper({
 
       {/* Notes */}
       {active.notes.length > 0 && (
-        <ul className="mb-4 space-y-1.5">
+        <div className="mb-4">
+          <h3 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-stone-500">
+            Notes
+          </h3>
+        <ul className="space-y-1.5">
           {active.notes.map((note, i) => (
             <li
               key={i}
@@ -136,6 +136,7 @@ export function PhaseStepper({
             </li>
           ))}
         </ul>
+        </div>
       )}
 
       {/* Checklist */}

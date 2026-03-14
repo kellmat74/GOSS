@@ -2,7 +2,6 @@ import { useState, useEffect, useMemo } from "react";
 import { AppShell } from "./components/Layout/AppShell";
 import { PhaseOverview } from "./components/SequenceOfPlay/PhaseOverview";
 import { PhaseStepper } from "./components/SequenceOfPlay/PhaseStepper";
-import { TurnInfo } from "./components/SequenceOfPlay/TurnInfo";
 import { GameSelector, type GameModule } from "./components/Layout/GameSelector";
 import { RulesSearch } from "./components/RulesReference/RulesSearch";
 import { RuleModal } from "./components/RulesReference/RuleModal";
@@ -94,8 +93,7 @@ function App() {
     prevStep,
     toggleChecklist,
     clearChecklist,
-    setTimeOfDay,
-    advanceTurn,
+    resetProgress,
   } = useSoPProgress(phases);
 
   const tabs = [
@@ -112,7 +110,6 @@ function App() {
           phases={phases}
           currentPhaseIndex={progress.currentPhaseIndex}
           currentSubPhaseIndex={progress.currentSubPhaseIndex}
-          timeOfDay={progress.gameTurn.timeOfDay}
           onSelectPhase={goToPhase}
         />
       )}
@@ -123,7 +120,6 @@ function App() {
     <RulesProvider rules={allRules}>
       <AppShell
         sidebar={sidebar}
-        turnInfo={<TurnInfo timeOfDay={progress.gameTurn.timeOfDay} onChangeTimeOfDay={setTimeOfDay} />}
         gameSelector={<GameSelector value={gameModule} onChange={setGameModule} />}
         tabs={tabs}
         activeTab={view}
@@ -141,9 +137,8 @@ function App() {
             onPrev={prevStep}
             onToggleChecklist={toggleChecklist}
             onClearChecklist={clearChecklist}
-            onAdvanceTurn={advanceTurn}
+            onAdvanceTurn={resetProgress}
             onGoToPhase={goToPhase}
-            timeOfDay={progress.gameTurn.timeOfDay}
           />
         )}
         {view === "flowchart" && <SoPFlowchart />}
