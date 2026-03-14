@@ -243,8 +243,8 @@
     "module": "hurtgen"
   },
   {
-    "id": "hurtgen-15.3",
-    "section": "15.3",
+    "id": "hurtgen-15.3.0",
+    "section": "15.3.0",
     "title": "Primary Supply Source",
     "summary": "",
     "text": "The Allied Primary Supply Sources are detailed in (9.2.1), (9.2.2) & (9.2.4). The German PSS are as follows:\n\n- Any city hex east of the Roer River connected to hexes east of the Rhein by primary road hexes.\n- Any primary road hex on the northern map edge east of the Roer River.\n- Any Aachen city hex can provide six on hand supply points (OhS) and two Fuel Points (FP) to any one German formation HQ if the HQ is isolated and has a valid OhS supply path to any German controlled Aachen city hex. GOSS 15.5.0 applies.",
@@ -324,8 +324,8 @@
     "module": "hurtgen"
   },
   {
-    "id": "hurtgen-17.5",
-    "section": "17.5",
+    "id": "hurtgen-17.5.0",
+    "section": "17.5.0",
     "title": "Fortified Area Hexes",
     "summary": "",
     "text": "The only fortified area hexes in Hurtgen are Westwall hexes. GOSS 7.3.5 & 17.4.1f apply. The location of the Westwall is printed on the map (see the TEC). Only German units may receive the full benefit of intact Westwall hexes.",
