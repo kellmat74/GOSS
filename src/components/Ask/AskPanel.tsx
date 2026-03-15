@@ -252,20 +252,16 @@ function AssistantMessage({ content }: { content: string }) {
       {paragraphs.map((para, i) => {
         const lines = para.split("\n");
 
-        // Heading lines (# or ##)
+        // Heading lines (any # level)
         const firstLine = lines[0].trim();
-        if (firstLine.startsWith("# ")) {
+        const headingMatch = firstLine.match(/^(#{1,4})\s+(.+)/);
+        if (headingMatch) {
+          const level = headingMatch[1].length;
+          const cls = level === 1 ? "font-bold text-base mt-2" : "font-semibold mt-1";
           return (
-            <h3 key={i} className="font-bold text-base mt-2">
-              <MarkdownLine text={firstLine.replace(/^#+\s+/, "")} />
+            <h3 key={i} className={cls}>
+              <MarkdownLine text={headingMatch[2]} />
             </h3>
-          );
-        }
-        if (firstLine.startsWith("## ")) {
-          return (
-            <h4 key={i} className="font-semibold mt-1">
-              <MarkdownLine text={firstLine.replace(/^#+\s+/, "")} />
-            </h4>
           );
         }
 
