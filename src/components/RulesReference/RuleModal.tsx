@@ -177,13 +177,11 @@ function RuleText({ text, onRuleClick }: { text: string; onRuleClick: (ref: stri
   const paragraphs = text.split("\n\n").filter(Boolean);
 
   return (
-    <GlossaryHighlighter>
-      <div className="space-y-3 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
-        {paragraphs.map((para, i) => (
-          <RuleParagraph key={i} text={para} onRuleClick={onRuleClick} />
-        ))}
-      </div>
-    </GlossaryHighlighter>
+    <div className="space-y-3 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
+      {paragraphs.map((para, i) => (
+        <RuleParagraph key={i} text={para} onRuleClick={onRuleClick} />
+      ))}
+    </div>
   );
 }
 
@@ -329,30 +327,32 @@ function InlineText({ text, onRuleClick }: { text: string; onRuleClick: (ref: st
   }
 
   return (
-    <>
-      {parts.map((part, i) => {
-        if (typeof part === "string") return <span key={i}>{part}</span>;
-        if (part.type === "bold")
-          return (
-            <strong key={i} className="font-semibold text-stone-900 dark:text-stone-100">
-              <InlineRefs text={part.text} onRuleClick={onRuleClick} />
-            </strong>
-          );
-        if (part.type === "ref")
-          return (
-            <button
-              key={i}
-              onClick={(e) => {
-                e.stopPropagation();
-                onRuleClick(part.ref);
-              }}
-              className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
-            >
-              ({part.ref})
-            </button>
-          );
-        return null;
-      })}
-    </>
+    <GlossaryHighlighter>
+      <>
+        {parts.map((part, i) => {
+          if (typeof part === "string") return <span key={i}>{part}</span>;
+          if (part.type === "bold")
+            return (
+              <strong key={i} className="font-semibold text-stone-900 dark:text-stone-100">
+                <InlineRefs text={part.text} onRuleClick={onRuleClick} />
+              </strong>
+            );
+          if (part.type === "ref")
+            return (
+              <button
+                key={i}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onRuleClick(part.ref);
+                }}
+                className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+              >
+                ({part.ref})
+              </button>
+            );
+          return null;
+        })}
+      </>
+    </GlossaryHighlighter>
   );
 }
