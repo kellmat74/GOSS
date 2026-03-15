@@ -25,10 +25,10 @@ export function searchRules(
   const results: SearchResult[] = [];
 
   for (const rule of rules) {
-    const titleLower = rule.title.toLowerCase();
-    const sectionLower = rule.section.toLowerCase();
-    const summaryLower = rule.summary.toLowerCase();
-    const textLower = rule.text.toLowerCase();
+    const titleLower = (rule.title ?? "").toLowerCase();
+    const sectionLower = (rule.section ?? "").toLowerCase();
+    const summaryLower = (rule.summary ?? "").toLowerCase();
+    const textLower = (rule.text ?? "").toLowerCase();
 
     let score = 0;
     let allMatch = true;
