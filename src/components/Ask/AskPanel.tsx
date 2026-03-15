@@ -1,189 +1,316 @@
-import { useState, useMemo, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import type { RuleEntry } from "../../types/goss";
 import { useRules } from "../../context/RulesContext";
-import { searchRules, getSnippet } from "../../utils/rulesSearch";
+import { searchRules } from "../../utils/rulesSearch";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
 interface AskPanelProps {
   rules: RuleEntry[];
 }
 
-const EXAMPLE_SEARCHES = [
-  "rounding rule",
-  "supply",
-  "combat resolution",
-  "movement",
-  "weather",
-  "reinforcement",
-  "stacking",
-  "ZOC",
+interface ChatMessage {
+  role: "user" | "assistant";
+  content: string;
+}
+
+const WORKER_URL = "https://goss-ask-proxy.kellmat.workers.dev";
+
+const EXAMPLE_QUESTIONS = [
+  "How does supply work?",
+  "What happens when a unit is out of ammo?",
+  "How do ZOCs affect movement?",
+  "Explain the ground assault procedure",
+  "What are the stacking limits?",
+  "How does weather affect combat?",
 ];
 
+function buildSystemPrompt(topRules: RuleEntry[], summaryRules: RuleEntry[]): string {
+  // Top matches get full text; the rest get summary only
+  const fullText = topRules
+    .map((r) => `[${r.section}] ${r.title}: ${r.text}`)
+    .join("\n\n");
+
+  const summaries = summaryRules
+    .map((r) => `[${r.section}] ${r.title}: ${r.summary}`)
+    .join("\n");
+
+  return `You are a rules expert for GOSS (Grand Operational Simulation Series) 2020, a tabletop wargame system. Answer questions about the rules accurately, citing specific rule sections in parenthesized format like (3.2.1) so they render as clickable links.
+
+Be concise but thorough. If a question is ambiguous, explain the relevant rules and note the ambiguity. Always cite the specific rule section numbers.
+
+## Most relevant rules (full text):
+
+${fullText}
+
+## Additional related rules (summaries):
+
+${summaries}`;
+}
+
 export function AskPanel({ rules }: AskPanelProps) {
-  const [query, setQuery] = useState("");
-  const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const { openRule } = useRules();
-  const inputRef = useRef<HTMLInputElement>(null);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Focus input on mount
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
 
-  // Debounce query
-  const handleChange = useCallback((value: string) => {
-    setQuery(value);
-    clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(() => setDebouncedQuery(value), 200);
+  // Scroll to bottom on new messages
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, loading]);
+
+  // Auto-resize textarea
+  const handleInput = useCallback((value: string) => {
+    setInput(value);
+    if (inputRef.current) {
+      inputRef.current.style.height = "auto";
+      inputRef.current.style.height =
+        Math.min(inputRef.current.scrollHeight, 120) + "px";
+    }
   }, []);
 
-  const results = useMemo(
-    () => searchRules(debouncedQuery, rules),
-    [debouncedQuery, rules]
+  const sendMessage = useCallback(
+    async (text?: string) => {
+      const messageText = text ?? input.trim();
+      if (!messageText || loading) return;
+
+      setInput("");
+      if (inputRef.current) inputRef.current.style.height = "auto";
+      setError(null);
+
+      const userMessage: ChatMessage = { role: "user", content: messageText };
+      const newMessages = [...messages, userMessage];
+      setMessages(newMessages);
+      setLoading(true);
+
+      try {
+        // Top 10 get full text, next 15 get summaries only
+        const relevant = searchRules(messageText, rules).slice(0, 25);
+        const topRules = relevant.slice(0, 10).map((r) => r.rule);
+        const summaryRules = relevant.slice(10).map((r) => r.rule);
+
+        const response = await fetch(WORKER_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            system: buildSystemPrompt(topRules, summaryRules),
+            messages: newMessages.map((m) => ({
+              role: m.role,
+              content: m.content,
+            })),
+          }),
+        });
+
+        if (!response.ok) {
+          const errData = await response.json().catch(() => null);
+          throw new Error(
+            errData?.error?.message ?? `API error (${response.status})`
+          );
+        }
+
+        const data = await response.json();
+        const assistantText =
+          data.content?.[0]?.text ?? "Sorry, I got an empty response.";
+
+        setMessages([
+          ...newMessages,
+          { role: "assistant", content: assistantText },
+        ]);
+      } catch (err) {
+        setError(
+          err instanceof Error ? err.message : "Failed to get response"
+        );
+      } finally {
+        setLoading(false);
+      }
+    },
+    [input, loading, messages, rules]
   );
 
-  const hasQuery = debouncedQuery.trim().length > 0;
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  };
 
   return (
-    <div className="mx-auto max-w-2xl">
+    <div className="mx-auto flex max-w-2xl flex-col" style={{ height: "calc(100vh - 8rem)" }}>
       <h2 className="mb-1 text-2xl font-bold">Ask the Rules</h2>
       <p className="mb-4 text-sm text-stone-500">
-        Search {rules.length} rules by keyword or topic
+        AI-powered Q&A across {rules.length} rules
       </p>
 
-      {/* Search input */}
-      <div className="relative mb-4">
-        <input
-          ref={inputRef}
-          type="search"
-          value={query}
-          onChange={(e) => handleChange(e.target.value)}
-          placeholder="Search rules by keyword or topic..."
-          className="w-full rounded-lg border border-stone-300 bg-white px-4 py-3 pl-10 text-sm focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 dark:border-stone-600 dark:bg-stone-800"
-        />
-        <svg
-          className="absolute left-3 top-3.5 h-4 w-4 text-stone-400"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-          />
-        </svg>
+      {/* Messages area */}
+      <div className="flex-1 overflow-y-auto space-y-4 mb-4 min-h-0">
+        {messages.length === 0 && !loading && (
+          <div className="py-8 text-center">
+            <p className="mb-4 text-stone-500">Try asking:</p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {EXAMPLE_QUESTIONS.map((q) => (
+                <button
+                  key={q}
+                  onClick={() => sendMessage(q)}
+                  className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-600 hover:border-accent-500 hover:text-accent-700 dark:border-stone-600 dark:bg-stone-800 dark:text-stone-400 dark:hover:border-accent-400 dark:hover:text-accent-400 transition-colors"
+                >
+                  {q}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {messages.map((msg, i) => (
+          <div
+            key={i}
+            className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+          >
+            <div
+              className={`max-w-[85%] rounded-lg px-4 py-3 text-sm leading-relaxed ${
+                msg.role === "user"
+                  ? "bg-accent-500 text-white"
+                  : "bg-stone-100 text-stone-800 dark:bg-stone-800 dark:text-stone-200"
+              }`}
+            >
+              {msg.role === "assistant" ? (
+                <AssistantMessage content={msg.content} />
+              ) : (
+                msg.content
+              )}
+            </div>
+          </div>
+        ))}
+
+        {loading && (
+          <div className="flex justify-start">
+            <div className="rounded-lg bg-stone-100 px-4 py-3 text-sm dark:bg-stone-800">
+              <span className="inline-flex gap-1">
+                <span className="animate-bounce">.</span>
+                <span className="animate-bounce" style={{ animationDelay: "0.1s" }}>.</span>
+                <span className="animate-bounce" style={{ animationDelay: "0.2s" }}>.</span>
+              </span>
+            </div>
+          </div>
+        )}
+
+        {error && (
+          <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-800 dark:bg-red-900/20 dark:text-red-400">
+            {error}
+          </div>
+        )}
+
+        <div ref={messagesEndRef} />
       </div>
 
-      {/* Empty state */}
-      {!hasQuery && (
-        <div className="py-8 text-center">
-          <p className="mb-4 text-stone-500">Try searching for:</p>
-          <div className="flex flex-wrap justify-center gap-2">
-            {EXAMPLE_SEARCHES.map((term) => (
-              <button
-                key={term}
-                onClick={() => handleChange(term)}
-                className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-600 hover:border-accent-500 hover:text-accent-700 dark:border-stone-600 dark:bg-stone-800 dark:text-stone-400 dark:hover:border-accent-400 dark:hover:text-accent-400 transition-colors"
-              >
-                {term}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Results count */}
-      {hasQuery && (
-        <p className="mb-3 text-xs text-stone-500">
-          {results.length === 0
-            ? "No rules match your search"
-            : `${results.length} result${results.length !== 1 ? "s" : ""}`}
-        </p>
-      )}
-
-      {/* Results */}
-      {hasQuery && results.length > 0 && (
-        <ul className="space-y-2">
-          {results.map(({ rule, matchedFields }) => (
-            <li
-              key={rule.id}
-              className="rounded-lg border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-800"
-            >
-              <button
-                onClick={() => openRule(rule.id)}
-                className="w-full px-4 py-3 text-left hover:bg-stone-50 dark:hover:bg-stone-700/50 transition-colors"
-              >
-                {/* Header row */}
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="shrink-0 rounded bg-accent-500 px-1.5 py-0.5 text-xs font-mono text-white dark:bg-stone-700 dark:text-accent-400">
-                    {rule.section}
-                  </span>
-                  <span className="font-medium">
-                    <HighlightText text={rule.title} query={debouncedQuery} />
-                  </span>
-                </div>
-
-                {/* Snippet */}
-                <p className="text-xs text-stone-500 dark:text-stone-400 leading-relaxed line-clamp-3">
-                  <HighlightText
-                    text={getSnippet(
-                      matchedFields.includes("text")
-                        ? rule.text
-                        : rule.summary,
-                      debouncedQuery
-                    )}
-                    query={debouncedQuery}
-                  />
-                </p>
-
-                {/* Cross-refs */}
-                {rule.crossRefs.length > 0 && (
-                  <div className="mt-2 text-xs text-stone-400">
-                    <RuleInlineText
-                      text={`See also: ${rule.crossRefs.map((r) => `(${r})`).join(", ")}`}
-                    />
-                  </div>
-                )}
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
+      {/* Input area */}
+      <div className="relative shrink-0">
+        <textarea
+          ref={inputRef}
+          value={input}
+          onChange={(e) => handleInput(e.target.value)}
+          onKeyDown={handleKeyDown}
+          placeholder="Ask a question about the rules..."
+          rows={1}
+          className="w-full resize-none rounded-lg border border-stone-300 bg-white px-4 py-3 pr-12 text-sm focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 dark:border-stone-600 dark:bg-stone-800"
+        />
+        <button
+          onClick={() => sendMessage()}
+          disabled={!input.trim() || loading}
+          className="absolute right-2 top-2 rounded-md bg-accent-500 p-1.5 text-white disabled:opacity-40 hover:bg-accent-600 transition-colors"
+        >
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
     </div>
   );
 }
 
-/** Highlight matching query tokens in text */
-function HighlightText({ text, query }: { text: string; query: string }) {
-  const tokens = query
-    .toLowerCase()
-    .split(/\s+/)
-    .filter((t) => t.length > 0);
+/** Strip markdown bold markers and return text with <strong> wrapping */
+function parseBold(text: string): React.ReactNode[] {
+  const parts: React.ReactNode[] = [];
+  const regex = /\*\*(.+?)\*\*/g;
+  let last = 0;
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > last) {
+      parts.push(text.slice(last, match.index));
+    }
+    parts.push(<strong key={match.index}>{match[1]}</strong>);
+    last = regex.lastIndex;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
+}
 
-  if (tokens.length === 0) return <>{text}</>;
+/** Render a line of text with bold + rule refs */
+function MarkdownLine({ text }: { text: string }) {
+  // Strip bold markers for RuleInlineText, then we handle bold separately
+  // Actually, render bold inline with rule refs by pre-processing bold
+  const stripped = text.replace(/\*\*/g, "");
+  return <RuleInlineText text={stripped} />;
+}
 
-  // Build regex matching any token
-  const escaped = tokens.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
-  const regex = new RegExp(`(${escaped.join("|")})`, "gi");
-  const parts = text.split(regex);
+/** Render assistant message with clickable rule refs */
+function AssistantMessage({ content }: { content: string }) {
+  // Split on double newlines for paragraphs
+  const paragraphs = content.split(/\n\n+/);
 
   return (
-    <>
-      {parts.map((part, i) =>
-        regex.test(part) ? (
-          <mark
-            key={i}
-            className="bg-accent-500/20 text-accent-700 dark:bg-accent-400/20 dark:text-accent-300 rounded px-0.5"
-          >
-            {part}
-          </mark>
-        ) : (
-          <span key={i}>{part}</span>
-        )
-      )}
-    </>
+    <div className="space-y-2">
+      {paragraphs.map((para, i) => {
+        const lines = para.split("\n");
+
+        // Heading lines (# or ##)
+        const firstLine = lines[0].trim();
+        if (firstLine.startsWith("# ")) {
+          return (
+            <h3 key={i} className="font-bold text-base mt-2">
+              <MarkdownLine text={firstLine.replace(/^#+\s+/, "")} />
+            </h3>
+          );
+        }
+        if (firstLine.startsWith("## ")) {
+          return (
+            <h4 key={i} className="font-semibold mt-1">
+              <MarkdownLine text={firstLine.replace(/^#+\s+/, "")} />
+            </h4>
+          );
+        }
+
+        // Bullet lists
+        const isList = lines.every(
+          (l) => l.startsWith("- ") || l.startsWith("* ") || l.trim() === ""
+        );
+
+        if (isList && lines.some((l) => l.startsWith("- ") || l.startsWith("* "))) {
+          return (
+            <ul key={i} className="list-disc pl-4 space-y-1">
+              {lines
+                .filter((l) => l.startsWith("- ") || l.startsWith("* "))
+                .map((l, j) => (
+                  <li key={j}>
+                    <MarkdownLine text={l.slice(2)} />
+                  </li>
+                ))}
+            </ul>
+          );
+        }
+
+        return (
+          <p key={i}>
+            <MarkdownLine text={para.replace(/\n/g, " ")} />
+          </p>
+        );
+      })}
+    </div>
   );
 }
