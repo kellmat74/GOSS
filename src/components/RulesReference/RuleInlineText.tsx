@@ -1,4 +1,5 @@
 import { useRules } from "../../context/RulesContext";
+import { GlossaryHighlighter } from "../GlossaryHighlighter";
 
 interface RuleInlineTextProps {
   text: string;
@@ -35,25 +36,27 @@ export function RuleInlineText({ text, className }: RuleInlineTextProps) {
   }
 
   return (
-    <span className={className}>
-      {parts.map((part, i) => {
-        if (typeof part === "string") return <span key={i}>{part}</span>;
-        const hasRule = !!getRuleBySection(part.ref);
-        if (!hasRule) return <span key={i}>({part.ref})</span>;
-        return (
-          <button
-            key={i}
-            onClick={(e) => {
-              e.stopPropagation();
-              e.preventDefault();
-              openRule(part.ref);
-            }}
-            className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
-          >
-            ({part.ref})
-          </button>
-        );
-      })}
-    </span>
+    <GlossaryHighlighter>
+      <span className={className}>
+        {parts.map((part, i) => {
+          if (typeof part === "string") return <span key={i}>{part}</span>;
+          const hasRule = !!getRuleBySection(part.ref);
+          if (!hasRule) return <span key={i}>({part.ref})</span>;
+          return (
+            <button
+              key={i}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                openRule(part.ref);
+              }}
+              className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+            >
+              ({part.ref})
+            </button>
+          );
+        })}
+      </span>
+    </GlossaryHighlighter>
   );
 }

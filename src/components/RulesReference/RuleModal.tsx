@@ -1,6 +1,7 @@
 import { useEffect, useRef, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { useRules } from "../../context/RulesContext";
+import { GlossaryHighlighter } from "../GlossaryHighlighter";
 
 export function RuleModal() {
   const { activeRule, history, closeRule, goBack, openRule, getRuleBySection, getRulesForSection } = useRules();
@@ -176,11 +177,13 @@ function RuleText({ text, onRuleClick }: { text: string; onRuleClick: (ref: stri
   const paragraphs = text.split("\n\n").filter(Boolean);
 
   return (
-    <div className="space-y-3 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
-      {paragraphs.map((para, i) => (
-        <RuleParagraph key={i} text={para} onRuleClick={onRuleClick} />
-      ))}
-    </div>
+    <GlossaryHighlighter>
+      <div className="space-y-3 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
+        {paragraphs.map((para, i) => (
+          <RuleParagraph key={i} text={para} onRuleClick={onRuleClick} />
+        ))}
+      </div>
+    </GlossaryHighlighter>
   );
 }
 

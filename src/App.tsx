@@ -8,6 +8,7 @@ import { RuleModal } from "./components/RulesReference/RuleModal";
 import { AskPanel } from "./components/Ask/AskPanel";
 import { SoPFlowchart } from "./components/Flowchart/SoPFlowchart";
 import { RulesProvider } from "./context/RulesContext";
+import { GlossaryProvider } from "./context/GlossaryContext";
 import { useSoPProgress } from "./hooks/useSoPProgress";
 import { mergeRules } from "./utils/mergeRules";
 import sequenceData from "./data/goss/sequence.json";
@@ -117,6 +118,7 @@ function App() {
   );
 
   return (
+    <GlossaryProvider>
     <RulesProvider rules={allRules}>
       <AppShell
         sidebar={sidebar}
@@ -147,6 +149,7 @@ function App() {
       </AppShell>
       <RuleModal />
     </RulesProvider>
+    </GlossaryProvider>
   );
 }
 
