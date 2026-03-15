@@ -90,7 +90,7 @@ export function GlossaryTooltip({ entry, children }: GlossaryTooltipProps) {
               transform: pos.above
                 ? "translate(-50%, -100%)"
                 : "translate(-50%, 0)",
-              zIndex: 50,
+              zIndex: 150,
               maxWidth: "min(360px, 90vw)",
             }}
             className="rounded-lg border border-stone-300 bg-stone-100 px-3 py-2 text-sm shadow-lg dark:border-stone-600 dark:bg-stone-800"
