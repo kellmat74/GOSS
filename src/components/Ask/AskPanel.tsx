@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import type { RuleEntry } from "../../types/goss";
-import { useRules } from "../../context/RulesContext";
+
 import { searchRules } from "../../utils/rulesSearch";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
@@ -52,7 +52,7 @@ export function AskPanel({ rules }: AskPanelProps) {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const { openRule } = useRules();
+
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -232,23 +232,6 @@ export function AskPanel({ rules }: AskPanelProps) {
       </div>
     </div>
   );
-}
-
-/** Strip markdown bold markers and return text with <strong> wrapping */
-function parseBold(text: string): React.ReactNode[] {
-  const parts: React.ReactNode[] = [];
-  const regex = /\*\*(.+?)\*\*/g;
-  let last = 0;
-  let match;
-  while ((match = regex.exec(text)) !== null) {
-    if (match.index > last) {
-      parts.push(text.slice(last, match.index));
-    }
-    parts.push(<strong key={match.index}>{match[1]}</strong>);
-    last = regex.lastIndex;
-  }
-  if (last < text.length) parts.push(text.slice(last));
-  return parts;
 }
 
 /** Render a line of text with bold + rule refs */
