@@ -35,10 +35,10 @@ export function RulesSearch({ rules }: RulesSearchProps) {
       .filter((r) => !r.module || !baseSections.has(r.section))
       .filter(
         (r) =>
-          r.title.toLowerCase().includes(q) ||
-          r.section.toLowerCase().includes(q) ||
-          r.summary.toLowerCase().includes(q) ||
-          r.text.toLowerCase().includes(q)
+          (r.title ?? "").toLowerCase().includes(q) ||
+          (r.section ?? "").toLowerCase().includes(q) ||
+          (r.summary ?? "").toLowerCase().includes(q) ||
+          (r.text ?? "").toLowerCase().includes(q)
       );
   }, [rules, query]);
 
