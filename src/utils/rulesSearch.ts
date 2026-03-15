@@ -6,9 +6,26 @@ export interface SearchResult {
   matchedFields: ("title" | "section" | "summary" | "text")[];
 }
 
+const STOP_WORDS = new Set([
+  "a", "an", "the", "is", "are", "was", "were", "be", "been", "being",
+  "have", "has", "had", "do", "does", "did", "will", "would", "shall",
+  "should", "may", "might", "must", "can", "could", "am", "it", "its",
+  "of", "in", "to", "for", "with", "on", "at", "from", "by", "as",
+  "or", "and", "but", "not", "no", "if", "then", "than", "that", "this",
+  "what", "which", "who", "whom", "how", "when", "where", "why",
+  "all", "each", "any", "both", "few", "more", "most", "some",
+  "i", "me", "my", "we", "us", "our", "you", "your", "he", "she",
+  "they", "them", "their", "about", "into", "through", "during",
+  "before", "after", "above", "below", "between", "under", "again",
+  "there", "here", "so", "just", "also", "very", "too",
+  "affect", "affects", "work", "works", "happen", "happens",
+  "explain", "tell", "describe", "mean", "means",
+]);
+
 /**
  * Relevance-ranked search across all rule fields.
- * All query tokens must match somewhere in the rule (AND logic).
+ * Uses OR logic with scoring — more matched tokens = higher score.
+ * Stop words are filtered out to focus on meaningful terms.
  */
 export function searchRules(
   query: string,
@@ -18,7 +35,7 @@ export function searchRules(
   const tokens = query
     .toLowerCase()
     .split(/\s+/)
-    .filter((t) => t.length > 0);
+    .filter((t) => t.length > 0 && !STOP_WORDS.has(t));
 
   if (tokens.length === 0) return [];
 
@@ -31,7 +48,7 @@ export function searchRules(
     const textLower = (rule.text ?? "").toLowerCase();
 
     let score = 0;
-    let allMatch = true;
+    let matchedTokens = 0;
     const matchedFields = new Set<"title" | "section" | "summary" | "text">();
 
     for (const token of tokens) {
@@ -40,10 +57,9 @@ export function searchRules(
       const inSummary = summaryLower.includes(token);
       const inText = textLower.includes(token);
 
-      if (!inTitle && !inSection && !inSummary && !inText) {
-        allMatch = false;
-        break;
-      }
+      if (!inTitle && !inSection && !inSummary && !inText) continue;
+
+      matchedTokens++;
 
       if (inTitle) {
         score += 10;
@@ -63,7 +79,10 @@ export function searchRules(
       }
     }
 
-    if (allMatch) {
+    // Require at least one token match; bonus for matching more tokens
+    if (matchedTokens > 0) {
+      // Boost rules that match more of the query tokens
+      score *= (matchedTokens / tokens.length);
       results.push({ rule, score, matchedFields: [...matchedFields] });
     }
   }
