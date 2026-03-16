@@ -7,6 +7,7 @@ import { RulesSearch } from "./components/RulesReference/RulesSearch";
 import { RuleModal } from "./components/RulesReference/RuleModal";
 import { AskPanel } from "./components/Ask/AskPanel";
 import { SoPFlowchart } from "./components/Flowchart/SoPFlowchart";
+import { InfoPanel } from "./components/InfoPanel";
 import { RulesProvider } from "./context/RulesContext";
 import { GlossaryProvider } from "./context/GlossaryContext";
 import { useSoPProgress } from "./hooks/useSoPProgress";
@@ -28,7 +29,7 @@ const scenarioRuleSets: Record<string, RuleEntry[]> = {
   "atlantic-wall": awRules as RuleEntry[],
 };
 
-type View = "sop" | "flowchart" | "rules" | "ask";
+type View = "sop" | "flowchart" | "rules" | "ask" | "info";
 
 const THEME_KEY = "goss-theme";
 const GAME_KEY = "goss-game-module";
@@ -103,6 +104,7 @@ function App() {
     { key: "flowchart", label: "Flowchart" },
     { key: "rules", label: "Rules" },
     { key: "ask", label: "Ask" },
+    { key: "info", label: "Info" },
   ];
 
   const sidebar = (
@@ -149,6 +151,7 @@ function App() {
         {view === "flowchart" && <SoPFlowchart />}
         {view === "rules" && <RulesSearch rules={allRules} />}
         {view === "ask" && <AskPanel rules={allRules} />}
+        {view === "info" && <InfoPanel />}
       </AppShell>
       <RuleModal />
     </RulesProvider>

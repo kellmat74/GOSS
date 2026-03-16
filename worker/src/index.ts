@@ -6,6 +6,7 @@ const ALLOWED_ORIGINS = [
   "https://kellmat74.github.io",
   "http://localhost:5173",
   "http://localhost:4173",
+  "null", // file:// origin
 ];
 
 function corsHeaders(origin: string | null): Record<string, string> {
