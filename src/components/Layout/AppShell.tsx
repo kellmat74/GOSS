@@ -27,6 +27,7 @@ export function AppShell({
   onToggleTheme,
 }: AppShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   return (
     <div className="flex h-screen bg-white text-stone-900 dark:bg-stone-900 dark:text-stone-100">
@@ -40,12 +41,14 @@ export function AppShell({
 
       {/* Sidebar */}
       <aside
-        className={`fixed z-40 h-full w-72 transform overflow-y-auto border-r border-stone-200 bg-stone-50 transition-transform dark:border-stone-700 dark:bg-stone-800 lg:static lg:translate-x-0 ${
+        className={`fixed z-40 h-full w-72 transform overflow-y-auto border-r border-stone-200 bg-stone-50 transition-transform dark:border-stone-700 dark:bg-stone-800 lg:static ${
+          sidebarCollapsed ? "lg:-translate-x-full lg:hidden" : "lg:translate-x-0"
+        } ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="sticky top-0 z-10 border-b border-stone-200 bg-stone-50 p-3 dark:border-stone-700 dark:bg-stone-800">
-          <h1 className="text-lg font-bold tracking-tight">GOSS Assistant <span className="text-xs font-normal text-stone-500">v1.9</span></h1>
+          <h1 className="text-lg font-bold tracking-tight">GOSS Assistant <span className="text-xs font-normal text-stone-500">v1.10</span></h1>
           <div className="mt-1 text-sm text-stone-500 dark:text-stone-400">
             Grand Operational Simulation Series
           </div>
@@ -60,8 +63,15 @@ export function AppShell({
           {/* Left: hamburger + time of day */}
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="rounded p-1.5 hover:bg-stone-100 dark:hover:bg-stone-700 lg:hidden"
+              onClick={() => {
+                // On mobile: toggle overlay sidebar. On desktop: toggle collapse.
+                if (window.innerWidth >= 1024) {
+                  setSidebarCollapsed((c) => !c);
+                } else {
+                  setSidebarOpen((o) => !o);
+                }
+              }}
+              className="rounded p-1.5 hover:bg-stone-100 dark:hover:bg-stone-700"
               aria-label="Toggle sidebar"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
