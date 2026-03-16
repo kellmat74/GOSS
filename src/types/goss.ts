@@ -7,6 +7,7 @@ export interface SubPhase {
   description: string;
   notes: string[];
   checklist: string[];
+  subPhases?: SubPhase[];
 }
 
 export interface Phase {
@@ -58,6 +59,7 @@ export interface RuleEntry {
 export interface SoPProgress {
   currentPhaseIndex: number;
   currentSubPhaseIndex: number;
-  completedChecklist: Record<string, boolean>; // key = "phaseId.subPhaseId.checklistIndex"
+  currentSegmentIndex: number; // -1 means at subPhase level, not in a segment
+  completedChecklist: Record<string, boolean>; // key = "phaseId.subPhaseId.segmentId.checklistIndex"
   gameTurn: GameTurn;
 }

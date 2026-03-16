@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import type { SoPProgress, Phase, GameTurn, TimeOfDay } from "../types/goss";
+import type { SoPProgress, Phase, SubPhase, GameTurn, TimeOfDay } from "../types/goss";
 
 const STORAGE_KEY = "goss-sop-progress";
 
@@ -9,7 +9,8 @@ const defaultTurn: GameTurn = {
 
 const defaultProgress: SoPProgress = {
   currentPhaseIndex: 0,
-  currentSubPhaseIndex: -1, // -1 means at the phase level, not in a sub-phase
+  currentSubPhaseIndex: -1,
+  currentSegmentIndex: -1,
   completedChecklist: {},
   gameTurn: defaultTurn,
 };
@@ -23,12 +24,20 @@ function loadProgress(): SoPProgress {
       if (parsed.gameTurn && ("turnNumber" in parsed.gameTurn || "date" in parsed.gameTurn)) {
         parsed.gameTurn = { timeOfDay: parsed.gameTurn.timeOfDay ?? "AM" };
       }
+      // Migrate: add currentSegmentIndex if missing
+      if (parsed.currentSegmentIndex === undefined) {
+        parsed.currentSegmentIndex = -1;
+      }
       return parsed;
     }
   } catch {
     // ignore
   }
   return defaultProgress;
+}
+
+function getSegments(sub: SubPhase | null): SubPhase[] {
+  return sub?.subPhases ?? [];
 }
 
 export function useSoPProgress(phases: Phase[]) {
@@ -43,13 +52,18 @@ export function useSoPProgress(phases: Phase[]) {
     progress.currentSubPhaseIndex >= 0
       ? currentPhase?.subPhases[progress.currentSubPhaseIndex] ?? null
       : null;
+  const currentSegment =
+    progress.currentSegmentIndex >= 0
+      ? getSegments(currentSubPhase)[progress.currentSegmentIndex] ?? null
+      : null;
 
   const goToPhase = useCallback(
-    (phaseIndex: number, subPhaseIndex = -1) => {
+    (phaseIndex: number, subPhaseIndex = -1, segmentIndex = -1) => {
       setProgress((p) => ({
         ...p,
         currentPhaseIndex: phaseIndex,
         currentSubPhaseIndex: subPhaseIndex,
+        currentSegmentIndex: segmentIndex,
       }));
     },
     []
@@ -73,24 +87,39 @@ export function useSoPProgress(phases: Phase[]) {
       if (!phase) return p;
       const cleaned = clearCurrentChecklist(p);
 
-      // If we're at phase level and there are sub-phases, go to first sub-phase
-      if (p.currentSubPhaseIndex === -1 && phase.subPhases.length > 0) {
-        return { ...p, completedChecklist: cleaned, currentSubPhaseIndex: 0 };
+      // At phase level — enter first subPhase if any
+      if (p.currentSubPhaseIndex === -1) {
+        if (phase.subPhases.length > 0) {
+          return { ...p, completedChecklist: cleaned, currentSubPhaseIndex: 0, currentSegmentIndex: -1 };
+        }
+        // No subPhases, go to next phase
+        if (p.currentPhaseIndex < phases.length - 1) {
+          return { ...p, completedChecklist: cleaned, currentPhaseIndex: p.currentPhaseIndex + 1, currentSubPhaseIndex: -1, currentSegmentIndex: -1 };
+        }
+        return p;
       }
 
-      // If we're in a sub-phase and there are more, go to next
+      const sub = phase.subPhases[p.currentSubPhaseIndex];
+      const segments = getSegments(sub);
+
+      // At subPhase level — enter first segment if any
+      if (p.currentSegmentIndex === -1 && segments.length > 0) {
+        return { ...p, completedChecklist: cleaned, currentSegmentIndex: 0 };
+      }
+
+      // In a segment — go to next segment
+      if (p.currentSegmentIndex >= 0 && p.currentSegmentIndex < segments.length - 1) {
+        return { ...p, completedChecklist: cleaned, currentSegmentIndex: p.currentSegmentIndex + 1 };
+      }
+
+      // Segments exhausted (or none) — go to next subPhase
       if (p.currentSubPhaseIndex < phase.subPhases.length - 1) {
-        return { ...p, completedChecklist: cleaned, currentSubPhaseIndex: p.currentSubPhaseIndex + 1 };
+        return { ...p, completedChecklist: cleaned, currentSubPhaseIndex: p.currentSubPhaseIndex + 1, currentSegmentIndex: -1 };
       }
 
-      // Move to next phase
+      // SubPhases exhausted — go to next phase
       if (p.currentPhaseIndex < phases.length - 1) {
-        return {
-          ...p,
-          completedChecklist: cleaned,
-          currentPhaseIndex: p.currentPhaseIndex + 1,
-          currentSubPhaseIndex: -1,
-        };
+        return { ...p, completedChecklist: cleaned, currentPhaseIndex: p.currentPhaseIndex + 1, currentSubPhaseIndex: -1, currentSegmentIndex: -1 };
       }
 
       return p; // at the end
@@ -101,24 +130,46 @@ export function useSoPProgress(phases: Phase[]) {
     setProgress((p) => {
       const cleaned = clearCurrentChecklist(p);
 
-      // If in a sub-phase, go back
-      if (p.currentSubPhaseIndex > 0) {
-        return { ...p, completedChecklist: cleaned, currentSubPhaseIndex: p.currentSubPhaseIndex - 1 };
+      // In a segment — go back
+      if (p.currentSegmentIndex > 0) {
+        return { ...p, completedChecklist: cleaned, currentSegmentIndex: p.currentSegmentIndex - 1 };
       }
-      if (p.currentSubPhaseIndex === 0) {
-        return { ...p, completedChecklist: cleaned, currentSubPhaseIndex: -1 };
+      // At first segment — go back to subPhase level
+      if (p.currentSegmentIndex === 0) {
+        return { ...p, completedChecklist: cleaned, currentSegmentIndex: -1 };
       }
 
-      // Go to previous phase's last sub-phase
+      // At subPhase level — go back
+      if (p.currentSubPhaseIndex > 0) {
+        const prevSub = phases[p.currentPhaseIndex]?.subPhases[p.currentSubPhaseIndex - 1];
+        const prevSegments = getSegments(prevSub);
+        return {
+          ...p,
+          completedChecklist: cleaned,
+          currentSubPhaseIndex: p.currentSubPhaseIndex - 1,
+          currentSegmentIndex: prevSegments.length > 0 ? prevSegments.length - 1 : -1,
+        };
+      }
+      // At first subPhase — go to phase level
+      if (p.currentSubPhaseIndex === 0) {
+        return { ...p, completedChecklist: cleaned, currentSubPhaseIndex: -1, currentSegmentIndex: -1 };
+      }
+
+      // At phase level — go to previous phase's last subPhase's last segment
       if (p.currentPhaseIndex > 0) {
         const prevPhase = phases[p.currentPhaseIndex - 1];
+        if (!prevPhase || prevPhase.subPhases.length === 0) {
+          return { ...p, completedChecklist: cleaned, currentPhaseIndex: p.currentPhaseIndex - 1, currentSubPhaseIndex: -1, currentSegmentIndex: -1 };
+        }
+        const lastSubIdx = prevPhase.subPhases.length - 1;
+        const lastSub = prevPhase.subPhases[lastSubIdx];
+        const lastSegments = getSegments(lastSub);
         return {
           ...p,
           completedChecklist: cleaned,
           currentPhaseIndex: p.currentPhaseIndex - 1,
-          currentSubPhaseIndex: prevPhase
-            ? prevPhase.subPhases.length - 1
-            : -1,
+          currentSubPhaseIndex: lastSubIdx,
+          currentSegmentIndex: lastSegments.length > 0 ? lastSegments.length - 1 : -1,
         };
       }
 
@@ -167,6 +218,7 @@ export function useSoPProgress(phases: Phase[]) {
     progress,
     currentPhase,
     currentSubPhase,
+    currentSegment,
     goToPhase,
     nextStep,
     prevStep,

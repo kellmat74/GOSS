@@ -5,13 +5,15 @@ interface PhaseOverviewProps {
   phases: Phase[];
   currentPhaseIndex: number;
   currentSubPhaseIndex: number;
-  onSelectPhase: (phaseIndex: number, subPhaseIndex?: number) => void;
+  currentSegmentIndex: number;
+  onSelectPhase: (phaseIndex: number, subPhaseIndex?: number, segmentIndex?: number) => void;
 }
 
 export function PhaseOverview({
   phases,
   currentPhaseIndex,
   currentSubPhaseIndex,
+  currentSegmentIndex,
   onSelectPhase,
 }: PhaseOverviewProps) {
   return (
@@ -49,6 +51,7 @@ export function PhaseOverview({
                     const isSubCurrent =
                       isCurrent && si === currentSubPhaseIndex;
                     const isSubPast = isCurrent && si < currentSubPhaseIndex;
+                    const segments = sub.subPhases ?? [];
 
                     return (
                       <li key={sub.id}>
@@ -67,6 +70,38 @@ export function PhaseOverview({
                           </span>
                           {sub.name}
                         </button>
+
+                        {/* Show segments if this subPhase is current and has segments */}
+                        {isSubCurrent && segments.length > 0 && (
+                          <ol className="ml-5 mt-0.5 space-y-0.5">
+                            {segments.map((seg, sgi) => {
+                              const isSegCurrent =
+                                isSubCurrent && sgi === currentSegmentIndex;
+                              const isSegPast =
+                                isSubCurrent && sgi < currentSegmentIndex;
+
+                              return (
+                                <li key={seg.id}>
+                                  <button
+                                    onClick={() => onSelectPhase(pi, si, sgi)}
+                                    className={`w-full rounded px-2 py-0.5 text-left text-[11px] transition-colors ${
+                                      isSegCurrent
+                                        ? "bg-accent-50/50 font-semibold text-accent-700 dark:bg-accent-900/10 dark:text-accent-400"
+                                        : isSegPast
+                                        ? "text-stone-400 dark:text-stone-500"
+                                        : "text-stone-400 hover:bg-stone-200 dark:text-stone-500 dark:hover:bg-stone-700"
+                                    }`}
+                                  >
+                                    <span className="mr-1 text-stone-400">
+                                      {isSegPast ? "\u2713" : "\u2023"}
+                                    </span>
+                                    {seg.name}
+                                  </button>
+                                </li>
+                              );
+                            })}
+                          </ol>
+                        )}
                       </li>
                     );
                   })}

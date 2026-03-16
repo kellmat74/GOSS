@@ -6,6 +6,7 @@ import { RuleInlineText } from "../RulesReference/RuleInlineText";
 interface PhaseStepperProps {
   phase: Phase | null;
   subPhase: SubPhase | null;
+  segment: SubPhase | null;
   progress: SoPProgress;
   totalPhases: number;
   onNext: () => void;
@@ -13,12 +14,13 @@ interface PhaseStepperProps {
   onToggleChecklist: (key: string) => void;
   onClearChecklist: () => void;
   onAdvanceTurn: () => void;
-  onGoToPhase: (phaseIndex: number, subPhaseIndex?: number) => void;
+  onGoToPhase: (phaseIndex: number, subPhaseIndex?: number, segmentIndex?: number) => void;
 }
 
 export function PhaseStepper({
   phase,
   subPhase,
+  segment,
   progress,
   totalPhases,
   onNext,
@@ -40,20 +42,28 @@ export function PhaseStepper({
   const isLastSubPhase =
     progress.currentSubPhaseIndex === phase.subPhases.length - 1 ||
     (phase.subPhases.length === 0 && progress.currentSubPhaseIndex === -1);
-  const isAtEnd = isLastPhase && isLastSubPhase;
+  const segments = subPhase?.subPhases ?? [];
+  const isLastSegment =
+    progress.currentSegmentIndex === segments.length - 1 ||
+    (segments.length === 0 && progress.currentSegmentIndex === -1);
+  const isAtEnd = isLastPhase && isLastSubPhase && isLastSegment;
 
-  const active = subPhase ?? phase;
-  const checklistItems = subPhase?.checklist ?? [];
+  const active = segment ?? subPhase ?? phase;
+  const activeSubPhase = segment ?? subPhase;
+  const checklistItems = activeSubPhase?.checklist ?? [];
+
+  // Checklist key includes segment when present
+  const checklistKeyPrefix = segment
+    ? `${phase.id}.${subPhase!.id}.${segment.id}`
+    : `${phase.id}.${subPhase?.id ?? "main"}`;
 
   // Build breadcrumb
   const breadcrumbItems: BreadcrumbItem[] = [
-    {
-      label: "Game Turn",
-    },
+    { label: "Game Turn" },
     {
       label: phase.name,
       ruleRef: phase.ruleRef,
-      onClick: subPhase
+      onClick: (subPhase || segment)
         ? () => onGoToPhase(progress.currentPhaseIndex)
         : undefined,
     },
@@ -62,6 +72,15 @@ export function PhaseStepper({
     breadcrumbItems.push({
       label: subPhase.name,
       ruleRef: subPhase.ruleRef,
+      onClick: segment
+        ? () => onGoToPhase(progress.currentPhaseIndex, progress.currentSubPhaseIndex)
+        : undefined,
+    });
+  }
+  if (segment) {
+    breadcrumbItems.push({
+      label: segment.name,
+      ruleRef: segment.ruleRef,
     });
   }
 
@@ -114,6 +133,28 @@ export function PhaseStepper({
         </div>
       )}
 
+      {/* Segment indicator */}
+      {segment && (
+        <div className="mb-4 ml-4 rounded-lg border border-stone-300 bg-stone-100 p-3 dark:border-stone-600 dark:bg-stone-800">
+          <div className="text-xs font-medium uppercase tracking-wide text-stone-400">
+            Step
+          </div>
+          <div className="mt-0.5 text-base font-semibold text-stone-800 dark:text-stone-200">
+            {segment.name}
+          </div>
+          <div className="mt-1 flex items-center gap-2">
+            {segment.ruleRef && (
+              <RuleRefBadge ruleRef={segment.ruleRef} />
+            )}
+            {segment.timing && segment.timing !== "every-turn" && (
+              <span className="rounded bg-blue-100 px-1.5 py-0.5 text-xs font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+                {segment.timing.replace(/-/g, " ").toUpperCase()}
+              </span>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Description */}
       <p className="mb-4 leading-relaxed text-stone-600 dark:text-stone-300">
         <RuleInlineText text={active.description} />
@@ -155,7 +196,7 @@ export function PhaseStepper({
           </div>
           <ul className="space-y-2">
             {checklistItems.map((item, i) => {
-              const key = `${phase.id}.${subPhase?.id ?? "main"}.${i}`;
+              const key = `${checklistKeyPrefix}.${i}`;
               const checked = progress.completedChecklist[key] ?? false;
               return (
                 <li key={i}>
@@ -188,7 +229,8 @@ export function PhaseStepper({
           onClick={onPrev}
           disabled={
             progress.currentPhaseIndex === 0 &&
-            progress.currentSubPhaseIndex <= -1
+            progress.currentSubPhaseIndex <= -1 &&
+            progress.currentSegmentIndex <= -1
           }
           className="rounded-lg border border-stone-300 px-4 py-2 text-sm font-medium text-stone-600 transition-colors hover:bg-stone-100 disabled:cursor-not-allowed disabled:opacity-30 dark:border-stone-600 dark:text-stone-300 dark:hover:bg-stone-700"
         >

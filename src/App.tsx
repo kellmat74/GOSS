@@ -89,6 +89,7 @@ function App() {
     progress,
     currentPhase,
     currentSubPhase,
+    currentSegment,
     goToPhase,
     nextStep,
     prevStep,
@@ -111,6 +112,7 @@ function App() {
           phases={phases}
           currentPhaseIndex={progress.currentPhaseIndex}
           currentSubPhaseIndex={progress.currentSubPhaseIndex}
+          currentSegmentIndex={progress.currentSegmentIndex}
           onSelectPhase={goToPhase}
         />
       )}
@@ -133,6 +135,7 @@ function App() {
           <PhaseStepper
             phase={currentPhase}
             subPhase={currentSubPhase}
+            segment={currentSegment}
             progress={progress}
             totalPhases={phases.length}
             onNext={nextStep}

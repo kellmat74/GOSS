@@ -265,50 +265,57 @@
           ]
         },
         {
-          "id": "allied-movement-phase",
-          "name": "Movement Phase",
-          "ruleRef": "3.3.2c",
+          "id": "allied-combat-reserve-designation-segment",
+          "name": "Combat Reserve Designation Segment",
+          "ruleRef": "5.8.0",
           "player": "phasing",
-          "description": "The active player moves units. Combat Reserve Designation, Movement, and Quick Construction segments.",
+          "description": "Place CR markers on eligible units, as desired.",
           "notes": [],
-          "subPhases": [
-            {
-              "id": "allied-combat-reserve-designation-segment",
-              "name": "Combat Reserve Designation Segment",
-              "ruleRef": "5.8.0",
-              "player": "phasing",
-              "description": "Place CR markers on eligible units, as desired.",
-              "notes": [],
-              "checklist": [
-                "Place CR markers on eligible units (5.8.0)."
-              ]
-            },
-            {
-              "id": "allied-movement-segment",
-              "name": "Movement Segment",
-              "ruleRef": "7.2.2",
-              "player": "phasing",
-              "description": "The active player conducts steps 1 through 5 in order.",
-              "notes": [
-                "**Movement Order (7.5.2):** 1) Strat mode units, 2) Tac mode units — 2a) Mech road movement (7.10.0), 2b) All units non-road (7.11.0), 3) PA mode units (5.2.3).",
-                "**Non-Constricted Terrain Stacking (6.3.0):** German: a) Any Bn (Mech class + 1 AFV Co.) and 1 Eng Co. or 1 AT/TD Co., plus b–c) more Bn-sized units, d) 2 Z-step units. Max 10 units (6.2.1, 6.2.2). Allied: a–c) similar, d) 2 Z-step units. Max 7 units.",
-                "**Constricted Terrain Stacking (6.4.0):** German: Max 6 units. Allied: Max 4 units.",
-                "**MA Halved (7.6.1c):** OoS, Fatigue 1, or Exploit in AM/PM GT Exploit Phase.",
-                "**MA Quartered (7.6.1d):** 2+ halving conditions or Fatigue 2. Never below 1/4 of MA due to conditions in (7.3.1c) & (7.3.1d).",
-                "**GC Effects (7.6.1e):** Wet = Mech −2 from modified MA on primary/secondary roads (using Mech road). Snow = Mech divide by 3 if not using Mech road, −1 if using Mech road. Mud = Mech divide by 2 if not using Mech road, primary/secondary only. Deep Mud = same as Mud.",
-                "**Night GT Movement (7.6.1f):** Mech class not using Mech road on primary/secondary expend +1 MP per hex. Leg class expend 1 MP per hex unless entirely along roads.",
-                "**Delay Markers (7.13.0):** Personnel type unit (Leg or Mech), Def PR ≥ 5, ≥ 2 steps remaining, begin Movement Phase in allowed terrain hex, in GenS & in command, in Tac mode. Expends 1/2 available MA (round up) & passes Def PRC."
-              ],
-              "checklist": [
-                "Step 1: Place reinforcements (21.0) & conduct required withdrawals (21.4.0). Player may conduct emergency command changes (9.4.1). Active player conducts enemy GI attacks during Step 2 through 4 against moving units (20.3.0).",
-                "Step 2: Units in Strat mode may move (5.5.0).",
-                "Step 3: Active player declares & conducts CdM attacks (7.14.0).",
-                "Step 4: Move units in Tac mode (5.1.0): 1) Mech class using Mech road movement (7.10.0), 2) All units using non-road movement (7.11.0). During step 4: a) Breakdown (18.4.0) and recombine (18.7.0), b) Mount and dismount (7.12.0), c) Place delay markers (7.13.0).",
-                "Step 5: Units in PA mode may move (5.2.0).",
-                "Command Status Segment: Determine command status of all friendly units and HQs (9.0).",
-                "Quick Construction Segment: Complete eligible FW construction (17.3.3)."
-              ]
-            }
+          "checklist": [
+            "Place CR markers on eligible units (5.8.0)."
+          ]
+        },
+        {
+          "id": "allied-movement-segment",
+          "name": "Movement Segment",
+          "ruleRef": "7.2.2",
+          "player": "phasing",
+          "description": "The active player conducts steps 1 through 5 in order.",
+          "notes": [
+            "**Movement Order (7.5.2):** 1) Strat mode units, 2) Tac mode units — 2a) Mech road movement (7.10.0), 2b) All units non-road (7.11.0), 3) PA mode units (5.2.3).",
+            "**Non-Constricted Terrain Stacking (6.3.0):** German: a) Any Bn (Mech class + 1 AFV Co.) and 1 Eng Co. or 1 AT/TD Co., plus b–c) more Bn-sized units, d) 2 Z-step units. Max 10 units (6.2.1, 6.2.2). Allied: a–c) similar, d) 2 Z-step units. Max 7 units.",
+            "**Constricted Terrain Stacking (6.4.0):** German: Max 6 units. Allied: Max 4 units.",
+            "**MA Halved (7.6.1c):** OoS, Fatigue 1, or Exploit in AM/PM GT Exploit Phase.",
+            "**MA Quartered (7.6.1d):** 2+ halving conditions or Fatigue 2. Never below 1/4 of MA due to conditions in (7.3.1c) & (7.3.1d).",
+            "**GC Effects (7.6.1e):** Wet = Mech −2 from modified MA on primary/secondary roads (using Mech road). Snow = Mech divide by 3 if not using Mech road, −1 if using Mech road. Mud = Mech divide by 2 if not using Mech road, primary/secondary only. Deep Mud = same as Mud.",
+            "**Night GT Movement (7.6.1f):** Mech class not using Mech road on primary/secondary expend +1 MP per hex. Leg class expend 1 MP per hex unless entirely along roads.",
+            "**Delay Markers (7.13.0):** Personnel type unit (Leg or Mech), Def PR ≥ 5, ≥ 2 steps remaining, begin Movement Phase in allowed terrain hex, in GenS & in command, in Tac mode. Expends 1/2 available MA (round up) & passes Def PRC."
+          ],
+          "checklist": [
+            "Step 1: Place reinforcements (21.0) & conduct required withdrawals (21.4.0). Player may conduct emergency command changes (9.4.1). Active player conducts enemy GI attacks during Step 2 through 4 against moving units (20.3.0).",
+            "Step 2: Units in Strat mode may move (5.5.0).",
+            "Step 3: Active player declares & conducts CdM attacks (7.14.0).",
+            "Step 4: Move units in Tac mode (5.1.0): 1) Mech class using Mech road movement (7.10.0), 2) All units using non-road movement (7.11.0). During step 4: a) Breakdown (18.4.0) and recombine (18.7.0), b) Mount and dismount (7.12.0), c) Place delay markers (7.13.0).",
+            "Step 5: Units in PA mode may move (5.2.0).",
+            "Command Status Segment: Determine command status of all friendly units and HQs (9.0).",
+            "Quick Construction Segment: Complete eligible FW construction (17.3.3)."
+          ]
+        },
+        {
+          "id": "allied-quick-construction-segment",
+          "name": "Quick Construction",
+          "ruleRef": "17.3.3",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "Phasing player may attempt quick construction of bridges and improved positions after movement (17.3.3).",
+          "notes": [
+            "Quick Construction of IP (17.3.3b): Eng in MCT not constructing bridge may attempt QC of ET-2. DR 0–5 success (1 Eng step), DR 0–4 (2+ Eng steps). +1 DRM if in LOS of enemy ground unit. Cannot attempt in enemy EZOC.",
+            "Quick Construction of Bridge (17.3.3a): Eng at bridge site may attempt QC. DR 0–3 success (1 Eng step), DR 0–2 (2+ Eng steps). Bridge has 0 construction points and may be used immediately."
+          ],
+          "checklist": [
+            "Identify Eng units eligible for quick construction (17.3.3): must be in MCT, not already constructing.",
+            "Attempt bridge quick construction if applicable (17.3.3a).",
+            "Attempt IP (ET-2) quick construction if applicable (17.3.3b)."
           ]
         },
         {
@@ -329,57 +336,102 @@
           ]
         },
         {
-          "id": "allied-combat-phase",
-          "name": "Combat Phase",
-          "ruleRef": "3.3.2e",
+          "id": "allied-attacker-designation-segment",
+          "name": "Tactical Assault Designation Segment",
+          "ruleRef": "10.2.0",
           "player": "phasing",
-          "description": "The Allied side conducts combat including attack designation, fire support, and ground assaults.",
+          "description": "Designate tactical assaults and attempt to remove delay markers.",
           "notes": [],
+          "checklist": [
+            "Designate units that will make tactical assaults (5.1.2 & 10.2.0).",
+            "Attempt to remove delay markers (7.13.3)."
+          ]
+        },
+        {
+          "id": "allied-replacement-segment",
+          "name": "Replacement Segment",
+          "ruleRef": "22.5.0",
+          "player": "phasing",
+          "description": "Eligible units may receive RePs.",
+          "notes": [],
+          "checklist": [
+            "Eligible units may receive RePs (22.5.0)."
+          ]
+        },
+        {
+          "id": "allied-fire-support-segment",
+          "name": "Fire Support (FS) Segment",
+          "ruleRef": "11.0",
+          "player": "both",
+          "description": "Both sides perform FS missions in order.",
+          "notes": [
+            "**Spotting Limits (11.2.1a):** Bn. (any number of steps) may spot for 2 target hexes. 2-step hybrid is Bn.; all Co. units spot for 1 hex. Z-step units may not spot. Max 2 spotters from a single hex. Units advanced after a FS mission may not spot.",
+            "**Mission Capacity (11.2.4):** *Light* = unobserved target, or a Co. unit, or a corps/army asset not assigned to a formation (11.2.4a). *Medium* = Bn. observing the target (11.2.4b), or a Co./Bn. in ET/Fort/Ft Area being overrun. *Heavy* = Bn. in PA mode, or Bn. in an ET/Fort/Ft Area hex (11.2.4c). Attacker may not conduct NGS/GS during overrun; spotter must be in overrun stack.",
+            "**Units Always Observed (11.2.3):** 1) Units within LOS of an enemy ground unit or air observation, and in open terrain or in Strat mode. 2) Units adjacent to an enemy unit and: a) the enemy unit is attack designated, b) the friendly unit is attack designated, c) a unit is constructing a bridge (17.3.1), or d) a unit is constructing an ET-2 and is not in MCT (17.3.3b). 3) All units in 2) are observed by units in VP/town/city if observer can trace LOS to the hex. 4) All units adjacent to Metz Fort.",
+            "**Light FS Mission Capacity:** Allied = 2; Axis = 1. GS Mission: No GS. NG Mission: 1 DD.",
+            "**Medium FS Mission Capacity:** Allied = 3; Axis = 2. GS Mission: 1 mission. NG Mission: 2 DD.",
+            "**Heavy FS Mission Capacity:** US = 16; Other Allied = 12; Axis = 8. GS Mission: 2 missions. NG Mission: 1 BB or MN; or 1 CA and 1 CL; or 1 CL and 1 DD; or 2 DD.",
+            "**Formation Requirements (11.2.5):** For Med/Hvy missions, Art units must be: a) subordinate to same formation as spotter (at least 1 Art must be), b) assigned to same army or corps as spotter's formation, c) 1 other formation assigned to same corps (see (15.4.3) for corps/army HQ effect).",
+            "**Art FS Point Adjustments (11.4.0):** AD Art may not fire. Hvy Art Def mission = -1. German Hvy Flak (step) = +1. CW/US TD (step) = +1. 1st GT after lull (surprised side) = 1/2. Inherent Ft Art = current strength.",
+            "**NGS Mission Pts (11.4.2):** BB = 8; MN = 8; CA = 6; CL = 5; DD = 4. Resolve each naval unit as a separate volley. Naval unit range (11.3.2): BB = 20; MN = 18; CA = 14; CL = 12; DD = 7.",
+            "**Intensive Fire (11.4.1g):** Mission must have 1 volley of 8 Pts. Expend 1 AmP. Only 1 intensive volley per each 8-point volley. Art Split Fire (11.4.1d): All Allied Art & Axis Art (subordinate formation) may split fire. Hvy Art firing against a Fort or Ft Area may not split fire."
+          ],
+          "checklist": [],
           "subPhases": [
             {
-              "id": "allied-attacker-designation-segment",
-              "name": "Tactical Assault Designation Segment",
-              "ruleRef": "10.2.0",
+              "id": "allied-offensive-air-support",
+              "name": "1. Offensive Air Support",
+              "ruleRef": "20.2.0",
+              "timing": "every-turn",
               "player": "phasing",
-              "description": "Designate tactical assaults and attempt to remove delay markers.",
+              "description": "Active side conducts Ground Support (GS) air missions against enemy units (20.2.0).",
               "notes": [],
               "checklist": [
-                "Designate units that will make tactical assaults (5.1.2 & 10.2.0).",
-                "Attempt to remove delay markers (7.13.3)."
+                "**Sub-Segment 1 — Offensive Air Support:** Active side conducts GS missions (20.2.0)."
               ]
             },
             {
-              "id": "allied-replacement-segment",
-              "name": "Replacement Segment",
-              "ruleRef": "22.5.0",
-              "player": "phasing",
-              "description": "Eligible units may receive RePs.",
-              "notes": [],
-              "checklist": [
-                "Eligible units may receive RePs (22.5.0)."
-              ]
-            },
-            {
-              "id": "allied-fire-support-segment",
-              "name": "Fire Support (FS) Segment",
+              "id": "allied-defensive-artillery",
+              "name": "2. Defensive Artillery",
               "ruleRef": "11.0",
-              "player": "both",
-              "description": "Both sides perform FS missions in order.",
-              "notes": [
-                "**Spotting Limits (11.2.1a):** Bn. (any number of steps) may spot for 2 target hexes. 2-step hybrid is Bn.; all Co. units spot for 1 hex. Z-step units may not spot. Max 2 spotters from a single hex. Units advanced after a FS mission may not spot.",
-                "**Mission Capacity (11.2.4):** *Light* = unobserved target, or a Co. unit, or a corps/army asset not assigned to a formation (11.2.4a). *Medium* = Bn. observing the target (11.2.4b), or a Co./Bn. in ET/Fort/Ft Area being overrun. *Heavy* = Bn. in PA mode, or Bn. in an ET/Fort/Ft Area hex (11.2.4c). Attacker may not conduct NGS/GS during overrun; spotter must be in overrun stack.",
-                "**Units Always Observed (11.2.3):** 1) Units within LOS of an enemy ground unit or air observation, and in open terrain or in Strat mode. 2) Units adjacent to an enemy unit and: a) the enemy unit is attack designated, b) the friendly unit is attack designated, c) a unit is constructing a bridge (17.3.1), or d) a unit is constructing an ET-2 and is not in MCT (17.3.3b). 3) All units in 2) are observed by units in VP/town/city if observer can trace LOS to the hex. 4) All units adjacent to Metz Fort.",
-                "**Light FS Mission Capacity:** Allied = 2; Axis = 1. GS Mission: No GS. NG Mission: 1 DD.",
-                "**Medium FS Mission Capacity:** Allied = 3; Axis = 2. GS Mission: 1 mission. NG Mission: 2 DD.",
-                "**Heavy FS Mission Capacity:** US = 16; Other Allied = 12; Axis = 8. GS Mission: 2 missions. NG Mission: 1 BB or MN; or 1 CA and 1 CL; or 1 CL and 1 DD; or 2 DD.",
-                "**Formation Requirements (11.2.5):** For Med/Hvy missions, Art units must be: a) subordinate to same formation as spotter (at least 1 Art must be), b) assigned to same army or corps as spotter's formation, c) 1 other formation assigned to same corps (see (15.4.3) for corps/army HQ effect).",
-                "**Art FS Point Adjustments (11.4.0):** AD Art may not fire. Hvy Art Def mission = -1. German Hvy Flak (step) = +1. CW/US TD (step) = +1. 1st GT after lull (surprised side) = 1/2. Inherent Ft Art = current strength.",
-                "**NGS Mission Pts (11.4.2):** BB = 8; MN = 8; CA = 6; CL = 5; DD = 4. Resolve each naval unit as a separate volley. Naval unit range (11.3.2): BB = 20; MN = 18; CA = 14; CL = 12; DD = 7.",
-                "**Intensive Fire (11.4.1g):** Mission must have 1 volley of 8 Pts. Expend 1 AmP. Only 1 intensive volley per each 8-point volley. Art Split Fire (11.4.1d): All Allied Art & Axis Art (subordinate formation) may split fire. Hvy Art firing against a Fort or Ft Area may not split fire."
-              ],
+              "timing": "every-turn",
+              "player": "non-phasing",
+              "description": "Inactive player conducts defensive artillery fire support missions (11.0).",
+              "notes": [],
               "checklist": [
-                "**Sub-Segment 1 — Offensive Air Support:** Active side conducts GS missions (20.2.0).",
                 "**Sub-Segment 2 — Defensive Support:** Inactive player (1) declares NGS/GS targets, (2) conducts Art FS (11.0), (3) conducts GS (20.2.0) and/or NGS (11.0).",
+                "**Step 1:** Active player selects the spotting unit (11.2.1). Spotter must observe a unit or population feature.",
+                "**Step 2:** Inactive player checks if AFV are in any hex the spotting unit can observe (11.2.2).",
+                "**Step 3:** Active player selects the target hex (11.2.3).",
+                "**Step 4:** Active player calculates volleys, including intensive fire volleys (11.4.1). Number of volleys = FS Pts / 8.",
+                "**Step 5:** Both players determine DRMs (11.4.0).",
+                "**Step 6:** Active player determines the result.",
+                "**Step 7:** Inactive player implements results.",
+                "**Step 8:** Active player checks for AD (11.0)."
+              ]
+            },
+            {
+              "id": "allied-defensive-gs-ngs",
+              "name": "3. Defensive GS and/or NGS",
+              "ruleRef": "20.2.0",
+              "timing": "every-turn",
+              "player": "non-phasing",
+              "description": "Inactive player conducts defensive Ground Support (GS) and/or Naval Gunfire Support (NGS) missions (20.2.0).",
+              "notes": [],
+              "checklist": [
+                "Inactive player declares GS targets and conducts GS missions (20.2.0).",
+                "Inactive player declares NGS targets and conducts NGS missions (11.0)."
+              ]
+            },
+            {
+              "id": "allied-offensive-artillery",
+              "name": "4. Offensive Artillery",
+              "ruleRef": "11.0",
+              "timing": "every-turn",
+              "player": "phasing",
+              "description": "Active side conducts offensive artillery fire support missions (11.0).",
+              "notes": [],
+              "checklist": [
                 "**Sub-Segment 3 — Offensive Support:** Active side (1) declares NGS targets (11.0), (2) conducts Art FS (11.0), (3) conducts NGS (11.0).",
                 "**Step 1:** Active player selects the spotting unit (11.2.1). Spotter must observe a unit or population feature.",
                 "**Step 2:** Inactive player checks if AFV are in any hex the spotting unit can observe (11.2.2).",
@@ -392,41 +444,163 @@
               ]
             },
             {
-              "id": "allied-attacker-status-adjustment-segment",
-              "name": "Attacker Status Adjustment Segment",
-              "ruleRef": "12.0",
+              "id": "allied-offensive-ngs",
+              "name": "5. Offensive NGS",
+              "ruleRef": "11.0",
+              "timing": "every-turn",
               "player": "phasing",
-              "description": "Remove attack designation markers from units no longer adjacent to enemy and adjust excess designations.",
+              "description": "Active side conducts offensive Naval Gunfire Support (NGS) missions (11.0).",
               "notes": [],
               "checklist": [
-                "Remove TA & PA markers from units not adjacent to enemy units.",
-                "Remove excess attack designations (TA and/or PA) not in compliance with ADV limits (12.1.0).",
-                "Voluntarily attempt to remove attack designation from units adjacent to enemy (12.2.0)."
+                "Active player declares NGS targets (11.0).",
+                "**Step 1:** Active player selects the spotting unit (11.2.1). Spotter must observe a unit or population feature.",
+                "**Step 2:** Inactive player checks if AFV are in any hex the spotting unit can observe (11.2.2).",
+                "**Step 3:** Active player selects the target hex (11.2.3).",
+                "**Step 4:** Active player calculates volleys, including intensive fire volleys (11.4.1). Number of volleys = FS Pts / 8.",
+                "**Step 5:** Both players determine DRMs (11.4.0).",
+                "**Step 6:** Active player determines the result.",
+                "**Step 7:** Inactive player implements results.",
+                "**Step 8:** Active player checks for AD (11.0)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "allied-attacker-status-adjustment-segment",
+          "name": "Attacker Status Adjustment Segment",
+          "ruleRef": "12.0",
+          "player": "phasing",
+          "description": "Remove attack designation markers from units no longer adjacent to enemy and adjust excess designations.",
+          "notes": [],
+          "checklist": [
+            "Remove TA & PA markers from units not adjacent to enemy units.",
+            "Remove excess attack designations (TA and/or PA) not in compliance with ADV limits (12.1.0).",
+            "Voluntarily attempt to remove attack designation from units adjacent to enemy (12.2.0)."
+          ]
+        },
+        {
+          "id": "allied-ground-assault-segment",
+          "name": "Ground Assault (GA) Segment",
+          "ruleRef": "13.0",
+          "player": "phasing",
+          "description": "Active player conducts GAs against enemy units. Check for bridge demolition, collapse, and surrender of isolated defending units.",
+          "notes": [
+            "**Hasty Bridge Demo (17.3.2b):** 1 Eng step = DR 0–3; 2+ Eng steps = DR 0–5. +1 DRM during Night GTs.",
+            "**Bridge Collapse (17.3.2a):** Super Heavy Tank (SH) = DR 0–7; Heavy Tank (H) = DR 0–6.",
+            "**CS Strength Modifiers (13.6.1):** AD Art (AT=0) gives Def +1. Two+ halving reasons (13.6.1a/b) = 1/4 & 1/4. Art stacked w/ non-Art (13.6.1b) = Att 1/2. Art w/ Art unit, 1 Art is 1/2. Def OhS no OoS (15.5.2) = Def 1/2. Fatigue 1 (14.2.1) = Att 1/2, Def 1/2. Fatigue 2 (14.2.2) = Att 0, Def 1/4. ENA (Def not fatigued) (3.4.6) = Att 1/2. Leg attack in/out of marsh (13.6.1a) = Att 1/2. 3-step unit reduced to 1 step = Att 1/2, Def 1/2.",
+            "**Armor/Bonus Determination (13.8.4):** Pure AFV without combined arms have AF of zero unless the other side is only pure Armor. *Armor vs Defending AT:* If Att AF & Def AT equal, stop. If not equal, subtract smaller from larger. If Def AT is larger, do not modify — result by Terrain/DW. If Att AF is larger, modify result by Terrain/DW. *Armor vs Defending Armor:* If Att & Def AF equal, stop. If not equal, subtract smaller from larger. If Att Armor in clear, Def may use clear terrain. If Att Arm not in clear or Def does not choose option, modify result by Terrain only — do not use DW. *AT vs Defending Armor:* If Att AT >= Def AF, stop. If Att AT < Def AF, subtract Att AT from Def AF and use Terrain modifiers only — do not use DW.",
+            "**Arm/AT Terrain Modifiers (13.8.4c):** Rough/Village = -1 (max 4). Woods/Town/Hedgerow = -2 (max 2). Forest/Rough-2/Bocage = -2 (max 1). City/Marsh = -3 (max 1). Stream = -1 (OTIH). IP = -1 (OTIH). ET-2 = -2 (OTIH). ET-3 = -3 (OTIH). Ft Area/Fort = -4 (OTIH).",
+            "**Key Column Shifts — Attacker (13.7.3):** Att units in PA mode = 1R. All Att units in MR mode = 1R. Per AS on Def units (max 2) = 1R. Def marked w/ CR = 1R. Def units overstacked = 1R. Def unit's HQ has ADV of zero (not supported) = 1R. 1st two GTs after lull ends, if Att ends lull = 1R. Att Ldr commits = Check Ldr for # of shifts. Unit in Strat mode = 2R. Def unit is in Exploit mode = 1R. Def unit is Raw or Green (4.5.0) = 1R.",
+            "**Key Column Shifts — Defender (13.7.4):** Def in HVP or VP hex = 1L. Per AS on any attacking units (max 2) = 1L. Any Att unit using extended GenS = 1L. Any Att stack overstacked = 1L. Night GT or ENA period = 1L. Def in IP = 1L. Def in ET-2 or WN = 2L. Def in ET-3/Fort/Fortified Area/STP = 3L. Def commits Ldr (Check Ldr for # of shifts) = #L. Att units are multi-formation (9.9.0) = 1L. Att units green (4.5.0) = 1L. Att units raw (4.5.0) = 2L. Deep Mud unless attacker is in town/city hex = 1L. All Def units in Exploit mode = 1L."
+          ],
+          "checklist": [],
+          "subPhases": [
+            {
+              "id": "allied-ga-identify-defending-hex",
+              "name": "1. Identify Defending Hex",
+              "ruleRef": "13.3.0",
+              "timing": "every-turn",
+              "player": "phasing",
+              "description": "Identify the defending hex and terrain line for the ground assault (13.3.0).",
+              "notes": [
+                "**Hasty Bridge Demo (17.3.2b):** 1 Eng step = DR 0–3; 2+ Eng steps = DR 0–5. +1 DRM during Night GTs.",
+                "**Bridge Collapse (17.3.2a):** Super Heavy Tank (SH) = DR 0–7; Heavy Tank (H) = DR 0–6."
+              ],
+              "checklist": [
+                "**Step 1: Identify Defending hex (13.3.0).** Check: isolated Def surrender (13.5.1), standoff armor (13.5.2), declare OhS use (15.5.2), rest GT/ENA half CS (13.5.4), hasty bridge demo (13.5.6a & 17.3.2b), bridge collapse (13.5.6b & 17.3.2a)."
               ]
             },
             {
-              "id": "allied-ground-assault-segment",
-              "name": "Ground Assault (GA) Segment",
-              "ruleRef": "13.0",
+              "id": "allied-ga-identify-attacking-hexes",
+              "name": "2. Identify Attacking Hexes",
+              "ruleRef": "13.4.0",
+              "timing": "every-turn",
               "player": "phasing",
-              "description": "Active player conducts GAs against enemy units. Check for bridge demolition, collapse, and surrender of isolated defending units.",
+              "description": "Identify attacking hexes. 1 PA or 2 TA per Corps ADV (13.4.0).",
+              "notes": [],
+              "checklist": [
+                "**Step 2: Identify Attacking hexes (13.4.0).** 1 PA or 2 TA per Corps ADV. Unsupported Corps: 0 PA and 0 TA. 1 AmP expended allows 1 PA or 2 TA (16.3.3)."
+              ]
+            },
+            {
+              "id": "allied-ga-determine-unit-status",
+              "name": "3. Determine Unit Status",
+              "ruleRef": "13.5.0",
+              "timing": "every-turn",
+              "player": "both",
+              "description": "Determine the status of all attacking and defending units (13.5.0).",
               "notes": [
-                "**Hasty Bridge Demo (17.3.2b):** 1 Eng step = DR 0–3; 2+ Eng steps = DR 0–5. +1 DRM during Night GTs.",
-                "**Bridge Collapse (17.3.2a):** Super Heavy Tank (SH) = DR 0–7; Heavy Tank (H) = DR 0–6.",
-                "**CS Strength Modifiers (13.6.1):** AD Art (AT=0) gives Def +1. Two+ halving reasons (13.6.1a/b) = 1/4 & 1/4. Art stacked w/ non-Art (13.6.1b) = Att 1/2. Art w/ Art unit, 1 Art is 1/2. Def OhS no OoS (15.5.2) = Def 1/2. Fatigue 1 (14.2.1) = Att 1/2, Def 1/2. Fatigue 2 (14.2.2) = Att 0, Def 1/4. ENA (Def not fatigued) (3.4.6) = Att 1/2. Leg attack in/out of marsh (13.6.1a) = Att 1/2. 3-step unit reduced to 1 step = Att 1/2, Def 1/2.",
-                "**Armor/Bonus Determination (13.8.4):** Pure AFV without combined arms have AF of zero unless the other side is only pure Armor. *Armor vs Defending AT:* If Att AF & Def AT equal, stop. If not equal, subtract smaller from larger. If Def AT is larger, do not modify — result by Terrain/DW. If Att AF is larger, modify result by Terrain/DW. *Armor vs Defending Armor:* If Att & Def AF equal, stop. If not equal, subtract smaller from larger. If Att Armor in clear, Def may use clear terrain. If Att Arm not in clear or Def does not choose option, modify result by Terrain only — do not use DW. *AT vs Defending Armor:* If Att AT >= Def AF, stop. If Att AT < Def AF, subtract Att AT from Def AF and use Terrain modifiers only — do not use DW.",
-                "**Arm/AT Terrain Modifiers (13.8.4c):** Rough/Village = -1 (max 4). Woods/Town/Hedgerow = -2 (max 2). Forest/Rough-2/Bocage = -2 (max 1). City/Marsh = -3 (max 1). Stream = -1 (OTIH). IP = -1 (OTIH). ET-2 = -2 (OTIH). ET-3 = -3 (OTIH). Ft Area/Fort = -4 (OTIH).",
-                "**Key Column Shifts — Attacker (13.7.3):** Att units in PA mode = 1R. All Att units in MR mode = 1R. Per AS on Def units (max 2) = 1R. Def marked w/ CR = 1R. Def units overstacked = 1R. Def unit's HQ has ADV of zero (not supported) = 1R. 1st two GTs after lull ends, if Att ends lull = 1R. Att Ldr commits = Check Ldr for # of shifts. Unit in Strat mode = 2R. Def unit is in Exploit mode = 1R. Def unit is Raw or Green (4.5.0) = 1R.",
-                "**Key Column Shifts — Defender (13.7.4):** Def in HVP or VP hex = 1L. Per AS on any attacking units (max 2) = 1L. Any Att unit using extended GenS = 1L. Any Att stack overstacked = 1L. Night GT or ENA period = 1L. Def in IP = 1L. Def in ET-2 or WN = 2L. Def in ET-3/Fort/Fortified Area/STP = 3L. Def commits Ldr (Check Ldr for # of shifts) = #L. Att units are multi-formation (9.9.0) = 1L. Att units green (4.5.0) = 1L. Att units raw (4.5.0) = 2L. Deep Mud unless attacker is in town/city hex = 1L. All Def units in Exploit mode = 1L."
+                "**CS Strength Modifiers (13.6.1):** AD Art (AT=0) gives Def +1. Two+ halving reasons (13.6.1a/b) = 1/4 & 1/4. Art stacked w/ non-Art (13.6.1b) = Att 1/2. Art w/ Art unit, 1 Art is 1/2. Def OhS no OoS (15.5.2) = Def 1/2. Fatigue 1 (14.2.1) = Att 1/2, Def 1/2. Fatigue 2 (14.2.2) = Att 0, Def 1/4. ENA (Def not fatigued) (3.4.6) = Att 1/2. Leg attack in/out of marsh (13.6.1a) = Att 1/2. 3-step unit reduced to 1 step = Att 1/2, Def 1/2."
               ],
               "checklist": [
-                "**Step 1: Identify Defending hex (13.3.0).** Check: isolated Def surrender (13.5.1), standoff armor (13.5.2), declare OhS use (15.5.2), rest GT/ENA half CS (13.5.4), hasty bridge demo (13.5.6a & 17.3.2b), bridge collapse (13.5.6b & 17.3.2a).",
-                "**Step 2: Identify Attacking hexes (13.4.0).** 1 PA or 2 TA per Corps ADV. Unsupported Corps: 0 PA and 0 TA. 1 AmP expended allows 1 PA or 2 TA (16.3.3).",
-                "**Step 3: Determine Unit Status (13.5.0).** Check standoff armor eligibility (13.5.2), declare OhS (15.5.2), ENA/rest GT defend at half CS (13.5.4).",
-                "**Step 4: Determine GAV (13.6.0).** Retain fractions for each unit; total, then round up. Apply CS Strength Modifiers (13.6.1).",
-                "**Step 5: Determine Column Shifts (13.7.0).** Apply shifts favorable to attacker (13.7.3) and shifts favorable to defender (13.7.4). Net shifts move the CRT column.",
-                "**Step 6: Determine DRM (13.8.0).** Sum Proficiency (13.8.1), Combat Reserve (13.8.2), Regimental Integrity (13.8.3), and Armor/AT bonus (13.8.4). Max DRM is +/-10.",
-                "Resolve GA on CRT. Implement results; check for hasty bridge demolition (17.3.2b), bridge collapse (17.3.2a), and surrender of isolated defending units (15.7.1).",
+                "**Step 3: Determine Unit Status (13.5.0).** Check standoff armor eligibility (13.5.2), declare OhS (15.5.2), ENA/rest GT defend at half CS (13.5.4)."
+              ]
+            },
+            {
+              "id": "allied-ga-determine-gav",
+              "name": "4. Determine GAV",
+              "ruleRef": "13.6.0",
+              "timing": "every-turn",
+              "player": "both",
+              "description": "Calculate Ground Assault Values for both sides. Retain fractions per unit, total, then round up (13.6.0).",
+              "notes": [
+                "**CS Strength Modifiers (13.6.1):** AD Art (AT=0) gives Def +1. Two+ halving reasons (13.6.1a/b) = 1/4 & 1/4. Art stacked w/ non-Art (13.6.1b) = Att 1/2. Art w/ Art unit, 1 Art is 1/2. Def OhS no OoS (15.5.2) = Def 1/2. Fatigue 1 (14.2.1) = Att 1/2, Def 1/2. Fatigue 2 (14.2.2) = Att 0, Def 1/4. ENA (Def not fatigued) (3.4.6) = Att 1/2. Leg attack in/out of marsh (13.6.1a) = Att 1/2. 3-step unit reduced to 1 step = Att 1/2, Def 1/2."
+              ],
+              "checklist": [
+                "**Step 4: Determine GAV (13.6.0).** Retain fractions for each unit; total, then round up. Apply CS Strength Modifiers (13.6.1)."
+              ]
+            },
+            {
+              "id": "allied-ga-determine-column-shifts",
+              "name": "5. Determine Column Shifts",
+              "ruleRef": "13.7.0",
+              "timing": "every-turn",
+              "player": "both",
+              "description": "Apply column shifts favorable to attacker (13.7.3) and defender (13.7.4). Net shifts move the CRT column (13.7.0).",
+              "notes": [
+                "**Arm/AT Terrain Modifiers (13.8.4c):** Rough/Village = -1 (max 4). Woods/Town/Hedgerow = -2 (max 2). Forest/Rough-2/Bocage = -2 (max 1). City/Marsh = -3 (max 1). Stream = -1 (OTIH). IP = -1 (OTIH). ET-2 = -2 (OTIH). ET-3 = -3 (OTIH). Ft Area/Fort = -4 (OTIH).",
+                "**Key Column Shifts — Attacker (13.7.3):** Att units in PA mode = 1R. All Att units in MR mode = 1R. Per AS on Def units (max 2) = 1R. Def marked w/ CR = 1R. Def units overstacked = 1R. Def unit's HQ has ADV of zero (not supported) = 1R. 1st two GTs after lull ends, if Att ends lull = 1R. Att Ldr commits = Check Ldr for # of shifts. Unit in Strat mode = 2R. Def unit is in Exploit mode = 1R. Def unit is Raw or Green (4.5.0) = 1R."
+              ],
+              "checklist": [
+                "**Step 5: Determine Column Shifts (13.7.0).** Apply shifts favorable to attacker (13.7.3) and shifts favorable to defender (13.7.4). Net shifts move the CRT column."
+              ]
+            },
+            {
+              "id": "allied-ga-determine-drm",
+              "name": "6. Determine DRM",
+              "ruleRef": "13.8.0",
+              "timing": "every-turn",
+              "player": "both",
+              "description": "Sum Proficiency (13.8.1), Combat Reserve (13.8.2), Regimental Integrity (13.8.3), and Armor/AT bonus (13.8.4). Max DRM is +/-10 (13.8.0).",
+              "notes": [
+                "**Armor/Bonus Determination (13.8.4):** Pure AFV without combined arms have AF of zero unless the other side is only pure Armor. *Armor vs Defending AT:* If Att AF & Def AT equal, stop. If not equal, subtract smaller from larger. If Def AT is larger, do not modify — result by Terrain/DW. If Att AF is larger, modify result by Terrain/DW. *Armor vs Defending Armor:* If Att & Def AF equal, stop. If not equal, subtract smaller from larger. If Att Armor in clear, Def may use clear terrain. If Att Arm not in clear or Def does not choose option, modify result by Terrain only — do not use DW. *AT vs Defending Armor:* If Att AT >= Def AF, stop. If Att AT < Def AF, subtract Att AT from Def AF and use Terrain modifiers only — do not use DW.",
+                "**Armor/Bonus Determination (13.8.4):** Pure AFV without combined arms have AF of zero unless the other side is only pure Armor. *Armor vs Defending AT:* If Att AF & Def AT equal, stop. If not equal, subtract smaller from larger. If Def AT is larger, do not modify — result by Terrain/DW. If Att AF is larger, modify result by Terrain/DW. *Armor vs Defending Armor:* If Att & Def AF equal, stop. If not equal, subtract smaller from larger. If Att Armor in clear, Def may use clear terrain. If Att Arm not in clear or Def does not choose option, modify result by Terrain only — do not use DW. *AT vs Defending Armor:* If Att AT >= Def AF, stop. If Att AT < Def AF, subtract Att AT from Def AF and use Terrain modifiers only — do not use DW."
+              ],
+              "checklist": [
+                "**Step 6: Determine DRM (13.8.0).** Sum Proficiency (13.8.1), Combat Reserve (13.8.2), Regimental Integrity (13.8.3), and Armor/AT bonus (13.8.4). Max DRM is +/-10."
+              ]
+            },
+            {
+              "id": "allied-ga-determine-result",
+              "name": "7. Determine GA Result",
+              "ruleRef": "13.9.0",
+              "timing": "every-turn",
+              "player": "both",
+              "description": "Resolve the ground assault on the CRT (13.9.0).",
+              "notes": [],
+              "checklist": [
+                "Resolve GA on CRT. Implement results; check for hasty bridge demolition (17.3.2b), bridge collapse (17.3.2a), and surrender of isolated defending units (15.7.1)."
+              ]
+            },
+            {
+              "id": "allied-ga-apply-results",
+              "name": "8. Apply GA Results",
+              "ruleRef": "13.10.0",
+              "timing": "every-turn",
+              "player": "both",
+              "description": "Apply ground assault results. Check for hasty bridge demolition (17.3.2b), bridge collapse (17.3.2a), and surrender of isolated defending units (15.7.1). Remove all AS markers (13.13.0).",
+              "notes": [],
+              "checklist": [
                 "**AS Marker Removal:** Remove all AS markers from the map (13.13.0)."
               ]
             }
@@ -444,98 +618,88 @@
           ]
         },
         {
-          "id": "allied-administrative-phase",
-          "name": "Administrative Phase",
-          "ruleRef": "3.3.2g",
+          "id": "allied-air-resupply-segment",
+          "name": "Air Resupply Segment",
+          "ruleRef": "20.5.0",
+          "timing": "am-and-pm",
           "player": "phasing",
-          "description": "Administrative activities including air resupply, supply determination, ammo replenishment, fatigue recovery, and delay marker removal.",
+          "description": "Active player conducts air supply missions (20.5.0).",
+          "notes": [
+            "Air supply may only be conducted during AM & PM GTs (20.5.0). Scenario rules list the number of ATP available.",
+            "Drop Zone requirements (20.5.2): DZ hex must be clear, hedgerow, or rough terrain. It may contain a location or village. It must not be enemy-occupied or adjacent to an enemy unit.",
+            "Resolving the Drop (20.5.3): Roll 1d10 per ATP. DRMs: +1 for every 4 enemy units within 3 hexes of the DZ (round up), +1 per enemy Flak-capable unit in range of the DZ hex (20.7.1) counting as 2 units, +1 if atmospheric condition is POvercast, -1 for US or CW mission in September 1944 or later, -1 if target is in Strat mode.",
+            "If the modified DR is 8 or less, the mission delivers 1 air supply point. An unmodified DR of 0 always succeeds (20.5.3)."
+          ],
+          "checklist": [
+            "Verify atmospheric condition is Clear or POvercast; air supply is not allowed in Overcast, Storm, or Snow (20.5.0).",
+            "Active player declares number of ATP conducting the air supply mission. Do not adjust for atmospheric conditions (20.5.0).",
+            "Active player declares number of ASup AP escorting the mission. Adjust escort AP for atmospheric conditions (20.6.0).",
+            "Inactive player declares number of AP that will intercept the mission. Adjust for atmospheric conditions (20.6.0).",
+            "Conduct ASup (20.6.2): each escort AP aborts 1 intercepting AP, and vice versa.",
+            "Active player declares the location of the Drop Zone hex (DZ) (20.5.2).",
+            "Resolve the drop: mission player rolls 1d10 for each surviving ATP (20.5.3)."
+          ]
+        },
+        {
+          "id": "allied-supply-determination-segment",
+          "name": "Supply Determination Segment",
+          "ruleRef": "15.0",
+          "player": "phasing",
+          "description": "Active player checks the GenS state of all HQs and then all units. Mark HQ/units OhS, OoS, and isolated as required.",
+          "notes": [
+            "**GenS Path Tracing (15.2.1a):** HQs must use Mech class GenS path procedures. Path goes through clear terrain (normal/dry only) or secondary/primary roads (not trails).",
+            "**Extended GenS Paths (15.2.4):** All types of HQ may use extended GenS paths. Mech formation HQs may only trace Mech class GenS paths to Mech class units. Mech formation HQ may trace to Leg units using Mech or Leg GenS paths (decided per unit). Each unit's GenS path may only use 1 movement class rate during the current phase.",
+            "**Allied Mech HQ Leg Tracing:** When an Allied Mech HQ traces GenS path using Leg class movement, reduce the GenS path to 12 Leg class MP. Assigning 1 TP from the army to a Leg HQ formation allows all units of that formation to use Mech class GenS MP (15.2.4a).",
+            "**Adjacency GenS (7.7.5):** If a unit is in GenS, then all adjacent friendly units subordinate to the same HQ are in GenS if the hexside between them does not prohibit Leg movement or is an un-bridged river hexside. Units in GenS this way may not provide GenS to other units and may not move into an OoS hex.",
+            "**Eng Ferry GenS (15.2.1b):** Eng units may allow tracing a Leg GenS path by ferrying over a river/stream.",
+            "**Supply Paths & Weather (15.2.6):** Deep Mud: exclusively primary road; 1/2 MP; secondary road = 1/2 normal GenS. Mud: not exclusively primary/secondary roads; -3 MP. Snow: not exclusively primary/secondary roads; -1 MP.",
+            "**On Hand Supply (15.5.0):** OhS path = 1/2 normal GenS distance. Roll 1d10 with DRMs: -4 formation HQ, -3 corps HQ, -1 unable to trace GenS, +1 town/city, +2 US HQ. DR 3 or less = supply number 4; 4-6 = supply number 6; 7+ = supply number 8.",
+            "**Expending HQ OhS (15.5.1a):** During Command Phase convert OhS points to FP or AmP. Each OhS point expended allows the HQ to supply subordinate HQ and units until the next Command Phase. OhS points may convert to fuel (1 OhS = 1 fuel point). Army OhS yields 2 AmP; corps OhS yields 1 AmP.",
+            "**Units & OhS Usage (15.5.2):** Non-HQ units that cannot trace an OhS supply path to an HQ with available OhS points (or an HQ in GenS) are marked OhS. Non-HQ OhS units remain OhS until they: 1) expend more than 1/2 MA, 2) conduct an offensive GA, 3) defend using more than 1/2 defensive CS, 4) participate in Art FS, or 5) expend more than 3 MPs in Exploit mode. Then mark with OoS.",
+            "**OoS Effects (15.6.0):** OoS units cannot: 1) enter PA mode, 2) enter Exploit mode, 3) enter Strat mode, 4) enter CR or receive CR bonuses, 5) conduct replacement, 6) conduct construction or demolition (except IPs). OoS units expend 1/2 printed MA (round up), must exit Exploit, lose Eng abilities, reduce CS by 1/2, Art marked AD and may not replenish.",
+            "**Isolation (15.7.0):** A unit is isolated if it cannot trace a GenS path of any distance AND no friendly units in GenS are within 2 intervening hexes. It is possible to be isolated and OoS or isolated and OhS (15.1.2). Isolated OoS units must check for surrender prior to defending in GA (13.5.1)."
+          ],
+          "checklist": [
+            "Step 1: Determine supply status of all HQs (15.1.1).",
+            "Step 2: Trace HQ-to-HQ Supply Paths (15.2.2) from PSS to depot to HQ, or HQ to subordinate HQ. Clear terrain only (normal/dry) or secondary/primary roads (not trails). HQ paths max 18 Mech class MP. Extended GenS paths allowed (15.2.4).",
+            "Step 3: Check GenS state of all non-HQ units (15.2.3). Leg formations: 12 Leg class MP. Axis Mech formations: 12 Mech class MP. Allied Mech formations: 18 Mech class MP.",
+            "Step 4: Mark OhS, OoS, and isolated units/HQs as required (15.0)."
+          ]
+        },
+        {
+          "id": "allied-ammo-replenishment-segment",
+          "name": "Ammo Replenishment Segment",
+          "ruleRef": "16.3.7",
+          "player": "both",
+          "description": "Both sides replenish AD Art units.",
           "notes": [],
-          "subPhases": [
-            {
-              "id": "allied-air-resupply-segment",
-              "name": "Air Resupply Segment",
-              "ruleRef": "20.5.0",
-              "timing": "am-and-pm",
-              "player": "phasing",
-              "description": "Active player conducts air supply missions (20.5.0).",
-              "notes": [
-                "Air supply may only be conducted during AM & PM GTs (20.5.0). Scenario rules list the number of ATP available.",
-                "Drop Zone requirements (20.5.2): DZ hex must be clear, hedgerow, or rough terrain. It may contain a location or village. It must not be enemy-occupied or adjacent to an enemy unit.",
-                "Resolving the Drop (20.5.3): Roll 1d10 per ATP. DRMs: +1 for every 4 enemy units within 3 hexes of the DZ (round up), +1 per enemy Flak-capable unit in range of the DZ hex (20.7.1) counting as 2 units, +1 if atmospheric condition is POvercast, -1 for US or CW mission in September 1944 or later, -1 if target is in Strat mode.",
-                "If the modified DR is 8 or less, the mission delivers 1 air supply point. An unmodified DR of 0 always succeeds (20.5.3)."
-              ],
-              "checklist": [
-                "Verify atmospheric condition is Clear or POvercast; air supply is not allowed in Overcast, Storm, or Snow (20.5.0).",
-                "Active player declares number of ATP conducting the air supply mission. Do not adjust for atmospheric conditions (20.5.0).",
-                "Active player declares number of ASup AP escorting the mission. Adjust escort AP for atmospheric conditions (20.6.0).",
-                "Inactive player declares number of AP that will intercept the mission. Adjust for atmospheric conditions (20.6.0).",
-                "Conduct ASup (20.6.2): each escort AP aborts 1 intercepting AP, and vice versa.",
-                "Active player declares the location of the Drop Zone hex (DZ) (20.5.2).",
-                "Resolve the drop: mission player rolls 1d10 for each surviving ATP (20.5.3)."
-              ]
-            },
-            {
-              "id": "allied-supply-determination-segment",
-              "name": "Supply Determination Segment",
-              "ruleRef": "15.0",
-              "player": "phasing",
-              "description": "Active player checks the GenS state of all HQs and then all units. Mark HQ/units OhS, OoS, and isolated as required.",
-              "notes": [
-                "**GenS Path Tracing (15.2.1a):** HQs must use Mech class GenS path procedures. Path goes through clear terrain (normal/dry only) or secondary/primary roads (not trails).",
-                "**Extended GenS Paths (15.2.4):** All types of HQ may use extended GenS paths. Mech formation HQs may only trace Mech class GenS paths to Mech class units. Mech formation HQ may trace to Leg units using Mech or Leg GenS paths (decided per unit). Each unit's GenS path may only use 1 movement class rate during the current phase.",
-                "**Allied Mech HQ Leg Tracing:** When an Allied Mech HQ traces GenS path using Leg class movement, reduce the GenS path to 12 Leg class MP. Assigning 1 TP from the army to a Leg HQ formation allows all units of that formation to use Mech class GenS MP (15.2.4a).",
-                "**Adjacency GenS (7.7.5):** If a unit is in GenS, then all adjacent friendly units subordinate to the same HQ are in GenS if the hexside between them does not prohibit Leg movement or is an un-bridged river hexside. Units in GenS this way may not provide GenS to other units and may not move into an OoS hex.",
-                "**Eng Ferry GenS (15.2.1b):** Eng units may allow tracing a Leg GenS path by ferrying over a river/stream.",
-                "**Supply Paths & Weather (15.2.6):** Deep Mud: exclusively primary road; 1/2 MP; secondary road = 1/2 normal GenS. Mud: not exclusively primary/secondary roads; -3 MP. Snow: not exclusively primary/secondary roads; -1 MP.",
-                "**On Hand Supply (15.5.0):** OhS path = 1/2 normal GenS distance. Roll 1d10 with DRMs: -4 formation HQ, -3 corps HQ, -1 unable to trace GenS, +1 town/city, +2 US HQ. DR 3 or less = supply number 4; 4-6 = supply number 6; 7+ = supply number 8.",
-                "**Expending HQ OhS (15.5.1a):** During Command Phase convert OhS points to FP or AmP. Each OhS point expended allows the HQ to supply subordinate HQ and units until the next Command Phase. OhS points may convert to fuel (1 OhS = 1 fuel point). Army OhS yields 2 AmP; corps OhS yields 1 AmP.",
-                "**Units & OhS Usage (15.5.2):** Non-HQ units that cannot trace an OhS supply path to an HQ with available OhS points (or an HQ in GenS) are marked OhS. Non-HQ OhS units remain OhS until they: 1) expend more than 1/2 MA, 2) conduct an offensive GA, 3) defend using more than 1/2 defensive CS, 4) participate in Art FS, or 5) expend more than 3 MPs in Exploit mode. Then mark with OoS.",
-                "**OoS Effects (15.6.0):** OoS units cannot: 1) enter PA mode, 2) enter Exploit mode, 3) enter Strat mode, 4) enter CR or receive CR bonuses, 5) conduct replacement, 6) conduct construction or demolition (except IPs). OoS units expend 1/2 printed MA (round up), must exit Exploit, lose Eng abilities, reduce CS by 1/2, Art marked AD and may not replenish.",
-                "**Isolation (15.7.0):** A unit is isolated if it cannot trace a GenS path of any distance AND no friendly units in GenS are within 2 intervening hexes. It is possible to be isolated and OoS or isolated and OhS (15.1.2). Isolated OoS units must check for surrender prior to defending in GA (13.5.1)."
-              ],
-              "checklist": [
-                "Step 1: Determine supply status of all HQs (15.1.1).",
-                "Step 2: Trace HQ-to-HQ Supply Paths (15.2.2) from PSS to depot to HQ, or HQ to subordinate HQ. Clear terrain only (normal/dry) or secondary/primary roads (not trails). HQ paths max 18 Mech class MP. Extended GenS paths allowed (15.2.4).",
-                "Step 3: Check GenS state of all non-HQ units (15.2.3). Leg formations: 12 Leg class MP. Axis Mech formations: 12 Mech class MP. Allied Mech formations: 18 Mech class MP.",
-                "Step 4: Mark OhS, OoS, and isolated units/HQs as required (15.0)."
-              ]
-            },
-            {
-              "id": "allied-ammo-replenishment-segment",
-              "name": "Ammo Replenishment Segment",
-              "ruleRef": "16.3.7",
-              "player": "both",
-              "description": "Both sides replenish AD Art units.",
-              "notes": [],
-              "checklist": [
-                "Step 1: Active side expends AmP to replenish AD Art (16.3.7a).",
-                "Step 2: Active side rolls 1d10 to replenish AD Art units (16.3.7b).",
-                "Step 3: Inactive player may replenish AD Art units by expending AmP (16.3.7a)."
-              ]
-            },
-            {
-              "id": "allied-fatigue-recovery-segment",
-              "name": "Fatigue Recovery Segment",
-              "ruleRef": "14.3.0",
-              "player": "phasing",
-              "description": "Active player may remove one fatigue level from all eligible units.",
-              "notes": [],
-              "checklist": [
-                "Remove one fatigue level from eligible units (14.3.0)."
-              ]
-            },
-            {
-              "id": "allied-delay-marker-removal-segment",
-              "name": "Delay Marker Removal Segment",
-              "ruleRef": "7.13.3",
-              "player": "both",
-              "description": "The owning player may remove any delay markers. The non-owning player may remove enemy delay markers if friendly units occupy the hex.",
-              "notes": [],
-              "checklist": [
-                "Owning player may remove delay markers (player's choice).",
-                "Non-owning player may remove enemy delay markers if friendly units occupy the delay marker hex (7.13.3)."
-              ]
-            }
+          "checklist": [
+            "Step 1: Active side expends AmP to replenish AD Art (16.3.7a).",
+            "Step 2: Active side rolls 1d10 to replenish AD Art units (16.3.7b).",
+            "Step 3: Inactive player may replenish AD Art units by expending AmP (16.3.7a)."
+          ]
+        },
+        {
+          "id": "allied-fatigue-recovery-segment",
+          "name": "Fatigue Recovery Segment",
+          "ruleRef": "14.3.0",
+          "player": "phasing",
+          "description": "Active player may remove one fatigue level from all eligible units.",
+          "notes": [],
+          "checklist": [
+            "Remove one fatigue level from eligible units (14.3.0)."
+          ]
+        },
+        {
+          "id": "allied-delay-marker-removal-segment",
+          "name": "Delay Marker Removal Segment",
+          "ruleRef": "7.13.3",
+          "player": "both",
+          "description": "The owning player may remove any delay markers. The non-owning player may remove enemy delay markers if friendly units occupy the hex.",
+          "notes": [],
+          "checklist": [
+            "Owning player may remove delay markers (player's choice).",
+            "Non-owning player may remove enemy delay markers if friendly units occupy the delay marker hex (7.13.3)."
           ]
         }
       ]
@@ -578,17 +742,39 @@
           ]
         },
         {
-          "id": "axis-movement-phase",
-          "name": "Movement Phase",
-          "ruleRef": "3.3.2c",
+          "id": "axis-combat-reserve-designation-segment",
+          "name": "Combat Reserve Designation",
+          "ruleRef": "5.8.0",
+          "timing": "every-turn",
           "player": "phasing",
-          "description": "The Axis side moves units.",
+          "description": "Axis player designates combat reserves (5.8.0).",
           "notes": [],
           "checklist": [
-            "Combat Reserve Designation Segment: Place CR markers (5.8.0).",
+            "Combat Reserve Designation Segment: Place CR markers (5.8.0)."
+          ]
+        },
+        {
+          "id": "axis-movement-segment",
+          "name": "Movement Segment",
+          "ruleRef": "7.2.2",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "Axis units conduct movement (7.2.2).",
+          "notes": [],
+          "checklist": [
             "Movement Segment: Conduct steps 1–5 as per Allied turn.",
             "Quick Construction Segment: Complete eligible FW construction (17.3.3)."
           ]
+        },
+        {
+          "id": "axis-quick-construction-segment",
+          "name": "Quick Construction",
+          "ruleRef": "17.3.3",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "Axis player may attempt quick construction of bridges and improved positions after movement (17.3.3).",
+          "notes": [],
+          "checklist": []
         },
         {
           "id": "allied-inactive-exploit-in-axis-turn",
@@ -604,18 +790,63 @@
           ]
         },
         {
-          "id": "axis-combat-phase",
-          "name": "Combat Phase",
-          "ruleRef": "3.3.2e",
+          "id": "axis-attacker-designation-segment",
+          "name": "Attacker Designation",
+          "ruleRef": "10.2.0",
+          "timing": "every-turn",
           "player": "phasing",
-          "description": "The Axis side conducts combat.",
+          "description": "Axis player designates attacking units (10.2.0).",
           "notes": [],
           "checklist": [
-            "Tactical Assault Designation Segment (10.2.0).",
-            "Replacement Segment (22.5.0).",
+            "Tactical Assault Designation Segment (10.2.0)."
+          ]
+        },
+        {
+          "id": "axis-replacement-segment",
+          "name": "Replacement Segment",
+          "ruleRef": "22.5.0",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "Axis player conducts replacements (22.5.0).",
+          "notes": [],
+          "checklist": [
+            "Replacement Segment (22.5.0)."
+          ]
+        },
+        {
+          "id": "axis-fire-support-segment",
+          "name": "Fire Support Segment",
+          "ruleRef": "11.0",
+          "timing": "every-turn",
+          "player": "both",
+          "description": "Conduct fire support: offensive air, defensive support, offensive support (11.0).",
+          "notes": [],
+          "checklist": [
             "Fire Support (FS) Segment (11.0).",
-            "Attacker Status Adjustment Segment (12.0).",
-            "Ground Assault (GA) Segment (13.0).",
+            "Attacker Status Adjustment Segment (12.0)."
+          ]
+        },
+        {
+          "id": "axis-attacker-status-adjustment-segment",
+          "name": "Attacker Status Adjustment",
+          "ruleRef": "12.0",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "Adjust attacker status after fire support results (12.0).",
+          "notes": [],
+          "checklist": [
+            "Ground Assault (GA) Segment (13.0)."
+          ]
+        },
+        {
+          "id": "axis-ground-assault-segment",
+          "name": "Ground Assault Segment",
+          "ruleRef": "13.0",
+          "timing": "every-turn",
+          "player": "both",
+          "description": "Resolve ground assaults (13.0).",
+          "notes": [],
+          "checklist": [
             "AS Marker Removal Segment (13.13.0)."
           ]
         },
@@ -631,17 +862,62 @@
           ]
         },
         {
-          "id": "axis-administrative-phase",
-          "name": "Administrative Phase",
-          "ruleRef": "3.3.2g",
+          "id": "axis-air-resupply-segment",
+          "name": "Air Resupply",
+          "ruleRef": "20.5.0",
+          "timing": "am-pm-only",
           "player": "phasing",
-          "description": "Axis side conducts air resupply, supply determination, ammo replenishment, fatigue recovery, and delay marker removal.",
+          "description": "Axis air resupply missions (20.5.0).",
           "notes": [],
           "checklist": [
-            "Air Resupply Segment (AM and PM only) (20.5.0).",
-            "Supply Determination Segment (15.0).",
-            "Ammo Replenishment Segment (16.3.7).",
-            "Fatigue Recovery Segment (14.3.0).",
+            "Air Resupply Segment (AM and PM only) (20.5.0)."
+          ]
+        },
+        {
+          "id": "axis-supply-determination-segment",
+          "name": "Supply Determination",
+          "ruleRef": "15.0",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "Determine supply status for Axis units (15.0).",
+          "notes": [],
+          "checklist": [
+            "Supply Determination Segment (15.0)."
+          ]
+        },
+        {
+          "id": "axis-ammo-replenishment-segment",
+          "name": "Ammo Replenishment",
+          "ruleRef": "16.3.7",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "Replenish ammo for Axis formations (16.3.7).",
+          "notes": [],
+          "checklist": [
+            "Ammo Replenishment Segment (16.3.7)."
+          ]
+        },
+        {
+          "id": "axis-fatigue-recovery-segment",
+          "name": "Fatigue Recovery",
+          "ruleRef": "14.3.0",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "Check for fatigue recovery (14.3.0).",
+          "notes": [],
+          "checklist": [
+            "Fatigue Recovery Segment (14.3.0)."
+          ]
+        },
+        {
+          "id": "axis-delay-marker-removal-segment",
+          "name": "Delay Marker Removal",
+          "ruleRef": "7.13.3",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "Remove delay markers (7.13.3).",
+          "notes": [],
+          "checklist": [
             "Delay Marker Removal Segment (7.13.3)."
           ]
         }
