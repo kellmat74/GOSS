@@ -38,7 +38,7 @@ export function InfoPanel() {
         <p className="text-sm leading-relaxed text-stone-500 dark:text-stone-400">
           <strong>GOSS Assistant</strong> is an interactive companion app for the{" "}
           <em>Grand Operational Simulation Series (GOSS) 2020</em> tabletop wargame system
-          by Operational Studies Group (OSG). It provides a step-by-step sequence of play,
+          by Decision Games. It provides a step-by-step sequence of play,
           searchable rules reference, visual flowcharts, and AI-powered rules Q&A.
         </p>
       </section>

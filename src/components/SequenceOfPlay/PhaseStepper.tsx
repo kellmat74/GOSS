@@ -99,7 +99,7 @@ export function PhaseStepper({
               {phase.timing.replace(/-/g, " ").toUpperCase()}
             </span>
           )}
-          {phase.player !== "both" && (
+          {phase.player !== "both" && !phase.id.endsWith("-player-turn") && (
             <span className="rounded bg-stone-200 px-1.5 py-0.5 text-xs font-medium text-stone-600 dark:bg-stone-700 dark:text-stone-300">
               {phase.player}
             </span>
