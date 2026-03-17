@@ -48,7 +48,7 @@ export function AppShell({
         }`}
       >
         <div className="sticky top-0 z-10 border-b border-stone-200 bg-stone-50 p-3 dark:border-stone-700 dark:bg-stone-800">
-          <h1 className="text-lg font-bold tracking-tight">GOSS Assistant <span className="text-xs font-normal text-stone-500">v2.6</span></h1>
+          <h1 className="text-lg font-bold tracking-tight">GOSS Assistant <span className="text-xs font-normal text-stone-500">v2.7</span></h1>
           <div className="mt-1 text-sm text-stone-500 dark:text-stone-400">
             Grand Operational Simulation Series
           </div>
