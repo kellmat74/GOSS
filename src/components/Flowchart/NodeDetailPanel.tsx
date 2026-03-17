@@ -1,11 +1,13 @@
 import type { Phase } from "../../types/goss";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
+import { SoPMarkdown } from "../SequenceOfPlay/SoPMarkdown";
 
 export type NodeDetail = {
   name: string;
   ruleRef?: string;
   description: string;
+  content?: string;
   notes: string[];
   checklist: string[];
   timing?: string;
@@ -54,6 +56,13 @@ export function NodeDetailPanel({ detail, onClose }: NodeDetailPanelProps) {
       <p className="mb-4 text-sm leading-relaxed text-stone-300">
         <RuleInlineText text={detail.description} />
       </p>
+
+      {/* Content — verbatim PAC markdown */}
+      {detail.content && (
+        <div className="mb-4">
+          <SoPMarkdown content={detail.content} />
+        </div>
+      )}
 
       {/* Notes */}
       {detail.notes.length > 0 && (
@@ -111,6 +120,7 @@ export function findDetailByRuleRef(
           name: item.name,
           ruleRef: item.ruleRef,
           description: item.description,
+          content: item.content,
           notes: item.notes ?? [],
           checklist: item.checklist ?? [],
           timing: item.timing,
