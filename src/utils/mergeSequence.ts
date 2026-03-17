@@ -98,6 +98,23 @@ function applyModification(
 
     case "add": {
       if (!mod.item) break;
+
+      // Top-level phase insertion
+      if (mod.insertBeforePhase) {
+        const newPhase: Phase = {
+          ...mod.item,
+          subPhases: mod.item.subPhases ?? [],
+          scenarioModule: moduleLabel,
+        } as Phase;
+        const idx = phases.findIndex((p) => p.id === mod.insertBeforePhase);
+        if (idx >= 0) {
+          phases.splice(idx, 0, newPhase);
+        } else {
+          phases.unshift(newPhase); // fallback: prepend
+        }
+        break;
+      }
+
       const newItem: SubPhase = { ...mod.item, scenarioModule: moduleLabel };
 
       if (mod.insertAfter) {

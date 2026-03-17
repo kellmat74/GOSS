@@ -98,6 +98,7 @@ export interface SequenceModification {
   };
   item?: SubPhase;          // for "add": full item to insert
   insertAfter?: string;     // for "add": id of sibling (null = prepend)
+  insertBeforePhase?: string; // for "add": insert as top-level phase before this phase id
 }
 
 export interface SoPProgress {

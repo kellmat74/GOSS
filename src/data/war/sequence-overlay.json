@@ -3,13 +3,93 @@
   "moduleLabel": "WaR",
   "modifications": [
     {
+      "target": "phases",
+      "action": "add",
+      "insertBeforePhase": "joint-pre-game-day-activities",
+      "item": {
+        "id": "war-pre-dawn-gt",
+        "name": "Pre-Dawn Surprise GT",
+        "ruleRef": "30.2.0",
+        "timing": "conditional",
+        "player": "both",
+        "description": "Dec 16 scenarios only. The first GT is a special Pre-Dawn Surprise GT — NOT a night GT (WAR (3.1.0)). Only the German player acts. After the Pre-Dawn GT, play proceeds to the Dec 16 AM GT.",
+        "notes": [
+          "The Pre-Dawn GT is German-only with a stripped-down 3-phase SoP. Make sure your German opening moves are planned before the game starts since PA mode assignment locks in movement options (WAR (30.2.0)).",
+          "This is NOT a night GT — night rules do not apply. All units start in GenS and in command (WAR (30.2.0)).",
+          "No air points are available for either side during the Pre-Dawn GT."
+        ],
+        "subPhases": [
+          {
+            "id": "war-pre-dawn-german-mode",
+            "name": "German Mode Determination Phase",
+            "ruleRef": "30.2.0",
+            "player": "both",
+            "description": "German units near enemy positions may be placed in PA mode for the surprise attack.",
+            "content": "**PA Mode Eligibility (WAR (30.2.0)):**\n- German **Mech** units within **2 hexes** (2 intervening hexes) of an enemy unit may be placed in PA mode.\n- German **Leg** units within **1 hex** (1 intervening hex) of an enemy unit may be placed in PA mode.\n\n**Important:** Units placed in PA mode that are not adjacent to enemy units must be able to move adjacent to an enemy unit during the German Movement Phase. If a PA unit cannot reach an adjacent enemy hex, it must be returned to its original hex with PA removed.\n\n**Restrictions:**\n- Units designated as overstacked during setup may enter PA mode. Overstacks created after setup are subject to GOSS (6.4.0).\n- German heavy bridges and Eng units stacked with a heavy bridge are ignored for stacking purposes.\n- No other mode changes are allowed.\n\n**Exception:** Units subordinate to the **272nd VG Div** may NOT be placed in PA mode.",
+            "notes": [
+              "Only units close enough to the enemy can enter PA — Mech within 2 hexes, Leg within 1 hex. Every PA unit must be able to reach an adjacent enemy hex during movement or the PA is cancelled (WAR (30.2.0)).",
+              "The 272nd VG Div exception means those units sit out the Pre-Dawn attack entirely — factor this into your German setup."
+            ],
+            "checklist": [
+              "Identify German Mech units within 2 hexes of enemy — eligible for PA",
+              "Identify German Leg units within 1 hex of enemy — eligible for PA",
+              "Verify each PA unit can reach an adjacent enemy hex during movement",
+              "Exception: 272nd VG Div units may NOT enter PA mode",
+              "Check stacking — overstacks from setup are OK, new overstacks are not (6.4.0)"
+            ]
+          },
+          {
+            "id": "war-pre-dawn-german-movement",
+            "name": "German PA Movement Phase",
+            "ruleRef": "30.2.0",
+            "player": "both",
+            "description": "Only units in PA mode may move, using PA movement rules. All PA units must end adjacent to an enemy unit.",
+            "content": "**Movement Rules (WAR (30.2.0)):**\n- **Only** units marked PA may move — all other movement is prohibited.\n- German **Mot AT** units may move as Leg units this GT only.\n- German **Mech units cannot dismount.**\n- All PA units **must end movement adjacent to an Allied unit.**\n\n**Important:** If a PA unit cannot end its move adjacent to an enemy unit, return it to its original hex and remove the PA marker.",
+            "notes": [
+              "This is PA-only movement — no strategic movement, no regular movement. Every unit that moves must end adjacent to an enemy (WAR (30.2.0)).",
+              "Mot AT moving as Leg is a one-time benefit for this GT only — use it to get AT guns into supporting positions for the opening assault.",
+              "Mech units cannot dismount, so they're committed to their mounted movement rate and capabilities."
+            ],
+            "checklist": [
+              "Move all PA-designated units using PA movement rules",
+              "Ensure every PA unit ends adjacent to an Allied unit",
+              "Mot AT may move as Leg this GT only",
+              "Return any PA unit that cannot reach an adjacent enemy hex to its original position"
+            ]
+          },
+          {
+            "id": "war-pre-dawn-german-combat",
+            "name": "German Combat Phase",
+            "ruleRef": "30.2.0",
+            "player": "both",
+            "description": "Modified combat sequence: Fire Support → Ground Assault only (skip Attacker Adjustment). All PA units adjacent to enemy MUST conduct GA.",
+            "content": "**Combat Sequence (WAR (30.2.0)):**\n1. **Fire Support Segment**\n   a) German Offensive FS\n   b) Allied Defensive FS\n2. **Skip the Attacker Adjustment Segment** — units in PA mode adjacent to enemy MUST conduct GA.\n3. **Ground Assault Segment**\n\n### Fire Support Restrictions\n\n**Air Points:** Not available for either side.\n\n**German FS (WAR (30.2.0)):**\n- All German FS missions at **-4 DRM**\n- Max **3 German Art units** per FS mission\n- No ammo depletion checks\n- Stockpiled AmP available for intensive barrages\n\n**Allied Defensive FS (WAR (30.2.0)):**\n- All Allied FS missions at **-1 DRM**\n- Observing unit in FW: max **2 Allied Art** per FS mission\n- Observing unit NOT in FW: max **1 Allied Art** per FS mission\n- No ammo depletion checks\n\n### Ground Assault Rules\n\n- All German GAs receive automatic **+1 column shift right**\n- **Exception:** No automatic shift vs. **US 4th Infantry Division**\n- Recon units may NOT convert mandatory step losses to retreats (GOSS (13.10.2) suspended)\n- German Mot AT may advance after combat as Leg units\n- Ignore GOSS ADV limits on GA (GOSS (12.1.0))",
+            "notes": [
+              "The -4 DRM on German FS is harsh, but with max 3 Art and intensive barrage capability from stockpiled AmP, concentrated fire on key positions can still suppress defenders (WAR (30.2.0)).",
+              "Every PA unit adjacent to an enemy MUST attack — no holding back. Plan PA assignments so every unit is where you want an assault.",
+              "The automatic +1 column shift (except vs 4th Inf Div) makes the opening German assault very powerful — stack your best units for the critical breakthrough hexes (WAR (30.2.0)).",
+              "Allied defensive FS is limited to 1-2 Art units per mission at -1 DRM — concentrate your available Art on the most critical defense points rather than spreading fire thin."
+            ],
+            "checklist": [
+              "Conduct German offensive FS missions (max 3 Art per mission, -4 DRM)",
+              "Use stockpiled AmP for intensive barrages on critical targets",
+              "Conduct Allied defensive FS missions (max 1-2 Art per mission, -1 DRM)",
+              "Skip Attacker Adjustment — all PA units adjacent to enemy MUST conduct GA",
+              "Apply +1 column shift right to all German GAs (except vs 4th Inf Div)",
+              "Resolve Ground Assaults — Recon may NOT convert losses to retreats"
+            ]
+          }
+        ]
+      }
+    },
+    {
       "target": "update-game-turn-indicator",
       "action": "modify",
-      "gate": "WaR: ENA is in effect for all scenarios. The first GT of all Dec 16 scenarios is a special Pre-Dawn Surprise GT (WAR (3.1.0)).",
+      "gate": "WaR: ENA is in effect for all scenarios. Rest GT rules begin Dec 20 AM GT (WAR (3.5.0)).",
       "patch": {
-        "appendContent": "### WaR Game Turn Structure\n\n**Pre-Dawn Surprise GT (WAR (3.1.0)):** The first GT of all Dec 16 scenarios is a special Pre-Dawn GT — NOT a night GT. Only the German player acts during this GT. After the Pre-Dawn GT, play proceeds to the Dec 16 AM GT.\n\n**Rest GTs (WAR (3.5.0)):** Rest GT rules go into effect beginning Dec 20 AM GT in all scenarios.",
+        "appendContent": "### WaR Game Turn Structure\n\n**Rest GTs (WAR (3.5.0)):** Rest GT rules go into effect beginning Dec 20 AM GT in all scenarios.",
         "appendNotes": [
-          "The Pre-Dawn GT is unique — it's German-only with a stripped-down SoP. Make sure your German opening moves are planned before the game starts since PA mode assignment locks in movement options (WAR (30.2.0))."
+          "After the Pre-Dawn Surprise GT, play proceeds to the normal Dec 16 AM GT with the full Sequence of Play."
         ]
       }
     },
@@ -315,6 +395,10 @@
       "label": "Dec 21+ Scenario Group",
       "modifications": [
         {
+          "target": "war-pre-dawn-gt",
+          "action": "remove"
+        },
+        {
           "target": "joint-command-phase",
           "action": "modify",
           "gate": "WaR Dec 21+: Von Der Heydte, Einheit Stielau, Bridge Bottlenecks, Traffic Congestion, and Allied Corps Boundary Restrictions are NO LONGER in effect. Montgomery is in command. All leaders start activated (WAR (36.1.0)).",
@@ -350,6 +434,10 @@
     "dec21-sauer": {
       "label": "A: Sparring on the Sauer",
       "modifications": [
+        {
+          "target": "war-pre-dawn-gt",
+          "action": "remove"
+        },
         {
           "target": "joint-air-allocation-phase",
           "action": "modify",
