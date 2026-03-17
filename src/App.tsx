@@ -21,6 +21,7 @@ import lfRules from "./data/lucky-forward/rules.json";
 import awRules from "./data/atlantic-wall/rules.json";
 import hurtgenSeqOverlay from "./data/hurtgen/sequence-overlay.json";
 import lfSeqOverlay from "./data/lucky-forward/sequence-overlay.json";
+import warSeqOverlay from "./data/war/sequence-overlay.json";
 import type { Phase, RuleEntry, SequenceOverlay } from "./types/goss";
 
 const basePhases = sequenceData.phases as Phase[];
@@ -32,6 +33,7 @@ const scenarioRuleSets: Record<string, RuleEntry[]> = {
   "atlantic-wall": awRules as RuleEntry[],
 };
 const scenarioSeqOverlays: Record<string, SequenceOverlay> = {
+  war: warSeqOverlay as SequenceOverlay,
   hurtgen: hurtgenSeqOverlay as SequenceOverlay,
   "lucky-forward": lfSeqOverlay as SequenceOverlay,
 };

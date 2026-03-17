@@ -40,6 +40,13 @@ export const GAME_SCENARIOS: Record<string, ScenarioDef[]> = {
   ],
   war: [
     { id: "all", label: "All Scenarios" },
+    { id: "dec16-valkyries", label: "1: Ride of the Valkyries (6th Pz)" },
+    { id: "dec16-egg", label: "2: An Egg is Laid (St. Vith)" },
+    { id: "dec16-skyline", label: "3: A Beautiful Skyline (47th Pz)" },
+    { id: "dec16-hard-left", label: "4: A Hard Left (7th Army)" },
+    { id: "dec16-meuse", label: "5: March to the Meuse (Full)" },
+    { id: "dec21-group", label: "Dec 21+ Scenario Group" },
+    { id: "dec21-sauer", label: "A: Sparring on the Sauer" },
   ],
   "atlantic-wall": [
     { id: "all", label: "All Scenarios" },
