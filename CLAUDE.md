@@ -106,7 +106,5 @@ When adding or editing rule entries in `rules.json`, **always include rule secti
 - Rule modal with cross-ref navigation and history stack
 
 ## Future Work
-- Time-of-day-aware phase filtering (skip/highlight phases based on AM/PM/Night/ENA)
-- Enhanced search (fuzzy matching, section tree navigation)
+- AI Tips — populate `notes` arrays with AI-generated gameplay hints (renamed from "Notes" to "AI Tips")
 - Scenario-specific sequence of play modifications (some games alter the SoP)
-- Sections 40.0-42.0 (Airborne/Amphibious Assault Stages) from Atlantic Wall — not in the exclusive rules pages, may be in scenario sections

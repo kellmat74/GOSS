@@ -238,7 +238,7 @@
               "checklist": []
             },
             {
-              "id": "allied-defensive-artillery",
+              "id": "allied-defensive-support",
               "name": "2. Defensive Support",
               "ruleRef": "11.0",
               "timing": "every-turn",
@@ -249,35 +249,13 @@
               "checklist": []
             },
             {
-              "id": "allied-defensive-gs-ngs",
+              "id": "allied-offensive-support",
               "name": "3. Offensive Support",
               "ruleRef": "20.2.0",
               "timing": "every-turn",
               "player": "phasing",
               "description": "Active player conducts FS missions; Art first, followed by NGS (11.0).",
               "content": "**Offensive Support:** Active player conducts FS missions; Art first, followed by NGS (11.0).",
-              "notes": [],
-              "checklist": []
-            },
-            {
-              "id": "allied-offensive-artillery",
-              "name": "4. Attacker Status Adjustment",
-              "ruleRef": "12.0",
-              "timing": "every-turn",
-              "player": "phasing",
-              "description": "Remove attack markers and adjust excess designations.",
-              "content": "1) Remove attack markers (TA & PA) from units not adjacent to enemy units.\n2) Remove excess attack designations (TA and/or PA) not in compliance with ADV limits (12.1.0).\n3) Voluntarily attempt to remove attack designations from units adjacent to enemy units (12.2.0).",
-              "notes": [],
-              "checklist": []
-            },
-            {
-              "id": "allied-offensive-ngs",
-              "name": "5. Ground Assault Segment",
-              "ruleRef": "13.0",
-              "timing": "every-turn",
-              "player": "phasing",
-              "description": "Active player conducts GAs against enemy units (13.0).",
-              "content": "Active player conducts GAs against enemy units (13.0). Check for:\na) Hasty bridge demolition (17.3.2b).\nb) Bridge collapse (17.3.2a).\nc) Surrender of isolated defending units (15.7.1).\n**AS Marker Removal Segment:** Remove all AS markers (13.13.0).",
               "notes": [],
               "checklist": []
             }
