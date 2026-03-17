@@ -10,11 +10,11 @@
     {
       "target": "joint-command-phase",
       "action": "modify",
-      "gate": "HHF: US 9th Army activates on AM GT of Oct 22 (GD 41). Until then, 1st Army controls all US units (HHF (9.2.1), 9.2.2).",
+      "gate": "HHF: US 9th Army activates on AM GT of Oct 22 (GD 41). Until then, 1st Army controls all US units (HHF (9.2.1), (9.2.2)).",
       "patch": {
         "appendContent": "### HHF Command Restrictions\n\n**1st US Army (HHF (9.2.1)):** Until the AM GT of Oct 22 (GD 41), the US 1st Army controls all US units on the map, including units designated as subordinated to the US 9th Army. On the AM GT of Oct 22, a boundary between 1st and 9th Armies must be established.\n\n**9th US Army (HHF (9.2.2)):** Activated on the AM GT of Oct 22 (GD 41). 9th Army HQ and 11th Cavalry (CavGrp) are placed in Maastricht during the Command Phase of that GT. When the US XIII Corps arrives on Nov 8 (GD 58), it must be subordinated to 9th Army. The 102nd Division arriving the same GD must be assigned to XIII Corps.\n\n**V Corps (HHF (9.2.3)):** Only the 102nd CavGrp (4 units) and 62/V AFA Btn are allowed on the map when V Corps arrives Oct 5 (GD 24). On the first GT in Oct or Nov that an Allied-initiated lull ends, the Allied player may shift the V Corps boundary northward.\n\n**German Boundaries (HHF (9.2.5)):** Corps and army boundaries must be identified the first AM GT after an HQ arrives.",
         "appendNotes": [
-          "Plan your Oct 22 boundary carefully — once 9th Army activates, any units in the wrong army's ZOP become OoC immediately (HHF (9.2.1), 9.2.2).",
+          "Plan your Oct 22 boundary carefully — once 9th Army activates, any units in the wrong army's ZOP become OoC immediately (HHF (9.2.1), (9.2.2)).",
           "V Corps has strict initial unit limits — don't bring extra assets on-map before Oct 31 or the specific release dates in HHF (9.2.3a)."
         ]
       }
@@ -157,7 +157,7 @@
         {
           "target": "joint-logistics-phase",
           "action": "modify",
-          "gate": "HHF Scenario 2: The Allied player does NOT use the Logistics Table (GOSS (16.4.4g), 16.4.4h excluded). Simplified logistics apply (HHF (31.4.0)).",
+          "gate": "HHF Scenario 2: The Allied player does NOT use the Logistics Table (GOSS (16.4.4g), (16.4.4h) excluded). Simplified logistics apply (HHF (31.4.0)).",
           "patch": {
             "appendNotes": [
               "Scenario 2 simplifies Allied logistics significantly — no Logistics Table means you skip the ADV/fuel/ammo calculations in GOSS (16.4.4g)-h (HHF (31.4.0)).",
@@ -199,7 +199,7 @@
         {
           "target": "joint-logistics-phase",
           "action": "modify",
-          "gate": "HHF Scenario 4: All GOSS logistics rules (15.0, 16.0) apply in full. This is the most complete logistics scenario (HHF (33.4.0)).",
+          "gate": "HHF Scenario 4: All GOSS logistics rules (15.0, (16.0)) apply in full. This is the most complete logistics scenario (HHF (33.4.0)).",
           "patch": {
             "appendNotes": [
               "This is the first HHF scenario using full GOSS logistics — be prepared for the complete ADV/fuel/ammo pipeline including the Logistics Table (HHF (33.4.0))."

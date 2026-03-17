@@ -11,17 +11,17 @@
       "target": "joint-logistics-phase",
       "action": "modify",
       "patch": {
-        "appendContent": "### LF Logistics Modifications\n\n**Lull TP Requirements (LF (24.2)):** During a lull, both sides must maintain minimum TPs on fuel and ammo delivery. Each side must assign at least 1 TP to transport fuel. Allied side can allocate no more than 2 TPs per GD to bring in units from the Reinforcement Pool.\n\n**Lull Logistics Benefits (LF (24.0)):** To receive logistic benefits listed in LF (17.6.3c), 29.3.8b, 29.4.3, 29.4.4, 29.5.5, and 20.5.7, the Allied player must declare a lull on or prior to GD 36 and the lull must last a minimum of 28 GDs. Benefits go into effect the first AM GT after the lull ends and remain for 15 GDs.",
+        "appendContent": "### LF Logistics Modifications\n\n**Lull TP Requirements (LF (24.2)):** During a lull, both sides must maintain minimum TPs on fuel and ammo delivery. Each side must assign at least 1 TP to transport fuel. Allied side can allocate no more than 2 TPs per GD to bring in units from the Reinforcement Pool.\n\n**Lull Logistics Benefits (LF (24.0)):** To receive logistic benefits listed in LF (17.6.3c), (29.3.8b), (29.4.3), (29.4.4), (29.5.5), and (20.5.7), the Allied player must declare a lull on or prior to GD 36 and the lull must last a minimum of 28 GDs. Benefits go into effect the first AM GT after the lull ends and remain for 15 GDs.",
         "appendNotes": [
           "The Allied lull deadline is GD 36 — missing it means neither side gets the listed logistic benefits for the rest of the campaign (LF (24.0)).",
-          "A 28-GD lull is a major strategic commitment — weigh the logistic benefits against ceding German minefield deployment time starting GD 48 (LF (24.0), 7.13.4a)."
+          "A 28-GD lull is a major strategic commitment — weigh the logistic benefits against ceding German minefield deployment time starting GD 48 (LF (24.0), (7.13.4)a)."
         ]
       }
     },
     {
       "target": "allied-delay-marker-removal-segment",
       "action": "modify",
-      "gate": "LF: Germans are limited to 12 delay markers until GD 48, then minefields replace delay markers (LF (7.13.0), 7.13.4a).",
+      "gate": "LF: Germans are limited to 12 delay markers until GD 48, then minefields replace delay markers (LF (7.13.0), (7.13.4)a).",
       "patch": {
         "appendContent": "### LF Delay Markers & Minefields\n\n**Delay Marker Limit (LF (7.13.0)):** The German player is limited to a maximum of 12 delay markers on the map until GD 48, at which point this restriction is removed. The 9 delay markers placed at scenario start count toward this total. Until LF (7.13.4) goes into effect, delay markers may be placed in any type of MCT.\n\n**Minefield Deployment (LF (7.13.4a)):** Beginning GD 48 (AM GT), the German player may begin placing minefields. Mines are placed during the German Construction Phase and are fully deployed in the following Construction Phase. During a lull, the German player may lay one minefield per GD for each divisional formation under full lull conditions.",
         "appendNotes": [
@@ -33,10 +33,10 @@
     {
       "target": "axis-delay-marker-removal-segment",
       "action": "modify",
-      "gate": "LF: Germans limited to 12 delay markers until GD 48, then minefields replace delay markers (LF (7.13.0), 7.13.4a).",
+      "gate": "LF: Germans limited to 12 delay markers until GD 48, then minefields replace delay markers (LF (7.13.0), (7.13.4)a).",
       "patch": {
         "appendNotes": [
-          "Same delay marker and minefield rules apply during the Axis turn — see Allied Delay Marker Removal Segment for full details (LF (7.13.0), 7.13.4a)."
+          "Same delay marker and minefield rules apply during the Axis turn — see Allied Delay Marker Removal Segment for full details (LF (7.13.0), (7.13.4)a)."
         ]
       }
     },
@@ -121,7 +121,7 @@
           "gate": "LF October: Extends September scenario through GD 35. Same army-specific logistics as September, with additional replacements and reinforcements (LF (29.4.0)).",
           "patch": {
             "appendNotes": [
-              "October extends September logistics — 3rd Army gains additional TPs and the Allied lull deadline of GD 36 is critical for future logistic benefits (LF (29.4.0), 24.0).",
+              "October extends September logistics — 3rd Army gains additional TPs and the Allied lull deadline of GD 36 is critical for future logistic benefits (LF (29.4.0), (24.0)).",
               "German logistics improve slightly in October — 5th Pz Army gets additional AmP from OKW reserve (LF (29.4.3))."
             ]
           }
@@ -137,7 +137,7 @@
           "gate": "LF November: Starts GD 65. Different logistics tables apply — US 3rd Army has increased TP capacity. German forces have improved AmP allocation (LF (29.5.0)).",
           "patch": {
             "appendNotes": [
-              "November starts with improved Allied logistics — if the GD 36 lull was declared and lasted 28 GDs, logistic benefits may now be active (LF (29.5.5), 24.0).",
+              "November starts with improved Allied logistics — if the GD 36 lull was declared and lasted 28 GDs, logistic benefits may now be active (LF (29.5.5), (24.0)).",
               "German minefields should be well established by November (GD 48+ deployment) — Allied players need engineer support for breaching operations (LF (7.13.4a))."
             ]
           }
