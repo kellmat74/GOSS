@@ -1,9 +1,17 @@
-import type { RuleEntry } from "../types/goss";
+import type { RuleEntry, Phase, SubPhase } from "../types/goss";
 
 export interface SearchResult {
   rule: RuleEntry;
   score: number;
   matchedFields: ("title" | "section" | "summary" | "text")[];
+}
+
+export interface SequenceSearchResult {
+  name: string;
+  ruleRef?: string;
+  content: string;
+  notes: string[];
+  score: number;
 }
 
 const STOP_WORDS = new Set([
@@ -84,6 +92,73 @@ export function searchRules(
       // Boost rules that match more of the query tokens
       score *= (matchedTokens / tokens.length);
       results.push({ rule, score, matchedFields: [...matchedFields] });
+    }
+  }
+
+  results.sort((a, b) => b.score - a.score);
+  return results.slice(0, maxResults);
+}
+
+/**
+ * Relevance-ranked search across sequence.json content and notes (tips).
+ * Flattens the 3-level hierarchy, scores by name/content/notes matches.
+ */
+export function searchSequence(
+  query: string,
+  phases: Phase[],
+  maxResults = 10
+): SequenceSearchResult[] {
+  const tokens = query
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((t) => t.length > 0 && !STOP_WORDS.has(t));
+
+  if (tokens.length === 0) return [];
+
+  const items: { name: string; ruleRef?: string; content: string; notes: string[] }[] = [];
+
+  function collect(item: Phase | SubPhase) {
+    if (item.content || item.notes.length > 0) {
+      items.push({
+        name: item.name,
+        ruleRef: item.ruleRef,
+        content: item.content ?? "",
+        notes: item.notes,
+      });
+    }
+    const subs = "subPhases" in item ? item.subPhases : undefined;
+    if (subs) {
+      for (const sub of subs) collect(sub);
+    }
+  }
+  for (const p of phases) collect(p);
+
+  const results: SequenceSearchResult[] = [];
+
+  for (const item of items) {
+    const nameLower = item.name.toLowerCase();
+    const contentLower = item.content.toLowerCase();
+    const notesLower = item.notes.join(" ").toLowerCase();
+
+    let score = 0;
+    let matchedTokens = 0;
+
+    for (const token of tokens) {
+      const inName = nameLower.includes(token);
+      const inContent = contentLower.includes(token);
+      const inNotes = notesLower.includes(token);
+
+      if (!inName && !inContent && !inNotes) continue;
+      matchedTokens++;
+
+      if (inName) score += 8;
+      if (inContent) score += 2;
+      if (inNotes) score += 3;
+    }
+
+    if (matchedTokens > 0) {
+      score *= matchedTokens / tokens.length;
+      results.push({ ...item, score });
     }
   }
 

@@ -150,7 +150,7 @@ function App() {
         )}
         {view === "flowchart" && <SoPFlowchart />}
         {view === "rules" && <RulesSearch rules={allRules} />}
-        {view === "ask" && <AskPanel rules={allRules} />}
+        {view === "ask" && <AskPanel rules={allRules} phases={phases} />}
         {view === "info" && <InfoPanel />}
       </AppShell>
       <RuleModal />

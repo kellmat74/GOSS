@@ -1,11 +1,12 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import type { RuleEntry } from "../../types/goss";
+import type { RuleEntry, Phase } from "../../types/goss";
 
-import { searchRules } from "../../utils/rulesSearch";
+import { searchRules, searchSequence } from "../../utils/rulesSearch";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
 interface AskPanelProps {
   rules: RuleEntry[];
+  phases?: Phase[];
 }
 
 interface ChatMessage {
@@ -24,8 +25,18 @@ const EXAMPLE_QUESTIONS = [
   "How does weather affect combat?",
 ];
 
-function buildSystemPrompt(topRules: RuleEntry[], summaryRules: RuleEntry[]): string {
-  // Top matches get full text; the rest get summary only
+interface SequenceContext {
+  name: string;
+  ruleRef?: string;
+  content: string;
+  notes: string[];
+}
+
+function buildSystemPrompt(
+  topRules: RuleEntry[],
+  summaryRules: RuleEntry[],
+  sequenceItems: SequenceContext[] = []
+): string {
   const fullText = topRules
     .map((r) => `[${r.section}] ${r.title}: ${r.text}`)
     .join("\n\n");
@@ -34,9 +45,21 @@ function buildSystemPrompt(topRules: RuleEntry[], summaryRules: RuleEntry[]): st
     .map((r) => `[${r.section}] ${r.title}: ${r.summary}`)
     .join("\n");
 
+  let sequenceSection = "";
+  if (sequenceItems.length > 0) {
+    const seqText = sequenceItems
+      .map((s) => {
+        const ref = s.ruleRef ? ` (${s.ruleRef})` : "";
+        const tips = s.notes.length > 0 ? `\nTips:\n${s.notes.map((n) => `- ${n}`).join("\n")}` : "";
+        return `### ${s.name}${ref}\n${s.content}${tips}`;
+      })
+      .join("\n\n");
+    sequenceSection = `\n\n## Relevant procedures & tips from the Sequence of Play:\n\n${seqText}`;
+  }
+
   return `You are a rules expert for GOSS (Grand Operational Simulation Series) 2020, a tabletop wargame system. Answer questions about the rules accurately, citing specific rule sections in parenthesized format like (3.2.1) so they render as clickable links.
 
-Be concise but thorough. If a question is ambiguous, explain the relevant rules and note the ambiguity. Always cite the specific rule section numbers.
+Be concise but thorough. If a question is ambiguous, explain the relevant rules and note the ambiguity. Always cite the specific rule section numbers. When relevant, include practical gameplay tips from the procedures section.
 
 ## Most relevant rules (full text):
 
@@ -44,10 +67,10 @@ ${fullText}
 
 ## Additional related rules (summaries):
 
-${summaries}`;
+${summaries}${sequenceSection}`;
 }
 
-export function AskPanel({ rules }: AskPanelProps) {
+export function AskPanel({ rules, phases = [] }: AskPanelProps) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -96,11 +119,16 @@ export function AskPanel({ rules }: AskPanelProps) {
         const topRules = relevant.slice(0, 10).map((r) => r.rule);
         const summaryRules = relevant.slice(10).map((r) => r.rule);
 
+        // Search sequence content & tips for additional context
+        const seqResults = phases.length > 0
+          ? searchSequence(messageText, phases, 5)
+          : [];
+
         const response = await fetch(WORKER_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            system: buildSystemPrompt(topRules, summaryRules),
+            system: buildSystemPrompt(topRules, summaryRules, seqResults),
             messages: newMessages.map((m) => ({
               role: m.role,
               content: m.content,
