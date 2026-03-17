@@ -316,6 +316,7 @@ When starting a new game system assistant:
 - **Gates for skipped phases.** If a scenario doesn't use a phase, add a gate banner — don't remove the phase (the content is still educational).
 - **Appended content for modifications.** Scenario-specific procedures appear below base content with a blue divider and module badge.
 - **Appended tips for scenario advice.** Scenario-specific tips appear in a separate blue-accented section.
+- **Parenthesized references in overlay JSON.** Overlay content goes through the same `SoPMarkdown` → `RuleInlineText` pipeline, so references must use `(X.Y.Z)` format. Write `WAR (9.2.0)` not `WAR 9.2.0` — the prefix gives context while the parens enable auto-linking.
 
 ---
 
