@@ -171,10 +171,10 @@ export function PhaseStepper({
       {/* Notes (future AI Tips) */}
       {active.notes.length > 0 && (
         <div className="mb-4">
-          <h3 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-stone-500">
-            Notes
+          <h3 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-amber-600 dark:text-amber-500">
+            💡 Tips
           </h3>
-        <ul className="space-y-1.5">
+        <ul className="space-y-1.5 border-l-2 border-amber-600/30 pl-3">
           {active.notes.map((note, i) => (
             <li
               key={i}
