@@ -2,6 +2,7 @@ import type { Phase, SubPhase, SoPProgress } from "../../types/goss";
 import { Breadcrumb, type BreadcrumbItem } from "../Breadcrumb";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
+import { SoPMarkdown } from "./SoPMarkdown";
 
 interface PhaseStepperProps {
   phase: Phase | null;
@@ -160,7 +161,14 @@ export function PhaseStepper({
         <RuleInlineText text={active.description} />
       </p>
 
-      {/* Notes */}
+      {/* Content — verbatim PAC markdown */}
+      {active.content && (
+        <div className="mb-4">
+          <SoPMarkdown content={active.content} />
+        </div>
+      )}
+
+      {/* Notes (future AI Tips) */}
       {active.notes.length > 0 && (
         <div className="mb-4">
           <h3 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-stone-500">

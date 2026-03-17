@@ -5,6 +5,7 @@ export interface SubPhase {
   timing?: PhaseTiming;
   player: Player;
   description: string;
+  content?: string;
   notes: string[];
   checklist: string[];
   subPhases?: SubPhase[];
@@ -17,6 +18,7 @@ export interface Phase {
   timing?: PhaseTiming;
   player: Player;
   description: string;
+  content?: string;
   notes: string[];
   subPhases: SubPhase[];
 }

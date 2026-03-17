@@ -30,16 +30,33 @@ export function RuleInlineText({ text, className }: RuleInlineTextProps) {
     remaining = remaining.slice(refMatch.index + refMatch[0].length);
   }
 
-  // If no refs found, return plain text
+  // Render a string segment, parsing **bold** markers
+  const renderText = (s: string, keyPrefix: string) => {
+    const boldParts = s.split(/\*\*(.+?)\*\*/g);
+    if (boldParts.length === 1) return <span key={keyPrefix}>{s}</span>;
+    return (
+      <span key={keyPrefix}>
+        {boldParts.map((bp, j) =>
+          j % 2 === 1 ? (
+            <strong key={j} className="font-semibold">{bp}</strong>
+          ) : bp ? (
+            <span key={j}>{bp}</span>
+          ) : null
+        )}
+      </span>
+    );
+  };
+
+  // If no refs found, return text with bold parsing
   if (parts.length === 1 && typeof parts[0] === "string") {
-    return <span className={className}>{text}</span>;
+    return <span className={className}>{renderText(text, "0")}</span>;
   }
 
   return (
     <GlossaryHighlighter>
       <span className={className}>
         {parts.map((part, i) => {
-          if (typeof part === "string") return <span key={i}>{part}</span>;
+          if (typeof part === "string") return renderText(part, String(i));
           const hasRule = !!getRuleBySection(part.ref);
           if (!hasRule) return <span key={i}>({part.ref})</span>;
           return (
