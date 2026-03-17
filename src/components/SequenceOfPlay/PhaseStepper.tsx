@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import type { Phase, SubPhase, SoPProgress } from "../../types/goss";
 import { Breadcrumb, type BreadcrumbItem } from "../Breadcrumb";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
@@ -38,6 +39,13 @@ export function PhaseStepper({
       </div>
     );
   }
+
+  const topRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to top when step changes
+  useEffect(() => {
+    topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [progress.currentPhaseIndex, progress.currentSubPhaseIndex, progress.currentSegmentIndex]);
 
   const isLastPhase = progress.currentPhaseIndex === totalPhases - 1;
   const isLastSubPhase =
@@ -86,7 +94,7 @@ export function PhaseStepper({
   }
 
   return (
-    <div className="mx-auto max-w-2xl">
+    <div ref={topRef} className="mx-auto max-w-2xl">
       <Breadcrumb items={breadcrumbItems} />
 
       {/* Phase header */}
