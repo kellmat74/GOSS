@@ -664,5 +664,761 @@
     "text": "The Allied side wins an instant victory if one of the below requirements is met.\n\n- At the end of September (GD 19) the Allied player has at least one combat unit, in GenS on the east side of the Roer River.\n- There is at least one Allied combat unit in GenS that is adjacent to the Rhein River for more than one complete GT. The unit or units must have been adjacent to the Rhein for two friendly Administration Phases.",
     "crossRefs": [],
     "module": "hurtgen"
+  },
+  {
+    "id": "hhf-29.0",
+    "section": "29.0",
+    "title": "Scenarios",
+    "summary": "Overview of the five HHF scenarios and campaign game.",
+    "text": "There are four monthly scenarios and one campaign scenario presented in this booklet.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-29.1",
+    "section": "29.1",
+    "title": "Scenario Presentation",
+    "summary": "Format and conventions used in the scenario descriptions.",
+    "text": "Except for the September setup, labeled formations must have a unit in or adjacent to every frontline hex in their sector. The Germans set up first in all scenarios. Detailed scenario information such as number of FWs, step losses, and special units for each formation starting on the map is listed in each for the scenario rules sections presented in this booklet.\n\n**Errata:** The GTRT scenario numbers are not correct. Use the dates for each scenario as listed here. Ignore those on the GTRT. The Scenario 3 on the GTRT is a missprint, ignore scenario GD 52 to GD 59.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-29.2",
+    "section": "29.2",
+    "title": "Scenario Maps",
+    "summary": "Which maps are used for each scenario.",
+    "text": "Scenario maps are provided for each monthly scenario showing setup positions and boundaries.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-29.3",
+    "section": "29.3",
+    "title": "Scenario Set Up Manifest",
+    "summary": "Abbreviations used in scenario setup instructions.",
+    "text": "The following abbreviations are used in the scenario setups:\n\n- **Inf:** Infantry\n- **Pio:** Pionere (German combat engineers)\n- **AD:** Armored Division\n- **CGp:** Cavalry Group",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.0",
+    "section": "30.0",
+    "title": "Scenario One: Bloody Bucket",
+    "summary": "A learning scenario featuring the 28th US Infantry Division's attempt to seize Hurtgen, Vossenack, and Schmidt.",
+    "text": "This scenario represents the attempt by the 28th US Infantry Division to seize the villages of Hurtgen, Vossenack, Schmidt on the way to capturing one of the Roer River dams. It's a perfect learning scenario. The scenario map encloses the playing area and shows the units of both sides and where they start.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.1.0",
+    "section": "30.1.0",
+    "title": "Scenario Length",
+    "summary": "Bloody Bucket runs 21 GTs from PM GT of Nov 2 (GD 52) to AM GT of Nov 9 (GD 59).",
+    "text": "The scenario starts at the beginning of the PM GT of November 2 (GD 52) and ends after the completion of the AM GT of November 9 (GD 59). The scenario is 21 GTs long.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.2.0",
+    "section": "30.2.0",
+    "title": "Special Rules",
+    "summary": "Bloody Bucket uses simplified rules — no unit modes, command, observation, supply, logistics, air power, weather, leaders, lulls, or army reserve.",
+    "text": "Except for the specific instances described in this scenario, players do not need to read the rules for unit modes, command, observation, supply, truck points and logistics, air power, weather, leaders, lulls, or army reserve. All units are in supply at all times. Only tactical and prepared assault modes are used in this scenario.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.2.1",
+    "section": "30.2.1",
+    "title": "Weather",
+    "summary": "All GTs in Bloody Bucket are overcast with 2-hex LOS and mud ground conditions.",
+    "text": "The atmospheric condition for all GTs is overcast, the maximum line of sight (LOS) for ground units is 2 hexes. The Ground condition for all GTs is mud. GOSS (19.4.3) applies.",
+    "crossRefs": ["19.4.3"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.2.2",
+    "section": "30.2.2",
+    "title": "Fire Support Missions",
+    "summary": "No air or naval points; each side receives a fixed number of FS mission points instead of artillery.",
+    "text": "Air points and naval units are not available. Artillery units are not present in this scenario. Each side is given a number of FS mission points. A\n\n- The German side receives 9 FS mission points per player turn until the AM GT of November 5 (GD 55), when they begin receiving 18 FS mission points per player turn. The German side may allocate no more than 8 FS mission points to a FS mission.\n- The US player receives 24 FS mission points each player turn. A maximum of 6 mission points may be allocated to a FS mission, unless the target hex is adjacent to an Allied unit in PA mode, or if the Allied unit is in an ET. If either is true, 8 mission points may be allocated.\n- A maximum of four FS missions may be considered to have Heavy Artillery (GOSS (11.4.1g)).\n- Both side's mission points may be used anywhere within the playing area (you do not need to count range).",
+    "crossRefs": ["11.4.1g"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.2.3",
+    "section": "30.2.3",
+    "title": "Fieldworks",
+    "summary": "Germans may place ET-3s and ET-2s; US may place one IP in Germeter and one in the 294 CE Btn hex.",
+    "text": "The German side may place two ET-3. Both must be placed in village hex. No additional ET-3 may be built during the scenario. The German side may also place four ET-2. All placed ET must be occupied by a friendly unit. The US side may place one IP in Germeter (E2330) and one in the hex with the 294 CE Btn.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.2.4",
+    "section": "30.2.4",
+    "title": "Command & GenS",
+    "summary": "Simplified command and supply rules for Bloody Bucket scenario.",
+    "text": "**30.2.4a German**\n\nAll German units are considered attached to the 275th VG Division HQ (they do not suffer multi formation penalties). Ignore GOSS (9.6.0). All German units are considered to be in GenS if they are in a Westwall hex, an ET-3 or can trace a path of hexes (of any length) free of enemy units to the east side of the playing area. German units may not move or attack hexes west of the original front line.\n\n**30.2.4b Allied**\n\nAll units are considered attached to the 28th Infantry Division (they do not suffer multi formation penalties). Ignore GOSS (9.6.0). All Allied units are considered to be in GenS if they can trace a path of hexes (of any length) free of enemy units to the west side of the playing area.",
+    "crossRefs": ["9.6.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.3.0",
+    "section": "30.3.0",
+    "title": "Starting Forces",
+    "summary": "Starting forces for both sides in the Bloody Bucket scenario.",
+    "text": "Starting forces for both sides are shown on the scenario setup map.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.3.1",
+    "section": "30.3.1",
+    "title": "German Starting Forces",
+    "summary": "Germans start with the 275th Infantry Division (reduced) and a reduced Pioneer company.",
+    "text": "The German side starts with the 275th Infantry Division (except for the towed artillery units). Reduce four Inf Btns, one step each and reduce the Pioneer coy by one step.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.3.2",
+    "section": "30.3.2",
+    "title": "US Starting Forces",
+    "summary": "US starts with the 294, 20, 146, 1340 CE Btns and the 28th Infantry Division (14 units).",
+    "text": "The US side starts with the 294, 20, 146, and the 1340 CE Btns and with all units of the 28th Infantry Division (14 units). The four assigned artillery Btns and the 28th HQ are not used.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.4.0",
+    "section": "30.4.0",
+    "title": "Reinforcements",
+    "summary": "German reinforcements arrive on specific game days; no US reinforcements.",
+    "text": "The German player receives the following reinforcements:\n\n- AM GT of November 3 (GD 53): 1055/89 and 1056/89 Rgts (4 units with a total of 7 step losses), 189/89 Pio Coy (1 step loss). Units arrive on the south edge of the playing area east of the current front line.\n- AM GT November 5 (GD 55): one KG of the 116th Pz Division consisting of; 1x Aufkl Coy (2-2-14), 4. /II/16P MkV Pz Coy, 5. /II/16P MkV Pz Coy, 3. /I/16P MkIV Pz Coy, and the 60/116 Mot Inf Rgt (-1), 156/116 PzGd Rgt (-1 step from each Btn), 1. /675/116 Pio Coy. Units arrive on the north or east edge of the playing area east of the current front line.\n- There are no US Reinforcements",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.5.0",
+    "section": "30.5.0",
+    "title": "Replacements",
+    "summary": "German has 4 Inf RePs and 1 Armor ReP; US has 12 Inf ReP and 3 Armor ReP.",
+    "text": "The German side has four Inf RePs and one Armor ReP available beginning on the AM GT of November 4 (GD 54).\n\n- The US side has 12 Inf ReP and three Armor ReP available for beginning the AM GT of November 5 (GD 55).",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.6.0",
+    "section": "30.6.0",
+    "title": "Logistics",
+    "summary": "Logistic Rules are not used; see 30.2.4 for supply requirements.",
+    "text": "Logistic Rules are not used, see (30.2.4) for supply requirements.",
+    "crossRefs": ["30.2.4"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-30.7.0",
+    "section": "30.7.0",
+    "title": "Victory Conditions",
+    "summary": "US wins by occupying three villages previously under German control; two villages is a draw.",
+    "text": "At the end of the scenario, The US player wins if he occupies any three villages that started under German control. If he has two villages, the result is a draw. Anything else is a German victory.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.0",
+    "section": "31.0",
+    "title": "Scenario Two: The September Rush",
+    "summary": "The Allies confront Germany proper and the Westwall fortifications as the long pursuit ends.",
+    "text": "The end of the long pursuit through Northern France and Belgium is coming to an end. Now the Allies are about to enter Germany proper and must confront the Westwall fortifications as well as a crazy quilt patchwork of Germans desperate to stop them. Both maps are in play for this scenario.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.1.0",
+    "section": "31.1.0",
+    "title": "Scenario Length",
+    "summary": "September Rush runs 29 GTs from AM GT of Sep 12 (GD 1) to PM GT of Sep 21 (GD 10).",
+    "text": "The scenario starts at beginning of the AM GT of September 12 (GD 1) and ends after the completion of the PM GT of September 21 (GD 10). The scenario is 29 GTs long.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.2.0",
+    "section": "31.2.0",
+    "title": "Special Rules",
+    "summary": "All GOSS rules in play for 24.0 (lulls) plus scenario rules, with specific exclusions listed.",
+    "text": "All GOSS rules are in play except for (24.0) (lulls). Additionally, all of the scenario rules are in play except for the following: rules (9.2.2), (16.4.4g), (16.4.4h), (20.8.0), (21.5.2), (21.5.3), (21.6.2), (21.6.3), (21.7.0), (22.7.0).",
+    "crossRefs": ["24.0", "9.2.2", "16.4.4g", "16.4.4h", "20.8.0", "21.5.2", "21.5.3", "21.6.2", "21.6.3", "21.7.0", "22.7.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.2.1",
+    "section": "31.2.1",
+    "title": "Weather",
+    "summary": "Players may use historical or variable weather.",
+    "text": "By mutual agreement players may use either historical or variable weather. If using the historical weather",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.2.2",
+    "section": "31.2.2",
+    "title": "British 21 AG ZOP",
+    "summary": "Use September AG boundary; Germans must maintain one combat unit in every other hex north of the front line.",
+    "text": "(9.2.4) applies. Use the September AG boundary marked on the scenario map. The German side must maintain at least one combat unit in every other hex of the front line north of the boundary.",
+    "crossRefs": ["9.2.4"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.2.3",
+    "section": "31.2.3",
+    "title": "Special German Move",
+    "summary": "Before the first GT, the German player may move units using tactical mode with restrictions.",
+    "text": "After all units are set up, but before beginning the first GT, the German player is allowed to move his units using tactical mode.\n\n- Units may not move adjacent to US units.\n- Units may not move in a westerly direction.\n- Mech formations may move up to one-half of their normal MA. Fuel is not a concern.\n\nUpon completion of the German special move, play commences with the first GT.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.2.4",
+    "section": "31.2.4",
+    "title": "US Fatigue",
+    "summary": "Allied units on GDs 1-3 are subject to fatigue checks when moving more than half MA or entering PA mode.",
+    "text": "On all GTs occurring on September 12, 13 and 14, (GDs 1, 2 & 3) all Allied units are subject to possible fatigue. If a unit moves more than one-half of its MA, or enters PA mode the Allied player conducts the following check for each unit that met the above trigger:\n\n- Roll 1d10, if the result is 6-8 the unit suffers one fatigue hit. If the result is 9, the unit suffers two fatigue hits.\n- Units checking due to entering PA mode conduct this check immediately upon removing their PA marker.\n- Units checking due to moving more than one-half of its MA, conduct the check upon completion of their movement for that phase.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.2.5",
+    "section": "31.2.5",
+    "title": "2nd Armored Division",
+    "summary": "The US 2nd Armored Division must conduct fatigue checks for the first nine GTs after arrival.",
+    "text": "The US 2nd Armored Division is required to conduct fatigue checks as outlined in (31.2.4) for the first nine GTs after arrival.",
+    "crossRefs": ["31.2.4"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.2.6",
+    "section": "31.2.6",
+    "title": "Air Points",
+    "summary": "Consult the GTRT for AP availability; historical weather limits Allied AP to single mission types.",
+    "text": "Consult the GTRT to determine the number of AP available each GD. If using historical weather, no more than one-half of the Allied AP may be assigned to single type of mission.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.3.0",
+    "section": "31.3.0",
+    "title": "Starting Units",
+    "summary": "Both sides start with formations shown on the September setup map.",
+    "text": "Both sides start with the formations shown on the September setup map and listed below. All starting hex number positions are inclusive. The German side sets up first.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.3.1",
+    "section": "31.3.1",
+    "title": "German Initial Force",
+    "summary": "Detailed German starting forces for September Rush including all army, corps, and divisional units.",
+    "text": "Army & Corps Units:\n- E2435 (Euskirchen); 7 Armee HQ, Brandenburg, 1x LW Static Hvy Flak Coy.\n- E1734 (Zulpich); LXXIV Corps HQ.\n- E0317 (Julich); LXXXI Corps HQ, Julich NCO Btn, 1x LW Static Hvy Flak Coy.\n- E0925 (Duren); Duren NCO Btn, Duren Police Coy, 1x LW Static Hvy Flak Coy.\n- W3823 (Eschweiler); 1x LW Static Hvy Flak Coy.\n- W2926 or within 2 hexes of any Aachen city or town hex; 453/Aachen Btn, Hennecke Police Coy. 2x LW Static Hvy Flak Coy.\n\n176th Div: W0307 to W0720; 2x ET-2, 3x IP, 176 HQ (-1), 1176 Pio Btn (-1), 416 Rgt (4x Btns), 426 Rgt (4x Btns), 16 Sec Btn, 460 Art Btn, III/1176 Art Btn, 1176 AT Z-step, 2x 1-2-6 Inf Coys. Place all other units of the division in the Eliminated Units Box (9 units).\n\n275th Div: W0721 to W1129; 1x ET-2, 2x IP, 275 HQ (-1), I/983 Btn (-1), I/984 Btn (-1), II/984 Btn (-1), 275 Pio Coy (-1), 275 AT Coy, 526 Sec Btn, 547 Sec Btn, 11 LW Fort Btn, I/1/1SS SP Art Btn, I/275 Art Btn, III/275 Art Btn. Place all other units of the division in the Eliminated Units Box (6 units).\n\n49th Div: W1329 to W1829; 49 HQ (-1), I/148 Btn (-1), II/148 Btn (-2), 736 Sec Btn, 863 Sec Btn, 149 Pio Coy, 1x 1-6 Pio Coy, II/149 Art Btn, 149 AT Z-step, 2x 1-2-6 Inf Coys. Place all other units of the division in the Eliminated Units Box (3 units).\n\n116th Pz Div: W2030 to W2532; 116 Pz HQ (-1) Leader V Walden (within 2 hexes of any Aachen city or town hex), 4. /II/16 MkV Pz Coy, I/60 Btn (-1), II/156 Btn (-1), 116 Auf Btn (-2), 2&3/675 Pio Coy (-1), I/146 Art Btn. Place all other units of the division in the Eliminated Units Box (13 units).\n\n9th Pz Div: W2733 to W3034; 9 Pz HQ (-1), I/2105/105 MkV Pz Coy, I/2105/105 PzGd Btn (-2), I/10 Btn (-2), II/10 Btn (-1), 60 Auf Btn (-2), 1. /86 Pio Coy, 1. /50 PzJ Coy, I/102 Art Btn. Place the 6. /II/33 MkV Pz Coy and I/33 MkIV Pz Btn (3x Coy) in the Eliminated Units Box. The remaining 9th Pz Div units are reinforcements for this scenario (10 units).\n\n526th Training Div: Place in or adjacent to any Westwall hex south of Wurselen (W3122); 211/526 Rgt (4 Btns), 253/526 Rgt (3 Btns), 536/526 Rgt (4 Btns), 1x 1-2-6 AT Coy, 1x 1-2-6 Pio Coy. These units must be attached to a formation HQ (GOSS (9.6.1a) applies).\n\n89th Div: W3541 to W3444; 89 HQ (-1), I/1055 Btn (-1), II/1055 Btn (-1), II/1056 Btn (-2), 189 AT Z-step, II/189 Art Btn. Place all other units of the division in the Eliminated Units Box (8 units).\n\n353rd Div: E0231; 353 HQ. Place all other units of the division in the Eliminated Units Box (11 units).",
+    "crossRefs": ["9.6.1a"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.3.2",
+    "section": "31.3.2",
+    "title": "Allied Initial Force",
+    "summary": "Detailed Allied starting forces for September Rush including army, corps, and divisional units.",
+    "text": "No unit starts with more than one step loss. Units may not over stack. AT, TD, Tk, Eng, and Recon Btns may be broken down. On the scenario maps, each Rgt or CC is shown in its historical area. Within the hexes listed for each formation, the Allied player sets up the units as depicted on the map, divisional asset units should be split between the sub-formations as evenly as possible.\n\n1st Army HQ: W0234 (Liege)\nVII Corps HQ: W0637 (Vaux-sous-Chevremont); Collins.\n3rd Arm Div: All units [19] (-3 from any Hybrid units), 991/VII AFA Btn, Rose, within one hex of W2636, W2436, or W2237.\n9th Inf Div: All units [18] of the division within one hex of W1739, W1540, or W1340.\n1st Inf Div: All units [18], each Rgt is set up within one hex of its designated hex. Divisional assets should be divided as evenly as possible between the Rgts.\nW1635, 16 Rgt (3 Btns); W1435, 18 Rgt (3 Btns); W1136, 26 Rgt (3 Btns); (-2 from any Inf Btns).\nXIX Corps HQ: W0531\n30th Inf Div: All units [18], each Rgt is set up within one hex of its designated hex. Divisional assets should be divided as evenly as possible between the Rgts.\nW0231, 30 HQ; W0425, 119 Rgt (3 Btns); W0326, 117 Rgt (3 Btns); W0430, 120 Rgt (3 Btns).\n113th Cav Grp (XIX): Within one hex of W0933 or W1133; 113 ArmC Btn, 125 ArmC Btn, 744/XIX M-5 Btn, 2x113C M-5 Coys.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.3.3",
+    "section": "31.3.3",
+    "title": "Blown Bridges",
+    "summary": "Eight bridges start demolished in this scenario; they may be repaired.",
+    "text": "The following eight bridges start the scenario already been demolished; they may be repaired.\n\nW0433/W0434, W0236/W0237\nW0234/W0335, W0827/W0928\nW0236/W0336, W0828/W0929\nW0236/W0337, W0926/W1025",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.4.0",
+    "section": "31.4.0",
+    "title": "Reinforcements",
+    "summary": "Both sides receive units as indicated in HHF 35.0; use 21.5.0 and 21.6.0 for army/corps assets.",
+    "text": "Both sides receive the units as indicated in HHF (35.0). Use HHF (21.5.0) & (21.6.0) to receive Allied and German army/corps assets.",
+    "crossRefs": ["35.0", "21.5.0", "21.6.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.5.0",
+    "section": "31.5.0",
+    "title": "Replacements",
+    "summary": "Both sides use GOSS 22.0 replacement rules with the GTRT Replacement Table.",
+    "text": "Both sides use the GOSS (22.0) replacement rules. Each Transport and Logistic Phase both sides roll 1d10 and consults the Replacement Table on the GTRT. Apply all applicable DRMs.",
+    "crossRefs": ["22.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.6.0",
+    "section": "31.6.0",
+    "title": "Logistics",
+    "summary": "Each side consults the GTRT for ADV and truck points; GOSS 15.0 and 16.0 apply.",
+    "text": "Each side consults the GTRT to determine their ammunition delivery value (ADV) and the number of truck points assigned. GOSS (15.0) and (16.0) apply.",
+    "crossRefs": ["15.0", "16.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-31.7.0",
+    "section": "31.7.0",
+    "title": "Victory Conditions",
+    "summary": "Refer to HHF 28.0 for VP values; instant victory or tally VPs at scenario end for victory level.",
+    "text": "Refer to (28.0) to determine victory point values. Instant Allied Victory (28.3.0) applies. If an instant victory is achieved, it is considered an Allied Smashing Strategic Victory. If the Allied side fails to get an instant victory, tally victory points (VPs) at the end of the scenario to determine the level of victory.\n\nGerman Strategic Victory: At the end of the scenario there are no Allied controlled town or city hexes in Germany.\nGerman Operational Victory: Allied VPs total less than 30.\nDraw: Allied VPs is between 30 and 59 inclusive.\nAllied Tactical Victory: Allied VP total is between 60 and 100 inclusive.\nAllied Operational Victory: Allied VP total is between 101 and 174 inclusive.\nAllied Strategic Victory: Allied VP total is 175 or greater.",
+    "crossRefs": ["28.0", "28.3.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.0",
+    "section": "32.0",
+    "title": "Scenario Three: October Trick or Treat",
+    "summary": "The First US Army in October faces severe logistic constraints while pushing through the Hurtgen Forest.",
+    "text": "The beginning of October found the First US Army still in the middle of a severe logistic constraint. In fact, the ammunition situation would be at its worst by the middle of October. Aachen still hadn't fallen, and the first real battles of the Hurtgen Forest would began this month. The Roer River was so close, and yet so far away. Both maps are in play for this scenario.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.1.0",
+    "section": "32.1.0",
+    "title": "Scenario Length",
+    "summary": "October Trick or Treat runs 56 GTs from AM GT of Oct 2 (GD 21) to PM GT of Oct 20 (GD 39).",
+    "text": "The scenario starts at beginning of the AM GT of October 2 (GD 21) and ends after the completion of the PM GT of October 20 (GD 39). The scenario is 56 GTs long.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.2.0",
+    "section": "32.2.0",
+    "title": "Special Rules",
+    "summary": "All basic rules in play with specific exclusions for logistics and reinforcement rules.",
+    "text": "All basic rules are in play. All of the exclusive rules are in play except for the following: (16.4.4g), (17.5.2), (20.8.0), (21.5.1), (21.5.3), (21.6.1), (21.6.3), (21.7.0).",
+    "crossRefs": ["16.4.4g", "17.5.2", "20.8.0", "21.5.1", "21.5.3", "21.6.1", "21.6.3", "21.7.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.2.1",
+    "section": "32.2.1",
+    "title": "Weather",
+    "summary": "Players may use historical or variable weather.",
+    "text": "By mutual agreement players may use either historical or variable weather.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.2.2",
+    "section": "32.2.2",
+    "title": "British 21 AG ZOP",
+    "summary": "Use October AG boundary; Germans must hold every other hex north of the front line.",
+    "text": "(9.2.4) applies. Use the October AG boundary marked on the scenario map. The German side must maintain at least one combat unit in every other hex of the front line north of the boundary.",
+    "crossRefs": ["9.2.4"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.2.3",
+    "section": "32.2.3",
+    "title": "US Attacks",
+    "summary": "US prepared assaults receive a one column shift in their favor for the first two GTs; VII Corps attack restrictions apply.",
+    "text": "For the first two GTs (AM & PM October 2) all US prepared assaults receive one column shift in their favor.\n\n- The VII Corps may not make any ground assaults until the AM GT of October 8 (GD 27).\n- The 9th Infantry Division is excepted from this rule. It may conduct any type of ground assault within eight hexes of W3837.\n- If the German side conducts any type of ground assault against a unit of the VII Corps (except the 9th Inf Div), the no attack restriction is lifted.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.2.4",
+    "section": "32.2.4",
+    "title": "Air Points",
+    "summary": "Consult the GTRT for AP; historical weather limits Allied AP to single mission types.",
+    "text": "Consult the GTRT to determine the number of AP available each GD. If using historical weather, no more than one-half of the Allied AP may be assigned to single type of mission.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.3.0",
+    "section": "32.3.0",
+    "title": "Starting Units",
+    "summary": "Both sides start with the formations shown on the October setup map.",
+    "text": "Both sides start with the formations shown on the October setup map and listed below. The parenthesized values are the number of step losses each unit or formation starts with. All starting hex number positions are inclusive. The German side sets up first.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.3.1",
+    "section": "32.3.1",
+    "title": "German Initial Force",
+    "summary": "Detailed German starting forces for October including fieldworks, rear echelon, and army/corps units.",
+    "text": "**Fieldworks:** The German player may place 26x ET-2 and 10x IP in any German controlled hex, not in an intact Westwall hex. He may also place 4x ET-3 in any German controlled village, town or city hex, not in an intact Westwall hex. He may build additional ET-3 starting the AM GT of October 3 (GD 22).\n\n**Rear Echelon Units:** Follow the procedures outlined in HHF (32.4.2). The RE Btns start with the formations listed below.\n\nArmy & Corps Units:\n- E2118 (Horrem): 7 Armee HQ, Brandenburg.\n- Anywhere in 7A ZOP: 15VW Bde (6 units), 7x 74K, 81K, 7A Art Btns (21.6.2b).\n- E0933; LXXIV Corps HQ\n- Anywhere in LXXIV ZOP: 409VAK (4 units).\n- E0317; LXXXI Corps HQ\n- Anywhere in LXXXI ZOP: 408VAK (4 units), 766VAK (5 units).\n- E2435 (Euskirchen); 1x LW Static Hvy Flak Coy.\n- W3823 (Eschweiler); 1x LW Static Hvy Flak Coy.\n- E0925 (Duren); 1x LW Static Hvy Flak Coy.\n- W3912 (Julich); NCO Jülich Btn, 1x LW Static Hvy Flak Coy.\n- May be placed in the ZOP of either corps; 6, 26, 253, and 434 Pionere Btns, 59 and 803 Construction Eng Btns, 506 MkVIb Pz Btn (-1), 394 StG Btn (-1), 1012 StG Btn (-1), 341 AG Btn (-1); 217 AG Btn (2 units); 902 AG Btn (-2); 741 PzJ Btn (-2); 519 PzJ Btn (-1); 662 AT Btn (-1); 682 AT Btn (-1); 301 MkVI Pz Coy; 1 Pio Sturm Bde (600,601 & 603 Pio Btns) (-5).\n\n176th Division: W1702 to W2911: all units; 460 Art Btn; 2x 0-1-6 AT Z-step; 6x RE Btns.\n183rd Div: W3013 to W3415: all units; 1x RE Btn.\n246th Div: W3416 to W3321: all units; 2x RE Btns; 735 Fortress AT Btn.",
+    "crossRefs": ["32.4.2", "21.6.2b"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.3.2",
+    "section": "32.3.2",
+    "title": "Allied Initial Force",
+    "summary": "Detailed Allied starting forces for October including army, corps, and divisional units.",
+    "text": "Allied AT, TD, Tk, Eng, and Recon Btns may be broken down. Unless otherwise noted, all units are at full strength. Units listed with each formation are considered attached to that formation. Use the procedures outlined in HHF (32.4.1) to determine available US army and corps assets.\n\nXXX BR Corps: W1505 to W1701: 43rd Division [17 units]. 8th Armored Bde [4 units], 3 artillery Btns of the 5 AGRA, and 2 randomly selected XXX Corps asset units. Units are inactive unless German units violate (9.2.4c).\n\n**Note:** Scenario map shows the 53rd Division, it is incorrect, use the set up listed above.\n\n1st Army HQ: W1739\nXIX Corps HQ: W1620\n113th Cav Grp (XIX): W1604 to W1808: 113ArmC Btn, 125ArmC Btn, 744/XIX M-5 Btn, 2x113C M-5 Coys. Attached: 65/XIX AFA Btn.\n29th Inf Div: W1909 to W2914: [18 units].\n2nd Arm Div: within two hexes of W2418: Harmon [19 units].\n30th Inf Div: W2915 to W2524: all 18 units.\nVII Corps HQ: W2636\n4th Cav Grp (VII): W3837 to W3639; 4 ArmC Btn, 24 ArmC Btn, 2x 4C M-5 Coys, 759/VII M-5 Btn, 87/VII AFA Btn, 297/VII CE Btn.\n102nd Cav Grp (V): W3640 to W3726; 38 ArmC Btn, 102 ArmC Btn, 2x 102C M-5 Coy, 62/V AFA Btn.\n1st Inf Div: W2424 to W2527 and W3038 to W3426: all 18 units. Attached: 1106 Engineer Group.\n1106 Eng Grp: W2627 to W2929: 237/VII & 238/VII CE Btns.\n3rd Arm Div: W3527 to W3828: Rose, all 19 units, 991/VII AFA Btn. Attached: W3928 to W3931: 47/9 Rgt (3 Btns), 1x AT Coy, 1x M-10 Coy, 1x Eng Coy.\n9th Inf Div: W3933 to W3937: except those detached to 3rd Arm Div [15 units]. 298/VII CE Btn.",
+    "crossRefs": ["32.4.1", "9.2.4c"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.3.3",
+    "section": "32.3.3",
+    "title": "Blown Bridges",
+    "summary": "Two blown bridges at W1603/W1604 and W1805/W1806.",
+    "text": "There are two blown bridges at W1603/W1604 & W1805/W1806.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.4.0",
+    "section": "32.4.0",
+    "title": "Reinforcements",
+    "summary": "Both sides receive units as indicated in HHF 35.0; ignore GD 38 reinforcements.",
+    "text": "Both sides receive the units as indicated in HHF (35.0). Ignore GD 38 reinforcements.",
+    "crossRefs": ["35.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.4.1",
+    "section": "32.4.1",
+    "title": "US Reinforcement Pool",
+    "summary": "Follow HHF 21.5.1 except randomly draw 41 units, leaving 17 for the October Reinforcement Pool.",
+    "text": "Follow the instructions in (21.5.1) except:\n- Randomly draw out 41 units, leaving 17 units in the cup. Set the drawn units aside, they are placed on the map within their assigned army/corps ZOP.\n- These 17 units form the October Reinforcement Pool. They arrive using the procedures outlined in HHF (21.5.4).",
+    "crossRefs": ["21.5.1", "21.5.4"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.4.2",
+    "section": "32.4.2",
+    "title": "German Reinforcement Pool",
+    "summary": "Create three Reinforcement Pools (A, B, C) using procedures in 21.6.0.",
+    "text": "The procedure for determining each GD's random reinforcements still apply (21.6.0). Create three Reinforcement Pools (A, B, and C) using the following procedures:\n\n- All units listed in HHF (21.6.1) except for the Luftwaffe Static Hvy Flak Coys are removed from play.\n- The units listed in HHF (21.6.1a) are set aside as the draw pool. They will be used to create the Reinforcement Pools.\n\n**32.4.2a Group A. Reinforcement Pool**\n\nGroup A is created by selecting the following units:\n- Randomly draw 10 units from the draw pool.\n- Add 4 randomly selected artillery Btns from the 7A, 81K and 74K.\n- Add 8 Luftwaffe Static Hvy Flak Coys.\nThese 22 units are the Group A Reinforcement Pool.\n\n**32.4.2b Group B. On Map Units**\n\nCreate Group B. as follows:\n- Randomly draw 20 units from the draw pool.\n- Add the 7 remaining artillery Btns from 74K, 81K, and 7A.\n- Add 6 Luftwaffe Static Hvy Flak Coys.\nThese 33 units will start play on the game map.\n\n**32.4.2c Group C. Reinforcement Pool**\n\nCreate Group C. as follows:\n- Randomly draw 10 units from the draw pool.\n- Remove the 3 remaining units in the draw pool from play.\n- The 4 remaining Luftwaffe Hvy Flak Coys are placed in the eliminated units pile, they may be replaced in accordance with HHF (22.7.0).\n\nGroup C. will only be used if play extends past the AM GT of November 1 (GD 51).",
+    "crossRefs": ["21.6.0", "21.6.1", "21.6.1a", "22.7.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.5.0",
+    "section": "32.5.0",
+    "title": "Replacements",
+    "summary": "Both sides use GOSS 22.0 replacement rules; no replacements accumulated at scenario start.",
+    "text": "Both sides use the GOSS (22.0) replacement rules. Each Transport and Logistic Phase both sides roll 1d10 and consults the Replacement Table on the GTRT. Apply any applicable DRMs. No replacements have been accumulated at the start of the scenario.",
+    "crossRefs": ["22.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.6.0",
+    "section": "32.6.0",
+    "title": "Logistics",
+    "summary": "Each side consults the GTRT for ADV and truck points; GOSS 15.0 and 16.0 apply with specific stockpile values.",
+    "text": "Each side consults the GTRT to determine their ammunition delivery value (ADV) and the number of truck points assigned. GOSS (15.0) & (16.0) apply.\n\n- US 1st Army has six AmP and six fuel points in stockpile.\n- German 7th Army has four AmP and three fuel points in stockpile.",
+    "crossRefs": ["15.0", "16.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-32.7.0",
+    "section": "32.7.0",
+    "title": "Victory Conditions",
+    "summary": "Refer to HHF 28.0 for VP values; instant victory possible, otherwise tally VPs for victory level.",
+    "text": "Refer to HHF (28.0) to determine victory point values. Instant Allied Victory (HHF (28.3.0)) applies. If an instant victory is achieved, it is considered an Allied Smashing Strategic Victory. If the Allied side fails to get an instant victory, tally victory points (VPs) at the end of the scenario to determine the level of victory.\n\n**Designer's Note:** In game terms the Allied side has completed a lull. Hodges kept attacking with the 9th in an attempt to clear out the Hurtgen Forest to prevent German counterattacks from originating there.\n\nGerman Victory: Allied VP total is less than 90.\nAllied Tactical Victory: Allied VP total is between 90 and 130 inclusive.\nAllied Operational Victory: Allied VP total is between 131 and 199 inclusive.\nAllied Strategic Victory: Allied VP total is 200 or greater.",
+    "crossRefs": ["28.0", "28.3.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.0",
+    "section": "33.0",
+    "title": "Scenario Four: November's Turkey Shoot",
+    "summary": "The Americans gather for a knockout blow over the Roer River after months of slogging through bad weather and desperate German defense.",
+    "text": "After two months of slogging through fortifications, bad weather and a desperate German defense, the Americans were gathering for what they hoped would be a knock-out blow that would carry them over the Roer River, if not all the way to the Rhine. The logistical situation had improved, and the presence of the Ninth US Army in the lineup shifted the force ratio further in favor of the Allies. Even Monty got into the act by committing the British 43rd Infantry Division (part of XXX Corps) on a supporting maneuver to take the town of Geilenkirchen. Would all this be enough? With Hitler massing forces for the Ardennes counteroffensive, it might be a close-run thing.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.1.0",
+    "section": "33.1.0",
+    "title": "Scenario Length",
+    "summary": "November's Turkey Shoot runs 41 GTs from AM GT of Nov 16 (GD 66) to PM GT of Nov 29 (GD 79).",
+    "text": "The entire map is in play for this scenario. The scenario starts at the beginning of the AM GT of November 16 (GD 66) and ends after the completion of the PM GT of November 29 (GD 79). The scenario is 41 GTs long.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.2.0",
+    "section": "33.2.0",
+    "title": "Special Rules",
+    "summary": "All GOSS rules in play; both players may request lulls.",
+    "text": "All GOSS rules are in play. Both players may request lulls.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.2.1",
+    "section": "33.2.1",
+    "title": "Weather",
+    "summary": "Players may use historical or variable weather; if variable, weather is clear for the first GD.",
+    "text": "By mutual agreement players may use either historical or variable weather. If using variable weather, the weather is clear and normal for the first GD.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.2.2",
+    "section": "33.2.2",
+    "title": "British 21 AG ZOP",
+    "summary": "84th US Infantry Division must be assigned to XXX Corps until Geilenkirchen is Allied controlled.",
+    "text": "HHF (9.2.4) applies. The 84th US Infantry Division must be assigned to the XXX Corps until Geilenkirchen is Allied controlled. Use the November AG boundary marked on the scenario map and consider the 84th as within that ZOP. The German side must maintain at least one combat unit in every other hex of the front line north of the boundary.",
+    "crossRefs": ["9.2.4"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.2.3",
+    "section": "33.2.3",
+    "title": "XIII US Corps",
+    "summary": "XIII Corps restrictions until Geilenkirchen is Allied controlled.",
+    "text": "Until Geilenkirchen is Allied controlled, the XIII Corps is under the following restrictions:\n\n- 102nd Infantry Division may not conduct any ground assaults.\n- 7th Armored Division may only attack with up to six units per friendly GT. The same units are not required to be used each GT, however only six units can be in PA or Tactical Assault mode in any given GT.\n- 84th Infantry Division and 113th Cav Grp must remain assigned to the British XXX Corps.\n\nOnce Geilenkirchen is Allied controlled, the XIII is under no further restrictions. 84th Division is automatically reassigned to the XIII the next GT, and the 113th Cav Grp may be reassigned to the XIII the next AM GT.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.2.4",
+    "section": "33.2.4",
+    "title": "Air Points",
+    "summary": "Consult the GTRT for AP availability; historical weather limits Allied AP to single mission types.",
+    "text": "Consult the GTRT to determine the number of AP available each GD. If using historical weather, no more than one-half of the Allied AP may be assigned to single type of mission.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.2.5",
+    "section": "33.2.5",
+    "title": "Carpet Bombing",
+    "summary": "Allied player must conduct a carpet bombing attack on AM GT of Nov 16 (GD 66) per HHF 20.8.0.",
+    "text": "The Allied player must conduct a carpet bombing attack on the AM GT of November 16 (GD 66). Refer to HHF (20.8.0).",
+    "crossRefs": ["20.8.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.3.0",
+    "section": "33.3.0",
+    "title": "Starting Units",
+    "summary": "Both sides start with the formations shown on the November setup map.",
+    "text": "Both sides start with the formations shown on the November setup map and listed below. All units are at full strength unless noted otherwise. The parenthesized values are the number of step losses each unit or formation starts with. All starting hex number positions are inclusive. The German side sets up first.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.3.1",
+    "section": "33.3.1",
+    "title": "German Initial Force",
+    "summary": "Detailed German starting forces for November including eliminated formations and fieldworks.",
+    "text": "The following German formations and/or units have been permanently eliminated, remove them from play.\n\n- 108th and 105th Pz Bdes\n- KG Wegelein (2 units), KG Von Fritzchen (3 units), KG Diefenthal (3 units).\n- Aachen Btn, Duren & Julich NCO Btns, Hennecke Pol Btn.\n\n**33.3.1a Fifth Panzer Army**\n\nThe XLVII Pz Corps and XII SS Corps are assigned to the 5th Pz Army. The 5th Pz Army and XLVII Corps HQ withdraw on GD 75. The XII SS Corps is reassigned to the 7th Army at that time.\n\n**Designer's Note:** Historically 7th Army was replaced by 15th Army, but here it remains the same to keep things simpler.\n\n**Fieldworks:** The German player may place 36x ET-2 and 12x IP in any German controlled hex, not in an intact Westwall hex. He may also place 10x ET-3 in any German controlled village, town or city hex, not in an intact Westwall hex.\n\n**Rear Echelon Units:** Follow the procedures outlined in (21.6.3). The RE Btns start with the formations listed below. 14 heavy Flak companies.\n\nArmy & Corps Units:\n- E2118 (Horrem): 7 Armee HQ. In corps ZOP: 15 NW Brigade (6 units).\n- E1734 (Zulpich): LXXIV Corps HQ. In corps ZOP: 409 VAK (4 units).\n- E0416/E0317 (Julich): LXXXI Corps HQ, 1x LW Static Hvy Flak Coy. In corps ZOP: 408 VAK (4 units).\n- E0205 (Erkelenz): 5th Pz Armee HQ. In army ZOP: 766 VAK (5 units).\n- W3006 (Heinsberg): XII SS Corps HQ. In corps ZOP: 407 VAK (4 units).\n- W3606 (Ratheim): XLVII Pz Corps HQ.\n- E2435 (Euskirchen): 1x LW Static Hvy Flak Coy.\n- E0925 (Duren): 1x LW Static Hvy Flak Coy, Duran Police Coy.\n- W3823 (Eschweiler): 1x LW Static Hvy Flak Coy.\n- Any German controlled village, town, or city hex (no more than one per hex): 10x LW Static Hvy Flak Coys.\n\n**Miscellaneous Units (may be assigned to any army, corps or formation):**\n- Place in any German controlled intact Westwall hex: 503, 504, 657 Fortress AT Btns (Two Btns have suffered one step loss each).\n- Place in any German controlled hex, east of the front line: 6, 26, 253, and 434 Pio Btns; 59, 803 Construction Eng Btns; 1x MkV Pz Coy; 1x Hetzer Coy; 506 MkVIb Pz Btn (-1); 394 StG Btn (-2); 1012 StG Btn (-1); 341 AG Btn (-1); 217 AG Btn (2 units); 902 AG Btn (-2); 741 PzJ Btn (-2); 519 PzJ Btn (-1); 662 AT Btn (-1); 682 AT Btn (-1); 301 MkVI Pz Coy; 1 Pio Sturm Bde (600,601 & 603 Pio Btns) (-5).\n\n176th Division: W1702 to W2911; all units; 2x 0-1-6 AT Z-step; 6x RE Btns.\n183rd Div: W3013 to W3415: all units; 1x RE Btn.\n246th Div: W3416 to W3321: all units; 2x RE Btns; 735 Fortress AT Btn.",
+    "crossRefs": ["21.6.3"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.3.2",
+    "section": "33.3.2",
+    "title": "Allied Initial Force",
+    "summary": "Detailed Allied starting forces for November including army, corps, and divisional units.",
+    "text": "Allied AT, TD, Tk, Eng, and Recon Btns may be broken down. Unless otherwise noted, all units are at full strength. Units listed with each formation are considered attached to that formation. Use the procedures outlined in HHF (32.4.1) to determine available US army and corps assets.\n\n**33.3.2a British Units**\n\nThe Gds Arm Div. three 5 AGRA artillery Btns, and all but two other corps asset units listed below are inactive (9.2.4).\n\nXXX Corps HQ: W1414\n5th AGRA: In XXX Corps ZOP (6 units).\nCorps units: 210/211/XXX CE Btn, 73/XXX AT Coy (2 units), 2HH/XXX Recon Btn, 3 Recon Btn.\n79th Arm Div: In XXX Corps ZOP, within one hex of 43rd or 84th Divisional unit, (4 units).\nGds Arm Div: W1504 to W1701: all 14 units.\n43rd Div: W2914 to W1908: all 17 units. Attached: 8th Armored Bde (4 units).\n\n**33.3.2b US Units**\n\n9th Army HQ: W0921\n113th Cav Grp (XIX): W1807 to W1604: 113ArmC Btn, 125ArmC Btn, 744/XIX M-5 Btn, 2x113C M-5 Coys. Attached: 65/XIX AFA Btn.\n84th Inf Div: W3215 to W3014: all 17 units, Attached to XXX Corps.\nXIII Corps HQ: W1619\n7th Arm Div: within one hex of W2414: all 16 units.\nXIX Corps HQ: W1924\n11th Cav Grp (XIII): Within 3 hexes of W1924; 36ArmC Btn, 44ArmC Btn, 2x M5 Coys.\n2nd Arm Div: W3417 to W3316: Harmon, all 19 units.\n29th Inf Div: W3220 to W3418: all 18 units.\n30th Inf Div: W2933 to W3221: all 18 units. Attached 405/104 Inf Rgt (3 units).\n1st Army HQ: W1739\nVII Corps HQ: W2636\n104th Inf Div: W3527 to W2924: Allen, all 15 units (- 405 Rgt).\n3rd Arm Div: W3728 to W36278: Rose, all 19 units.\n1st Inf Div: E0128 to W3828: all 18 units. Attached 47/9 Inf Rgt (3 units) E0127 to E0128.\n4th Inf Div: E0132 to E0129: all 19 units.\nV Corps: See (9.2.3) for position of HQ and available V Corps Assets.\n8th Inf Div: W3936 to E0232: all 17 units.\n102nd Cav Grp (V): W3726 to W3639: 38 ArmC Btn, 102 ArmC Btn, 2x 102C M-5 Coy, 62/V AFA Btn.",
+    "crossRefs": ["32.4.1", "9.2.4", "9.2.3"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.3.3",
+    "section": "33.3.3",
+    "title": "Blown Bridges",
+    "summary": "One blown bridge at W1805/W1806.",
+    "text": "There is one blown bridge at W1805/W1806.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.4.0",
+    "section": "33.4.0",
+    "title": "Reinforcements",
+    "summary": "Both sides receive units as indicated in HHF 35.0; 28th Inf Div already withdrawn, 8th Inf Div starts on map.",
+    "text": "Both sides receive the units as indicated in HHF (35.0). The 28th Inf Division has already been withdrawn and the 8th Inf Division starts on the map.",
+    "crossRefs": ["35.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.4.1",
+    "section": "33.4.1",
+    "title": "US Reinforcement Pool",
+    "summary": "Randomly select nine XIII Corps units for the November Reinforcement pool.",
+    "text": "Randomly select nine XIII Corps units. These units are the November Reinforcement pool.\n\n- Set up all other corps/army asset units within their assigned army/corps ZOP.\n- The Allied player randomly selects one unit from the pool each AM GT. TP allocation is not required.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.4.2",
+    "section": "33.4.2",
+    "title": "German Reinforcement Pool",
+    "summary": "No Reinforcement Pools; army/corps artillery units except 403 VAK and 388 VAK are placed on map.",
+    "text": "There are no Reinforcement Pools. Set up units according to scenario instruction as follows:\n\n- All army or corps artillery units except the 403 VAK and 388 VAK are placed on the map. They may be placed in any German controlled hex, in GenS.\n- 14 Luftwaffe Static Flak Coys are setup according to the scenario instructions. The remaining four are in the eliminated units pile and may be replaced.\n- The RE Btns listed in (21.6.1) are removed from play.\n- Place all units (43) listed in (21.6.1a) in one pile.\n- Randomly select 16 RE Btns from the remaining RE Btns.\n- The RE Btns are setup in any friendly controlled hex within two hexes of the frontline. The number of RE Btns attached to each division is listed in the scenario instructions.",
+    "crossRefs": ["21.6.1", "21.6.1a"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.5.0",
+    "section": "33.5.0",
+    "title": "Replacements",
+    "summary": "Both sides use GOSS 22.0 replacement rules; separate DRs for 1st and 9th US Armies; no accumulated replacements.",
+    "text": "Both sides use the GOSS (22.0) replacement rules. Each Transport and Logistic Phase both sides roll 1d10 and consults the Replacement Table on the GTRT. Apply any applicable DRMs. The 1st and 9th US Armies each have separate DRs for ReP. No replacements have been accumulated at the start of the scenario.",
+    "crossRefs": ["22.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.6.0",
+    "section": "33.6.0",
+    "title": "Logistics",
+    "summary": "Allied player does not use the logistics table; simplified logistics with specific fuel and ammo stockpile values.",
+    "text": "The Allied player does not use the logistics table. All HQ are considered to be Normal Fuel. GOSS (15.0) applies. GOSS (16.3.2a), Step 1 through Step 5 apply (ignore Step 6 through 9). TP listed on the GTRT are used for motorization only. German side continues to use the Logistics Table and all procedures outlined in GOSS (15.0) and (16.0). Both sides consult the GTRT to determine their ammunition delivery values (ADV) and the number of truck points assigned.\n\n- US 1st and 9th Armies have four AmP in their stockpiles.\n- German 7th Army has four AmP and three fuel points in stockpile.\n- German 15th Pz Army has three AmP and two fuel points in stockpile.",
+    "crossRefs": ["15.0", "16.3.2a", "16.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-33.7.0",
+    "section": "33.7.0",
+    "title": "Victory Conditions",
+    "summary": "Refer to HHF 28.0 for VP values with additional VP for German withdrawals; instant victory possible.",
+    "text": "Refer to (28.0) to determine victory point values. Instant Allied Victory (28.3.0) applies. If an instant victory is achieved, it is considered an Allied Smashing Strategic Victory. If the Allied side fails to get an instant victory, tally victory points (VPs) at the end of the scenario to determine the level of victory. The Allied side is awarded VP (in addition to (28.0)) for the following:\n\n- 30VP: German side does not withdraw the 116th Pz Div.\n- 30VP: German side activates the 12th SS Pz Div.\n- 30VP: German side activates the 2nd SS Pz Div.\n\nThe above VP conditions are cumulative.\n\nGerman Victory: Allied VP total is less than 160.\nAllied Tactical Victory: Allied VP total is between 160 and 200 inclusive.\nAllied Operational Victory: Allied VP total is between 201 and 239 inclusive.\nAllied Strategic Victory: Allied VP total is 240 or greater.",
+    "crossRefs": ["28.0", "28.3.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-34.0",
+    "section": "34.0",
+    "title": "Campaign Scenario: Hell's Forest",
+    "summary": "Three-month campaign covering the US Army's controversial push through the Westwall north of the Ardennes.",
+    "text": "The US Army's three-month campaign to bash through the Westwall north of the Ardennes was highly controversial. Should the Americans have bypassed Aachen and the forest complex altogether? Should the 1st Army have been put on a reduced logistical scale in September to allow Montgomery his chance to outflank the Rhine? Tough questions. But, you get the chance to explore some of them by putting together scenarios 2, 3, and 4 and playing through to December 13. See if you can do better.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-34.1.0",
+    "section": "34.1.0",
+    "title": "Scenario Length",
+    "summary": "Campaign uses both maps; players may start at any monthly scenario (2-4) and play through December 13.",
+    "text": "Both maps are in play for the scenario. Players may start the campaign at the beginning of scenario, 2 through 4.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-34.2.0",
+    "section": "34.2.0",
+    "title": "Special Rules",
+    "summary": "All GOSS rules apply; use special rules for the starting month's scenario and update them as new months begin.",
+    "text": "All GOSS rules are in play. Use the special rules according to the time frame used to start the scenario. Once a new month is begun, remember to use any appropriate new special rules, and discard any that would no longer apply.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-34.2.1",
+    "section": "34.2.1",
+    "title": "Weather",
+    "summary": "Players may use historical or variable weather; if variable, weather is clear for the first GD.",
+    "text": "By mutual agreement players may use either historical or variable weather. If using variable weather, the weather is clear and normal for the first GD.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-34.2.2",
+    "section": "34.2.2",
+    "title": "Air Points",
+    "summary": "Consult the GTRT for AP; historical weather limits Allied AP to single mission types.",
+    "text": "Consult the GTRT to determine the number of AP available each GD. If using historical weather, no more than one-half of the Allied AP may be assigned to single type of mission.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-34.2.3",
+    "section": "34.2.3",
+    "title": "Lulls & Attack Restrictions",
+    "summary": "Only mandated lull is September; after that, players initiate lulls as they see fit. VII and XIII Corps have no attack constraints in Oct/Nov.",
+    "text": "The only mandated lull is that for September; after that lull players only have to initiate them as they see fit. The VII and XIII US Corps do not have any attack constraints during October and November.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-34.3.0",
+    "section": "34.3.0",
+    "title": "Starting Units",
+    "summary": "Use the initial setups for the correct month you are starting the scenario in.",
+    "text": "Use the initial setups for the correct month you are starting the scenario in.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-34.4.0",
+    "section": "34.4.0",
+    "title": "Reinforcements/Withdrawals",
+    "summary": "Both sides receive and withdraw units as indicated in HHF 35.0.",
+    "text": "Both sides receive and withdraw units as indicated in HHF (35.0).",
+    "crossRefs": ["35.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-34.5.0",
+    "section": "34.5.0",
+    "title": "Replacements",
+    "summary": "Both sides use GOSS 22.0 replacement rules with the GTRT Replacement Table.",
+    "text": "Both sides use the GOSS (22.0) replacement rules. Each Transport and Logistic Phase both sides roll 1d10 and consults the Replacement Table on the GTRT. Apply any applicable DRMs. No replacements have been accumulated at the start of the scenario.",
+    "crossRefs": ["22.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-34.6.0",
+    "section": "34.6.0",
+    "title": "Logistics",
+    "summary": "GOSS 15.0 and 16.0 apply; do not use scenario stockpile starting numbers from scenarios 3 and 4.",
+    "text": "GOSS (15.0) & (16.0) apply. Do not use the scenario stockpile starting numbers in scenario 3 & 4. Both sides consult the GTRT to determine their ammunition delivery values (ADV) and the number of truck points assigned to each side.",
+    "crossRefs": ["15.0", "16.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-34.7.0",
+    "section": "34.7.0",
+    "title": "Victory Conditions",
+    "summary": "Refer to HHF 28.0 for VP values with additional VP conditions for German withdrawals; campaign-specific VP thresholds.",
+    "text": "Refer to HHF (28.0) to determine victory point values. Instant Allied Victory (HHF (28.3.0)) applies. If an instant victory is achieved, it is considered an Allied Smashing Strategic Victory. If the Allied side fails to get an instant victory, tally victory points (VPs) at the end of the scenario to determine the level of victory. The Allied side is awarded VP (in addition to HHF (28.0)) for the following:\n\n- 10VP: German side must withdraw the 408 VAK, 409 VAK, 766 VAK, and 366 VAK by the end of the Night GT of December 10 (GD 90). The Allied side gains 10VP for each of the formations above, if there are any units of that formation on the map.\n- 20VP: For each Pz or PzGd division not withdrawn, if that division was called to be withdrawn after the night GT of the November 24 (GD 74).\n\nThe above VP conditions are cumulative.\n\nGerman Victory: Allied VP total is less than 169.\nAllied Tactical Victory: Allied VP total is between 170 and 219 inclusive.\nAllied Operational Victory: Allied VP total is between 220 and 239 inclusive.\nAllied Strategic Victory: Allied VP total is 240 or greater.",
+    "crossRefs": ["28.0", "28.3.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-35.0",
+    "section": "35.0",
+    "title": "Reinforcements",
+    "summary": "Master reinforcement schedule listed by Game Day; withdrawing units must exit by end of Night GT on the GD of withdrawal.",
+    "text": "All reinforcements are listed by Game Day, and then game turn of that day (i.e. 24/AM). When withdrawing units, they must exit the map no later than the end of the Night GT on the GD of withdrawal. Ignore any losses incurred to units prior to withdrawal when returning German units to play after withdrawal.\n\n**Designer's Note:** The below arrival list supersedes the GTRT reinforcements.",
+    "crossRefs": [],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-35.1.0",
+    "section": "35.1.0",
+    "title": "German Reinforcements",
+    "summary": "Detailed day-by-day German reinforcement and withdrawal schedule for the campaign.",
+    "text": "GD 1/AM: E0925 (Duren); 394 StG Btn (-2).\nGD 2/AM: E0925 (Duren); 9th Pz Div: 4. /II/33 MkV Coy; II/11 Inf Btn (-1); 2&3/675 Pio Coy (-1); 2. /50 PzJ Coy; II/102 Art Btn.\nGD 3/AM: E0925 (Duren); 9th Pz Div: 5. /II/33 MkV Coy; I/11 Inf Btn (-1); 3. /50 PzJ (AT) Coy; 301 MkVI Coy; III/102 Art Btn.\nGD 4/AM: E0925 (Duren); 12th VG Div: 27 Inf Rgt (2 Btns); 1. /12 PzJ (AT) Coy. PM: E0317 (Julich): 803/7A Con Btn.\nGD 5/AM: W3823 (Eschweiler); 1012 StG Btn (-2); E0925 (Duren): 59/7A Con Btn; 12th VG Div: 12 HQ; 48 Inf Rgt (2 Btns); 12Fus Btn; 2. /12 PzJ (AT) Coy; 12Pio Btn; I/12 Art Btn.\nGD 6/AM: E0925 (Duren); 408VAK (4 Art Btns). PM: E0317 (Julich); 183 VG Div (16 units).\nGD 7/AM: E0925 (Duren); 253/7A Eng Btn; W3823 (Eschweiler); 902 StG Btn (-2).\nGD 8/AM: E0925 (Duren); 26/7A Eng Btn. PM: E2435 (Euskirchen); 409VAK (4 Art Btns).\nGD 9: Any remaining steps of 105th Pz Bde may be consolidated with units from the 9th Pz Div. Both units are permanently removed from play.\nGD 10/PM: E0317 (Julich); 246th VG Div (14 units).\nGD 11: Withdraw all units of 9th and 116th Pz Div. Two Coy of AFV may be left on the map and attached to other formations (use breakdown coys to represent these units).\nGD 13/AM: E0925 (Duren); 506Pz Btn (3x MkVIb Coys).\nGD 14/AM: E2435 (Euskirchen); 6/7A Eng Btn. PM: E0925 (Duren); 12th VG Div: 6 remaining units.\nGD 15: German side can begin to place ET-3.\nGD 18/AM: E0317 (Julich); 15VW Bde (6 NW Btns).\nGD 19/AM: E0205 (Erkelenz); 434/7A Eng Btn.\nGD 20/PM: E0925 (Duren); 766VAK (5 Art Btns).\nGD 21/AM: E0925 (Duren); 341 StG Btn (-2).\nGD 24/AM: E0925 (Duren); 662 AT Btn.\nGD 25/AM: E2435 (Euskirchen); KG v. Frit (3 Inf Btns).\nGD 26/AM: E2435 (Euskirchen); 108Pz Bde (2 units).\nPM: E0925 (Duren); 1/7A Sturm Pio Rgt (3 Eng Btns).\nGD 27/AM: E0925 (Duren); KG Dief/1ss Pz (2 PzGd Btns).\nGD 28/AM: E0925 (Duren); 217 JPz Btn (2 Coys).\nGD 29/AM: E2435 (Euskirchen); 116th Pz Div; 116Pz HQ (v. Walden); 60 Inf Rgt (2 Btns); 116Auf Btn; 2&3/675 Pio Coy; 1/24/16 MkV Coy; 3. /228 PzJ (AT) Coy; II/146 Art Btn. E0925 (Duren); 1SS Pz Corps HQ. 116th Pz Div arrives assigned to this Corps HQ.\nGD 30/AM: W3601; XII SS Corps HQ; E2435 (Euskirchen); KG Wegelein (2 Inf Btns).\nGD 31/AM: E2435 (Euskirchen); 116th Pz Div: 156 Inf Rgt (2 Btns); 4. II/16 MkV Coy; 1. /228 PzJ Coy; I/146 Art Btn.\nGD 32/AM: E2435 (Euskirchen); 116th Pz Div: 1. /I/16 MkIV Coy; 1. /675 Pio Coy; III/146 Art Btn. Place in the Eliminated Units Box: 2. /I/16 MkIV Coy; 5. /II/16 MkV Coy; 2. /228 StG Coy.\nGD 33/AM: 3rd PzGd Div: Place in Eliminated Units Box; 2. /103 PzJ (AT) Coy; 2. /103 StG Coy; 3. /103 StG Coy. Remainder of division (15) in E0925 (Duren); (-2 Inf Steps, -1 PzGd step, -1 Auf step).\n3rd PzGd Div arrives assigned to 1SS Pz Corps HQ.\nGD 35/AM: W3601; 407VAK (4 Art Btns).\nGD 38/AM: E0925 (Duren); 741 Hetz Btn (-1).\nGD 39/PM: E0317 (Julich); 519 JPz Btn (2 Coys).\nGD 44: Withdraw all units of the 116th Pz Div. Two Coy of AFV may be left on the map and attached to other formations (use breakdown coys to represent these units).\nGD 46: 49th VG Division is disbanded. All Inf and Pio steps are transferred to any adjacent friendly Inf divisions and then removed from play. HQ, Art Btns and AT Coy are removed from play.\nGD 49: Withdraw 1SS Pz Corps HQ.\nGD 52/AM: E2435 (Euskirchen); 272nd VG Div (14 units). Div immediately enters Army Reserve (GOSS (25.0)). E0925 (Duren); 682 AT Btn. Withdraw KG Dief (2 units).\nGD 54/AM: E0317 (Julich); 5th Pz Army HQ, Mantffl.\nGD 56/AM: 116th Pz Div; place in Eliminated Units Box; 3. /228 PzJ Coy. Remainder of division (18 units) E1605 (Grevenbroich) in Army Reserve (-4 Inf steps, -1 PzGd step, -1 Auf step).\nGD 57/AM: E0209; Place in Army Reserve; XLVII Pz Corps HQ. 9th Pz Div; units: 5/II/33 Pz Coy, 3. /I/33 MkIV Coy, 2. /50 PzJ Coy (eliminated). Remainder of division (17 units) E1605 (Grevenbroich) in Army Reserve (-3 Inf steps, -1 PzGd step, -1 Auf step).\nGD 60/AM: 15th PzGd Div; place in Eliminated Units Box; 3. /115 StG Coy. Remainder of division (17 units) E1605 (Grevenbroich) in Army Reserve (-3 Inf steps, -1 PzGd step, -1 Auf step).\nGD 66/AM: Place in Army Reserve; E0925 (Duren); 47th VG Div (15 units), v. Luettw.\nGD 69/AM: E0946; 344th VG Div (13 units). E2435 (Euskirchen); 403VAK (4 Art Btns). E0925 (Duren); 340th VG Div (14 units). Withdraw 275th VG Div (14 units).\nGD 70: Withdraw 353rd VG Div (12 units).\nGD 71/AM: E0925 (Duren); 474 MkVIb Coy.\nGD 72/AM: 10SS Pz Div; place in Eliminated Units Box; 1. /II/10 MkIV Coy, 2. /II/10P MkIV Coy. E0701; All remaining units (18 units) (-3 Inf steps, -1 PzGd step, -1 Auf step).\nPM: E2435 (Euskirchen); 9/3FJ (3 Btns). E0701; 388VAK (5 Art Btns). E0317 (Julich); 667 Stg Btn (-2).\nGD 73/AM: E2435 (Euskirchen); 353rd VG Div, all 12 units (-7 Inf steps, -1 Eng step). div AT Coy is z-step. Withdraw 344th VG Div, all 13 units.\nGD 75: Withdraw 116th Pz Div (all units); 5th Pz Army HQ.\nGD 77/AM: E2435 (Euskirchen); 353rd VG Div, remainder of division (12 units).\nGD 78/AM: E2435 (Euskirchen); 3FJ Div, remainder of units (12 units).\nGD 79: Withdraw all units of the 3rd PzGd (18 units) and 47 VG Divisions (15 units).\nGD 80/AM: E0317 (Julich); 363rd VG Div all 13 units. Withdraw; 9th Pz Div (21 units), 246th VG Div (14 units), 12th VG Div (16 units).\nGD 82: Withdraw 340th VG Div (14 units), 766VAK (5 units), 388VAK (5 units).\nGD 85: Withdraw 15th PzGd Div, all 18 units.\nGD 90/AM: E2435 (Euskirchen); 47th VG Div, all units (15 units).\nGD 91/AM: E2435 (Euskirchen); 85th VG Div, all units (13 units).\n\n**Note:** I/2105 Mk V Pz Coy does not form a Z-step unit when suffering a step loss.",
+    "crossRefs": ["25.0"],
+    "module": "hurtgen"
+  },
+  {
+    "id": "hhf-35.2.0",
+    "section": "35.2.0",
+    "title": "Allied Reinforcements",
+    "summary": "Detailed day-by-day Allied reinforcement and withdrawal schedule for the campaign.",
+    "text": "GD 2/AM: W3346; 4th Cav Grp (VII); 4ArmC Btn, 24ArmC Btn, 2x 4C M-5 Coys, 759/VII M-5 Btn, 87/VII AFA Btn, & 297/VII CE Btn.\nGD 4/AM: W0209 to W0215; 2nd Arm Div, all units (19) (-1 step each to 2 Hybrid units) Harmon. (31.2.4a) applies.\nGD 10/AM: W0701; Belgian Bde (4 units); 1x Archer Coy; 1x AT Coy; 1x Eng Coy; 4/5 AGRA SP Art Btn.\nGD 14/AM: W0215; 29th Inf Div, all 19 (17), (-2 Inf steps).\nGD 15/AM: W0209; 7th Arm Div, all units (16), (-1 hybrid step) available for British reaction (9.2.4c).\nGD 17/AM: W0215; 178/XIX CE Btn.\nGD 18/PM: W0215; 251/XIII CE Btn.\nGD 20/AM: W0215; 279/XIII CE Btn. PM: W0215; 1276/XIII CE Btn.\nGD 24/AM: W3546; 102nd Cav Grp (V); 38ArmC, 102ArmC, 2x 102C M-5 Coy, 62/V AFA Btn.\nGD 34/AM: W0701; Guards Arm Div, all units (14), XXX Corps HQ, 5 AGRA (remaining 5 Art Btns), 210/211/XXX CE Btn, 73/XXX AT Btn (2x Coys), 2HH Recon Btn, 3 Recon Btn, and four Coys of the 79th Armored Division have available as reaction force (9.2.4c).\nGD 38: Place remaining 9A Art Btns (6 units) in the reinforcement pool (21.5.4).\nGD 41/AM: W0219; 9A HQ, XIX Corps is assigned to 9A.\nGD 50/AM: W2746; 28th Inf Div, all 19 units, 20/V CE Btn, 146/V CE Btn. Remaining V Corps asset units not listed in (9.2.3) are placed in reinforcement pool.\nGD 53: Withdraw all 18 units of the 9th Inf Div and 1Bel Bde (4 units).\nGD 54/AM: If not on map, W0701; XXX Corps HQ.\nGD 55/AM: W2746; 4th Inf Div, all units (19). W0701; The following units are active in accordance with HHF (9.2.4); 43rd Inf Div, all 17 units, 210/211/XXX CE Btn, 73/XXX AT Btn (2x Coys), 2HH Recon Btn, 3 Recon Btn. 5AGRA (6 Art Btns).\nGD 56/AM: W0209; 8th Arm Bde (4 units).\nGD 58/AM: W0209; XIII Corps HQ, assigned to 9A. Remaining XIII Corps assets (not listed in HHF (21.5.1)) are placed in reinforcement pool. 102nd Inf Div, all 17 units, Div assigned to XIII Corps. 11/XIII Cav Grp, 36ArmC Btn, 44ArmC Btn, 2x11C M-5 Coys.\nGD 59/AM: W0209; 84th Inf Div, all 20 units, must assigned to XIII Corps.\nGD 61/AM: W2746; CCR/5A, 47/5A AFA Btn, 1x M-10 Coy, 1x Recon Coy, 1x Arm Eng Coy.\nGD 62/AM: If not on map, W0209; 7th Arm Div all units (16) (-2 Hybrid steps), assigned to the XIII Corps.\nGD 63/AM: W0219; 104th Inf Div, all units (20), Allen.\nGD 66: Withdraw all 19 units of the 28th Inf Div.\nGD 67/AM: W2746; 8th Inf Div, all 17 units.\nGD 78/AM: W2746; Remainder of 5th Arm Div (12 units). Note: 1x M-10, 1x Recon, 1x Arm Eng Coys already on map.\nGD 84/AM: W2746; 9th Inf Div, all units (18). Withdraw all 19 units of 4th Inf Div.\nGD 85/AM: W2746; 83rd Inf Div, all units (17).\nGD 87/AM: W0134; 78th Inf Div, all units (16).",
+    "crossRefs": ["31.2.4a", "9.2.4c", "21.5.4", "9.2.3", "9.2.4", "21.5.1"],
+    "module": "hurtgen"
   }
 ]

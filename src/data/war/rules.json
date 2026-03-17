@@ -1398,5 +1398,599 @@
     "text": "Mandatory lulls may be ended in one of three ways during the Joint Command Phase:\n  1) During the Command Phase after the lull has been in effect for 15 GTs, the Allied player may (his choice) roll 1d10 during that and each subsequent Command Phase. On a result of 0-4, the lull is ended. On a 5 or greater the lull continues.\n  2) If at any time during the lull, any German unit enters the lull corps ZOP, the lull immediately ends.\n  3) The Allied player may end the lull at any time by declaring the end of the lull during a Joint Command Phase. The German player receives 5 VP.",
     "crossRefs": [],
     "module": "war"
+  },
+  {
+    "id": "war-30.0",
+    "section": "30.0",
+    "title": "Dec 16 Scenario Group",
+    "summary": "Overview of the Dec 16 scenario group, which covers the first week of the campaign. All scenarios are modular and may be combined.",
+    "text": "**30.0 DEC 16 SCENARIO GROUP**\nMontgomery Takes Command (WAR (9.2.2a)). These scenarios cover the first week of the campaign. All scenarios in this group are played on one or two maps.\n\u2022 The scenarios are modular in nature. A scenario may be combined to provide larger slices of the campaign.\n\u2022 Scenario 5 combines all previous scenarios and uses all maps to create either a short (Dec 16 to Dec 20) campaign game, or the full campaign game (Dec 16 to Jan 8).",
+    "crossRefs": ["9.2.2a"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.1.0",
+    "section": "30.1.0",
+    "title": "Dec 16-18 Special Rules",
+    "summary": "Special rules applying to all Dec 16 group scenarios, including unit setup, activation, frontline bridges, and out of play areas.",
+    "text": "Unless specifically stated otherwise, the following rules apply to all scenarios in the Dec 16 group.\n\u2022 All units start at full strength unless otherwise noted on the manifest.\n\u2022 The Allied side sets up first.\n\u2022 All German Art units assigned as army or corps assets must set up in-battery.\n\u2022 All Allied Art units must set up in-battery.\n\u2022 Use the scenario diagrams for Dec 16 to view the playing area of each scenario and general set up areas for all formations.\n\u2022 All bridges along the frontline (the dotted black line along the Sauer and Our Rivers from the south map edge to hex SE4307) are demolished, they cannot be repaired.\n\u2022 Units noted as out of play in the Dec 16 set up are not setup and the area bounded by the line marked Dec 16 Scenario 1 is out of play. The area depicted on the NE map runs from hex 4501 to 4702 to 4707 to 5009 then all hexes on or north of the xx10 line to 6410 then 7007.",
+    "crossRefs": ["30.1.1", "30.1.2"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.1.1",
+    "section": "30.1.1",
+    "title": "Dec 16 Weather",
+    "summary": "On all GTs for Dec 16, use historical weather (overcast with normal/dry ground conditions). Starting Dec 17 AM, use variable weather rules.",
+    "text": "On all GTs for Dec 16 use the historical weather (overcast with normal/dry ground conditions). Starting the AM GT of Dec 17, players may use the variable weather rules (WAR (19.2.2)).",
+    "crossRefs": ["19.2.2"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.1.2",
+    "section": "30.1.2",
+    "title": "Allied Unit Activation",
+    "summary": "All Allied units start all Dec 16 scenarios inactive, with specific rules governing what inactive units can and cannot do, and how they become activated.",
+    "text": "All Allied units start all Dec 16 scenarios inactive.\n\n\u2022 Inactive units cannot:\n  a) Move, except to retreat after FS and GA.\n  b) Construct FWs and bridges, nor may they demolish bridges (hasty or prepared).\n  c) Voluntarily change mode. All inactive units are in tactical mode. They may not change mode until activated.\n  d) Conduct an offensive GA (they cannot be attack designated).\n  e) Provide RIBs or be placed in combat reserve (CR).\n  f) Receive replacements or transfer steps to other units.\n\n\u2022 Inactive units can:\n  a) Spot for FS missions.\n  b) Conduct Art FS missions.\n  c) Defend against FS and GA normally.\n  d) Provide adjacent unit combat shifts.\n\n\u2022 Units are immediately activated when:\n  a) They are the target of an offensive GA (tactical, prepared, or overrun).\n  b) If adjacent to a German unit that conducts an offensive GA/overrun.\n  c) Reinforcements are activated the GT they arrive.\n  d) Scenario instructions may activate specific units. Units activated in this manner are activated in the Allied Mode Determination Phase.\n\n**Important:** Units activated by any of the above three methods do not count towards the number of Allied units activated when using scenario instructions.\n\n\u2022 Once a unit has been activated, it remains active for the rest of the scenario.",
+    "crossRefs": ["30.7.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.2.0",
+    "section": "30.2.0",
+    "title": "Dec 16 Pre-Dawn Surprise GT",
+    "summary": "The Dec 16 Pre-Dawn Surprise GT is a special German-only turn with modified Sequence of Play, PA mode restrictions, and altered combat rules.",
+    "text": "\u2022 All units of both sides are in GenS and are in command.\n\u2022 The Sequence of Play is modified for this GT. Only the below listed phases and segments are conducted:\n  1) German Mode Determination Phase\n  2) German Movement Phase\n  3) German Combat Phase\n\n**Important:** the Pre-Dawn GT is not a night GT.\n\n**German Mode Determination Phase:** German Mech units that are within 2 hexes (2 intervening hexes) of an enemy unit and German leg units that within 1 hex (1 intervening hex) of an enemy unit may be placed in PA mode.\n\n**Important:** Units placed in PA mode that are not adjacent to enemy units must be able to move adjacent to an enemy unit during the German Movement Phase of the pre-dawn turn. If a unit was marked PA and then during the Movement Phase is found not to be able to move adjacent to an enemy unit, or moves in such a way that it is not adjacent to an enemy unit must be returned to its original hex and the PA marker is removed.\n\n\u2022 Units that were designated as overstacked during setup may enter PA mode. Overstacks created after set-up are subject to GOSS (6.4.0).\n\u2022 German heavy bridges and Eng units stacked with a heavy bridge are ignored for stacking purposes.\n\u2022 No other mode changes are allowed.\n\n**Exception:** Units subordinate to the 272nd VG Div may not be placed in PA mode.\n\n**German Movement Phase:** All units marked PA may conduct PA movement.\n  a) No other movement is allowed.\n  b) German Mot AT units may move as Leg units this GT only.\n  c) German Mech units cannot dismount.\n\n**Important:** Units that move must end their PA movement adjacent to an Allied unit.\n\n**German Combat Phase:** The sequence of segments is altered.\n  1) Fire Support Segment\n    a) German Offensive Support\n    b) Allied Defensive Support\n  2) Skip the Attacker Adjustment Segment. Units in PA mode adjacent to an enemy unit must conduct a GA.\n  3) Ground Assault Segment\n\n**FS Mission Restrictions:**\n**Important:** Air points are not available.\n\nGerman:\n  a) All German FS missions are subject to a DRM of -4.\n  b) A maximum of three German Art units may participate in the same FS mission.\n  c) Ammo depletion checks are not made.\n\nAllied:\n  a) All Allied FS missions are subject to a -1 DRM.\n  b) If the observing unit is in any type of FW, a maximum of two Allied Art units can participate in the same FS mission.\n  c) If the observing unit is not in a FW, a maximum of one Art unit can participate in the same FS mission.\n  d) Ammo depletion checks are not made.\n\n**Ground Assault:**\n\u2022 Recon units may not convert mandatory step losses into retreats (GOSS (13.10.2)).\n\u2022 All German GAs receive an automatic one column shift to the right.\n\n**Exception:** The German side does not receive the above shift when conducting GAs against units subordinate to the US 4th Infantry Division.\n\n\u2022 German Mot AT units may advance after combat as Leg units.\n\n**Important:** Ignore the GOSS ADV limits on GA (GOSS (12.1.0)).",
+    "crossRefs": ["6.4.0", "13.10.2", "12.1.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.3.0",
+    "section": "30.3.0",
+    "title": "Dec 16 AM GT Rules",
+    "summary": "Rules for the Dec 16 AM GT, including GenS status, command boundary restrictions, traffic congestion, and specific Allied and German modifications.",
+    "text": "**Both Sides:**\n\u2022 All units are in GenS (WAR (15.2.1)).\n\u2022 The Sequence of Play returns to normal (GOSS (3.3.0)).\n\u2022 Ammo depletion checks are not made.\n\u2022 All units have normal fuel.\n\u2022 Command boundary restrictions are in place (WAR (9.2.1), (9.2.2), & (9.2.3)).\n\u2022 Traffic Congestion (WAR (7.10.4)) and bridge bottlenecks (WAR (7.10.2a)) are in effect.\n\n**Allied:**\n\u2022 The M5 BU Co. and 32/VIII Recon Bn. at SE3429 (Vielsalm) are activated.\n\u2022 No other Allied units are activated unless WAR (30.1.2) applies.\n\u2022 Allied units may not attempt prepared or hasty bridge demolition.\n\u2022 Eng units may not begin bridge or FW construction.\n\u2022 TP may be used to motorize active Allied units (WAR (16.1.1a)).\n\u2022 All FS missions are subject to a -1 DRM.\n\n**German:**\n\u2022 In battery Art units may not go out of battery.\n\u2022 All German GAs receive an automatic one column shift to the right.\n\n**Exception:** The German side does not receive the above shift when conducting GAs against units subordinate to the US 4th Infantry Division.\n\n\u2022 Stockpiled AmP may be used to conduct intensive barrages (WAR (16.3.6a)).\n\u2022 Check for Van Der Heydte parachute drop (WAR (4.6.9)).\n\u2022 The heavy bridges at hexes SE4517 and 4413 remain under construction. The heavy bridge in SE4822 is completed on a DR of 0-2.\n\u2022 Eng units may initiate bridge and FW construction.\n\u2022 Units in MR mode may not leave MR mode.\n\u2022 Peiper leader is activated.\n\u2022 The 150th Pz Bde may not move.\n\n**Exception:** The above two movement restrictions are lifted if using the free set up option.\n\n\u2022 Army TP are not available for motorization.",
+    "crossRefs": ["15.2.1", "3.3.0", "9.2.1", "9.2.2", "9.2.3", "7.10.4", "7.10.2a", "30.1.2", "16.1.1a", "16.3.6a", "4.6.9"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.4.0",
+    "section": "30.4.0",
+    "title": "Dec 16 PM GT Rules",
+    "summary": "Rules for the Dec 16 PM GT, including activated GenS rules, ammo depletion, and specific Allied and German modifications.",
+    "text": "**Both Sides:**\n\u2022 All units are in GenS (WAR (15.2.1)).\n\u2022 Command boundary restrictions are in place (WAR (9.2.1), (9.2.2), & (9.2.3)).\n\u2022 Ammo depletion checks and replenishment of AD Art units are now made.\n\u2022 All units are in normal fuel.\n\u2022 Traffic Congestion (WAR (7.10.4)) and bridge bottlenecks (WAR (7.10.2a)) are in effect.\n\n**Allied:**\n\u2022 Allied reinforcements are activated.\n\u2022 Reinforcements do not count against the number of units the Allied side may activate.\n\u2022 Allied ADV is 6, it may not be adjusted.\n\u2022 Allied units may not attempt prepared bridge demolition.\n\u2022 Hasty bridge demolition may be attempted; however, hasty demolition incurs an additional +1 DRM.\n\u2022 Eng units may not begin bridge or FW construction.\n\n**German:**\n\u2022 In battery Art units may not go out of battery.\n\u2022 All units in MR mode are released.\n\u2022 653/OKW JVI Co. may arrive. Roll 1d10 if the result is 0-2 the unit arrives at any 6Pz Army entry hex. If the result is 3-9, they unit does not arrive.\n\u2022 All Truppeneinheit units arrive (WAR (4.6.10)).\n\u2022 All German armies have an ADV of 4, it may not be adjusted.\n\u2022 Stockpiled AmP may be used to replenish AD Art units and conduct intensive barrages.\n\u2022 The heavy bridges at hexes SE4517, 4413 and 4822 are completed on a DR of 0-3.\n\u2022 Army TP are not available for motorization (WAR (16.1.1b)).",
+    "crossRefs": ["15.2.1", "9.2.1", "9.2.2", "9.2.3", "7.10.4", "7.10.2a", "4.6.10", "16.1.1b"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.5.0",
+    "section": "30.5.0",
+    "title": "Dec 16 Night GT Rules",
+    "summary": "Rules for the Dec 16 Night GT, including Allied activation by die roll and German restrictions.",
+    "text": "**Both Sides:**\n\u2022 All units are in GenS (WAR (15.2.1)).\n\u2022 Command boundary restrictions are in place (WAR (9.2.1), (9.2.2), & (9.2.3)).\n\u2022 All units are in normal fuel.\n\u2022 Traffic Congestion (WAR (7.10.4)) and bridge bottlenecks (WAR (7.10.2a)) are in effect.\n\n**Allied:**\n\u2022 Roll 1d10 and divide the result by two. The result is the number of non-Art/non-HQ units that may be activated on all maps.\n\n**Exception:** Allied Art and HQ units may only be activated voluntarily if they are adjacent to an enemy unit.\n\n**Exception:** All units subordinate to the CCB/9A, CCR/9A and CCA/5A may not be voluntarily activated.\n\n\u2022 Allied reinforcements are activated.\n\u2022 Reinforcements do not count against the number of units the Allied side may activate.\n\u2022 Allied ADV is 6, it may not be adjusted.\n\u2022 Allied units may not attempt prepared bridge demolition.\n\u2022 Hasty bridge demolition may be attempted; however, hasty demolition incurs an additional +1 DRM.\n\u2022 Eng units may not begin bridge or FW construction.\n\n**German:**\n\u2022 In battery Art units may not go out of battery.\n\u2022 All units in MR mode are released.\n\u2022 All German armies have an ADV of 4, it may not be adjusted.\n\u2022 Stockpiled AmP may be used to replenish AD Art units and conduct intensive barrages.\n\u2022 Army TP are not available for motorization (WAR (16.1.1b)).",
+    "crossRefs": ["15.2.1", "9.2.1", "9.2.2", "9.2.3", "7.10.4", "7.10.2a", "16.1.1b"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.6.0",
+    "section": "30.6.0",
+    "title": "Dec 17 AM GT Rules",
+    "summary": "Rules for the Dec 17 AM GT, covering Allied activation of 2nd Inf Div and others, and German bridge completion and TP availability.",
+    "text": "**Both Sides:**\n\u2022 All units are in GenS (WAR (15.2.1)).\n\u2022 Command boundary restrictions are in place (WAR (9.2.1), (9.2.2), & (9.2.3)).\n\u2022 All units are in normal fuel.\n\u2022 Traffic Congestion (WAR (7.10.4)) and bridge bottlenecks (WAR (7.10.2a)) are in effect.\n\n**Important:** The ADV for both sides is set this GT throughout the Dec group scenarios unless stated otherwise.\n\n**Allied:**\n\u2022 All units subordinate to the 2nd Inf Div are activated (including Ldr Robertson).\n\u2022 All other Allied units are activated, unless they are:\n  a) In any type of FW.\n  b) Unable to trace a GenS path of any length to their assigned HQ.\n\n**Important:** The supply path is only for determining activation (all units are still in GenS).\n\n\u2022 Units subordinate to CCA/9A may be voluntarily activated, however WAR (9.2.9a) applies.\n\u2022 Allied ADV is 5, it may be adjusted using WAR (16.2.1b).\n\u2022 Allied units may not attempt prepared bridge demolition.\n\u2022 Eng units may begin bridge or FW construction.\n\n**German:**\n\u2022 In battery Art units may go out of battery.\n\u2022 Army TP are available for motorization (WAR (16.1.1b)).\n\u2022 All German armies have an ADV of 3, it may be adjusted.\n\u2022 Stockpiled AmP may be used to replenish AD Art units, conduct intensive barrages, and adjust ADV.\n\u2022 If the Van Der Heydte parachute drop did not occur on the Dec 16 AM GT, conduct the drop now (WAR (4.6.9)).",
+    "crossRefs": ["15.2.1", "9.2.1", "9.2.2", "9.2.3", "7.10.4", "7.10.2a", "9.2.9a", "16.2.1b", "16.1.1b", "4.6.9"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.7.0",
+    "section": "30.7.0",
+    "title": "Dec 17 PM GT Rules",
+    "summary": "Rules for the Dec 17 PM GT, with continued command restrictions and traffic congestion.",
+    "text": "**Both Sides:**\n\u2022 All units are in GenS (WAR (15.2.1)).\n\u2022 Command boundary restrictions are in place (WAR (9.2.1), (9.2.2), & (9.2.3)).\n\u2022 All units are in normal fuel.\n\u2022 Traffic Congestion (WAR (7.10.4)) and bridge bottlenecks (WAR (7.10.2a)) are in effect.\n\n**Allied:**\n\u2022 All Allied units are activated.\n\u2022 Allied units may now attempt prepared bridge demolition.\n\n**German:**\nThere are no additional restrictions for the German side.",
+    "crossRefs": ["15.2.1", "9.2.1", "9.2.2", "9.2.3", "7.10.4", "7.10.2a"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.8.0",
+    "section": "30.8.0",
+    "title": "Dec 17 Night GT Rules",
+    "summary": "Dec 17 Night GT rules with standard GOSS GenS, command restrictions, and bridge bottlenecks still in effect.",
+    "text": "**Both Sides:**\n\u2022 All units are in GenS (WAR (15.2.1)).\n\u2022 Command boundary restrictions are in place (WAR (9.2.1), (9.2.2), & (9.2.3)).\n\u2022 All units are in normal fuel.\n\u2022 Traffic Congestion (WAR (7.10.4)) and bridge bottlenecks (WAR (7.10.2a)) are in effect.\n\n**Allied:**\n\u2022 All Allied units are activated.\n\u2022 Allied units may now attempt prepared bridge demolition.\n\n**German:**\nThere are no additional restrictions for the German side.",
+    "crossRefs": ["15.2.1", "9.2.1", "9.2.2", "9.2.3", "7.10.4", "7.10.2a"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.9.0",
+    "section": "30.9.0",
+    "title": "Dec 18 AM GT Rules",
+    "summary": "Dec 18 AM GT marks the transition to standard GOSS GenS rules including surrender. Bridge bottlenecks remain; traffic congestion differs by side.",
+    "text": "**Both Sides:**\n\u2022 Standard GOSS GenS rules (including surrender) are in effect.\n\u2022 Command boundary restrictions are in place (WAR (9.2.1), (9.2.2), & (9.2.3)).\n\u2022 All units in are normal fuel.\n\u2022 Bridge bottlenecks (WAR (7.10.2a)) are in effect.\n\n**Allied:**\n\u2022 Traffic Congestion (WAR (7.10.4)) for Allied units is in effect.\n\n**German:**\n\u2022 Traffic Congestion for German units is no longer in effect.",
+    "crossRefs": ["9.2.1", "9.2.2", "9.2.3", "7.10.2a", "7.10.4"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.10",
+    "section": "30.10",
+    "title": "Dec 19 AM GT Rules",
+    "summary": "Dec 19 AM GT: command boundary restrictions are lifted, 7th Army Mech restrictions remain, bridge bottlenecks still in effect.",
+    "text": "**Both Sides:**\n\u2022 Command boundary restrictions are no longer in effect.\n\n**Important:** 7th Army Mech Restrictions remain in effect (WAR (9.2.1a)).\n\n\u2022 All units are in normal fuel.\n\u2022 Bridge Bottlenecks (WAR (7.10.2a)) is in effect.",
+    "crossRefs": ["9.2.1a", "7.10.2a"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.11.0",
+    "section": "30.11.0",
+    "title": "Dec 19 Night GT Rules",
+    "summary": "Dec 19 Night GT: all units in normal fuel, bridge bottlenecks are no longer in effect.",
+    "text": "\u2022 All units are in normal fuel.\n\u2022 Bridge bottlenecks are no longer in effect.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-30.12.0",
+    "section": "30.12.0",
+    "title": "Dec 20 AM GT Rules",
+    "summary": "Dec 20 AM GT: Germans begin using the full logistic rules (GOSS 16.0).",
+    "text": "Germans begin using the full logistic rules (GOSS (16.0)).",
+    "crossRefs": ["16.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-30.13.0",
+    "section": "30.13.0",
+    "title": "(Optional) Free Set Up",
+    "summary": "Optional rule allowing players to freely set up two or four map Dec 16 scenarios using modified procedures.",
+    "text": "If players wish to opt for non-historical play, they may choose to freely set up two or four map Dec 16 scenarios using the below procedures.\n\n**30.13.1 Allied Set Up**\nThe Allied player sets up first.\n\n**Exception:** Do not set up units assigned to the 2nd Inf Div, CCB and CCR of the 9th Arm Div.\n\n\u2022 No hex may have more than one Bn. or three Co.'s.\n\u2022 The Allied player must:\n  a) Place at least one US unit within three hexes of every frontline hex.\n  b) Must adhere to the historical corps command structure. Units set up in the historical corps ZOP must remain within the same corps ZOP.\n\u2022 After the German player completes set up, the Allied player may write down the hex number of where each unit assigned to the 2nd Inf Div HQ will be placed. These units may be placed anywhere within the V Corps ZOP including frontline hexes.\n\u2022 The Allied player then may designate the hexes where each unit of CCB and CCR of the 9th Arm Div are placed.\n  1) If all units have are at least eight hexes from a front-line hex (excluding the set-up hex from the front-line hex), they are not placed on the map.\n  2) If a combat command has at least one unit that does not meet the above criteria then all units of that combat command must be placed on the map.\n\n**30.13.2 German Set Up**\nThe German player sets up second.\n\u2022 The 6th Pz Army boundary may be moved from one to 12 hexes south of the present line.\n\u2022 The boundary between 5th Pz Army and 7th Army may be moved six hexes in either direction.\n\u2022 Truck point assignments may be changed.\n\u2022 Any Pz Divs placed in MR mode may have their deployments written down in secret without placing the counters on the map.\n\u2022 All original command assignments must be adhered to.\n\n**30.13.3 Begin Play**\nPlay then begins normally with the Pre-dawn GT. GT rules (30.1.0) through (30.12.0) are in effect.\n\n**Exception:** All German units in MR and the 150th Bde are activated at the beginning of the Dec 16 AM GT.\n\n\u2022 When play begins, the German units in MR mode are only revealed when exiting MR mode.\n\u2022 The US 2nd Inf Div is only revealed if a German unit begins a German Movement or Exploit Phase adjacent to one of the 2nd Inf Div's units.\n\u2022 The two combat commands are revealed when:\n  1) Released (per WAR (30.4.0) & (30.5.0)); or,\n  2) A German unit attempts to enter a hex (during either a German Movement Phase or Exploit Phase) containing units assigned to a combat command.\n\n**Important:** Only the units assigned to the same combat command are activated in this manner.",
+    "crossRefs": ["30.1.0", "30.12.0", "30.4.0", "30.5.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-31.0",
+    "section": "31.0",
+    "title": "Ride of the Valkyries: 6th Pz Army Attacks (Scenario 1)",
+    "summary": "Scenario 1 depicts the assault by ISS Pz Corps and the main effort for Hitler's winter offensive, played on the NE map only.",
+    "text": "**31.0 RIDE OF THE VALKYRIES: 6TH PZ ARMY ATTACKS (SCENARIO 1)**\nThis scenario depicts what was intended to be the main effort for Hitler's winter offensive: his vaunted SS Pz Divs led by his old cohort Sepp Dietrich. It is an involved scenario with a large number of units.\n\nThe scenario starts with the Dec 16 pre-dawn surprise GT and concludes with the completion of the Dec 20 PM GT. All the Dec 16 WAR (30.1.0) special rules are in effect except as modified below.\n\n**Weather:** Use the historical weather for all GTs.\n\n**Air Points:** During any GT that the atmospheric condition is PoVr the Allied player has four AP available and the German player has one AP available. AP may only be assigned to GS (GOSS (20.2.0)) and ASup (GOSS (20.6.0)).\n\n**Allied Unit Activation:** Activation for Allied units remain the same as WAR (30.1.2) through (30.7.0), except:\n  Dec 16 PM GT: Do not roll 1d10, instead the Allied player activates one additional unit.\n  Dec 16 Night GT: Do not roll 1D10, instead the Allied player activates two additional units.\n\n**Truck Point Availability:**\n  a) The German player has two TPs available for motorization (GOSS (16.1.2c)).\n  b) The Allied player has three TPs available for motorization.\n\n**Logistics and GenS:** All the rules in (30.1.2) through (30.12.0) are in effect except:\n  a) The 6th Pz Army has four AmP in stockpile.\n  b) The German player does not use the full logistic rules on Dec 20 GT. All German Mech units are in normal fuel and the German ADV is three for the Dec 20 AM and PM GTs.",
+    "crossRefs": ["30.1.0", "20.2.0", "20.6.0", "30.1.2", "30.7.0", "16.1.2c", "30.12.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-31.1.0",
+    "section": "31.1.0",
+    "title": "Scenario 1: Scenario Length",
+    "summary": "Scenario 1 starts with the Dec 16 pre-dawn surprise GT and concludes with the completion of the Dec 20 PM GT.",
+    "text": "The scenario starts with the Dec 16 pre-dawn surprise GT and concludes with the completion of the Dec 20 PM GT. All the Dec 16 WAR (30.1.0) special rules are in effect except as modified below.",
+    "crossRefs": ["30.1.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-31.2.0",
+    "section": "31.2.0",
+    "title": "Scenario 1: Play Area",
+    "summary": "Scenario 1 is played on the NE map only.",
+    "text": "The scenario is played on the NE map only.\n\u2022 The eastern boundary is the east map edge.\n\u2022 The northern boundary is the north map edge excluding the out of play area (WAR (30.1.0)).\n\u2022 The western boundary is the NE map west map edge.\n\u2022 The southern boundary extends from hex 7032 to 6027 then direct to the western edge of the NE map.",
+    "crossRefs": ["30.1.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-31.3.0",
+    "section": "31.3.0",
+    "title": "Scenario 1: Set Up",
+    "summary": "Set up instructions for Scenario 1, with Allied player setting up first.",
+    "text": "The Allied player sets up first.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-31.4.0",
+    "section": "31.4.0",
+    "title": "Scenario 1: Reinforcements",
+    "summary": "Neither player has Repl available in Scenario 1. Do not conduct recycle procedures.",
+    "text": "Neither player has Repl available. Do not conduct recycle procedures (GOSS (22.2.0)).",
+    "crossRefs": ["22.2.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-31.5.0",
+    "section": "31.5.0",
+    "title": "Scenario 1: Victory Conditions",
+    "summary": "Victory conditions for Scenario 1, including German and Allied victory point hexes and sudden death victory conditions.",
+    "text": "**German Victory Point Hexes:**\n  1506, 1511, 1520\n  2208, 2216, 2222\n  2412, 3208, 3215\n  3606, 4106, 4112\n  4710, 5018\n\n**Allied Victory Point Hexes:**\n  3521, 4020, 5014\n  5018, 5111\n\n**German Sudden Death Victory:**\nThe German player wins strategic victory if at the end of any GT (including the last GT of the scenario) the German player:\n  1) Exited at least four units from one KG from the 1st SS Pz Div off the west edge of the playing area north of the xx18 hex row; or,\n  2) Captured one of the following bridges over the Meuse River: 1806/1705, 1706/1705 or 1504/1505; and,\n\n**Important:** A GenS path (of any length) must exist from the exit hex or bridge back to a German ultimate supply source.\n\n  3) Occupies any two German victory point hexes east of the 30xx hex column.\n\n**Important:** The German player only gains victory points for the south edge hexes if units of KG vPors exit using those hexes.\n\n**End Game Victory Determination:**\n  1) The player with more victory points wins the game.\n  2) If the victory point totals are equal the game is a draw.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-32.0",
+    "section": "32.0",
+    "title": "An Egg Is Laid: St. Vith & the 106th (Scenario 2)",
+    "summary": "Scenario 2 depicts the LXVII Corps attack on the 106th Inf Div and the LVIII Pz Corps' attempt to dash to the Ourthe River.",
+    "text": "**32.0 AN EGG IS LAID: ST. VITH & THE 106TH (SCENARIO 2)**\nThis scenario depicts the LXVII Corps attack on the 106th Inf Div and the LVIII Pz Corps' attempt to dash to the Ourthe River. The failure to take St Vith would result in the fortified Goose Egg.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-32.1.0",
+    "section": "32.1.0",
+    "title": "Scenario 2: Scenario Length",
+    "summary": "Scenario 2 starts with the Dec 16 pre-dawn surprise GT and concludes with the completion of the Dec 20 PM GT.",
+    "text": "The scenario starts with the Dec 16 pre-dawn surprise GT and concludes with the completion of the Dec 20 PM GT. All the Dec 16 WAR (30.1.0) special rules are in effect except as modified below.\n\n**Weather:** Use the historical weather for all GTs.\n\n**Air Points:** Neither side receives AP.\n\n**Allied Unit Activation:** Activation for Allied units remain the same as WAR (30.1.2) through (30.7.0), except:\n  Dec 16 PM GT: Do not roll 1d10, instead the Allied player activates one additional unit.\n  Dec 16 Night GT: Do not roll 1D10, instead the Allied player activates two additional units.\n\n**Truck Point Availability:**\n  a) The German player has one TP available for motorization (GOSS (16.1.2c)).\n  b) The Allied player has two TPs available for motorization.\n\n**Logistics and GenS:** All the rules in (30.1.2) through (30.12.0) are in effect except:\n  a) The 5th Pz Army has one AmP in stockpile.\n  b) The German player does not use the full logistic rules on Dec 20 AM GT. All German Mech units are in normal fuel and the German ADV is three for Dec 20 AM and PM GTs.\n  c) The German PSS is SE7002 or SE7009.\n  d) The 82nd AB Div units are in GenS if they can trace a GenS path no longer than eight hexes to NE3030.\n  e) All other Allied HQ must trace a standard GenS path to: NE2627, NE2127, NE1927, or NE1527.\n\n**Important:** Units of the 28th Inf Div must be attached to an on-map Div HQ. All non-Art units assigned to a corps or army HQ must be attached to an on-map HQ.",
+    "crossRefs": ["30.1.0", "30.1.2", "30.7.0", "16.1.2c", "30.12.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-32.2.0",
+    "section": "32.2.0",
+    "title": "Scenario 2: Play Area",
+    "summary": "Scenario 2 is played on the south half of the NE map and the north half of the SE map.",
+    "text": "The scenario is played on the south half of the NE map and the north half of the SE map.\n\u2022 The eastern boundary is the east map edge.\n\u2022 The northern boundary extends from hex 7032 to 6027 then direct to western edge of the NE map.\n\u2022 The western boundary is the 15xx hex row of both the NE and SE maps.\n\u2022 The southern boundary extends from hex SE7010 direct to SE4410 to SE2606 to SE2006 to SE1503 due west to the west edge of the SE map.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-32.3.0",
+    "section": "32.3.0",
+    "title": "Scenario 2: Set Up",
+    "summary": "Set up instructions for Scenario 2, with Allied player setting up first.",
+    "text": "The Allied player sets up first.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-32.4.0",
+    "section": "32.4.0",
+    "title": "Scenario 2: Reinforcements & Withdrawals",
+    "summary": "Neither player has Repl available in Scenario 2. Do not conduct recycle procedures.",
+    "text": "Neither player has Repl available. Do not conduct recycle procedures (GOSS (22.2.0)).",
+    "crossRefs": ["22.2.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-32.5.0",
+    "section": "32.5.0",
+    "title": "Scenario 2: Victory Conditions",
+    "summary": "Victory conditions for Scenario 2, including German and Allied victory point hexes and sudden death victory conditions.",
+    "text": "**German Victory Point Hexes:**\n  NE1933, NE2128, NE2431\n  NE4430\n\n**Allied Victory Point Hexes:**\n  NE3330, NE3429, NE4234\n  NE4430\n\n**German Sudden Death Victory:**\nThe German player wins strategic victory if at the end of any GT (including the last GT of the scenario) if the German player:\n  1) Exited at least four units of four KGs from any Pz Div off the west edge of the playing area at SE1503 and/or SE1008; and,\n  2) Can trace a GenS path from the east map edge to any of the above hexes that a unit exited the map.\n\n**End Scenario Victory:** If the German player has failed to meet the above victory conditions by the end of the Dec 20 PM GT, both players total the number of victory point hexes each controls.\n  a) The German player receives two victory points for each hex of Bastogne (SE2215 and SE2216).\n  b) The German player receives one-half a victory point for each KG exited at the hexes given in the sudden death victory conditions.\nIf the units of the 14/5FJ Div have suffered more than five step losses, add one to the Allied player's total.\n\n**Important:** The German player counts German victory point hexes and the Allied player counts Allied victory point hexes.\n\n  1) The player with the higher total wins the scenario.\n  2) If the total is equal the scenario is a draw.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-33.0",
+    "section": "33.0",
+    "title": "A Beautiful Skyline: 47th Pz Corps vs the 110th Inf Rgt (Scenario 3)",
+    "summary": "Scenario 3 presents the assault of the XLVII Pz Corps on the 110th Inf Rgt of the 28th US Inf Div along Skyline Drive.",
+    "text": "**33.0 A BEAUTIFUL SKYLINE: 47TH PZ CORPS VS THE 110TH INF RGT (SCENARIO 3)**\nThis scenario presents the assault of the XLVII Pz Corps on the 110th Inf Rgt of the 28th US Inf Div. The last stand of that regiment along a road running the length of the ridge (nickname Skyline Drive) overlooking the Our River disrupted 5th Pz Army's timetable enough to prevent a swift and easy capture of Bastogne.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-33.1.0",
+    "section": "33.1.0",
+    "title": "Scenario 3: Scenario Length",
+    "summary": "Scenario 3 starts with the Dec 16 pre-dawn surprise GT and concludes with the completion of the Dec 20 PM GT.",
+    "text": "The scenario starts with the Dec 16 pre-dawn surprise GT and concludes with the completion of the Dec 20 PM GT. All the Dec 16 WAR (30.1.0) special rules are in effect except as modified below.\n\n**Weather:** Use the historical weather for all GTs.\n\n**Air Points:** Neither side receives AP.\n\n**Allied Unit Activation:** Activation for Allied units remain the same as WAR (30.1.2) through (30.7.0), except:\n  Dec 16 PM GT: Do not roll 1d10, instead the Allied player activates one additional unit.\n  Dec 16 Night GT: Do not roll 1D10, instead the Allied player activates two additional units.\n  Dec 17 AM GT: Unless previously activated due to German actions (WAR (30.1.2)), all units of CCR/9A are activated.\n\n**German Activation:**\n  Dec 16 PM GT: All units of Lehr Pz Div activate.\n\n**Truck Point Availability:**\n  a) The German has one TP available for motorization (GOSS (16.1.2c)).\n  b) The Allied player has two TPs available for motorization.\n\n**Logistics and GenS:** All the rules in (30.1.2) through (30.12.0) are in effect except:\n  a) The 5th Pz Army has three AmP in stockpile.\n  b) The German player does not use the full logistic rules on Dec 20 AM GT. All German Mech units are in normal fuel and the German ADV is three for Dec 20 AM and PM GTs.\n  c) The German PSS is SE1007 or SE2124.\n  d) The German PSS is SE7015 or SE7019.",
+    "crossRefs": ["30.1.0", "30.1.2", "30.7.0", "16.1.2c", "30.12.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-33.2.0",
+    "section": "33.2.0",
+    "title": "Scenario 3: Play Area",
+    "summary": "Scenario 3 is played on the SE map.",
+    "text": "The scenario is played on the SE map.\n\u2022 The eastern boundary is the east map edge.\n\u2022 The northern boundary extends from hex SE7010 direct to SE4410 to SE2606 to SE2006 to SE1503 due west to the west edge of the SE map.\n\u2022 The western boundary is the 10xx hex row of the SE map.\n\u2022 The southern boundary extends from hex SE7020 direct to SE5020 to SE4124 to the west edge of the SE map.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-33.3.0",
+    "section": "33.3.0",
+    "title": "Scenario 3: Set Up",
+    "summary": "Set up instructions for Scenario 3, with Allied player setting up first.",
+    "text": "The Allied player sets up first.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-33.4.0",
+    "section": "33.4.0",
+    "title": "Scenario 3: Reinforcements & Withdrawals",
+    "summary": "Neither player has Repl available in Scenario 3. Do not conduct recycle procedures.",
+    "text": "Neither player has Repl available. Do not conduct recycle procedures (GOSS (22.2.0)).",
+    "crossRefs": ["22.2.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-33.4.1",
+    "section": "33.4.1",
+    "title": "Scenario 3: German Reinforcements",
+    "summary": "There are no German reinforcements in Scenario 3.",
+    "text": "There are no German reinforcements.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-33.5.0",
+    "section": "33.5.0",
+    "title": "Scenario 3: Victory Conditions",
+    "summary": "Victory conditions for Scenario 3, including German and Allied victory point hexes and sudden death victory conditions.",
+    "text": "**German Victory Point Hexes:**\n  SE1503, SE1511, SE1706\n  SE1818, SE2215, SE2216\n\n**Allied Victory Point Hexes:**\n  SE1818, SE2215, SE2216\n\n**German Sudden Death Victory:**\nThe German player wins strategic victory if at the end of any GT (including the last GT of the scenario) if the German player:\n  1) Exited at least four units of four KGs from any Pz Div off the west edge of the playing area at SE1503, SE1527, or NE1529 (the units can exit at one or all the hexes); and,\n  2) Can trace a GenS path from the east map edge to any of the above hexes that a unit exited the map.\n\n**End Scenario Victory:** If the German player has failed to meet the above victory conditions by the end of the Dec 20 PM GT, both players total the number of victory point hexes each controls.\n  a) The German player receives two victory points for each hex of Bastogne (SE2215 and SE2216).\n  b) The German player receives one-half a victory point for each KG exited at the hexes given in the sudden death victory conditions.\nIf the units of the 14/5FJ Div have suffered more than five step losses, add one to the Allied player's total.\n\n**Important:** The German player counts German victory point hexes and the Allied player counts Allied victory point hexes.\n\n  1) The player with the higher total wins the scenario.\n  2) If the total is equal the scenario is a draw.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-34.0",
+    "section": "34.0",
+    "title": "A Hard Left: 7th Army & the Southern Shoulder (Scenario 4)",
+    "summary": "Scenario 4 depicts the 7th Army's attack on elements of the 28th Inf, 9th Arm and 4th US Inf Divs, covering the first three days.",
+    "text": "**34.0 A HARD LEFT: 7TH ARMY & THE SOUTHERN SHOULDER (Scenario 4)**\nThe 7th Army's attack on elements of the 28th Inf, 9th Arm and 4th US Inf Divs is depicted in this scenario. Due to the limited nature of its objectives and the paucity of units, the scenario covers only the first three days.\n\n**Important:** WAR (9.2.7), (9.2.8), and (9.2.9a) apply.",
+    "crossRefs": ["9.2.7", "9.2.8", "9.2.9a"],
+    "module": "war"
+  },
+  {
+    "id": "war-34.1.0",
+    "section": "34.1.0",
+    "title": "Scenario 4: Scenario Length",
+    "summary": "Scenario 4 starts with the Dec 16 pre-dawn surprise GT and concludes with the completion of the Dec 18 Night GT.",
+    "text": "The scenario starts with the Dec 16 pre-dawn surprise GT and concludes with the completion of the Dec 18 Night GT. All the Dec 16 WAR (30.1.0) special rules are in effect except as modified below.\n\n**Weather:** Use the historical weather for all GTs.\n\n**Air Points:** If during an AM or PM GT the atmospheric conditions are PoVr the Allied player receives two AP and the German player receives one AP.\n\n**Important:** These AP may only be assigned to GD or ASup missions.\n\n**Allied Unit Activation:** Activation for Allied units remain the same as WAR (30.1.2) through (30.7.0), except:\n  Dec 16 PM GT: Do not roll 1d10, instead the Allied player activates one additional unit.\n  Dec 16 Night GT: Do not roll 1D10, instead the Allied player activates two additional units.\n  Dec 17 AM GT: Unless previously activated due to German actions (WAR (30.1.2)), all units of CCR/9A are activated.\n\n**Truck Point Availability:**\n  a) The German player has one TP available for motorization (GOSS (16.1.2c)).\n  b) The Allied player has two TPs available for motorization.\n\n**Logistics and GenS:** All the rules in (30.1.2) through (30.12.0) are in effect except:\n  a) The 7th Army has two AmP in stockpile.\n  b) The German player does not use the full logistic rules.\n  c) The Allied PSS is any primary road hex on the south edge of the SE map.\n  d) The German PSS is any west map edge hex marked 7A.",
+    "crossRefs": ["30.1.0", "30.1.2", "30.7.0", "16.1.2c", "30.12.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-34.2.0",
+    "section": "34.2.0",
+    "title": "Scenario 4: Play Area",
+    "summary": "Scenario 4 is played on the SE map.",
+    "text": "The scenario is played on the SE map.\n\u2022 The eastern boundary is the east map edge.\n\u2022 The northern boundary extends from hex SE7020 direct to SE5020 to SE4124.\n\u2022 The western boundary is the 40xx hex row of the SE map.\n\u2022 The southern boundary is the south map edge of the SE map.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-34.3.0",
+    "section": "34.3.0",
+    "title": "Scenario 4: Set Up",
+    "summary": "Set up instructions for Scenario 4, with Allied player setting up first.",
+    "text": "The Allied player sets up first.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-34.4.0",
+    "section": "34.4.0",
+    "title": "Scenario 4: Reinforcements",
+    "summary": "Neither player has Repl available in Scenario 4. Do not conduct recycle procedures.",
+    "text": "Neither player has Repl available. Do not conduct recycle procedures (GOSS (22.2.0)).",
+    "crossRefs": ["22.2.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-34.4.1",
+    "section": "34.4.1",
+    "title": "Scenario 4: German Reinforcements",
+    "summary": "There are no German reinforcements in Scenario 4.",
+    "text": "There are no German reinforcements.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-34.4.2",
+    "section": "34.4.2",
+    "title": "Scenario 4: Allied Reinforcements",
+    "summary": "The US player receives all reinforcements listed on the Master Reinforcement Track for Dec 16 PM GT through Dec 20 AM GT listed to arrive on the south map edge of the SE map.",
+    "text": "The US player receives all reinforcements listed on the Master Reinforcement Track for Dec 16 PM GT through Dec 20 AM GT listed to arrive on the south map edge of the SE map.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-34.5.0",
+    "section": "34.5.0",
+    "title": "Scenario 4: Victory Conditions",
+    "summary": "Victory conditions for Scenario 4, including German and Allied victory point hexes and sudden death victory conditions.",
+    "text": "**German Victory Point Hexes:**\n  SE4126, SE4426, SE5032\n  SE5128, SE5332, SE5730\n  SE5832\n\n**Allied Victory Point Hexes:**\n  SE4133, SE5032, SE5332\n\n**German Sudden Death Victory:**\nThe German player wins strategic victory if at the end of any GT (including the last GT of the scenario) there are no Allied units within the playing area.\n\n**End Scenario Victory:** If the German player has failed to meet the above victory condition by the end of the Dec 18 Night GT, both players total the number of victory point hexes each controls.\n\n**Important:** The German player counts German victory point hexes and the Allied player counts Allied victory point hexes.\n\n  1) If the German player has three or more victory points than the Allied player, the German player wins.\n  2) If the German player does not meet the above requirement, but has more victory points than the Allied player, the German player wins a marginal victory.\n  3) If the German player and Allied victory point totals are equal or if the Allied player has less than twice the number of victory points as the German player, the game is a draw.\n  4) If the Allied player has twice the number of victory points as the German player, the Allied player wins a marginal victory.\n  5) If the Allied player has three times the number of victory points as the German player, the Allied player wins an operational victory.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-35.0",
+    "section": "35.0",
+    "title": "March to the Meuse (Scenario 5)",
+    "summary": "Scenario 5 combines the previous Dec 16 scenarios into a full two-map game suited for team play.",
+    "text": "**35.0 MARCH TO THE MEUSE (Scenario 5)**\nThis scenario combines the previous Dec 16 scenarios into a full two map game. It is a long scenario that is suited for team play.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-35.1.0",
+    "section": "35.1.0",
+    "title": "Scenario 5: Scenario Length",
+    "summary": "Scenario 5 starts with the Dec 16 pre-dawn surprise GT and concludes with the completion of the Dec 20 Night GT.",
+    "text": "The scenario starts with the Dec 16 pre-dawn surprise GT and concludes with the completion of the Dec 20 Night GT. All the Dec 16 WAR (30.0) special rules are in effect.\n\n**Logistics and GenS:** All the rules in WAR (30.1.2) through (30.12.0) are in effect. WAR (15.0) and (16.0) apply.",
+    "crossRefs": ["30.0", "30.1.2", "30.12.0", "15.0", "16.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-35.2.0",
+    "section": "35.2.0",
+    "title": "Scenario 5: Play Area",
+    "summary": "Scenario 5 uses the NE and SE maps (all hexes).",
+    "text": "The NE and SE maps are used (all hexes).\n\n**Exception:** The out of play area (WAR (9.2.6)) is not used do not set up units from either side that are in that area.",
+    "crossRefs": ["9.2.6"],
+    "module": "war"
+  },
+  {
+    "id": "war-35.3.0",
+    "section": "35.3.0",
+    "title": "Scenario 5: Initial Deployment",
+    "summary": "The Allied player sets up first in Scenario 5, with special instructions for out of play areas and overstack situations.",
+    "text": "The Allied player sets up first.\n\n**Important:** Players may choose to exclude or use the out of play area on the NE map.\n\n**Important:** Set up instructions may create overstack situations. Additional units cannot be added to a listed overstack, unless specifically stated in the set-up instructions. Such overstacks must be resolved at the end of the first friendly Movement Phase to avoid the penalties in GOSS (6.4.0).",
+    "crossRefs": ["6.4.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-35.4.0",
+    "section": "35.4.0",
+    "title": "Scenario 5: Reinforcements & Replacements",
+    "summary": "German and Allied reinforcements arrive per the Master Reinforcement List. All replacement rules are in effect. Neither side has any RePs in stockpile.",
+    "text": "German and Allied reinforcements arrive per the Master Reinforcement List. All replacement rules are in effect. Neither side has any RePs in stockpile.\n\n**Important:** Ignore ComZ and CW reinforcements.\n\n**Important:** Reinforcements that enter on the north side of map NW or the south side map SW arrive on any primary road on the west side of the entry map one GT after their schedule GT. Units that enter on the west side of map NW or SW enter the west side of map NE (for those entering on the NW map) and map SE (for those entering on the SW map) two GTs after their scheduled arrival GT.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-35.5.0",
+    "section": "35.5.0",
+    "title": "Scenario 5: Victory Conditions",
+    "summary": "Scenario 5 victory conditions using combined victory point hexes from all scenarios plus additional hexes, with sudden death and end game victory.",
+    "text": "**German Sudden Death Victory:**\nThe German player wins strategic victory if at the end of any GT (including the last GT of the scenario) the German player:\n  1) Exited at least four units from one KG from the 1st SS Pz Div off the west edge of the NE Map north of the xx18 hex row; or,\n  2) Captured one of the following bridges over the Meuse River: 1806/1705, 1706/1705 or 1504/1505; and,\n\n**Important:** A GenS path must exist from the exit hex or bridge back to a German ultimate supply source.\n\n  3) Occupies any two German victory point hexes east of the 30xx hex column.\n\n**Important:** A GenS path must exist from the exit hex or bridge back to a German ultimate supply source.\n\n**End Scenario Victory:** If the German player has failed to meet the above victory conditions by the end of the Dec 20 Night GT, both players total the number of victory point hexes each controls.\n\n**Important:** The German player counts German victory point hexes and the Allied player counts Allied victory point hexes.\n\n\u2022 The German player adds one victory point to the German total for each PZ Div KG (of four units or more) that exit the west side of map NE or SE on or north of the SExx16 hex row.\n\n**Important:** A GenS path must exist from the exit hex or bridge back to a German ultimate supply source.\n\n  1) The player with more victory points wins the game.\n  2) If the victory point totals are equal the game is a draw.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-35.6.0",
+    "section": "35.6.0",
+    "title": "Scenario 5: Victory Point Hexes",
+    "summary": "Combined list of German and Allied victory point hexes for Scenario 5.",
+    "text": "**German Victory Point Hexes:**\n  NE1506, NE1511, NE1520\n  NE2208, NE2216, NE2222\n  NE2412, NE3208, NE3215\n  NE3606, NE4106, NE4112\n  NE4710, NE5018\n  NE2128, NE2431, NE1933\n  NE4430\n  SE1503, SE1511, SE1706\n  SE4126, SE4426, SE5032\n  SE5128, SE5332, SE5730\n  SE5832, SE3428, SE2227\n  SE1723\n\n**Allied Victory Point Hexes:**\n  NE3521, NE4020, NE5014\n  NE5018, NE5111, NE3330\n  NE3429, NE4234, NE4430\n  SE4133, SE5032, SE5332\n  SE1818, SE2215, SE2216\n  SE1733, SE2533",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-36.0",
+    "section": "36.0",
+    "title": "December 21 Scenario Group",
+    "summary": "The Dec 21 scenario group covers the situation after the first week of the offensive, with more modular letter-coded scenarios.",
+    "text": "**36.0 DECEMBER 21 SCENARIO GROUP**\nThe next set of scenarios deals with the situation after the first week of the offensive. They differ in presentation from the Dec 16 group in that they are more modular. Each scenario group is letter coded and falls within a specific geographic area as shown on the Dec 21 scenario description map. Scenario Group B is unique because it has sub-groups B1 through B3. Different scenarios may be presented by adding or subtracting letter code areas (and the units within them) from those of other areas. Each scenario below will describe what letter codes are in play. The frontline is shown by the type of dotted line that, for example, surrounds Bastogne. In certain areas the frontline is not well defined because it was not clear who controlled the area in question.\n\n**Important:** Using the full logistic rules in any non-campaign scenario may affect play balance.\n\n\u2022 Players may use the full logistic rules if they desire. If using the full logistic rules for any scenario modify the logistic information for each scenario as follows:\n  a) Delete the AmP arrivals in the scenario. AmP are garnered using the GOSS logistic rules.\n  b) In any scenario that does not include all three armies, each active army has the following TP available:\n    6th Pz Army: 5\n    5th Pz Army: 8\n    7th Army: 3\n  c) If all three armies are active the German player has the number of TP listed in WAR (16.1.1b).\n  d) The Allied player retains the number of TP given in each scenario.",
+    "crossRefs": ["16.1.1b"],
+    "module": "war"
+  },
+  {
+    "id": "war-36.1.0",
+    "section": "36.1.0",
+    "title": "Dec 21 Special Rules",
+    "summary": "Special rules applying to all Dec 21 group scenarios, including disabled WAR rules, allied command, army boundaries, logistics, weather, and leaders.",
+    "text": "The following WAR rules are no longer in effect. All other special rules apply.\n  (4.6.9) Von Der Heydte\n  (4.6.10) Einheit Stielau\n  (7.10.2a) Bridge Bottlenecks\n  (7.10.4) Traffic Congestion\n  (9.2.3) Dec 16 Scenario Group Allied Corps Boundary Restrictions.\n  (9.2.10) 7th US Arm Div",
+    "crossRefs": ["4.6.9", "4.6.10", "7.10.2a", "7.10.4", "9.2.3", "9.2.10"],
+    "module": "war"
+  },
+  {
+    "id": "war-36.1.1",
+    "section": "36.1.1",
+    "title": "Dec 21 Allied Command",
+    "summary": "All rules pertaining to Montgomery and the British are in effect for Dec 21 scenarios.",
+    "text": "All rules pertaining to Montgomery and the British are in effect.\n\u2022 Montgomery took command the Dec 19 AM GT (WAR (9.2.2a)).\n\u2022 The mandatory lull rule applies effect (WAR (24.0)).",
+    "crossRefs": ["9.2.2a", "24.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-36.1.2",
+    "section": "36.1.2",
+    "title": "Dec 21 Army & Corps Boundaries",
+    "summary": "Rules for army and corps boundaries in Dec 21 scenarios, including the US 1st/3rd Army boundary.",
+    "text": "In any scenario involving units from more than one army, the owning player must establish corps ZOP (GOSS (9.2.0) and WAR (9.0)). The German army boundaries shown on the map are used. Army boundaries may be modified beginning the Dec 23 AM GT (GOSS (9.2.0)).\n\n**Important:** The boundary between the US 1st Army and US 3rd Army boundaries is along the xx02 hex row on the SE and SW maps. The boundary may be modified beginning the Dec 23 AM GT (GOSS (9.2.0)).",
+    "crossRefs": ["9.2.0", "9.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-36.1.3",
+    "section": "36.1.3",
+    "title": "Dec 21 Full Logistics",
+    "summary": "Most Dec 21 scenarios do not use the full logistic system. Simplified logistic values are provided for German and Allied sides.",
+    "text": "Most scenarios do not use the full logistic system.\n\n**Logistics and GenS:**\n\u2022 All GOSS GenS rules apply (GOSS (15.0)). PSS are listed in WAR (15.0).\n\u2022 Do not use the logistic procedures for this scenario, instead use the below values:\n\n**German:**\n  a) All German army, corps, and Mech formation HQ have normal fuel.\n  b) The German ADV is three.\n  c) The German side receives three AmP each AM GT (including the Dec 21 AM GT).\n\n**Allied:**\n  a) All Allied HQ have normal fuel.\n  b) The Allied ADV is five.\n  c) The Allied side receives six AmP each AM GT.\n\n**Important:** Both sides may have a maximum of 10 AmP in stockpile at the beginning of the AM GT. AmP are stockpiled for each side, there is no need to assign them to armies.",
+    "crossRefs": ["15.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-36.1.4",
+    "section": "36.1.4",
+    "title": "Dec 21 Variable Weather & AP",
+    "summary": "Players may choose to use variable weather beginning the second AM GT. AP availability as given in the scenario.",
+    "text": "Players may choose to use variable weather in any scenario beginning the second AM GT in the scenario.\n\n**Important:** The number of AP in each scenario (except for the full four map campaign game) should remain the same as given in the scenario. As always atmospheric conditions may affect the number of AP available. Use GOSS (19.3.0) and WAR (20.1.0b).",
+    "crossRefs": ["19.3.0", "20.1.0b"],
+    "module": "war"
+  },
+  {
+    "id": "war-36.1.5",
+    "section": "36.1.5",
+    "title": "Dec 21 Leaders",
+    "summary": "Unless otherwise stated in scenario rules, all leaders begin each scenario activated.",
+    "text": "Unless otherwise stated in scenario rules, all leaders begin each scenario activated.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-37.0",
+    "section": "37.0",
+    "title": "Sparring on the Sauer (Scenario A)",
+    "summary": "Scenario A depicts the LXXX and LXXXV Corps near the defense lines at the start of the campaign, still fighting for the villages of Waldbilling and Cristnach.",
+    "text": "**37.0 SPARRING ON THE SAUER (Scenario A)**\nThe LXXX and LXXXV Corps have almost reached the defense lines that were their objectives at the start of the campaign. They are still fighting for the villages of Waldbilling and Cristnach, but generally both sides are too weak to push on each other.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-37.1.0",
+    "section": "37.1.0",
+    "title": "Scenario A: Scenario Length",
+    "summary": "Scenario A starts with the Dec 21 AM GT and ends at the conclusion of the Dec 24 PM GT.",
+    "text": "The scenario starts with the Dec 21 AM GT and ends at the conclusion of the Dec 24 PM GT.\n\n**Weather:** Use the historical weather for all GTs.\n\n**Air Points:** The Allied player has four AP available each AM and PM GT. Weather conditions apply.\n\n**Truck Point Availability:** TP are available for motorization only.\n  a) The German side has one TP.\n  b) The Allied side has six TP.\n\n**Logistics and GenS:**\n\u2022 All GOSS GenS rules apply (GOSS (15.0)). PSS are listed in WAR (15.0).\n\u2022 Do not use the logistic procedures for this scenario, instead use the below values:\n\n**German:**\n  a) All German army, corps, and Mech formation HQ have normal fuel.\n  b) The German ADV is three.\n  c) The German side receives three AmP each AM GT (including the Dec 21 AM GT).\n\n**Allied:**\n  a) All Allied HQ have normal fuel.\n  b) The Allied ADV is five.\n  c) The Allied side receives six AmP each AM GT.\n\n**Important:** Both sides may have a maximum of 10 AmP in stockpile at the beginning of the AM GT. AmP are stockpiled for each side, there is no need to assign them to armies.",
+    "crossRefs": ["15.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-37.2.0",
+    "section": "37.2.0",
+    "title": "Scenario A: Play Area",
+    "summary": "Scenario A is played within the SE map area depicted on the scenario description map for Dec 21, Scenario Group A.",
+    "text": "The scenario is played within the area of the SE map depicted on the scenario description map for Dec 21, Scenario Group A.\n\u2022 The western boundary for this scenario is the SE38xx hex column.\n\u2022 The northern boundary is the SWxx07 hex row.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-37.3.0",
+    "section": "37.3.0",
+    "title": "Scenario A: Set Up",
+    "summary": "Set up instructions for Scenario A, with the German player setting up first.",
+    "text": "The German player sets up first.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-37.4.0",
+    "section": "37.4.0",
+    "title": "Scenario A: Reinforcements",
+    "summary": "There are no scheduled replacements in Scenario A. Both sides may recycle step losses.",
+    "text": "There are no scheduled replacements. Both sides may recycle step losses (WAR (22.2.0)).",
+    "crossRefs": ["22.2.0"],
+    "module": "war"
+  },
+  {
+    "id": "war-37.4.1",
+    "section": "37.4.1",
+    "title": "Scenario A: German Reinforcements",
+    "summary": "German reinforcements for Scenario A, including the 79th VG Div and conditional 11th Pz Div arrival.",
+    "text": "The German player receives the following reinforcements:\n\n**Dec 21 AM GT:** 79th VG Div {11 units}, Attached; 1 x AT BU Co., 1x Pio BU Co. All units arrive at any 7th Army map edge entry hex.\n\n**11th Pz Div:** If any Allied unit occupies a hex to the east or north of the Sauer or Ourthe Rivers at the end of a German player turn, the German player may enter the 11th Pz Div {19 units} at Tier (SE7034) during the next German Movement Phase.\n\n**Important:** If the German player brings in the 11th Pz Div, the Allied receives four victory points.\n\n**Jan 1 AM GT:** I SS Pz Corps HQ at SE2607.\n\n**Jan 2 AM GT:** 9th SS Pz Div at SE2607. Use the list of 9th SS Pz Div units shown in the Dec 28 Northern Group set up list. Remove four additional steps (player's choice).",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-37.4.2",
+    "section": "37.4.2",
+    "title": "Scenario A: Allied Reinforcements",
+    "summary": "Allied reinforcements for Scenario A, including south reinforcements and 80th Inf Div units.",
+    "text": "The US player receives:\n  1) All south (S) reinforcements shown on the Master Reinforcement list starting the Dec 21 PM GT and\n  2) One Inf Rgt {3 Bn.'s} and one 105mm FA Bn. of the 80th Inf Div arrive on Dec 22 PM GT (player's choice).",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-37.4.3",
+    "section": "37.4.3",
+    "title": "Scenario A: US 10th Arm Div",
+    "summary": "CCR 10th Arm Div is in corps reserve with specific activation and movement restrictions.",
+    "text": "CCR 10th Arm Div is in corps reserve.\n\u2022 These units are not activated and may not move unless a German unit moves within four hexes of any unit of the reserve.\n\u2022 On the GT following activation, the units move normally.",
+    "crossRefs": [],
+    "module": "war"
+  },
+  {
+    "id": "war-37.5.0",
+    "section": "37.5.0",
+    "title": "Scenario A: Victory Conditions",
+    "summary": "Victory conditions for Scenario A, including German and Allied victory point hexes and sudden death victory.",
+    "text": "**German Victory Point Hexes:**\n  SE5730, SE5429\n  SE5128, SE4925\n  SE4725, SE4623\n  SE4426\n\n**Allied Victory Point Hexes:**\n  SE5730, SE4426\n  SE5032\n\n**German Sudden Death Victory:**\nThe German player wins a strategic victory at the end of any GT if there are no Allied units within the playing area.\n\n**Allied Sudden Death Victory:**\nThere is no Allied sudden victory.\n\n**End Scenario Victory:** If the German player does not meet the condition for a sudden death victory, both players total their respective victory point hexes each side controls.\n\u2022 Count all victory point hexes as one point.\n\u2022 If both totals are equal the game is a draw.\n\u2022 The player with the greater total wins the game.\n\n**Important:** The German player counts German victory point hexes and the Allied player counts Allied victory point hexes.",
+    "crossRefs": [],
+    "module": "war"
   }
 ]

@@ -50,6 +50,14 @@ export const GAME_SCENARIOS: Record<string, ScenarioDef[]> = {
   ],
   "atlantic-wall": [
     { id: "all", label: "All Scenarios" },
+    { id: "aw-intro", label: "Introductory Scenarios (1-3)" },
+    { id: "aw-goodwood", label: "1: Operation Goodwood" },
+    { id: "aw-epsom", label: "2: Operation Epsom" },
+    { id: "aw-cherbourg", label: "3: Battle for Cherbourg" },
+    { id: "aw-hedgerows", label: "4: Battle of the Hedgerows" },
+    { id: "aw-cobra", label: "5: Cobra" },
+    { id: "aw-dday", label: "6: D-Day, The Sixth of June" },
+    { id: "aw-campaign", label: "Campaign Game" },
   ],
 };
 
