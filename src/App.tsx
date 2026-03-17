@@ -36,6 +36,8 @@ const scenarioSeqOverlays: Record<string, SequenceOverlay> = {
   "lucky-forward": lfSeqOverlay as SequenceOverlay,
 };
 
+const SCENARIO_KEY = "goss-scenario";
+
 type View = "sop" | "flowchart" | "rules" | "ask" | "info";
 
 const THEME_KEY = "goss-theme";
@@ -73,6 +75,13 @@ function useGameModule() {
     return null;
   });
 
+  const [scenario, setScenario] = useState<string | null>(() => {
+    try {
+      return localStorage.getItem(SCENARIO_KEY) || null;
+    } catch { /* ignore */ }
+    return null;
+  });
+
   useEffect(() => {
     if (gameModule) {
       localStorage.setItem(GAME_KEY, gameModule);
@@ -81,13 +90,21 @@ function useGameModule() {
     }
   }, [gameModule]);
 
-  return { gameModule, setGameModule };
+  useEffect(() => {
+    if (scenario) {
+      localStorage.setItem(SCENARIO_KEY, scenario);
+    } else {
+      localStorage.removeItem(SCENARIO_KEY);
+    }
+  }, [scenario]);
+
+  return { gameModule, setGameModule, scenario, setScenario };
 }
 
 function App() {
   const [view, setView] = useState<View>("sop");
   const { theme, toggleTheme } = useTheme();
-  const { gameModule, setGameModule } = useGameModule();
+  const { gameModule, setGameModule, scenario, setScenario } = useGameModule();
 
   const allRules = useMemo(() => {
     const scenario = gameModule ? scenarioRuleSets[gameModule] ?? [] : [];
@@ -96,8 +113,8 @@ function App() {
 
   const phases = useMemo(() => {
     const overlay = gameModule ? scenarioSeqOverlays[gameModule] ?? null : null;
-    return mergeSequence(basePhases, overlay);
-  }, [gameModule]);
+    return mergeSequence(basePhases, overlay, scenario);
+  }, [gameModule, scenario]);
 
   const {
     progress,
@@ -139,7 +156,7 @@ function App() {
     <RulesProvider rules={allRules}>
       <AppShell
         sidebar={sidebar}
-        gameSelector={<GameSelector value={gameModule} onChange={setGameModule} />}
+        gameSelector={<GameSelector value={gameModule} onChange={setGameModule} scenario={scenario} onScenarioChange={setScenario} />}
         tabs={tabs}
         activeTab={view}
         onTabChange={(key) => setView(key as View)}

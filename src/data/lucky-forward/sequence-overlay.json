@@ -70,5 +70,105 @@
         ]
       }
     }
-  ]
+  ],
+  "scenarioOverrides": {
+    "september": {
+      "label": "September Scenario",
+      "modifications": [
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "gate": "LF September: Each US army has unique logistics — 3rd Army uses Logistics Table, 1st Army has simplified supply. German 1st and 5th Pz Armies each have their own ADV/AmP values (LF 29.3.0).",
+          "patch": {
+            "appendNotes": [
+              "3rd Army starts with 10 TPs and gains more as ports open — manage TP allocation carefully between ammo, fuel, and reinforcement delivery (LF 29.3.8).",
+              "German 1st Army has only 2 AmP in stockpile at start — conserve ammo early and avoid unnecessary FS missions until resupply arrives (LF 29.3.0)."
+            ]
+          }
+        },
+        {
+          "target": "allied-movement-segment",
+          "action": "modify",
+          "patch": {
+            "appendNotes": [
+              "September is the only month with Moselle River fords — check for fords aggressively before GD 27 removes them all permanently (LF 7.10.2b)."
+            ]
+          }
+        }
+      ]
+    },
+    "october": {
+      "label": "October (Extended September)",
+      "modifications": [
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "gate": "LF October: Extends September scenario through GD 35. Same army-specific logistics as September, with additional replacements and reinforcements (LF 29.4.0).",
+          "patch": {
+            "appendNotes": [
+              "October extends September logistics — 3rd Army gains additional TPs and the Allied lull deadline of GD 36 is critical for future logistic benefits (LF 29.4.0, 24.0).",
+              "German logistics improve slightly in October — 5th Pz Army gets additional AmP from OKW reserve (LF 29.4.3)."
+            ]
+          }
+        }
+      ]
+    },
+    "november": {
+      "label": "November Scenario",
+      "modifications": [
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "gate": "LF November: Starts GD 65. Different logistics tables apply — US 3rd Army has increased TP capacity. German forces have improved AmP allocation (LF 29.5.0).",
+          "patch": {
+            "appendNotes": [
+              "November starts with improved Allied logistics — if the GD 36 lull was declared and lasted 28 GDs, logistic benefits may now be active (LF 29.5.5, 24.0).",
+              "German minefields should be well established by November (GD 48+ deployment) — Allied players need engineer support for breaching operations (LF 7.13.4a)."
+            ]
+          }
+        }
+      ]
+    },
+    "december": {
+      "label": "December Scenario",
+      "modifications": [
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "gate": "LF December: Starts GD 88. Winter weather affects logistics. Both sides have mature supply lines with full TP allocations (LF 29.6.0).",
+          "patch": {
+            "appendNotes": [
+              "December weather significantly impacts operations — expect more overcast and mud/snow conditions that reduce movement and air support availability (LF 29.6.0).",
+              "By December, the German defensive line should be heavily fortified with minefields — frontal assaults are costly without concentrated FS and engineer support."
+            ]
+          }
+        },
+        {
+          "target": "update-game-turn-indicator",
+          "action": "modify",
+          "patch": {
+            "appendNotes": [
+              "ENA becomes available from GD 83 onward — December scenarios start with ENA already enabled for night operations (LF 3.4)."
+            ]
+          }
+        }
+      ]
+    },
+    "campaign": {
+      "label": "Campaign",
+      "modifications": [
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "gate": "LF Campaign: All logistics rules apply across all monthly periods. Army-specific ADV, AmP, and TP values change each month — refer to each monthly scenario section for current values (LF 29.3–29.6).",
+          "patch": {
+            "appendNotes": [
+              "Campaign games must track logistics transitions at each monthly boundary — TP allocations, ADV values, and reinforcement schedules all shift (LF 29.3–29.6).",
+              "The GD 36 lull decision is the single most consequential strategic choice in the campaign — it affects logistics for both sides through the end of the game (LF 24.0)."
+            ]
+          }
+        }
+      ]
+    }
+  }
 }

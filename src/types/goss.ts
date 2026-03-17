@@ -80,6 +80,12 @@ export interface SequenceOverlay {
   module: string;           // e.g., "hurtgen", "war"
   moduleLabel: string;      // e.g., "HHF", "WaR"
   modifications: SequenceModification[];
+  scenarioOverrides?: Record<string, ScenarioOverride>; // keyed by scenario id
+}
+
+export interface ScenarioOverride {
+  label: string;            // display name
+  modifications: SequenceModification[]; // additional mods for this scenario
 }
 
 export interface SequenceModification {

@@ -2,20 +2,31 @@ import type { Phase, SubPhase, SequenceOverlay, SequenceModification } from "../
 
 /**
  * Deep-clone phases and apply a scenario overlay.
+ * If a specific scenario is selected, also applies scenario-specific overrides.
  * Returns a new phases array with scenario annotations merged in.
  * Base sequence.json is never mutated.
  */
 export function mergeSequence(
   basPhases: Phase[],
-  overlay: SequenceOverlay | null
+  overlay: SequenceOverlay | null,
+  scenario?: string | null
 ): Phase[] {
   if (!overlay || overlay.modifications.length === 0) return basPhases;
 
   // Deep clone
   const phases: Phase[] = JSON.parse(JSON.stringify(basPhases));
 
+  // Apply base game-module modifications (apply to all scenarios)
   for (const mod of overlay.modifications) {
     applyModification(phases, mod, overlay.moduleLabel);
+  }
+
+  // Apply scenario-specific overrides if a scenario is selected
+  if (scenario && overlay.scenarioOverrides?.[scenario]) {
+    const override = overlay.scenarioOverrides[scenario];
+    for (const mod of override.modifications) {
+      applyModification(phases, mod, overlay.moduleLabel);
+    }
   }
 
   return phases;
@@ -68,10 +79,19 @@ function applyModification(
         item.scenarioGate = mod.gate;
       }
       if (mod.patch?.appendContent) {
-        item.appendedContent = mod.patch.appendContent;
+        // If there's already appended content (from base overlay), concatenate
+        if (item.appendedContent) {
+          item.appendedContent += "\n\n" + mod.patch.appendContent;
+        } else {
+          item.appendedContent = mod.patch.appendContent;
+        }
       }
       if (mod.patch?.appendNotes) {
-        item.appendedNotes = mod.patch.appendNotes;
+        if (item.appendedNotes) {
+          item.appendedNotes = [...item.appendedNotes, ...mod.patch.appendNotes];
+        } else {
+          item.appendedNotes = mod.patch.appendNotes;
+        }
       }
       break;
     }
