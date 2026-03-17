@@ -156,6 +156,22 @@ export function PhaseStepper({
         </div>
       )}
 
+      {/* Scenario gate banner */}
+      {active.scenarioGate && (
+        <div className="mb-4 rounded-lg border border-blue-300 bg-blue-50 px-4 py-3 dark:border-blue-800 dark:bg-blue-900/20">
+          <div className="flex items-center gap-2">
+            {active.scenarioModule && (
+              <span className="shrink-0 rounded bg-blue-500 px-1.5 py-0.5 text-xs font-bold text-white">
+                {active.scenarioModule}
+              </span>
+            )}
+            <span className="text-sm text-blue-800 dark:text-blue-300">
+              <RuleInlineText text={active.scenarioGate} />
+            </span>
+          </div>
+        </div>
+      )}
+
       {/* Description */}
       <p className="mb-4 leading-relaxed text-stone-600 dark:text-stone-300">
         <RuleInlineText text={active.description} />
@@ -165,6 +181,23 @@ export function PhaseStepper({
       {active.content && (
         <div className="mb-4">
           <SoPMarkdown content={active.content} />
+        </div>
+      )}
+
+      {/* Scenario appended content */}
+      {active.appendedContent && (
+        <div className="mb-4">
+          <div className="mb-2 flex items-center gap-2 border-t-2 border-blue-400 pt-2 dark:border-blue-700">
+            {active.scenarioModule && (
+              <span className="rounded bg-blue-500 px-1.5 py-0.5 text-xs font-bold text-white">
+                {active.scenarioModule}
+              </span>
+            )}
+            <span className="text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+              Scenario Rules
+            </span>
+          </div>
+          <SoPMarkdown content={active.appendedContent} />
         </div>
       )}
 
@@ -185,6 +218,31 @@ export function PhaseStepper({
             </li>
           ))}
         </ul>
+        </div>
+      )}
+
+      {/* Scenario appended tips */}
+      {active.appendedNotes && active.appendedNotes.length > 0 && (
+        <div className="mb-4">
+          <h3 className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+            {active.scenarioModule && (
+              <span className="rounded bg-blue-500 px-1 py-0.5 text-[10px] font-bold text-white">
+                {active.scenarioModule}
+              </span>
+            )}
+            💡 Scenario Tips
+          </h3>
+          <ul className="space-y-1.5 border-l-2 border-blue-400/30 pl-3">
+            {active.appendedNotes.map((note, i) => (
+              <li
+                key={i}
+                className="flex gap-2 text-sm text-stone-500 dark:text-stone-400"
+              >
+                <span className="mt-0.5 text-blue-400">&bull;</span>
+                <RuleInlineText text={note} />
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 

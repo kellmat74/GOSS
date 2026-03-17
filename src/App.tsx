@@ -12,21 +12,28 @@ import { RulesProvider } from "./context/RulesContext";
 import { GlossaryProvider } from "./context/GlossaryContext";
 import { useSoPProgress } from "./hooks/useSoPProgress";
 import { mergeRules } from "./utils/mergeRules";
+import { mergeSequence } from "./utils/mergeSequence";
 import sequenceData from "./data/goss/sequence.json";
 import gossRules from "./data/goss/rules.json";
 import warRules from "./data/war/rules.json";
 import hurtgenRules from "./data/hurtgen/rules.json";
 import lfRules from "./data/lucky-forward/rules.json";
 import awRules from "./data/atlantic-wall/rules.json";
-import type { Phase, RuleEntry } from "./types/goss";
+import hurtgenSeqOverlay from "./data/hurtgen/sequence-overlay.json";
+import lfSeqOverlay from "./data/lucky-forward/sequence-overlay.json";
+import type { Phase, RuleEntry, SequenceOverlay } from "./types/goss";
 
-const phases = sequenceData.phases as Phase[];
+const basePhases = sequenceData.phases as Phase[];
 const baseRules = gossRules as RuleEntry[];
 const scenarioRuleSets: Record<string, RuleEntry[]> = {
   war: warRules as RuleEntry[],
   hurtgen: hurtgenRules as RuleEntry[],
   "lucky-forward": lfRules as RuleEntry[],
   "atlantic-wall": awRules as RuleEntry[],
+};
+const scenarioSeqOverlays: Record<string, SequenceOverlay> = {
+  hurtgen: hurtgenSeqOverlay as SequenceOverlay,
+  "lucky-forward": lfSeqOverlay as SequenceOverlay,
 };
 
 type View = "sop" | "flowchart" | "rules" | "ask" | "info";
@@ -86,6 +93,12 @@ function App() {
     const scenario = gameModule ? scenarioRuleSets[gameModule] ?? [] : [];
     return mergeRules(baseRules, scenario);
   }, [gameModule]);
+
+  const phases = useMemo(() => {
+    const overlay = gameModule ? scenarioSeqOverlays[gameModule] ?? null : null;
+    return mergeSequence(basePhases, overlay);
+  }, [gameModule]);
+
   const {
     progress,
     currentPhase,

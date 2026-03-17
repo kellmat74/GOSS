@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import type { SoPProgress, Phase, SubPhase, GameTurn, TimeOfDay } from "../types/goss";
 
 const STORAGE_KEY = "goss-sop-progress";
@@ -42,6 +42,23 @@ function getSegments(sub: SubPhase | null): SubPhase[] {
 
 export function useSoPProgress(phases: Phase[]) {
   const [progress, setProgress] = useState<SoPProgress>(loadProgress);
+  const prevPhasesRef = useRef(phases);
+
+  // Reset progress when phases array changes (scenario switch may alter structure)
+  useEffect(() => {
+    if (prevPhasesRef.current !== phases) {
+      prevPhasesRef.current = phases;
+      // Clamp indices to valid range to prevent stale references
+      setProgress((p) => {
+        const phaseIdx = Math.min(p.currentPhaseIndex, phases.length - 1);
+        const phase = phases[phaseIdx];
+        const subIdx = phase && p.currentSubPhaseIndex >= 0
+          ? Math.min(p.currentSubPhaseIndex, phase.subPhases.length - 1)
+          : p.currentSubPhaseIndex;
+        return { ...p, currentPhaseIndex: phaseIdx, currentSubPhaseIndex: subIdx, currentSegmentIndex: -1 };
+      });
+    }
+  }, [phases]);
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));

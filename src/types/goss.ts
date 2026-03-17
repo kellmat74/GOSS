@@ -9,6 +9,11 @@ export interface SubPhase {
   notes: string[];
   checklist: string[];
   subPhases?: SubPhase[];
+  // Scenario overlay annotations (populated by mergeSequence)
+  scenarioGate?: string;
+  appendedContent?: string;
+  appendedNotes?: string[];
+  scenarioModule?: string;
 }
 
 export interface Phase {
@@ -21,6 +26,11 @@ export interface Phase {
   content?: string;
   notes: string[];
   subPhases: SubPhase[];
+  // Scenario overlay annotations (populated by mergeSequence)
+  scenarioGate?: string;
+  appendedContent?: string;
+  appendedNotes?: string[];
+  scenarioModule?: string;
 }
 
 export interface SequenceOfPlay {
@@ -56,6 +66,32 @@ export interface RuleEntry {
   text: string;
   crossRefs: string[];
   module?: string; // undefined = GOSS system rule, "war" = WaR-specific, etc.
+}
+
+// Scenario overlay fields added to SubPhase/Phase after merge
+export interface ScenarioAnnotation {
+  gate?: string;           // callout banner text (e.g., "HHF: ENA always available")
+  appendedContent?: string; // scenario content shown below base content
+  appendedNotes?: string[]; // scenario tips appended to base tips
+  scenarioModule?: string;  // source module label (e.g., "HHF", "WaR")
+}
+
+export interface SequenceOverlay {
+  module: string;           // e.g., "hurtgen", "war"
+  moduleLabel: string;      // e.g., "HHF", "WaR"
+  modifications: SequenceModification[];
+}
+
+export interface SequenceModification {
+  target: string;           // item id, e.g., "joint-command-phase"
+  action: "modify" | "add" | "remove" | "gate";
+  gate?: string;            // for "gate": callout banner text
+  patch?: {
+    appendContent?: string;
+    appendNotes?: string[];
+  };
+  item?: SubPhase;          // for "add": full item to insert
+  insertAfter?: string;     // for "add": id of sibling (null = prepend)
 }
 
 export interface SoPProgress {
