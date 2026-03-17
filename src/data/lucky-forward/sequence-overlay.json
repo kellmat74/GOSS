@@ -72,6 +72,21 @@
     }
   ],
   "scenarioOverrides": {
+    "gremercy-forest": {
+      "label": "Intro: Battle for Gremercy Forest",
+      "modifications": [
+        {
+          "target": "joint-logistics-phase",
+          "action": "gate",
+          "gate": "LF Intro: Simplified logistics — no Logistics Table, no fuel points. All units are in supply. Limited ammo rules apply (LF 29.2.0)."
+        },
+        {
+          "target": "joint-command-phase",
+          "action": "gate",
+          "gate": "LF Intro: Simplified command — no command boundaries or OoC penalties in this introductory scenario (LF 29.2.0)."
+        }
+      ]
+    },
     "september": {
       "label": "September Scenario",
       "modifications": [

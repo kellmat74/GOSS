@@ -31,6 +31,7 @@ export const GAME_SCENARIOS: Record<string, ScenarioDef[]> = {
   ],
   "lucky-forward": [
     { id: "all", label: "All Scenarios" },
+    { id: "gremercy-forest", label: "Intro: Gremercy Forest" },
     { id: "september", label: "September" },
     { id: "october", label: "October (Extended Sep)" },
     { id: "november", label: "November" },
