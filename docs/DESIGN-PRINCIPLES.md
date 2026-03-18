@@ -313,14 +313,72 @@ When starting a new game system assistant:
 - **No game-specific content in base tips.** Tips should reference only the base rules system, not scenario-specific rules. Scenario tips go in the overlay.
 
 ### Scenario Content
-- **Gates for skipped phases.** If a scenario doesn't use a phase, add a gate banner — don't remove the phase (the content is still educational).
-- **Appended content for modifications.** Scenario-specific procedures appear below base content with a blue divider and module badge.
-- **Appended tips for scenario advice.** Scenario-specific tips appear in a separate blue-accented section.
-- **Parenthesized references in overlay JSON.** Overlay content goes through the same `SoPMarkdown` → `RuleInlineText` pipeline, so references must use `(X.Y.Z)` format. Write `WAR (9.2.0)` not `WAR 9.2.0` — the prefix gives context while the parens enable auto-linking.
+
+#### The Verbatim Rule: Everything From the Rulebook Must Be As Written
+This applies to **all** scenario content — inserted phases, appended content, everything. Never paraphrase, reorganize into tables, or consolidate multiple rules into a summary. If the rule says it in prose, show it in prose. If players need a quick-reference table, that's what Tips are for.
+
+#### Inserted Phases (Entirely New SoP Phases)
+When a scenario adds phases that don't exist in the base SoP (e.g., Pre-Dawn Surprise GT, Airborne Assault Stage, Amphibious Assault Stage):
+- Use `action: "add"` with `insertAfter` to place the new phase in the correct SoP position
+- **Parent phase content:** Set to verbatim rule text. If the rule is monolithic (one rule section covering the whole phase), put only the preamble/overview on the parent.
+- **Sub-phases:** If a monolithic rule naturally divides into sub-sections (e.g., "German Mode Determination Phase... German Movement Phase... German Combat Phase"), split the verbatim text so each sub-phase gets its relevant portion. Keep the exact wording — just divide at the natural boundaries.
+- **Per-section sub-phases:** When each sub-phase maps to its own rule section (e.g., AW 41.1.0, 41.2.0, 41.3.0), set each sub-phase's content to that section's verbatim text.
+- Use `ruleRef` on each sub-phase so the section badge links correctly.
+
+#### Appended Content on Existing Phases (`appendContent`)
+When a scenario modifies an existing base SoP phase:
+- Use `action: "modify"` with `patch.appendContent`
+- Content must be **verbatim rule text** from the referenced sections
+- Format: `### Rule Title (section)\n\nverbatim text`
+- **One section per heading block.** Don't merge multiple rules into one block.
+- **Trim to relevance.** If a monolithic rule covers mode, movement, AND combat but this step is just about movement, include only the movement portion. Still verbatim — just the relevant excerpt.
+- **Duplication is OK when appropriate.** If the same rule genuinely applies to both Allied and Axis construction phases, it's fine to show it on both steps. Players shouldn't have to navigate away to see the rule that governs what they're doing.
+- **Don't fabricate tables or timelines.** If the source rule uses prose ("May not conduct hasty bridge demolition until the Dec 16 PM GT"), show the prose. Don't reorganize it into a markdown table. Reorganized reference tables belong in Tips, not content.
+
+#### Appended Tips for Scenario Advice (`appendNotes`)
+- Scenario-specific tips appear in a separate section with the module badge
+- Tips CAN organize, summarize, and create reference tables — this is the value-add layer
+- Tips can synthesize information from multiple rules into consolidated guidance
+- Always cite source sections in parenthesized format so they auto-link
+
+#### Scenario Scope: Which Scenarios See Which Modifications
+- Modifications in the base `modifications` array apply to ALL scenarios in that game module
+- Use `scenarioOverrides` for modifications that only apply to specific scenarios
+- If a modification applies to most but not all scenarios, put it in base modifications and use `action: "remove"` in the excluded scenario's overrides to remove it
+- Example: WaR Pre-Dawn GT applies to Dec 16 scenarios (1-5) but not Dec 21+. Put it in base modifications, add a remove action in dec21 overrides.
+
+#### Parenthesized References in Overlay JSON
+Overlay content goes through the same `SoPMarkdown` → `RuleInlineText` pipeline, so references must use `(X.Y.Z)` format. Write `WAR (9.2.0)` not `WAR 9.2.0` — the prefix gives context while the parens enable auto-linking.
+
+#### Gates for Skipped Phases
+If a scenario doesn't use a phase, add a gate banner — don't remove the phase (the content is still educational).
 
 ---
 
-## 11. File Organization
+## 11. Scenario Rules Extraction
+
+### Extract ALL Scenario-Specific Sections
+Don't stop at the rules that overlap with the base rulebook. Game modules typically have:
+- **Overlapping sections** that modify base rules (e.g., WAR 9.2.0 modifying base 9.2.0)
+- **Scenario sections** with setup, victory conditions, special rules, reinforcement schedules
+
+Both must be extracted into the scenario's `rules.json`. Without scenario sections, rule references in overlay content (e.g., `(30.3.0)`) won't resolve as clickable links because `getRuleBySection()` won't find them.
+
+### Typical Scenario Section Structure
+Most wargames follow a pattern:
+- **Scenario overview/presentation** (maps, counters, setup format)
+- **Per-scenario blocks** (each with length, special rules, setup, reinforcements, victory conditions)
+- **Campaign game** (combining multiple scenarios)
+- **Special modules** (airborne, amphibious, strategic map — game-specific)
+
+### Extraction Strategy for Scenarios
+- Use parallel agents split by section range (e.g., one agent per scenario)
+- Large modules (Airborne: 41.x, Amphibious: 42.x) may need their own agent
+- Validate that every section referenced in the overlay content exists in rules.json
+
+---
+
+## 12. File Organization
 
 ```
 src/
@@ -369,7 +427,29 @@ worker/
 
 ---
 
-## 12. Versioning
+## 13. Common Pitfalls (Lessons Learned)
+
+### AI-Generated Content Creep
+The most insidious issue: AI assistants will paraphrase, reorganize, and "improve" rule text without being asked. This manifests as:
+- **Summarized tables** replacing prose rules (e.g., "Allied may not demolish until Dec 16 PM" becomes a timeline table)
+- **Consolidated blocks** merging multiple scattered rules into one tidy paragraph
+- **Added context** like "this is a major complexity increase" that isn't in the source
+- **Checklists** that are duplicative of the rules text
+
+**Prevention:** After any AI-assisted content generation, audit every `content` and `appendContent` field against the source rules. Use a script to compare overlay text against `rules.json` entries. Tips/notes are the ONLY place for AI-original content.
+
+### Monolithic Rules Need Splitting
+Some rule sections (e.g., WAR 30.2.0) cover an entire special GT in one block — mode determination, movement, AND combat all in one section. When this maps to multiple sub-phases in the SoP, split the verbatim text at natural boundaries. Each sub-phase gets its relevant portion; the parent gets the preamble.
+
+### Full Rule Text on Wrong Steps
+When the same rule section applies to multiple SoP phases, don't dump the entire rule on every step. Excerpt the relevant portion for each step. Still verbatim — just the part that matters for that specific phase.
+
+### Missing Scenario Rules Break Links
+If overlay content references `(30.3.0)` but that section doesn't exist in the scenario's `rules.json`, it renders as grey (unclickable) text. Always extract ALL scenario rule sections — not just the ones that overlap with base rules.
+
+---
+
+## 14. Versioning
 
 - Increment sub-version on every push (v2.4 → v2.5)
 - Major version only on explicit request

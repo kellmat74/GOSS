@@ -6,11 +6,16 @@ interface RulesContextValue {
   openRule: (sectionOrId: string) => void;
   closeRule: () => void;
   goBack: () => void;
+  goNext: () => void;
+  goPrev: () => void;
   activeRule: RuleEntry | null;
   history: RuleEntry[];
   getRuleBySection: (sectionId: string) => RuleEntry | undefined;
   /** Get all rules for a section (base + any scenario overlays) */
   getRulesForSection: (section: string) => RuleEntry[];
+  /** Whether there's a next/prev rule to navigate to */
+  hasNext: boolean;
+  hasPrev: boolean;
 }
 
 const RulesContext = createContext<RulesContextValue | null>(null);
@@ -81,6 +86,50 @@ export function RulesProvider({ rules, children }: RulesProviderProps) {
     [sectionMultiMap]
   );
 
+  // Build ordered unique section list for prev/next navigation
+  const orderedSections = useMemo(() => {
+    const seen = new Set<string>();
+    const sections: string[] = [];
+    for (const r of rules) {
+      const key = r.section.toLowerCase();
+      if (!seen.has(key)) {
+        seen.add(key);
+        sections.push(r.section);
+      }
+    }
+    return sections;
+  }, [rules]);
+
+  const activeIndex = useMemo(() => {
+    if (!activeRule) return -1;
+    return orderedSections.findIndex(
+      (s) => s.toLowerCase() === activeRule.section.toLowerCase()
+    );
+  }, [activeRule, orderedSections]);
+
+  const hasPrev = activeIndex > 0;
+  const hasNext = activeIndex >= 0 && activeIndex < orderedSections.length - 1;
+
+  const goPrev = useCallback(() => {
+    if (activeIndex <= 0) return;
+    const prevSection = orderedSections[activeIndex - 1];
+    const rule = getRuleBySection(prevSection);
+    if (rule) {
+      setHistory([]);
+      setActiveRule(rule);
+    }
+  }, [activeIndex, orderedSections, getRuleBySection]);
+
+  const goNext = useCallback(() => {
+    if (activeIndex < 0 || activeIndex >= orderedSections.length - 1) return;
+    const nextSection = orderedSections[activeIndex + 1];
+    const rule = getRuleBySection(nextSection);
+    if (rule) {
+      setHistory([]);
+      setActiveRule(rule);
+    }
+  }, [activeIndex, orderedSections, getRuleBySection]);
+
   const openRule = useCallback(
     (sectionOrId: string) => {
       // Try by ID first (for direct clicks from tree/search with specific rule)
@@ -108,8 +157,8 @@ export function RulesProvider({ rules, children }: RulesProviderProps) {
   }, []);
 
   const value = useMemo(
-    () => ({ rules, openRule, closeRule, goBack, activeRule, history, getRuleBySection, getRulesForSection }),
-    [rules, openRule, closeRule, goBack, activeRule, history, getRuleBySection, getRulesForSection]
+    () => ({ rules, openRule, closeRule, goBack, goNext, goPrev, activeRule, history, getRuleBySection, getRulesForSection, hasNext, hasPrev }),
+    [rules, openRule, closeRule, goBack, goNext, goPrev, activeRule, history, getRuleBySection, getRulesForSection, hasNext, hasPrev]
   );
 
   return <RulesContext.Provider value={value}>{children}</RulesContext.Provider>;

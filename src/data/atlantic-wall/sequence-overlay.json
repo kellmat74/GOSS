@@ -1,0 +1,603 @@
+{
+  "module": "atlantic-wall",
+  "moduleLabel": "AW",
+  "modifications": [
+    {
+      "target": "phases",
+      "action": "add",
+      "insertBeforePhase": "joint-pre-game-day-activities",
+      "item": {
+        "id": "aw-airborne-assault-stage",
+        "name": "Airborne Assault Stage",
+        "ruleRef": "41.0",
+        "timing": "conditional",
+        "player": "both",
+        "description": "June 6 AM GT only. The D-Day Airborne Assault occurs immediately before the beginning of the June 6 AM GT. Both sides conduct activity during this stage. Charts and tables are on the Airborne Assault Tables Card (AW (41.0)).",
+        "notes": [
+          "The Airborne Assault Stage is NOT a solitaire exercise — both sides conduct movement and combat during this stage (AW (41.0)).",
+          "All DZs remain on the Battlefield Map until the June 10 AM GT (AW (41.1.0)).",
+          "After the Airborne Assault Stage, proceed to the Amphibious Assault Stage (AW (42.0)) before starting the normal June 6 AM GT."
+        ],
+        "subPhases": [
+          {
+            "id": "aw-airborne-dz-placement",
+            "name": "1. Drop Zone Placement",
+            "ruleRef": "41.1.0",
+            "player": "both",
+            "description": "Establish Drop Zones (DZs) for each airborne division before drops begin.",
+            "content": "Before airborne units can start landing, players must establish **Drop Zones (DZs)** for each airborne division. All DZs remain on the Battlefield Map until the June 10 AM GT.",
+            "notes": [
+              "Resolve Pegasus Bridge first — its success or failure affects 6th Airborne's opening position east of the Orne (AW (41.1.1)).",
+              "DZ scatter can shift your landing zones significantly — plan for contingencies if the DZ moves away from key objectives."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-airborne-drop",
+            "name": "2. Airborne Drop",
+            "ruleRef": "41.2.0",
+            "player": "both",
+            "description": "Para units drop onto or near their DZs. Generate dummy units and resolve scatter.",
+            "content": "The Allied player begins airdropping his paratroop (Para) units onto the map at their respective DZs. All Para units are dropped as Coys, while HQs, artillery and air landing/Glider infantry land as Btns or half Btns. In each segment, conduct the full landing procedure for each DZ prior to moving to the next DZ.",
+            "notes": [
+              "Unit scatter is rolled per individual para unit — some will land on the DZ, others may scatter significantly. This is the fog of war in action.",
+              "FoW dummy units are critical for confusing the German response — spread them to draw German forces away from your actual landing zones (AW (41.2.2))."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-airborne-1st-allied-move",
+            "name": "3. 1st Allied Movement",
+            "ruleRef": "41.3.0",
+            "player": "both",
+            "description": "Allied airborne units conduct their first movement. Stacking and FoW rules apply.",
+            "content": "The Allied movement segment is conducted in the following order:\n• Para Coy reorganization\n• FoW unit re-group\n• Movement.",
+            "notes": [
+              "Use this first movement to consolidate scattered units toward objectives and DZs. Reorganization at DZ hexes can restore combat effectiveness (AW (41.3.4))."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-airborne-glider-landing",
+            "name": "4. Glider Landing",
+            "ruleRef": "41.4.0",
+            "player": "both",
+            "description": "Glider units land on or near DZs.",
+            "content": "The Allied side now lands all scheduled Glider units on their respective DZs. Glider units do not have a FoW side and are always considered re-grouped.\nNote: Some of the units show a \"para\" symbol. Treat all units scheduled to land during the Glider Landing Segment as glider units.",
+            "notes": [
+              "Gliders carry heavier equipment (AT guns, light vehicles) that para units lack — getting them on target near the DZ is critical for holding objectives against German counterattacks."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-airborne-1st-allied-combat",
+            "name": "5. 1st Allied Combat",
+            "ruleRef": "41.5.0",
+            "player": "both",
+            "description": "Allied airborne units may conduct combat against German units.",
+            "content": "The Allied player may conduct attacks using any non-FoW units that are adjacent to enemy units. FoW units may not participate in an attack, however they do defend normally.\n• Each German occupied hex may be attacked once per Allied Airborne Combat segment.\n• A German occupied hex can be attacked from one friendly occupied hex only (i.e., Allied units from different hexes may not attack the same hex).\n• In-battery artillery units that are adjacent to an enemy unit may add their barrage strength to the attack; however, the one attacking stack rule still applies.\n• Each Allied unit may attack only one enemy occupied hex per segment.\n• A unit cannot attack into or across prohibited terrain.\n• Units may not attack across un-bridged river hexsides.\n• All units in a hex must defend as one force (any overstacked units are ignored-owner's choice).\n• All units in a hex do not have to attack, nor must they attack the same enemy hex.",
+            "notes": [
+              "Early airborne combat is about seizing key positions (bridges, crossroads, battery positions) before the Germans can react in force."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-airborne-1st-german-move",
+            "name": "6. 1st German Movement",
+            "ruleRef": "41.6.0",
+            "player": "both",
+            "description": "German units respond to the airborne landings with their first movement.",
+            "content": "German units have a limited ability to move during the Allied Airborne Stage.",
+            "notes": [
+              "German response is limited by activation — not all units can react immediately. Focus on units closest to the DZs and key objectives."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-airborne-1st-german-combat",
+            "name": "7. 1st German Combat",
+            "ruleRef": "41.7.0",
+            "player": "both",
+            "description": "German units may conduct combat against Allied airborne units.",
+            "content": "The German player may conduct attacks against Allied units. The procedure is identical to the one listed in AW (41.5.0).",
+            "notes": [
+              "German counterattacks during the Airborne Stage can eliminate isolated para units — the Allied player should avoid leaving small units exposed."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-airborne-2nd-allied-move",
+            "name": "8. 2nd Allied Movement",
+            "ruleRef": "41.8.0",
+            "player": "both",
+            "description": "Allied airborne units conduct a second movement phase.",
+            "content": "The Allied player may conduct movement using the same procedures outlined in the First Allied Movement Segment (AW (41.3.0)).\nException: Units starting the movement segment in a Marsh hex may move one hex if not moving along a road.",
+            "notes": [
+              "The second movement is your chance to adjust after seeing the German response — consolidate around objectives you can hold until the beach landings link up."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-airborne-2nd-allied-combat",
+            "name": "9. 2nd Allied Combat",
+            "ruleRef": "41.9.0",
+            "player": "both",
+            "description": "Allied airborne units conduct a second round of combat.",
+            "content": "The Allied player may conduct combat using the same procedures outlined in the First Allied Combat Segment (AW (41.5.0)).",
+            "notes": [
+              "Use the second combat round to finish clearing objectives that survived the first assault — don't leave contested positions for the German second movement."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-airborne-2nd-german-move",
+            "name": "10. 2nd German Movement",
+            "ruleRef": "41.10.0",
+            "player": "both",
+            "description": "German units conduct a second movement in response to the airborne landings.",
+            "content": "The German player may move any unit activated in the First German Movement Segment.\n• Activated units may move up their full printed MA, however when entering a hex within three hexes of an Allied unit, multiply all MP costs by two.\n• The German side may activate two additional units that are within six hexes of a CW unit and two units that are within six hexes of a US unit.",
+            "notes": [
+              "German second movement can bring reinforcements from further away — watch for counterattack buildups around your key objectives."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-airborne-2nd-german-combat",
+            "name": "11. 2nd German Combat",
+            "ruleRef": "41.11.0",
+            "player": "both",
+            "description": "German units conduct a second round of combat. After this, the Airborne Assault Stage ends.",
+            "content": "The German player may conduct attacks against Allied units. The procedure is identical to the one listed in AW (41.6.0).",
+            "notes": [
+              "This is the final segment of the Airborne Stage — after resolution, airborne positions are set for the beginning of the beach invasion.",
+              "From June 6 PM onward, glider reinforcements arrive at the start of Allied Movement Phase — plan DZ access routes for incoming gliders (AW (41.12.0))."
+            ],
+            "checklist": []
+          }
+        ],
+        "content": "The D-Day Airborne Assault is simulated by the **Airborne Assault Stage** that occurs immediately before the beginning of the June 6 AM GT. The Airborne Assault Stage is not a solitaire exercise, both sides conduct activity during this stage. The charts and tables required for this module are found on the Airborne Assault Tables Card. There are 11 segments in this stage and they are conducted in the following order:\n1. Drop Zone Placement Segment\n2. Airborne Drop Segment\n3. 1st Allied Movement Segment\n4. Glider Landing Segment\n5. 1st Allied Combat Segment\n6. 1st German Movement Segment\n7. 1st German Combat Segment\n8. 2nd Allied Movement Segment\n9. 2nd Allied Combat Segment\n10. 2nd German Movement Segment\n11. 2nd German Combat Segment"
+      }
+    },
+    {
+      "target": "phases",
+      "action": "add",
+      "insertBeforePhase": "joint-pre-game-day-activities",
+      "item": {
+        "id": "aw-amphibious-assault-stage",
+        "name": "Amphibious Assault Stage",
+        "ruleRef": "42.0",
+        "timing": "conditional",
+        "player": "both",
+        "description": "Conducted prior to the June 6 AM GT (after the Airborne Assault Stage), and then prior to each subsequent GT until all beaches are fully cleared. There are three sub-phases, each with 8 segments (AW (42.0)).",
+        "notes": [
+          "Normally there will be two Amphibious Stages: June 6 AM GT and June 6 PM GT. If all beaches are not cleared by the end of June 6 PM, continue each successive GT until cleared (AW (42.4.0)).",
+          "The first sub-phase of June 6 AM has three EXTRA segments before the Landing Segment: Pointe du Hoc Assault, Utah Beach Drift, and DD Tank Segments (AW (42.4.0)).",
+          "Naval units are NOT available for NGS on June 6 — they are supporting the landings. NGS available starting June 7 AM or when all beaches are cleared (AW (38.3.0))."
+        ],
+        "subPhases": [
+          {
+            "id": "aw-amphibious-special-segments",
+            "name": "Special Segments (1st Sub-Phase Only)",
+            "ruleRef": "42.5.0",
+            "player": "both",
+            "description": "June 6 AM GT, 1st sub-phase only: Pointe du Hoc, Utah Drift, and DD Tanks are resolved before the regular landing segments.",
+            "content": "The US player places the Pointe du Hoc assault force (two ranger invasion units denoted on the Amphibious Assault Diagram) in hex C6402.\n• To determine if the guns are actually in place, the German side rolls 1d10.\n  • If the result is greater than \"zero,\" the StP is flipped over to its reverse side (without the guns).\n  • If the result is \"zero\" the guns are in place and the StP is treated normally.\n• During the June 6 AM GT Allied Movement Phase, the rangers must assault the StP.\n• The US player rolls 1d10 for each step of rangers (each ranger unit has two steps).\n  • For each result of 0-3, the StP takes one hit. If the StP guns are in place, one hit destroys the guns (flip the StP to its reverse side) and a second hit eliminates the StP. If the guns are not in place, one hit eliminates the StP.\n• The German side then rolls 1d10 for each step of rangers.\n  • For each result of 0-2, one step of rangers is eliminated.\n• If the StP survives the assault, the US player may make a second assault with any surviving ranger steps during the June 6 PM GT.\n• If the StP survives both assaults, the ranger units are eliminated.\n• If the StP is eliminated in either GT, the ranger units remain in the hex. They may not conduct any action except defend. Each surviving step counts as one standard step and has a defensive strength of one, and a PR of eight. They cannot convert discretionary hits into retreats, nor can they retreat after a FS mission.\n• If a US unit of any size enters the hex, the units are immediately removed. The US player receives one step of Rangers that may be added to any on map Ranger Btn or used to reconstitute an eliminated Ranger Btn with one step. The replacement step arrives during the next Friendly Replacement Segment.",
+            "notes": [
+              "Pointe du Hoc is a high-risk, high-reward assault — the Rangers must scale cliffs under fire to neutralize German guns threatening the beaches (AW (42.5.0)).",
+              "Utah Beach drift is historical — the landing force came ashore about 2km south of the planned beach, which ironically was less defended (AW (42.6.0)).",
+              "DD tanks in rough seas have a significant chance of sinking — their loss removes critical armor support for the first waves (AW (42.7.0))."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-amphibious-landing",
+            "name": "Seg 1: Landing Segment",
+            "ruleRef": "42.8.0",
+            "player": "both",
+            "description": "Allied invasion units land on beach displays. Place units in appropriate landing boxes.",
+            "content": "Place all units scheduled to land during the current sub-phase on the Display in the Sea Boxes of the sub-sector they are scheduled to land in.",
+            "notes": [
+              "Units land in waves — not everything arrives in the first sub-phase. Check the landing schedule for which units arrive in each sub-phase."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-amphibious-german-fire",
+            "name": "Seg 2: German Fire Segment",
+            "ruleRef": "42.9.0",
+            "player": "both",
+            "description": "German defensive fire against units on the beach displays.",
+            "content": "German Fire is resolved against each 'in range' box containing an Allied unit. Fire is resolved in the following sequence:\n• Each Allied occupied box may only be fired on once per sub-phase.\n• Each German unit may fire at every Allied occupied box that is in range of the unit.\n• All German units that can fire into an Allied occupied box must combine their fire strength into one fire.\n• Start in the Beach Box Row, working across each beach, until all eligible units in the Beach Box Row have been fired upon.\n• Then move up one row, to the Shingle Box Row, moving across each beach until all eligible units in the Shingle Box Row have been fired upon.\n• Continue this process (moving up one row) until all eligible Allied units have been fired upon.",
+            "notes": [
+              "German defensive fire is strongest in the first sub-phase before Allied units can advance off the beach — Omaha Beach is historically the most heavily defended."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-amphibious-allied-fire",
+            "name": "Seg 3: Allied Fire Segment",
+            "ruleRef": "42.10.0",
+            "player": "both",
+            "description": "Allied naval gunfire and direct fire support against German beach defenses.",
+            "content": "The Allied player conducts Naval Gun Fire (if available) and then any eligible unit fire.",
+            "notes": [
+              "Naval gunfire is your primary advantage on the beaches — concentrate it on the strongest German defensive positions to create gaps for the assault."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-amphibious-allied-movement",
+            "name": "Seg 4: Allied Movement",
+            "ruleRef": "42.11.0",
+            "player": "both",
+            "description": "Allied units on beach displays advance toward German positions.",
+            "content": "Unpinned Allied units may move from box to box on the Displays. Units may move from one box to an adjacent box (AW (42.1.0)). The movement may be through horizontal, vertical, and diagonal boundaries. The movement allowance for all units is described in AW (42.2.1).",
+            "notes": [
+              "Getting units off the beach and inland is the priority — units stuck on the beach are vulnerable to German fire each sub-phase."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-amphibious-german-movement",
+            "name": "Seg 5: German Movement",
+            "ruleRef": "42.12.0",
+            "player": "both",
+            "description": "German units on beach displays may reposition.",
+            "content": "German infantry units on the Display must be checked for activation.\n• German infantry units in Beach Display Boxes are considered active if they have conducted either defensive fire, assault fire, or been fired on in any way (including assault and naval gunfire).\n• Certain Beach Displays start with German units not yet on the Display but ready to enter depending upon a reaction DR for each unit. Each Display has an image of a German unit that may enter (this image is printed next to the Exit Boxes the unit is placed in) and the DR needed for it to be activated. No reaction DR is made on the AM Invasion Stage First or Second Sub-phase.\n• If the German player moves other German units (other than the above units) onto the Display, then the solitaire mode for that display ends and the German player becomes active. He is then free to move his own units without regard to the restrictions in AW (42.12.1).\n• If activated, the German player may voluntarily withdraw units from the Beach Displays if they are in Beach Exit Box. Convert each unit to a breakdown 1-2-6 infantry Coy and place it on the Battlefield Map in the hex noted on the Beach Exit Box they occupy.",
+            "notes": [
+              "German repositioning can plug gaps in the defense — watch for German units shifting to cover beach exits you're trying to breach."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-amphibious-assault",
+            "name": "Seg 6: Assault Combat",
+            "ruleRef": "42.13.0",
+            "player": "both",
+            "description": "Allied units assault German defensive positions on the beach.",
+            "content": "If enemy units occupy the same box, assault combat must take place. If solitaire mode is still in place, the Allied player will conduct both the Allied and German assault fire. Each assault must be fully resolved before an assault in another box can be initiated. All fire is simultaneous. Do not inflict step losses or retreats until both sides have resolved their fire.",
+            "notes": [
+              "Assault combat on the beach uses special beach assault rules — not standard GOSS GA. Concentrate force on key defensive positions guarding beach exits."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-amphibious-demolition",
+            "name": "Seg 7: Demolition",
+            "ruleRef": "42.14.0",
+            "player": "both",
+            "description": "Engineer units attempt to clear beach obstacles and open exits.",
+            "content": "The Allied player attempts to clear beach obstacles and breach Seawalls/Draws.",
+            "notes": [
+              "Clearing beach exits is essential for getting vehicles and heavy equipment off the beach — engineer demolition is the key to this."
+            ],
+            "checklist": []
+          },
+          {
+            "id": "aw-amphibious-pin-recovery",
+            "name": "Seg 8: Pin Recovery",
+            "ruleRef": "42.15.0",
+            "player": "both",
+            "description": "Pinned units attempt to recover. After all segments, check for Beach Area Clearance.",
+            "content": "Pin markers are removed from all units (both sides) at this time. During medium and high tide conditions, pinned units occupying a Beach Row Box do not remove their pin marker; instead they keep the marker in place and immediately move from the Beach Box Row into the Shingle Box Row of the same sub-sector.",
+            "notes": [
+              "Pin recovery is critical — pinned units can't advance or assault, and they're vulnerable to German fire. Prioritize recovering units near beach exits.",
+              "Beach clearance is checked after ALL segments — once a beach is cleared, it transitions to normal reinforcement arrival. Uncleared beaches repeat the full Amphibious Stage next GT (AW (42.16.0))."
+            ],
+            "checklist": []
+          }
+        ],
+        "content": "The **Amphibious Invasion Stage** is conducted prior to the June 6 AM GT, and then prior to the start of each GT thereafter until all beaches are fully cleared. There are three sub-phases in each stage."
+      }
+    },
+    {
+      "target": "update-game-turn-indicator",
+      "action": "modify",
+      "gate": "AW: ENA is NOT used in Atlantic Wall. Ignore all references to Extended Night Activity.",
+      "patch": {
+        "appendContent": "### Sequence of Play (SoP) (31.1.0)\n\nIgnore GOSS (3.2.0) thru (3.5.0) and (9.0). Much of the activity of a regular GT has been abstracted out of the introductory scenarios. The regular SoP has been modified with some phases deleted entirely. The below sequence of play is used in the first three scenarios.\n\n### Sequence of Play (Intermediate) (35.1.0)\n\nWhen playing the intermediate scenarios, all phases of the SoP are used however some sub-phases may be skipped or modified. Changes to the GT sequence are noted below.",
+        "appendNotes": [
+          "Check your scenario tier to know which SoP modifications apply — introductory scenarios strip out most logistics and command phases, while intermediate and full scenarios progressively add complexity."
+        ]
+      }
+    },
+    {
+      "target": "joint-air-allocation-phase",
+      "action": "modify",
+      "patch": {
+        "appendContent": "### Air Points & Naval Units (Intermediate) (35.4.0)\n\nEach Scenario will outline the use and availability of APs and naval units.\n\n### Air Points (38.2.0)\n\nIgnore all rules applying to Strategic Map assignment, air supply mission, and Strategic Interdiction.",
+        "appendNotes": [
+          "Allied air superiority is a major advantage in AW — the Luftwaffe has very limited AP. Use Allied air primarily for GS and GI to support the breakout from the beachhead."
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics-phase",
+      "action": "modify",
+      "gate": "AW: All scenarios use simplified logistics — no full Logistics Table. ADV, AmP, fuel, and TP rules vary by scenario tier (AW (35.5.0)).",
+      "patch": {
+        "appendContent": "### Logistics (Intermediate) (35.5.0)\n\nEach Scenario will list logistic rules that apply, however in all intermediate scenarios or in all campaign games that players do not use the full logistic rules; apply the below rules. In all cases, GOSS GenS rules apply unless specifically stated otherwise.\n\n### Allied Fuel (35.5.1)\n\nAllied Mech unit printed MA is reduced as follows:\n• June 7 AM to June 11 AM GT: -4.\n• June 12 AM to July 2 AM GT: -2.\n• July 3 AM GT to end of scenario: all Mech units have their full printed MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above.\n\n### German Fuel (35.5.2)\n\nThe following movement restrictions are in effect for both the friendly Movement and Exploitation Phases.\n• Beginning on the June 9 AM GT the German side must secretly designate one GT as a \"low fuel\" GT. On that GT, German Mech units subtract two from their printed MA.\n• During the remaining two GTs of that GD all Mech units may move a maximum of one-half their printed MA and may only move one hex while in PA mode.\n• Each GD the German side may select a number of formations or BG to operate with their full MA.\n• Until the July 3 AM GT, one formation, or four independent BGs may operate with their full MA.\n• Beginning the July 4 AM GT, two division formations or eight independent BG may operate with their full MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above.\n\n### Ammo Depletion (Intermediate) (35.5.3)\n\nScenario instructions will outline each side's ADV. Adjust army and corps ADV based on the number of formations assigned and the use of AmP. AmP arrival is dictated in each scenario's rules. Do not use the Logistics Table.\n\n### Depots (35.5.4)\n\nDepots may be moved and/or new depots may be activated. On the GD and for the two following GDs, that a depot is moved and/or activated; all Mech units subordinate to that army reduce their printed MA by two. Use the procedures outlined in GOSS (15.8.2) & AW (15.9.0). Exception: Ignore TP and FP requirements.",
+        "appendNotes": [
+          "Allied fuel restrictions (-4 MA early, -2 mid-game) severely limit Mech mobility in the beachhead phase — plan offensives around when fuel improves (AW (35.5.1)).",
+          "The German low-fuel mechanic is secret — the Allied player never knows which GT the German chose. This adds significant uncertainty to German counterattack timing (AW (35.5.2)).",
+          "Depot activation penalties (-2 MA for 3 GDs) mean you should plan depot moves well in advance of planned offensives (AW (35.5.4))."
+        ]
+      }
+    },
+    {
+      "target": "joint-fuel-value-determination-phase",
+      "action": "modify",
+      "patch": {
+        "appendContent": "### Allied Fuel (35.5.1)\n\nAllied Mech unit printed MA is reduced as follows:\n• June 7 AM to June 11 AM GT: -4.\n• June 12 AM to July 2 AM GT: -2.\n• July 3 AM GT to end of scenario: all Mech units have their full printed MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above.\n\n### German Fuel (35.5.2)\n\nThe following movement restrictions are in effect for both the friendly Movement and Exploitation Phases.\n• Beginning on the June 9 AM GT the German side must secretly designate one GT as a \"low fuel\" GT. On that GT, German Mech units subtract two from their printed MA.\n• During the remaining two GTs of that GD all Mech units may move a maximum of one-half their printed MA and may only move one hex while in PA mode.\n• Each GD the German side may select a number of formations or BG to operate with their full MA.\n• Until the July 3 AM GT, one formation, or four independent BGs may operate with their full MA.\n• Beginning the July 4 AM GT, two division formations or eight independent BG may operate with their full MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above.",
+        "appendNotes": [
+          "AW replaces GOSS fuel tracking with direct MA penalties — no fuel points to manage, but the penalties are significant early in the campaign."
+        ]
+      }
+    },
+    {
+      "target": "allied-fire-support-segment",
+      "action": "modify",
+      "patch": {
+        "appendContent": "### Fire Support (FS) Missions (31.9.0)\n\nUnlike in the standard GOSS rules FS mission types are consolidated into one FS mission for each target hex. Only one FS mission is allowed in a single target hex. Each mission may consist of multiple volleys. Ammo depletion DRs only effect artillery mission point availability.\n• Coy sized units may only observe for one FS mission.\n• Btn sized units may observe for two FS missions.\n• Air, naval and artillery mission points are totaled into one mission. This total is used to determine the strength and number of volleys in each mission.\n\n### Naval Unit Availability (11.9.0)\n\nOnly the Allied side has naval units. The Allied side determines the number and type of naval units available for the current GD as follows:\n• There are five types of naval units available as shown at the top of the Naval Unit Availability chart. The five types are: Battleship (BB), Monitor (MN), Heavy Cruiser (CA), Light Cruiser (CL), and Destroyer (DD).\n• Below each type are two numbers or dashes separated by a slash. Left of the slash is for the western task force (US). Right is for the eastern task force (CW).\n• On the left of the chart is one column representing DR results from 0 to 9.\n• Each nationality rolls 1d10 for each type of naval unit. The result is the number of naval units of that type available to that task force.\n• Beginning the July 1 GD, the Western TF loses all naval units except for DD.\n• Beginning the July 8 GD, the Eastern TF may have a maximum of 1 BB or 1 Mon, 1 CA, 2 CL and 4 DD. The CW player rolls normally, however Eastern TF may not have more naval units than listed above.\n• Record the number and type of naval units available for that GD on the AP Track Record.\n• Scenario instructions may set limits on number of naval units available.\n• Naval units are subject to ammunition depletion. Their ADV is four; this value may not be modified. If a naval unit fails to pass the AD check, it may not be used again that GD. This check does not affect availability for following GDs.\n\n### Naval Gunfire Support (38.3.0)\n\nNaval units are not available on June 6 (they are supporting the landings).\n• Starting June 7 AM GT or on the first GT after all beaches are cleared use AW (11.9.0).\n• If any beach is not cleared of German units on the June 7 AM GT, the AG that has any beach that is not cleared does not roll for naval units. Each GT until all beaches are cleared, that AG NGS support on any not cleared beach uses the same procedures as called for in AW (42.0), the June 6 PM GT. NGS is not available on the June 6 Night GT.",
+        "appendNotes": [
+          "Naval gunfire is a massive force multiplier in AW — each battleship and cruiser provides significant FS points that don't require ammo tracking. Use NGS on the toughest German positions."
+        ]
+      }
+    },
+    {
+      "target": "allied-construction-phase",
+      "action": "modify",
+      "patch": {
+        "appendContent": "### Fieldworks (FW) (31.10.0)\n\nInitial scenario setup will detail where FW are placed at the beginning of the scenario, and may include ET-3s. All rules pertaining to the construction and benefits of FWs are in effect.\nException: ET-3s may not be built.",
+        "appendNotes": [
+          "ET-3 construction is prohibited in introductory scenarios — only pre-placed fieldworks are available (AW (31.10.0))."
+        ]
+      }
+    },
+    {
+      "target": "allied-movement-segment",
+      "action": "modify",
+      "patch": {
+        "appendContent": "### Movement Halts (31.8.0)\n\nIgnore GOSS (7.3.3a) & (7.3.3b), movement halts occur when:\n• A unit in PA mode moves adjacent to an enemy unit.\n• A unit enters a hex that is adjacent to an enemy unit and the hex does not contain movement covering terrain.\nMovement halts generated by Forts and ETs are still in effect (GOSS (7.3.3c)).\n**Designer's Note:** in the more advanced rules, the requirement for artillery is back in effect. I wanted to initially simplify the creation of a movement halt in these easier scenarios — besides most hexes would be in range of artillery in these situations anyway.\n\n### Exploitation Movement (31.5.0)\n\nAt the beginning of a friendly Movement Phase, Mech units may be placed in Exploit mode. Ignore all references to Exploitation Phases, Maneuver Reserve, and Exploit Mode.\n• Units in Exploit mode may not move in the Movement Phase.\n• In the Combat Phase after all GAs have been resolved, Units in Exploit mode may move up to one-half of their printed MA and if able conduct an overrun attack (GOSS (7.11.0)).\n• Remove the Exploit marker once the unit has completed movement and overruns.\n• Units in Exploit mode do not pay the extra MP for moving adjacent to enemy units, unless there is no movement covering terrain in that hex.",
+        "appendNotes": [
+          "AW introductory scenarios simplify movement halts — no artillery requirement, just adjacency to enemy in open terrain. This makes defensive positions in covering terrain much stronger (AW (31.8.0))."
+        ]
+      }
+    }
+  ],
+  "scenarioOverrides": {
+    "aw-intro": {
+      "label": "Introductory Scenarios (1-3)",
+      "modifications": [
+        {
+          "target": "aw-airborne-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "aw-amphibious-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "joint-air-allocation-phase",
+          "action": "modify",
+          "gate": "AW Intro: AP available per scenario. Ignore Strategic Map air rules. No air transport. Ignore all references to Maneuver Reserve, fuel, ammo points, ENA, and bridge collapse (AW (31.0)).",
+          "patch": {
+            "appendNotes": [
+              "Introductory scenarios dramatically simplify air — just use the AP listed in your scenario setup. No strategic air, no air supply, no ATP."
+            ]
+          }
+        },
+        {
+          "target": "joint-command-phase",
+          "action": "modify",
+          "gate": "AW Intro: Ignore GOSS (3.2.0) through (3.5.0) and (9.0). Command phase functions are abstracted — Allied player only designates movement (AW (31.1.0)).",
+          "patch": {
+            "appendNotes": [
+              "Most command functions are removed in introductory scenarios — no corps/army assignments, no rest GTs, no lull determination. Focus on movement and combat (AW (31.1.0))."
+            ]
+          }
+        },
+        {
+          "target": "joint-logistics-phase",
+          "action": "gate",
+          "gate": "AW Intro: Logistics phase is NOT used. Ignore all references to ammunition and fuel unless stated in scenario instructions. GenS is traced per scenario rules (AW (31.11.0))."
+        },
+        {
+          "target": "joint-fuel-value-determination-phase",
+          "action": "gate",
+          "gate": "AW Intro: Fuel determination is NOT used. Ignore all fuel references (AW (31.0))."
+        },
+        {
+          "target": "allied-replacement-segment",
+          "action": "gate",
+          "gate": "AW Intro: Replacements are NOT available in introductory scenarios (AW (31.0))."
+        },
+        {
+          "target": "axis-replacement-segment",
+          "action": "gate",
+          "gate": "AW Intro: Replacements are NOT available in introductory scenarios (AW (31.0))."
+        }
+      ]
+    },
+    "aw-goodwood": {
+      "label": "1: Operation Goodwood",
+      "modifications": [
+        {
+          "target": "aw-airborne-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "aw-amphibious-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "joint-logistics-phase",
+          "action": "gate",
+          "gate": "AW Scenario 1: Logistics phase NOT used. Simplified FS and combat rules (AW (31.0), (32.0)). Carpet bombing rules may apply (AW (32.5.0))."
+        },
+        {
+          "target": "joint-fuel-value-determination-phase",
+          "action": "gate",
+          "gate": "AW Scenario 1: Fuel determination NOT used (AW (31.0))."
+        },
+        {
+          "target": "allied-replacement-segment",
+          "action": "gate",
+          "gate": "AW Scenario 1: Replacements NOT available (AW (31.0))."
+        },
+        {
+          "target": "axis-replacement-segment",
+          "action": "gate",
+          "gate": "AW Scenario 1: Replacements NOT available (AW (31.0))."
+        }
+      ]
+    },
+    "aw-epsom": {
+      "label": "2: Operation Epsom",
+      "modifications": [
+        {
+          "target": "aw-airborne-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "aw-amphibious-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "joint-logistics-phase",
+          "action": "gate",
+          "gate": "AW Scenario 2: Logistics phase NOT used. June 25-30, quarter map. Simplified rules (AW (31.0), (33.0))."
+        },
+        {
+          "target": "joint-fuel-value-determination-phase",
+          "action": "gate",
+          "gate": "AW Scenario 2: Fuel determination NOT used (AW (31.0))."
+        },
+        {
+          "target": "allied-replacement-segment",
+          "action": "gate",
+          "gate": "AW Scenario 2: Replacements NOT available (AW (31.0))."
+        },
+        {
+          "target": "axis-replacement-segment",
+          "action": "gate",
+          "gate": "AW Scenario 2: Replacements NOT available (AW (31.0))."
+        }
+      ]
+    },
+    "aw-cherbourg": {
+      "label": "3: Battle for Cherbourg",
+      "modifications": [
+        {
+          "target": "aw-airborne-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "aw-amphibious-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "joint-logistics-phase",
+          "action": "gate",
+          "gate": "AW Scenario 3: Logistics phase NOT used. Cherbourg Garrison and morale rules apply (AW (34.0), (1.2.6a)-(1.2.6f))."
+        },
+        {
+          "target": "joint-fuel-value-determination-phase",
+          "action": "gate",
+          "gate": "AW Scenario 3: Fuel determination NOT used (AW (31.0))."
+        },
+        {
+          "target": "allied-replacement-segment",
+          "action": "gate",
+          "gate": "AW Scenario 3: Replacements NOT available (AW (31.0))."
+        },
+        {
+          "target": "axis-replacement-segment",
+          "action": "gate",
+          "gate": "AW Scenario 3: Replacements NOT available (AW (31.0))."
+        }
+      ]
+    },
+    "aw-hedgerows": {
+      "label": "4: Battle of the Hedgerows",
+      "modifications": [
+        {
+          "target": "aw-airborne-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "aw-amphibious-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "gate": "AW Scenario 4: Intermediate logistics. No Logistics Table. ADV and AmP per scenario. Simplified reinforcements — units arrive 2 GDs later than Activation List (AW (35.0), (36.0)).",
+          "patch": {
+            "appendNotes": [
+              "Scenario 4 uses intermediate logistics — simpler than full rules but more involved than introductory. Check AW (35.5.0) for fuel penalties and depot rules.",
+              "Allied reinforcements arrive 2 GDs later than listed because the Strategic Map/Naval Transit Display is not used (AW (35.3.0))."
+            ]
+          }
+        }
+      ]
+    },
+    "aw-cobra": {
+      "label": "5: Cobra",
+      "modifications": [
+        {
+          "target": "aw-airborne-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "aw-amphibious-assault-stage",
+          "action": "remove"
+        },
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "gate": "AW Scenario 5: Intermediate logistics. No Logistics Table. ADV and AmP per scenario. Carpet bombing may be available (AW (35.0), (37.0)).",
+          "patch": {
+            "appendNotes": [
+              "Cobra features the massive Allied carpet bombing that broke the German line — check scenario rules for carpet bombing availability and restrictions (AW (37.0)).",
+              "Allied reinforcements arrive 2 GDs later than Activation List (AW (35.3.0))."
+            ]
+          }
+        }
+      ]
+    },
+    "aw-dday": {
+      "label": "6: D-Day, The Sixth of June",
+      "modifications": [
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "gate": "AW Scenario 6: Intermediate logistics with full Airborne and Amphibious modules active. June 6-12. Use SoP from AW (35.1.0). Naval units available starting June 7 AM or after all beaches cleared (AW (38.0)).",
+          "patch": {
+            "appendNotes": [
+              "This is the full D-Day experience — Airborne and Amphibious stages on June 6, then normal GTs with simplified logistics through June 12 (AW (38.1.0)).",
+              "The scenario can be split — play just the US (12th AG) or CW (21st AG) side separately (AW (38.11.0)).",
+              "Naval units are NOT available on June 6 (supporting landings). Starting June 7 AM, roll for naval unit availability (AW (38.3.0))."
+            ]
+          }
+        }
+      ]
+    },
+    "aw-campaign": {
+      "label": "Campaign Game",
+      "modifications": [
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "gate": "AW Campaign: Full campaign from June 6 onward. Simplified logistics with optional full logistic and strategic rules (AW (39.0)). All Airborne and Amphibious modules active on June 6.",
+          "patch": {
+            "appendNotes": [
+              "The campaign game can use either simplified or full logistics — players choose before starting. Full logistics add the Logistics Table, Strategic Map, and Naval Transit Display (AW (39.4.0)).",
+              "Optional second airborne assault (1st British/Polish AB or second US airborne drop) may be available later in the campaign (AW (39.6.0))."
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

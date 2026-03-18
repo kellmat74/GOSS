@@ -4,22 +4,26 @@ import { useRules } from "../../context/RulesContext";
 import { GlossaryHighlighter } from "../GlossaryHighlighter";
 
 export function RuleModal() {
-  const { activeRule, history, closeRule, goBack, openRule, getRuleBySection, getRulesForSection } = useRules();
+  const { activeRule, history, closeRule, goBack, goNext, goPrev, openRule, getRuleBySection, getRulesForSection, hasNext, hasPrev } = useRules();
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  // Escape to close
+  // Keyboard navigation: Escape, Left/Right arrows
   useEffect(() => {
     if (!activeRule) return;
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         if (history.length > 0) goBack();
         else closeRule();
+      } else if (e.key === "ArrowLeft" && hasPrev) {
+        goPrev();
+      } else if (e.key === "ArrowRight" && hasNext) {
+        goNext();
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [activeRule, history, closeRule, goBack]);
+  }, [activeRule, history, closeRule, goBack, goNext, goPrev, hasNext, hasPrev]);
 
   // Scroll to top when rule changes
   useEffect(() => {
@@ -81,12 +85,28 @@ export function RuleModal() {
           />
         </div>
 
-        {/* Footer with history indicator */}
-        {history.length > 0 && (
-          <div className="border-t border-stone-200 px-6 py-2 text-xs text-stone-500 dark:border-stone-700">
-            {history.length} rule{history.length !== 1 ? "s" : ""} in history · Press Esc to go back
+        {/* Footer with prev/next navigation */}
+        <div className="flex items-center justify-between border-t border-stone-200 px-4 py-2 dark:border-stone-700">
+          <button
+            onClick={goPrev}
+            disabled={!hasPrev}
+            className="flex items-center gap-1 rounded px-3 py-1.5 text-xs font-medium text-stone-500 hover:bg-stone-100 hover:text-stone-700 disabled:opacity-30 disabled:pointer-events-none dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-stone-200 transition-colors"
+          >
+            ← Prev
+          </button>
+          <div className="text-xs text-stone-400 dark:text-stone-500">
+            {history.length > 0
+              ? `${history.length} in history · Esc to go back`
+              : "Esc to close"}
           </div>
-        )}
+          <button
+            onClick={goNext}
+            disabled={!hasNext}
+            className="flex items-center gap-1 rounded px-3 py-1.5 text-xs font-medium text-stone-500 hover:bg-stone-100 hover:text-stone-700 disabled:opacity-30 disabled:pointer-events-none dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-stone-200 transition-colors"
+          >
+            Next →
+          </button>
+        </div>
       </div>
     </div>,
     document.body
