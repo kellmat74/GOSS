@@ -400,22 +400,22 @@
         {
           "target": "joint-logistics-phase",
           "action": "gate",
-          "gate": "AW Intro: Logistics phase is NOT used. Ignore all references to ammunition and fuel unless stated in scenario instructions. GenS is traced per scenario rules (AW (31.11.0))."
+          "gate": "**Introductory Scenario (AW (31.11.0)):** Ignore all references to ammunition and fuel unless stated otherwise in the scenario instructions. Scenario rules will describe if and how to trace GenS. HQ and units unable to trace GenS are marked with an \"on hand supply\" (OhS) marker. The unit retains the \"OhS\" marker until the unit:\n• Is able to trace GenS path of the appropriate length.\n• Uses more than one half of its MA in one Movement Phase.\n• Contributes FS mission points to a FS mission.\n• Participates as an attacking unit in a GA.\n• Participates as a defending unit in a GA and does not halve its current combat strength.\nIf a unit marked with an \"OhS\" marker does any one of the above, it is immediately marked with an \"out of supply\" (OoS) marker.\nUnits that are OoS are affected as follows:\n• Units may not enter PA or Exploit mode.\n• Unit's MA is halved.\n• Units may not contribute FS mission points to a FS mission.\n• Units participating in a GA (attacking or defending) have their current combat strength halved."
         },
         {
           "target": "joint-fuel-value-determination-phase",
           "action": "gate",
-          "gate": "AW Intro: Fuel determination is NOT used. Ignore all fuel references (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
         },
         {
           "target": "allied-replacement-segment",
           "action": "gate",
-          "gate": "AW Intro: Replacements are NOT available in introductory scenarios (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
         },
         {
           "target": "axis-replacement-segment",
           "action": "gate",
-          "gate": "AW Intro: Replacements are NOT available in introductory scenarios (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
         }
       ]
     },
@@ -433,22 +433,64 @@
         {
           "target": "joint-logistics-phase",
           "action": "gate",
-          "gate": "AW Scenario 1: Logistics phase NOT used. Simplified FS and combat rules (AW (31.0), (32.0)). Carpet bombing rules may apply (AW (32.5.0))."
+          "gate": "**Introductory Scenario (AW (31.11.0)):** Ignore all references to ammunition and fuel unless stated otherwise in the scenario instructions. Scenario rules will describe if and how to trace GenS. HQ and units unable to trace GenS are marked with an \"on hand supply\" (OhS) marker. The unit retains the \"OhS\" marker until the unit:\n• Is able to trace GenS path of the appropriate length.\n• Uses more than one half of its MA in one Movement Phase.\n• Contributes FS mission points to a FS mission.\n• Participates as an attacking unit in a GA.\n• Participates as a defending unit in a GA and does not halve its current combat strength.\nIf a unit marked with an \"OhS\" marker does any one of the above, it is immediately marked with an \"out of supply\" (OoS) marker.\nUnits that are OoS are affected as follows:\n• Units may not enter PA or Exploit mode.\n• Unit's MA is halved.\n• Units may not contribute FS mission points to a FS mission.\n• Units participating in a GA (attacking or defending) have their current combat strength halved."
         },
         {
           "target": "joint-fuel-value-determination-phase",
           "action": "gate",
-          "gate": "AW Scenario 1: Fuel determination NOT used (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
         },
         {
           "target": "allied-replacement-segment",
           "action": "gate",
-          "gate": "AW Scenario 1: Replacements NOT available (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
         },
         {
           "target": "axis-replacement-segment",
           "action": "gate",
-          "gate": "AW Scenario 1: Replacements NOT available (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
+        },
+        {
+          "target": "update-game-turn-indicator",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Scenario One: Operation Goodwood (32.0)\n\nThis scenario is the first of three introductory scenarios. It is a quarter map scenario and depicts Monty's mid-July battle to capture Caen, and drive towards Falaise. The scenario is confined to the area on map \"C\" shown by the thick dashed line on the scenario diagram. Units that retreat out of this area may not reenter play.\n\n### Scenario Length (32.1.0)\n\nThe scenario begins on the July 18 AM GT and ends with the completion of the July 19 PM GT or the July 20 Night GT. All special scenario rules apply no matter which scenario end point is chosen. If players choose the shorter version, ignore the German reinforcements listed for the July 19 PM GT. Playing time for the short version is approximately two to two and one-half hours, for the longer version approximately three to four hours."
+          }
+        },
+        {
+          "target": "joint-air-allocation-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Air Points (AP) (32.2.0)\n\nOnly the Allied side has AP available. In addition to GS and GI missions, the Allied side has a special Carpet Bombing mission that is made prior to starting the scenario. Carpet Bombing does not require the use of AP.\n\n### Available Air Points (32.2.1)\n\nBeginning the July 18 PM GT, the Allied side has 32 AP available each GD.\n**Designer's note:** Allied AP are factored into the carpet bombing sequence on July 18 AM GT.\n\n### Carpet Bombing Mission (32.2.2)\n\nPrior to beginning the July 18 AM GT the Allied side conducts a special carpet bombing mission. All German units within the area bounded by 5120-5125 to 5625-5620 (inclusive) are attacked by this mission.\n• Each German occupied hex within the above area receives one AS hit (mark with blue AS marker) and is affected as follows:\n• Roll 1d10 for each German-occupied hex, apply applicable DRMs, and implement the results. All DRMs are cumulative:\n• -1, if there are two or less steps in the hex.\n• -1, if at least one pure AFV unit is in the hex.\n• -1, if there is an ET-2 in the hex.\n• -2, if there is an ET-3 in the hex.\nCross reference the modified DR below and apply the results noted to the right.\n• 0: No effect\n• 1-3: one-step loss\n• 4-6: two-step losses\n• 7-9: three-step losses\n• All units that suffered the carpet bombing attack (even if no step losses suffered) are affected as follows:\n• Units in that hex do not generate movement halts (even if in an ET-2 or ET-3).\n• Any unit that moves out of one of the effected hexes retains the blue AS marker and has their MA halved.\n• At the end of the July 18 AM German Player Turn the German player conducts a defensive PR check for each unit with a blue AS marker. Units that pass may remove the marker.\n• All remaining AS markers from this attack are removed at the end of the July 18 PM German Player Turn."
+          }
+        },
+        {
+          "target": "allied-fire-support-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Naval Gunfire Support (32.3.0)\n\nNaval Gunfire is factored into the available artillery mission points. There are no specific naval FS mission points available.\n\n### Artillery (32.5.0)\n\nThe Allied side receives four artillery groups that represent the four AGRAs and all the naval gun fire support committed to this battle. Allied divisional artillery is represented by the divisional HQ units. Two of the artillery groups can only support units of the II Canadian Corps, and the other two can only support units of the I or VIII Corps. The Allied player should designate which groups are supporting which corps. These designations may not change during the course of the scenario.\nNote: Players should use two-artillery Btn counters from four AGRAs provided with the game and one-artillery Btn from each division. One-artillery Btn represents the AGRA on the map and the other is placed on the army track to represent the number of FS mission points available to that AGRA. The divisional artillery Btn is used on the track in the same manner as the AGRA Btn.\n\n### Allied Artillery Groups (32.5.1)\n\nThe Allied side receives four artillery groups that represent the four AGRAs and all the naval gun fire support committed to this battle.\n\n### Allied FS Mission Points (32.5.1a)\n\nAll Allied mission points are available each GT. Reset the number of available mission points at the beginning of each GT. Each group is assigned a number of mission points and a range.\n• Each Artillery group: 16 points, range 7.\n• Each division HQ: 12 points, range 6.\n\n### German Artillery Groups (32.5.2)\n\nThe German side does not use artillery groups or divisional HQ to represent their artillery.\n\n### German FS Mission Points (32.5.2a)\n\nEach German artillery unit may conduct one FS mission each GT. When an artillery unit fires, place an \"Ammo Depleted\" marker on the unit. Remove all Ammo Depleted markers at the end of the GT.\n• Artillery units can only move if out-of-battery and only fire if in-battery.\n• Artillery units use their printed barrage and MA.\n• Nebelwerfer FS mission DRMs are in effect.\n• German Heavy AA Coys may conduct FS missions.\n\n### Nebelwerfer (NW) Units (32.5.2b)\n\nNW units may fire once per GD, using their printed barrage strength and range. The DRMs for NW units are in effect.\n• They may contribute to or initiate a FS mission in support of any unit.\n• They may be in or out of battery and operate in all other aspects as regular artillery units.\nNote: Players should mark these units with \"ammo depletion\" markers when they participate in a barrage, remove the marker at the beginning of the AM GT.\n\n### German Heavy Flak Units (32.5.2c)\n\nGerman heavy flak Coys may contribute mission points to a FS mission.\n• Each Coy has 1 point and a range of 4.\n• Heavy Flak Coys may fire once each player turn."
+          }
+        },
+        {
+          "target": "joint-weather-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Weather Conditions (32.4.0)\n\nAtmospheric and Ground conditions for each GT are as follows:\n• July 18 AM, PM & Night: Clear and dry.\n• July 19 AM, PM & Night: POvr and wet.\n• July 20 PM: Ovr and wet.\n• July 20 PM and Night: Ovr and mud."
+          }
+        },
+        {
+          "target": "allied-movement-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Movement (32.7.0)\n\nThere are no transport points (TP) available. Allied divisions do not have the inherent TP capability nor may units mount or dismount ((7.8.0) does not apply). Neither side may use Strat Movement.\n\n### Allied Movement Restrictions (32.7.1)\n\nUnits of the 2nd Canadian Division, the 2nd Canadian Armored Brigade and the two artillery counters representing II Canadian Corps artillery may NOT voluntarily move east of the 2nd Canadian division boundary shown on the scenario diagram. If these units are forced to retreat east of the line, they must move back to their operating area in next Allied Movement Phase. They may not enter PA mode or be designated to make a tactical assault until such time as they are east of the designated line.\n\n### German Movement Restrictions (32.7.2)\n\nOnly those German units west of the 49th British Division eastern boundary may move or conduct offensive GAs. If attacked they defend normally and may observe for and conduct FS missions. Pz Coys of the 12th SS Division are exempt from the above restrictions."
+          }
+        },
+        {
+          "target": "allied-construction-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Bridges (32.6.0)\n\nExcept as noted below, bridges may not be demolished or constructed. Ignore all rules pertaining to heavy bridges or bridge collapse.\n\n### Bridge Construction (32.6.1)\n\nAt the end of the July 19 AM GT (only), if a hex south of the Orne River is occupied by an Allied unit and if that hex began the scenario occupied by a German unit, the Allied player may place a bridge across one river hexside at that location. This means that no more than one bridge can cross the Orne River into a single hex, however as many bridges as there are hexes on the south side of the river, and that meet the criteria above can be placed.\n• The Allied player may place up to three such bridges, however only one bridge may be place each GT."
+          }
         }
       ]
     },
@@ -466,22 +508,64 @@
         {
           "target": "joint-logistics-phase",
           "action": "gate",
-          "gate": "AW Scenario 2: Logistics phase NOT used. June 25-30, quarter map. Simplified rules (AW (31.0), (33.0))."
+          "gate": "**Introductory Scenario (AW (31.11.0)):** Ignore all references to ammunition and fuel unless stated otherwise in the scenario instructions. Scenario rules will describe if and how to trace GenS. HQ and units unable to trace GenS are marked with an \"on hand supply\" (OhS) marker. The unit retains the \"OhS\" marker until the unit:\n• Is able to trace GenS path of the appropriate length.\n• Uses more than one half of its MA in one Movement Phase.\n• Contributes FS mission points to a FS mission.\n• Participates as an attacking unit in a GA.\n• Participates as a defending unit in a GA and does not halve its current combat strength.\nIf a unit marked with an \"OhS\" marker does any one of the above, it is immediately marked with an \"out of supply\" (OoS) marker.\nUnits that are OoS are affected as follows:\n• Units may not enter PA or Exploit mode.\n• Unit's MA is halved.\n• Units may not contribute FS mission points to a FS mission.\n• Units participating in a GA (attacking or defending) have their current combat strength halved."
         },
         {
           "target": "joint-fuel-value-determination-phase",
           "action": "gate",
-          "gate": "AW Scenario 2: Fuel determination NOT used (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
         },
         {
           "target": "allied-replacement-segment",
           "action": "gate",
-          "gate": "AW Scenario 2: Replacements NOT available (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
         },
         {
           "target": "axis-replacement-segment",
           "action": "gate",
-          "gate": "AW Scenario 2: Replacements NOT available (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
+        },
+        {
+          "target": "update-game-turn-indicator",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Scenario Two: Operation Epsom \"The Hill of Death\" (33.0)\n\nThis quarter map scenario depicts Monty's late June attempt to take Caen by a flanking maneuver that would take the commanding height of Hill 112. Hill 112 eventually became known as the \"Hill of Kalvarienberg\" to the Germans, among other names used to signify the horrific combat occurring on this position. The German command viewed this position as the lynchpin of the defense of Caen and the road to Falaise. The scenario is confined to the area on map C shown by the thick dashed line on the scenario diagram. The eastern, southern, and western edges of the play area are all German-controlled. Units that retreat out of this area may not re-enter play.\n\n### Scenario Length (Epsom) (33.1.0)\n\nThe scenario begins on the June 25 AM GT and lasts until the end of the June 30 Night GT. Playing time for Scenario Two is approximately four hours."
+          }
+        },
+        {
+          "target": "joint-air-allocation-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Air Points (Epsom) (33.2.0)\n\nOnly the Allied side has AP available. They have 24 AP available from the start of the scenario."
+          }
+        },
+        {
+          "target": "allied-fire-support-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Naval Gunfire Support (Epsom) (33.3.0)\n\nThe Allied side has the use of one BB and one CA.\n• The BB has eight FS mission points.\n• The CA has six FS mission points.\n• Only one naval unit may participate in a single FS mission.\n• Each Naval unit is available once each GD (AM or PM GT).\n• Any hex within five hexes of C3620 is within range of either naval unit.\n\n### Artillery (Epsom) (33.5.0)\n\nThe Allied side receives one artillery group to represent the British VIII Corps Artillery. Use the VIII Corps HQ counter to represent the group on the map. The VIII Corps ADV marker can be used to track FS mission points available.\n\n### FS Mission Point Availability (Epsom) (33.5.1a)\n\nAllied FS mission points are available each player turn. Reset the number of available mission points at the end of a player turn. Each group is assigned a number of mission points and a range.\n• VIII artillery group: 16 points, range 6.\n• Division HQ: 12 points, range 6.\n\n### German Artillery Groups (Epsom) (33.5.2)\n\nThe German side does not use artillery groups or divisional HQ to represent their artillery.\n\n### German FS Mission Points (Epsom) (33.5.2a)\n\nEach German artillery unit may conduct one FS mission each GT. When an artillery unit fires, place an \"Ammo Depleted\" marker on the unit. Remove all Ammo Depleted markers at the end of the GT.\n• Artillery units can only move if out-of-battery and only fire if in-battery.\n• Artillery units use their printed barrage and MA.\n• Nebelwerfer FS mission DRMs are in effect.\n• German Heavy AA Coys may conduct FS missions."
+          }
+        },
+        {
+          "target": "joint-weather-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Weather Conditions (Epsom) (33.4.0)\n\nAtmospheric and Ground conditions for each GT are as follows:\n• June 25 AM, PM & Night: POvr and dry.\n• June 26 AM, PM & Night: POvr and wet.\n• June 27 AM: POvr and dry.\n• June 27 PM & Night: clear and dry.\n• June 28 AM, PM & Night: clear and dry.\n• June 29 AM, PM & Night: clear and dry.\n• June 30 AM: clear and dry.\n• June 30 PM & Night: POvr and wet."
+          }
+        },
+        {
+          "target": "allied-movement-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Movement (Epsom) (33.7.0)\n\nThere are no transport points (TP) available. Allied divisions do not have the inherent TP capability nor may units mount or dismount ((7.8.0) does not apply). Neither side may use Strat movement.\n\n### Allied Movement Restrictions (Epsom) (33.7.1)\n\n• All units of the VIII Corps are inactive until the June 26 AM GT. No unit of the VIII Corps may move, perform construction, observe for or conduct a FS mission, or conduct an offensive GA. Beginning the June 26 AM GT all units operate normally.\n• Except for the 15th Infantry Division, no unit of the VIII Corps may move west of the 49th Infantry Division boundary.\n• 49th Infantry Division may not move east of the division boundary line shown on the scenario diagram.\n\n### German Movement Restrictions (Epsom) (33.7.2)\n\nOnly those German units west of the 49th British Division eastern boundary may move or conduct offensive GAs. If attacked they defend normally and may observe for and conduct FS missions. Pz Coys of the 12th SS Division are exempt from the above restrictions."
+          }
+        },
+        {
+          "target": "allied-construction-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Bridges (Epsom) (33.6.0)\n\nBridge demolition is conducted at the end of the friendly Movement Phase or as a result of hasty demolition ((17.3.3a) & (17.3.3b)). Ignore all rules pertaining to heavy bridges or bridge collapse.\n\n### Bridge Construction (Epsom) (33.6.1)\n\nAt the beginning of any GT that the Allied side has a unit on the south side of the Odon River, he may:\n• Place one bridge marker in one Allied occupied hex on the south side of the Odon River.\n• The Allied player may place up to three such bridges, however only one bridge may be place each GT."
+          }
         }
       ]
     },
@@ -499,22 +583,64 @@
         {
           "target": "joint-logistics-phase",
           "action": "gate",
-          "gate": "AW Scenario 3: Logistics phase NOT used. Cherbourg Garrison and morale rules apply (AW (34.0), (1.2.6a)-(1.2.6f))."
+          "gate": "**Introductory Scenario (AW (31.11.0)):** Ignore all references to ammunition and fuel unless stated otherwise in the scenario instructions. Scenario rules will describe if and how to trace GenS. HQ and units unable to trace GenS are marked with an \"on hand supply\" (OhS) marker. The unit retains the \"OhS\" marker until the unit:\n• Is able to trace GenS path of the appropriate length.\n• Uses more than one half of its MA in one Movement Phase.\n• Contributes FS mission points to a FS mission.\n• Participates as an attacking unit in a GA.\n• Participates as a defending unit in a GA and does not halve its current combat strength.\nIf a unit marked with an \"OhS\" marker does any one of the above, it is immediately marked with an \"out of supply\" (OoS) marker.\nUnits that are OoS are affected as follows:\n• Units may not enter PA or Exploit mode.\n• Unit's MA is halved.\n• Units may not contribute FS mission points to a FS mission.\n• Units participating in a GA (attacking or defending) have their current combat strength halved."
         },
         {
           "target": "joint-fuel-value-determination-phase",
           "action": "gate",
-          "gate": "AW Scenario 3: Fuel determination NOT used (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
         },
         {
           "target": "allied-replacement-segment",
           "action": "gate",
-          "gate": "AW Scenario 3: Replacements NOT available (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
         },
         {
           "target": "axis-replacement-segment",
           "action": "gate",
-          "gate": "AW Scenario 3: Replacements NOT available (AW (31.0))."
+          "gate": "**Introductory Scenario (AW (31.0)):** The first three scenarios are designed to introduce players to the basic game concepts. Many game functions are either not used or are modified to facilitate ease of play. If there is any conflict between a rule in either rulebook and those presented here, the rules presented in the scenario take precedence. All references to; Maneuver Reserve, fuel, ammunition points, extended night activity and bridge collapse are ignored."
+        },
+        {
+          "target": "update-game-turn-indicator",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Scenario Three: The Battle for Cherbourg (34.0)\n\nThis scenario represents the VII US Corps' ten-day long battle to clear the Cherbourg Peninsula and capture the vital port of Cherbourg. The US First Army has just cut the Cotentin Peninsula the day before and the stage was now set for the drive north. The scenario is played on map A. The area north of the red start line is under German control. The area on or south of the line is US controlled.\n\n### Scenario Length (Cherbourg) (34.1.0)\n\nThe scenario begins on the June 19 AM GT and ends with the completion of the June 30 Night GT. Playing time for Scenario Three is approximately four to five hours."
+          }
+        },
+        {
+          "target": "joint-air-allocation-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Air Points (Cherbourg) (34.2.0)\n\nOnly the Allied side has AP available.\n\n### Available Air Points (Cherbourg) (34.2.1)\n\nThe Allied side has 36 AP available each GD."
+          }
+        },
+        {
+          "target": "allied-fire-support-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Naval Gunfire Support (Cherbourg) (34.3.0)\n\nThe Allied Side has one BB, one CA, two CL, and three DD available. GOSS (11.3.2), (11.4.2) & AW (11.9.0) apply with the following exceptions:\n• Each Naval unit is available during each AM and PM GT. Do not roll for Ammo Depletion.\n• Range is traced from any full sea hex.\n• Naval units are able to support FS missions as detailed in AW (31.9.0) & (31.9.3).\n• If the Allied side allocates one naval unit to a German WN or StP with barrage capabilities, that WN or StP FS mission points are reduced to zero for that GT.\n\n### Artillery (Cherbourg) (34.5.0)\n\nBoth side's artillery groups are not used. Both side's artillery units are now used. See AW (4.5.9) & (4.5.10) for rules regarding StP and WN. See AW (31.9.4) for determining FS mission capacity.\n\n### Ammo Depletion (Cherbourg) (34.5.3)\n\nGOSS (11.8.0) Applies; ignore all rules pertaining to ammo points, split fire, NW and Flak ammo depletion rules in GOSS or AW. Ignore all rules pertaining to ADV modification.\n\n### Allied Ammo Depletion (Cherbourg) (34.5.3a)\n\nUS side has an ADV of six.\n\n### German Ammo Depletion (Cherbourg) (34.5.3b)\n\nGerman ADV varies depending on GD.\n• Start to the June 20 Night GT: 4\n• June 21 AM to the June 24 Night GT: 3\n• June 25 AM GT to end: 2"
+          }
+        },
+        {
+          "target": "joint-weather-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Weather Conditions (Cherbourg) (34.4.0)\n\nThe weather on the June 19 AM, PM and Night GTs is POvr with dry ground conditions. Starting with the June 20 AM GT the Allied side must determine atmospheric and ground conditions each GT. Roll 1d10 to first determine the atmospheric condition.\n• 0-4, atmospheric condition is clear.\n• 5-6, atmospheric condition is POvr.\n• 7-9, atmospheric condition is Ovr.\nIf the result indicates either POvr or Ovr, roll a second 1d10 to determine ground condition.\n• 0-3 ground condition is dry.\n• 4-6 ground condition is wet.\n• 7-9 ground condition is mud."
+          }
+        },
+        {
+          "target": "allied-movement-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Movement (Cherbourg) (34.7.0)\n\nThere are no transport points (TP) available. Allied divisions do have their inherent TP capability. Neither side may use Strat movement.\n\n### Allied Movement Restrictions (Cherbourg) (34.7.1)\n\nThere are no restrictions.\n\n### German Movement Restrictions (Cherbourg) (34.7.2)\n\nDue to the Allied ground interdiction capability; that is out of the scope of this scenario, German movement is restricted as follows:\n• During all Night GTs or any GT in which the atmospheric condition is overcast, German units may move up to their full MA.\n• During AM and PM GTs if the atmospheric condition is partial overcast all German Mech units subtract two from their MA and German Leg units subtract one.\n• During AM and PM GTs if the atmospheric condition is clear, all German unit's MA is reduced by one-third.\n\n### Cherbourg Morale (34.7.3)\n\nSee AW (1.2.6e) for effects of Cherbourg morale."
+          }
+        },
+        {
+          "target": "allied-replacement-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Replacements (Cherbourg) (34.10.0)\n\nGOSS (22.5.0) (Unit Consolidation) applies. WN and StP may not be consolidated into infantry or artillery units.\n\n### Allied Replacements (Cherbourg) (34.10.1)\n\nAt the start of any one AM GT, the US side may declare a GD lull. The lull goes into effect immediately and lasts until the beginning of the next AM GT. Lull effects are as follows:\n• Allied units may only move one hex each GT.\n• German units may move up to one-third of their printed MA.\n• Units that start adjacent to an enemy unit may only move so as to move closer to their source of GenS.\n• Neither side may initiate any type of combat.\n• All US Btns that have at least one step loss may replace one step. Players should keep all units (including breakdown Coys) separate as Btns that have been fully broken down and then taken a Coy/step loss can replace that Coy breakdown or re-constitute a fully broken down Btn with one step.\nNote: The US player cannot end up with more steps of any type than was present at the beginning of the scenario.\n\n### German Replacements (Cherbourg) (34.10.2)\n\nThe German side receives six replacement steps of infantry on the GD that the Allied side declares a lull. These replacements can be absorbed by any reduced German unit on the map that can be rebuilt using Inf RePs. No more than one step may be replaced in each reduced German unit. Eliminated units may not be brought back into play."
+          }
         }
       ]
     },
@@ -538,6 +664,48 @@
               "Scenario 4 uses intermediate logistics — simpler than full rules but more involved than introductory. Check AW (35.5.0) for fuel penalties and depot rules.",
               "Allied reinforcements arrive 2 GDs later than listed because the Strategic Map/Naval Transit Display is not used (AW (35.3.0))."
             ]
+          }
+        },
+        {
+          "target": "update-game-turn-indicator",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Scenario Four: Battle of the Hedgerows; Battle for Caen (36.0)\n\nThis scenario depicts the attempt by both the US and British AGs to expand their invasion lodgments and capture the key communication centers of St. Lo and Caen. All of the beachheads have been joined together in one continuous front and Cherbourg has been captured. All maps except for map A are used.\n\n### Scenario Length (Hedgerows) (36.1.0)\n\nThe scenario begins on GT 79 (July 2 AM GT) and ends on GT 131 (July 19 PM GT) and is 53 turns long. The scenario may be split with players just playing one or the other of the Allied AG."
+          }
+        },
+        {
+          "target": "joint-air-allocation-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Air Points (Hedgerows) (36.2.0)\n\nGOSS & AW rule (20.0) applies.\nException: Ignore all rules applying to Strategic Map assignment, air supply mission, and Strategic Interdiction. Use the sequence of play outlined in AW (35.0).\n\n### Available Air Points (Hedgerows) (36.2.1)\n\n• US receives 44 AP each GD.\n• CW receives 40 AP each GD.\n• The Allied player may not increase his air effort (AW (20.1.1c)).\n• There are eight HB points available to conduct one CB mission for each AG. These missions may not be conducted on the same GD. Both CB attacks are conducted as the third attack. All available APs for both AG are halved the GD of the CB mission. The Allied side may pre-plan their Carpet Bombing prior to the start of play.\n• German side receives 6 APs each GD. Use the abort procedure listed on the Air Point Availability Table."
+          }
+        },
+        {
+          "target": "allied-fire-support-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Naval Gunfire Support (Hedgerows) (36.3.0)\n\nAll rules pertaining to Naval Gunfire Support apply. Additionally:\n• The Western TF may only roll for DD; no other naval unit is available.\n• Beginning on the July 8 GD, the Eastern TF may have a maximum of 1 BB or 1 Mon, 1 CA, 2 CL and 4 DD. The CW player rolls normally, however Eastern TF may not have more naval units than listed above."
+          }
+        },
+        {
+          "target": "joint-weather-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Weather (Hedgerows) (36.4.0)\n\nThe weather on the first GT of the scenario is POvr with rain. The ground is wet. On the second GT begin rolling for variable weather."
+          }
+        },
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Logistics (Hedgerows) (36.5.0)\n\nUse the rules outlined in AW (35.0) and follow the below procedures. The British 2nd Army and US 1st Army have one depot each. The 3rd US Army and the 1st Canadian Army may not activate in this scenario. Additional depots may not be activated.\n\n### PSS (Hedgerows) (36.5.1)\n\n• British 2nd Army's PSS is either Gold or Juno beach. Only one army may trace from each beach.\n• US 1st Army's PSS is Omaha Beach.\n• German PSS is the same as AW (16.1.0).\n• Ignore all references to the Strategic Map, Embarked Units, and Landefront Cherbourg.\n\n### ADV (Hedgerows) (36.5.2)\n\n• Allied ADV for each is five.\n• German ADV for each army is three.\n\n### AmP (Hedgerows) (36.5.3)\n\n• Each Allied army has five AmPs in stockpile and receives three AmPs each AM GT.\n• Each German army has two AmPs in stockpile. The German side receives the following AmP each AM GT.\n• One AmP each AM GT.\n• If the atmospheric condition in the Eastern Sector is overcast with rain or storm the German side receives two AmPs each AM GT.\n\n### Fuel (Hedgerows) (36.5.4)\n\nUse the procedures in AW (35.51) & (35.5.2).\n\n### Truck Points (Hedgerows) (36.5.5)\n\nTP are only used in this scenario to motorize leg units.\n• Each Allied army has three TPs available for motorization. Allied inherent division transport is available.\n• The German side has two TPs available. These points may be assigned to either army at the beginning of each AM GT."
+          }
+        },
+        {
+          "target": "allied-replacement-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Replacements (Hedgerows) (36.6.0)\n\nA simple form of replacements is used for this scenario. Use GOSS (22.1.3).\n\n### Allied Replacements (Hedgerows) (36.6.1)\n\n• 21st AG receives three Inf and three armor ReP each AM GT.\n• 12th AG receives four Inf and four armor ReP each AM GT.\n\n### German Replacements (Hedgerows) (36.6.2)\n\n• The German side receives one Inf and one armor ReP each AM GT."
           }
         }
       ]
@@ -563,6 +731,48 @@
               "Allied reinforcements arrive 2 GDs later than Activation List (AW (35.3.0))."
             ]
           }
+        },
+        {
+          "target": "update-game-turn-indicator",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Scenario Five: July 25, Cobra (37.0)\n\nThis scenario highlights Omar Bradley's set-piece operation to finally break out of the hedgerows and set Patton loose behind German lines. The operation began with a massive carpet-bombing mission that annihilated large sections of the German frontline units, allowing two armored divisions and two infantry divisions to break into the thick of German defenses and grind their way through. On the British front, the 7th Armored Division and the Canadian corps fought ferociously to crack the ridgeline near Verviers and drive beyond down the road to Falaise. After just several days of action, Monty was forced to redirect his attacks elsewhere as this front was just too strongly held. All maps except for map A are used.\n\n### Scenario Length (Cobra) (37.1.0)\n\nThe scenario begins on GT 146 (July 25 AM GT) and ends on GT 171 (August 2 PM GT) and is 55 GTs long. The scenario may be split with players just playing one or the other of the Allied armies.\n• Use the sequence of play outlined in AW (35.0).\n• In both the full scenario and scenario 5B the US 1st Army has just cancelled a lull (side one)."
+          }
+        },
+        {
+          "target": "joint-air-allocation-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Air Points (Cobra) (37.2.0)\n\nGOSS & AW rule (20.0) applies.\nException: Ignore all rules applying to Strategic Map assignment, air supply mission, and Strategic Interdiction.\n\n### Available Air Points (Cobra) (37.2.1)\n\n• US receives 44 AP each GD.\n• CW receives 40 AP each GD.\n• The Allied player may not increase his air effort (AW (20.1.1c)).\n• There are eight HB points available to conduct one CB mission for each AG. These missions may not be conducted on the same GD. Both CB attacks are conducted as the third attack. All available APs for both AG are halved the GD of the CB mission. The Allied side may pre-plan their Carpet Bombing prior to the start of play.\n• German side receives 6 APs each GD. Use the abort procedure listed on the Air Point Availability Table."
+          }
+        },
+        {
+          "target": "allied-fire-support-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Naval Gunfire Support (Cobra) (37.3.0)\n\nAll rules pertaining to Naval Gunfire Support apply. Additionally:\n• The Western TF may only roll for DD; no other naval unit is available.\n• The Eastern TF may have a maximum of 1 BB or 1 Mon, 1 CA, 2 CL and 4 DD. The CW player rolls normally, however Eastern TF may not have more naval units than listed above."
+          }
+        },
+        {
+          "target": "joint-weather-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Weather (Cobra) (37.4.0)\n\nThe weather on the first two GTs of the scenario is clear and dry. On the third GT begin rolling for weather."
+          }
+        },
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Logistics (Cobra) (37.5.0)\n\nUse the rules outlined in AW (35.0) and follow the below procedures. All Allied armies have one depot each. The 2nd British, 1st Canadian, and 1st US Armies are active. Each army has one depot. HQ and depot may be placed as players' desire as long as all are in GenS.\n\n### PSS (Cobra) (37.5.1)\n\n• CW armies use either Gold or Juno beach. Only one army may trace from each beach.\n• US 1st Army's PSS is Omaha Beach.\n• When 3rd Army moves on to Map B, the 3rd Army HQ and one depot is placed on a primary road hex within 24 hexes of B2701. The depot may never move. The HQ may move then next GT.\n• German PSS is the same as AW (16.1.0).\n• Ignore all references to the Strategic Map, Embarked Units, and Landefront Cherbourg.\n\n### ADV (Cobra) (37.5.2)\n\n• Allied ADV for each is five.\n• German ADV for each army is three.\n\n### AmP (Cobra) (37.5.3)\n\n• Each Allied army has seven AmPs in stockpile and receives four AmPs each AM GT.\n• Each German army has two AmPs in stockpile. The German side receives the following AmP each AM GT.\n• One AmP each AM GT.\n• If the atmospheric condition in the Eastern Sector is overcast with rain or storm the German side receives two AmPs each AM GT.\n\n### Fuel (Cobra) (37.5.4)\n\nUse the procedures in AW (35.51) & (35.5.2).\n\n### Truck Points (Cobra) (37.5.5)\n\nTP are only used in this scenario to motorize leg units.\n• Each Allied army has three TPs available for motorization. Allied inherent division transport is available.\n• The German side has two TPs available. These points may be assigned to either army at the beginning of each AM GT."
+          }
+        },
+        {
+          "target": "allied-replacement-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Replacements (Cobra) (37.6.0)\n\nA simple form of replacements is used for this scenario.\n\n### Allied Replacements (Cobra) (37.6.1)\n\n• 21st AG has five Inf and five Arm ReP available. It receives three Inf and three armor ReP each AM GT.\n• 12th AG six Inf and six Arm ReP available. It receives four Inf and four armor ReP each AM GT.\n\n### German Replacements (Cobra) (37.6.2)\n\nThe German side has one Inf and one Arm ReP available and receives one Inf and one armor ReP each AM GT. These may be distributed to either army."
+          }
         }
       ]
     },
@@ -580,6 +790,55 @@
               "Naval units are NOT available on June 6 (supporting landings). Starting June 7 AM, roll for naval unit availability (AW (38.3.0))."
             ]
           }
+        },
+        {
+          "target": "update-game-turn-indicator",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Scenario Six: D-Day, The Sixth of June (38.0)\n\nWell, you finally reached it, the Invasion scenario. The Americans storm ashore on Utah and Omaha beaches after dropping two airborne divisions on the Cotentin Peninsula. The Commonwealth forces land at three nearly adjacent beach areas: Gold, Juno, and Sword, with an airdrop of the 6th Airborne Division just to the east of the Orne River.\n\n**ATTENTION: YOU HAVE READ ALL RULES REQUIRED FOR SCENARIO FIVE!!**\n\n### Scenario Length (38.1.0)\n\nThe scenario begins on the June 6 AM GT and ends on the June 12 night GT. The June 6 AM GT begins with the Airborne Assault Segment of the SoP. The scenario may be split with players just playing one or the other of the Allied armies. Maps A, B and C are needed for this scenario.\n• Use the sequence of play outlined in AW (35.1.0) and the Airborne Assault and Amphibious Modules.\n• After completing the Airborne Assault Stage and the AM Amphibious Assault Stage, normal GT play starts on the Jun 6 AM GT.\n• Unless noted in the scenario all GOSS and AW rules are in effect."
+          }
+        },
+        {
+          "target": "joint-air-allocation-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Air Points (38.2.0)\n\nIgnore all rules applying to Strategic Map assignment, air supply mission, and Strategic Interdiction.\n\n### Available Air Points (38.2.1)\n\n• On the June 6 GD the US player has 18 AP available. Beginning the June 7 GD he has 44 AP available each GD.\n• On the June 6 GD the CW player has 16 AP available. Beginning the June 7 GD he has 40 AP available each GD.\n• Do not use HB or ATP ignore all rules pertaining to these points.\n• The German side does not have any AP available on the June 6 GD. Beginning the June 7 GD he has six APs available each GD. Use the abort procedure listed on the Air Point Availability Table."
+          }
+        },
+        {
+          "target": "allied-fire-support-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Naval Gunfire Support (38.3.0)\n\nNaval units are not available on June 6 (they are supporting the landings).\n• Starting June 7 AM GT or on the first GT after all beaches are cleared use AW (11.9.0).\n• If any beach is not cleared of German units on the June 7 AM GT, the AG that has any beach that is not cleared does not roll for naval units. Each GT until all beaches are cleared, that AG NGS support on any not cleared beach uses the same procedures as called for in AW (42.0), the June 6 PM GT. NGS is not available on the June 6 Night GT."
+          }
+        },
+        {
+          "target": "joint-weather-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Weather (38.4.0)\n\nUse the historical weather listed in AW (19.2.1). Beginning the June 8 AM GT begin rolling for random weather conditions."
+          }
+        },
+        {
+          "target": "allied-mode-determination-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### June 6 Special Rules (38.5.0)\n\nThe following special rules apply on June 6.\n\n### Allied Traffic Jams (38.5.1)\n\nAll Allied Mech movement allowances are halved. Strat Road movement is not allowed.\n\n### Allied Movement Halts (38.5.2)\n\nDuring the June 6 AM GT, Allied units ignore all movement halts generated by German leg units. The MP cost to move adjacent to German leg units is ignored.\n\n### Allied PA Restriction (38.5.3)\n\nThe Allies may not enter PA mode or conduct PA attacks on June 6.\n\n### Allied Commandos (38.5.4)\n\nCommando special assaults may be used (AW 4.5.6a).\n\n### June 6 Landing Sequence (38.5.5)\n\nUse the procedures outlined in AW (42.0) and AW (21.6.2).\n\n### German Activation (38.5.6)\n\nUnits are activated either by proximity to Allied units or on a timed basis. Refer to the German Activation List for restrictions on individual units or formations.\n\n### German MA on June 6 (38.5.7)\n\nOn the June 6 AM and PM GTs, all German units that begin a Movement Phase within six hexes of a Beach landing hex (hexes with triangle) halve their MA."
+          }
+        },
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Logistics (38.6.0)\n\nAll of the rules pertaining to GenS are in effect (AW 15.0 & 16.0). The logistic procedures in AW (35.0) are used.\nException: Ignore all references to the Strategic Map and Embarked Units.\n\n### Ammo Delivery Value (38.6.1)\n\nThe ADV for each side is listed below. Adjust army and corps ADV based on the number of formations assigned and the use of AmP. Do not use the Logistic Table.\n\n### Allied ADV & AmP (38.6.1a)\n\n• June 6 GD the ADV for each Allied corps is five.\n• June 7 GD, until the end of the scenario, the ADV for each Allied corps is three.\n• The British 6th AB Div, US 82nd and 101st AB Div each has an ADV of two.\n• Each AG receives two AmPs each GT. They may be divided between the corps as desired.\n\n### German ADV & AmP (38.6.1b)\n\n• June 6 ADV is seven. WN, and StP are exempt from ammo depletion throughout the scenario.\n• Beginning on the June 7 AM GT the German ADV is five.\n• The German side has two AmPs in stockpile. The German side receives the following AmP each AM GT.\n  • One AmP each AM GT.\n  • If the atmospheric condition in the Eastern Sector is overcast with rain or storm the German side receives two AmPs each AM GT.\n\n### Fuel (38.6.2)\n\nUse the procedures in AW (35.5.1) & (35.5.2).\n\n### Truck Points (38.6.3)\n\nTP are only used to motorize leg units in this scenario.\n• The Allied side has 1 TP per AG.\n• The German side has two TPs available."
+          }
+        },
+        {
+          "target": "allied-replacement-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Replacements (38.7.0)\n\nReplacements are not received until the June 8 AM GT. Neither side has any ReP in stockpile. AW & GOSS (22.0) applies."
+          }
         }
       ]
     },
@@ -595,6 +854,27 @@
               "The campaign game can use either simplified or full logistics — players choose before starting. Full logistics add the Logistics Table, Strategic Map, and Naval Transit Display (AW (39.4.0)).",
               "Optional second airborne assault (1st British/Polish AB or second US airborne drop) may be available later in the campaign (AW (39.6.0))."
             ]
+          }
+        },
+        {
+          "target": "update-game-turn-indicator",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Campaign Game (39.0)\n\nThis is the whole shebang!!! All five Battlefield Maps are used. Players may choose to use the full logistic and strategic rules, or may choose to use the simplified rules.\n\n### Game Length (39.1.0)\n\nThe campaign game begins on the June 6 AM GT and ends on the Aug 22 PM GT. The June 6 AM GT begins with the Airborne Assault and Amphibious Assault Segment of the SoP. It is highly recommended that players use the full Logistic and Strategic rules."
+          }
+        },
+        {
+          "target": "joint-logistics-phase",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Simplified Rules (39.2.0)\n\nThe simplified logistic rules for the full campaign were never fully play tested, so beware that play balance could be affected. For those players who choose not to use the full logistic and strategic rules, use the sequence of play and logistic rules outlined in AW (35.0). Ignore all references to the Strategic Map, Naval Transit Displays, Logistic Table, and procedures for determining fuel/AmP unless mentioned below. All remaining GOSS and AW rules apply, except as follows:\n\n### Air & Naval Availability (39.2.1)\n\nAW (38.2.0) & (38.3.0) apply. Each GD a carpet bombing mission is conducted, Allied AP availability is zero. ATPs are available for standard GOSS resupply starting June 12 AM GT. The Allied side may increase AP availability but may only be changed using the below two methods.\n• The US player automatically increases his total available AP by 16 on the AM GT after Cherbourg is fully operational. This is a permanent increase with no penalties.\n• On August 1 through August 15 GDs, the total available AP available for the US player is reduced by 20. This applies to the total US AP, including additions.\n\n### Logistics (39.2.3)\n\nUse AW (15.0) & (16.0) for GenS path lengths and activation of Allied army HQ and depots. Use AW (35.5.0) for determining fuel restrictions. ADV is adjusted for support and creating or expending ADV only. Ignore all rules pertaining to the Naval Transit Display, Strategic Map, and Logistic Table. ADV, AmP, and TP values are given below.\n\n### ADV, AmP, & Trucks (39.2.4)\n\nADV, AmP, and Truck Point values for the campaign game under simplified rules.\n\n### German ADV, AmP, & Trucks (39.2.4a)\n\nJune 6 GD:\n• ADV is seven.\n• Start with two AmPs in stockpile.\n• One TP is available for motorization.\nJune 7 GD:\n• ADV is five.\n• Two TP are available for motorization.\nJune 8 GD:\n• ADV is four.\n• One AmP is received each AM GT. If the atmospheric condition in the Eastern Sector is overcast with rain or storm two AmPs are received each AM GT.\n• Three TP are available for motorization.\nJuly 1 GD:\n• ADV is five.\n• Two AmPs are received each AM GT. If the atmospheric condition in the Eastern Sector is overcast with rain or storm three AmPs are received each AM GT.\n• Three TP are available for motorization.\nAugust 1 GD:\n• ADV is three.\n• AmP may only be gained by lowering army ADV.\n• Two TP are available for motorization.\n\n### Allied ADV, AmP, & Trucks (39.2.4b)\n\nJune 6 GD:\n• ADV is five.\n• No AmP in stockpile.\n• No TP available for motorization.\nJune 7 GD:\n• ADV is three. Airborne Divisions have an ADV of two.\n• Each AG receives two AmPs.\n• Each Corps has one TP available for motorization.\nJune 11 GD:\n• Same as June 7, except Airborne Divisions are assigned to corps.\n• Values do not change until an AG has an active army HQ, then that AG uses the below values.\nArmy HQ Activation:\n• ADV is 5.\n• Each active army HQ receives three AmPs each AM GT.\n• Each active army HQ has three TPs available for motorization.\n• Values do not change until an AG has an active depot, then that AG uses the below values.\nDepot Activation:\nEach army HQ with an active depot:\n• has an ADV of six.\n• Receives four AmPs each AM GT.\n• Has three TPs available for motorization.\n\n### Full Logistic & Strategic Rules (39.4.0)\n\nAll rules GOSS and AW Logistic/Strategic Rules are in effect.\n\n### June 6 GD Special Rules (39.4.1)\n\nAW (38.5.0) applies. Each Allied AG has one-half of their total AP available. The German do not have any AP available.\n\n### Logistics (39.4.2)\n\nAll GOSS logistic and GenS rules apply except as modified by AW (15.0) & (16.0)."
+          }
+        },
+        {
+          "target": "allied-replacement-segment",
+          "action": "modify",
+          "patch": {
+            "appendContent": "### Reinforcements (39.3.0)\n\nAW (35.0) applies. Use the arrival schedule in (38.8.0) for Allied reinforcements from June 6 to June 10. Use the Allied Activation Lists (AW 40.0) beginning June 11. German units activate using AW (40.3.0). Use the random arrival rule (AW 35.3.1)."
           }
         }
       ]
