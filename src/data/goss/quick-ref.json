@@ -1,85 +1,340 @@
 {
   "tec": {
-    "title": "Terrain Effects Chart — Summary",
-    "ruleRef": "7.0",
-    "note": "The full TEC with specific MP costs per terrain type appears on the Player Aid Cards (not in the rules PDF). The values below are extracted from rules text references. Consult the physical TEC for complete movement costs.",
-    "sections": {
-      "movementCovering": {
-        "title": "Movement Covering Terrain (MCT)",
-        "ruleRef": "8.2.1",
-        "description": "Terrain that limits an observer's ability to detect units and makes it easier to move adjacent to enemy units (7.8.0).",
-        "types": ["Woods", "Forest", "Bocage", "Hedgerow", "Towns", "Cities", "ET-3", "Forts", "Ft Areas"]
-      },
-      "observationCovering": {
-        "title": "Observation Covering Terrain (OCT)",
-        "ruleRef": "8.2.2",
-        "description": "Terrain that provides concealment to stationary units. All MCT is also OCT.",
-        "types": ["All MCT terrain", "Locations", "Villages", "ET-2", "ET-3", "Destroyed Ft Areas"]
-      },
-      "blockingTerrain": {
-        "title": "LOS Blocking Terrain",
-        "ruleRef": "8.1.1",
-        "description": "Towns, cities, and VP are blocking terrain. Treat the entire hex as blocking, not just the artwork.",
-        "types": ["Towns", "Cities", "VP"]
-      },
-      "roughTerrain": {
-        "title": "Rough Terrain",
-        "ruleRef": "8.1.2a",
-        "description": "A LOS traced through (but not into or from) any rough terrain hex has its range reduced by one hex (minimum of one).",
-        "types": ["Rough"]
-      },
-      "constrictedTerrain": {
-        "title": "Constricted Terrain",
-        "ruleRef": "7.11.1",
-        "description": "Bluffs, steep canyons, or very rugged terrain that severely restricts movement. Dashed lines drawn from one hexside to another in the same hex indicate constricted terrain.",
-        "movementPenalty": "Mech class: entire MA to enter or exit. Leg class: +1 MP to enter and/or exit.",
-        "avoidance": "Units using Mech road movement ignore the penalty. Leg class units following any type of road also ignore it (7.6.2). Heavy/super heavy AFVs cannot use trails/RRs in constricted terrain."
-      }
-    },
-    "movementReferences": {
-      "title": "Movement Cost References from Rules",
-      "headers": ["Movement Type / Terrain", "Cost", "Rule"],
-      "rows": [
-        ["Leg class unit entering hex via any road (incl. trails/RR)", "1 MP", "7.6.2"],
-        ["Leg class unit using ford to cross river", "+1 MP (in addition to road cost)", "7.6.2"],
-        ["Mech road movement — clear hex (dry ground only)", "1.5 MP", "7.10.0"],
-        ["Mech road movement — entering hex with 1 Mech unit already present", "+2 MP (must stop)", "7.10.3"],
-        ["Mech road movement — bridge crossing", "No additional cost", "7.10.2"],
-        ["Mech road movement — ford crossing", "Ford cost + road cost", "7.10.2"],
-        ["Mech GenS path — primary road", "1/3 MP per hex", "15.2.6"],
-        ["Mech GenS path — secondary road", "1/2 MP per hex", "15.2.6"],
-        ["Constricted terrain — Mech non-road", "Entire MA", "7.11.3"],
-        ["Constricted terrain — Leg non-road", "+1 MP to enter and/or exit", "7.11.3"],
-        ["Night GT — Mech not on primary/secondary road", "+1 MP per hex", "7.6.1f"],
-        ["Night GT — Leg not on any road", "+1 MP per hex", "7.6.1f"],
-        ["Adjacent to enemy unit — Leg class", "1 MP", "7.9.0"],
-        ["Adjacent to enemy unit — Mech class", "2 MP", "7.9.0"],
-        ["Mounting or dismounting", "1/2 MA", "7.12.0"]
+    "title": "Movement Terrain Effects Table",
+    "ruleRef": "PAC 10",
+    "note": "Leg & Mech Class columns are used when using tactical non-road movement. Mech Road is used when Mech units move using any type of road movement.",
+    "headers": [
+      "Terrain",
+      "Leg Class",
+      "Mech Class",
+      "Mech Road",
+      "OCT",
+      "MCT",
+      "Note"
+    ],
+    "rows": [
+      [
+        "Bocage",
+        "2",
+        "4",
+        "",
+        "X",
+        "X",
+        "See 8.2.1 for effects of VP on CT in Bocage."
+      ],
+      [
+        "Bridge",
+        "0",
+        "+3",
+        "0",
+        "",
+        "",
+        "MU cross at no extra cost when using any form of road movement but pay +3 when using tactical non-road."
+      ],
+      [
+        "Clear",
+        "1",
+        "1",
+        "1.5",
+        "",
+        "",
+        ""
+      ],
+      [
+        "City",
+        "2",
+        "3",
+        "",
+        "X",
+        "X",
+        "Movement cost applies only if not using road movement."
+      ],
+      [
+        "Constricted (7.11.1)",
+        "+1",
+        "All",
+        "",
+        "",
+        "",
+        "Cost to enter & exit, if not using road move or not moving along contour."
+      ],
+      [
+        "Entrenchment 2",
+        "OTIH",
+        "OTIH",
+        "",
+        "X",
+        "",
+        "MH required."
+      ],
+      [
+        "Entrenchment 3",
+        "OTIH",
+        "OTIH",
+        "",
+        "X",
+        "X",
+        "MH, no move from hex adj to ET-3 to hex adj to same ET-3."
+      ],
+      [
+        "Ford (7.10.2)",
+        "+1",
+        "+3",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Forest",
+        "2",
+        "4",
+        "",
+        "X",
+        "X",
+        ""
+      ],
+      [
+        "Fort",
+        "OTIH",
+        "OTIH",
+        "",
+        "X",
+        "X",
+        "MH, no move from hex adj to Fort hex to hex adj to same hex."
+      ],
+      [
+        "Fortified Area (destroyed)",
+        "OTIH",
+        "OTIH",
+        "",
+        "X",
+        "",
+        "OTIH"
+      ],
+      [
+        "Fortified Area (intact)",
+        "OTIH (2)",
+        "OTIH (2)",
+        "",
+        "X",
+        "X",
+        "MH, no move from hex adj to FtA hex to hex adj to same hex."
+      ],
+      [
+        "Great River",
+        "P",
+        "P",
+        "",
+        "",
+        "",
+        "Unless scenario rules allow, units may not be ferried across Great Rivers."
+      ],
+      [
+        "Hedgerow",
+        "1.5",
+        "3",
+        "",
+        "X",
+        "X",
+        "See 8.2.1 for effects of VP on CT in Hedgerow."
+      ],
+      [
+        "Improved Position",
+        "OTIH",
+        "OTIH",
+        "",
+        "",
+        "X",
+        ""
+      ],
+      [
+        "Location",
+        "OTIH",
+        "OTIH",
+        "",
+        "X",
+        "",
+        ""
+      ],
+      [
+        "Major River",
+        "P",
+        "P",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Marsh/Swamp",
+        "3",
+        "5",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Move Adj to enemy unit",
+        "+1",
+        "+2",
+        "",
+        "",
+        "",
+        "Ignore when overrunning or moving adj while in MCT while in Exploit Mode, or for any reason moving into a hex with MCT that is adj to a pure AFV and the 2 hexes are not connected by a road."
+      ],
+      [
+        "Night Move Penalty",
+        "+1",
+        "+1",
+        "",
+        "",
+        "",
+        "N/A if Leg entering a hex via any road or MU entering a hex via any primary or secondary road."
+      ],
+      [
+        "Overrun",
+        "+1",
+        "+1",
+        "",
+        "",
+        "",
+        "May not overrun from a hex without MCT if adjacent to more than one enemy unit."
+      ],
+      [
+        "Primary Road (3)",
+        "1",
+        "",
+        "1/2",
+        "",
+        "",
+        "Mech supply path cost 1/3."
+      ],
+      [
+        "Railroad (3)",
+        "1",
+        "",
+        "1/1.5 (4)",
+        "",
+        "",
+        "Hvy AFV may not use in constricted terrain."
+      ],
+      [
+        "Railroad Embankment (7.11.4)",
+        "+1",
+        "All",
+        "",
+        "",
+        "",
+        "Cost to enter & exit, if not using road move or not moving through a hexside touching the RR embankment."
+      ],
+      [
+        "River",
+        "+3",
+        "P",
+        "",
+        "",
+        "",
+        "Each Eng step may ferry 1 Leg or AT unit (AT unit with MA of 9 or less only). The ferried unit expends 1 MP to cross. Eng must start in the starting or destination hex. Eng units ferrying negate the river GA halving penalty, but may not be used for Eng shifts. Ferried units may not conduct a Tac Assault."
+      ],
+      [
+        "Rough",
+        "1",
+        "2",
+        "",
+        "",
+        "",
+        "MH if adj to ≥2 steps of non-Art/non-HQ and in range of non-AD red hex Art or adj to AT/AA with red hex."
+      ],
+      [
+        "Rough 2 (1)",
+        "2",
+        "All",
+        "",
+        "",
+        "",
+        "MH if adj to ≥2 steps of non-Art/non-HQ and in range of non-AD red hex Art or adj to AT/AA with red hex."
+      ],
+      [
+        "Secondary Road (3)",
+        "1",
+        "",
+        "1",
+        "",
+        "",
+        "Mech supply path cost 1/3."
+      ],
+      [
+        "Soft Ground",
+        "2",
+        "4",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Stream",
+        "+1",
+        "+3",
+        "",
+        "",
+        "",
+        "1 Eng step may ferry 1 Leg unit across a stream. The ferrying Eng unit must start on either side of the stream hexside being ferried & may not move. The Leg unit ignores stream cost & continues moving."
+      ],
+      [
+        "Town",
+        "1",
+        "2",
+        "",
+        "X",
+        "X",
+        ""
+      ],
+      [
+        "Trail (3)",
+        "1",
+        "",
+        "1/1.5 (4)",
+        "",
+        "",
+        "Hvy AFV may not use in constricted terrain."
+      ],
+      [
+        "Village",
+        "OTIH",
+        "OTIH",
+        "",
+        "",
+        "X",
+        "MH if adj to ≥2 steps of non-Art/non-HQ and in range of non-AD red hex Art or adj to AT/AA with red hex."
+      ],
+      [
+        "Vantage Point",
+        "OTIH",
+        "OTIH",
+        "",
+        "",
+        "",
+        "OTIH"
+      ],
+      [
+        "Woods",
+        "1.5",
+        "3",
+        "",
+        "X",
+        "X",
+        ""
       ]
-    },
-    "groundConditions": {
-      "title": "Ground Condition Effects on MA",
-      "ruleRef": "7.6.1e",
-      "headers": ["Condition", "Mech Effect", "Leg Effect"],
-      "rows": [
-        ["Dry", "No effect", "No effect; Mech road movement may use clear hexes as roads (7.10.0)"],
-        ["Wet", "Subtract 2 from MA (unless on primary/secondary road only)", "No effect"],
-        ["Mud", "Halve MA (unless on primary/secondary road only)", "Halve MA (unless on primary/secondary road only)"],
-        ["Snow", "MA ÷ 3 (non-road); subtract 1 (primary/secondary road only)", "MA ÷ 3 (unless entirely on primary/secondary road)"],
-        ["Freeze/Frozen", "See scenario rules", "See scenario rules"]
-      ]
-    },
-    "atmosphericConditions": {
-      "title": "Atmospheric Condition Effects",
-      "ruleRef": "19.3.0",
-      "headers": ["Condition", "LOS", "AP", "Other Effects"],
-      "rows": [
-        ["Clear", "Maximum LOS", "Full AP", "No adverse effects"],
-        ["Partial Overcast (POvr)", "Maximum LOS", "Each AP = 1/2 (round down)", "Air observation: 3 hexes; GS mission error +1 DRM; NGS subject to case E DRMs; GI resolution +1 DRM; Air supply +1 DRM"],
-        ["Overcast (Ovr)", "2 hexes (ground)", "Each AP = 1/4 (round down)", "No air observation; GS mission error +2 DRM; NGS subject to case E DRMs; SI/Air supply unavailable; GI resolution subject to DRMs"],
-        ["Storm", "1 hex (adjacent)", "No AP available", "No air observation; No naval gunfire"]
-      ]
-    }
+    ],
+    "notes": [
+      "(1) Rough-2 terrain is treated as constricted terrain (stacking and movement).",
+      "(2) Owning side MUs: +2 MP unless using road movement, non-owning side treat as constricted for movement, roads do not negate (7.9.0).",
+      "(3) Mech units using any form of road movement pay 2 MP when entering hex containing any Mech unit. The moving unit must stop in the hex (7.10.3).",
+      "(4) MU expend 1 MP when moving along trail or railroad in clear terrain and 1.5 MP when moving along trail or railroad in non-clear terrain."
+    ]
   },
   "stacking": {
     "title": "Stacking Limits",
@@ -93,10 +348,28 @@
     ],
     "baseLimits": {
       "title": "Base Stacking Limits (6.1.0)",
-      "headers": ["Terrain Type", "Bn.", "Co.", "Z-step", "Notes"],
+      "headers": [
+        "Terrain Type",
+        "Bn.",
+        "Co.",
+        "Z-step",
+        "Notes"
+      ],
       "rows": [
-        ["Non-constricted", "Max 2", "1", "Max 2", "May substitute Co.'s for Bn. units (e.g., 3 Co.'s instead of 2 Bn. + 1 Co.)"],
-        ["Constricted", "Max 1", "1", "Max 1", "May substitute Co.'s for Bn. units"]
+        [
+          "Non-constricted",
+          "Max 2",
+          "1",
+          "Max 2",
+          "May substitute Co.'s for Bn. units (e.g., 3 Co.'s instead of 2 Bn. + 1 Co.)"
+        ],
+        [
+          "Constricted",
+          "Max 1",
+          "1",
+          "Max 1",
+          "May substitute Co.'s for Bn. units"
+        ]
       ],
       "footnotes": [
         "Plus any units qualifying under special stacking (6.2.0).",
@@ -109,47 +382,104 @@
         {
           "title": "German — Non-Constricted (6.3.0)",
           "ruleRef": "6.3.0",
-          "headers": ["Slot", "Allowed Units"],
+          "headers": [
+            "Slot",
+            "Allowed Units"
+          ],
           "rows": [
-            ["a)", "Any Bn. (if Mech class: +1 AFV Co.) and 1 Eng Co. or 1 AT/TD Co."],
-            ["b)", "Any Bn. (if Mech class: +1 AFV Co.) and 1 Eng Co. or 1 AT/TD Co."],
-            ["c)", "Any non-Bn. unit (if Mech class: +1 AFV Co.) or if hybrid Co.: +1 Eng Co. or AT/TD Co."],
-            ["d)", "2 Z-step units"]
+            [
+              "a)",
+              "Any Bn. (if Mech class: +1 AFV Co.) and 1 Eng Co. or 1 AT/TD Co."
+            ],
+            [
+              "b)",
+              "Any Bn. (if Mech class: +1 AFV Co.) and 1 Eng Co. or 1 AT/TD Co."
+            ],
+            [
+              "c)",
+              "Any non-Bn. unit (if Mech class: +1 AFV Co.) or if hybrid Co.: +1 Eng Co. or AT/TD Co."
+            ],
+            [
+              "d)",
+              "2 Z-step units"
+            ]
           ],
           "maxUnits": "Max 10 units (if all Mech Bn. with AFV Co.); 7 without free-stacked Co.'s"
         },
         {
           "title": "German — Constricted (6.4.0)",
           "ruleRef": "6.4.0",
-          "headers": ["Slot", "Allowed Units"],
+          "headers": [
+            "Slot",
+            "Allowed Units"
+          ],
           "rows": [
-            ["a)", "Any Bn. (if Mech class: +1 AFV Co.) and 1 Eng Co. or 1 AT/TD Co."],
-            ["b)", "Any non-Bn. unit (if Mech class: +1 AFV Co.) or if hybrid Co.: +1 Eng Co. or AT/TD Co."],
-            ["c)", "Any non-Bn. unit (if Mech class) +1 AFV Co."],
-            ["d)", "1 Z-step unit"]
+            [
+              "a)",
+              "Any Bn. (if Mech class: +1 AFV Co.) and 1 Eng Co. or 1 AT/TD Co."
+            ],
+            [
+              "b)",
+              "Any non-Bn. unit (if Mech class: +1 AFV Co.) or if hybrid Co.: +1 Eng Co. or AT/TD Co."
+            ],
+            [
+              "c)",
+              "Any non-Bn. unit (if Mech class) +1 AFV Co."
+            ],
+            [
+              "d)",
+              "1 Z-step unit"
+            ]
           ],
           "maxUnits": "Max 6 units"
         },
         {
           "title": "Allied — Non-Constricted (6.3.0 / 6.2.2)",
           "ruleRef": "6.2.2",
-          "headers": ["Slot", "Allowed Units"],
+          "headers": [
+            "Slot",
+            "Allowed Units"
+          ],
           "rows": [
-            ["a)", "Any Bn. +1 AT/TD or Eng Co."],
-            ["b)", "Any Bn. +1 AT/TD or Eng Co."],
-            ["c)", "Any non-Bn. unit +1 AT/TD or Eng Co."],
-            ["d)", "2 Z-step units"]
+            [
+              "a)",
+              "Any Bn. +1 AT/TD or Eng Co."
+            ],
+            [
+              "b)",
+              "Any Bn. +1 AT/TD or Eng Co."
+            ],
+            [
+              "c)",
+              "Any non-Bn. unit +1 AT/TD or Eng Co."
+            ],
+            [
+              "d)",
+              "2 Z-step units"
+            ]
           ],
           "maxUnits": "Max 5 units (plus free-stacked Co.'s; max 2 free Eng/AT Co.'s in non-constricted)"
         },
         {
           "title": "Allied — Constricted (6.4.0 / 6.2.2)",
           "ruleRef": "6.4.0",
-          "headers": ["Slot", "Allowed Units"],
+          "headers": [
+            "Slot",
+            "Allowed Units"
+          ],
           "rows": [
-            ["a)", "Any Bn. +1 Eng Co. or 1 AT/TD Co."],
-            ["b)", "Any non-Bn. unit +1 Eng Co. or 1 AT/TD Co."],
-            ["c)", "1 Z-step unit"]
+            [
+              "a)",
+              "Any Bn. +1 Eng Co. or 1 AT/TD Co."
+            ],
+            [
+              "b)",
+              "Any non-Bn. unit +1 Eng Co. or 1 AT/TD Co."
+            ],
+            [
+              "c)",
+              "1 Z-step unit"
+            ]
           ],
           "maxUnits": "Max 4 units (max 1 free Eng or AT Co. in constricted)"
         }
@@ -158,11 +488,31 @@
     "freeStackingLimits": {
       "title": "Free-Stacked Unit Limits",
       "ruleRef": "6.2.1",
-      "headers": ["Unit Type", "Non-Constricted", "Constricted", "Requirements"],
+      "headers": [
+        "Unit Type",
+        "Non-Constricted",
+        "Constricted",
+        "Requirements"
+      ],
       "rows": [
-        ["German AFV Co. (6.2.1)", "Max 3", "Max 2", "One-step AFV Co. stacks free with Mech class personnel/Recon Co. or Bn. of same formation"],
-        ["Eng or AT Co. (6.2.2)", "Max 2", "Max 1", "One-step Eng or AT Co. stacks free with Bn.-sized personnel/Recon unit or two-step hybrid unit"],
-        ["US M5 Co. (6.2.3)", "Per 6.2.2", "Per 6.2.2", "Substitutes for permitted Eng/AT Co. with US Arm Cav Bn. (not in addition to)"]
+        [
+          "German AFV Co. (6.2.1)",
+          "Max 3",
+          "Max 2",
+          "One-step AFV Co. stacks free with Mech class personnel/Recon Co. or Bn. of same formation"
+        ],
+        [
+          "Eng or AT Co. (6.2.2)",
+          "Max 2",
+          "Max 1",
+          "One-step Eng or AT Co. stacks free with Bn.-sized personnel/Recon unit or two-step hybrid unit"
+        ],
+        [
+          "US M5 Co. (6.2.3)",
+          "Per 6.2.2",
+          "Per 6.2.2",
+          "Substitutes for permitted Eng/AT Co. with US Arm Cav Bn. (not in addition to)"
+        ]
       ]
     },
     "mechRoadStacking": {
