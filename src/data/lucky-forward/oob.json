@@ -1,0 +1,763 @@
+{
+  "all": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "3rd-us-army",
+          "label": "Third US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xx-corps",
+              "label": "XX Corps",
+              "type": "corps",
+              "children": [
+                { "id": "5th-id", "label": "5th Inf Div", "type": "division" },
+                { "id": "90th-id", "label": "90th Inf Div", "type": "division" },
+                { "id": "95th-id", "label": "95th Inf Div", "type": "division" },
+                { "id": "83rd-id", "label": "83rd Inf Div", "type": "division" },
+                { "id": "7th-ad", "label": "7th Arm Div", "type": "division" },
+                { "id": "10th-ad", "label": "10th Arm Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xii-corps",
+              "label": "XII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "80th-id", "label": "80th Inf Div", "type": "division" },
+                { "id": "35th-id", "label": "35th Inf Div", "type": "division" },
+                { "id": "26th-id", "label": "26th Inf Div", "type": "division" },
+                { "id": "87th-id", "label": "87th Inf Div", "type": "division" },
+                { "id": "4th-ad", "label": "4th Arm Div", "type": "division" },
+                { "id": "6th-ad", "label": "6th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1st-us-army",
+          "label": "First US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "v-corps",
+              "label": "V Corps",
+              "type": "corps",
+              "children": [
+                { "id": "5th-ad", "label": "5th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7th-us-army",
+          "label": "Seventh US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xv-corps",
+              "label": "XV Corps",
+              "type": "corps",
+              "children": [
+                { "id": "79th-id", "label": "79th Inf Div", "type": "division" },
+                { "id": "44th-id", "label": "44th Inf Div", "type": "division" },
+                { "id": "100th-id", "label": "100th Inf Div", "type": "division" },
+                { "id": "2nd-ff-ad", "label": "2nd French Armored Division", "type": "division" },
+                { "id": "14th-ad", "label": "14th Arm Div", "type": "division" },
+                { "id": "12th-ad", "label": "12th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "1st-army",
+          "label": "1st Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xlvii-pz-corps",
+              "label": "XLVII Pz Corps",
+              "type": "corps",
+              "children": [
+                { "id": "pz-lehr", "label": "Pz Lehr Div", "type": "division" },
+                { "id": "21st-pz", "label": "21st Pz Div", "type": "division" },
+                { "id": "15th-pzg", "label": "15th PzG Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxxxii-corps",
+              "label": "LXXXII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "462nd-vg", "label": "462nd VG Div", "type": "division" },
+                { "id": "19th-vg", "label": "19th VG Div", "type": "division" },
+                { "id": "559th-vg", "label": "559th VG Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xiii-ss-corps",
+              "label": "XIII SS Corps",
+              "type": "corps",
+              "children": [
+                { "id": "17th-ss-pzg", "label": "17th SS PzG Div", "type": "division" },
+                { "id": "553rd-vg", "label": "553rd VG Div", "type": "division" },
+                { "id": "36th-vg", "label": "36th VG Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxxxix-corps",
+              "label": "LXXXIX Corps",
+              "type": "corps",
+              "children": []
+            },
+            {
+              "id": "xxxix-corps",
+              "label": "XXXIX Corps",
+              "type": "corps",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5th-pz-army",
+          "label": "5th Pz Army",
+          "type": "army",
+          "children": []
+        },
+        {
+          "id": "7th-army",
+          "label": "7th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxxx-corps",
+              "label": "LXXX Corps",
+              "type": "corps",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "19th-army",
+          "label": "19th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxvi-corps",
+              "label": "LXVI Corps",
+              "type": "corps",
+              "children": [
+                { "id": "716th-vg", "label": "716th VG Div", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "gremercy-forest": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "3rd-us-army",
+          "label": "Third US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xii-corps",
+              "label": "XII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "35th-id", "label": "35th Inf Div", "type": "division" },
+                { "id": "6th-ad", "label": "6th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "1st-army",
+          "label": "1st Army",
+          "type": "army",
+          "children": []
+        }
+      ]
+    }
+  },
+  "september": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "3rd-us-army",
+          "label": "Third US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xx-corps",
+              "label": "XX Corps",
+              "type": "corps",
+              "children": [
+                { "id": "5th-id", "label": "5th Inf Div", "type": "division" },
+                { "id": "90th-id", "label": "90th Inf Div", "type": "division" },
+                { "id": "7th-ad", "label": "7th Arm Div", "type": "division" },
+                { "id": "83rd-id", "label": "83rd Inf Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xii-corps",
+              "label": "XII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "80th-id", "label": "80th Inf Div", "type": "division" },
+                { "id": "35th-id", "label": "35th Inf Div", "type": "division" },
+                { "id": "4th-ad", "label": "4th Arm Div", "type": "division" },
+                { "id": "6th-ad", "label": "6th Arm Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xv-corps",
+              "label": "XV Corps",
+              "type": "corps",
+              "children": [
+                { "id": "79th-id", "label": "79th Inf Div", "type": "division" },
+                { "id": "2nd-ff-ad", "label": "2nd French Armored Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1st-us-army",
+          "label": "First US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "v-corps",
+              "label": "V Corps",
+              "type": "corps",
+              "children": [
+                { "id": "5th-ad", "label": "5th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "1st-army",
+          "label": "1st Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xlvii-pz-corps",
+              "label": "XLVII Pz Corps",
+              "type": "corps",
+              "children": [
+                { "id": "15th-pzg", "label": "15th PzG Div", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5th-pz-army",
+          "label": "5th Pz Army",
+          "type": "army",
+          "children": []
+        },
+        {
+          "id": "7th-army",
+          "label": "7th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxxx-corps",
+              "label": "LXXX Corps",
+              "type": "corps",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "19th-army",
+          "label": "19th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxvi-corps",
+              "label": "LXVI Corps",
+              "type": "corps",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "october": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "3rd-us-army",
+          "label": "Third US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xx-corps",
+              "label": "XX Corps",
+              "type": "corps",
+              "children": [
+                { "id": "5th-id", "label": "5th Inf Div", "type": "division" },
+                { "id": "90th-id", "label": "90th Inf Div", "type": "division" },
+                { "id": "83rd-id", "label": "83rd Inf Div", "type": "division" },
+                { "id": "7th-ad", "label": "7th Arm Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xii-corps",
+              "label": "XII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "80th-id", "label": "80th Inf Div", "type": "division" },
+                { "id": "35th-id", "label": "35th Inf Div", "type": "division" },
+                { "id": "4th-ad", "label": "4th Arm Div", "type": "division" },
+                { "id": "6th-ad", "label": "6th Arm Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xv-corps",
+              "label": "XV Corps",
+              "type": "corps",
+              "children": [
+                { "id": "79th-id", "label": "79th Inf Div", "type": "division" },
+                { "id": "2nd-ff-ad", "label": "2nd French Armored Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1st-us-army",
+          "label": "First US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "v-corps",
+              "label": "V Corps",
+              "type": "corps",
+              "children": [
+                { "id": "5th-ad", "label": "5th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "1st-army",
+          "label": "1st Army",
+          "type": "army",
+          "children": []
+        },
+        {
+          "id": "5th-pz-army",
+          "label": "5th Pz Army",
+          "type": "army",
+          "children": []
+        },
+        {
+          "id": "19th-army",
+          "label": "19th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxvi-corps",
+              "label": "LXVI Corps",
+              "type": "corps",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "november": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "3rd-us-army",
+          "label": "Third US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xx-corps",
+              "label": "XX Corps",
+              "type": "corps",
+              "children": [
+                { "id": "5th-id", "label": "5th Inf Div", "type": "division" },
+                { "id": "90th-id", "label": "90th Inf Div", "type": "division" },
+                { "id": "95th-id", "label": "95th Inf Div", "type": "division" },
+                { "id": "83rd-id", "label": "83rd Inf Div", "type": "division" },
+                { "id": "10th-ad", "label": "10th Arm Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xii-corps",
+              "label": "XII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "80th-id", "label": "80th Inf Div", "type": "division" },
+                { "id": "35th-id", "label": "35th Inf Div", "type": "division" },
+                { "id": "26th-id", "label": "26th Inf Div", "type": "division" },
+                { "id": "4th-ad", "label": "4th Arm Div", "type": "division" },
+                { "id": "6th-ad", "label": "6th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7th-us-army",
+          "label": "Seventh US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xv-corps",
+              "label": "XV Corps",
+              "type": "corps",
+              "children": [
+                { "id": "79th-id", "label": "79th Inf Div", "type": "division" },
+                { "id": "44th-id", "label": "44th Inf Div", "type": "division" },
+                { "id": "2nd-ff-ad", "label": "2nd French Armored Division", "type": "division" },
+                { "id": "100th-id", "label": "100th Inf Div", "type": "division" },
+                { "id": "14th-ad", "label": "14th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "1st-army",
+          "label": "1st Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxxxii-corps",
+              "label": "LXXXII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "462nd-vg", "label": "462nd VG Div", "type": "division" },
+                { "id": "19th-vg", "label": "19th VG Div", "type": "division" },
+                { "id": "559th-vg", "label": "559th VG Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xiii-ss-corps",
+              "label": "XIII SS Corps",
+              "type": "corps",
+              "children": [
+                { "id": "17th-ss-pzg", "label": "17th SS PzG Div", "type": "division" },
+                { "id": "553rd-vg", "label": "553rd VG Div", "type": "division" },
+                { "id": "36th-vg", "label": "36th VG Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxxxix-corps",
+              "label": "LXXXIX Corps",
+              "type": "corps",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "19th-army",
+          "label": "19th Army",
+          "type": "army",
+          "children": []
+        }
+      ]
+    }
+  },
+  "december": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "3rd-us-army",
+          "label": "Third US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xx-corps",
+              "label": "XX Corps",
+              "type": "corps",
+              "children": [
+                { "id": "5th-id", "label": "5th Inf Div", "type": "division" },
+                { "id": "90th-id", "label": "90th Inf Div", "type": "division" },
+                { "id": "95th-id", "label": "95th Inf Div", "type": "division" },
+                { "id": "83rd-id", "label": "83rd Inf Div", "type": "division" },
+                { "id": "10th-ad", "label": "10th Arm Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xii-corps",
+              "label": "XII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "80th-id", "label": "80th Inf Div", "type": "division" },
+                { "id": "35th-id", "label": "35th Inf Div", "type": "division" },
+                { "id": "26th-id", "label": "26th Inf Div", "type": "division" },
+                { "id": "87th-id", "label": "87th Inf Div", "type": "division" },
+                { "id": "4th-ad", "label": "4th Arm Div", "type": "division" },
+                { "id": "6th-ad", "label": "6th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7th-us-army",
+          "label": "Seventh US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xv-corps",
+              "label": "XV Corps",
+              "type": "corps",
+              "children": [
+                { "id": "79th-id", "label": "79th Inf Div", "type": "division" },
+                { "id": "44th-id", "label": "44th Inf Div", "type": "division" },
+                { "id": "100th-id", "label": "100th Inf Div", "type": "division" },
+                { "id": "2nd-ff-ad", "label": "2nd French Armored Division", "type": "division" },
+                { "id": "14th-ad", "label": "14th Arm Div", "type": "division" },
+                { "id": "12th-ad", "label": "12th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "1st-army",
+          "label": "1st Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxxxii-corps",
+              "label": "LXXXII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "462nd-vg", "label": "462nd VG Div", "type": "division" },
+                { "id": "19th-vg", "label": "19th VG Div", "type": "division" },
+                { "id": "559th-vg", "label": "559th VG Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xiii-ss-corps",
+              "label": "XIII SS Corps",
+              "type": "corps",
+              "children": [
+                { "id": "17th-ss-pzg", "label": "17th SS PzG Div", "type": "division" },
+                { "id": "553rd-vg", "label": "553rd VG Div", "type": "division" },
+                { "id": "36th-vg", "label": "36th VG Div", "type": "division" },
+                { "id": "pz-lehr", "label": "Pz Lehr Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xxxix-corps",
+              "label": "XXXIX Corps",
+              "type": "corps",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "campaign": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "3rd-us-army",
+          "label": "Third US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xx-corps",
+              "label": "XX Corps",
+              "type": "corps",
+              "children": [
+                { "id": "5th-id", "label": "5th Inf Div", "type": "division" },
+                { "id": "90th-id", "label": "90th Inf Div", "type": "division" },
+                { "id": "95th-id", "label": "95th Inf Div", "type": "division" },
+                { "id": "83rd-id", "label": "83rd Inf Div", "type": "division" },
+                { "id": "7th-ad", "label": "7th Arm Div", "type": "division" },
+                { "id": "10th-ad", "label": "10th Arm Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xii-corps",
+              "label": "XII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "80th-id", "label": "80th Inf Div", "type": "division" },
+                { "id": "35th-id", "label": "35th Inf Div", "type": "division" },
+                { "id": "26th-id", "label": "26th Inf Div", "type": "division" },
+                { "id": "87th-id", "label": "87th Inf Div", "type": "division" },
+                { "id": "4th-ad", "label": "4th Arm Div", "type": "division" },
+                { "id": "6th-ad", "label": "6th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1st-us-army",
+          "label": "First US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "v-corps",
+              "label": "V Corps",
+              "type": "corps",
+              "children": [
+                { "id": "5th-ad", "label": "5th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7th-us-army",
+          "label": "Seventh US Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xv-corps",
+              "label": "XV Corps",
+              "type": "corps",
+              "children": [
+                { "id": "79th-id", "label": "79th Inf Div", "type": "division" },
+                { "id": "44th-id", "label": "44th Inf Div", "type": "division" },
+                { "id": "100th-id", "label": "100th Inf Div", "type": "division" },
+                { "id": "2nd-ff-ad", "label": "2nd French Armored Division", "type": "division" },
+                { "id": "14th-ad", "label": "14th Arm Div", "type": "division" },
+                { "id": "12th-ad", "label": "12th Arm Div", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "1st-army",
+          "label": "1st Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xlvii-pz-corps",
+              "label": "XLVII Pz Corps",
+              "type": "corps",
+              "children": [
+                { "id": "pz-lehr", "label": "Pz Lehr Div", "type": "division" },
+                { "id": "21st-pz", "label": "21st Pz Div", "type": "division" },
+                { "id": "15th-pzg", "label": "15th PzG Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxxxii-corps",
+              "label": "LXXXII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "462nd-vg", "label": "462nd VG Div", "type": "division" },
+                { "id": "19th-vg", "label": "19th VG Div", "type": "division" },
+                { "id": "559th-vg", "label": "559th VG Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "xiii-ss-corps",
+              "label": "XIII SS Corps",
+              "type": "corps",
+              "children": [
+                { "id": "17th-ss-pzg", "label": "17th SS PzG Div", "type": "division" },
+                { "id": "553rd-vg", "label": "553rd VG Div", "type": "division" },
+                { "id": "36th-vg", "label": "36th VG Div", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxxxix-corps",
+              "label": "LXXXIX Corps",
+              "type": "corps",
+              "children": []
+            },
+            {
+              "id": "xxxix-corps",
+              "label": "XXXIX Corps",
+              "type": "corps",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5th-pz-army",
+          "label": "5th Pz Army",
+          "type": "army",
+          "children": []
+        },
+        {
+          "id": "7th-army",
+          "label": "7th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxxx-corps",
+              "label": "LXXX Corps",
+              "type": "corps",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "19th-army",
+          "label": "19th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxvi-corps",
+              "label": "LXVI Corps",
+              "type": "corps",
+              "children": [
+                { "id": "716th-vg", "label": "716th VG Div", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

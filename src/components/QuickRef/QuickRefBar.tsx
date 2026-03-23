@@ -14,6 +14,9 @@ interface QuickRefBarProps {
 // Lazy-load OOB data per game module
 const oobModules: Record<string, () => Promise<{ default: unknown }>> = {
   "atlantic-wall": () => import("../../data/atlantic-wall/oob.json"),
+  war: () => import("../../data/war/oob.json"),
+  hurtgen: () => import("../../data/hurtgen/oob.json"),
+  "lucky-forward": () => import("../../data/lucky-forward/oob.json"),
 };
 
 const buttons: { key: RefKey; label: string; icon: string; title: string; requiresOOB?: boolean }[] = [

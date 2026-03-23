@@ -1,0 +1,763 @@
+{
+  "all": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "us-1st-army",
+          "label": "US 1st Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "v-corps",
+              "label": "V Corps",
+              "type": "corps",
+              "children": [
+                { "id": "99th-id", "label": "99th Infantry Division", "type": "division" },
+                { "id": "2nd-id", "label": "2nd Infantry Division", "type": "division" },
+                { "id": "1st-id", "label": "1st Infantry Division", "type": "division" },
+                { "id": "9th-id", "label": "9th Infantry Division", "type": "division" },
+                { "id": "78th-id", "label": "78th Infantry Division", "type": "division" },
+                { "id": "cca-5a", "label": "CCA, 5th Armored Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "viii-corps",
+              "label": "VIII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "106th-id", "label": "106th Infantry Division", "type": "division" },
+                { "id": "28th-id", "label": "28th Infantry Division", "type": "division" },
+                { "id": "4th-id", "label": "4th Infantry Division", "type": "division" },
+                { "id": "9th-ad", "label": "9th Armored Division", "type": "division" },
+                { "id": "7th-ad", "label": "7th Armored Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "xviii-abn-corps",
+              "label": "XVIII Airborne Corps",
+              "type": "corps",
+              "children": [
+                { "id": "82nd-ab", "label": "82nd Airborne Division", "type": "division" },
+                { "id": "101st-ab", "label": "101st Airborne Division", "type": "division" },
+                { "id": "30th-id", "label": "30th Infantry Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "us-3rd-army",
+          "label": "US 3rd Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "iii-corps",
+              "label": "III Corps",
+              "type": "corps",
+              "children": [
+                { "id": "4th-ad", "label": "4th Armored Division", "type": "division" },
+                { "id": "26th-id", "label": "26th Infantry Division", "type": "division" },
+                { "id": "80th-id", "label": "80th Infantry Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "xii-corps",
+              "label": "XII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "10th-ad", "label": "10th Armored Division", "type": "division" },
+                { "id": "5th-id", "label": "5th Infantry Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "brit-xxx-corps",
+          "label": "British XXX Corps",
+          "type": "corps",
+          "children": []
+        },
+        {
+          "id": "comz",
+          "label": "US Communication Zone (COMZ)",
+          "type": "corps",
+          "children": []
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "6th-pz-army",
+          "label": "6th Panzer Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "i-ss-pz-corps",
+              "label": "I SS Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "1st-ss-pz", "label": "1st SS Panzer Division", "type": "division" },
+                { "id": "12th-ss-pz", "label": "12th SS Panzer Division", "type": "division" },
+                { "id": "12th-vg", "label": "12th VG Division", "type": "division" },
+                { "id": "277th-vg", "label": "277th VG Division", "type": "division" },
+                { "id": "150th-pz-bde", "label": "150th Panzer Brigade", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxvii-corps",
+              "label": "LXVII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "272nd-vg", "label": "272nd VG Division", "type": "division" },
+                { "id": "326th-vg", "label": "326th VG Division", "type": "division" },
+                { "id": "3rd-fj", "label": "3rd Fallschirmjäger Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "ii-ss-pz-corps",
+              "label": "II SS Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "2nd-ss-pz", "label": "2nd SS Panzer Division", "type": "division" },
+                { "id": "9th-ss-pz", "label": "9th SS Panzer Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5th-pz-army",
+          "label": "5th Panzer Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xlvii-pz-corps",
+              "label": "XLVII Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "2nd-pz", "label": "2nd Panzer Division", "type": "division" },
+                { "id": "lehr-pz", "label": "Panzer Lehr Division", "type": "division" },
+                { "id": "26th-vg", "label": "26th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lviii-pz-corps",
+              "label": "LVIII Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "116th-pz", "label": "116th Panzer Division", "type": "division" },
+                { "id": "560th-vg", "label": "560th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxvi-corps",
+              "label": "LXVI Corps",
+              "type": "corps",
+              "children": [
+                { "id": "18th-vg", "label": "18th VG Division", "type": "division" },
+                { "id": "62nd-vg", "label": "62nd VG Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7th-army",
+          "label": "7th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxxx-corps",
+              "label": "LXXX Corps",
+              "type": "corps",
+              "children": [
+                { "id": "212th-vg", "label": "212th VG Division", "type": "division" },
+                { "id": "276th-vg", "label": "276th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxxxv-corps",
+              "label": "LXXXV Corps",
+              "type": "corps",
+              "children": [
+                { "id": "352nd-vg", "label": "352nd VG Division", "type": "division" },
+                { "id": "5th-fj", "label": "5th Fallschirmjäger Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "okw-reserve",
+          "label": "OKW Reserve",
+          "type": "army",
+          "children": [
+            { "id": "10th-ss-pz", "label": "10th SS Panzer Division", "type": "division" },
+            { "id": "11th-pz", "label": "11th Panzer Division", "type": "division" },
+            { "id": "3rd-pzg", "label": "3rd Panzergrenadier Division", "type": "division" }
+          ]
+        }
+      ]
+    }
+  },
+  "dec16-valkyries": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "v-corps",
+          "label": "V Corps",
+          "type": "corps",
+          "children": [
+            { "id": "99th-id", "label": "99th Infantry Division", "type": "division" },
+            { "id": "2nd-id", "label": "2nd Infantry Division", "type": "division" },
+            { "id": "1st-id", "label": "1st Infantry Division", "type": "division" },
+            { "id": "cca-5a", "label": "CCA, 5th Armored Division", "type": "division" }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "6th-pz-army",
+          "label": "6th Panzer Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "i-ss-pz-corps",
+              "label": "I SS Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "1st-ss-pz", "label": "1st SS Panzer Division", "type": "division" },
+                { "id": "12th-ss-pz", "label": "12th SS Panzer Division", "type": "division" },
+                { "id": "12th-vg", "label": "12th VG Division", "type": "division" },
+                { "id": "277th-vg", "label": "277th VG Division", "type": "division" },
+                { "id": "150th-pz-bde", "label": "150th Panzer Brigade", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxvii-corps",
+              "label": "LXVII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "272nd-vg", "label": "272nd VG Division", "type": "division" },
+                { "id": "326th-vg", "label": "326th VG Division", "type": "division" },
+                { "id": "3rd-fj", "label": "3rd Fallschirmjäger Division", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dec16-egg": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "viii-corps",
+          "label": "VIII Corps",
+          "type": "corps",
+          "children": [
+            { "id": "106th-id", "label": "106th Infantry Division", "type": "division" },
+            { "id": "28th-id", "label": "28th Infantry Division", "type": "division" },
+            { "id": "9th-ad", "label": "9th Armored Division", "type": "division" },
+            { "id": "7th-ad", "label": "7th Armored Division", "type": "division" }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "5th-pz-army",
+          "label": "5th Panzer Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxvi-corps",
+              "label": "LXVI Corps",
+              "type": "corps",
+              "children": [
+                { "id": "18th-vg", "label": "18th VG Division", "type": "division" },
+                { "id": "62nd-vg", "label": "62nd VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lviii-pz-corps",
+              "label": "LVIII Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "116th-pz", "label": "116th Panzer Division", "type": "division" },
+                { "id": "560th-vg", "label": "560th VG Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6th-pz-army",
+          "label": "6th Panzer Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxvii-corps",
+              "label": "LXVII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "272nd-vg", "label": "272nd VG Division", "type": "division" },
+                { "id": "326th-vg", "label": "326th VG Division", "type": "division" },
+                { "id": "3rd-fj", "label": "3rd Fallschirmjäger Division", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dec16-skyline": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "viii-corps",
+          "label": "VIII Corps",
+          "type": "corps",
+          "children": [
+            { "id": "28th-id", "label": "28th Infantry Division", "type": "division" },
+            { "id": "9th-ad", "label": "9th Armored Division", "type": "division" }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "5th-pz-army",
+          "label": "5th Panzer Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xlvii-pz-corps",
+              "label": "XLVII Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "2nd-pz", "label": "2nd Panzer Division", "type": "division" },
+                { "id": "lehr-pz", "label": "Panzer Lehr Division", "type": "division" },
+                { "id": "26th-vg", "label": "26th VG Division", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dec16-hard-left": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "viii-corps",
+          "label": "VIII Corps",
+          "type": "corps",
+          "children": [
+            { "id": "28th-id", "label": "28th Infantry Division", "type": "division" },
+            { "id": "4th-id", "label": "4th Infantry Division", "type": "division" },
+            { "id": "9th-ad", "label": "9th Armored Division", "type": "division" }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "7th-army",
+          "label": "7th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxxx-corps",
+              "label": "LXXX Corps",
+              "type": "corps",
+              "children": [
+                { "id": "212th-vg", "label": "212th VG Division", "type": "division" },
+                { "id": "276th-vg", "label": "276th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxxxv-corps",
+              "label": "LXXXV Corps",
+              "type": "corps",
+              "children": [
+                { "id": "352nd-vg", "label": "352nd VG Division", "type": "division" },
+                { "id": "5th-fj", "label": "5th Fallschirmjäger Division", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dec16-meuse": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "us-1st-army",
+          "label": "US 1st Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "v-corps",
+              "label": "V Corps",
+              "type": "corps",
+              "children": [
+                { "id": "99th-id", "label": "99th Infantry Division", "type": "division" },
+                { "id": "2nd-id", "label": "2nd Infantry Division", "type": "division" },
+                { "id": "1st-id", "label": "1st Infantry Division", "type": "division" },
+                { "id": "cca-5a", "label": "CCA, 5th Armored Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "viii-corps",
+              "label": "VIII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "106th-id", "label": "106th Infantry Division", "type": "division" },
+                { "id": "28th-id", "label": "28th Infantry Division", "type": "division" },
+                { "id": "4th-id", "label": "4th Infantry Division", "type": "division" },
+                { "id": "9th-ad", "label": "9th Armored Division", "type": "division" },
+                { "id": "7th-ad", "label": "7th Armored Division", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "6th-pz-army",
+          "label": "6th Panzer Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "i-ss-pz-corps",
+              "label": "I SS Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "1st-ss-pz", "label": "1st SS Panzer Division", "type": "division" },
+                { "id": "12th-ss-pz", "label": "12th SS Panzer Division", "type": "division" },
+                { "id": "12th-vg", "label": "12th VG Division", "type": "division" },
+                { "id": "277th-vg", "label": "277th VG Division", "type": "division" },
+                { "id": "150th-pz-bde", "label": "150th Panzer Brigade", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxvii-corps",
+              "label": "LXVII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "272nd-vg", "label": "272nd VG Division", "type": "division" },
+                { "id": "326th-vg", "label": "326th VG Division", "type": "division" },
+                { "id": "3rd-fj", "label": "3rd Fallschirmjäger Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5th-pz-army",
+          "label": "5th Panzer Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xlvii-pz-corps",
+              "label": "XLVII Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "2nd-pz", "label": "2nd Panzer Division", "type": "division" },
+                { "id": "lehr-pz", "label": "Panzer Lehr Division", "type": "division" },
+                { "id": "26th-vg", "label": "26th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lviii-pz-corps",
+              "label": "LVIII Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "116th-pz", "label": "116th Panzer Division", "type": "division" },
+                { "id": "560th-vg", "label": "560th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxvi-corps",
+              "label": "LXVI Corps",
+              "type": "corps",
+              "children": [
+                { "id": "18th-vg", "label": "18th VG Division", "type": "division" },
+                { "id": "62nd-vg", "label": "62nd VG Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7th-army",
+          "label": "7th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxxx-corps",
+              "label": "LXXX Corps",
+              "type": "corps",
+              "children": [
+                { "id": "212th-vg", "label": "212th VG Division", "type": "division" },
+                { "id": "276th-vg", "label": "276th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxxxv-corps",
+              "label": "LXXXV Corps",
+              "type": "corps",
+              "children": [
+                { "id": "352nd-vg", "label": "352nd VG Division", "type": "division" },
+                { "id": "5th-fj", "label": "5th Fallschirmjäger Division", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dec21-group": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "us-1st-army",
+          "label": "US 1st Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "v-corps",
+              "label": "V Corps",
+              "type": "corps",
+              "children": [
+                { "id": "99th-id", "label": "99th Infantry Division", "type": "division" },
+                { "id": "2nd-id", "label": "2nd Infantry Division", "type": "division" },
+                { "id": "1st-id", "label": "1st Infantry Division", "type": "division" },
+                { "id": "9th-id", "label": "9th Infantry Division", "type": "division" },
+                { "id": "78th-id", "label": "78th Infantry Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "xviii-abn-corps",
+              "label": "XVIII Airborne Corps",
+              "type": "corps",
+              "children": [
+                { "id": "82nd-ab", "label": "82nd Airborne Division", "type": "division" },
+                { "id": "30th-id", "label": "30th Infantry Division", "type": "division" },
+                { "id": "7th-ad", "label": "7th Armored Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "viii-corps",
+              "label": "VIII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "101st-ab", "label": "101st Airborne Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "us-3rd-army",
+          "label": "US 3rd Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "iii-corps",
+              "label": "III Corps",
+              "type": "corps",
+              "children": [
+                { "id": "4th-ad", "label": "4th Armored Division", "type": "division" },
+                { "id": "26th-id", "label": "26th Infantry Division", "type": "division" },
+                { "id": "80th-id", "label": "80th Infantry Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "xii-corps",
+              "label": "XII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "10th-ad", "label": "10th Armored Division", "type": "division" },
+                { "id": "4th-id", "label": "4th Infantry Division", "type": "division" },
+                { "id": "5th-id", "label": "5th Infantry Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "brit-xxx-corps",
+          "label": "British XXX Corps",
+          "type": "corps",
+          "children": []
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "6th-pz-army",
+          "label": "6th Panzer Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "i-ss-pz-corps",
+              "label": "I SS Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "1st-ss-pz", "label": "1st SS Panzer Division", "type": "division" },
+                { "id": "12th-ss-pz", "label": "12th SS Panzer Division", "type": "division" },
+                { "id": "12th-vg", "label": "12th VG Division", "type": "division" },
+                { "id": "277th-vg", "label": "277th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "ii-ss-pz-corps",
+              "label": "II SS Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "2nd-ss-pz", "label": "2nd SS Panzer Division", "type": "division" },
+                { "id": "9th-ss-pz", "label": "9th SS Panzer Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxvii-corps",
+              "label": "LXVII Corps",
+              "type": "corps",
+              "children": [
+                { "id": "272nd-vg", "label": "272nd VG Division", "type": "division" },
+                { "id": "326th-vg", "label": "326th VG Division", "type": "division" },
+                { "id": "3rd-fj", "label": "3rd Fallschirmjäger Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5th-pz-army",
+          "label": "5th Panzer Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "xlvii-pz-corps",
+              "label": "XLVII Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "2nd-pz", "label": "2nd Panzer Division", "type": "division" },
+                { "id": "lehr-pz", "label": "Panzer Lehr Division", "type": "division" },
+                { "id": "26th-vg", "label": "26th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lviii-pz-corps",
+              "label": "LVIII Panzer Corps",
+              "type": "corps",
+              "children": [
+                { "id": "116th-pz", "label": "116th Panzer Division", "type": "division" },
+                { "id": "560th-vg", "label": "560th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxvi-corps",
+              "label": "LXVI Corps",
+              "type": "corps",
+              "children": [
+                { "id": "18th-vg", "label": "18th VG Division", "type": "division" },
+                { "id": "62nd-vg", "label": "62nd VG Division", "type": "division" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7th-army",
+          "label": "7th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxxx-corps",
+              "label": "LXXX Corps",
+              "type": "corps",
+              "children": [
+                { "id": "212th-vg", "label": "212th VG Division", "type": "division" },
+                { "id": "276th-vg", "label": "276th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxxxv-corps",
+              "label": "LXXXV Corps",
+              "type": "corps",
+              "children": [
+                { "id": "352nd-vg", "label": "352nd VG Division", "type": "division" },
+                { "id": "5th-fj", "label": "5th Fallschirmjäger Division", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dec21-sauer": {
+    "allied": {
+      "label": "Allied Forces",
+      "children": [
+        {
+          "id": "xii-corps",
+          "label": "XII Corps",
+          "type": "corps",
+          "children": [
+            { "id": "4th-id", "label": "4th Infantry Division", "type": "division" },
+            { "id": "10th-ad", "label": "10th Armored Division", "type": "division" },
+            { "id": "5th-id", "label": "5th Infantry Division", "type": "division" },
+            { "id": "80th-id", "label": "80th Infantry Division", "type": "division" }
+          ]
+        }
+      ]
+    },
+    "german": {
+      "label": "German Forces",
+      "children": [
+        {
+          "id": "7th-army",
+          "label": "7th Army",
+          "type": "army",
+          "children": [
+            {
+              "id": "lxxx-corps",
+              "label": "LXXX Corps",
+              "type": "corps",
+              "children": [
+                { "id": "212th-vg", "label": "212th VG Division", "type": "division" },
+                { "id": "276th-vg", "label": "276th VG Division", "type": "division" },
+                { "id": "79th-vg", "label": "79th VG Division", "type": "division" }
+              ]
+            },
+            {
+              "id": "lxxxv-corps",
+              "label": "LXXXV Corps",
+              "type": "corps",
+              "children": [
+                { "id": "352nd-vg", "label": "352nd VG Division", "type": "division" },
+                { "id": "5th-fj", "label": "5th Fallschirmjäger Division", "type": "division" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
