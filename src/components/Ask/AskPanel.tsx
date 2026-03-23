@@ -101,12 +101,28 @@ function CopyButton({ text, isUser, question }: { text: string; isUser: boolean;
   );
 }
 
+const STORAGE_KEY = "goss-ask-history";
+
+function loadHistory(): ChatMessage[] {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveHistory(messages: ChatMessage[]) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
+  } catch { /* quota exceeded — silently fail */ }
+}
+
 export function AskPanel({ rules, phases = [] }: AskPanelProps) {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<ChatMessage[]>(loadHistory);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -119,6 +135,11 @@ export function AskPanel({ rules, phases = [] }: AskPanelProps) {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
+
+  // Persist messages to localStorage
+  useEffect(() => {
+    if (messages.length > 0) saveHistory(messages);
+  }, [messages]);
 
   // Auto-resize textarea
   const handleInput = useCallback((value: string) => {
@@ -202,7 +223,19 @@ export function AskPanel({ rules, phases = [] }: AskPanelProps) {
 
   return (
     <div className="mx-auto flex max-w-2xl flex-col" style={{ height: "calc(100vh - 8rem)" }}>
-      <h2 className="mb-1 text-2xl font-bold">Ask the Rules</h2>
+      <div className="flex items-center justify-between mb-1">
+        <h2 className="text-2xl font-bold">Ask the Rules</h2>
+        <div className="flex gap-2">
+          {messages.length > 0 && (
+            <button
+              onClick={() => { setMessages([]); localStorage.removeItem(STORAGE_KEY); }}
+              className="rounded px-2 py-1 text-xs text-stone-400 hover:text-stone-600 hover:bg-stone-100 dark:hover:text-stone-200 dark:hover:bg-stone-700 transition-colors"
+            >
+              Clear
+            </button>
+          )}
+        </div>
+      </div>
       <p className="mb-4 text-sm text-stone-500">
         AI-powered Q&A across {rules.length} rules
       </p>

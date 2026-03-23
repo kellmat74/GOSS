@@ -141,17 +141,20 @@ function App() {
     { key: "info", label: "Info" },
   ];
 
+  const handleSidebarSelect = (phaseIndex: number, subPhaseIndex?: number, segmentIndex?: number) => {
+    if (view !== "sop") setView("sop");
+    goToPhase(phaseIndex, subPhaseIndex, segmentIndex);
+  };
+
   const sidebar = (
     <div className="flex h-full flex-col">
-      {view === "sop" && (
-        <PhaseOverview
-          phases={phases}
-          currentPhaseIndex={progress.currentPhaseIndex}
-          currentSubPhaseIndex={progress.currentSubPhaseIndex}
-          currentSegmentIndex={progress.currentSegmentIndex}
-          onSelectPhase={goToPhase}
-        />
-      )}
+      <PhaseOverview
+        phases={phases}
+        currentPhaseIndex={progress.currentPhaseIndex}
+        currentSubPhaseIndex={progress.currentSubPhaseIndex}
+        currentSegmentIndex={progress.currentSegmentIndex}
+        onSelectPhase={handleSidebarSelect}
+      />
     </div>
   );
 
