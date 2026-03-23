@@ -20,7 +20,7 @@
         "",
         "X",
         "X",
-        "See 8.2.1 for effects of VP on CT in Bocage."
+        "See (8.2.1) for effects of VP on CT in Bocage."
       ],
       [
         "Bridge",
@@ -137,7 +137,7 @@
         "",
         "X",
         "X",
-        "See 8.2.1 for effects of VP on CT in Hedgerow."
+        "See (8.2.1) for effects of VP on CT in Hedgerow."
       ],
       [
         "Improved Position",
@@ -333,7 +333,7 @@
       "(1) Rough-2 terrain is treated as constricted terrain (stacking and movement).",
       "(2) Owning side MUs: +2 MP unless using road movement, non-owning side treat as constricted for movement, roads do not negate (7.9.0).",
       "(3) Mech units using any form of road movement pay 2 MP when entering hex containing any Mech unit. The moving unit must stop in the hex (7.10.3).",
-      "(4) MU expend 1 MP when moving along trail or railroad in clear terrain and 1.5 MP when moving along trail or railroad in non-clear terrain."
+      "(4) MU expend 1 MP when moving along trail or railroad in clear terrain and (1.5) MP when moving along trail or railroad in non-clear terrain."
     ]
   },
   "stacking": {

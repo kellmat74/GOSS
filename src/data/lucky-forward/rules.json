@@ -174,7 +174,7 @@
     "section": "7.13.0",
     "title": "Delay Markers",
     "summary": "",
-    "text": "The German player is limited to a maximum of 12 delay markers on the map until GD 48, at which point this restriction is removed.\n\n- Starting GD 1 and continuing until the German player begins deploying mines (**LF** 7.13.4a) the German player may have a maximum of 12 delay markers on the map at any given time.\n- The nine delay markers placed at the beginning of the Sept scenario count towards this total.\n- Until **LF** 7.13.4 goes into effect delay markers may be placed in any type of MCT.\n- During Sept, delay markers are placed and removed using **GOSS** 7.13.1 and 7.13.3.",
+    "text": "The German player is limited to a maximum of 12 delay markers on the map until GD 48, at which point this restriction is removed.\n\n- Starting GD 1 and continuing until the German player begins deploying mines (**LF** 7.13.4a) the German player may have a maximum of 12 delay markers on the map at any given time.\n- The nine delay markers placed at the beginning of the Sept scenario count towards this total.\n- Until **LF** 7.13.4 goes into effect delay markers may be placed in any type of MCT.\n- During Sept, delay markers are placed and removed using **GOSS** 7.13.1 and (7.13.3).",
     "crossRefs": [
       "7.13.1",
       "7.13.3"
@@ -598,7 +598,7 @@
     "section": "17.6.3e",
     "title": "Metz Fort Artillery",
     "summary": "",
-    "text": "German Metz forts possess an inherent Art strength. They function like Art units.\n\n**Exception:** Bitche forts do not contain inherent Art.\n\n**Important:** If a fort (and the units in the fort) are isolated (LF 17.6.3f), that fort may only fire its Art against enemy units that are in the same hex assaulting that fort. The fort may not fire at any other hex, although if there is a fort Art unit in the fort, that unit may fire normally.\n\n**Ammo Depletion:** A fort and any fortress Art unit in the fort do not check for ammo depletion and may not be marked AD even if they fired with non-fort Art units in an FS mission, unless they are in fort supply (LF 17.6.3f).\n\n**Intensive Fire:** Forts and fortress Art in a fort cannot use intensive fire.\n\n**Range:** Range of all fort Art is three hexes. For observation purposes only:\n  **a)** A fort can always observe enemy units in the fort's own hex. This even applies during night GTs and if fog is present in the fort's hex.\n  **b)** A fort can always observe enemy units in hexes adjacent to the fort itself, regardless of terrain/FW.\n\n**Exception:** During night GTs or if fog is present in an adjacent hex normal observation rules are in effect.\n\n**Important:** This observation capability does not affect FS mission DRMs for group A and B (GOSS 11.5.1 & 11.5.2).\n\n**Spotting Restrictions:** German static fortress Art units are considered attached to the nearest formation HQ when determining formation requirements for spotting FS missions (GOSS 11.2.5). For all other purposes they are considered corps/army assets.\n\n**Important:** Forts and static Art units that are assigned to the Metz Festung HQ (LF 9.10.4) may spot for FS missions as if they were divisional units of that HQ.\n\n**Barrage Strength:** The Art strength of a fort is equal to the number of steps it currently possesses. Forts may participate in an FS mission with other Art units and other forts within range.\n\n**FS Target Restrictions:** Fortress Art units that are stacked in a fort, and who conduct a FS mission must fire at the same target as the fort (if the fort is firing).\n- If they do conduct a FS mission in conjunction with the fort, they use their printed barrage strengths.\n- If the fort is not conducting a FS mission they may fire separately, however their printed barrage strength is halved (round up).\n- Forts and fortress Art can conduct FS missions against enemy units in their hex.\n\n**Important:** If an Allied unit is in the fort hex, the fort and any fortress Art unit in the fort, can only conduct FS missions against the Allied units in the fort hex.",
+    "text": "German Metz forts possess an inherent Art strength. They function like Art units.\n\n**Exception:** Bitche forts do not contain inherent Art.\n\n**Important:** If a fort (and the units in the fort) are isolated (LF 17.6.3f), that fort may only fire its Art against enemy units that are in the same hex assaulting that fort. The fort may not fire at any other hex, although if there is a fort Art unit in the fort, that unit may fire normally.\n\n**Ammo Depletion:** A fort and any fortress Art unit in the fort do not check for ammo depletion and may not be marked AD even if they fired with non-fort Art units in an FS mission, unless they are in fort supply (LF 17.6.3f).\n\n**Intensive Fire:** Forts and fortress Art in a fort cannot use intensive fire.\n\n**Range:** Range of all fort Art is three hexes. For observation purposes only:\n  **a)** A fort can always observe enemy units in the fort's own hex. This even applies during night GTs and if fog is present in the fort's hex.\n  **b)** A fort can always observe enemy units in hexes adjacent to the fort itself, regardless of terrain/FW.\n\n**Exception:** During night GTs or if fog is present in an adjacent hex normal observation rules are in effect.\n\n**Important:** This observation capability does not affect FS mission DRMs for group A and B (GOSS 11.5.1 & (11.5).2).\n\n**Spotting Restrictions:** German static fortress Art units are considered attached to the nearest formation HQ when determining formation requirements for spotting FS missions (GOSS 11.2.5). For all other purposes they are considered corps/army assets.\n\n**Important:** Forts and static Art units that are assigned to the Metz Festung HQ (LF 9.10.4) may spot for FS missions as if they were divisional units of that HQ.\n\n**Barrage Strength:** The Art strength of a fort is equal to the number of steps it currently possesses. Forts may participate in an FS mission with other Art units and other forts within range.\n\n**FS Target Restrictions:** Fortress Art units that are stacked in a fort, and who conduct a FS mission must fire at the same target as the fort (if the fort is firing).\n- If they do conduct a FS mission in conjunction with the fort, they use their printed barrage strengths.\n- If the fort is not conducting a FS mission they may fire separately, however their printed barrage strength is halved (round up).\n- Forts and fortress Art can conduct FS missions against enemy units in their hex.\n\n**Important:** If an Allied unit is in the fort hex, the fort and any fortress Art unit in the fort, can only conduct FS missions against the Allied units in the fort hex.",
     "crossRefs": [
       "17.6.3f",
       "11.5.1",
@@ -953,7 +953,7 @@
     "section": "24.0",
     "title": "Lulls",
     "summary": "",
-    "text": "**Important:** *See Oct and Nov scenario instructions for the effects of no lull or of a lull that does not last 28 GDs.*\n\nWhen playing the campaign game (Sept through Nov at a minimum) either or both sides may declare a lull at any time.\n\nTo receive the logistic benefits listed in **LF** 17.6.3c, 29.3.8b, 29.4.3, 29.4.4, 29.5.5 and 20.5.7 the Allied player must declare a lull on or prior to GD 36 and the lull must last a minimum of 28 GDs. **GOSS** 24.0 applies with the following exceptions:\n\n**a)** The German player must grant the lull.\n**b)** The German player cannot launch a counter offensive until the lull has been in effect for a minimum of 10 GDs. If the German player launches a counter offensive after the above GD, the German side does not gain the logistic benefits of the lull, however the Allied side does.\n- Minefields may be laid during a lull (**LF** 7.13.4).\n- If the Allied player maintains the lull for a full 28 GDs, the effects of **LF** 17.6.3c, 29.3.8b, 29.4.3, 29.4.4, 29.5.5 and 29.5.7 go into effect the first AM GT after the lull ends and remain in effect for a full 15 GDs.\n- If the Allied player does not declare a lull on or prior to GD 36, neither side receives the listed logistic benefits.",
+    "text": "**Important:** *See Oct and Nov scenario instructions for the effects of no lull or of a lull that does not last 28 GDs.*\n\nWhen playing the campaign game (Sept through Nov at a minimum) either or both sides may declare a lull at any time.\n\nTo receive the logistic benefits listed in **LF** 17.6.3c, 29.3.8b, 29.4.3, 29.4.4, 29.5.5 and (20.5.7) the Allied player must declare a lull on or prior to GD 36 and the lull must last a minimum of 28 GDs. **GOSS** 24.0 applies with the following exceptions:\n\n**a)** The German player must grant the lull.\n**b)** The German player cannot launch a counter offensive until the lull has been in effect for a minimum of 10 GDs. If the German player launches a counter offensive after the above GD, the German side does not gain the logistic benefits of the lull, however the Allied side does.\n- Minefields may be laid during a lull (**LF** 7.13.4).\n- If the Allied player maintains the lull for a full 28 GDs, the effects of **LF** 17.6.3c, 29.3.8b, 29.4.3, 29.4.4, 29.5.5 and (29.5.7) go into effect the first AM GT after the lull ends and remain in effect for a full 15 GDs.\n- If the Allied player does not declare a lull on or prior to GD 36, neither side receives the listed logistic benefits.",
     "crossRefs": [
       "24.0",
       "17.6.3c",
@@ -1105,7 +1105,9 @@
     "title": "Scenario Set Up Manifest",
     "summary": "Explains the abbreviations and conventions used in scenario setup manifests.",
     "text": "Formations including army, corps, divisions and sub-formations that begin a scenario on the map are shown on the set-up diagram and are listed in the scenario specific set up manifest. In addition to the abbreviations listed in **GOSS** (26.0), the following abbreviations are used.\n\n**(e):** Unit is placed in Eliminated Unit Box\n**{map #-hex #}:** Number of steps a unit or group of units are reduced\n**(−#):** Number of steps a unit or group of units are reduced\n**[# × units]:** number of units of that type and/or that command\n**AFA:** Armored Field Artillery\n**Aufkl:** *Aufklärung*\n**Btry:** Battery\n**Det:** Detachment\n**Htz:** Hetzer\n**Mag:** Maginot Line\n**MG:** Machine Gun\n**Pio:** *Pionere* (German combat engineers)\n**PzG:** *Panzergrenadier*\n**VG:** *Volksgrenadier*\n\nThe Germans set up first in any scenario that starts in Sep and Dec. The Allied player sets up first in any scenario starting in Nov. Detailed scenario information such as step losses, eliminated units and attachments for each formation starting on the map are listed. In each group below units may be set up anywhere within that formation's ZOP, as depicted on the set-up diagram.\n\nIn each formation, if a unit is not listed, it is not part of the set up (they will appear as reinforcements in the current or later scenarios).\n\nGerman units with a yellow band across the middle of the counter belong to the Metz Garrison. They must be set up within 10 hexes of a city hex of Metz and may not leave this area during play. All Metz forts west of the Moselle must have at least one unit of the Metz Garrison stacked inside each fort counter.",
-    "crossRefs": ["26.0"],
+    "crossRefs": [
+      "26.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1168,7 +1170,12 @@
     "title": "US Fatigue",
     "summary": "During GDs 1-3, Allied units may become fatigued based on movement distance.",
     "text": "During each GT on GDs 1 thru 3 (inclusive) in addition to **GOSS** (14.0), Allied units may become fatigued. The Allied player checks for fatigue when:\n\n**a)** A unit moves more than one-half of its modified MA (**GOSS** (7.3.0)) during a Movement or Exploitation Phase. Units required to make this check conduct the check upon completion of their movement for that phase and after suffering any fatigue hits due to rest turns.\n\n**Important:** *This fatigue hit is in addition to any fatigue garnered during a rest turn or ENA (**GOSS** (3.5.0) & (14.1.2)).*\n\n**b)** A unit is in PA mode. This check is made when the unit removes its PA marker for any reason.",
-    "crossRefs": ["14.0", "7.3.0", "3.5.0", "14.1.2"],
+    "crossRefs": [
+      "14.0",
+      "7.3.0",
+      "3.5.0",
+      "14.1.2"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1177,7 +1184,9 @@
     "title": "Fatigue Check Procedure",
     "summary": "Roll 1d10 for each unit requiring a fatigue check, with results ranging from no effect to two fatigue hits.",
     "text": "Roll 1d10 for each unit requiring a fatigue check:\n\n**0–5:** No Effect.\n**6–8:** The unit suffers one fatigue hit.\n**9:** The unit suffers two fatigue hits.\n\n• The maximum of two fatigue hits applies (**GOSS** (14.1.0)).\n• If an already fatigued unit receives a fatigue hit, a maximum of one additional fatigue hit can be applied.",
-    "crossRefs": ["14.1.0"],
+    "crossRefs": [
+      "14.1.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1195,7 +1204,10 @@
     "title": "US GenS",
     "summary": "Specifies which Allied HQs do not appear and how PSS hexes are designated for each corps.",
     "text": "**Important:** The following Allied HQs do not appear in **Lucky Forward**:\n**1st Army**\n**7th Army**\n**V Corps**\n\n• The Allied player must designate one west map edge primary road hex as the PSS for the XX and XII corps prior to starting play.\n• The hex must be:\n**a)** Within the ZOP of that corps; and,\n**b)** At least seven hexes from any German unit.\n\n**Exception:** *The seven hex restriction does not apply to the XV and V Corps until the first AM GT that a German unit is more than seven hexes from the western map-edge.*\n\n• During the Command Phase of GD 3 (arrival of the 5th Arm Div) the Allied player must designate one north or west map edge primary road hex as the PSS for the V Corps.\n• During the Command Phase of GD 7 (arrival of 79th Inf Div) the Allied player must designate one west or south map edge primary road hex on Map 4 within the XV Corps ZOP as the PSS for the XV Corps.\n\n• The designated hex remains the corps PSS until the arrival of the corps HQ.\n• During the Command Phase of the GD that the corps HQ arrive (GD 7 for the XX and XII Corps and GD 8 for the XV Corps), the Allied player is free to change the corps PSS, using the same requirements listed above. The Allied player may change PSS hexes during any subsequent Command Phase.\n• When playing any scenario with GD 1 start, when the 3rd Army HQ arrives (GD 63), the XX, XII and XV corps must trace GenS to the 3rd Army HQ and then to any one primary map edge road hex on the western edge of Map 1 or 4 within the 3rd Army ZOP.\n\n**Important:** *The Allied side may place depots (no more than two) in all scenarios beginning any GD after 3rd Army HQ is on the map. Use the Relocating Depots procedure in **GOSS** (15.8.2) when placing any depot. As an exception to **GOSS** (15.8.1), depots may be used between the army HQ and corps HQ.*\n\n• When playing the Extended Sep or Campaign Scenario, the XV Corps transfers to the 7th Army on GD 26. At that time, XV Corps no longer traces GenS to 3rd Army. During the Command Phase of GD 26, the XV Corps HQ must then trace GenS as outlined for GD 7.\n• In addition to the PSS listed above, any city hex of Luxemburg, Metz and Nancy can function as a US PSS for 3rd Army and Luneville (4-1029) can function as a US PSS for 7th Army if:\n**a)** All city hexes of each of the above cities are Allied controlled; and,\n**b)** A full 15 GDs have elapsed since the capture of the city; and,\n**c)** The selected city hex can trace a GenS path of any length along a primary road to the west edge of Map 1 or Map 4; or, in the case of 7th Army to the south or west edge of Map 4.",
-    "crossRefs": ["15.8.2", "15.8.1"],
+    "crossRefs": [
+      "15.8.2",
+      "15.8.1"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1204,7 +1216,9 @@
     "title": "US Logistics",
     "summary": "The US player does not use the Logistic Table on GD 1; detailed procedures for fuel, ADV, and TPs are provided for each army.",
     "text": "The US player does not use the Logistic Table on GD 1. Use the below procedures:\n\n**a)** All units except for the CvGps are low fuel.\n**1)** All CvGps have normal fuel.\n**2)** They can be attached to formations; however, they remain in normal fuel status on GD 1 and have no effect when determining fuel level for the formation to which they were attached.\n**b)** All reinforcements arriving prior to GD 27 enter with low fuel. See **LF** (16.10.0) to determine their fuel value.\n**c)** US corps have an ADV of 2. The ADV is not modified for any reason.\n**d)** 3rd Army has three TP that can only be used for motorization.\n• Each army receives one AmP each AM GT.\n• Each army may stockpile a maximum five AmP.\n• Neither army receives nor uses fuel points. All HQ assigned to the 1st and 7th Armies have low fuel. This includes all reinforcements. See **LF** (16.5.0) to determine their fuel value.\n• Each army has one TP available for motorization only.\n\n**Important:** *The above procedures remain in effect for the 7th Army until GD 58.*",
-    "crossRefs": ["16.5.0"],
+    "crossRefs": [
+      "16.5.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1213,7 +1227,10 @@
     "title": "US 1st & 7th Army Logistics",
     "summary": "Logistics rules for the 1st and 7th Armies, including activation timing and ADV procedures.",
     "text": "• The 1st Army uses the below logistic rules from GD 3 (arrival of 5th Arm Div) until GD 26 when it deactivates (**LF** (29.3.15)).\n• The 7th Army activates on GD 26 and begins using the below procedures.\n• Neither army uses the logistic tables.\n• Each army has an ADV of two. The ADV may not be modified due to number of formations assigned, nor may it create AmP by reducing its ADV or increase its ADV by expending AmP.\n• Each army receives one AmP each AM GT.\n• Each army may stockpile a maximum five AmP.\n• Neither army receives nor uses fuel points. All HQ assigned to the 1st and 7th Armies have low fuel. This includes all Mech HQ arriving as reinforcements. Independent Mech class units arriving as reinforcements assume the fuel value of their superior HQ.\n• Each army has one TP for motorization only.\n\n**Important:** *The above procedures remain in effect for the 7th Army until GD 58.*\n\n**Important:** *From GD 2 to GD 8, the 3rd Army can never receive more than six FP when determining fuel delivery (**GOSS** (16.2.1)).*",
-    "crossRefs": ["29.3.15", "16.2.1"],
+    "crossRefs": [
+      "29.3.15",
+      "16.2.1"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1222,7 +1239,9 @@
     "title": "Art Ammunition Shortages",
     "summary": "In September and November scenarios, Allied artillery suffers reduced AD and replenishment penalties.",
     "text": "By the fall of 1944, the US logistics train was stretched to near the breaking point due to the rapid advance during the summer. To reflect the limited availability of artillery shells, the Allied player suffers the below AD and replenishment penalties.\n\n• In all scenarios beginning in Sep and Nov; and ending prior to the Dec Scenario, the below is in effect for the duration of the scenario.\n• When playing any Campaign Scenario beginning in Sep or Nov the below is in effect until the first GT after the lull conditions **LF** (24.0) have been met or GD 88 whichever comes first.\n**a)** When the Allied player conducts ammunition depletion DRs, if any artillery unit of 155mm or larger participated in the mission, the first unit to be ammo depleted must be a unit of 155mm or larger.\n**b)** When the Allied player conducts ammunition replenishment DRs for artillery units of 155mm or larger, apply a +1 to the replenishment DR.",
-    "crossRefs": ["24.0"],
+    "crossRefs": [
+      "24.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1231,7 +1250,10 @@
     "title": "German GenS",
     "summary": "German 7th and 19th Army HQs do not appear; each army has designated PSS locations.",
     "text": "**Important:** *The German 7th and 19th Army HQs do not appear in **Lucky Forward**.*\n\n**1st Army:** Prior to the start of play, the German player must designate one of the below locations as 1st Army's PSS:\n**a)** Any one city hex in Germany that can trace a GenS path of any length along a primary road to a north or east map edge within the 1st Army ZOP.\n**b)** Any one primary road map edge hex on the north or east side of Maps 2, 3 or 5 within 1st Army ZOP.\n**c)** The designated PSS must be at least seven hexes from any Allied unit.\n• The German player may change PSS hexes during any subsequent Command Phase.\n\n**5th Pz Army:** During the Command Phase of GD 8, the German player must designate a PSS for the 5th Pz Army using the same criteria as above.\n\n**Important:** *See **LF** (15.5.3) for city OhS.*\n\n**LXXX Corps (7th Army):** Prior to the start of play, the German player must designate any one primary road map edge hex on the north or east side of Map 1 or 3 within the LXXX ZOP as the LXXX Corps' PSS.\n\n• The road hex must be at least seven hexes from any Allied unit.\n• The German player may change PSS hexes during any subsequent Command Phase.\n\n**LXVI Corps (19th Army):** Prior to the start of play, the German player must designate any one primary road map edge hex on the south edge of Map 4 or any primary/secondary road hex on Map 3 or 5 within the LXVI ZOP.\n• The PSS cannot be:\n**a)** A hex within a closed map interval (**LF** (27.1.0)); or,\n**b)** Within seven hexes of an Allied unit.\n• The German player may change PSS hexes during any subsequent Command Phase.",
-    "crossRefs": ["15.5.3", "27.1.0"],
+    "crossRefs": [
+      "15.5.3",
+      "27.1.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1258,7 +1280,9 @@
     "title": "7th & 19th Armies",
     "summary": "Both the 19th and 7th Armies use simplified logistic procedures when active.",
     "text": "Both the 19th and 7th Armies use the below logistic procedures when active.\n\n**Important:** *The 7th Army deactivates in accordance with **LF** (29.3.14).*\n\n• Each army has an ADV of four. The German player may not modify ADV due to number of formations assigned.\n• Each army may create a maximum of two AmP per GD by reducing its ADV by one.\n• Each army may stockpile a maximum of five AmP.\n• Neither army receives fuel points. All Mech HQ have low fuel. This includes all Mech HQ arriving as reinforcements. Independent Mech class units arriving as reinforcements assume the fuel value of their superior HQ.\n• Each army has one TP for motorization only.",
-    "crossRefs": ["29.3.14"],
+    "crossRefs": [
+      "29.3.14"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1276,7 +1300,9 @@
     "title": "ET-3 & ET-2 Placement",
     "summary": "The German player may place ET-3 and ET-2 in German-occupied hexes per specified criteria.",
     "text": "The German player may place 6 × ET-3 and 24 × ET-2 in any German occupied hex. ET-3 must meet the placement criteria in **LF** (17.3.3c). No further ET-3 may be constructed unless playing a scenario extending past GD 27.",
-    "crossRefs": ["17.3.3c"],
+    "crossRefs": [
+      "17.3.3c"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1285,7 +1311,10 @@
     "title": "Victory Conditions",
     "summary": "At the end of GD 26, players determine victory based on geographic objectives and VP totals.",
     "text": "At the end of GD 26 the players determine victory.\n\n• The German player wins a strategic victory if the Allied player has not:\n**a)** Captured all town and city hexes of Nancy (total of 12 hexes); and,\n**b)** Established and held at least three bridgeheads and/or bridges across the Moselle River north of hex 4-3017. At least one of these bridgeheads/bridges must be north of hex 1-3443; and,\n**c)** Conducted enough GAs against the Metz forts to have reached the 6 block on the US Attacks on Forts Track; and,\n**d)** Control all hexes to the west of any Moselle River hexside within the XV Corps ZoP. In this case control is defined as there being no in GenS German units west of any Moselle River hexside within the XV Corps ZOP.\n**e)** Control all Luxemburg City town and city hexes or if any hex is occupied by a German unit, that German unit cannot be in GenS (trace a GenS path to its PSS).\n\n• If the Allied player has met the above conditions count the number of geographic victory points the Allied forces have captured (**LF** (28.1.0)) and add or subtract victory points for the conditions listed in **LF** (28.0).\n\n• After totaling all victory points, both players then determine the level of victory using the below scale:\n**7 or Less:** The German side wins an operational victory.\n**8 to 15:** The scenario is a draw.\n**16 to 50:** The Allied side wins an operational victory.\n**51 or More:** The Allied side wins a strategic victory.",
-    "crossRefs": ["28.1.0", "28.0"],
+    "crossRefs": [
+      "28.1.0",
+      "28.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1303,7 +1332,9 @@
     "title": "German Reinforcements",
     "summary": "All German reinforcements arrive in AM GT unless noted otherwise, with specific GD arrival schedules.",
     "text": "All units arrive in AM GT unless specifically noted otherwise. Units designated to arrive in non-map edge hexes, are considered to arrive in sequence. Treat the hex as a map edge hex (**GOSS** (21.2.0)).\n\nReinforcements arrive on specific GDs as listed in the scenario booklet, starting from GD 2 through GD 24. Key arrivals include Metz Fort Art Bn. reinforcements, units at Saarbrucken and Blamont, and the 5th Pz Army establishment on GD 8.",
-    "crossRefs": ["21.2.0"],
+    "crossRefs": [
+      "21.2.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1312,7 +1343,10 @@
     "title": "US Setup Command Boundaries",
     "summary": "Detailed US setup and command boundary information for the September scenario.",
     "text": "**1st Army:** The boundary line between the 1st and 3rd Armies is set during each scenario's set-up. It may not be changed unless scenario rules state otherwise.\n\n• When playing the extended Sept scenario or the campaign scenario:\n**1)** On GD 26 the 1st Army/V Corps ZOP is deactivated (remove all units/formations assigned to the V Corps/1st Army).\n**2)** A new 1A/3A boundary is in effect (dashed blue line on map 1).\n**3)** 3rd Army units may not move north of this boundary west of the Moselle River and German units may not enter this area unless scenario special rules allow such movement.\n\n**3rd Army:** The 3rd Army ZOP boundary is set by the 1st and 7th Army boundaries.\n• XX and XII Corps boundary runs from Map 4, hex 1006 direct to 3606.\n• The 3rd Army southern boundary is not active until the AM GT, GD-7. Until then the XII/XV Corps boundary shown on the Sept Scenario Map is the boundary line between the XII and XV Corps. XII units may operate on or north of the blue boundary line; 4-1042 to 4-1444. If required due to US advance, extend the XII/XV boundary in a straight line along the same axis.\n\n• On GD 7 the XV Corps HQ enters the map and activates the 3rd/7th Army boundary shown on the map.\n**a)** All formations not designated as assigned to the XV Corps and those XV Corps asset units the Allied player does not wish to assign to the XV Corps must exit the XV Corps ZOP by the end of the Allied Movement Phase of the AM GT, GD 8.\n**b)** Any of the above formations and/or units that have not exited the XV ZOP by the end of the Allied Movement Phase of the AM GT, GD 8 are immediately marked OoC. In addition to the OoC penalties (**GOSS** (9.8.0)) the following is in affect:\n**1)** All Art units are immediately marked AD. Art units so marked cannot replenish until entering the XII Corps ZOP.\n**2)** Units may not receive RePs.\n**3)** Formations with more than 50% of their assigned/attached units still in the XV Corps ZOP count as two formations (1 for BG) when adjusting ADV (**GOSS** (16.3.2)). The player must support these formations using the XII Corps.\n\n• When playing the Sep Scenario, the XV Corps remains assigned to the 3rd Army until the end of the scenario.\n• When playing the Sept extended scenario or any Campaign Scenario the XV Corps is assigned to the 7th Army on GD 25.\n\n**Important:** *Units assigned to the 3rd Army/XII Corps may not cross into the XV ZOP during the above period.*\n\n**US Fort Attacks:** Place the US fort attacks marker in the 1 Box on the US Attacks on Forts Track.",
-    "crossRefs": ["9.8.0", "16.3.2"],
+    "crossRefs": [
+      "9.8.0",
+      "16.3.2"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1321,7 +1355,10 @@
     "title": "US Reinforcements",
     "summary": "All US reinforcements enter with low fuel; specific arrival schedule by GD is provided.",
     "text": "**Important:** *All units/formations/sub-formations entering as reinforcements automatically enter with low fuel (FP is not required). The Allied player may expend the FP required during the Logistics Phase of the GD of arrival to increase the fuel level to normal (pay only the difference between low fuel and normal fuel).*\n\n**Exception:** *Pool reinforcements **LF** (29.3.11). All other rules outlined in **GOSS** (21.1.0) still apply.*\n\nUS reinforcements arrive on specific GDs from GD 1 through GD 19, with units entering at designated map entry areas. Key arrivals include the 4th Arm Div (GD 1), 90th Inf Div (GD 1), 5th Inf Div (GD 1), 80th Inf Div (GD 1), 7th Arm Div (GD 1), 2nd FF Arm Div (GD 8), 35th Inf Div (GD 6), 6th Arm Div (GD 14), 83rd Inf Div (GD 16), and 7th Arm Div withdrawal (GD 19).",
-    "crossRefs": ["29.3.11", "21.1.0"],
+    "crossRefs": [
+      "29.3.11",
+      "21.1.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1330,7 +1367,9 @@
     "title": "October Scenario",
     "summary": "The October scenario is the introductory Battle for Gremercy Forest scenario; October reinforcements extend the September scenario.",
     "text": "The only October scenario is the introductory scenario \"Battle for Gremercy Forest\" (**LF** (29.2.0)), a short battle scenario depicting the 35th Inf Div and 6th Arm Divs battle to stabilize the Sept frontline. As such, there are no other October setups.\n\nThe October reinforcements and their arrival dates are provided so that players may extend the September scenarios beyond that month for campaign play and for variant scenarios.",
-    "crossRefs": ["29.2.0"],
+    "crossRefs": [
+      "29.2.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1339,7 +1378,9 @@
     "title": "Extended Sep Scenario",
     "summary": "Players may extend the September scenario to GD 35, with modified rules.",
     "text": "Players may choose to extend the Sep Scenario to the end of GD 35.\n\n• All rules for the Sep scenario apply to the Extended Sep scenario, unless modified by the below rules.\n\n**Important:** *See **LF** (29.3.15) for the US 1st Army deactivation procedures.*",
-    "crossRefs": ["29.3.15"],
+    "crossRefs": [
+      "29.3.15"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1348,7 +1389,10 @@
     "title": "Extended Sep Scenario Victory Conditions",
     "summary": "Victory conditions for the Extended September scenario ending on GD 35.",
     "text": "At the end of GD 35 the players determine victory.\n\n• The German player wins a strategic victory if the Allied player has not:\n**a)** Captured all town and city hexes of Nancy (total of 12 hexes); and,\n**b)** Established and held at least three bridgeheads and/or bridges across the Moselle River north of hex 4-3017. At least one of these bridgeheads/bridges must be north of hex 1-3443; and,\n**c)** Conducted enough GAs against the Metz forts to have reached the 6 block on the US Attacks on Forts Track; and,\n**d)** Control all hexes to the west of any Moselle River hexside within the XV Corps ZoP. In this case control is defined as there being no in GenS German units west of any Moselle River hexside within the XV Corps ZOP.\n**e)** Control all Luxemburg City town and city hexes or if any hex is occupied by a German unit, that German unit cannot be in GenS (trace a GenS path to its PSS).\n\n• If the Allied player has met the above conditions count the number of geographic victory points the Allied forces have captured (**LF** (28.1.0)) and add or subtract victory points for the conditions listed in **LF** (28.0).\n\n• After totaling all victory points, both players then determine the level of victory using the below scale:\n**15 or Less:** The German side wins an operational victory.\n**16 to 20:** The scenario is a draw.\n**21 to 60:** The Allied side wins an operational victory.\n**61 or More:** The Allied side wins a strategic victory.",
-    "crossRefs": ["28.1.0", "28.0"],
+    "crossRefs": [
+      "28.1.0",
+      "28.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1357,7 +1401,13 @@
     "title": "US GenS & Logistics",
     "summary": "US GenS and logistics procedures for the October/Extended September period.",
     "text": "**Important:** *See **LF** map errata (**LF** (1.0)).*\n\n**Extended Sep Scenario or a Campaign Scenario extending to either the Nov or Dec end dates:**\n\n**3rd Army:** The US 3rd Army continues using the GenS and logistic rules in **LF** (29.3.7) and **LF** (29.3.8).\n• On GD 27 the Allied player uses the ADV listed to the left of the slash on the GTRT until GD 35 if playing the Extended Sep Scenario.\n• If playing a Campaign Scenario use the ADV listed to the left of the slash until a lull is declared.\n• If a lull is declared on or before GD 36:\n**1)** Use the values to the right of the slash beginning the first AM GT of the GD the lull is declared; and,\n**2)** When the lull is ended use the procedures in **LF** (29.5.5).\n\n**Important:** *When playing a Campaign Scenario with a Sep start date, if the Allied player does not declare a lull on or prior to GD 36, the 7th Army continues to use the logistic rules listed in **LF** (29.3.8a) until the end of Nov. If the Allied player declares a lull on or prior to GD 36 the procedures in **LF** (29.5.5) are used beginning first AM GT of the GD that the lull is declared and continue to the end Nov.*",
-    "crossRefs": ["1.0", "29.3.7", "29.3.8", "29.5.5", "29.3.8a"],
+    "crossRefs": [
+      "1.0",
+      "29.3.7",
+      "29.3.8",
+      "29.5.5",
+      "29.3.8a"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1366,7 +1416,11 @@
     "title": "German GenS & Logistics",
     "summary": "German 7th Army is no longer active in October; logistics procedures for extended and campaign scenarios.",
     "text": "**Important:** *The German 7th Army is no longer active.*\n\n**Extended Sep Scenario or a Campaign Scenario extending to the Nov or Dec end dates:**\nThe 1st, 5th Pz and 19th Armies use the logistic and GenS procedures in **LF** (29.3.9) and **LF** (29.3.10).\n\n• If playing a Campaign Scenario and a lull is declared on or prior to GD 36 use the above procedures until the lull ends. Beginning the GD the lull ends, use the procedures in **LF** (29.5.7).\n• If no lull is declared or if the lull does not remain in place for 28 GDs, the 1st and 19th Armies continue to use the procedures in **LF** (29.3.9) and **LF** (29.3.10) until GD 88.",
-    "crossRefs": ["29.3.9", "29.3.10", "29.5.7"],
+    "crossRefs": [
+      "29.3.9",
+      "29.3.10",
+      "29.5.7"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1375,7 +1429,10 @@
     "title": "Allied October Reinforcements",
     "summary": "Procedures for Allied reinforcements during October, including Campaign Scenario variations.",
     "text": "When playing the Sep Extended Scenario or playing any Campaign Scenario, if Allied units remain in the Allied Reinforcement Pool continue using **LF** (29.3.11).\n\n• If units remain in the pool when a lull is declared or if the 3rd Army is not using the full logistic rules, the Allied player may automatically randomly draw 5 units from the pool each AM GT.\n\n**Important:** *Beginning the AM GT of GD 27 (in all scenarios) all Allied reinforcements use **GOSS** (21.0) to determine fuel states and GenS.*\n\n• The below reinforcements do not apply to the Extended Sep Scenario. They only apply when playing a Campaign Scenario.\n• When playing a Campaign Scenario, all the below reinforcements arrive during the Allied Movement Phase of the AM GT for the GD listed.\n\nOctober reinforcements arrive on specific GDs from GD 36 through GD 63, including the 26th Inf Div, 44th Inf Div, 95th Inf Div, French Paris Rgt, 10th Arm Div, 3rd Army HQ (Patton), and others.",
-    "crossRefs": ["29.3.11", "21.0"],
+    "crossRefs": [
+      "29.3.11",
+      "21.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1384,7 +1441,9 @@
     "title": "German October Reinforcements",
     "summary": "German RE Pool and reinforcement procedures for October, with specific GD arrival schedules.",
     "text": "**German RE Pool:** If playing the Sep Extended or any Campaign Scenario, during the Command Phase of GD 27, the German player must create a RE Pool (opaque container) by placing the following units in the pool: 31 MG, 34 MG, 49 MG Bn., 806 MG, 815 MG, 816 MG Bn.'s, 1431 Metz Fort Inf Bn., VI Fort Inf Bn., VII Fort Inf Bn., VIII Fort Inf Bn., 1015 Fort Inf Bn., 17 Fort Inf Bn., 33 Fort Art Bn., 1510 Fort Art Bn., 1518 Fort Art Bn., 1520 Fort Art Bn. & 1522 Fort Art Bn.\n\n• The German player consults the German Pool Reinforcement Table on the German Army Record Tracks and rolls 1d10. Cross reference the result with the number of units received from the pool (unlike the Allied reinforcement pool, the German player does not expend TP).\n• The German player then randomly picks that number of units to arrive during the German Movement Phase of the AM GT.\n• The German player may place these units in any German controlled WW hex or city in Germany. The hex must be placed so there is a minimum of six intervening hexes from the closest Allied unit.\n\nGerman reinforcements arrive on specific GDs from GD 27 through GD 55.",
-    "crossRefs": ["29.4.6"],
+    "crossRefs": [
+      "29.4.6"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1393,7 +1452,14 @@
     "title": "November Scenario",
     "summary": "The November scenario begins GD 65 with set-piece assaults against established German defensive lines.",
     "text": "After the logistically enforced reduction in operations for October (Lull), the 12th Army Group was ready to resume the offensive again. Ammo, fuel and other supplies had been stockpiled, and Ike had decided to resume his broad front offensive with 1st, 3rd, 9th, and 7th Armies all attacking in November. The goal of these attacks was to reach the Rhine River at multiple points to put more pressure on the German armies west of that river. This was all hoped to be done before the full onset of winter.\n\nThe November scenario begins with set piece assaults against a defensive line that has had more than a month to be established and upgraded. US and French units begin at full strength with enough supply to attack unfettered. The Germans have received reinforcements and have had time to lay tens of thousands of mines and improve their positions. Their goal is to buy enough time and space so that Hitler's upcoming counteroffensive in the Ardennes will not be compromised by 3rd Army gains.\n\n**Campaign Scenarios:** When playing a Campaign Scenario beginning on GD 1, the end of the Campaign may be set for GD 87 (end of Nov Scenario) or GD 102 (end of Dec Scenario). Ignore:\n**LF** (29.5.1) (except ending date)\t**LF** (29.5.6)\n**LF** (29.5.2)\t**LF** (29.5.7)\n**LF** (29.5.4)\t**LF** (29.5.8)\n\nAll Logistic and set up procedures that pertain to the Nov Scenario including the corps boundaries.\n\n**Important:** *The below logistic procedures and RE/reinforcement pool sections contain information that is used for the Campaign Scenarios.*",
-    "crossRefs": ["29.5.1", "29.5.2", "29.5.4", "29.5.6", "29.5.7", "29.5.8"],
+    "crossRefs": [
+      "29.5.1",
+      "29.5.2",
+      "29.5.4",
+      "29.5.6",
+      "29.5.7",
+      "29.5.8"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1411,7 +1477,10 @@
     "title": "Weather",
     "summary": "GD 65 weather is Ovr and GC is mud; weather is randomly determined from GD 66.",
     "text": "GD 65 weather is Ovr and the GC is mud. Do not roll for flooding or for fog.\n\n• Beginning the AM GT of GD 66, weather is randomly determined each GT (**GOSS** (19.2.2)). There is no historical weather.\n\n**Important:** *Roll for flood beginning GD 66 as per **LF** (19.4.6a).*",
-    "crossRefs": ["19.2.2", "19.4.6a"],
+    "crossRefs": [
+      "19.2.2",
+      "19.4.6a"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1420,7 +1489,11 @@
     "title": "Command Boundary Changes",
     "summary": "US 1st Army and German 7th Army are no longer active; corps boundaries may be changed.",
     "text": "The US 1st Army and German 7th Army are no longer active. Both of their ZOPs are out of play (See Nov Scenario set up map).\n\n**Important:** *Corps boundaries may be changed (**GOSS** (9.2.0)). Army boundaries may not be changed unless directed otherwise in scenario rules.*\n\n• The Alsatian Plain goes out of play as soon as it is cleared (**LF** (27.3.0)).\n• Intervals 1, 2 and 3 are closed (**LF** (27.1.1)).",
-    "crossRefs": ["9.2.0", "27.3.0", "27.1.1"],
+    "crossRefs": [
+      "9.2.0",
+      "27.3.0",
+      "27.1.1"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1429,7 +1502,9 @@
     "title": "US GenS",
     "summary": "All US forces use the September GenS procedures.",
     "text": "All US forces use the procedures in **LF** (29.3.7).",
-    "crossRefs": ["29.3.7"],
+    "crossRefs": [
+      "29.3.7"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1438,7 +1513,12 @@
     "title": "US Logistics",
     "summary": "Detailed US logistics for the November scenario, covering 3rd Army, 7th Army, and Campaign Scenario variations.",
     "text": "The Allied side does not use the logistic tables during the following periods:\n\n**Important:** *See **LF** map errata (**LF** (1.0)).*\n\n**Nov Scenario or Campaign Scenario starting on (GD 65):** The first 15 GDs of the Nov scenario (GD 65 through GD 79 inclusive).\n\n**Important:** *If playing the above, the 3rd Army begins with 10 AmP in stockpile.*\n\n**Campaign Scenario starting in Sep:** The 15 GDs after coming out of a lull that lasted at least 28 GDs (**LF** (24.0)).\n\n**3rd Army:** During the above periods 3rd Army:\n**1)** Has a base ADV of 5. ADV is adjusted as per **GOSS** (16.3.2) (skip step 5).\n**2)** Receives 4 AmP each AM GT.\n**3)** All units have normal fuel.\n**4)** Each assigned corps has two TP available for motorization (ignore the GTRT TP allocation).\n\n• On the first GD that standard logistic rules again apply, 3rd Army:\n**1)** Has 12 FP in stockpile.\n**2)** Has all AmP previously accumulated and an additional number of AmP equal to the total DR of two 1d10 available in stockpile.\n**3)** Has a base ADV as listed to the right of the slash on the GTRT.\n**4)** Has the number of TP as listed on the GTRT.\n\n**Exception:** *If playing a Campaign Scenario with a Sep start and the Allied player did not declare a lull that met the conditions in **LF** (24.0), The 3rd Army must use the number of TP to the right of the slash on the GTRT.*\n\n**7th Army:**\n**Nov Scenario or Campaign Scenario starting on (GD 65):** The 7th Army:\n**1)** Has an ADV of 4. Do not use the ADV adjustments in **GOSS** (16.3.2). See below for AmP conversion.\n**2)** Receives 1 AmP each AM GT.\n**3)** May convert a maximum of one point of ADV to two AmP, or two AmP to one point of ADV each AM GT.\n**4)** Starts with three AmP in stockpile and may not carry more than four AmP from one GD to another.\n**5)** Has two TP available for motorization only.\n**6)** All formations and units are in normal fuel.\n\n**Important:** *7th Army could end a Joint Logistics Phase with more than four AmP, however at the beginning of the next Joint Logistics Phase all AmP over four in the stockpile must be eliminated.*\n\n**Campaign Scenario starting in Sep:** Use the procedures in **LF** (29.4.3).",
-    "crossRefs": ["1.0", "24.0", "16.3.2", "29.4.3"],
+    "crossRefs": [
+      "1.0",
+      "24.0",
+      "16.3.2",
+      "29.4.3"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1447,7 +1527,9 @@
     "title": "German GenS",
     "summary": "German forces use the procedures in LF 29.3.9.",
     "text": "Use the procedures in in **LF** (29.3.9).",
-    "crossRefs": ["29.3.9"],
+    "crossRefs": [
+      "29.3.9"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1456,7 +1538,11 @@
     "title": "German Logistics",
     "summary": "German logistics for the November period, with detailed procedures for 1st Army, 19th Army, and Campaign Scenario variations.",
     "text": "The German side does not use the logistic tables during the following periods:\n\n**Nov Scenario or Campaign Scenario starting on (GD 65):** The first 10 GDs of the Nov scenario (GD 65 through GD 79 inclusive).\n\n**Important:** *If playing the above, the 1st Army begins with 6 AmP in stockpile.*\n\n**Campaign Scenario starting in Sep:** The first 10 GDs after coming out of a lull that lasted at least 28 GDs (**LF** (24.0)).\n\n**1st Army:** During the above periods 1st Army:\n**1)** Has a base ADV of 4. ADV is adjusted as per **GOSS** (16.3.2) (skip step 5).\n**2)** Receives 2 AmP each AM GT.\n**3)** All units have normal fuel.\n**4)** Has three TP available for motorization (ignore the GTRT TP allocation).\n\n• On the first GD that standard logistic rules again apply, 1st Army:\n**1)** Has 8 FP in stockpile.\n**2)** Has all AmP previously accumulated and an additional number of AmP equal to the result of rolling 1d10 available in stockpile.\n**3)** Has a base ADV as listed to the right of the slash on the GTRT.\n**4)** Has the number of TP as listed on the GTRT.\n\n**19th Army:**\n**Nov Scenario or Campaign Scenario starting on (GD 65):** The 19th Army:\n**1)** Has an ADV of 3. Do not use the ADV adjustments in **GOSS** (16.3.2). See below for AmP conversion.\n**2)** Receives 1 AmP each AM GT.\n**3)** May convert a maximum of one point of ADV to two AmP, or two AmP to one point of ADV each AM GT.\n**4)** Starts with two AmP in stockpile and may not carry more than four AmP from one GD to another.\n**5)** Has two TP available for motorization only.\n**6)** All formations and units are in normal fuel.\n\n**Important:** *19th Army could end a Joint Logistics Phase with more than four AmP, however at the beginning of the next Joint Logistics Phase all AmP over four in the stockpile must be eliminated.*\n\n**Campaign Scenario starting in Sep:** Use the procedures in **LF** (29.4.3).",
-    "crossRefs": ["24.0", "16.3.2", "29.4.3"],
+    "crossRefs": [
+      "24.0",
+      "16.3.2",
+      "29.4.3"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1465,7 +1551,9 @@
     "title": "Bridges",
     "summary": "Bridge status and availability for the November scenario.",
     "text": "Any bridge (other than those listed below) on the at-start frontline may start the scenario destroyed (German player's choice).\n\n• There are a limited number of available bridges across the Moselle River. Place bridge markers in the following hexes.\n**Arnaville** (1-2551 to 2652)\n**Vandieres** (4-2503 to 2603)\n\n• The below bridges (printed on the map) are fully functional.\n**Pont Mousson** (4-2507)\n**Dielouard** (4-2711)\n**All Bridges:** In or south of Toul (4-1623).\n\n• All other bridges over the Moselle should be marked destroyed.\n\n**Important:** *See flood rules for bridges being washed out (**LF** (19.4.6c)).*",
-    "crossRefs": ["19.4.6c"],
+    "crossRefs": [
+      "19.4.6c"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1474,7 +1562,9 @@
     "title": "Fieldwork Placement",
     "summary": "Fieldwork placement limits for both sides in the November scenario.",
     "text": "The German side may place:\n• 14 × ET-3 in the 1st Army ZOP within 8 hexes of the frontline.\n• 10 × ET-3 may be placed in the 1st Army ZOP at least 12 hexes from the frontline.\n• 30 × ET2 may be placed anywhere within 6 hexes of the frontline within 1st Army ZOP.\n• 10 × ET-2 can be placed at least 12 hexes from the frontline.\n• 3 × ET-3 and 10 × ET-2 can be placed within 6 hexes of the front line within the 19th Army ZOP.\n• 2 × ET-2 can be placed at least 10 hexes from the frontline in the 19th Army ZOP.\n• The German player may place IPs in all other German occupied front-line hexes occupied by at least one step of non-artillery/non-HQ units.\n• The Allied side may place an ET-2 on any hex occupied by at least two steps of non-Art/non-HQ units that is adjacent to the frontline as designated on the scenario map.\n\n**Important:** *See **LF** (7.13.4) for minefield placement.*",
-    "crossRefs": ["7.13.4"],
+    "crossRefs": [
+      "7.13.4"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1483,7 +1573,9 @@
     "title": "Special Rules",
     "summary": "Special rules for the November scenario regarding lull benefits.",
     "text": "The Allied forces have completed a 28-day lull. When playing the Nov scenario, the benefits and restrictions listed in **LF** (24.4.0) only apply to the corps selected below.\n\n• Prior to the start of the scenario, the Allied player secretly (writes down) selects one corps from the 3rd Army.\n• That corps receives all the benefits of the first GD of coming out of a lull (**GOSS** & **LF** (24.4.0)).\n• After the German player has completed his set up the Allied player reveals the corps selected.\n• Units assigned to the corps that was not selected cannot enter PA mode On GD 65 and do not receive any of the benefits listed in (24.4.0).\n\nThere are no special rules.",
-    "crossRefs": ["24.4.0"],
+    "crossRefs": [
+      "24.4.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1492,7 +1584,12 @@
     "title": "Victory Conditions",
     "summary": "November scenario victory conditions based on geographic objectives.",
     "text": "**Important:** *If playing a Campaign Scenario with a start date of GD 1 or GD 65, the Allied player must meet all the victory conditions listed in **LF** (29.4.1), (29.5.9) and the below.*\n\n• If playing the Dec Scenario and the Allied player has met the above conditions count the number of geographic victory points the Allied forces have captured (**LF** (28.1.0)) and add or subtract victory points for the conditions listed in **LF** (28.0).\n\n• After totaling all victory points, both players then determine the level of victory using the below scale:\n**29 or less:** German side wins an operational victory.\n**30 to 49:** German side wins a marginal victory.\n**50 to 79:** The scenario is a draw.\n**80 to 100:** The Allied side wins an operational victory.\n**101 or more:** The Allied side wins a strategic victory.\n\nIf playing the Nov Scenario, the German player wins a strategic victory if the Allied player:\n**a)** Has not captured all town and city hexes of Nancy; and,\n**b)** Has not captured all city and town hexes of Metz; and,\n**c)** Cannot trace an Allied GenS path through at least three Metz city hexes using primary road hexes. This path must trace from any primary road map edge hex on map 1 to 1-2444.\n**d)** Has not cleared the Alsatian Plain and the 79th Inf Div and 2nd Fr Arm Div have not exited off the east map edge of map 5 (toward Strasbourg).\n\n• If the Allied player has met the above conditions count the number of geographic victory points the Allied forces have captured (**LF** (28.1.0)) and add or subtract victory points for the conditions listed in **LF** (28.0).\n\n• After totaling all victory points, both players then determine the level of victory using the below scale:\n**29 or less:** German side wins an operational victory.\n**30 to 49:** German side wins a marginal victory.\n**50 to 79:** The scenario is a draw.\n**80 to 100:** The Allied side wins an operational victory.\n**101 or more:** The Allied side wins a strategic victory.",
-    "crossRefs": ["29.4.1", "29.5.9", "28.1.0", "28.0"],
+    "crossRefs": [
+      "29.4.1",
+      "29.5.9",
+      "28.1.0",
+      "28.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1501,7 +1598,9 @@
     "title": "November Frontline",
     "summary": "The November frontline hex references for setup.",
     "text": "The front line is shown on the set-up maps provided. Players can also use the hex numbers and river references below. Allied units may be set up on or west/southwest of the line. Axis units may be set up east or southeast of the hexes listed below.\n\n**Start at 2-1701** and follow the Moselle River south to 1-3336 to 3237 to 3238 to 3138 to 2937 to 2639 to 2641 to 2541 to 2548 to 2649 to 2549 to 2550 to 2651 to 2652, to 2752 to 2852 to 2952 to;\n**Map-4** Hex 3001 to 2903 to 2905 to 3006 to 3105 to 3107 to 3509 to 3609 to 3810 to 3811 to 3911 to 4011 to 4212 to 4213 to 4313 to 4512 to 4713 to 4715 to;\n**Map-3** Hex 1619 to1620 to 1821 to 1822 to 2023 to 2024 to 2124 to 2129 to 2230 to 2231 to 2633 to 2634 to 2734 to 2735 to 2836 to 3137.\n\n**Important:** *The portion of the out of play area, denoted by the red dotted line on map 3 (Nov scenario map) is still active. It is out of play when Interval Four is closed (**LF** (27.1.1)).*",
-    "crossRefs": ["27.1.1"],
+    "crossRefs": [
+      "27.1.1"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1537,7 +1636,9 @@
     "title": "US November Set-up",
     "summary": "Detailed US setup instructions for the November scenario including all corps and army boundaries.",
     "text": "**Campaign Scenario starting GD 1:** If Allied units remain in the Allied Reinforcement Pool continue using **LF** (29.3.11). If units remain in the pool when a lull is declared or if the 3rd Army is not using the full logistic rules, the Allied player may automatically randomly draw 5 units from the pool each AM GT.\n\n**Nov Scenario or Campaign Scenario beginning on the Nov start date:** All Corps or Army Art and Eng assets not listed in the set up are still in play and are set up anywhere within their corresponding ZOP. Allied frontline units must be set up within four hexes of the frontline.\n\n**Exception:** *Units with a white square in their upper right corner that are not listed in the set up are not placed on the map.*\n\n**Optional:** The November and December set ups for US forces show the area within a divisional boundary were each sub-formation was historically located. Prior to commencing set up, players should agree to use the sub-formation locations or allow the US player to set up the sub-formations as he wishes within the divisional boundaries.\n\nDetailed formation-by-formation setup is provided in the scenario booklet for Third Army, XX Corps, XII Corps, 7th Army, XV Corps, and all subordinate divisions.",
-    "crossRefs": ["29.3.11"],
+    "crossRefs": [
+      "29.3.11"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1555,7 +1656,9 @@
     "title": "German November Boundaries",
     "summary": "German army and corps boundaries for the November scenario.",
     "text": "**29.5.15a 1st Army Boundary:**\nSee **LF** (29.5.10c), 7th Army ZOP is out of play for this scenario. 1st Army extends from the north edge of Map 2, east of the Moselle River along the frontline to;\n**Map 3:** Hex 2330, then to 2529 to 2528 to;\n**Map 5:** Hex 3237.\n\n**29.5.15b Corps Boundary:**\nCorps boundaries are defined back from the frontline to a specific hex.\n**LXXXII Corps:** ZOP extends from the north map edge of Map 2, along the frontline to Map 1, hex 2849 to 4741.\n**XIII SS Corps:** ZOP extends from the LXXXII southern boundary along the frontline to Map 4, hex 3909 to 4705.\n**LXXXIX Corps:** ZOP extends from the XIII SS Corps boundary along the frontline to 19th Army boundary.",
-    "crossRefs": ["29.5.10"],
+    "crossRefs": [
+      "29.5.10"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1564,7 +1667,9 @@
     "title": "German November Set-up",
     "summary": "German RE Pool and detailed setup instructions for the November scenario.",
     "text": "**German November RE Pool:**\n**1)** If playing a Campaign Scenario with a GD 1 start, any units remaining in the pool remain in the pool and all units listed below are then added to the pool. Use the procedures in **LF** (29.4.6).\n**2)** If playing the Nov Scenario or Campaign Scenario beginning in Nov, the German player must create a RE Pool using the procedures in **LF** (29.4.6). The pool contains the following units: 1412 Fort Inf Bn., XIII Fort Inf Bn., XVI Fort Inf Bn., 1503 Fort Art Bn., 1504 Fort Art Bn., 1506 Fort Art Bn., 1507 Fort Art Bn., 1508 Fort Art Bn., 1509 Fort Art Bn., 1517 Fort Art Bn., 1519 Fort Art Bn.\n\nDetailed formation-by-formation setup is provided in the scenario booklet for 1st Army, LXXXII Corps, XIII SS Corps, LXXXIX Corps, LXXXIX Corps, 19th Army, and all subordinate divisions.",
-    "crossRefs": ["29.4.6"],
+    "crossRefs": [
+      "29.4.6"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1582,7 +1687,12 @@
     "title": "December Scenario",
     "summary": "The December scenario extends operations into December as 3rd Army drives toward the Saar River.",
     "text": "This scenario extends the November offensive into December as Third Army and XV Corps drive to the Westwall and crossings over the Saar River. The Germans were determined to hold the Americans at the WW as they were stalling for time until the German counteroffensive could be launched further north. The weather was lousy, the troops on both sides exhausted and casualties had been high. Nevertheless, the US Army finally got toeholds over the Saar and were fighting for control of several towns and cities on the other side when the word came down that something was up further north in the Ardennes, forcing the retreat of 3rd Army's hard-won gains in Dec.\n\n**Campaign Scenarios:** When playing a Campaign Scenario beginning on GD 1 or GD 65, ignore the following:\n**LF** (29.6.1) (except ending date)\t**LF** (29.6.6)\n**LF** (29.6.2)\t**LF** (29.6.7)\n\nAll logistic and set up procedures, including front lines and that pertain to the Dec Scenario including the corps boundaries.\n\n**Important:** *The below logistic procedures and RE/reinforcement pool sections contain information that is used for the Campaign Scenarios.*",
-    "crossRefs": ["29.6.1", "29.6.2", "29.6.6", "29.6.7"],
+    "crossRefs": [
+      "29.6.1",
+      "29.6.2",
+      "29.6.6",
+      "29.6.7"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1591,7 +1701,9 @@
     "title": "December Scenario Length & Maps",
     "summary": "The December scenario runs from GD 88 AM GT to the Night GT of GD 103; all maps are used.",
     "text": "The scenario begins on AM GT of GD 88. It ends at the end of the Night GT on GD 103. All maps are used. The German side sets up first.\n\n**US Attacks on Forts Track:** The US Attacks on Forts Track; the marker is in the 12 Box. The 5th Inf Div is assault trained.\n\n**Metz Pocket:** Both the German and Allied set up for the remaining Metz fortifications is an optional historical set up for the Dec scenario. Players may refrain from setting this group and the US units containing them up.\n\n**Important:** *If the Metz pocket is not used, the Allied player receives the regimental BG listed in the pocket set up on the first GT of the scenario as described.*\n\n*Note: Players could decide to not use Map 4 to save space, just have it available to ensure that the GenS path for the two US armies are good.*\n\n**Important:** *All intervals are closed (**LF** (27.1.1)).*\n\nLike the November scenario players may choose to play just parts of this scenario by choosing a US Corps and playing only within the boundaries for that corps.\n\n• If you do this for the XII or XX Corps, take one-half of the available APs and half of the daily AmPs that arrive.\n• Reinforcements can only be received if they are listed as arriving in the active corps operational area for the Dec scenario.\n• Players can play any combination of US Corps action into a scenario, like playing just XV and XII Corps, for example.\n• Where the boundary for a corps overlaps just part of a German division, the German player uses only the units that can set up within the US ZOP.",
-    "crossRefs": ["27.1.1"],
+    "crossRefs": [
+      "27.1.1"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1600,7 +1712,9 @@
     "title": "Weather",
     "summary": "December weather starts as POvercast with mud ground conditions.",
     "text": "GD 88 weather is POvercast. The GC is mud. Place the ground condition marker in the M1 space. The flood state of the rivers is at F0 until the AM GT of GD 92 (**LF** (19.4.6b)). Beginning the AM GT of GD 89, weather is randomly determined each GT. There is no historical weather.",
-    "crossRefs": ["19.4.6b"],
+    "crossRefs": [
+      "19.4.6b"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1618,7 +1732,9 @@
     "title": "US GenS",
     "summary": "US forces use the September GenS procedures for the December scenario.",
     "text": "All US forces use the procedures in **LF** (29.3.7).",
-    "crossRefs": ["29.3.7"],
+    "crossRefs": [
+      "29.3.7"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1627,7 +1743,10 @@
     "title": "US Logistics",
     "summary": "US logistics for the December scenario, with detailed procedures for 3rd Army and 7th Army.",
     "text": "**Dec Scenario or Campaign Scenario starting on GD 1 or GD 65:** Beginning on GD 88, neither the 3rd nor the 7th Army use the full logistic rules.\n\n**3rd Army:**\n**1)** Has a base ADV of 4. ADV is adjusted as per **GOSS** (16.3.2) (skip step 5).\n**2)** Receives 2 AmP each AM GT.\n**3)** If playing the Dec Scenario, the 3rd Army has 10 AmP in stockpile. If playing a Campaign Scenario, the 3rd Army carries over any AmP in stockpile.\n**4)** All units have normal fuel.\n**5)** Has four TP available for motorization.\n\n**Exception:** *If playing a Campaign Scenario and the Allied player did not declare a lull that met the conditions in **LF** (24.0), The 3rd Army must use the number of TP to the right of the slash on the GTRT.*\n\n**7th Army:**\n**1)** Has an ADV of 4. Do not use the ADV adjustments in **GOSS** (16.3.2). See below for AmP conversion.\n**2)** Receives 1 AmP each AM GT.\n**3)** May convert a maximum of one point of ADV to two AmP, or two AmP to one point of ADV each AM GT.\n**4)** If playing the Dec Scenario, the 7th Army has four AmP in stockpile. If playing a Campaign Scenario, the 7th Army carries over any AmP in stockpile. The 7th Army may not carry more than four AmP from one GD to another.\n**5)** Has two TP available for motorization only.\n**6)** All formations and units are in normal fuel.\n\n**Important:** *7th Army could end a Joint Logistics Phase with more than four AmP, however at the beginning of the next Joint Logistics Phase all AmP over four in the stockpile must be eliminated.*",
-    "crossRefs": ["16.3.2", "24.0"],
+    "crossRefs": [
+      "16.3.2",
+      "24.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1636,7 +1755,9 @@
     "title": "German GenS",
     "summary": "German forces use the September GenS procedures for the December scenario.",
     "text": "Use the procedures in in **LF** (29.3.9).",
-    "crossRefs": ["29.3.9"],
+    "crossRefs": [
+      "29.3.9"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1645,7 +1766,9 @@
     "title": "German Logistics",
     "summary": "German logistics for the December scenario with detailed procedures for 1st Army.",
     "text": "**Dec Scenario or Campaign Scenario starting on GD 1 or GD 65:** Beginning on GD 88, the 1st Army uses the full logistic rules (**GOSS** (16.0)).\n\n**1st Army:**\n**1)** If playing the Dec Scenario, the 1st Army has five AmP and five FP in stockpile.\n**2)** If playing a Campaign Scenario, the 1st Army carries over any AmP and FP in stockpile.",
-    "crossRefs": ["16.0"],
+    "crossRefs": [
+      "16.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1663,7 +1786,10 @@
     "title": "Fieldwork Placement",
     "summary": "Fieldwork placement restrictions for the December scenario.",
     "text": "**Important:** Fieldworks cannot be placed in any hex containing a WW symbol (**Exception:** **GOSS** (17.4.1f)).\n\n**Important:** The Bitche Forts must also be placed (**LF** (17.5.1)).",
-    "crossRefs": ["17.4.1f", "17.5.1"],
+    "crossRefs": [
+      "17.4.1f",
+      "17.5.1"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1681,7 +1807,12 @@
     "title": "Victory Conditions",
     "summary": "December scenario victory conditions based on geographic objectives and VP totals.",
     "text": "**Important:** *If playing a Campaign Scenario with a start date of GD 1 or GD 65, the Allied player must meet all the victory conditions listed in **LF** (29.4.1), (29.5.9) and the below.*\n\n• If playing the Dec Scenario and the Allied player has met the above conditions count the number of geographic victory points the Allied forces have captured (**LF** (28.1.0)) and add or subtract victory points for the conditions listed in **LF** (28.0).\n\n• After totaling all victory points, both players then determine the level of victory using the below scale:\n**25 or less:** German side wins an operational victory.\n**26 to 50:** German side wins a marginal victory.\n**51 to 75:** The scenario is a draw.\n**76 to 100:** The Allied side wins an operational victory.\n**101 or more:** The Allied side wins a strategic victory.",
-    "crossRefs": ["29.4.1", "29.5.9", "28.1.0", "28.0"],
+    "crossRefs": [
+      "29.4.1",
+      "29.5.9",
+      "28.1.0",
+      "28.0"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1708,7 +1839,9 @@
     "title": "German Setup",
     "summary": "German RE Pool and detailed setup instructions for the December scenario.",
     "text": "**German November RE Pool:**\n**1)** If playing a Campaign Scenario with a GD 1 or GD 65 start, any units remaining in the pool remain in the pool and all units listed below are then added to the pool. Use the procedures in **LF** (29.4.6).\n**2)** If playing the Dec Scenario, the German player must create a RE Pool using the procedures in **LF** (29.4.6). The pool contains the following units: 817 MG Bn., II/469 Inf Bn., 1523 Fort Art Bn., 1527 Fort Art Bn.'s.\n\nDetailed formation-by-formation setup is provided in the scenario booklet for 1st Army, LXXXII Corps, XIII SS Corps, LXXXIX Corps, and all subordinate divisions.",
-    "crossRefs": ["29.4.6"],
+    "crossRefs": [
+      "29.4.6"
+    ],
     "module": "lucky-forward"
   },
   {
@@ -1726,7 +1859,9 @@
     "title": "US SET UP",
     "summary": "US setup instructions for the December scenario including reinforcement pool procedures.",
     "text": "If Allied units remain in the Allied Reinforcement Pool continue using **LF** (29.3.11). If the 3rd Army is not using the full logistic rules, the Allied player may automatically randomly draw 5 units from the pool each AM GT.\n\n**Dec Scenario:** All Corps or army Art and Eng assets not listed in the set up are still in play and are set up anywhere within their corresponding ZOP. Allied frontline units must be set up within four hexes of the frontline. Where listed, units may have been already withdrawn and no longer appear in play.\n\nDetailed formation-by-formation setup is provided in the scenario booklet for 3rd Army, XX Corps, XII Corps, 7th Army/XV Corps, and all subordinate divisions.",
-    "crossRefs": ["29.3.11"],
+    "crossRefs": [
+      "29.3.11"
+    ],
     "module": "lucky-forward"
   },
   {
