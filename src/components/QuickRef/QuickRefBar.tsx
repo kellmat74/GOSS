@@ -7,6 +7,8 @@ type RefKey = "tec" | "stacking" | "oob";
 
 interface QuickRefBarProps {
   gameModule: string | null;
+  scenario: string;
+  scenarioLabel: string;
 }
 
 // Lazy-load OOB data per game module
@@ -20,9 +22,9 @@ const buttons: { key: RefKey; label: string; icon: string; title: string; requir
   { key: "oob", label: "OOB", icon: "🎖", title: "Order of Battle", requiresOOB: true },
 ];
 
-export function QuickRefBar({ gameModule }: QuickRefBarProps) {
+export function QuickRefBar({ gameModule, scenario, scenarioLabel }: QuickRefBarProps) {
   const [activeRef, setActiveRef] = useState<RefKey | null>(null);
-  const [oobData, setOobData] = useState<unknown>(null);
+  const [oobRaw, setOobRaw] = useState<Record<string, unknown> | null>(null);
 
   const hasOOB = gameModule && gameModule in oobModules;
 
@@ -34,13 +36,18 @@ export function QuickRefBar({ gameModule }: QuickRefBarProps) {
     if (key === "oob" && gameModule && oobModules[gameModule]) {
       try {
         const mod = await oobModules[gameModule]();
-        setOobData(mod.default);
+        setOobRaw(mod.default as Record<string, unknown>);
       } catch {
         return;
       }
     }
     setActiveRef(key);
   };
+
+  // Pick scenario-specific OOB data, falling back to "all"
+  const oobData = oobRaw
+    ? (oobRaw[scenario] ?? oobRaw["all"] ?? oobRaw)
+    : null;
 
   const visibleButtons = buttons.filter(
     (btn) => !btn.requiresOOB || hasOOB
@@ -83,6 +90,7 @@ export function QuickRefBar({ gameModule }: QuickRefBarProps) {
       {activeRef === "oob" && oobData && (
         <OOBModal
           data={oobData as any}
+          scenarioLabel={scenarioLabel}
           onClose={() => setActiveRef(null)}
         />
       )}

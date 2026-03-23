@@ -3,7 +3,7 @@ import { useState } from "react";
 export interface OOBNode {
   id: string;
   label: string;
-  type: "army-group" | "army" | "corps" | "division";
+  type: string;
   children?: OOBNode[];
 }
 
@@ -28,13 +28,38 @@ const typeStyles: Record<string, { bg: string; text: string; badge: string }> = 
     text: "text-stone-800 dark:text-stone-200",
     badge: "bg-stone-500 text-white",
   },
+  regiment: {
+    bg: "bg-violet-100 dark:bg-violet-900/30",
+    text: "text-violet-900 dark:text-violet-200",
+    badge: "bg-violet-500 text-white",
+  },
+  battalion: {
+    bg: "bg-cyan-100 dark:bg-cyan-900/30",
+    text: "text-cyan-900 dark:text-cyan-200",
+    badge: "bg-cyan-600 text-white",
+  },
+  company: {
+    bg: "bg-rose-100 dark:bg-rose-900/30",
+    text: "text-rose-900 dark:text-rose-200",
+    badge: "bg-rose-500 text-white",
+  },
+  platoon: {
+    bg: "bg-stone-100 dark:bg-stone-700/50",
+    text: "text-stone-800 dark:text-stone-200",
+    badge: "bg-stone-400 text-white dark:bg-stone-500",
+  },
 };
+
 
 const typeLabels: Record<string, string> = {
   "army-group": "AG",
   army: "Army",
   corps: "Corps",
   division: "Div",
+  regiment: "Rgt",
+  battalion: "Bn",
+  company: "Co",
+  platoon: "Plt",
 };
 
 function TreeNode({ node, depth = 0 }: { node: OOBNode; depth?: number }) {

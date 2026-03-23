@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { AppShell } from "./components/Layout/AppShell";
 import { PhaseOverview } from "./components/SequenceOfPlay/PhaseOverview";
 import { PhaseStepper } from "./components/SequenceOfPlay/PhaseStepper";
-import { GameSelector, type GameModule } from "./components/Layout/GameSelector";
+import { GameSelector, type GameModule, GAME_SCENARIOS } from "./components/Layout/GameSelector";
 import { RulesSearch } from "./components/RulesReference/RulesSearch";
 import { RuleModal } from "./components/RulesReference/RuleModal";
 import { AskPanel } from "./components/Ask/AskPanel";
@@ -192,7 +192,15 @@ function App() {
         {view === "info" && <InfoPanel />}
       </AppShell>
       <RuleModal />
-      <QuickRefBar gameModule={gameModule} />
+      <QuickRefBar
+        gameModule={gameModule}
+        scenario={scenario ?? "all"}
+        scenarioLabel={
+          gameModule && scenario
+            ? (GAME_SCENARIOS[gameModule]?.find((s) => s.id === scenario)?.label ?? "All Scenarios")
+            : "All Scenarios"
+        }
+      />
     </RulesProvider>
     </GlossaryProvider>
   );

@@ -9,38 +9,43 @@ interface OOBData {
 
 interface OOBModalProps {
   data: OOBData;
+  scenarioLabel: string;
   onClose: () => void;
 }
 
-const lowerUnitsTree: OOBNode[] = [
+const unitStructureTree: OOBNode[] = [
   {
-    id: "division", label: "Division (Div)", type: "army-group",
+    id: "ag", label: "Army Group (AG)", type: "army-group",
     children: [
       {
-        id: "regiment", label: "Regiment (Rgt) / Brigade (Bde)", type: "army",
+        id: "army", label: "Army", type: "army",
         children: [
           {
-            id: "battalion", label: "Battalion (Bn)", type: "corps",
+            id: "corps", label: "Corps", type: "corps",
             children: [
               {
-                id: "company", label: "Company (Co) / Battery (Bty)", type: "division",
+                id: "division", label: "Division (Div)", type: "division",
                 children: [
-                  { id: "platoon", label: "Platoon (Plt) / Section", type: "division" },
+                  {
+                    id: "regiment", label: "Regiment (Rgt) / Brigade (Bde)", type: "regiment",
+                    children: [
+                      {
+                        id: "battalion", label: "Battalion (Bn)", type: "battalion",
+                        children: [
+                          {
+                            id: "company", label: "Company (Co) / Battery (Bty)", type: "company",
+                            children: [
+                              { id: "platoon", label: "Platoon (Plt) / Section", type: "platoon" },
+                            ]
+                          },
+                        ]
+                      },
+                    ]
+                  },
                 ]
               },
             ]
           },
-        ]
-      },
-      {
-        id: "div-assets", label: "Division Assets", type: "army",
-        children: [
-          { id: "div-arty", label: "Division Artillery (Div Arty)", type: "corps" },
-          { id: "div-recon", label: "Reconnaissance Battalion (Aufkl)", type: "corps" },
-          { id: "div-eng", label: "Engineer Battalion (Pio/Eng)", type: "corps" },
-          { id: "div-at", label: "Anti-Tank Battalion (AT/Panzerjäger)", type: "corps" },
-          { id: "div-flak", label: "Anti-Aircraft (Flak/AA)", type: "corps" },
-          { id: "div-sig", label: "Signal Battalion", type: "corps" },
         ]
       },
     ]
@@ -49,7 +54,7 @@ const lowerUnitsTree: OOBNode[] = [
 
 type Tab = "allied" | "german" | "lower";
 
-export function OOBModal({ data, onClose }: OOBModalProps) {
+export function OOBModal({ data, scenarioLabel, onClose }: OOBModalProps) {
   const [side, setSide] = useState<Tab>("allied");
 
   useEffect(() => {
@@ -60,7 +65,7 @@ export function OOBModal({ data, onClose }: OOBModalProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  const currentNodes = side === "lower" ? lowerUnitsTree : data[side].children;
+  const currentNodes = side === "lower" ? unitStructureTree : data[side].children;
 
   return createPortal(
     <div
@@ -75,6 +80,11 @@ export function OOBModal({ data, onClose }: OOBModalProps) {
         <div className="mb-3 flex items-center justify-between">
           <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100">
             Order of Battle
+            {scenarioLabel && (
+              <span className="ml-2 text-sm font-normal text-stone-500 dark:text-stone-400">
+                — {scenarioLabel}
+              </span>
+            )}
           </h2>
           <button
             onClick={onClose}
@@ -107,7 +117,7 @@ export function OOBModal({ data, onClose }: OOBModalProps) {
           ))}
         </div>
 
-        {/* Legend */}
+        {/* Legend — context-aware */}
         <div className="mb-3 flex flex-wrap gap-2 text-[10px]">
           <span className="rounded bg-amber-500 px-1.5 py-0.5 font-bold text-white">AG</span>
           <span className="text-stone-500 dark:text-stone-400">Army Group</span>
@@ -117,12 +127,24 @@ export function OOBModal({ data, onClose }: OOBModalProps) {
           <span className="text-stone-500 dark:text-stone-400">Corps</span>
           <span className="rounded bg-stone-500 px-1.5 py-0.5 font-bold text-white">Div</span>
           <span className="text-stone-500 dark:text-stone-400">Division</span>
+          {side === "lower" && (
+            <>
+              <span className="rounded bg-violet-500 px-1.5 py-0.5 font-bold text-white">Rgt</span>
+              <span className="text-stone-500 dark:text-stone-400">Regiment</span>
+              <span className="rounded bg-cyan-600 px-1.5 py-0.5 font-bold text-white">Bn</span>
+              <span className="text-stone-500 dark:text-stone-400">Battalion</span>
+              <span className="rounded bg-rose-500 px-1.5 py-0.5 font-bold text-white">Co</span>
+              <span className="text-stone-500 dark:text-stone-400">Company</span>
+              <span className="rounded bg-stone-400 px-1.5 py-0.5 font-bold text-white dark:bg-stone-500">Plt</span>
+              <span className="text-stone-500 dark:text-stone-400">Platoon</span>
+            </>
+          )}
         </div>
 
-        {/* Description for lower units tab */}
+        {/* Description for unit structure tab */}
         {side === "lower" && (
           <p className="mb-3 text-xs text-stone-500 dark:text-stone-400 italic">
-            Generic military organizational structure below Division level. Colors reused for visual hierarchy — not related to the OOB tabs.
+            Generic military organizational hierarchy from Army Group down to Platoon level.
           </p>
         )}
 
