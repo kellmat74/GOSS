@@ -19,17 +19,20 @@ export function RuleInlineText({ text, className }: RuleInlineTextProps) {
     const hasRule = !!getRuleBySection(ref);
     if (!hasRule) return <span key={key}>({ref})</span>;
     return (
-      <button
+      <span
         key={key}
+        role="button"
+        tabIndex={0}
         onClick={(e) => {
           e.stopPropagation();
           e.preventDefault();
           openRule(ref);
         }}
-        className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openRule(ref); } }}
+        className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300 cursor-pointer"
       >
         ({ref})
-      </button>
+      </span>
     );
   };
 
