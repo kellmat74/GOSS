@@ -1,5 +1,6 @@
 import { createPortal } from "react-dom";
 import { useEffect } from "react";
+import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
 interface TableData {
   title?: string;
@@ -48,7 +49,7 @@ function RefTable({ data }: { data: TableData }) {
             {data.rows.map((row, ri) => (
               <tr key={ri} className={ri % 2 === 1 ? "bg-stone-100 dark:bg-stone-800/50" : ""}>
                 {row.map((cell, ci) => (
-                  <td key={ci} className="border border-stone-300 px-2 py-1 text-xs text-stone-700 dark:border-stone-600 dark:text-stone-300">{cell}</td>
+                  <td key={ci} className="border border-stone-300 px-2 py-1 text-xs text-stone-700 dark:border-stone-600 dark:text-stone-300"><RuleInlineText text={cell} /></td>
                 ))}
               </tr>
             ))}
@@ -57,7 +58,7 @@ function RefTable({ data }: { data: TableData }) {
       </div>
       {data.footnotes && (
         <div className="mt-1 space-y-0.5 text-xs text-stone-500">
-          {data.footnotes.map((fn, i) => <p key={i}>* {fn}</p>)}
+          {data.footnotes.map((fn, i) => <p key={i}>* <RuleInlineText text={fn} /></p>)}
         </div>
       )}
     </div>
@@ -119,7 +120,7 @@ export function QuickRefModal({ data, onClose }: QuickRefModalProps) {
               {sec.title}
               {sec.ruleRef && <span className="ml-1 text-xs text-stone-400 dark:text-stone-500">§{sec.ruleRef}</span>}
             </h3>
-            {sec.description && <p className="mb-1 text-xs text-stone-600 dark:text-stone-400">{sec.description}</p>}
+            {sec.description && <p className="mb-1 text-xs text-stone-600 dark:text-stone-400"><RuleInlineText text={sec.description} /></p>}
             {sec.types && (
               <div className="flex flex-wrap gap-1.5 mt-1">
                 {sec.types.map((t, i) => (
@@ -129,7 +130,7 @@ export function QuickRefModal({ data, onClose }: QuickRefModalProps) {
             )}
             {sec.items && (
               <ul className="ml-4 list-disc text-xs text-stone-700 dark:text-stone-300">
-                {sec.items.map((item, i) => <li key={i}>{item}</li>)}
+                {sec.items.map((item, i) => <li key={i}><RuleInlineText text={item} /></li>)}
               </ul>
             )}
           </div>
@@ -139,7 +140,7 @@ export function QuickRefModal({ data, onClose }: QuickRefModalProps) {
         {data.notes && data.notes.length > 0 && (
           <div className="mt-3 space-y-1 rounded bg-stone-100 p-2 text-xs text-stone-600 dark:bg-stone-700/50 dark:text-stone-400">
             <p className="font-semibold text-stone-700 dark:text-stone-300">Notes:</p>
-            {data.notes.map((note, i) => <p key={i}>• {note}</p>)}
+            {data.notes.map((note, i) => <p key={i}>• <RuleInlineText text={note} /></p>)}
           </div>
         )}
       </div>
