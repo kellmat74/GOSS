@@ -30,6 +30,44 @@ const STOP_WORDS = new Set([
 ]);
 
 /**
+ * Module alias map: game name strings → module IDs.
+ * Checked as substring matches against the full query (case-insensitive).
+ * Longer aliases are checked first to avoid partial matches.
+ */
+const MODULE_ALIASES: [string, string][] = [
+  ["battle of the bulge", "war"],
+  ["wacht am rhein", "war"],
+  ["atlantic wall", "atlantic-wall"],
+  ["hurtgen forest", "hurtgen"],
+  ["hell's forest", "hurtgen"],
+  ["lucky forward", "lucky-forward"],
+  ["hurtgen", "hurtgen"],
+  ["bulge", "war"],
+  ["war", "war"],
+  ["hhf", "hurtgen"],
+  ["aw", "atlantic-wall"],
+  ["lf", "lucky-forward"],
+];
+
+/**
+ * Detect if the query references a specific game module.
+ * Returns the module ID or null.
+ */
+function detectModule(query: string): string | null {
+  const q = query.toLowerCase();
+  for (const [alias, moduleId] of MODULE_ALIASES) {
+    // Word-boundary check for short aliases to avoid false matches
+    if (alias.length <= 3) {
+      const re = new RegExp(`\\b${alias}\\b`, "i");
+      if (re.test(q)) return moduleId;
+    } else if (q.includes(alias)) {
+      return moduleId;
+    }
+  }
+  return null;
+}
+
+/**
  * Synonym map: common wargaming terms → GOSS-specific terms.
  * When a query token matches a key, the associated terms are added
  * to the search tokens so rules using GOSS terminology are found.
@@ -80,6 +118,9 @@ export function searchRules(
 
   if (tokens.length === 0) return [];
 
+  // Detect if query references a specific game module
+  const detectedModule = detectModule(query);
+
   const results: SearchResult[] = [];
 
   for (const rule of rules) {
@@ -87,6 +128,7 @@ export function searchRules(
     const sectionLower = (rule.section ?? "").toLowerCase();
     const summaryLower = (rule.summary ?? "").toLowerCase();
     const textLower = (rule.text ?? "").toLowerCase();
+    const moduleLower = (rule.module ?? "").toLowerCase();
 
     let score = 0;
     let matchedTokens = 0;
@@ -97,8 +139,9 @@ export function searchRules(
       const inSection = sectionLower.includes(token);
       const inSummary = summaryLower.includes(token);
       const inText = textLower.includes(token);
+      const inModule = moduleLower.includes(token);
 
-      if (!inTitle && !inSection && !inSummary && !inText) continue;
+      if (!inTitle && !inSection && !inSummary && !inText && !inModule) continue;
 
       matchedTokens++;
 
@@ -118,12 +161,21 @@ export function searchRules(
         score += 1;
         matchedFields.add("text");
       }
+      if (inModule) {
+        score += 3;
+      }
     }
 
     // Require at least one token match; bonus for matching more tokens
     if (matchedTokens > 0) {
       // Boost rules that match more of the query tokens
       score *= (matchedTokens / tokens.length);
+
+      // Flat boost for rules from the detected module
+      if (detectedModule && rule.module === detectedModule) {
+        score += 8;
+      }
+
       results.push({ rule, score, matchedFields: [...matchedFields] });
     }
   }

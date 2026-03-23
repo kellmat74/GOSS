@@ -8,6 +8,7 @@ import { RuleModal } from "./components/RulesReference/RuleModal";
 import { AskPanel } from "./components/Ask/AskPanel";
 import { SoPFlowchart } from "./components/Flowchart/SoPFlowchart";
 import { InfoPanel } from "./components/InfoPanel";
+import { QuickRefBar } from "./components/QuickRef/QuickRefBar";
 import { RulesProvider } from "./context/RulesContext";
 import { GlossaryProvider } from "./context/GlossaryContext";
 import { useSoPProgress } from "./hooks/useSoPProgress";
@@ -191,6 +192,7 @@ function App() {
         {view === "info" && <InfoPanel />}
       </AppShell>
       <RuleModal />
+      <QuickRefBar />
     </RulesProvider>
     </GlossaryProvider>
   );
