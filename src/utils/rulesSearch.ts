@@ -26,9 +26,30 @@ const STOP_WORDS = new Set([
   "they", "them", "their", "about", "into", "through", "during",
   "before", "after", "above", "below", "between", "under", "again",
   "there", "here", "so", "just", "also", "very", "too",
-  "affect", "affects", "work", "works", "happen", "happens",
   "explain", "tell", "describe", "mean", "means",
 ]);
+
+/**
+ * Synonym map: common wargaming terms → GOSS-specific terms.
+ * When a query token matches a key, the associated terms are added
+ * to the search tokens so rules using GOSS terminology are found.
+ */
+const SYNONYMS: Record<string, string[]> = {
+  "zoc": ["movement halt", "adjacent enemy", "zone of control"],
+  "zocs": ["movement halt", "adjacent enemy", "zone of control"],
+  "zone": ["movement halt", "adjacent"],
+  "retreat": ["retreat", "withdraw", "displacement"],
+  "overrun": ["overrun", "exploitation"],
+  "cas": ["ground support", "gs mission"],
+  "interdiction": ["supply interdiction", "ground interdiction"],
+  "arty": ["artillery", "art"],
+  "ammo": ["ammunition", "ammo depletion", "ammo replenishment"],
+  "hq": ["headquarters", "command"],
+  "recon": ["reconnaissance"],
+  "mech": ["mechanized", "mech"],
+  "gens": ["general supply"],
+  "ohs": ["on hand supply"],
+};
 
 /**
  * Relevance-ranked search across all rule fields.
@@ -40,10 +61,22 @@ export function searchRules(
   rules: RuleEntry[],
   maxResults = 20
 ): SearchResult[] {
-  const tokens = query
+  const rawTokens = query
     .toLowerCase()
     .split(/\s+/)
     .filter((t) => t.length > 0 && !STOP_WORDS.has(t));
+
+  // Expand synonyms: add GOSS-specific terms for common wargame jargon
+  const tokens = [...rawTokens];
+  for (const token of rawTokens) {
+    const synonyms = SYNONYMS[token];
+    if (synonyms) {
+      for (const syn of synonyms) {
+        // Multi-word synonyms are kept as single search phrases
+        tokens.push(syn);
+      }
+    }
+  }
 
   if (tokens.length === 0) return [];
 
@@ -108,10 +141,18 @@ export function searchSequence(
   phases: Phase[],
   maxResults = 10
 ): SequenceSearchResult[] {
-  const tokens = query
+  const rawTokens = query
     .toLowerCase()
     .split(/\s+/)
     .filter((t) => t.length > 0 && !STOP_WORDS.has(t));
+
+  const tokens = [...rawTokens];
+  for (const token of rawTokens) {
+    const synonyms = SYNONYMS[token];
+    if (synonyms) {
+      for (const syn of synonyms) tokens.push(syn);
+    }
+  }
 
   if (tokens.length === 0) return [];
 
