@@ -1,25 +1,59 @@
 import { useState } from "react";
 import { QuickRefModal } from "./QuickRefModal";
+import { OOBModal } from "./OOBModal";
 import quickRef from "../../data/goss/quick-ref.json";
 
-type RefKey = "tec" | "stacking";
+type RefKey = "tec" | "stacking" | "oob";
 
-const buttons: { key: RefKey; label: string; icon: string; title: string }[] = [
+interface QuickRefBarProps {
+  gameModule: string | null;
+}
+
+// Lazy-load OOB data per game module
+const oobModules: Record<string, () => Promise<{ default: unknown }>> = {
+  "atlantic-wall": () => import("../../data/atlantic-wall/oob.json"),
+};
+
+const buttons: { key: RefKey; label: string; icon: string; title: string; requiresOOB?: boolean }[] = [
   { key: "tec", label: "TEC", icon: "⛰", title: "Terrain Effects Chart" },
   { key: "stacking", label: "STK", icon: "📦", title: "Stacking Limits" },
+  { key: "oob", label: "OOB", icon: "🎖", title: "Order of Battle", requiresOOB: true },
 ];
 
-export function QuickRefBar() {
+export function QuickRefBar({ gameModule }: QuickRefBarProps) {
   const [activeRef, setActiveRef] = useState<RefKey | null>(null);
+  const [oobData, setOobData] = useState<unknown>(null);
+
+  const hasOOB = gameModule && gameModule in oobModules;
+
+  const handleClick = async (key: RefKey) => {
+    if (activeRef === key) {
+      setActiveRef(null);
+      return;
+    }
+    if (key === "oob" && gameModule && oobModules[gameModule]) {
+      try {
+        const mod = await oobModules[gameModule]();
+        setOobData(mod.default);
+      } catch {
+        return;
+      }
+    }
+    setActiveRef(key);
+  };
+
+  const visibleButtons = buttons.filter(
+    (btn) => !btn.requiresOOB || hasOOB
+  );
 
   return (
     <>
       {/* Floating button strip on right edge */}
       <div className="fixed right-0 top-1/2 z-20 flex -translate-y-1/2 flex-col gap-1 rounded-l-lg border border-r-0 border-stone-300 bg-stone-100 p-1 shadow-lg dark:border-stone-600 dark:bg-stone-800">
-        {buttons.map((btn) => (
+        {visibleButtons.map((btn) => (
           <button
             key={btn.key}
-            onClick={() => setActiveRef(activeRef === btn.key ? null : btn.key)}
+            onClick={() => handleClick(btn.key)}
             className={`flex flex-col items-center rounded px-1.5 py-2 text-xs font-medium transition-colors ${
               activeRef === btn.key
                 ? "bg-accent-500 text-white"
@@ -33,10 +67,22 @@ export function QuickRefBar() {
         ))}
       </div>
 
-      {/* Modal */}
-      {activeRef && (
+      {/* Modals */}
+      {activeRef === "tec" && (
         <QuickRefModal
-          data={quickRef[activeRef]}
+          data={quickRef.tec as any}
+          onClose={() => setActiveRef(null)}
+        />
+      )}
+      {activeRef === "stacking" && (
+        <QuickRefModal
+          data={quickRef.stacking as any}
+          onClose={() => setActiveRef(null)}
+        />
+      )}
+      {activeRef === "oob" && oobData && (
+        <OOBModal
+          data={oobData as any}
           onClose={() => setActiveRef(null)}
         />
       )}

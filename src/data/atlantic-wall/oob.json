@@ -1,0 +1,306 @@
+{
+  "allied": {
+    "label": "Allied Forces",
+    "children": [
+      {
+        "id": "12ag",
+        "label": "12th Army Group",
+        "type": "army-group",
+        "children": [
+          {
+            "id": "1st-us-army",
+            "label": "First US Army",
+            "type": "army",
+            "children": [
+              {
+                "id": "v-corps",
+                "label": "V Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "1st-id", "label": "1st Infantry Division", "type": "division" },
+                  { "id": "2nd-id", "label": "2nd Infantry Division", "type": "division" },
+                  { "id": "29th-id", "label": "29th Infantry Division", "type": "division" },
+                  { "id": "30th-id", "label": "30th Infantry Division", "type": "division" },
+                  { "id": "35th-id", "label": "35th Infantry Division", "type": "division" },
+                  { "id": "2nd-ad", "label": "2nd Armored Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "vii-corps",
+                "label": "VII Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "4th-id", "label": "4th Infantry Division", "type": "division" },
+                  { "id": "9th-id", "label": "9th Infantry Division", "type": "division" },
+                  { "id": "79th-id", "label": "79th Infantry Division", "type": "division" },
+                  { "id": "83rd-id", "label": "83rd Infantry Division", "type": "division" },
+                  { "id": "90th-id", "label": "90th Infantry Division", "type": "division" },
+                  { "id": "4th-ad", "label": "4th Armored Division", "type": "division" },
+                  { "id": "82nd-ab", "label": "82nd Airborne Division", "type": "division" },
+                  { "id": "101st-ab", "label": "101st Airborne Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "viii-corps",
+                "label": "VIII Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "8th-id", "label": "8th Infantry Division", "type": "division" },
+                  { "id": "28th-id", "label": "28th Infantry Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "xix-corps",
+                "label": "XIX Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "5th-id", "label": "5th Infantry Division", "type": "division" },
+                  { "id": "3rd-ad", "label": "3rd Armored Division", "type": "division" }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "3rd-us-army",
+            "label": "Third US Army",
+            "type": "army",
+            "children": [
+              {
+                "id": "xv-corps",
+                "label": "XV Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "5th-ad", "label": "5th Armored Division", "type": "division" },
+                  { "id": "2nd-ff-ad", "label": "2nd French Armored Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "xx-corps",
+                "label": "XX Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "7th-ad", "label": "7th Armored Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "xii-corps",
+                "label": "XII Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "6th-ad", "label": "6th Armored Division", "type": "division" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "21ag",
+        "label": "21st Army Group",
+        "type": "army-group",
+        "children": [
+          {
+            "id": "2nd-british-army",
+            "label": "Second British Army",
+            "type": "army",
+            "children": [
+              {
+                "id": "i-corps",
+                "label": "I Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "3rd-id-br", "label": "3rd Infantry Division", "type": "division" },
+                  { "id": "3rd-can-id", "label": "3rd Canadian Infantry Division", "type": "division" },
+                  { "id": "6th-ab", "label": "6th Airborne Division", "type": "division" },
+                  { "id": "15th-id", "label": "15th Infantry Division", "type": "division" },
+                  { "id": "51st-id", "label": "51st Infantry Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "xxx-corps",
+                "label": "XXX Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "50th-id", "label": "50th Infantry Division", "type": "division" },
+                  { "id": "49th-id", "label": "49th Infantry Division", "type": "division" },
+                  { "id": "43rd-id", "label": "43rd Infantry Division", "type": "division" },
+                  { "id": "53rd-id", "label": "53rd Infantry Division", "type": "division" },
+                  { "id": "59th-id", "label": "59th Infantry Division", "type": "division" },
+                  { "id": "7th-ad-br", "label": "7th Armoured Division", "type": "division" },
+                  { "id": "11th-ad", "label": "11th Armoured Division", "type": "division" },
+                  { "id": "gds-ad", "label": "Guards Armoured Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "viii-corps-br",
+                "label": "VIII Corps",
+                "type": "corps",
+                "children": []
+              },
+              {
+                "id": "xii-corps-br",
+                "label": "XII Corps",
+                "type": "corps",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "1st-canadian-army",
+            "label": "First Canadian Army",
+            "type": "army",
+            "children": [
+              {
+                "id": "ii-can-corps",
+                "label": "II Canadian Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "2nd-can-id", "label": "2nd Canadian Infantry Division", "type": "division" },
+                  { "id": "4th-can-ad", "label": "4th Canadian Armoured Division", "type": "division" },
+                  { "id": "1st-pol-ad", "label": "1st Polish Armoured Division", "type": "division" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "german": {
+    "label": "German Forces",
+    "children": [
+      {
+        "id": "agb",
+        "label": "Army Group B",
+        "type": "army-group",
+        "children": [
+          {
+            "id": "7th-army",
+            "label": "7th Army",
+            "type": "army",
+            "children": [
+              {
+                "id": "lxxxiv-corps",
+                "label": "LXXXIV Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "243rd-id", "label": "243rd Infantry Division", "type": "division" },
+                  { "id": "709th-id", "label": "709th Infantry Division", "type": "division" },
+                  { "id": "91st-id", "label": "91st Infantry Division", "type": "division" },
+                  { "id": "352nd-id", "label": "352nd Infantry Division", "type": "division" },
+                  { "id": "716th-id", "label": "716th Infantry Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "lxxiv-corps",
+                "label": "LXXIV Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "77th-id", "label": "77th Infantry Division", "type": "division" },
+                  { "id": "353rd-id", "label": "353rd Infantry Division", "type": "division" },
+                  { "id": "275th-id", "label": "275th Infantry Division", "type": "division" },
+                  { "id": "266th-id", "label": "266th Infantry Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "xlvii-pz-corps",
+                "label": "XLVII Panzer Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "2nd-pzd", "label": "2nd Panzer Division", "type": "division" },
+                  { "id": "pz-lehr", "label": "Panzer Lehr Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "ii-fj-corps",
+                "label": "II Fallschirmjager Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "3rd-fjd", "label": "3rd Fallschirmjager Division", "type": "division" },
+                  { "id": "5th-fjd", "label": "5th Fallschirmjager Division", "type": "division" },
+                  { "id": "17ss-pzgd", "label": "17th SS Panzergrenadier Division", "type": "division" },
+                  { "id": "2nd-fjd", "label": "2nd Fallschirmjager Division", "type": "division" }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "pz-group-west",
+            "label": "Panzer Group West",
+            "type": "army",
+            "children": [
+              {
+                "id": "i-ss-pz-corps",
+                "label": "I SS Panzer Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "21st-pzd", "label": "21st Panzer Division", "type": "division" },
+                  { "id": "12ss-pzd", "label": "12th SS Panzer Division", "type": "division" },
+                  { "id": "1ss-pzd", "label": "1st SS Panzer Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "lxxxvi-corps",
+                "label": "LXXXVI Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "346th-id", "label": "346th Infantry Division", "type": "division" },
+                  { "id": "711th-id", "label": "711th Infantry Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "ii-ss-pz-corps",
+                "label": "II SS Panzer Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "9ss-pzd", "label": "9th SS Panzer Division", "type": "division" },
+                  { "id": "10ss-pzd", "label": "10th SS Panzer Division", "type": "division" }
+                ]
+              },
+              {
+                "id": "lviii-pz-corps",
+                "label": "LVIII Panzer Corps",
+                "type": "corps",
+                "children": [
+                  { "id": "2ss-pzd", "label": "2nd SS Panzer Division", "type": "division" },
+                  { "id": "9th-pzd", "label": "9th Panzer Division", "type": "division" },
+                  { "id": "116th-pzd", "label": "116th Panzer Division", "type": "division" }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "reserves",
+            "label": "Army Group B Reserves",
+            "type": "army",
+            "children": [
+              {
+                "id": "reserve-pool",
+                "label": "Reserve Divisions",
+                "type": "corps",
+                "children": [
+                  { "id": "265th-id", "label": "265th Infantry Division", "type": "division" },
+                  { "id": "276th-id", "label": "276th Infantry Division", "type": "division" },
+                  { "id": "272nd-id", "label": "272nd Infantry Division", "type": "division" },
+                  { "id": "271st-id", "label": "271st Infantry Division", "type": "division" },
+                  { "id": "326th-id", "label": "326th Infantry Division", "type": "division" },
+                  { "id": "331st-id", "label": "331st Infantry Division", "type": "division" },
+                  { "id": "363rd-id", "label": "363rd Infantry Division", "type": "division" },
+                  { "id": "343rd-id", "label": "343rd Infantry Division", "type": "division" },
+                  { "id": "708th-id", "label": "708th Infantry Division", "type": "division" },
+                  { "id": "16lw-div", "label": "16th Luftwaffe Field Division", "type": "division" },
+                  { "id": "17lw-div", "label": "17th Luftwaffe Field Division", "type": "division" },
+                  { "id": "18lw-div", "label": "18th Luftwaffe Field Division", "type": "division" },
+                  { "id": "84th-id", "label": "84th Infantry Division", "type": "division" },
+                  { "id": "85th-id", "label": "85th Infantry Division", "type": "division" },
+                  { "id": "89th-id", "label": "89th Infantry Division", "type": "division" },
+                  { "id": "344th-id", "label": "344th Infantry Division", "type": "division" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

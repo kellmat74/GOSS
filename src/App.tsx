@@ -192,7 +192,7 @@ function App() {
         {view === "info" && <InfoPanel />}
       </AppShell>
       <RuleModal />
-      <QuickRefBar />
+      <QuickRefBar gameModule={gameModule} />
     </RulesProvider>
     </GlossaryProvider>
   );
