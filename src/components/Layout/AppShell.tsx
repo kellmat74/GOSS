@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 
 export interface TabDef {
   key: string;
@@ -28,6 +28,11 @@ export function AppShell({
 }: AppShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
+  // Close mobile sidebar when tab changes (e.g. clicking a step from another tab)
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [activeTab]);
 
   return (
     <div className="flex h-screen bg-white text-stone-900 dark:bg-stone-900 dark:text-stone-100">
