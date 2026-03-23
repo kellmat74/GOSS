@@ -19,7 +19,7 @@ A guide for building interactive companion apps for complex tabletop wargame sys
 2. **Flowchart** — Visual SoP flowchart with drill-down nodes (optional, high effort)
 3. **Rules** — Searchable tree of all extracted rules with modal detail view
 4. **Ask** — AI-powered Q&A grounded in the actual rule text
-5. **Info** — About page, offline export link
+5. **Info** — About page, offline export link, feedback form
 
 ### Data Flow
 ```
@@ -226,6 +226,7 @@ Different PDFs use different numbering conventions. Normalize during extraction:
 ### Modal System for Rules
 - Portal-based (`createPortal`) to avoid z-index and scroll issues on mobile
 - History stack with back button for cross-reference navigation
+- **Prev/Next navigation** — footer buttons + Left/Right arrow keys let users read sequentially through rules without closing and reopening the modal
 - Escape to close (or go back through history)
 - Shows base + scenario rules side-by-side when both exist
 
@@ -427,7 +428,81 @@ worker/
 
 ---
 
-## 13. Common Pitfalls (Lessons Learned)
+## 13. User Feedback Integration
+
+### Google Sheets via Apps Script
+The Info tab includes a Submit Feedback form that posts directly to a Google Sheet — no backend required.
+
+**Architecture:**
+```
+User fills form → fetch(APPS_SCRIPT_URL, { mode: "no-cors" }) → Google Apps Script → Google Sheet
+```
+
+**Setup:**
+1. Create a Google Sheet with columns: Timestamp, Name, Type, Feedback
+2. Create a Google Apps Script web app that accepts POST and appends rows
+3. Deploy the script as a web app with "Anyone" access
+4. Set `VITE_FEEDBACK_URL` as an environment variable (local `.env` for dev, GitHub Actions variable for prod)
+5. Add `.env` to `.gitignore` — never commit the Apps Script URL
+
+**Why `no-cors`?** Apps Script redirects POST responses, which causes CORS errors in the browser. Using `mode: "no-cors"` makes the response opaque (unreadable), but the POST still goes through and the row is appended. The UI shows a success message unconditionally after the fetch resolves — the user sees "Thanks for your feedback!" without needing to read the response.
+
+**Form fields:** Name (optional), feedback type dropdown (Bug, Feature Request, Question, Other), free-text description. Keep it minimal — users abandon long forms.
+
+---
+
+## 14. Per-Scenario Overlay Tiers
+
+Some game modules have scenarios at different complexity levels, each with different SoP modifications. The overlay system handles this with per-scenario overrides.
+
+### Example: Atlantic Wall Scenario Tiers
+AW has three tiers of scenario complexity:
+
+**Introductory (Scenarios 1-3):** Drastically simplified SoP
+- Airborne and Amphibious stages removed (gate banners explain why)
+- Many standard phases gated ("Ignore GOSS (3.2.0) thru (3.5.0) and (9.0)")
+- Simplified logistics, fire support, movement, construction rules
+- Each scenario has unique air points, weather, bridges, victory conditions
+
+**Intermediate (Scenarios 4-5):** Most rules in effect
+- Airborne and Amphibious stages still removed (no D-Day landing)
+- Full SoP but some sub-phases skipped or modified
+- Simplified logistics (no full Logistics Table, no Strategic Map)
+- Each scenario has unique logistics values, reinforcement schedules
+
+**Full (Scenario 6 / Campaign):** All rules
+- Both Airborne and Amphibious stages active
+- Full SoP with all phases
+- Scenario-specific values for air, naval, weather, logistics
+
+### Implementation Pattern
+```json
+{
+  "modifications": [
+    // Base game-module mods that apply to ALL scenarios
+  ],
+  "scenarioOverrides": {
+    "scenario-1-goodwood": {
+      "label": "Scenario 1: Operation Goodwood",
+      "modifications": [
+        // Gate banners for removed phases
+        { "target": "aw-airborne-assault-stage", "action": "gate",
+          "gate": "Airborne Assault Stage is not used in introductory scenarios (AW (31.0))." },
+        // Per-scenario rules as appendContent
+        { "target": "joint-air-allocation-phase", "action": "modify",
+          "patch": { "appendContent": "### Air Points (32.3.0)\n\nverbatim rule text..." } }
+      ]
+    }
+  }
+}
+```
+
+### Gate Banner Content
+Gate banners should use verbatim rule text explaining why the phase is skipped, not AI-generated explanations. Example: the AW introductory gate says "Ignore GOSS (3.2.0) thru (3.5.0) and (9.0)" — that's the actual text from AW 31.1.0.
+
+---
+
+## 15. Common Pitfalls (Lessons Learned)
 
 ### AI-Generated Content Creep
 The most insidious issue: AI assistants will paraphrase, reorganize, and "improve" rule text without being asked. This manifests as:
@@ -435,6 +510,8 @@ The most insidious issue: AI assistants will paraphrase, reorganize, and "improv
 - **Consolidated blocks** merging multiple scattered rules into one tidy paragraph
 - **Added context** like "this is a major complexity increase" that isn't in the source
 - **Checklists** that are duplicative of the rules text
+
+**Checklists are especially problematic.** AI-generated checklists in overlay content duplicate the rules in a reformatted way, which creates a maintenance burden and risks divergence from the source. Remove them — the verbatim rules are the checklist. The base SoP `checklist` arrays are fine since those come from the PAC, but scenario overlays should not add new checklists.
 
 **Prevention:** After any AI-assisted content generation, audit every `content` and `appendContent` field against the source rules. Use a script to compare overlay text against `rules.json` entries. Tips/notes are the ONLY place for AI-original content.
 
@@ -449,7 +526,7 @@ If overlay content references `(30.3.0)` but that section doesn't exist in the s
 
 ---
 
-## 14. Versioning
+## 16. Versioning
 
 - Increment sub-version on every push (v2.4 → v2.5)
 - Major version only on explicit request
