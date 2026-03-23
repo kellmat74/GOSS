@@ -1,4 +1,4 @@
-import type { Phase, Player } from "../../types/goss";
+import type { Phase } from "../../types/goss";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 
 interface PhaseOverviewProps {
@@ -7,30 +7,6 @@ interface PhaseOverviewProps {
   currentSubPhaseIndex: number;
   currentSegmentIndex: number;
   onSelectPhase: (phaseIndex: number, subPhaseIndex?: number, segmentIndex?: number) => void;
-}
-
-const logisticsIds = new Set([
-  "joint-logistics-phase",
-  "truck-point-assignment-segment",
-  "supply-interdiction-segment",
-  "ammo-delivery-segment",
-  "fuel-delivery-segment",
-  "depot-placement-segment",
-  "replacement-point-segment",
-  "joint-fuel-value-determination-phase",
-]);
-
-function playerDot(player: Player, id: string) {
-  if (logisticsIds.has(id)) return "bg-purple-500";
-  if (player === "phasing") return "bg-green-500";
-  if (player === "non-phasing") return "bg-red-500";
-  return null;
-}
-
-function Dot({ player, id }: { player: Player; id: string }) {
-  const color = playerDot(player, id);
-  if (!color) return null;
-  return <span className={`ml-1.5 inline-block h-2 w-2 rounded-sm ${color}`} />;
 }
 
 export function PhaseOverview({
@@ -93,7 +69,6 @@ export function PhaseOverview({
                             {isSubPast ? "\u2713" : "\u2022"}
                           </span>
                           {sub.name}
-                          <Dot player={sub.player} id={sub.id} />
                         </button>
 
                         {/* Show segments if this subPhase is current and has segments */}
@@ -121,7 +96,6 @@ export function PhaseOverview({
                                       {isSegPast ? "\u2713" : "\u2023"}
                                     </span>
                                     {seg.name}
-                                    <Dot player={seg.player} id={seg.id} />
                                   </button>
                                 </li>
                               );

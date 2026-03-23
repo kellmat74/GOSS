@@ -14,66 +14,67 @@ interface RuleInlineTextProps {
 export function RuleInlineText({ text, className }: RuleInlineTextProps) {
   const { getRuleBySection, openRule } = useRules();
 
-  const parts: (string | { ref: string })[] = [];
-  let remaining = text;
-
-  while (remaining.length > 0) {
-    const refMatch = remaining.match(/\((\d+\.\d+(?:\.\d+)?(?:[a-z])?)\)/);
-    if (!refMatch || refMatch.index === undefined) {
-      parts.push(remaining);
-      break;
-    }
-    if (refMatch.index > 0) {
-      parts.push(remaining.slice(0, refMatch.index));
-    }
-    parts.push({ ref: refMatch[1] });
-    remaining = remaining.slice(refMatch.index + refMatch[0].length);
-  }
-
-  // Render a string segment, parsing **bold** markers
-  const renderText = (s: string, keyPrefix: string) => {
-    const boldParts = s.split(/\*\*(.+?)\*\*/g);
-    if (boldParts.length === 1) return <span key={keyPrefix}>{s}</span>;
+  // Render a rule ref as a clickable button or plain text
+  const renderRef = (ref: string, key: string | number) => {
+    const hasRule = !!getRuleBySection(ref);
+    if (!hasRule) return <span key={key}>({ref})</span>;
     return (
-      <span key={keyPrefix}>
-        {boldParts.map((bp, j) =>
-          j % 2 === 1 ? (
-            <strong key={j} className="font-semibold">{bp}</strong>
-          ) : bp ? (
-            <span key={j}>{bp}</span>
-          ) : null
-        )}
-      </span>
+      <button
+        key={key}
+        onClick={(e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          openRule(ref);
+        }}
+        className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
+      >
+        ({ref})
+      </button>
     );
   };
 
-  // If no refs found, return text with bold parsing
-  if (parts.length === 1 && typeof parts[0] === "string") {
-    return <span className={className}>{renderText(text, "0")}</span>;
-  }
+  // Parse rule refs from a plain string segment, returning mixed nodes
+  const parseRefs = (s: string, keyPrefix: string): React.ReactNode[] => {
+    const nodes: React.ReactNode[] = [];
+    let remaining = s;
+    let idx = 0;
+    while (remaining.length > 0) {
+      const refMatch = remaining.match(/\((\d+\.\d+(?:\.\d+)?(?:[a-z])?)\)/);
+      if (!refMatch || refMatch.index === undefined) {
+        if (remaining) nodes.push(<span key={`${keyPrefix}-${idx}`}>{remaining}</span>);
+        break;
+      }
+      if (refMatch.index > 0) {
+        nodes.push(<span key={`${keyPrefix}-${idx}`}>{remaining.slice(0, refMatch.index)}</span>);
+        idx++;
+      }
+      nodes.push(renderRef(refMatch[1], `${keyPrefix}-${idx}`));
+      idx++;
+      remaining = remaining.slice(refMatch.index + refMatch[0].length);
+    }
+    return nodes;
+  };
+
+  // Step 1: Parse bold markers first (bold may contain rule refs)
+  const boldParts = text.split(/\*\*(.+?)\*\*/g);
+  const nodes: React.ReactNode[] = [];
+  boldParts.forEach((part, i) => {
+    if (i % 2 === 1) {
+      // Bold segment — parse rule refs inside it
+      nodes.push(
+        <strong key={`b${i}`} className="font-semibold">
+          {parseRefs(part, `b${i}`)}
+        </strong>
+      );
+    } else if (part) {
+      // Non-bold segment — parse rule refs
+      nodes.push(...parseRefs(part, `t${i}`));
+    }
+  });
 
   return (
     <GlossaryHighlighter>
-      <span className={className}>
-        {parts.map((part, i) => {
-          if (typeof part === "string") return renderText(part, String(i));
-          const hasRule = !!getRuleBySection(part.ref);
-          if (!hasRule) return <span key={i}>({part.ref})</span>;
-          return (
-            <button
-              key={i}
-              onClick={(e) => {
-                e.stopPropagation();
-                e.preventDefault();
-                openRule(part.ref);
-              }}
-              className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
-            >
-              ({part.ref})
-            </button>
-          );
-        })}
-      </span>
+      <span className={className}>{nodes}</span>
     </GlossaryHighlighter>
   );
 }

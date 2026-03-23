@@ -70,6 +70,36 @@ ${fullText}
 ${summaries}${sequenceSection}`;
 }
 
+function CopyButton({ text, isUser }: { text: string; isUser: boolean }) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  };
+  return (
+    <button
+      onClick={handleCopy}
+      className={`absolute top-1 right-1 rounded p-1 opacity-0 transition-opacity group-hover:opacity-100 ${
+        isUser
+          ? "text-white/70 hover:text-white hover:bg-white/10"
+          : "text-stone-400 hover:text-stone-600 hover:bg-stone-200 dark:hover:text-stone-200 dark:hover:bg-stone-700"
+      }`}
+      title="Copy to clipboard"
+    >
+      {copied ? (
+        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+        </svg>
+      ) : (
+        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
+      )}
+    </button>
+  );
+}
+
 export function AskPanel({ rules, phases = [] }: AskPanelProps) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
@@ -198,10 +228,10 @@ export function AskPanel({ rules, phases = [] }: AskPanelProps) {
         {messages.map((msg, i) => (
           <div
             key={i}
-            className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+            className={`group flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
           >
             <div
-              className={`max-w-[85%] rounded-lg px-4 py-3 text-sm leading-relaxed ${
+              className={`relative max-w-[85%] rounded-lg px-4 py-3 text-sm leading-relaxed ${
                 msg.role === "user"
                   ? "bg-accent-500 text-white"
                   : "bg-stone-100 text-stone-800 dark:bg-stone-800 dark:text-stone-200"
@@ -212,6 +242,7 @@ export function AskPanel({ rules, phases = [] }: AskPanelProps) {
               ) : (
                 msg.content
               )}
+              <CopyButton text={msg.content} isUser={msg.role === "user"} />
             </div>
           </div>
         ))}

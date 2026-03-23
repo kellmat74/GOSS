@@ -42,9 +42,12 @@ export function PhaseStepper({
 
   const topRef = useRef<HTMLDivElement>(null);
 
-  // Scroll to top when step changes
+  // Scroll the main container to top when step changes (shows header bar)
   useEffect(() => {
-    topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const main = topRef.current?.closest("main");
+    if (main) {
+      main.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }, [progress.currentPhaseIndex, progress.currentSubPhaseIndex, progress.currentSegmentIndex]);
 
   const isLastPhase = progress.currentPhaseIndex === totalPhases - 1;
@@ -187,7 +190,7 @@ export function PhaseStepper({
 
       {/* Content — verbatim PAC markdown */}
       {active.content && (
-        <div className="mb-4">
+        <div className="mb-4 rounded-lg border border-stone-200 bg-stone-50 p-4 dark:border-stone-700 dark:bg-stone-800/50">
           <SoPMarkdown content={active.content} />
         </div>
       )}
@@ -211,7 +214,7 @@ export function PhaseStepper({
 
       {/* Notes (future AI Tips) */}
       {active.notes.length > 0 && (
-        <div className="mb-4">
+        <div className="mb-4 rounded-lg bg-amber-50/50 p-4 dark:bg-amber-900/10">
           <h3 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-amber-600 dark:text-amber-500">
             💡 Tips
           </h3>
@@ -231,7 +234,7 @@ export function PhaseStepper({
 
       {/* Scenario appended tips */}
       {active.appendedNotes && active.appendedNotes.length > 0 && (
-        <div className="mb-4">
+        <div className="mb-4 rounded-lg bg-blue-50/50 p-4 dark:bg-blue-900/10">
           <h3 className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
             {active.scenarioModule && (
               <span className="rounded bg-blue-500 px-1 py-0.5 text-[10px] font-bold text-white">

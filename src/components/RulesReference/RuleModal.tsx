@@ -206,8 +206,9 @@ function RuleText({ text, onRuleClick }: { text: string; onRuleClick: (ref: stri
 }
 
 function RuleParagraph({ text, onRuleClick }: { text: string; onRuleClick: (ref: string) => void }) {
-  // Check if this is a list (lines starting with bullet markers)
   const lines = text.split("\n");
+
+  // Pure list: every non-empty line starts with • or -
   const isList = lines.every(
     (l) => l.trim().startsWith("•") || l.trim().startsWith("-") || l.trim() === ""
   );
@@ -229,7 +230,7 @@ function RuleParagraph({ text, onRuleClick }: { text: string; onRuleClick: (ref:
     );
   }
 
-  // Check if it starts with numbered items (1), 2), etc.)
+  // Pure numbered/lettered list
   const isNumberedList = lines.every(
     (l) => /^\s*\d+\)/.test(l) || /^\s*[a-z]\)/.test(l) || l.trim() === ""
   );
@@ -248,6 +249,32 @@ function RuleParagraph({ text, onRuleClick }: { text: string; onRuleClick: (ref:
             </li>
           ))}
       </ol>
+    );
+  }
+
+  // Mixed content: has bullets/indented items mixed with prose — render line-by-line
+  const hasStructuredLines = lines.some(
+    (l) => l.trim().startsWith("•") || l.trim().startsWith("-") || /^\s{2,}/.test(l)
+  );
+
+  if (hasStructuredLines && lines.length > 1) {
+    return (
+      <div className="space-y-1">
+        {lines.filter((l) => l.trim()).map((l, i) => {
+          const indent = l.match(/^(\s*)/)?.[1].length ?? 0;
+          const isBullet = l.trim().startsWith("•") || l.trim().startsWith("-");
+          const mlClass = indent >= 4 ? "ml-8" : indent >= 2 ? "ml-4" : "";
+          return (
+            <p key={i} className={mlClass}>
+              {isBullet && <span className="mr-1">•</span>}
+              <InlineText
+                text={isBullet ? l.replace(/^[\s•-]+/, "") : l.trimStart()}
+                onRuleClick={onRuleClick}
+              />
+            </p>
+          );
+        })}
+      </div>
     );
   }
 
