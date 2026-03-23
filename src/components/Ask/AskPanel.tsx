@@ -70,10 +70,11 @@ ${fullText}
 ${summaries}${sequenceSection}`;
 }
 
-function CopyButton({ text, isUser }: { text: string; isUser: boolean }) {
+function CopyButton({ text, isUser, question }: { text: string; isUser: boolean; question?: string }) {
   const [copied, setCopied] = useState(false);
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(text);
+    const copyText = question ? `Q: ${question}\n\nA: ${text}` : text;
+    await navigator.clipboard.writeText(copyText);
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
   };
@@ -242,7 +243,11 @@ export function AskPanel({ rules, phases = [] }: AskPanelProps) {
               ) : (
                 msg.content
               )}
-              <CopyButton text={msg.content} isUser={msg.role === "user"} />
+              <CopyButton
+                text={msg.content}
+                isUser={msg.role === "user"}
+                question={msg.role === "assistant" ? messages.slice(0, i).reverse().find(m => m.role === "user")?.content : undefined}
+              />
             </div>
           </div>
         ))}
