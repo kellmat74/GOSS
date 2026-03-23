@@ -12,8 +12,45 @@ interface OOBModalProps {
   onClose: () => void;
 }
 
+const lowerUnitsTree: OOBNode[] = [
+  {
+    id: "division", label: "Division (Div)", type: "army-group",
+    children: [
+      {
+        id: "regiment", label: "Regiment (Rgt) / Brigade (Bde)", type: "army",
+        children: [
+          {
+            id: "battalion", label: "Battalion (Bn)", type: "corps",
+            children: [
+              {
+                id: "company", label: "Company (Co) / Battery (Bty)", type: "division",
+                children: [
+                  { id: "platoon", label: "Platoon (Plt) / Section", type: "division" },
+                ]
+              },
+            ]
+          },
+        ]
+      },
+      {
+        id: "div-assets", label: "Division Assets", type: "army",
+        children: [
+          { id: "div-arty", label: "Division Artillery (Div Arty)", type: "corps" },
+          { id: "div-recon", label: "Reconnaissance Battalion (Aufkl)", type: "corps" },
+          { id: "div-eng", label: "Engineer Battalion (Pio/Eng)", type: "corps" },
+          { id: "div-at", label: "Anti-Tank Battalion (AT/Panzerjäger)", type: "corps" },
+          { id: "div-flak", label: "Anti-Aircraft (Flak/AA)", type: "corps" },
+          { id: "div-sig", label: "Signal Battalion", type: "corps" },
+        ]
+      },
+    ]
+  },
+];
+
+type Tab = "allied" | "german" | "lower";
+
 export function OOBModal({ data, onClose }: OOBModalProps) {
-  const [side, setSide] = useState<"allied" | "german">("allied");
+  const [side, setSide] = useState<Tab>("allied");
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -23,7 +60,7 @@ export function OOBModal({ data, onClose }: OOBModalProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  const currentData = data[side];
+  const currentNodes = side === "lower" ? lowerUnitsTree : data[side].children;
 
   return createPortal(
     <div
@@ -51,26 +88,23 @@ export function OOBModal({ data, onClose }: OOBModalProps) {
 
         {/* Side toggle */}
         <div className="mb-4 flex gap-1 rounded-lg bg-stone-200 p-1 dark:bg-stone-700">
-          <button
-            onClick={() => setSide("allied")}
-            className={`flex-1 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-              side === "allied"
-                ? "bg-white text-stone-900 shadow dark:bg-stone-600 dark:text-stone-100"
-                : "text-stone-500 hover:text-stone-700 dark:text-stone-400 dark:hover:text-stone-200"
-            }`}
-          >
-            {data.allied.label}
-          </button>
-          <button
-            onClick={() => setSide("german")}
-            className={`flex-1 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-              side === "german"
-                ? "bg-white text-stone-900 shadow dark:bg-stone-600 dark:text-stone-100"
-                : "text-stone-500 hover:text-stone-700 dark:text-stone-400 dark:hover:text-stone-200"
-            }`}
-          >
-            {data.german.label}
-          </button>
+          {([
+            { key: "allied" as Tab, label: data.allied.label },
+            { key: "german" as Tab, label: data.german.label },
+            { key: "lower" as Tab, label: "Unit Structure" },
+          ]).map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setSide(tab.key)}
+              className={`flex-1 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                side === tab.key
+                  ? "bg-white text-stone-900 shadow dark:bg-stone-600 dark:text-stone-100"
+                  : "text-stone-500 hover:text-stone-700 dark:text-stone-400 dark:hover:text-stone-200"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
 
         {/* Legend */}
@@ -85,8 +119,15 @@ export function OOBModal({ data, onClose }: OOBModalProps) {
           <span className="text-stone-500 dark:text-stone-400">Division</span>
         </div>
 
+        {/* Description for lower units tab */}
+        {side === "lower" && (
+          <p className="mb-3 text-xs text-stone-500 dark:text-stone-400 italic">
+            Generic military organizational structure below Division level. Colors reused for visual hierarchy — not related to the OOB tabs.
+          </p>
+        )}
+
         {/* Tree */}
-        <OOBTree nodes={currentData.children} />
+        <OOBTree nodes={currentNodes} />
       </div>
     </div>,
     document.body
