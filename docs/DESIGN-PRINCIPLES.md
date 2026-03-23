@@ -526,7 +526,84 @@ If overlay content references `(30.3.0)` but that section doesn't exist in the s
 
 ---
 
-## 16. Versioning
+## 16. Order of Battle Visualizer
+
+### Per-Scenario OOB Data
+The OOB visualizer shows military organizational hierarchy as a collapsible tree. Data is keyed by scenario ID so each scenario shows only its relevant formations.
+
+```json
+{
+  "all": {
+    "allied": { "label": "Allied Forces", "children": [...] },
+    "german": { "label": "German Forces", "children": [...] }
+  },
+  "scenario-1": {
+    "allied": { "label": "Allied Forces", "children": [...] },
+    "german": { "label": "German Forces", "children": [...] }
+  }
+}
+```
+
+Each node: `{ "id": "...", "label": "...", "type": "army-group|army|corps|division", "children": [...] }`
+
+### Unit Structure Reference Tab
+A third tab shows the generic military hierarchy (AG → Army → Corps → Div → Rgt/Bde → Bn → Co/Bty → Plt) with distinct color badges per level. This is educational — many players are unfamiliar with military organizational structure.
+
+Lower-unit types (regiment, battalion, company, platoon) use their own badge colors (violet, cyan, rose, stone) distinct from the upper-hierarchy colors (amber, blue, emerald, stone).
+
+### Data Source: Scenario Rules Only
+OOB data should be extracted from scenario setup rules, reinforcement schedules, and activation lists — **not** from general military knowledge. Only include formations explicitly confirmed in the rules text. AI-generated "typical division assets" should not be included.
+
+### Future Enhancement
+Scenario reinforcement schedules contain detailed unit-to-formation attachment information (e.g., "79th VG Div {11 units}, Attached; 1 x AT BU Co."). This could be used to add an attached assets layer to the OOB tree, showing which support units are assigned to each formation.
+
+---
+
+## 17. Quick Reference Sidebar
+
+### Pattern
+A narrow floating icon strip on the right edge of the viewport with buttons for frequently-referenced game data (TEC, Stacking Limits, OOB). Each opens a portal-based modal.
+
+### Data Sources
+- **Stacking Limits:** Extracted from rules JSON (sections 6.0-6.7.0) — fully available in rules PDFs
+- **TEC (Terrain Effects Chart):** Often NOT in the rules PDF — exists only on physical Player Aid Cards. May require a scan/photo of the physical PAC to extract. The rules text says "see TEC" without including the actual table.
+- **OOB:** Extracted from scenario setup/reinforcement rules (see section 16)
+
+### Lazy Loading
+OOB data is lazy-loaded per game module via dynamic `import()`. The OOB button only appears when the selected game module has an `oob.json` file. TEC and Stacking are always available (base game data).
+
+---
+
+## 18. Persistent SoP Panel
+
+The PhaseOverview sidebar should remain visible across all tabs (Steps, Rules, Ask, Flowchart, Info) so players can always see where they are in the sequence. Clicking a step from a non-Steps tab switches to the Steps view and navigates to that step.
+
+---
+
+## 19. Ask Panel Enhancements
+
+### Module/Scenario Boosting in Search
+The `searchRules` function must include the `module` field in scoring. When a query mentions a game name (e.g., "Atlantic Wall", "AW"), all rules with matching `module` field get a score boost. Without this, scenario-specific rules rank too low and the LLM says "I don't have those rules."
+
+Map game name aliases to module IDs: "atlantic wall"/"aw" → "atlantic-wall", "wacht am rhein"/"war"/"bulge" → "war", etc.
+
+### Q&A History Persistence
+Store messages in localStorage so they survive page reloads. Add a History modal for browsing past Q&A with search/filter capability. Session grouping by date helps organization.
+
+### Copy Button
+Include both the question AND answer when copying an assistant message. Format cleanly for pasting into email/text.
+
+---
+
+## 20. HTML Nesting: Avoid `<button>` Inside `<button>`
+
+Clickable rule references (`RuleRefBadge`, `RuleInlineText`) are used inside clickable containers (sidebar buttons, accordion headers). HTML doesn't allow `<button>` nested inside `<button>`.
+
+**Solution:** Use `<span role="button" tabIndex={0}>` with `onClick` and `onKeyDown` handlers (Enter/Space). This provides identical behavior and accessibility without the nesting violation. The `e.stopPropagation()` pattern ensures the inner click doesn't trigger the outer container's handler.
+
+---
+
+## 21. Versioning
 
 - Increment sub-version on every push (v2.4 → v2.5)
 - Major version only on explicit request
