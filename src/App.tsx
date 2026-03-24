@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { AppShell } from "./components/Layout/AppShell";
 import { PhaseOverview } from "./components/SequenceOfPlay/PhaseOverview";
 import { PhaseStepper } from "./components/SequenceOfPlay/PhaseStepper";
-import { GameSelector, type GameModule, GAME_SCENARIOS } from "./components/Layout/GameSelector";
+import { GameSelector } from "./components/Layout/GameSelector";
 import { RulesSearch } from "./components/RulesReference/RulesSearch";
 import { RuleModal } from "./components/RulesReference/RuleModal";
 import { AskPanel } from "./components/Ask/AskPanel";
@@ -14,43 +14,27 @@ import { GlossaryProvider } from "./context/GlossaryContext";
 import { useSoPProgress } from "./hooks/useSoPProgress";
 import { mergeRules } from "./utils/mergeRules";
 import { mergeSequence } from "./utils/mergeSequence";
-import sequenceData from "./data/goss/sequence.json";
-import gossRules from "./data/goss/rules.json";
-import warRules from "./data/war/rules.json";
-import hurtgenRules from "./data/hurtgen/rules.json";
-import lfRules from "./data/lucky-forward/rules.json";
-import awRules from "./data/atlantic-wall/rules.json";
-import hurtgenSeqOverlay from "./data/hurtgen/sequence-overlay.json";
-import lfSeqOverlay from "./data/lucky-forward/sequence-overlay.json";
-import warSeqOverlay from "./data/war/sequence-overlay.json";
-import awSeqOverlay from "./data/atlantic-wall/sequence-overlay.json";
+import { getVisibleGames, getGameById } from "./data/registry";
 import type { Phase, RuleEntry, SequenceOverlay } from "./types/goss";
-
-const basePhases = sequenceData.phases as Phase[];
-const baseRules = gossRules as RuleEntry[];
-const scenarioRuleSets: Record<string, RuleEntry[]> = {
-  war: warRules as RuleEntry[],
-  hurtgen: hurtgenRules as RuleEntry[],
-  "lucky-forward": lfRules as RuleEntry[],
-  "atlantic-wall": awRules as RuleEntry[],
-};
-const scenarioSeqOverlays: Record<string, SequenceOverlay> = {
-  war: warSeqOverlay as SequenceOverlay,
-  hurtgen: hurtgenSeqOverlay as SequenceOverlay,
-  "lucky-forward": lfSeqOverlay as SequenceOverlay,
-  "atlantic-wall": awSeqOverlay as SequenceOverlay,
-};
-
-const SCENARIO_KEY = "goss-scenario";
+import type { GameSystemConfig, ModuleConfig } from "./types/platform";
 
 type View = "sop" | "flowchart" | "rules" | "ask" | "info";
 
-const THEME_KEY = "goss-theme";
-const GAME_KEY = "goss-game-module";
+const THEME_KEY = "wc-theme";
+const GAME_SYSTEM_KEY = "wc-game-system";
+const MODULE_KEY = "wc-module";
+const SCENARIO_KEY = "wc-scenario";
 
 function useTheme() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     try {
+      // Migrate old key
+      const old = localStorage.getItem("goss-theme");
+      if (old === "light" || old === "dark") {
+        localStorage.setItem(THEME_KEY, old);
+        localStorage.removeItem("goss-theme");
+        return old;
+      }
       const saved = localStorage.getItem(THEME_KEY);
       if (saved === "light" || saved === "dark") return saved;
     } catch { /* ignore */ }
@@ -66,86 +50,134 @@ function useTheme() {
     }
   }, [theme]);
 
-  const toggleTheme = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
-
-  return { theme, toggleTheme };
+  return { theme, toggleTheme: () => setTheme((t) => (t === "dark" ? "light" : "dark")) };
 }
 
-function useGameModule() {
-  const [gameModule, setGameModule] = useState<GameModule>(() => {
+function useGameSelection() {
+  const visibleGames = useMemo(() => getVisibleGames(), []);
+
+  const [gameSystemId, setGameSystemId] = useState<string>(() => {
     try {
-      const saved = localStorage.getItem(GAME_KEY);
-      if (saved && saved in scenarioRuleSets) return saved as GameModule;
-    } catch { /* ignore */ }
-    return null;
+      // Migrate old key
+      const oldModule = localStorage.getItem("goss-game-module");
+      if (oldModule) {
+        localStorage.setItem(MODULE_KEY, oldModule);
+        localStorage.removeItem("goss-game-module");
+      }
+      const oldScenario = localStorage.getItem("goss-scenario");
+      if (oldScenario) {
+        localStorage.setItem(SCENARIO_KEY, oldScenario);
+        localStorage.removeItem("goss-scenario");
+      }
+      return localStorage.getItem(GAME_SYSTEM_KEY) || visibleGames[0]?.id || "goss";
+    } catch { return visibleGames[0]?.id || "goss"; }
+  });
+
+  const [moduleId, setModuleId] = useState<string | null>(() => {
+    try { return localStorage.getItem(MODULE_KEY) || null; } catch { return null; }
   });
 
   const [scenario, setScenario] = useState<string | null>(() => {
-    try {
-      return localStorage.getItem(SCENARIO_KEY) || null;
-    } catch { /* ignore */ }
-    return null;
+    try { return localStorage.getItem(SCENARIO_KEY) || null; } catch { return null; }
   });
 
-  useEffect(() => {
-    if (gameModule) {
-      localStorage.setItem(GAME_KEY, gameModule);
-    } else {
-      localStorage.removeItem(GAME_KEY);
-    }
-  }, [gameModule]);
+  const gameConfig = useMemo(() => getGameById(gameSystemId) ?? visibleGames[0], [gameSystemId, visibleGames]);
 
-  useEffect(() => {
-    if (scenario) {
-      localStorage.setItem(SCENARIO_KEY, scenario);
-    } else {
-      localStorage.removeItem(SCENARIO_KEY);
-    }
-  }, [scenario]);
+  useEffect(() => { localStorage.setItem(GAME_SYSTEM_KEY, gameSystemId); }, [gameSystemId]);
+  useEffect(() => { moduleId ? localStorage.setItem(MODULE_KEY, moduleId) : localStorage.removeItem(MODULE_KEY); }, [moduleId]);
+  useEffect(() => { scenario ? localStorage.setItem(SCENARIO_KEY, scenario) : localStorage.removeItem(SCENARIO_KEY); }, [scenario]);
 
-  return { gameModule, setGameModule, scenario, setScenario };
+  const changeGameSystem = (id: string) => {
+    setGameSystemId(id);
+    setModuleId(null);
+    setScenario(null);
+  };
+
+  const changeModule = (id: string | null) => {
+    setModuleId(id);
+    setScenario(null);
+  };
+
+  return { visibleGames, gameConfig, gameSystemId, moduleId, scenario, changeGameSystem, changeModule, setScenario };
+}
+
+// Static imports for GOSS (the only game system currently).
+// When adding a second game, these move to dynamic import() in each game's config.ts.
+import gossSequence from "./data/goss/sequence.json";
+import gossRulesData from "./data/goss/rules.json";
+import warRulesData from "./data/goss/war/rules.json";
+import hurtgenRulesData from "./data/goss/hurtgen/rules.json";
+import lfRulesData from "./data/goss/lucky-forward/rules.json";
+import awRulesData from "./data/goss/atlantic-wall/rules.json";
+import warOverlayData from "./data/goss/war/sequence-overlay.json";
+import hurtgenOverlayData from "./data/goss/hurtgen/sequence-overlay.json";
+import lfOverlayData from "./data/goss/lucky-forward/sequence-overlay.json";
+import awOverlayData from "./data/goss/atlantic-wall/sequence-overlay.json";
+
+const GOSS_BASE_RULES = gossRulesData as RuleEntry[];
+const GOSS_BASE_PHASES = gossSequence.phases as Phase[];
+const GOSS_MODULE_RULES: Record<string, RuleEntry[]> = {
+  war: warRulesData as RuleEntry[],
+  hurtgen: hurtgenRulesData as RuleEntry[],
+  "lucky-forward": lfRulesData as RuleEntry[],
+  "atlantic-wall": awRulesData as RuleEntry[],
+};
+const GOSS_MODULE_OVERLAYS: Record<string, SequenceOverlay> = {
+  war: warOverlayData as SequenceOverlay,
+  hurtgen: hurtgenOverlayData as SequenceOverlay,
+  "lucky-forward": lfOverlayData as SequenceOverlay,
+  "atlantic-wall": awOverlayData as SequenceOverlay,
+};
+
+/** Returns base + module data for the selected game. Currently only GOSS. */
+function useGameData(_gameConfig: GameSystemConfig | undefined, moduleId: string | null) {
+  // TODO: When adding a second game, switch on gameConfig.id and use dynamic imports
+  return {
+    baseRules: GOSS_BASE_RULES,
+    basePhases: GOSS_BASE_PHASES,
+    moduleRules: moduleId ? GOSS_MODULE_RULES[moduleId] ?? [] : [],
+    moduleOverlay: moduleId ? GOSS_MODULE_OVERLAYS[moduleId] ?? null : null,
+  };
 }
 
 function App() {
   const [view, setView] = useState<View>("sop");
   const { theme, toggleTheme } = useTheme();
-  const { gameModule, setGameModule, scenario, setScenario } = useGameModule();
+  const {
+    visibleGames, gameConfig, gameSystemId, moduleId, scenario,
+    changeGameSystem, changeModule, setScenario,
+  } = useGameSelection();
 
-  const allRules = useMemo(() => {
-    const scenario = gameModule ? scenarioRuleSets[gameModule] ?? [] : [];
-    return mergeRules(baseRules, scenario);
-  }, [gameModule]);
+  const { baseRules, basePhases, moduleRules, moduleOverlay } = useGameData(gameConfig, moduleId);
 
-  const phases = useMemo(() => {
-    const overlay = gameModule ? scenarioSeqOverlays[gameModule] ?? null : null;
-    return mergeSequence(basePhases, overlay, scenario);
-  }, [gameModule, scenario]);
+  const allRules = useMemo(() => mergeRules(baseRules, moduleRules), [baseRules, moduleRules]);
+  const phases = useMemo(() => mergeSequence(basePhases, moduleOverlay, scenario), [basePhases, moduleOverlay, scenario]);
 
   const {
-    progress,
-    currentPhase,
-    currentSubPhase,
-    currentSegment,
-    goToPhase,
-    nextStep,
-    prevStep,
-    toggleChecklist,
-    clearChecklist,
-    resetProgress,
+    progress, currentPhase, currentSubPhase, currentSegment,
+    goToPhase, nextStep, prevStep, toggleChecklist, clearChecklist, resetProgress,
   } = useSoPProgress(phases);
 
-  const tabs = [
-    { key: "sop", label: "Steps" },
-    { key: "flowchart", label: "Flowchart" },
-    { key: "rules", label: "Rules" },
-    { key: "ask", label: "Ask" },
-    { key: "info", label: "Info" },
-  ];
+  // Build tabs from game features
+  const tabs = useMemo(() => {
+    const t = [{ key: "sop", label: "Steps" }];
+    if (gameConfig?.features.flowchart) t.push({ key: "flowchart", label: "Flowchart" });
+    t.push({ key: "rules", label: "Rules" });
+    if (gameConfig?.features.ask) t.push({ key: "ask", label: "Ask" });
+    t.push({ key: "info", label: "Info" });
+    return t;
+  }, [gameConfig]);
 
   const handleSidebarSelect = (phaseIndex: number, subPhaseIndex?: number, segmentIndex?: number) => {
     if (view !== "sop") setView("sop");
     goToPhase(phaseIndex, subPhaseIndex, segmentIndex);
   };
+
+  // Get current module config for scenario label lookup
+  const currentModule: ModuleConfig | undefined = gameConfig?.modules.find((m) => m.id === moduleId);
+  const scenarioLabel = scenario
+    ? (currentModule?.scenarios.find((s) => s.id === scenario)?.label ?? "All Scenarios")
+    : "All Scenarios";
 
   const sidebar = (
     <div className="flex h-full flex-col">
@@ -164,12 +196,24 @@ function App() {
     <RulesProvider rules={allRules}>
       <AppShell
         sidebar={sidebar}
-        gameSelector={<GameSelector value={gameModule} onChange={setGameModule} scenario={scenario} onScenarioChange={setScenario} />}
+        gameSelector={
+          <GameSelector
+            games={visibleGames}
+            gameSystemId={gameSystemId}
+            onGameSystemChange={changeGameSystem}
+            moduleId={moduleId}
+            onModuleChange={changeModule}
+            scenario={scenario}
+            onScenarioChange={setScenario}
+          />
+        }
         tabs={tabs}
         activeTab={view}
         onTabChange={(key) => setView(key as View)}
         theme={theme}
         onToggleTheme={toggleTheme}
+        title={gameConfig ? `${gameConfig.shortName} Assistant` : "Wargame Companion"}
+        subtitle={gameConfig?.subtitle ?? ""}
       >
         {view === "sop" && (
           <PhaseStepper
@@ -186,24 +230,40 @@ function App() {
             onGoToPhase={goToPhase}
           />
         )}
-        {view === "flowchart" && <SoPFlowchart />}
+        {view === "flowchart" && gameConfig?.features.flowchart && <SoPFlowchart />}
         {view === "rules" && <RulesSearch rules={allRules} />}
-        {view === "ask" && <AskPanel rules={allRules} phases={phases} />}
+        {view === "ask" && gameConfig?.features.ask && (
+          <AskPanel
+            rules={allRules}
+            phases={phases}
+            workerUrl={gameConfig.askConfig.workerUrl}
+            systemPromptPreamble={gameConfig.askConfig.systemPromptPreamble}
+            exampleQuestions={gameConfig.askConfig.exampleQuestions}
+          />
+        )}
         {view === "info" && <InfoPanel />}
       </AppShell>
       <RuleModal />
       <QuickRefBar
-        gameModule={gameModule}
+        gameModule={moduleId}
         scenario={scenario ?? "all"}
-        scenarioLabel={
-          gameModule && scenario
-            ? (GAME_SCENARIOS[gameModule]?.find((s) => s.id === scenario)?.label ?? "All Scenarios")
-            : "All Scenarios"
-        }
+        scenarioLabel={scenarioLabel}
+        oobModules={gameConfig ? buildOobModules(gameConfig) : {}}
       />
     </RulesProvider>
     </GlossaryProvider>
   );
+}
+
+/** Build OOB lazy-load map from game config */
+function buildOobModules(config: GameSystemConfig): Record<string, () => Promise<{ default: unknown }>> {
+  const map: Record<string, () => Promise<{ default: unknown }>> = {};
+  for (const mod of config.modules) {
+    if (mod.data.oob) {
+      map[mod.id] = mod.data.oob;
+    }
+  }
+  return map;
 }
 
 export default App;

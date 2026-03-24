@@ -7,6 +7,9 @@ import { RuleInlineText } from "../RulesReference/RuleInlineText";
 interface AskPanelProps {
   rules: RuleEntry[];
   phases?: Phase[];
+  workerUrl?: string;
+  systemPromptPreamble?: string;
+  exampleQuestions?: string[];
 }
 
 interface ChatMessage {
@@ -14,9 +17,9 @@ interface ChatMessage {
   content: string;
 }
 
-const WORKER_URL = "https://goss-ask-proxy.kellmat.workers.dev";
+const DEFAULT_WORKER_URL = "https://goss-ask-proxy.kellmat.workers.dev";
 
-const EXAMPLE_QUESTIONS = [
+const DEFAULT_EXAMPLE_QUESTIONS = [
   "How does supply work?",
   "What happens when a unit is out of ammo?",
   "How do ZOCs affect movement?",
@@ -35,7 +38,8 @@ interface SequenceContext {
 function buildSystemPrompt(
   topRules: RuleEntry[],
   summaryRules: RuleEntry[],
-  sequenceItems: SequenceContext[] = []
+  sequenceItems: SequenceContext[] = [],
+  preamble?: string
 ): string {
   const fullText = topRules
     .map((r) => `[${r.section}] ${r.title}: ${r.text}`)
@@ -57,7 +61,8 @@ function buildSystemPrompt(
     sequenceSection = `\n\n## Relevant procedures & tips from the Sequence of Play:\n\n${seqText}`;
   }
 
-  return `You are a rules expert for GOSS (Grand Operational Simulation Series) 2020, a tabletop wargame system. Answer questions about the rules accurately, citing specific rule sections in parenthesized format like (3.2.1) so they render as clickable links.
+  const defaultPreamble = "You are a rules expert for a complex tabletop wargame system.";
+  return `${preamble ?? defaultPreamble} Answer questions about the rules accurately, citing specific rule sections in parenthesized format like (3.2.1) so they render as clickable links.
 
 Be concise but thorough. If a question is ambiguous, explain the relevant rules and note the ambiguity. Always cite the specific rule section numbers. When relevant, include practical gameplay tips from the procedures section.
 
@@ -118,7 +123,13 @@ function saveHistory(messages: ChatMessage[]) {
   } catch { /* quota exceeded — silently fail */ }
 }
 
-export function AskPanel({ rules, phases = [] }: AskPanelProps) {
+export function AskPanel({
+  rules,
+  phases = [],
+  workerUrl = DEFAULT_WORKER_URL,
+  systemPromptPreamble,
+  exampleQuestions = DEFAULT_EXAMPLE_QUESTIONS,
+}: AskPanelProps) {
   const [messages, setMessages] = useState<ChatMessage[]>(loadHistory);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -176,11 +187,11 @@ export function AskPanel({ rules, phases = [] }: AskPanelProps) {
           ? searchSequence(messageText, phases, 5)
           : [];
 
-        const response = await fetch(WORKER_URL, {
+        const response = await fetch(workerUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            system: buildSystemPrompt(topRules, summaryRules, seqResults),
+            system: buildSystemPrompt(topRules, summaryRules, seqResults, systemPromptPreamble),
             messages: newMessages.map((m) => ({
               role: m.role,
               content: m.content,
@@ -246,7 +257,7 @@ export function AskPanel({ rules, phases = [] }: AskPanelProps) {
           <div className="py-8 text-center">
             <p className="mb-4 text-stone-500">Try asking:</p>
             <div className="flex flex-wrap justify-center gap-2">
-              {EXAMPLE_QUESTIONS.map((q) => (
+              {exampleQuestions.map((q) => (
                 <button
                   key={q}
                   onClick={() => sendMessage(q)}

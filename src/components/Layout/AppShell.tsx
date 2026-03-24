@@ -14,6 +14,8 @@ interface AppShellProps {
   onTabChange: (key: string) => void;
   theme: "light" | "dark";
   onToggleTheme: () => void;
+  title?: string;
+  subtitle?: string;
 }
 
 export function AppShell({
@@ -25,6 +27,8 @@ export function AppShell({
   onTabChange,
   theme,
   onToggleTheme,
+  title = "Wargame Companion",
+  subtitle = "",
 }: AppShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -53,10 +57,12 @@ export function AppShell({
         }`}
       >
         <div className="sticky top-0 z-10 border-b border-stone-200 bg-stone-50 p-3 dark:border-stone-700 dark:bg-stone-800">
-          <h1 className="text-lg font-bold tracking-tight">GOSS Assistant <span className="text-xs font-normal text-stone-500">v4.0</span></h1>
-          <div className="mt-1 text-sm text-stone-500 dark:text-stone-400">
-            Grand Operational Simulation Series
-          </div>
+          <h1 className="text-lg font-bold tracking-tight">{title} <span className="text-xs font-normal text-stone-500">v4.1</span></h1>
+          {subtitle && (
+            <div className="mt-1 text-sm text-stone-500 dark:text-stone-400">
+              {subtitle}
+            </div>
+          )}
         </div>
         {sidebar}
       </aside>

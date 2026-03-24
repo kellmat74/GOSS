@@ -9,15 +9,8 @@ interface QuickRefBarProps {
   gameModule: string | null;
   scenario: string;
   scenarioLabel: string;
+  oobModules?: Record<string, () => Promise<{ default: unknown }>>;
 }
-
-// Lazy-load OOB data per game module
-const oobModules: Record<string, () => Promise<{ default: unknown }>> = {
-  "atlantic-wall": () => import("../../data/atlantic-wall/oob.json"),
-  war: () => import("../../data/war/oob.json"),
-  hurtgen: () => import("../../data/hurtgen/oob.json"),
-  "lucky-forward": () => import("../../data/lucky-forward/oob.json"),
-};
 
 const buttons: { key: RefKey; label: string; icon: string; title: string; requiresOOB?: boolean }[] = [
   { key: "tec", label: "TEC", icon: "⛰", title: "Terrain Effects Chart" },
@@ -25,7 +18,7 @@ const buttons: { key: RefKey; label: string; icon: string; title: string; requir
   { key: "oob", label: "OOB", icon: "🎖", title: "Order of Battle", requiresOOB: true },
 ];
 
-export function QuickRefBar({ gameModule, scenario, scenarioLabel }: QuickRefBarProps) {
+export function QuickRefBar({ gameModule, scenario, scenarioLabel, oobModules = {} }: QuickRefBarProps) {
   const [activeRef, setActiveRef] = useState<RefKey | null>(null);
   const [oobRaw, setOobRaw] = useState<Record<string, unknown> | null>(null);
 
