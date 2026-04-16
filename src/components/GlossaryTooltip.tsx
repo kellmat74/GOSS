@@ -109,6 +109,11 @@ export function GlossaryTooltip({ entry, children }: GlossaryTooltipProps) {
                   §{entry.ruleRef}
                 </span>
               )}
+              {entry.custom && (
+                <span className="text-[10px] italic text-stone-400 dark:text-stone-500">
+                  quick ref
+                </span>
+              )}
             </div>
             <p className="text-stone-700 dark:text-stone-300 leading-snug">
               {entry.definition}
