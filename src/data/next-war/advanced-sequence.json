@@ -2,7 +2,7 @@
   "phases": [
     {
       "id": "weather-phase",
-      "name": "1. Weather Phase",
+      "name": "Weather Phase",
       "ruleRef": "4.0",
       "timing": "every-turn",
       "player": "both",
@@ -13,7 +13,7 @@
     },
     {
       "id": "initiative-phase",
-      "name": "2. Initiative Phase",
+      "name": "Initiative Phase",
       "ruleRef": "5.1",
       "timing": "every-turn",
       "player": "both",
@@ -24,7 +24,7 @@
     },
     {
       "id": "electronic-detection-phase",
-      "name": "3. Electronic Detection Phase",
+      "name": "Electronic Detection Phase",
       "ruleRef": "21.3",
       "timing": "every-turn",
       "player": "both",
@@ -35,7 +35,7 @@
     },
     {
       "id": "first-sof-phase",
-      "name": "4. First Special Operations Forces Phase",
+      "name": "First Special Operations Forces Phase",
       "ruleRef": "20.1",
       "timing": "every-turn",
       "player": "both",
@@ -46,7 +46,7 @@
     },
     {
       "id": "air-naval-phase",
-      "name": "5. Air/Naval Phase",
+      "name": "Air/Naval Phase",
       "ruleRef": "22.6",
       "timing": "every-turn",
       "player": "both",
@@ -57,7 +57,7 @@
     },
     {
       "id": "second-sof-phase",
-      "name": "6. Second Special Operations Forces Phase",
+      "name": "Second Special Operations Forces Phase",
       "ruleRef": "20.1",
       "timing": "every-turn",
       "player": "both",
@@ -68,7 +68,7 @@
     },
     {
       "id": "first-strike-phase",
-      "name": "7. First Strike Phase",
+      "name": "First Strike Phase",
       "ruleRef": "23.1",
       "timing": "every-turn",
       "player": "both",
@@ -79,7 +79,7 @@
     },
     {
       "id": "first-supply-phase",
-      "name": "8. First Supply Phase",
+      "name": "First Supply Phase",
       "ruleRef": "19.0",
       "timing": "every-turn",
       "player": "both",
@@ -90,7 +90,7 @@
     },
     {
       "id": "initiative-movement-combat-phase",
-      "name": "9. Initiative Movement and Combat Phase",
+      "name": "Initiative Movement and Combat Phase",
       "ruleRef": "8.0",
       "timing": "every-turn",
       "player": "phasing",
@@ -103,7 +103,7 @@
     },
     {
       "id": "second-strike-phase",
-      "name": "10. Second Strike Phase",
+      "name": "Second Strike Phase",
       "ruleRef": "23.1",
       "timing": "every-turn",
       "player": "both",
@@ -114,7 +114,7 @@
     },
     {
       "id": "second-supply-phase",
-      "name": "11. Second Supply Phase",
+      "name": "Second Supply Phase",
       "ruleRef": "19.0",
       "timing": "every-turn",
       "player": "both",
@@ -125,7 +125,7 @@
     },
     {
       "id": "basic-movement-combat-phase",
-      "name": "12. Basic Movement and Combat Phase",
+      "name": "Basic Movement and Combat Phase",
       "ruleRef": "8.0",
       "timing": "every-turn",
       "player": "both",
@@ -138,7 +138,7 @@
     },
     {
       "id": "isolation-surrender-phase",
-      "name": "13. Isolation/Surrender Phase",
+      "name": "Isolation/Surrender Phase",
       "ruleRef": "19.7",
       "timing": "every-turn",
       "player": "both",
@@ -149,7 +149,7 @@
     },
     {
       "id": "reorganization-phase",
-      "name": "14. Reorganization Phase",
+      "name": "Reorganization Phase",
       "ruleRef": "22.4",
       "timing": "every-turn",
       "player": "both",
@@ -160,7 +160,7 @@
     },
     {
       "id": "reinforcement-replacement-phase",
-      "name": "15. Reinforcement and Replacement Phase",
+      "name": "Reinforcement and Replacement Phase",
       "ruleRef": "10.0",
       "timing": "every-turn",
       "player": "both",
@@ -173,7 +173,7 @@
     },
     {
       "id": "victory-determination-phase",
-      "name": "16. Victory Determination Phase",
+      "name": "Victory Determination Phase",
       "ruleRef": "12.0",
       "timing": "every-turn",
       "player": "both",
@@ -184,7 +184,7 @@
     },
     {
       "id": "game-record-phase",
-      "name": "17. Game Record Phase",
+      "name": "Game Record Phase",
       "ruleRef": "",
       "timing": "every-turn",
       "player": "both",
