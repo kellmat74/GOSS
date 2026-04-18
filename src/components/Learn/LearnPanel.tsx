@@ -101,7 +101,7 @@ export function LearnPanel({
   if (chapters.length === 0) {
     return (
       <div className="mx-auto max-w-2xl py-16 text-center text-stone-400">
-        <p>No Learn content available for this module yet.</p>
+        <p>No AI Coach content available for this module yet.</p>
       </div>
     );
   }
@@ -139,14 +139,14 @@ export function LearnPanel({
     return (
       <div className="mx-auto max-w-3xl">
         <div className="text-xs font-semibold uppercase tracking-wide text-accent-500 dark:text-accent-400">
-          Learn
+          AI Coach
         </div>
         <div className="mt-6 rounded-lg border border-stone-200 bg-stone-50 px-6 py-12 text-center dark:border-stone-700 dark:bg-stone-800/50">
           <p className="text-sm text-stone-500 dark:text-stone-400">
-            No Learn content for the current SoP position yet.
+            No AI Coach content for the current SoP position yet.
           </p>
           <p className="mt-2 text-xs text-stone-400">
-            Pick a different phase or segment in the sidebar — Learn covers{" "}
+            Pick a different phase or segment in the sidebar — AI Coach covers{" "}
             {chapters.length} chapters.
           </p>
         </div>
@@ -160,7 +160,7 @@ export function LearnPanel({
       {/* Chapter header */}
       <div className="mb-4">
         <div className="text-xs font-semibold uppercase tracking-wide text-accent-500 dark:text-accent-400">
-          Learn
+          AI Coach
         </div>
         <h2 className="mt-1 flex flex-wrap items-center gap-2 text-2xl font-bold text-stone-800 dark:text-stone-100">
           {activeChapter.title}

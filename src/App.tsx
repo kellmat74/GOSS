@@ -179,7 +179,7 @@ function App() {
   // Build tabs from game features
   const tabs = useMemo(() => {
     const t = [{ key: "sop", label: "SoP" }];
-    if (gameConfig?.features.learn) t.push({ key: "learn", label: "Learn" });
+    if (gameConfig?.features.learn) t.push({ key: "learn", label: "AI Coach" });
     if (gameConfig?.features.flowchart) t.push({ key: "flowchart", label: "Flowchart" });
     t.push({ key: "rules", label: "Rules" });
     if (gameConfig?.features.ask) t.push({ key: "ask", label: "Ask" });
