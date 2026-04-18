@@ -1,4 +1,5 @@
 import type { GameSystemConfig } from "../../types/platform";
+import { taiwanOptionalRules } from "./taiwan/optional-rules";
 
 export const nextWarConfig: GameSystemConfig = {
   id: "next-war",
@@ -18,8 +19,18 @@ export const nextWarConfig: GameSystemConfig = {
 
   complexityLevels: ["standard", "advanced"],
 
-  // Optional rules will be populated as rules are extracted from PDFs
-  optionalRules: [],
+  // Series-wide optional rules (from Errata/Clarifications doc)
+  optionalRules: [
+    {
+      id: "trading-space-for-time",
+      label: "Trading Space for Time",
+      section: "9.7.1",
+      description:
+        "When conducting combat, rather than taking step losses a defending stack may choose to retreat one additional hex per step loss (minimum one step loss if odds were 11-13+). For each step loss converted to a retreat hex, the attacker reduces his losses by one. Defenders cannot Voluntarily Ignore a Retreat when using this option.",
+      source: "standard",
+      default: false,
+    },
+  ],
 
   // Supplements — populated once PDFs are available
   supplements: [
@@ -60,8 +71,17 @@ export const nextWarConfig: GameSystemConfig = {
       shortLabel: "NW:TW",
       scenarios: [
         { id: "all", label: "All Scenarios" },
-        // Scenarios populated once Taiwan GSR is extracted
+        // Standard Scenarios (GSR §18.2)
+        { id: "target-kaohsiung", label: "18.2.1: Target Kaohsiung" },
+        { id: "target-taichung", label: "18.2.2: Target Taichung" },
+        { id: "target-taipei", label: "18.2.3: Target Taipei" },
+        { id: "red-dragon-rising", label: "18.2.4: Red Dragon Rising" },
+        // Advanced Scenarios (GSR §18.3)
+        { id: "walkin-on-the-sun", label: "18.3.4: Strategic Surprise — Walkin' on the Sun [Advanced]" },
+        { id: "island-in-the-sun", label: "18.3.5: Tactical Surprise — Island in the Sun [Advanced]" },
+        { id: "black-hole-sun", label: "18.3.6: Extended Buildup — Black Hole Sun [Advanced]" },
       ],
+      optionalRules: taiwanOptionalRules,
       data: {
         rules: () => import("./taiwan/rules.json"),
         sequenceOverlay: () => import("./taiwan/sequence-overlay.json"),

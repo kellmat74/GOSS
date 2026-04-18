@@ -1,1 +1,226 @@
-{ "phases": [] }
+{
+  "phases": [
+    {
+      "id": "weather-phase",
+      "name": "Weather Phase",
+      "ruleRef": "4.1",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Determine weather for this game turn. Storm weather moves all Naval units to the At-Sea Box.",
+      "content": "1. Roll one die to determine this turn's weather (except Game Turn 1).\n2. If the weather is \"Storm,\" move all Naval units to the At-Sea Box (if friendly) or a friendly port of their Sea Zone. **(4.1)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "supply-phase",
+      "name": "Supply Phase [13.1 \u2013 Optional]",
+      "ruleRef": "13.1",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Optional phase \u2014 remove Out of Supply markers from units back in supply and place Out of Supply markers on unsupplied units.",
+      "content": "1. Remove Out of Supply markers from units that are no longer out of supply.\n2. Check for unsupplied units. Place an Out of Supply marker on any unit that is unsupplied.",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "initiative-air-naval-phase",
+      "name": "Initiative/Air/Naval Phase",
+      "ruleRef": "6.1",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Determine initiative, run detection, allocate Air Points, set Air Superiority Level, conduct Strikes, and roll for Sea Control and Mine Clearance.",
+      "content": "1. Determine if either player has the Initiative for the game turn or whether it is a \"Contested\" Game Turn. Both players move their respective \"VPs This Turn\" markers to zero.\n2. Detection \u2014 Allies roll to Detect SSM markers.\n3. Each player rolls on the Standard Game Air Point Chart and records the Air Points received this turn, modifying for weather if necessary. **(6.1 and Standard Game Air Points Chart)**\n4. Allocate Strike Points \u2014 Allied player allocates Air Points to Strike Points. **[NWI/NWT2E 13.2]**\n5. Set Air Superiority Level based on Air Point differential. **(6.4)**\n6. Conduct Strikes \u2014 Allied player conducts Strikes. **[NWI/NWT2E 13.2.2]**\n7. During non-Storm turns, roll for Sea Control: **(7.2.1/7.2.2)**\n   a. Check each eligible Inshore Box.\n   b. Check each eligible At Sea Box.\n8. Both sides roll for Mine Clearance. **(7.5.2)** (not on GT1)\n\n*If neither player holds the Initiative (i.e., it is a \"Contested\" turn), skip directly to the Basic Movement and Combat Phase.*",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "initiative-movement-combat-phase",
+      "name": "Initiative Movement and Combat Phase (Initiative Turn Only)",
+      "ruleRef": "8.5",
+      "timing": "every-turn",
+      "player": "phasing",
+      "description": "The Initiative player moves and fights, followed by Elite Reaction and Exploitation sub-segments, then the non-Initiative player reacts and fights. Skipped on Contested turns.",
+      "content": "*(Initiative Turn Only \u2014 skipped if Contested)*",
+      "notes": [],
+      "subPhases": [
+        {
+          "id": "initiative-movement-segment",
+          "name": "Movement Segment",
+          "ruleRef": "8.5",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "The Initiative player moves any/all ground units up to their movement allowance. Air, airmobile, and sea movement and transport are allowed.",
+          "content": "Movement Segment: The Initiative player moves any/all of his ground units up to the extent of their movement allowance. Air, airmobile, and sea movement and transport are allowed. **[8.5]***",
+          "notes": [],
+          "checklist": []
+        },
+        {
+          "id": "initiative-combat-segment",
+          "name": "Combat Segment",
+          "ruleRef": "9.0",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "The Initiative player declares and resolves all Combat (one combat at a time).",
+          "content": "Combat Segment: The Initiative player declares and resolves all Combat (one combat at a time). **(9.0)**\n\na. Declare Attacks (one at a time). **(9.2.1)**\nb. Compute Initial Odds. **(9.2.2)**\nc. Determine Column shifts. **(9.5)**\nd. Both sides allocate Attack Helicopters, Air Points, and Naval units to Combat Support Missions (attacker first). **(9.2.4)**\ne. Resolve all Air Defense Fire. **(9.2.5)**\nf. Determine DRMs. **(9.6)**\ng. Roll die and resolve combat. **(9.7)**\nh. Allocate Losses. **(9.7.1)**\ni. Retreat and advance units. **(9.8/9.9)**",
+          "notes": [],
+          "checklist": []
+        },
+        {
+          "id": "elite-reaction-movement-segment",
+          "name": "Elite Reaction Movement Segment",
+          "ruleRef": "8.2.4",
+          "timing": "every-turn",
+          "player": "both",
+          "description": "Non-Initiative player may move all 6+ Efficiency units not in an EZOC their full MA. Only ground movement allowed; LI in ZOC can move with limitations.",
+          "content": "Elite Reaction Movement Segment: Non-Initiative player may move all 6+ Efficiency units not in an EZOC their full MA. Only ground movement is allowed. LI in ZOC can move. **[8.2.4, 8.5 (limitations apply)]***",
+          "notes": [],
+          "checklist": []
+        },
+        {
+          "id": "exploitation-movement-segment",
+          "name": "Exploitation Movement Segment",
+          "ruleRef": "8.2.4",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "Initiative player may move ground units not in an EZOC their full MA. LI in ZOC can move. All movement types are allowed.",
+          "content": "Exploitation Movement Segment: Initiative player may move ground units not in an EZOC their full MA. LI in ZOC can move. All movement types are allowed. **[8.2.4, 8.5]**",
+          "notes": [],
+          "checklist": []
+        },
+        {
+          "id": "exploitation-combat-segment",
+          "name": "Exploitation Combat Segment",
+          "ruleRef": "9.0",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "The Initiative player performs Exploitation Combat. Any units (whether they moved or not) may perform Combat at a two column shift left penalty on the CRT.",
+          "content": "Exploitation Combat Segment: The Initiative player performs Exploitation Combat. Any units (whether they moved or not) may perform Combat (at a two column shift left penalty on the CRT). **(9.0)**",
+          "notes": [],
+          "checklist": []
+        },
+        {
+          "id": "reaction-movement-segment",
+          "name": "Reaction Movement Segment",
+          "ruleRef": "8.5",
+          "timing": "every-turn",
+          "player": "both",
+          "description": "The non-Initiative player may move any/all of his units up to the extent of their movement allowance. Air, airmobile, and sea movement and transport are allowed.",
+          "content": "Reaction Movement Segment: The non-Initiative player may move any/all of his units up to the extent of their movement allowance. Air, airmobile, and sea movement and transport are allowed. **[8.5]***",
+          "notes": [],
+          "checklist": []
+        },
+        {
+          "id": "reaction-combat-segment",
+          "name": "Reaction Combat Segment",
+          "ruleRef": "9.0",
+          "timing": "every-turn",
+          "player": "both",
+          "description": "The non-Initiative player performs Combat.",
+          "content": "Reaction Combat Segment: The non-Initiative player performs Combat. **(9.0)**",
+          "notes": [],
+          "checklist": []
+        }
+      ]
+    },
+    {
+      "id": "basic-movement-combat-phase",
+      "name": "Basic Movement and Combat Phase",
+      "ruleRef": "8.5",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Both players alternate movement and combat. On a Contested turn this phase replaces the Initiative Movement and Combat Phase entirely.",
+      "content": "*(On a Contested turn, this phase replaces Phase 4 entirely.)*",
+      "notes": [],
+      "subPhases": [
+        {
+          "id": "basic-movement-segment",
+          "name": "Movement Segment",
+          "ruleRef": "8.5",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "The Initiative/First Player moves any/all ground units up to their movement allowance. Air, airmobile, and sea movement and transport are allowed.",
+          "content": "Movement Segment: The Initiative/First Player moves any/all of his ground units up to the extent of their movement allowance. Air, airmobile, and sea movement and transport are allowed. **[8.5]***",
+          "notes": [],
+          "checklist": []
+        },
+        {
+          "id": "basic-combat-segment",
+          "name": "Combat Segment",
+          "ruleRef": "9.0",
+          "timing": "every-turn",
+          "player": "phasing",
+          "description": "The Initiative/First Player declares and resolves all combat.",
+          "content": "Combat Segment: The Initiative/First Player declares and resolves all Combat. **(9.0)**",
+          "notes": [],
+          "checklist": []
+        },
+        {
+          "id": "basic-reaction-movement-segment",
+          "name": "Reaction Movement Segment",
+          "ruleRef": "8.5",
+          "timing": "every-turn",
+          "player": "both",
+          "description": "The non-Initiative/Second Player moves any/all ground units up to their movement allowance. Air, airmobile, and sea movement and transport are allowed.",
+          "content": "Reaction Movement Segment: The non-Initiative/Second Player moves any/all of his ground units up to the extent of their movement allowance. Air, airmobile, and sea movement and transport are allowed. **[8.5]***",
+          "notes": [],
+          "checklist": []
+        },
+        {
+          "id": "basic-reaction-combat-segment",
+          "name": "Reaction Combat Segment",
+          "ruleRef": "9.0",
+          "timing": "every-turn",
+          "player": "both",
+          "description": "The non-Initiative/Second Player declares and resolves all combat.",
+          "content": "Reaction Combat Segment: The non-Initiative/Second Player declares and resolves all combat. **(9.0)**",
+          "notes": [],
+          "checklist": []
+        }
+      ]
+    },
+    {
+      "id": "reorganization-phase",
+      "name": "Reorganization Phase",
+      "ruleRef": "6.5.2",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Reset helicopter and artillery mission markers, remove Air Points marker, reset Airmobile Points, remove Tunnel Markers, conduct Clearing Operations, and determine hex control changes.",
+      "content": "1. Rotate all helicopters and artillery to reflect \"no missions used.\" **(6.5.2)**\n2. Remove Air Points marker from Game Information Display.\n3. Reset Airmobile Points. **(8.5.4.1)**\n4. Remove Tunnel Markers. **[NWK2E GSR 2.7]**\n5. Conduct Clearing Operations. **(8.4.1)**\n6. Determine hex control changes.",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "reinforcement-replacement-phase",
+      "name": "Reinforcement & Replacement Phase",
+      "ruleRef": "10.0",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Both players place reinforcements per the Reinforcement Schedule, then may use replacement points to replace or reconstitute units. Adjust Submarine Threat and ASW Levels.",
+      "content": "1. Both sides, non-Initiative/First player first, place reinforcements in accordance with the Scenario's Reinforcement Schedule. **(10.0)**\n2. Both players, Initiative/First player first, may use replacement points to replace or reconstitute units. Units in enemy ZOCs cannot receive replacements. **(11.0)**\n3. Adjust Submarine Threat and ASW Levels. **(7.4.3)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "victory-determination-phase",
+      "name": "Victory Determination Phase",
+      "ruleRef": "12.0",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Add per-turn VPs, check for Automatic Victory, and on the final game turn compare Victory Points to determine the winner.",
+      "content": "1. Check for \"per turn\" VP. Add each players' \"VPs This Turn\" to their \"VPs\" to reflect their total VP accumulated. Do NOT reset the \"VPs This Turn\" marker until the Initiative Phase of the next turn. **(12.0)**\n2. Determine if either player is allowed to check for Automatic Victory. If this is the last game turn, compare each side's Victory Points to determine a winner. **(12.2)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "game-record-phase",
+      "name": "Game Record Phase",
+      "ruleRef": "",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Advance the Game Turn marker and begin the next turn.",
+      "content": "Players advance the Game Turn marker and begin the next turn.",
+      "notes": [],
+      "subPhases": []
+    }
+  ]
+}

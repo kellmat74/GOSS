@@ -41,6 +41,8 @@ export interface ModuleConfig {
   label: string;         // "Wacht am Rhein", "Taiwan"
   shortLabel: string;    // "WaR", "TW"
   scenarios: ScenarioDef[];
+  /** Module-specific optional rules (e.g. Taiwan GSR §17). Merged with base optionalRules. */
+  optionalRules?: OptionalRuleEntry[];
   data: {
     rules: () => Promise<{ default: unknown }>;
     sequenceOverlay?: () => Promise<{ default: unknown }>;

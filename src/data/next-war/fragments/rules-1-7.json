@@ -1,0 +1,682 @@
+[
+  {
+    "id": "1.0",
+    "section": "1.0",
+    "title": "INTRODUCTION",
+    "summary": "Overview of the Next War series design goals and scope.",
+    "text": "The *Next War* series is an updated, expanded look at potential conflicts and modern warfare based on the system released by GMT Games as *Crisis: Korea 1995*. These rules supersede any previous rules and should be used with all *Next War* series games.\n\nThe games in this series focus on a near future war in any of several potential hotspots. Players control land, air, and naval forces of the various sides engaged in the conflict. The scenarios provided allow players to examine multiple aspects of how a contemporary conflict might unfold. Modern war will, through the wholesale use of the destructive power of modern armaments deplete supplies of such armaments and outstrip any of the belligerents' abilities to replace them. Thus, we believe that any such war would, of necessity, be a short, vicious engagement until settling in to prolonged battles of attrition unless a decisive victory is achieved. Both sides are challenged to win quickly and decisively, as both forces and munitions dwindle rapidly in the face of extended modern combat operations.",
+    "crossRefs": []
+  },
+  {
+    "id": "1.1",
+    "section": "1.1",
+    "title": "Glossary",
+    "summary": "Definitions of abbreviations and acronyms used throughout the rules.",
+    "text": "**AAA** – Anti-Aircraft Artillery\n**ADF** – Air Defense Fire\n**Am Pt** – Airmobile Point\n**AMPH** – Amphibious Naval Unit\n**AP** – Air Point\n**ARTY** – Artillery\n**AS** – Attack Strength\n**ASW** – Anti-Submarine Warfare\n**AWACS** – Airborne Early Warning and Control System\n**CIWS** – Close In Weapons System\n**CM** – Cruise Missile\n**CS** – Combat Support\n**CV/CVN** – Carrier Naval Unit\n**CW** – Chemical Weapons\n**DET** – Detection\n**DRM** – Die Roll Modifier\n**DS** – Defense Strength\n**ER** – Efficiency Rating\n**GSR** – Game Specific Rules\n**GT** – Game Turn\n**HQ** – Headquarters\n**LI** – Light Infantry\n**MA** – Movement Allowance\n**MSU** – Mobile Supply Unit\n**RP** – Replacement Point\n**SAG** – Surface Action Group Naval Unit\n**SAM** – Surface-to-Air Missile\n**SCUD** – type of Ballistic Missile\n**SOP** – Sequence of Play\n**SP** – Stacking Point\n**TEC** – Terrain Effects Chart\n**VP** – Victory Point\n**ZOC/EZOC** – (Enemy) Zone of Control",
+    "crossRefs": []
+  },
+  {
+    "id": "1.2",
+    "section": "1.2",
+    "title": "Rounding",
+    "summary": "Fractional values are always rounded up to the nearest integer.",
+    "text": "Unless otherwise stated, always round any fraction up to the nearest integer.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.0",
+    "section": "2.0",
+    "title": "COMPONENTS",
+    "summary": "Overview of the physical components included in each Next War game.",
+    "text": "Each *Next War* game's Game Specific Rules manual will list the components for the game.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.1",
+    "section": "2.1",
+    "title": "Maps",
+    "summary": "Description of the Operational Map and Strategic Display included with each game.",
+    "text": "Most games come with an Operational Map which has hexes and a Strategic Display which uses area movement. See the Game Specific Rules (GSR) for more information.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.2",
+    "section": "2.2",
+    "title": "Counters",
+    "summary": "Overview of the 9/16\" counters representing ground, air, and naval units.",
+    "text": "Each game's 9/16\" counters represent ground units, aircraft, and naval units. A variety of game markers are also included. Units have been color-coded by nationality as described in the GSR. Refer to the Unit Type Identification chart (p.2 or the play aid) to read the counters.\n\n**Design Note:** *While HQs and Air units are included in the game, they are neither set up nor used in the Standard Game.*",
+    "crossRefs": []
+  },
+  {
+    "id": "2.2.1",
+    "section": "2.2.1",
+    "title": "Ground Units & Sizes",
+    "summary": "Each unit with attack, defense, and movement values on its counter is a ground unit.",
+    "text": "Each unit with an Attack Strength (2.3.1) - Defense Strength (2.3.2) - Movement Allowance (2.3.5) notation on its counter is a ground unit. Some units have a size marked directly above the unit type box. See Unit Identification Chart.",
+    "crossRefs": ["2.3.1", "2.3.2", "2.3.5"]
+  },
+  {
+    "id": "2.2.2",
+    "section": "2.2.2",
+    "title": "Combat Units",
+    "summary": "A combat unit is any ground unit with an Attack Strength greater than zero.",
+    "text": "A \"combat unit\" is a ground unit with an Attack Strength greater than zero.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.3",
+    "section": "2.3",
+    "title": "Explanation of Ground Unit Values",
+    "summary": "Describes the meaning of the numeric values printed on ground unit counters.",
+    "text": "Ground unit counters display Attack Strength, Defense Strength, and Movement Allowance values.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.3.1",
+    "section": "2.3.1",
+    "title": "Attack Strength (AS)",
+    "summary": "The combat strength a unit uses when attacking in ground combat.",
+    "text": "The combat strength that a unit uses when attacking in ground combat.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.3.2",
+    "section": "2.3.2",
+    "title": "Defense Strength (DS)",
+    "summary": "The combat strength a unit uses when defending in ground combat.",
+    "text": "The combat strength that a unit uses when defending in ground combat.\n\n**2.3.2.1 Parenthesized DS:** A unit with its DS in parentheses uses this in defense only if it defends alone or with other such units.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.3.3",
+    "section": "2.3.3",
+    "title": "Efficiency Rating (ER)",
+    "summary": "The unit's morale, training, and cohesion rating used to determine column shifts in combat.",
+    "text": "The unit's morale, training, doctrine, cohesion, and ancillary weapons systems. It is used to determine possible column shifts in combat. Units with a rating of 6 or more are considered Elite. Various game effects can reduce a unit's ER, but it can never be reduced below 1.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.3.3.1",
+    "section": "2.3.3.1",
+    "title": "ER Checks",
+    "summary": "How to conduct an Efficiency Rating check by rolling one die against the ER value.",
+    "text": "The ER is checked for several purposes. When making a check, roll one die (2.6). If the die roll is equal to or less than the ER, the unit passes, else it fails.",
+    "crossRefs": ["2.6"]
+  },
+  {
+    "id": "2.3.4",
+    "section": "2.3.4",
+    "title": "Unit/Formation ID",
+    "summary": "Each unit displays its organizational designation and parent formation in the upper left corner.",
+    "text": "Each unit has an organizational designation (Battalion, Brigade, or Division) and parent Formation ID (Corps or Division). This is shown in the form unit/parent (e.g., 1/101 is 1st Brigade, 101st Division; 1/VIII is 1st Division, VIII Corps) in the upper left corner. The unit type symbol is sometimes also color-coded to show the unit's parent Formation.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.3.5",
+    "section": "2.3.5",
+    "title": "Movement Allowance (MA)",
+    "summary": "The maximum number of Movement Points a unit may spend during one friendly Movement Segment.",
+    "text": "The maximum number of Movement Points (MPs) that a unit can expend during any one friendly Movement Segment.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.3.6",
+    "section": "2.3.6",
+    "title": "Setup Hex/Area",
+    "summary": "The italicized code on the counter indicating where the unit sets up or enters as reinforcement.",
+    "text": "The location of the unit at the start of most scenarios or its reinforcement (italicized) code, entry hex, city, or country.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.3.7",
+    "section": "2.3.7",
+    "title": "Stacking Points (SP)",
+    "summary": "The amount of space a unit occupies in a hex for stacking purposes.",
+    "text": "The amount of space a unit occupies in a hex.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.4",
+    "section": "2.4",
+    "title": "Explanation of Air and Naval Unit Values",
+    "summary": "Describes the meaning of the values printed on air and naval unit counters.",
+    "text": "Air and naval unit counters display specialized values covering transport capacity, combat support, range, and transport capacity.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.4.1",
+    "section": "2.4.1",
+    "title": "Airmobile Transport Capacity",
+    "summary": "The number of Stacking Points a Naval Unit can carry via airmobile transport.",
+    "text": "A Naval Unit's airmobile transport capacity in Stacking Points.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.4.2",
+    "section": "2.4.2",
+    "title": "Combat Support (CS) Rating",
+    "summary": "The ability of an Attack Helicopter or Naval Unit to provide a DRM when supporting friendly units in ground combat.",
+    "text": "The ability of an Attack Helicopter or Naval Unit to support friendly units involved in ground combat. It provides a negative Die Roll Modifier (DRM) when attacking and a positive DRM when defending.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.4.3",
+    "section": "2.4.3",
+    "title": "Range",
+    "summary": "The distance in hexes over which an Attack Helicopter or Naval Unit can perform missions.",
+    "text": "The distance in hexes that an Attack Helicopter or Naval Unit can perform CS Missions or Naval Bombardment; represents the distance in hexes of movement for helicopters; represents the distance in hexes for Artillery Combat Support.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.4.4",
+    "section": "2.4.4",
+    "title": "Transport Capacity",
+    "summary": "The number of Stacking Points of Marine troops an AMPH can carry in an All-Sea hex.",
+    "text": "The SPs of Marine troops that an Amphibious Naval Unit (AMPH) can carry in an All-Sea hex.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.5",
+    "section": "2.5",
+    "title": "Charts and Tables",
+    "summary": "Player-aid cards contain all charts and tables needed during play.",
+    "text": "The player-aid cards and maps include all the charts and tables necessary for play. Players should position the various player aid cards on the table near the game map for easy reference while conducting various game functions.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.6",
+    "section": "2.6",
+    "title": "The Die",
+    "summary": "A 10-sided die is used for all game resolution; a roll of \"0\" is read as zero, not ten.",
+    "text": "The included 10-sided die is used to resolve combat and other game mechanisms. All rolls of \"0\" are read as zero, not ten.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.7",
+    "section": "2.7",
+    "title": "Game Scale",
+    "summary": "Each hex represents 7.5 miles and each game turn represents roughly 3.5 days.",
+    "text": "The map scale is 7.5 miles (12 km) per hex. Unit scale is generally divisions and brigades, although battalions and regiments are used to represent some units. Each game turn represents roughly 3.5 days.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.8",
+    "section": "2.8",
+    "title": "Special Unit Notes",
+    "summary": "Rules for special unit types including US Army BCTs, USMC Task Forces, Combat Outposts, and Russian Airborne units.",
+    "text": "Special rules apply to several unit types in the game, including US Army Brigade Combat Teams, USMC Task Forces, Combat Outposts, Marine units, Russian Airborne/Airmobile units.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.8.1",
+    "section": "2.8.1",
+    "title": "US Army Brigade Combat Teams (BCT)",
+    "summary": "US Army units are represented as Brigade Combat Teams of three types: Infantry, Stryker, and Armored.",
+    "text": "US Army units, in this game, are, generally, represented as Brigade Combat Teams (BCTs). There are three kinds of BCT: Infantry (IBCT –3-4-4 or 3-4-24 [intrinsic Airmobile]), Stryker (SBCT – 4-5-8), and Armored (ABCT – 7-7-8).",
+    "crossRefs": []
+  },
+  {
+    "id": "2.8.2",
+    "section": "2.8.2",
+    "title": "USMC Task Forces",
+    "summary": "USMC units may be brigaded as Task Forces using provided Task Force counters when configured correctly.",
+    "text": "The USMC forces are usually depicted as battalions so the USMC can be used as flexibly as the player desires. Operationally, however, the Marines are often brigaded together as a task force. When available, Task Force counters (e.g., 1 TF) will be provided in the counter-mix to represent this ability. They may be formed in the Reorganization Phase or during Setup whenever USMC units in the following configuration are stacked together:\n\n- **I TF:** 2 infantry battalions, an armored battalion (when available), and a LAR battalion.\n- **II & III TF:** 3 infantry battalions and a LAR battalion.\n\nIf any of the battalions have a Strike marker, the new TF unit \"inherits\" the worst such marker when formed. Once the TF is formed, it cannot be broken back down into its constituent units. If the TF is eliminated, the player can either reconstitute the TF or its constituent units (but not both). If the latter is chosen, the TF can be created again.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.8.3",
+    "section": "2.8.3",
+    "title": "Combat Outposts",
+    "summary": "Combat Outpost markers may be placed adjacent to borders during setup and function as units with no movement.",
+    "text": "Combat Outposts (CO), when listed in a scenario as available during setup, may be placed, no more than one per hex, in any hex adjacent to the border marked on the map (dashed line).\n\nCO markers are treated as units except they have no movement allowance or type, no ZOCS, are always in Supply, are never Isolated, and must remain in the hex that they are initially placed throughout the game until they are eliminated.\n\nCOs are eliminated during combat if the CRT calls for a retreat or step loss result. COs must be chosen as the first step-loss in combat, regardless of which defending unit was used for efficiency column shifts.\n\nCOs have no stacking points although they do count as one \"step\" for purposes of combat losses. They stack \"for free\" in their hex.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.8.4",
+    "section": "2.8.4",
+    "title": "\"Marine\" units",
+    "summary": "All units identified as Marine on the Unit Type Identification Chart may conduct Amphibious Assaults and/or Sea Landings.",
+    "text": "All units identified as Marine on the Unit Type Identification Chart may conduct Amphibious Assaults and/or Sea Landings.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.8.5",
+    "section": "2.8.5",
+    "title": "Russian Airborne/Airmobile",
+    "summary": "Russian Airborne and Air Assault units come in two configurations and the player may deploy either counter depending on the chosen transport type.",
+    "text": "The Russian Airborne and Air Assault combat units come in two configurations, Light Infantry and Motorized. Only one version of the counter can be on the map at any one time. The player may deploy either counter when using the chosen transport type as follows:",
+    "crossRefs": []
+  },
+  {
+    "id": "2.8.5.1",
+    "section": "2.8.5.1",
+    "title": "Airmobile Transport",
+    "summary": "When using Airmobile Points to transport Russian Airborne units, the Motorized counter counts as two stacking points.",
+    "text": "When using Airmobile Points to transport the unit, the Motorized counter counts as two stacking points, i.e., it will take two Airmobile Points to transport the unit.",
+    "crossRefs": []
+  },
+  {
+    "id": "2.8.5.2",
+    "section": "2.8.5.2",
+    "title": "Airborne Transport",
+    "summary": "When using Paradrop/Airborne Transport, the player chooses the Light Infantry or Motorized configuration with specific limitations.",
+    "text": "When using Paradrop/Airborne Transport, the player must choose between the Light Infantry or Motorized configuration of the units. If Motorized is chosen, then a maximum of two motorized units (plus an HQ) may use Airborne Transport that turn (instead of any GSR restrictions).",
+    "crossRefs": []
+  },
+  {
+    "id": "2.8.5.3",
+    "section": "2.8.5.3",
+    "title": "Switching Configurations",
+    "summary": "Russian Airborne units may switch between Light Infantry and Motorized configurations under specific conditions.",
+    "text": "The player may, at the beginning of any friendly Movement Segment, switch the unit's configuration. It can switch from Motorized to Light Infantry without restriction. It can only switch from Light Infantry to Motorized if it can trace a LOC at that time to any non-Airborne Supply Source. Alternatively, using the limitations above, the unit can switch if its Motorized unit counters are delivered to it via Air, Airmobile, or Airborne Transport.",
+    "crossRefs": []
+  },
+  {
+    "id": "3.0",
+    "section": "3.0",
+    "title": "STANDARD SEQUENCE OF PLAY",
+    "summary": "The game is played in a series of Game Turns, each divided into phases performed in a specific order.",
+    "text": "The game is played in a series of Game Turns (GTs).\n\nEach GT is divided into specific Phases, in which players perform actions in a certain order. During \"Initiative Turns,\" players complete all Phases in the order listed on the play aid. During \"Contested Turns,\" the turn consists of all Phases except those marked as \"Initiative Turn Only\" on the Sequence of Play (SOP).\n\nWhen not specified in the SOP, the Initiative/First Player allocates and/or resolves all actions first in a particular Phase or Segment.\n\nPlayers should follow the SOP explicitly.\n\n**Design Note:** *A fully expanded SOP is provided as a player-aid card.*",
+    "crossRefs": []
+  },
+  {
+    "id": "4.0",
+    "section": "4.0",
+    "title": "WEATHER",
+    "summary": "Weather is determined each game turn on the Weather Track and affects air, airmobile, and ground movement and combat.",
+    "text": "The weather on GT 1 is usually the Initiative (5.0) player's choice. Scenario instructions may alter this.\n\nDuring the Weather Phase of each following GT, the Initiative/First Player rolls one die and refers to the Weather Track to determine the Weather for that GT. Use the Weather Track on the map to indicate the current GT's Weather.",
+    "crossRefs": ["5.0"]
+  },
+  {
+    "id": "4.1",
+    "section": "4.1",
+    "title": "Weather Effects",
+    "summary": "The three weather conditions — Clear, Overcast, and Storm — each have different effects on play.",
+    "text": "Weather has three possible conditions with varying effects on game play.",
+    "crossRefs": []
+  },
+  {
+    "id": "4.1.1",
+    "section": "4.1.1",
+    "title": "Clear",
+    "summary": "Clear weather has no special effects on play.",
+    "text": "- No effects.",
+    "crossRefs": []
+  },
+  {
+    "id": "4.1.2",
+    "section": "4.1.2",
+    "title": "Overcast",
+    "summary": "Overcast weather halves Airmobile Points and may reduce Air Points depending on capability.",
+    "text": "- Halve the Airmobile Points (Am Pts) available to each side for the turn.\n- A side indicated as having Limited All-Weather capability (see GSR) has its Air Points (APs) halved. A side indicated as having No All-Weather capability has its APs quartered.\n- All attack helicopters can perform only a single mission this GT.",
+    "crossRefs": []
+  },
+  {
+    "id": "4.1.3",
+    "section": "4.1.3",
+    "title": "Storm",
+    "summary": "Storm weather prohibits air, airborne, airmobile, and sea movement and severely restricts ground operations.",
+    "text": "- No Air, Airborne, Airmobile, or Sea Movement or Transport is allowed this GT.\n- A side indicated as having Limited All-Weather capability has its APs quartered. A side indicated as having No All-Weather capability receives no APs.\n- All ground movement uses the \"Storm\" column on the Terrain Effects Chart (TEC) to determine movement costs.\n- Units can only Advance After Combat into the hex that the defender vacated.\n- Reinforcements may be affected. See the GSR.\n- All Naval Units must remain in or be moved to a friendly-Controlled Port or a friendly-Controlled Sea Zone.\n- Attack Helicopters cannot perform missions. *Exception: They may Rebase.*\n- Reduces the number of Electronic Detections (21.3) in the Advanced Game.",
+    "crossRefs": ["21.3"]
+  },
+  {
+    "id": "5.0",
+    "section": "5.0",
+    "title": "INITIATIVE",
+    "summary": "Game turns are either Initiative Turns or Contested Turns based on which side has earned the Initiative.",
+    "text": "Game Turns will be one of two types: Initiative Turns or Contested Turns.\n\nDuring the Initiative/Air/Naval Phase of each GT, the players determine which side, if either, will have the \"Initiative.\" The player with the Initiative will move first in each Movement and Combat Phase and will be allowed Exploitation Movement and Combat. The non-Initiative player will be allowed Elite Reaction Movement as well as Reaction Movement and Combat.\n\nWhen neither side has the \"Initiative,\" play the turn as a \"Contested\" Turn. In a Contested Turn, the player who last had the Initiative will move and fight first and is known as the First Player.",
+    "crossRefs": []
+  },
+  {
+    "id": "5.1",
+    "section": "5.1",
+    "title": "Initiative Determination",
+    "summary": "Each scenario dictates starting Initiative; thereafter players compare VP performance each turn to determine Initiative.",
+    "text": "Each scenario's rules dictate which side has the Initiative at the start of the game and for how long they will automatically hold it. For that designated number of turns, all turns are played as Initiative Turns. After those turns, during the Initiative/Air/Naval Phase of each GT, the players examine their performance during the preceding GT to determine whether one side or the other has earned the Initiative or if a Contested Turn will be played instead. The performance conditions and the type of turn that results are listed below:",
+    "crossRefs": []
+  },
+  {
+    "id": "5.1.1",
+    "section": "5.1.1",
+    "title": "Preceding Turn Was an Initiative Turn",
+    "summary": "After an Initiative Turn, players compare VP performance to determine who holds Initiative next turn.",
+    "text": "Some scenarios list the \"Initiative Victory Points (VPs).\" (12.1) This number is the basis for determining which side has the Initiative each turn. Use the marker provided to indicate the required VPs on the Game Information Display.\n\nPlayers measure their performance in VPs gained in the previous turn to determine Initiative for the current turn. If one of the players gained the number of VPs required by the scenario for Initiative, but the other player did not, then the player who gained the requisite VPs becomes the \"Initiative Player\" for the current game turn.\n\nIf neither or both achieved the number of VPs necessary for Initiative in the previous GT, then neither player has the Initiative, and the current turn will be played as a Contested Turn.",
+    "crossRefs": ["12.1"]
+  },
+  {
+    "id": "5.1.2",
+    "section": "5.1.2",
+    "title": "Preceding Turn Was a Contested Turn",
+    "summary": "After a Contested Turn, the side with more VPs gains the Initiative; equal VPs means another Contested Turn.",
+    "text": "Both players' VPs in the previous turn are examined. Whichever side scored the greater number of VPs becomes the new Initiative player and a new Initiative GT commences. If the number of VPs scored was equal, then another Contested Turn commences.",
+    "crossRefs": []
+  },
+  {
+    "id": "6.0",
+    "section": "6.0",
+    "title": "AIR POWER",
+    "summary": "Air Power rules govern the use of Air Points and Attack Helicopters for Combat Support, Escort, and Air Superiority.",
+    "text": "Air Power is a critical factor in modern warfare. Each side depends heavily on air power to strike swiftly at the war's onset, and the balance of air power will shift dramatically within several weeks from onset of conflict. Air power rules govern Air Points, Combat Support, Escort Missions, Air Superiority, Helicopters, and Air Defense Fire.",
+    "crossRefs": []
+  },
+  {
+    "id": "6.1",
+    "section": "6.1",
+    "title": "Air Points",
+    "summary": "Air Points represent each side's available air power for the current game turn, determined by rolling against the Air Point Chart.",
+    "text": "Each side refers to the current game turn column on the Standard Game Air Point Chart and rolls a die. Weather conditions, Airbase control, permanent losses, and the presence of carriers may modify the die roll. The side's modified die roll indicates how many Air Points it receives that GT. Air Points are determined prior to modifying for weather.",
+    "crossRefs": []
+  },
+  {
+    "id": "6.2",
+    "section": "6.2",
+    "title": "Allocation",
+    "summary": "Air Points may be allocated to Ground Combat Support or Escort Missions, with unused points lost at end of turn.",
+    "text": "Air Points may be allocated to Ground Combat Support or Escort Missions. Once expended, the player reduces his AP marker on the Game Record Track. Any unused points at the end of the turn are lost. Air Points allocated to missions may be subject to Air Defense Fire (ADF).",
+    "crossRefs": []
+  },
+  {
+    "id": "6.2.1",
+    "section": "6.2.1",
+    "title": "Combat Support (CS) Missions",
+    "summary": "Air Points allocated to Combat Support modify the combat die roll in favor of the allocating player.",
+    "text": "During any ground combat resolution, each side may allocate Air Points to Combat Support (CS). The attacker allocates first, up to four, followed by the defender who can allocate up to two. Each point that survives ADF modifies the die roll by one in favor of the allocating player. Subtract the attacker's Combat Support from the defender's.",
+    "crossRefs": []
+  },
+  {
+    "id": "6.2.2",
+    "section": "6.2.2",
+    "title": "Escort Missions",
+    "summary": "A player may allocate one or two Air Points to escort Airmobile, Air Transport, Paradrop, or Rebasing missions against ADF.",
+    "text": "A player may allocate one or two Air Points to escort any Airmobile or Air Transport, Paradrop, or Rebasing mission. This escort provides a favorable DRM against ADF. The escort point(s) cannot be attacked by ADF. The unit being escorted, however, receives a +1 DRM per Air Point escorting.\n\nCombat Support missions cannot be escorted.",
+    "crossRefs": []
+  },
+  {
+    "id": "6.3",
+    "section": "6.3",
+    "title": "Air Point Destruction",
+    "summary": "Air Points can be permanently destroyed through various events, reducing each subsequent turn's Air Point total.",
+    "text": "Air Points can be permanently destroyed for various reasons.\n\nDestroyed Air Points are subtracted from each subsequent turn's Air Point total. Each player tracks permanently lost Air Points with the included marker.\n\nWhen comparing Air Points during Air Superiority (AS) determination (6.4), a player never uses a value of zero or below for their Air Point value; use a minimum value of one instead.",
+    "crossRefs": ["6.4"]
+  },
+  {
+    "id": "6.3.1",
+    "section": "6.3.1",
+    "title": "Loss of Airbase",
+    "summary": "When a player loses control of an Airbase hex, roll one die — on 0-2 an enemy Air Point is permanently destroyed.",
+    "text": "When a player successfully takes Control (8.4) of an Airbase (but not Airfield) hex in the enemy country roll one die. On a roll of \"0-2,\" an enemy Air Point is permanently destroyed. On a roll of \"3-9,\" no Air Points are lost.",
+    "crossRefs": ["8.4"]
+  },
+  {
+    "id": "6.3.2",
+    "section": "6.3.2",
+    "title": "Loss from ADF",
+    "summary": "An asterisk (*) result on the ADF Table causes the player to permanently lose one Air Point in addition to other results.",
+    "text": "Air Points may likewise be permanently destroyed by ADF. Whenever a player attempting Combat Support receives an asterisk (*) result on the ADF Table, that player permanently loses one Air Point in addition to the other printed result.",
+    "crossRefs": []
+  },
+  {
+    "id": "6.4",
+    "section": "6.4",
+    "title": "Air Superiority",
+    "summary": "Each game turn, players compare their Air Points to determine the Air Superiority Level for the turn.",
+    "text": "Each GT, during the Initiative/Air/Naval Phase, players determine the Air Superiority Level (ASL) for the turn. To do so, players compare the Air Points they have received for the current GT. Players then refer to the on-map table to determine the ASL for the game turn.\n\nPlayers should place the Air Superiority marker on the appropriate space on the Air Superiority Track to reflect the current turn's ASL. If Contested, simply place the marker in the Contested space.\n\n*Example: It's GT 1 of a scenario, the Allied player rolls a \"4\" and cross-references that to see that he receives 7 APs. The non-Allied player rolls a \"6\" and receives 3 APs. Comparing these to the chart, we find that the Allied player has earned \"Advantage\" for having 4-7 more Air Points.*",
+    "crossRefs": []
+  },
+  {
+    "id": "6.5",
+    "section": "6.5",
+    "title": "Helicopters",
+    "summary": "Attack Helicopters are flexible, powerful weapons represented explicitly in the game rather than abstracted into the Air Point system.",
+    "text": "Attack Helicopters are flexible, powerful weapons on the modern battlefield and are integral to every nation's arsenal and battle plan. As such, they are modeled explicitly in this game rather than abstracted into the point system.",
+    "crossRefs": []
+  },
+  {
+    "id": "6.5.1",
+    "section": "6.5.1",
+    "title": "Basing",
+    "summary": "Attack Helicopters can base at any Airbase, Airfield, Urban, City, or Beachhead hex that does not contain an Airbase/Airfield.",
+    "text": "Attack Helicopters can base at any Airbase or Airfield. In addition, they can base in any Urban, City, or Beachhead hex that does not contain an Airbase/Airfield. Helicopters always begin and end a mission on their current base hex unless they are Rebasing.\n\n**6.5.1.1 Basing Limits:** Each Airfield, Beachhead, City, or Urban hex can base one Helicopter unit. Each Airbase can base up to three Helicopter units. USMC Attack Helicopters can base on AMPHs (6.5.5).\n\n*Exception: Units can over-stack if Rebasing because of Base Overrun (6.5.1.3), but they must Rebase again in the next GT.*\n\n**6.5.1.2 Rebasing:** A Helicopter unit may Rebase during a Friendly Movement Segment by moving up to twice its printed Range and may be subject to ADF (6.6). A unit that rebases cannot have performed any mission (6.5.2) during the game turn; once Rebased rotate the Attack Helicopter 180°, as mentioned below, to indicate that it can conduct no missions for the current turn.\n\n**6.5.1.3 Base Overrun:** If an enemy combat unit (2.2.2) enters the hex, the Helicopter may immediately Rebase regardless of how many missions it has conducted or the current Weather conditions; however, it must undergo ADF (6.6) (including detection in the Advanced Game). Ignore Abort results. If the unit cannot reach a new Airbase/Airfield, it is eliminated instead.",
+    "crossRefs": ["6.5.5", "6.5.1.3", "6.5.2", "6.6", "2.2.2"]
+  },
+  {
+    "id": "6.5.2",
+    "section": "6.5.2",
+    "title": "Limits on Use",
+    "summary": "Attack Helicopters can perform up to two missions per game turn but no more than one per segment.",
+    "text": "Attack Helicopters can perform two missions per GT, but not more than one in any segment. Rotate the helicopter 90° in its basing hex after each mission. An Attack Helicopter that is rotated 180° is not eligible to perform a mission. During the Reorganization Phase of each game turn, rotate all Attack Helicopters back to their normal orientation. Attack Helicopters cannot provide Combat Support in High Mountain.",
+    "crossRefs": []
+  },
+  {
+    "id": "6.5.3",
+    "section": "6.5.3",
+    "title": "Combat Support Missions",
+    "summary": "Helicopters may perform Combat Support Missions with the same effects as Air Points for any single combat.",
+    "text": "Both sides may use Helicopters to perform Combat Support Missions (with the same effects as Air Points (6.1)) for any single combat by designating, rotating, and tracing a path of hexes that is within range from the Attack Helicopter to the defending hex.\n\nDuring combat resolution, the attacker can allocate up to two helicopters followed by the defender who can allocate one. If the Helicopters survive ADF (6.6), they provide favorable DRMs equal to their Combat Support Value.\n\n**Play Note:** *You don't actually have to move the unit to the hex, just point, allocate, rotate, and roll!*",
+    "crossRefs": ["6.1", "6.6"]
+  },
+  {
+    "id": "6.5.4",
+    "section": "6.5.4",
+    "title": "Loss of Airbase/Airfield, Damage, & Repair",
+    "summary": "When an enemy takes control of a helicopter base hex, roll one die per Helicopter to determine losses.",
+    "text": "When an enemy takes control of a hex where helicopters are based, the player taking control rolls one die per enemy Helicopter in the hex. See the Loss of Airbase/Airfield chart.\n\nIn the Standard Game, helicopters cannot regain lost steps or be reconstituted once destroyed. They cannot be attacked in ground combat.\n\n**Play Note:** *Players can choose to Rebase immediately per Base Overrun, or wait for Control to change. The latter is more dangerous, but might let you use that helo one or two times before being forced to Rebase.*",
+    "crossRefs": []
+  },
+  {
+    "id": "6.5.5",
+    "section": "6.5.5",
+    "title": "U.S. Marine Corps Helicopters",
+    "summary": "USMC Attack Helicopters may base on Amphibious Naval Units at sea and perform missions from specific locations.",
+    "text": "USMC Attack Helicopters function as other Attack Helicopters except that they can be based at sea. Marine Helicopters can base with a friendly Amphibious Naval Unit (AMPH). Should the AMPH move, the Helicopter unit automatically moves with it (without being considered as having flown a mission). Marine Attack Helicopters can only perform missions when the AMPH unit is located in an All-Sea hex, Port, or Inshore Box. They may provide Combat Support (and, in the Advanced Game, Helicopter Strikes) from an Inshore Box to it's associated non-Operational Map Land Areas.\n\nNo more than one Marine Helicopter can be based on a single AMPH unit. A Marine Helicopter may Rebase to an eligible hex (6.5.1) in the same manner as other Attack Helicopters.",
+    "crossRefs": ["6.5.1"]
+  },
+  {
+    "id": "6.5.6",
+    "section": "6.5.6",
+    "title": "Helicopters and Sea Transport",
+    "summary": "Helicopters may be moved via Sea Transport from a Port to an Airbase/Urban/City hex, after which they are rotated 180° and cannot fly missions that turn.",
+    "text": "In some cases, a player may wish to use Sea Transport to move an Attack Helicopter from a Port in a Holding Box to an Airbase/Airfield/Urban/City hex on the map. For this purpose, Helicopters are ½ SP. Move the Helicopter from the Port to any eligible hex (6.5.1). It cannot have conducted any missions that GT, and is rotated 180° (6.5.2) after moving in this manner.",
+    "crossRefs": ["6.5.1", "6.5.2"]
+  },
+  {
+    "id": "6.6",
+    "section": "6.6",
+    "title": "Air Defense Fire (ADF)",
+    "summary": "ADF is conducted against each enemy air mission using the current Air Superiority Level column on the ADF Table.",
+    "text": "Players conduct ADF once against each enemy air mission. For purposes of ADF, a mission is defined as:\n\n- All Air Points allocated to a Combat Support (6.2.1).\n- Each individual Attack Helicopter allocated to a Combat Support (6.2.1) or Rebasing (6.5.1).\n- Each stack that is using Air Transport (8.5.2) or Airmobile Movement (8.5.4) or Airborne Movement (8.5.3) that begins and ends its movement together.\n\nAny unit that begins Airmobile Movement, Rebasing, or a Combat Support Mission in an enemy country or an EZOC (8.2) undergoes an additional ADF in its origination hex before it is allowed to move.\n\nWhen the Air Superiority Level (6.4) is in a player's favor or Contested, air missions are immune to ADF as long as that player's entire mission is conducted within that player's home or allied country and neither the origination nor destination hex is in or adjacent to a hex containing an enemy combat unit.\n\n**Play Note:** *If an Air or Airmobile stack begins together but ends in different hexes, then they are separate missions. If ADF destroys an Airmobile Point being used to transport two units, the second unit may still continue its mission (but the Airmobile Point is still destroyed).*",
+    "crossRefs": ["6.2.1", "6.4", "6.5.1", "8.2", "8.5.2", "8.5.3", "8.5.4"]
+  },
+  {
+    "id": "6.6.1",
+    "section": "6.6.1",
+    "title": "Resolving ADF",
+    "summary": "To resolve ADF, locate the current Air Superiority Level column on the ADF Table, roll one die, and apply the result.",
+    "text": "The player using ADF locates the column on the ADF Table that represents the current Air Superiority Level, rolls one die, and reads down that column to find the result.\n\nResults on the ADF Table vary depending upon the type of mission. Players should keep in mind that varying DRMs may apply with all results indicated in (6.6.1.1) applied immediately.\n\n**6.6.1.1 Results:**\n\n**–** indicates \"No effect.\"\n\n**Abort** indicates that the moving unit must return to the hex from which it began and cannot move again for the remainder of the Movement Segment. Aborted Airmobile Points are spent. Abort has no effect on Combat Support Missions.\n\n**(–x)** indicates the number of Combat Support Points that are expended and unable to participate in Combat Support (any remaining Air Points can be used for Combat Support, however). This has no effect on Transport/Airmobile/Paradrop Missions.\n\n**\\*** included in the result signifies that, in addition to the designated result, air assets are *permanently* lost. For Transport Missions, the transported ground unit must absorb a single step loss. Furthermore, if an Airmobile Point is providing the transport capability, one such point is permanently lost. For Combat Support Missions/Rebasing, either a single Air Point is permanently lost or an Attack Helicopter loses a step — depending on the target of the ADF (remember, Air Points and Attack Helicopters are attacked separately by ADF).",
+    "crossRefs": []
+  },
+  {
+    "id": "7.0",
+    "section": "7.0",
+    "title": "SEA CONTROL AND NAVAL RULES",
+    "summary": "Naval rules govern Sea Zone control, Naval Unit movement, combat support, submarine threat, and mine warfare.",
+    "text": "The U.S., in particular, is heavily dependent upon sea power to project force in many areas of the world. While most nations do not possess the same capabilities, every coastal nation has some level of sea power projection capability in each of the major areas concerning naval operations: beach, littoral, and deep water.\n\nIn game terms, the naval aspects of this game have been greatly abstracted. The only essential information to determine from the sea battle is \"Can you move troops and supplies to and from ports and beachheads?\" Thus, sea control die rolls determine control.",
+    "crossRefs": []
+  },
+  {
+    "id": "7.1",
+    "section": "7.1",
+    "title": "Sea Zone Boxes",
+    "summary": "Sea Zones contain At Sea and Inshore Boxes; each box's control status is determined separately and affects naval capabilities.",
+    "text": "Sea Zones generally contain two boxes, an At Sea and an Inshore Box (8.5.6.2). Where there is no At Sea Box, the Sea Zone itself serves as the At Sea Box. The status of each Box is determined separately and affects certain game actions and the capabilities of naval Units. Control only changes during the Air/Naval Phase.",
+    "crossRefs": ["8.5.6.2"]
+  },
+  {
+    "id": "7.2",
+    "section": "7.2",
+    "title": "Control",
+    "summary": "Players check Sea Zone Box control once per eligible Box during the Initiative/Air/Naval Phase; control changes trigger Naval Unit retreats.",
+    "text": "Players check the status, once per eligible Box, on Clear and Overcast turns during the Initiative/Air/Naval Phase to determine who controls the respective At Sea and Inshore Boxes. When control of an At Sea or Inshore Box changes, enemy Naval Units in the Box (or an associated All-Sea hex of the Inshore Box) must Retreat (7.2.3).",
+    "crossRefs": ["7.2.3"]
+  },
+  {
+    "id": "7.2.1",
+    "section": "7.2.1",
+    "title": "Inshore/At Sea Box Control",
+    "summary": "The Initiative/First Player determines control for each Inshore Box following a specific sequence of die roll checks.",
+    "text": "The Initiative/First Player determines control for each Inshore Box:\n\n1. Check if the presence of Naval Units has an effect (7.2.2).\n2. If the At Sea Box is contested (not controlled by either player), do not roll for the Inshore Box.\n3. If a player controls the At Sea Box and also controls the Inshore Box, do not roll for the Inshore Box.\n4. If a player controls the At Sea Box and the Inshore Box is contested, roll for the Inshore Box.\n5. If a player controls the At Sea Box and the Inshore Box is controlled by the other player, roll for the Inshore Box.\n\nThen, the player checks for control of certain At Sea Boxes as outlined in the GSR. If none are specified, then check all. When a roll is required, use any applicable modifiers, cross-reference the results on the Sea Control Table.\n\nUse the appropriate marker to denote control. The absence of a marker denotes a Contested area.\n\nControl of an Inshore Box also indicates control of All-Sea hexes associated with it.",
+    "crossRefs": ["7.2.2"]
+  },
+  {
+    "id": "7.2.2",
+    "section": "7.2.2",
+    "title": "Naval Unit Effects on Sea Control",
+    "summary": "CVN BGs, CV BGs, and SAGs affect Sea Control rolls as DRMs based on their location in At Sea or Inshore Boxes.",
+    "text": "Regardless of other Sea Control rules (Series or GSR), CVN BGs, CV BGs, and SAGs affect Sea Control as follows.\n\n- If these types of units from both sides occupy an Inshore or At Sea Box, that Box is Contested.\n- If a Box is Controlled or Contested and it contains these types of Naval Units only from the opposing side or one side, respectively, always roll for Control. However, only a side with Naval Units can gain Control; otherwise, it is Contested.\n- These types of friendly and enemy Naval Units provide a DRM for both the At Sea Box and its associated Inshore Box regardless of which location they occupy. Naval units in an all-sea hex on the Operational Map provide a DRM for the associated Inshore Box. Naval Units in Port do not provide a DRM.\n\n*Example: A U.S. CVN and SAG in the Taiwan Straits Inshore Box provide a +2 and +1 DRM respectively for a roll on either the Inshore Box or the Taiwan Straits At Sea Box.*",
+    "crossRefs": []
+  },
+  {
+    "id": "7.2.3",
+    "section": "7.2.3",
+    "title": "Retreat",
+    "summary": "Naval Units forced to retreat by a control change must move to a friendly-controlled or contested location following specific priority rules.",
+    "text": "From an At Sea Box, Naval Units may retreat to the connected Inshore Box or adjacent At Sea or Holding Box if friendly-controlled or Contested. If in an Inshore box, they may retreat to the associated At Sea Box if friendly-controlled or Contested, adjacent Holding Box, an associated All-Sea hex at least 11 hexes from an enemy Naval Unit, or a friendly Port in an associated Coastal hex. If in an All-Sea hex or Port, they may retreat to the Inshore Box if friendly-controlled or Contested, another All-Sea hex at least 11 hexes from any enemy Naval Unit, or to a friendly Port associated to the Inshore Box. Units that cannot retreat are eliminated. Place it on the Game Turn track four turns ahead; it enters as a reinforcement during that turn's Reinforcement Phase. Retreats do not require Contested Sea Movement rolls (8.5.6.4.1).",
+    "crossRefs": ["8.5.6.4.1"]
+  },
+  {
+    "id": "7.3",
+    "section": "7.3",
+    "title": "Naval Units",
+    "summary": "There are three main types of Naval Units: Amphibious Units, Surface Action Groups, and Aircraft Carriers.",
+    "text": "Naval units include Amphibious Units (AMPHs), Surface Action Groups (SAGs), and Aircraft Carrier Battle Groups (CV/CVN BGs).",
+    "crossRefs": []
+  },
+  {
+    "id": "7.3.1",
+    "section": "7.3.1",
+    "title": "Amphibious Units",
+    "summary": "AMPH units provide three functions: troop movement for Amphibious Assault, Combat Support, and Marine Airmobile Movement.",
+    "text": "These units provide three basic functions: troop movement for Amphibious Assault (8.5.8), Combat Support, and Marine Airmobile Movement (8.5.5).\n\n**7.3.1.1 AMPH Conversion:** Some AMPHs show a SAG (7.3.3) unit on the reverse side. These may, during any Friendly Movement Segment in which no units are embarked, flip to their SAG side. Once flipped, they cannot return to their AMPH side.",
+    "crossRefs": ["8.5.8", "8.5.5", "7.3.3"]
+  },
+  {
+    "id": "7.3.2",
+    "section": "7.3.2",
+    "title": "Surface Action Group (SAG)",
+    "summary": "Surface Action Groups exist to provide Combat Support and assist in establishing Sea Control.",
+    "text": "Surface Action Groups exist to provide Combat Support and assist in establishing Sea Control.",
+    "crossRefs": []
+  },
+  {
+    "id": "7.3.3",
+    "section": "7.3.3",
+    "title": "Aircraft Carriers and Carrier Air Wings",
+    "summary": "In the Standard Game, Aircraft Carrier Battle Groups provide Combat Support, Air Points, and Air Points from At Sea Boxes.",
+    "text": "In the Standard Game, Aircraft Carrier Battle Groups provide three functions:\n\n1. Each CV/CVN provides Combat Support in the same manner as AMPHs and SAGs (representing units of the screen breaking off to perform shore bombardment).\n2. Each CV/CVN that is in a friendly-controlled Inshore Box or All-Sea hex during the Initiative/Air/Naval Phase adds Air Points (+2 if U.S./+1 otherwise) to the Air Point total.\n3. Each U.S. CVN in an At Sea Box or a Contested Inshore Box provides +1 Air Point.\n\nThe above may be modified by Game Specific Rules.",
+    "crossRefs": []
+  },
+  {
+    "id": "7.3.4",
+    "section": "7.3.4",
+    "title": "Naval Unit Losses",
+    "summary": "All Naval Units are immune from losses.",
+    "text": "All Naval Units are immune from losses.",
+    "crossRefs": []
+  },
+  {
+    "id": "7.3.5",
+    "section": "7.3.5",
+    "title": "Naval Unit Stacking",
+    "summary": "Any number of Naval Units can stack in At Sea or Inshore Boxes or Ports, but only one Naval Unit per All-Sea hex.",
+    "text": "Any number of Naval Units on either side can be in an At Sea or Inshore Box or Port. Only one Naval Unit can be in each All-Sea hex.",
+    "crossRefs": []
+  },
+  {
+    "id": "7.3.6",
+    "section": "7.3.6",
+    "title": "Naval Unit Combat Support",
+    "summary": "Naval Units can provide Combat Support once per Combat Segment from All-Sea hexes or Inshore Boxes if no enemy Naval Units are nearby.",
+    "text": "Naval Units possess a combat value and range for providing Combat Support (9.6.1). They can provide this only from an All-Sea hex or from an Inshore Box to its associated non-Operational Map Land Areas. They can provide support once per Combat Segment if there are no enemy Naval Units in an All-Sea hex within 10 hexes or, when applicable, in the same Inshore Box.",
+    "crossRefs": ["9.6.1"]
+  },
+  {
+    "id": "7.4",
+    "section": "7.4",
+    "title": "Submarine Threat and Anti-Submarine Warfare (ASW) Levels",
+    "summary": "Submarine Threat and ASW Levels represent the impact of submarines and counter-submarine assets on naval and sea transport operations.",
+    "text": "The Submarine Threat, ASW Level, and Mine rules below are for use in both the Standard and Advanced Games. The Advanced Naval rules allow players to launch air and cruise missile strikes against naval units for use in the Advanced Game, but we believe that it represents a happy medium of detail vs. effect.",
+    "crossRefs": []
+  },
+  {
+    "id": "7.4.1",
+    "section": "7.4.1",
+    "title": "Submarine Threat Level",
+    "summary": "The Submarine Threat Level represents the player's submarines' impact on enemy Naval and Sea Transport Movement and Control attempts.",
+    "text": "The Submarine Threat Level represents the player's submarines and their impact on the Naval and Sea Transport Movement of their opponent as well as Control attempts. The level cannot go below \"0\" or exceed the maximum on the track.",
+    "crossRefs": []
+  },
+  {
+    "id": "7.4.2",
+    "section": "7.4.2",
+    "title": "ASW Level",
+    "summary": "The Anti-Submarine Warfare Level represents the player's ASW assets in countering enemy Submarine Threat and Naval and Sea Transport Movement.",
+    "text": "The Anti-Submarine Warfare (ASW) Level represents the capabilities of the player's ASW assets in counter-acting the Submarine Threat Level and assisting in Naval and Sea Transport Movement as well as Control attempts. The Level cannot go below \"0\" or exceed the maximum on the track.\n\n**Design Note:** *In general, the non-Allied player will have a Submarine Threat Level and the Allied player will have an ASW Level.*",
+    "crossRefs": []
+  },
+  {
+    "id": "7.4.3",
+    "section": "7.4.3",
+    "title": "Changing the Levels",
+    "summary": "Specific game events immediately alter both the Submarine Threat and ASW Levels.",
+    "text": "The following events immediately alter both the Submarine Threat and ASW Levels as indicated.\n\n- +1 each time a friendly Naval Unit arrives as a Reinforcement.\n- –1 each time a friendly Naval Unit is forced to retreat from an At Sea or Inshore Box [Standard Game].\n- –1 each time a friendly Naval Unit receives an \"X\" result [Advanced Game].\n- –1 each time an originally controlled, friendly Port is captured or incurs a Destroyed result [Advanced Game].\n- +1 each time an originally controlled, friendly Port is fully repaired [Advanced Game].\n\n**7.4.3.1 Changing the Submarine Threat Level:** Once the Level reaches \"0,\" it will no longer increase.\n\n**7.4.3.2 Changing the ASW Level:** Even if the Level reaches \"0,\" it can still increase again.",
+    "crossRefs": []
+  },
+  {
+    "id": "7.5",
+    "section": "7.5",
+    "title": "Naval Mine Warfare",
+    "summary": "Mines are an area denial weapon that can be placed in All-Sea or coastal hexes to deny enemy naval assets and invading beaches.",
+    "text": "Mines are a form of area denial weapon used to deter naval assets from using Ports and/or invading Beaches. The number of Mine markers in the counter mix is the absolute limit that can be placed during the game. If all markers are on the map or removed, then no new markers can be placed although the Density may still be increased. Mine markers contain a number representing a measure of the effectiveness of their belt.",
+    "crossRefs": []
+  },
+  {
+    "id": "7.5.1",
+    "section": "7.5.1",
+    "title": "Mine Laying",
+    "summary": "Mine markers can be laid at Density 1 or 2 via Naval Unit Mine Laying or by reducing the Submarine Threat Level.",
+    "text": "Mine Laying is conducted using multiple methods. Mine markers exist in two Density Levels, \"1\" and \"2.\" No more than one marker can be placed per hex, but a Density \"1\" marker can be increased to a Density \"2.\" Mine markers can be placed in any All-Sea hex or coastal hex by one of the following methods:",
+    "crossRefs": []
+  },
+  {
+    "id": "7.5.1.1",
+    "section": "7.5.1.1",
+    "title": "Naval Unit Mine Laying",
+    "summary": "Instead of moving, a Naval Unit may place or increase a Density 1 Mine marker in its hex or an adjacent hex.",
+    "text": "Instead of moving, a Naval Unit may place a single Density \"1\" Mine marker (or increase a \"1\" to a \"2\" in its own or an adjacent hex during any eligible Movement Phase. The Naval Unit that laid the mines can freely exit the Mine marker Area of Effect (7.5.2) without making a Contested Sea Movement roll (8.5.6.4.1).",
+    "crossRefs": ["7.5.2", "8.5.6.4.1"]
+  },
+  {
+    "id": "7.5.1.2",
+    "section": "7.5.1.2",
+    "title": "Submarine Mine Laying",
+    "summary": "A player may voluntarily reduce the Submarine Threat Level by one to place or increase a Mine marker during any friendly Movement Phase.",
+    "text": "A player may voluntarily subtract one from his Submarine Threat Level to place or increase a Mine marker in any eligible location during any friendly Movement Phase. The player cannot place the maker if it would reduce the Submarine Threat Level below one.",
+    "crossRefs": []
+  },
+  {
+    "id": "7.5.2",
+    "section": "7.5.2",
+    "title": "Mine Clearing",
+    "summary": "Enemy Mine markers may be cleared during the Mine Clearance Step of the Air/Naval Phase if the Inshore Box is friendly-controlled.",
+    "text": "Enemy Mine markers may be cleared during the Mine Clearance Step of the Air/Naval Phase if the associated Inshore Box is friendly-controlled. Each player can attempt to clear up to two separate Mine markers during the Mine Clearance Step. Roll separately for each attempt. On a roll of 0-3, reduce the Mine marker Density by one, i.e., from two to one or remove a one; if removed, it is removed from the game. Modify the die roll by \"–2\" if a friendly Naval Unit is present in the Area of Effect.",
+    "crossRefs": []
+  },
+  {
+    "id": "7.5.3",
+    "section": "7.5.3",
+    "title": "Mine Marker Area of Effect",
+    "summary": "Mine markers in All-Sea hexes affect only that hex; in coastal hexes they affect that hex and all adjacent All-Sea hexes.",
+    "text": "When placed in an All-Sea hex, they affect only that hex. When placed in a coastal hex they affect that hex and all adjacent All-Sea hexes. Mine markers modify the Contested Sea Movement (8.5.6.4.1) die roll if a Naval Unit or unit using Sea Transport moves and attempts to enter or leave an Area of Effect. Make a single roll when moving from one hex to another within the same Area of Effect. Overlapping Areas of Effect are not cumulative, and are considered, where they overlap, to be the same Area of Effect. They do not affect Retreats.",
+    "crossRefs": ["8.5.6.4.1"]
+  }
+]

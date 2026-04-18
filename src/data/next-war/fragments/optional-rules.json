@@ -1,0 +1,18 @@
+[
+  {
+    "id": "trading-space-for-time",
+    "label": "Trading Space for Time",
+    "section": "9.7.1",
+    "description": "Both players may agree to use the following alternate combat results rules. These modify 9.7.1 in the Series Rules. When conducting combat on the Operational Map, rather than taking step losses, a defending stack may always choose to retreat one additional hex instead of taking a step loss. Exception: The defender must take at least one step loss from the lead unit if the final odds column was 11, 12, or 13. For each such step loss taken as a retreat hex, the defending units must retreat one additional hex. If a defender chooses to exchange any step losses in this manner, all defending units must retreat regardless of terrain and may not attempt to ignore the retreat result [9.8.4]. If a defender chooses to convert step losses into retreat hexes, the attacker reduces his losses in the combat by one (to a minimum of zero). This is in lieu of the Excess Combat Losses [9.7.1.1] reduction. A defender cannot choose to Voluntarily Ignore a Retreat [9.8.4] when Trading Space for Time. Design Note: This rule has ramifications on scoring VP in many games, as most are calibrated with the idea that eliminating enemy units will provide VP. You may just have to determine who won via an alternate method.",
+    "source": "standard",
+    "default": false
+  },
+  {
+    "id": "air-sortie-reduction-for-surprise",
+    "label": "Air Sortie Reduction for Surprise (Next War: Poland)",
+    "section": "OR 2.0",
+    "description": "In other games in the series, the level of surprise affected sortie rates, i.e., available air units. To recreate for this game, the following is suggested for non-US bombers (B-1, B-2, B-52): Strategic Surprise - Baltic Air Policing, half of US & Polish (round up) in Ready; all others in Flown. Tactical Surprise - Baltic Air Policing and Polish in Ready, & half of all others in Ready (round up); others in Flown. Extended Buildup - All in Ready.",
+    "source": "advanced",
+    "default": false
+  }
+]

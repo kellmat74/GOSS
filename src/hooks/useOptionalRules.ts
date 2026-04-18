@@ -19,10 +19,12 @@ export function useOptionalRules(
   moduleId: string | null,
   baseOptionalRules: OptionalRuleEntry[],
   supplements: SupplementConfig[],
+  moduleOptionalRules?: OptionalRuleEntry[],
 ) {
-  // Flatten all available optional rules (base + all supplements)
+  // Flatten all available optional rules (base + module-specific + all supplements)
   const allRules: OptionalRuleEntry[] = [
     ...baseOptionalRules,
+    ...(moduleOptionalRules ?? []),
     ...supplements.flatMap((s) => s.optionalRules ?? []),
   ];
 

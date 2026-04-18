@@ -21,7 +21,7 @@ import { mergeLearn } from "./utils/mergeLearn";
 import { getVisibleGames, getGameById } from "./data/registry";
 import type { Phase, RuleEntry, SequenceOverlay } from "./types/goss";
 import type { LearnData, LearnOverlay } from "./types/learn";
-import type { GameSystemConfig, ModuleConfig, ComplexityLevel } from "./types/platform";
+import type { GameSystemConfig, ComplexityLevel } from "./types/platform";
 
 type View = "sop" | "flowchart" | "rules" | "ask" | "learn" | "options" | "info";
 
@@ -251,6 +251,8 @@ function App() {
     [data?.baseRules, data?.moduleRules],
   );
 
+  const currentModule = gameConfig?.modules.find((m) => m.id === moduleId) ?? null;
+
   const {
     activeOptions, allRules: allOptionalRules, toggleOption, resetToDefaults,
   } = useOptionalRules(
@@ -258,6 +260,7 @@ function App() {
     moduleId,
     gameConfig?.optionalRules ?? [],
     gameConfig?.supplements ?? [],
+    currentModule?.optionalRules,
   );
 
   const phases = useMemo(
@@ -292,7 +295,6 @@ function App() {
     goToPhase(phaseIndex, subPhaseIndex, segmentIndex);
   };
 
-  const currentModule: ModuleConfig | undefined = gameConfig?.modules.find((m) => m.id === moduleId);
   const scenarioLabel = scenario
     ? (currentModule?.scenarios.find((s) => s.id === scenario)?.label ?? "All Scenarios")
     : "All Scenarios";

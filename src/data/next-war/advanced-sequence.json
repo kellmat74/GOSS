@@ -1,1 +1,197 @@
-{ "phases": [] }
+{
+  "phases": [
+    {
+      "id": "weather-phase",
+      "name": "1. Weather Phase",
+      "ruleRef": "4.0",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Determine weather for the game turn. On Game Turn 1 the Initiative player chooses weather; all other turns roll one die.",
+      "content": "1. Roll one die to determine this turn's weather (except Game Turn 1; Initiative player may choose weather). **(4.0)**\n2. If the weather is \"Storm,\" move all Naval units to the At Sea Box (if friendly) or a friendly port of their Sea Zone, and move all non-All Weather air units from the Ready Box to the Flown Box of their base. **(4.1)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "initiative-phase",
+      "name": "2. Initiative Phase",
+      "ruleRef": "5.1",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Determine which player has Initiative and whether the turn is a Contested Game Turn. Both players reset their VPs This Turn marker.",
+      "content": "1. Determine if either Player has the Initiative for the game turn or whether it is a \"Contested\" Game Turn. Both players move their respective \"VPs This Turn\" marker to zero. **(5.1)**\n2. UN Resolution Die Roll (Not on Game Turn 1). **(28.0)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "electronic-detection-phase",
+      "name": "3. Electronic Detection Phase",
+      "ruleRef": "21.3",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Both sides alternately roll on the Electronic Detection Table against eligible enemy HQs, Artillery, and other targets.",
+      "content": "1. Both sides, alternating, roll on the Electronic Detection Table against specific, eligible enemy HQs, Artillery, and other targets as specified by GSRs. **(21.3)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "first-sof-phase",
+      "name": "4. First Special Operations Forces Phase",
+      "ruleRef": "20.1",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Initiative Turn Only. The Initiative Player allocates and resolves SOF missions.",
+      "content": "*(Initiative Turn Only)*\n\n1. The Initiative Player allocates and resolves SOF missions, rolls for SOF Marker Survival, and places markers in the Used or Eliminated boxes appropriately. **(20.1.2 \u2013 20.2.4)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "air-naval-phase",
+      "name": "5. Air/Naval Phase",
+      "ruleRef": "22.6",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Conduct Air Superiority Sortie and Combat Resolution steps, determine Air Superiority level, check for At Sea Box and Mine Clearance.",
+      "content": "1. **Air Superiority Sortie Step** (do not apply a, b, and c to Basing Boxes under Lack of Runways).\n   a. The owning player must move half the number (rounded down to a minimum of 1) of air units into the Flown box for air units based in a Basing Box, equal to the number of Airbases/Airfields with Strike 1 and 2 markers on them (not Under Repair). **(22.6.1)**\n   b. The opposing player moves half the number (rounded down to a minimum of 1) of air units into the Flown box from air units based in a Basing Box **(22.6.1)** equal to the number of Airbases/Airfields captured or destroyed in the previous turn and this turn's First SOF Phase.\n   c. Reset each side's Airbase Destroyed/Captured This Turn markers to 0.\n   d. Both players place air units in the Air Superiority Box; player with AWACs Advantage last. **(22.6.1)**\n2. **Air Superiority Combat Resolution Step.** **(22.6.2)**\n3. Determine this Turn's Air Superiority level. **(22.6.2 #5)**\n4. Update AWACS Advantage. **(22.6.2 #6)**\n5. During non-\"Storm\" turns, check for control of each Inshore Box associated with a controlled At Sea Box. **(7.2.1/7.2.2)**\n6. During non-\"Storm\" turns, check for control of eligible At Sea Boxes. **(7.2.1/7.2.2)**\n7. Both sides roll for Detection for all Naval units not in Port (not on GT 1).\n8. During non-Storm turns, both sides can attempt Mine Clearance on two separate Mine markers. **(7.5.2)** (not on GT1).",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "second-sof-phase",
+      "name": "6. Second Special Operations Forces Phase",
+      "ruleRef": "20.1",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "If a Contested Turn, both players alternately allocate SOF Missions. Otherwise, the non-Initiative player allocates SOF Missions.",
+      "content": "1. If a \"Contested\" Turn, both players alternating (non-Allied first), or else, the non-Initiative player, allocates SOF Missions, resolves missions, rolls for SOF Marker Survival, and places markers in the Used or Eliminated boxes appropriately. **(20.1.2 \u2013 20.2.4)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "first-strike-phase",
+      "name": "7. First Strike Phase",
+      "ruleRef": "23.1",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Both players may conduct Strikes, working through a detailed sequence of allocation and resolution steps.",
+      "content": "Both players may conduct Strikes:\n\na. Alternating, Initiative/First player first, allocate Nuclear Weapons markers (if available). Then resolve. [Only available by GSR.]\nb. Both players allocate all Missile, Naval SSM, and Cruise Missile Strikes. Then Resolve, non-Allied first. **(26.1)**\nc. Non-Allied allocates all Air Strikes, helicopter Strikes, and escorts. **(23.1, 23.2, 23.4.2)**\nd. Allies allocate Wild Weasel Strikes, air Strikes, helicopter Strikes, and escorts. **(23.1-3, 23.4.2)**\ne. Non-Allied attempts detection of Wild Weasel Strikes, then may attack those it early detects (ED) with interceptors. **(23.2, 24.0)**\nf. Allies resolve Wild Weasel Strikes including ADF. **(23.3)**\ng. Non-Allied attempts detection of all other Allied Strikes, then may attack those it early detects (ED) with interceptors. **(23.2, 24.0)**\nh. Allies resolve Strikes including ADF. **(23.4, 24.0)**\ni. Allies attempt detection of all non-Allied Strikes, then may attack those it early detects (ED) with interceptors. **(23.2, 24.0)**\nj. Non-Allied resolves Strikes including ADF. **(23.4, 24.0)**\nk. Conduct Naval Bombardment (alternating, non-Allied first). **(17.5)**\nl. Roll for Collateral Damage. **(27.7.4)**\nm. Each player alternates allocating and resolving HQ Strikes one at a time. Non-Allied first. **(18.2.2)**\nn. Each player alternates allocating and resolving Arty Strikes one at a time. Non-Allied first. **(18.6)**\no. During non-\"Storm\" turns, each side may conduct one Aerial Mining Mission, non-Allied first. **(23.6)** NWI: Non-Allied only.",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "first-supply-phase",
+      "name": "8. First Supply Phase",
+      "ruleRef": "19.0",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Not on Game Turn 1. Remove Out of Supply markers, check for unsupplied units, and expend Supply Points for resupply and depot management.",
+      "content": "*(Not on Game Turn 1)*\n\n1. Remove Out of Supply markers from units that are no longer out of supply. **(19.0)**\n2. Check for unsupplied units. Place an Out of Supply marker on any unit that is unsupplied. **(19.0, 19.5)**\n3. Expend one Supply Point to place a new MSU on top of a Depot or Urban hex. Remove a depot and place two new MSUs at no cost. Flip an MSU to its Supply Depot side at a cost of two Supply Points. **(19.4)**\n4. Both sides may expend Supply Points to attempt to resupply unsupplied units or HQs. **(19.6)**\n5. Convert Supply Depots/MSUs to Supply Points. **(19.4)**\n6. Spend four supply points to place a new Supply Depot. **(19.4)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "initiative-movement-combat-phase",
+      "name": "9. Initiative Movement and Combat Phase",
+      "ruleRef": "8.0",
+      "timing": "every-turn",
+      "player": "phasing",
+      "description": "Initiative Turn Only. The Initiative Player moves ground units and resolves combat, followed by Elite Reaction, Exploitation, and Reaction segments for both sides.",
+      "content": "*(Initiative Turn Only)*\n\n1. **Movement Segment:** The Initiative Player moves any/all of his ground units up to the extent of their movement allowance. Air, Airmobile, and Sea Movement and Transport are allowed. **(8.0)**\\*\n2. **Combat Segment:** The Initiative Player declares and resolves all Combat (one combat at a time). **(9.0)**\n   a. Declare Attacks (one at a time). **(9.2.1)**\n      1. Compute Initial Odds. **(9.2.2)**\n      2. Determine Column Shifts. **(9.2.3)**\n      3. Both sides allocate Attack Helicopters, Air Units, and Naval Units to Combat Support Missions (attacker first). **(9.2.4)**\n      4. Resolve all Detection attempts and ADF. **(24.0)**\n      5. Determine DRMs. **(9.6)**\n      6. Roll die and resolve combat. **(9.2.6)**\n      7. Allocate losses. **(9.2.7)**\n      8. Retreat and advance units. **(9.2.8)**\n   b. Both sides may conduct Naval Surface Combat. **(17.3)**\n3. **Elite Reaction Movement Segment:** Non-Initiative player may move all 6+ Efficiency units w/o \"Strike\" or OoS marker and not in an EZOC their full MA. Only ground movement is allowed. LI in ZOC can move **(8.2.4, 8.5, 27.3 (limitations apply))**\\*\n4. **Exploitation Movement Segment:** Initiative player may move ground units not in an EZOC w/o a \"Strike\" or OoS marker their full MA. LI in ZOC can move. All movement types are allowed. **(8.2.4, 8.5, 27.3)**\\*\n5. **Exploitation Combat Segment:** The Initiative player performs combat with any units (whether they moved or not) with a two-column shift left on the CRT.\n6. **Reaction Movement Segment:** The non-Initiative player may move any units up to their full movement allowance. Air, Airmobile, Sea Movement and Transport are allowed. **(8.5)**\\*\n7. **Reaction Combat Segment:** The non-Initiative player performs Combat.",
+      "notes": [
+        "\\* Bridge destruction/repair/construction allowed at end of segment. Possible roll for Naval Detection **(17.1.2 #2)**."
+      ],
+      "subPhases": []
+    },
+    {
+      "id": "second-strike-phase",
+      "name": "10. Second Strike Phase",
+      "ruleRef": "23.1",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Initiative Turn Only. Same procedure as the First Strike Phase.",
+      "content": "*(Initiative Turn Only)*\n\n1. Same as First Strike Phase.",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "second-supply-phase",
+      "name": "11. Second Supply Phase",
+      "ruleRef": "19.0",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Initiative Turn Only. Remove Out of Supply markers, check for unsupplied units, expend Supply Points for resupply, and convert depots.",
+      "content": "*(Initiative Turn Only)*\n\n1. Remove Out of Supply markers from units that are no longer out of supply. **(19.0)**\n2. Check for unsupplied units. Place an Out of Supply marker on any unit that is unsupplied. **(19.0, 19.5)**\n3. Expend Supply Points to attempt to resupply unsupplied units or HQs. **(19.6)**\n4. Convert Supply Depots/MSUs to Supply Points. **(19.4)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "basic-movement-combat-phase",
+      "name": "12. Basic Movement and Combat Phase",
+      "ruleRef": "8.0",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "The Initiative/First player moves and fights, then the non-Initiative/Second player conducts Reaction Movement and Combat.",
+      "content": "1. **Movement Segment:** The Initiative/First player moves any/all of his ground units up to their full movement allowance. Air, Airmobile, Sea Movement and Transport are allowed. **(8.0)**\\*\n2. **Combat Segment:** The Initiative/First player declares and resolves all combat. **(9.0)**\n3. **Reaction Movement Segment:** The non-Initiative/Second player moves any/all of his ground units up to their full movement allowance. Air, Airmobile, Sea Movement and Transport are allowed. **(8.5)**\\*\n4. **Reaction Combat Segment:** The non-Initiative/Second player declares and resolves all combat. **(9.0)**",
+      "notes": [
+        "\\* Bridge destruction/repair/construction allowed at end of segment. Possible roll for Naval Detection **(17.1.2 #2)**."
+      ],
+      "subPhases": []
+    },
+    {
+      "id": "isolation-surrender-phase",
+      "name": "13. Isolation/Surrender Phase",
+      "ruleRef": "19.7",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Remove Isolated markers from units no longer isolated, check for surrender, and place new Isolated markers on cut-off units.",
+      "content": "1. Remove \"Isolated\" markers from units that are no longer Isolated. **(19.7.3)**\n2. Check for surrender for all units currently bearing an \"Isolated\" marker. **(19.7.4)**\n3. Place \"Isolated\" markers on any units that cannot trace a path of land hexes free of enemy units/ZOCs to a friendly Supreme HQ or Supply Source. **(19.7.1)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "reorganization-phase",
+      "name": "14. Reorganization Phase",
+      "ruleRef": "22.4",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Return and rebase air units, reset helicopters and Special Forces, remove temporary markers, update control, and reset combat capability markers.",
+      "content": "1. Return air units in the Air Superiority box to the Ready Box. **(22.4)**\n2. Move air units from the Flown Box to the Ready Box. **(22.4)**\n3. Roll for availability of air units in the Recovery/Aborted Box. **(22.4)**\n4. Air units and unused Attack Helicopters may Rebase. **(25.2)**\n5. Rotate all helicopters to reflect \"no missions\". **(6.5.2)**\n6. Move all Special Forces units from the Used Box to the Available Box.\n7. Reset Airmobile Points. **(8.5.4.2)**\n8. Remove Tunnel Markers. [NWK2E GSR 2.7]\n9. Conduct Clearing Operations. **(8.4.1)**\n10. Determine hex/area control changes (Deliberate Damage **(27.2.1)**).\n11. Remove Chemical Weapon Support Markers.\n12. Remove all \"Detection\", \"Targeted\", and \"Emergency Supply\" markers, and flip Beachheads to In Supply. **(19.1/GSR)**\n13. Rotate all in-supply HQs/Artillery that bear no Strike marker to reflect full combat capabilities. Rotate all HQs/Artillery/DF21/26 that bear a \"Strike 1\" marker to reflect one remaining combat capability. Rotate all HQs/Artillery/DF21/26 that bear a \"Strike 2\" marker to reflect no remaining combat capabilities. **(18.2)**\n14. Remove all \"Interdiction Strike 1\" markers. Flip all \"Interdiction Strike 2\" markers to their \"Interdiction Strike 1\" side.\n15. Remove all \"Strike 1\" markers. Flip all \"Strike 2\" markers to their \"Strike 1\" side.\n16. Both players may spend Supply Points to Repair ADF Tracks, Beach Defenses [NWT2E], and Installations. **(27.9.1/2, NWIP GSR 13.5)**\n17. Check for Airbase Destruction effects. [NWIP GSR 5.4.3.1/NWT2E GSR 13.5.2/NWPE GSR 13.6/NWV GSR 13.8/NWI GSR 13.7]",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "reinforcement-replacement-phase",
+      "name": "15. Reinforcement and Replacement Phase",
+      "ruleRef": "10.0",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Place reinforcements and expend Replacement Points to replace or reconstitute units. Adjust Submarine Threat and ASW Levels.",
+      "content": "1. Both sides, non-Initiative/First player first, place reinforcements, including Supply, missile Points, etc., due in this Game Turn in accordance with the Scenario's Reinforcement Schedule. **(10.0)**\n2. Both sides, Initiative/First player first, earn and use Replacement Points to replace or reconstitute units. **(11.0, 19.5, 27.9.3)**\n3. Spend Supply Points to recover or replace HQs, Helicopters, and Air Units. **(18.4, 27.9.3)**\\*\\* Consolidate Air Units. **(27.9.3.4)** Air Unit Basing Costs. [NWV GSR 11.6/NWI GSR 10.4.9]\n4. Adjust Submarine Threat and ASW Levels. **(7.4.3)**",
+      "notes": [
+        "\\*\\* Subject to unit type restrictions (see GSR)."
+      ],
+      "subPhases": []
+    },
+    {
+      "id": "victory-determination-phase",
+      "name": "16. Victory Determination Phase",
+      "ruleRef": "12.0",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Add per-turn VPs, check for Nuclear Weapons Release, and determine Automatic Victory or end-game winner.",
+      "content": "1. Check for \"per turn\" VP. Add each player's \"VPs This Turn\" to their \"VPs\" to reflect their total VP accumulated. Do NOT reset the \"VPs This Turn\" marker until the Initiative Phase of the next turn. **(12.0)**\n2. Check for Nuclear Weapons Release.\n3. Determine if either player is allowed to check for Automatic Victory. If this is the last game turn, compare each side's VPs to determine a winner. **(12.2)**",
+      "notes": [],
+      "subPhases": []
+    },
+    {
+      "id": "game-record-phase",
+      "name": "17. Game Record Phase",
+      "ruleRef": "",
+      "timing": "every-turn",
+      "player": "both",
+      "description": "Advance the Game Turn Marker and begin the next turn.",
+      "content": "Advance the Game Turn Marker and begin the next turn.",
+      "notes": [],
+      "subPhases": []
+    }
+  ]
+}

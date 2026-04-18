@@ -1,0 +1,398 @@
+[
+  {
+    "id": "taiwan-usn-f-35cs",
+    "label": "USN F-35Cs",
+    "section": "17.1.1",
+    "description": "The Allied player can replace any one F/A-18E or F/A-18F per Carrier Air Wing [30.1] with one of the optional F-35Cs (there are more CAWs than F-35Cs). The non-Allied player gets +3 VP for each optional aircraft added.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 3
+    }
+  },
+  {
+    "id": "taiwan-usmc-f-35c",
+    "label": "USMC F-35C",
+    "section": "17.1.2",
+    "description": "On occasion a Marine squadron will replace a Navy squadron on a US carrier during a deployment. There is a single optional USMC F-35C in Next War: Taiwan that may also be used to replace a USN F/A-18E or F/A-18F (allowing the replacement of 4 total).",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 3
+    }
+  },
+  {
+    "id": "taiwan-usmc-f-35b",
+    "label": "USMC F-35B",
+    "section": "17.1.3",
+    "description": "At the Allied player's option, one USMC F-35B may be based on a USN AMPH. Use the US AMPH Basing Box with the appropriate number for the AMPH. Alternatively, the USMC F-35B may be based on the UK CV (if the CW intervenes at Level 2+).",
+    "source": "advanced",
+    "default": false
+  },
+  {
+    "id": "taiwan-usmc-ah-1z",
+    "label": "USMC AH-1Z",
+    "section": "17.1.4.1",
+    "description": "The USMC AH-1Zs can carry ARMs (Anti-Radiation Missiles). The Allied player may use this option to allow AH-1Zs to conduct Wild Weasel Strikes against Detection and SAM tracks. They can only be used for this if the non-Allied player has HQs in any hex in Taiwan. The AH-1Z must be in a hex on the Operational Map (on or an AMPH) or in the Taiwan Straits Inshore Box on an AMPH. This uses one Combat Support mission.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-us-f-22-and-f-35",
+    "label": "US F-22 and F-35",
+    "section": "17.1.4.2",
+    "description": "US F-22s and F-35s use the Wild Weasel column on the Strike Table when conducting Strikes against the Air Defense Track.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 15
+    }
+  },
+  {
+    "id": "taiwan-allied-combat-support-restrictions",
+    "label": "Allied Combat Support Restrictions",
+    "section": "17.1.5",
+    "description": "The Allied player may choose to restrict Combat Support [23.5] missions. Air, Attack Helicopter, and Naval Units providing Combat Support for a stack of ground units that does not include at least one unit of their nationality, halve their Combat Support value (rounded down). US and CW units are treated as one nationality for this rule. In addition, ROC air units are limited to one air unit plus escorts and/or defense suppression aircraft when conducting Combat Support.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-f-22-air-unit-replacement",
+    "label": "F-22 Air Unit Replacement",
+    "section": "17.1.6",
+    "description": "In addition to the unit types listed in GSR 8.4, the US player may also replace F-22 air units. The cost to replace F-22s is three Supply Points per step instead of two.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-refugees-internally-displaced-persons",
+    "label": "Refugees (Internally Displaced Persons)",
+    "section": "17.2",
+    "description": "If both players agree that this rule is in effect, the road net in the ROC is clogged with people fleeing the embattled forces in and around the landing site(s). The GTs listed are in reference to the turn non-Allied combat units [2.2.2] first enter a hex on the Operational Map, i.e., GT1 is the turn of landing. GT 1 & 2 Invader: Non-road movement point costs are x1\u00bd; Primary Roads are treated as Secondary Roads; Highways are treated as Primary Roads. GT 1 & 2 Defender: Non-road movement point costs are doubled; Primary Roads cost 1\u00bd MPs; Highways are treated as Secondary Roads. GT 3 & 4 Invader: All costs normal. GT 3 & 4 Defender: Non-road movement point costs are x1\u00bd; Primary Roads are treated as Secondary Roads; Highways are treated as Primary Roads. GT 5 Invader: All costs normal. GT 5 Defender: All costs normal.",
+    "source": "standard",
+    "default": false
+  },
+  {
+    "id": "taiwan-us-readiness",
+    "label": "US Readiness",
+    "section": "17.3",
+    "description": "The Allied player reduces US combat unit Efficiency Ratings by one for the duration of the scenario except when conducting Clearing Operations. This option can only be chosen if the US intervenes at Level 3+.",
+    "source": "standard",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 15
+    }
+  },
+  {
+    "id": "taiwan-prc-carrier-stealth-air-units",
+    "label": "PRC Carrier Stealth Air Units",
+    "section": "17.4.1",
+    "description": "News reports are showing a carrier-based variant of the J-31 dubbed the J-35. Three counters are provided, one for each PRC CV BG (including the optional one below [GSR 17.4.5]). The Allied player receives +4 VP for each optional aircraft added. This changes the PRC CAW for the non-optional CVs to 1 x J-15 and 1 x J-35.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 4
+    }
+  },
+  {
+    "id": "taiwan-prc-stealth-fighters",
+    "label": "PRC Stealth Fighters",
+    "section": "17.4.2",
+    "description": "The PRC J-31 does not have a firm projected in-service date. The non-Allied player may choose this option to include both J-31 air units at start in the PRC Ready Box.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-prc-stealth-bomber",
+    "label": "PRC Stealth Bomber",
+    "section": "17.4.3",
+    "description": "The PRC H-20 is expected to enter service sometime around 2033. The non-Allied player may choose this option to include the H-20 unit. It starts all scenarios in the Ready Box.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-prc-combat-support-restrictions",
+    "label": "PRC Combat Support Restrictions",
+    "section": "17.4.4",
+    "description": "As an additional optional rule, the non-Allied player can choose to be restricted to only commit a single air unit, along with escorts, to CS missions. Design Note: The PLAAF and PLA do not embrace CAS as understood in Western doctrine as evidenced given their weapon load out choice, training, and reliance on SSMs. If players wish to operate with Chinese doctrine, then invoke this rule.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 5
+    }
+  },
+  {
+    "id": "taiwan-additional-prc-carrier",
+    "label": "Additional PRC Carrier",
+    "section": "17.4.5",
+    "description": "Choosing this option allows the non-Allied player to use the third PRC CVN BG (#3). This carrier operates the optional J-15 included in the countermix and may, optionally, also operate one J-35 [GSR 17.4.1], i.e., its CAW is 1 x J-15 and 1 x J-35.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-russian-parts-contract",
+    "label": "Russian Parts Contract",
+    "section": "17.4.6",
+    "description": "The PRC can choose to use this option before the game begins to allow air unit replacements, in addition to the list in GSR 8.4, for its Su-30MMk2s and Su-35. For every 3VP added to the Allied VP Total add 2 RU Air Replacement Supply Points. These points can be used as normal to replace those air units.",
+    "source": "advanced",
+    "default": false
+  },
+  {
+    "id": "taiwan-prc-marines",
+    "label": "PRC Marines",
+    "section": "17.5",
+    "description": "The PRC 5 and 6 Marine brigades are not listed as setup or reinforcements. The non-Allied player may add them as a reinforcement in any turn after GT 4. For each Marine brigade that enters the game add 5 VP to the Allied Total VPs.",
+    "source": "standard",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 5
+    }
+  },
+  {
+    "id": "taiwan-commonwealth-intervenes",
+    "label": "Commonwealth Intervenes",
+    "section": "17.6",
+    "description": "In the Standard Campaign Game, the Allied player may choose to have the Commonwealth intervene. Commonwealth units arrive per the Master Allied Reinforcement Chart. In the Standard Game, all Commonwealth (UK and AU) units are available, and the Allied player receives an additional 6 Air Points each turn. For the Advanced Game, see 18.3.1.2.",
+    "source": "standard",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 30
+    }
+  },
+  {
+    "id": "taiwan-un-mandate",
+    "label": "UN Mandate",
+    "section": "17.7",
+    "description": "The Allied player may choose to use this option. Every time the non-Allied player Vetoes [28.1] a UN Resolution or Refuses to Obey a Ceasefire [28.2], increase the US and CW Intervention Level by one until it reaches Level 4. The non-Allied player earns 10 VP each time this option is exercised regardless of Intervention Level increase.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-weather-control-satellites",
+    "label": "Weather Control Satellites",
+    "section": "17.8",
+    "description": "The non-Allied player may choose this option. If the last turn was Storm, and Storm is rolled again for the current turn, it becomes Overcast instead. In other words, you cannot have two Storm turns in a row.",
+    "source": "standard",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-pacific-typhoon",
+    "label": "Pacific Typhoon",
+    "section": "17.9",
+    "description": "Both players may agree to roll for weather for each At Sea Box. Roll for weather in the following order: South China Sea, Spratly Islands, Taiwan Straits (main map weather), Philippine Sea, East China Sea, Central Approaches, Northern Approaches, Celebes, and Marianas. If Storm is rolled for any At Sea Box see 4.1 for effects. If they choose to retreat they do so as follows: If Allied: retreat to the Japan or US Holding Box; If non-Allied: retreat to a friendly Holding Box.",
+    "source": "standard",
+    "default": false
+  },
+  {
+    "id": "taiwan-ride-it-out",
+    "label": "Ride it Out",
+    "section": "17.9.1",
+    "description": "In the Advanced Game, during a Storm Turn Naval Units, instead of retreating, can stay in a Contested or enemy Controlled At Sea Box and have a Strike 1 marker placed on them.",
+    "source": "advanced",
+    "default": false
+  },
+  {
+    "id": "taiwan-coup-de-main-scenario-start",
+    "label": "Coup de Main Scenario Start",
+    "section": "17.10",
+    "description": "As an alternative start for all Advanced Game scenarios, the non-Allied player may choose to use this option to automatically take Control of Penghu, the Paracels, the Senkakus, and/or the Spratly Islands. Place one PRC Marine brigade (from 1, 2, 3, and 4 Marines, in that order) in each Island Land Area chosen for this option. Place one PRC AMPH, a non-Allied Control marker, and, optionally, any one other available PRC Naval Unit, in each associated Inshore Box of the Island Land Area chosen. Eliminate the ROC 77th Marine Brigade if Penghu is chosen. If all four locations are chosen: The non-Allied player receives the 4 Marine brigade at setup for this purpose (and, obviously, it's removed from the Reinforcement Schedule), and The non-Allied player automatically receives the PRC 5 and 6 Marine brigades [GSR 17.5] at no additional cost. All game effects such as entry into the war and increases in Intervention Levels are performed as normal. The non-Allied player receives pre-game VP per the VP schedule on the map for controlling Island Land Areas, and, if Penghu is chosen, additional VP for eliminating the ROC 77th. The Allied player receives 10 VP per Island Land Area chosen.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 40
+    }
+  },
+  {
+    "id": "taiwan-chemical-weapons",
+    "label": "Chemical Weapons",
+    "section": "17.11",
+    "description": "The non-Allied player can use Chemical Weapons. There are three PRC Chemical Weapons markers. They are used as per 18.2.4. Each use of a marker provides the Allied player with 5 VP. Any VP earned is added directly to the VP total and not to the \"VP This Turn\". To determine how many CW Points the non-Allied player has, roll one die, halve it (rounding down) and add five to the result, e.g., a roll of two equals six CW Points. The use of CW affects the Global Thermonuclear War die roll.",
+    "source": "advanced",
+    "default": false
+  },
+  {
+    "id": "taiwan-low-frequency-radar",
+    "label": "Low Frequency Radar",
+    "section": "17.12",
+    "description": "The non-Allied player can choose this option. If chosen, then the DRM for detecting a mission composed solely of \"Stealth\" units, for both sides, becomes +3 (instead of +5).",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-guam-a-rock-in-of-the-pacific",
+    "label": "Guam, (a) Rock (in) of the Pacific",
+    "section": "17.13",
+    "description": "The Allied player may choose this option, and, if he does, the Airbase in Guam is Hardened.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-j-7-attack-drones",
+    "label": "J-7 Attack Drones",
+    "section": "17.14",
+    "description": "The non-Allied player can choose this option to conduct five J-7 drone Strikes during the designated Scenario Special Rule step. Eligible targets are any valid Ballistic or Cruise Missile target in the Taiwan Straits At Sea Box, Inshore Box, associated All-Sea hex, or in any hex on the Operational Map. These are in addition to other missile strikes, they are subject to Normal ADF (unlike other Ballistic or Cruise Missiles) and may be escorted by the non-Allied and intercepted by the Allied player (these escorts/interceptors come from the PRC/ROC Ready Box and are placed in the Flown Box after resolution). It is treated as a Cruise Missile for all other purposes.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 5
+    }
+  },
+  {
+    "id": "taiwan-additional-beachhead-assets",
+    "label": "Additional Beachhead Assets",
+    "section": "17.15",
+    "description": "If the non-Allied player chooses this option, the second PRC Beachhead is available for use [GSR 2.5.2].",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-thaad",
+    "label": "THAAD",
+    "section": "17.16",
+    "description": "If using the THAAD rules from the Supplements, the Allied player can transport a THAAD in Taiwan if the US intervenes at Level 3+. It must start in the US Holding Box and use Sea Transport to move to a friendly Port in Taiwan. It does not count against Port Capacity.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 10
+    }
+  },
+  {
+    "id": "taiwan-fifth-generation-operations",
+    "label": "Fifth Generation Operations",
+    "section": "17.17",
+    "description": "Choosing this option allows the non-Allied player to conduct four Naval Bombardments from any Amphibious Assault Zone All-Sea hexes as a Naval 3 with a range of 2 hexes once per game during any one Strike Phase.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 12
+    }
+  },
+  {
+    "id": "taiwan-roc-reserves",
+    "label": "ROC Reserves",
+    "section": "17.18",
+    "description": "The Allied player may choose to use this optional rule. When drawing a ROC Reserve unit as a reinforcement, the player may, instead, receive 1 or 2 Replacement Points. If 1 REPL is chosen, the Reserve unit arrives with one step loss. If 2 REPLs are chosen, the Reserve unit is removed from the game. In addition, if a ROC Reserve unit is stacked with any other non-Armor ROC combat unit during the Reinforcement and Replacement Phase, the Allied player may transfer steps from the ROC reserve unit to the other unit. [See the Design Note in GSR 8.1.2.]",
+    "source": "standard",
+    "default": false
+  },
+  {
+    "id": "taiwan-restrictive-terrain",
+    "label": "Restrictive Terrain",
+    "section": "17.19",
+    "description": "The terrain in Taiwan's mountainous areas is restrictive in terms of \"off-roading\". For a better portrayal of this, if both players agree, apply the following additional effects to Mechanized and Motorized units in Mountain hexes: \u22122 DRM to all Strikes against such units; If all attacking units are Mechanized and/or Motorized, shift one column left.",
+    "source": "advanced",
+    "default": false
+  },
+  {
+    "id": "taiwan-unmanned-surface-vessels",
+    "label": "Unmanned Surface Vessels",
+    "section": "17.20.1",
+    "description": "If the Allied player chooses this option, then, during any Combat Segment, as part of Naval Surface Combat, a player, non-Allied first, can conduct a Naval 2 Surface Combat [17.3] attack against any Point Detected Naval Unit in an All-Sea hex. These attacks occur before any other Naval Surface Combat. The attacked Naval Unit must be with 10 hexes of a friendly-Controlled Port. The Allied player can only use this if either the US or Japan intervenes at Level 2+. Each player can only do this four times.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 5
+    }
+  },
+  {
+    "id": "taiwan-replicator-swarms",
+    "label": "Replicator Swarms",
+    "section": "17.20.2",
+    "description": "If the US intervenes at Level 2+, the Allied player can choose this option. During step 7b of each Strike Phase, both players, non-Allied first, can conduct one drone swarm Strike against any one Point Detected Naval Unit in an All-Sea hex or in the Taiwan Straits Inshore Box. This Strike is a US or PRC Naval 2 SSM Strike.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "ATTACKER",
+      "cost": 15
+    }
+  },
+  {
+    "id": "taiwan-prc-s-300s",
+    "label": "PRC S-300s",
+    "section": "17.21",
+    "description": "The non-Allied side is restricted in using ADF Track values in Taiwan [GSR 13.7]. If the PRC chooses to use this rule, place the two optional PRC S-300 counters in the PRC Holding Box. If both are operational, i.e., not Destroyed, the non-Allied player can use Normal or Local Detection against eligible Allied missions on the Operational Map as if the Allied mission were in an enemy country using the ADF values on the ADF Track. The PRC player must trace a straight line down a column of hexes from the map edge to the target hex, and this line cannot enter more than one Mountain hex. If Detected, the Allied mission is subject to Interception and SAM ADF as applicable. The mission is only subject to AAA ADF if it is within two hexes of a non-Allied combat unit, HQ, Artillery, or non-Allied Controlled Installation. S-300s are Hardened Targets. Strike marker reductions are conducted normally during the Reorganization Phase. They can be Repaired in the same fashion as DF-21/26s [GSR 15.1.3.1], if Destroyed. If either or both S-300s are Destroyed, the non-Allied player reverts to the printed ADF values in the PRC Holding Box and is subject to the restrictions of GSR 13.7 until both are fully operational again.",
+    "source": "advanced",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 15
+    }
+  },
+  {
+    "id": "taiwan-narco-boats",
+    "label": "Narco-boats",
+    "section": "17.22",
+    "description": "If the Allied player chooses this option, then USMC units in Island Land Areas are always in supply [GSR 5.1.4.9] and never isolated [GSR 11.2].",
+    "source": "advanced",
+    "default": false
+  },
+  {
+    "id": "taiwan-prc-mulberry-barges",
+    "label": "PRC \"Mulberry\" Barges",
+    "section": "17.23",
+    "description": "If the PRC chooses to use this option, the Mulberry Barge counter can be placed in any Movement Segment after a Beachhead has been placed. It allows, in addition to normal Beachhead usage, 2 Stacking Points of Motorized and Mechanized units to use Sea Transport to land at the Beachhead per turn. It can be the target of SOF Targeting and Raids, Air and Helicopter Strikes, and Cruise and Ballistic Missile Strikes. A Strike 1 or 2 marker has no effect. Once Destroyed, it cannot be repaired nor rebuilt.",
+    "source": "standard",
+    "default": false,
+    "vpCost": {
+      "side": "DEFENDER",
+      "cost": 10
+    }
+  }
+]

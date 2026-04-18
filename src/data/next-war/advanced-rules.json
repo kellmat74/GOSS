@@ -1,1 +1,1836 @@
-[]
+[
+  {
+    "id": "14.0",
+    "section": "14.0",
+    "title": "ADVANCED GAME INTRODUCTION",
+    "summary": "Explains the purpose and scope of the Advanced Game, which expands air power, detection, supply, and Special Operations Forces rules.",
+    "text": "**14.0 Advanced Game Introduction**\n\nThe Standard Game simplifies several aspects of modern combat for the sake of playability. In the Advanced Game, while we still don't claim that it's realistic (pretty tough to be realistic with paper and cardboard!), we have added or expanded several major subsystems to let players examine what a modern war might look like. Even these systems have been abstracted and streamlined for playability's sake. What we really want to show here is that the mass of forces do not reflect a complete picture of the assets each side would use to fight and win a future war.\n\nThe Advanced air rules reflect an aspect of the war that would be absolutely key to success. The Standard Game is a reasonable quantification representing the Close Air Support units that actually made it through to the front lines. The Advanced rules, however, let players who want to push around planes have a field day. It's not precise doctrine, but you can use your aircraft to implement the same strategies and (hopefully) achieve the same results as your real-life counterparts. The effects of air power (if properly applied) against an enemy's supply and command structure can really wreck his day.\n\nDetection of ground units also provides more realism via the Advanced Rules. This ability to detect and strike targets far from the front lines is, of course, critical to most doctrines.\n\nThe addition of supply rules gives the Advanced Game a better representation of the challenges that each side faces in supplying their troops. For both sides, protecting their supply units from enemy air and Special Operations Forces attack is vital to their success.\n\nWhen you put all these systems together, you get a much clearer view of what a modern war might look like. The interaction between these systems, and, especially, between the subsystems of the Advanced Air Game, has proven both difficult to design and intriguing to study. We hope you have as much fun playing the game as we did creating and testing it.\n\n*Enjoy the game!*",
+    "crossRefs": []
+  },
+  {
+    "id": "15.0",
+    "section": "15.0",
+    "title": "ADVANCED GAME COMPONENTS",
+    "summary": "Describes the additional units and markers used in the Advanced Game beyond the Standard Game.",
+    "text": "**15.0 Advanced Game Components**\n\nThe Advanced Game uses the units and markers from the Standard Game with the addition of several new ground units and game markers.",
+    "crossRefs": []
+  },
+  {
+    "id": "15.1",
+    "section": "15.1",
+    "title": "Sample Advanced Game Units",
+    "summary": "Directs players to the Unit Type Identification chart for reading Advanced Game counters.",
+    "text": "**15.1 Sample Advanced Game Units**\n\n**15.11 Advanced Game Unit Values**\n\nRefer to the Unit Type Identification chart (p.2 or the play aid) to read the counters.",
+    "crossRefs": []
+  },
+  {
+    "id": "15.2",
+    "section": "15.2",
+    "title": "Explanation of Unit Values",
+    "summary": "Overview section for the various numeric ratings found on Advanced Game air unit counters.",
+    "text": "**15.2 Explanation of Unit Values**",
+    "crossRefs": []
+  },
+  {
+    "id": "15.2.1",
+    "section": "15.2.1",
+    "title": "Strike Rating",
+    "summary": "The unit's ability to attack targets with bombs and stand-off weapons, used whenever the aircraft performs a Strike.",
+    "text": "**15.2.1 Strike Rating**\n\nThe unit's capability to attack targets with bombs and stand-off weapons. It is used any time the aircraft performs a Strike. The \"**\" rating on some air units indicates that they can be used only to launch Cruise Missiles. Other air units may also do so if specified in the Game Specific Rules.",
+    "crossRefs": []
+  },
+  {
+    "id": "15.2.2",
+    "section": "15.2.2",
+    "title": "Combat Support Rating",
+    "summary": "The unit's ability to fly Combat Support Missions, expressed as a DRM to the combat resolution die roll.",
+    "text": "**15.2.2 Combat Support Rating**\n\nThe unit's ability to fly Combat Support Missions. This number is a DRM (negative if attacking; positive if defending) to the combat resolution die roll.",
+    "crossRefs": []
+  },
+  {
+    "id": "15.2.3",
+    "section": "15.2.3",
+    "title": "Air-to-Air Combat Rating",
+    "summary": "The aircraft's abilities in air-to-air combat; a parenthesized rating indicates the unit cannot fire offensively in air-to-air combat.",
+    "text": "**15.2.3 Air-to-Air Combat Rating**\n\nThe aircraft's abilities in air-to-air combat. It is used when the unit engages in combat against other aircraft. A parenthesized rating (#) indicates that the unit cannot fire offensively in air-to-air combat.",
+    "crossRefs": []
+  },
+  {
+    "id": "15.2.4",
+    "section": "15.2.4",
+    "title": "Pilot Skill",
+    "summary": "Represents the general training and skill level of pilots, used as a DRM in Air-to-Air and Strike Combat.",
+    "text": "**15.2.4 Pilot Skill**\n\nThe general training, doctrine, electronics, and skill level of the unit's pilots. This rating is used as a DRM in Air-to-Air and Strike Combat. When air units of the same type (e.g., USN F/A-18E) are called for during setup or as a reinforcement, select randomly from all such air units not already in play.",
+    "crossRefs": []
+  },
+  {
+    "id": "15.2.5",
+    "section": "15.2.5",
+    "title": "Range",
+    "summary": "For air units, indicates Short, Medium, Long, or Unlimited mission range; for HQ/Artillery units, the distance in hexes for Strikes or Combat Support.",
+    "text": "**15.2.5 Range**\n\nFor air units, either S(hort), M(edium), L(ong), or U(nlimited), indicates the distance that the unit can fly missions (see GSR for details). For HQ/Artillery units, the distance in hexes that they can conduct Strikes or provide Combat Support as well as the value of that Support.",
+    "crossRefs": []
+  },
+  {
+    "id": "15.2.6",
+    "section": "15.2.6",
+    "title": "Weather Rating",
+    "summary": "An \"A\" rating indicates the air unit is capable of flying during non-clear weather turns.",
+    "text": "**15.2.6 Weather Rating**\n\nAn \"A\" indicates that the air unit is capable of flying during non-clear weather turns.",
+    "crossRefs": []
+  },
+  {
+    "id": "15.2.7",
+    "section": "15.2.7",
+    "title": "Stealth",
+    "summary": "An \"S\" following the Weather Rating indicates the air unit uses Stealth technology and cannot be attacked by Long-Range or Stand-off combat.",
+    "text": "**15.2.7 Stealth**\n\nAn \"S\" following the Weather Rating indicates that the air unit utilizes \"Stealth\" technology. A stealth unit cannot be attacked by Long-Range or Stand-off combat.",
+    "crossRefs": []
+  },
+  {
+    "id": "15.2.8",
+    "section": "15.2.8",
+    "title": "Stand-off Weapons",
+    "summary": "An asterisk (*) after a rating indicates the air unit can use stand-off weapons for that type of attack.",
+    "text": "**15.2.8 Stand-off Weapons**\n\nAn asterisk (*) after any rating indicates that the air unit is capable of using stand-off weapons for that type of attack. In air-to-air combat, units with Stand-off weapons are allowed to fire during Stand-off combat. When performing Strike missions, units choosing to use their Stand-off capability are immune to AAA fire. Stand-off Strikes may not be used for Interdiction.\n\n**15.2.8.1 Long Range Weapons:** The \"**\" rating on some air units represent the advanced electronics, doctrine, and extremely long range air-to-air missiles that these aircraft carry. These aircraft are allowed to fire up to three times (long range, stand-off, and dogfight) in air-to-air combat.",
+    "crossRefs": []
+  },
+  {
+    "id": "15.2.9",
+    "section": "15.2.9",
+    "title": "Wild Weasel",
+    "summary": "Units with \"WW\" instead of normal CS and Strike values are dedicated to attacking and countering enemy Air Defense networks.",
+    "text": "**15.2.9 Wild Weasel**\n\nUnits with \"WW\" in place of their normal CS and Strike values are trained at attacking and countering enemy Air Defense networks. These units can be used offensively to attack the enemy's Detection, AAA, and SAM tracks. They can also be assigned as Defense Suppression units to provide extra protection against air defenses for units on Wild Weasel, Strike, and Combat Support missions.",
+    "crossRefs": [
+      "23.3"
+    ]
+  },
+  {
+    "id": "15.2.10",
+    "section": "15.2.10",
+    "title": "Formation ID",
+    "summary": "The unit type symbol color designates a unit's Formation; also important for HQ and artillery combat support, supply, and unit replacement.",
+    "text": "**15.2.10 Formation ID (2.3.4)**\n\nAs an addition to (2.3.4) this is also important for HQ and artillery combat support, supply, and unit replacement.",
+    "crossRefs": [
+      "2.3.4"
+    ]
+  },
+  {
+    "id": "15.2.11",
+    "section": "15.2.11",
+    "title": "Supply Range",
+    "summary": "The maximum distance, measured in Motorized movement points, that supply can be traced from a unit.",
+    "text": "**15.2.11 Supply Range**\n\nThis is the maximum distance, measured in Motorized movement points, that supply can be traced.",
+    "crossRefs": []
+  },
+  {
+    "id": "16.0",
+    "section": "16.0",
+    "title": "ADVANCED MOVEMENT RULES",
+    "summary": "Introduces advanced movement rules including Light Infantry Infiltration.",
+    "text": "**16.0 Advanced Movement Rules**",
+    "crossRefs": []
+  },
+  {
+    "id": "16.1",
+    "section": "16.1",
+    "title": "Light Infantry Infiltration Movement",
+    "summary": "Light Infantry units adjacent to an enemy may attempt to infiltrate through and move into a vacant hex adjacent to that enemy unit.",
+    "text": "**16.1 Light Infantry Infiltration Movement**\n\nAny Light Infantry unit that begins a friendly movement segment adjacent to an enemy unit may attempt to infiltrate that unit's hex and move into another vacant hex adjacent to the enemy unit. The vacant hex must be designated before the roll is made. The hex cannot be one that requires a Clearing Operation (8.4.1) to gain control. Infiltration cannot be attempted across an allwater hexside.\n\nThe infiltration attempt consists of an efficiency check for each light infantry unit. The roll is modified as shown on the Light Infantry Infiltration table. The modifiers are based on the terrain of the hex occupied by the enemy unit, rather than the vacant destination hex.\n\nIf the unit passes its efficiency check, place it in the previously designated hex. The unit is finished moving for that movement segment. If the unit fails, it remains in its starting hex with a Strike 1 or Strike 2 marker based on the die roll. If the final roll was one greater than its ER, place a Strike 1 marker. If the final roll was 2+ greater, place a Strike 2 marker. The unit is finished moving for that movement segment.\n\n**Play Note:** *You can already move ZOC to ZOC using (8.2.2). This is for moving THROUGH the enemy unit.*",
+    "crossRefs": [
+      "8.4.1",
+      "8.2.2"
+    ]
+  },
+  {
+    "id": "17.0",
+    "section": "17.0",
+    "title": "ADVANCED NAVAL RULES",
+    "summary": "Rules allowing players to use Air units and theater weapons to contest control of At Sea and Inshore boxes in and around the area of conflict.",
+    "text": "**17.0 Advanced Naval Rules**\n\nThe following rules add to the Standard Game rules and allow players to use their Air units and theater weapons to contest control of the At Sea and Inshore boxes in and around the area of conflict. Naval Units in Port may not launch Cruise Missile attacks (26.0), conduct Combat Support (7.3.6), Naval Bombardment (17.5), or engage in Naval Surface Combat (17.3).",
+    "crossRefs": [
+      "26.0",
+      "7.3.6",
+      "17.3",
+      "17.5"
+    ]
+  },
+  {
+    "id": "17.1",
+    "section": "17.1",
+    "title": "Anti-Naval Strike Rules",
+    "summary": "Players may launch Air Strikes and Cruise Missile attacks against Naval Units in All Sea hexes, Inshore Boxes, or At Sea Boxes.",
+    "text": "**17.1 Anti-Naval Strike Rules**\n\nUsing the following rules, players may launch Air Strikes and Cruise Missile attacks against Naval Units in an All Sea hex, an Inshore Box, or At Sea Box. Naval Units in Port can only be the target of an Air Strike.",
+    "crossRefs": [
+      "23.0",
+      "26.0"
+    ]
+  },
+  {
+    "id": "17.1.1",
+    "section": "17.1.1",
+    "title": "Allocation",
+    "summary": "Allocate Air or Cruise Missile Strikes normally; only detected Naval Units can be the target of a Strike.",
+    "text": "**17.1.1 Allocation**\n\nAllocate Air (23.0) or Cruise Missile (26.0) Strikes normally. Only detected (17.1.2) Naval Units can be the target of a Strike.",
+    "crossRefs": [
+      "23.0",
+      "26.0",
+      "17.1.2"
+    ]
+  },
+  {
+    "id": "17.1.2",
+    "section": "17.1.2",
+    "title": "Detection",
+    "summary": "Naval Units are automatically detected with Point Detection when conducting a Strike in Naval Surface Combat; otherwise players must attempt to detect them.",
+    "text": "**17.1.2 Detection**\n\nA Naval Unit is automatically detected with Point Detection when it conducts a Strike in Naval Surface Combat. A Naval Unit in Port is always Area Detected.\n\nOtherwise, players must attempt to detect Naval Units as follows:\n\n1. During the Naval Unit Detection Step of the Air/Naval Phase.\n2. At the end of movement when a Naval Unit moves or attempts to move into a new At Sea Box, Inshore Box, or All-Sea hex.\n3. When a Naval Unit Bombards (17.4) or provides Combat Support (7.3.6), mark it as Area Detected if it is not already Point Detected.\n\nTo resolve, roll the die, apply the DRMs as indicated on the Naval Detection Chart (see Strategic Display), and apply the results. Replace or remove whatever marker was previously on the unit.\n\nIn some games, At Sea Boxes contain DRMs for Naval Detection rolls. The number to the left of the symbol (in red) applies to non-Allied attempts. The number to the right (in blue) applies to Allied attempts. This applies in both the At Sea and any associated Inshore Box.\n\nAll-Sea hexes are treated as part of their associated Inshore Box for DRM purposes, i.e., the At Sea/Inshore Box DRM(s) applies to units in the Inshore Box and any associated All-Sea hex. Naval units in an All-Sea hex are in the same Location as the Inshore Box and vice versa.",
+    "crossRefs": [
+      "17.4",
+      "7.3.6",
+      "8.2"
+    ]
+  },
+  {
+    "id": "17.1.2.1",
+    "section": "17.1.2.1",
+    "title": "Detection Removal",
+    "summary": "If an already Detected unit moves to a new location and the detection roll fails, remove the marker.",
+    "text": "**17.1.2.1 Detection Removal**\n\nIf an already Detected unit moves to a new location and the detection roll fails, remove the marker.",
+    "crossRefs": []
+  },
+  {
+    "id": "17.1.3",
+    "section": "17.1.3",
+    "title": "Strike Chart",
+    "summary": "Use the Naval Unit row on the Strike Chart, cross-referencing the appropriate Strike value; Carrier-based Air Units use the \"Naval #\" column matching their Strike Rating.",
+    "text": "**17.1.3 Strike Chart**\n\nUse the Naval Unit row on the Strike Chart and cross-reference the appropriate Strike value. Carrier-based Air Units use the appropriate \"Naval #\" column where the # corresponds to their Strike Rating. (23.4.1.1)\n\nApply the Strike DRMs and Naval Strike DRMs as indicated on the Strike Table.\n\nStrike results may cause Naval units to retreat or be removed from the map (27.4).\n\nUnits embarked on AMPHs are not eligible to be detected or targeted by Strikes or Raids.",
+    "crossRefs": [
+      "23.4.1.1",
+      "27.4"
+    ]
+  },
+  {
+    "id": "17.1.4",
+    "section": "17.1.4",
+    "title": "Restricted Waters",
+    "summary": "Game Specific Rules may designate certain At Sea/Inshore Boxes as Restricted Waters, applying a -2 DRM to all Strikes/Naval Combat.",
+    "text": "**17.1.4 Restricted Waters**\n\nGame Specific Rules will designate certain At Sea/Inshore Boxes as \"Restricted Waters\". Apply a -2 DRM to all Strikes/Naval Combat in such waters, e.g., Baltic Sea [NWP].",
+    "crossRefs": []
+  },
+  {
+    "id": "17.1.5",
+    "section": "17.1.5",
+    "title": "Naval Air Defense Fire",
+    "summary": "Naval Units in Port use Normal/Local ADF values; at sea they use their own values with specific exceptions for Umbrella and All-Sea hex rules.",
+    "text": "**17.1.5 Naval Air Defense Fire**\n\nNaval Units in Port use Normal/Local ADF values as appropriate (24.1), otherwise, they use their own values as detailed below.\n\nNaval Units use normal procedures with the following exceptions:\n\n**17.1.5.1 Naval Air Defense Umbrella:** In an At Sea/Inshore Box, naval units may only use their ADF values in three instances: (1) when they are the target of an attack, (2) when they are in an Inshore Box and the target of an attack is in an associated Land Area, (3) they are in an At Sea/Inshore Box in Restricted Waters (17.1.4) and a mission traces its path through that At Sea/Inshore Box Use the following rules when in an All-Sea hex:\n\n**17.1.5.1.1 At Sea/Inshore Box Naval ADF Umbrella:** A Naval Unit being attacked in these Locations can use the Detection value and SAM value of any friendly unit in the same Location, but only its AAA value in its own defense.\n\n**17.1.5.1.2 All-sea hex Naval ADF Umbrella:** A Naval Unit in this Location projects its Detection and SAM values in a radius which is equal to twice the value of the Detection and/or SAM value, respectively. Naval Unit AAA may only be used in defense of the Naval Unit itself. Details are described below.\n\n*Example: A US CVN, with Detection and SAM values of 8, can use both of those values out to a range of 16 hexes; a Naval Unit which falls into the \"Other\" category has a Detection value of 5 and a SAM value of 1 and can use its Detection value out to a range of 10 hexes, but can only use its SAM value out to a range of 2 hexes.*\n\n**17.1.5.1.3 Land-based ADF and Naval ADF Interaction:** If the Naval Unit is in an All-Sea hex, a player may mix and match the values at his discretion, e.g., if his land-based ADF Detection track has been reduced to zero and an enemy Air Mission is launched against a target which is within Detection range of a Naval Unit, the player can use the Naval Unit's ADF to attempt Detection (17.1.5.2). If the mission is Detected, the player can, again, choose whether to use his land-based ADF SAM value or the Naval Unit's SAM value (assuming it has range to the target hex).\n\n**17.1.5.1.4 Normal vs Local Detection:** Use of the Umbrella enables both Normal and Local detection, as appropriate, within the Detection range.\n\n**17.1.5.1.5 Range Restrictions:** When tracing range, the range must follow as direct a line as possible from the Naval Unit to the Air Units. A Naval Unit may not trace its Detection and/or SAM range directly through or along the hexside of a Mountain or High Mountain hex.\n\n**17.1.5.1.6 Air Defense DRM:** Naval Units provide a \"\u20131\" DRM to any ADF against enemy units landing or performing a mission within two hexes of it. This ADF capability can be used any number of times in a game turn.\n\n**17.1.5.2 Early Detection and Interception:** Any \"D\" result from a Naval Unit detection when using its own ADF values is treated as an \"ED\" result if against an Air Strike targeting the Naval Unit (or any Naval Units with which it shares a Location). Any Air Unit in the Air Superiority Box can be used as an Interceptor for an Air Strike against such Naval Units in a location if within the intercepting unit's range. Air Units in a CVN's/CV's/AMPH's Ready Box in the same Location as the target can be used as Interceptors against the Air Strike. Intercepting Naval Air Units not eliminated or Aborted are not returned to the Flown box of their carrier; they are placed in the Ready Box instead.\n\n**17.1.5.3 Naval SAMs from Targeted Naval Units:** If an Air Strike is Detected, these may be used. If it is a Stand-off Strike, the results do not affect the Air Unit in any way. A +x DRM or \"X\" affects the Strike itself (\"A\" is ignored). If the air unit chooses not to use Stand-off, it applies the \u20131 DRM on the Strike Table for doing so, but SAM (and AAA) results will affect the Air Unit (\"X\" and \"A\" are applied normally).\n\n**17.1.5.4 Naval AAA (CIWS) from Targeted Naval Units:** This is used to defend against Naval Surface Combat, Cruise Missiles, and Air Strikes, regardless of Detection. After any allowed SAM rolls, roll on the appropriate AAA column. Against an Air Strike using Stand-off weapons, \"A\" and \"X\" results have no effect on the Air Unit but do cause the Strike to miss. Against non-Stand-off attacks, apply results normally.",
+    "crossRefs": [
+      "24.1",
+      "17.1.4",
+      "17.1.5.2"
+    ]
+  },
+  {
+    "id": "17.2",
+    "section": "17.2",
+    "title": "Victory Points",
+    "summary": "Refers players to the game-specific Victory Point Chart for naval VP rules.",
+    "text": "**17.2 Victory Points**\n\nSee the game specific Victory Point Chart.",
+    "crossRefs": []
+  },
+  {
+    "id": "17.3",
+    "section": "17.3",
+    "title": "Naval Surface Combat",
+    "summary": "During each Naval Surface Combat Step, Naval Units in At Sea or Inshore Boxes may conduct combat against any one detected enemy naval unit in the same location.",
+    "text": "**17.3 Naval Surface Combat**\n\nDuring each Naval Surface Combat Step, a Naval unit in an At Sea or Inshore Box may conduct Naval Surface Combat against any one Detected (17.1.2) enemy naval unit in the same location. A Naval unit in an All-Sea hex may conduct Naval Surface Combat against a Detected enemy Naval unit in an All-Sea hex within 10 hexes. The 10-hex path must be as straight as possible and cannot cross a land hexside. Defending units conduct Naval AAA (CIWS) against the attacker's one Strike (applying any applicable DRMs from the Advanced Strike chart) that uses the Naval column that corresponds to its Combat Support Rating.\n\nEither player may initiate Naval Surface Combat in each Combat Segment. In general, all units in a location are involved, and combat is conducted as follows:\n\n1. All undetected naval units simultaneously declare any previously detected naval unit as their target, resolve their Strike(s), and are marked as Point Detected.\n2. All previously detected naval units simultaneously declare any detected naval unit as their target, resolve their Strike(s), and are marked as Point Detected.\n3. Declare and conduct any Retreats simultaneously (27.4).\n\n**Design Note:** *Players declare all attacks before resolving any so you can't see the result and decide to attack something else.*",
+    "crossRefs": [
+      "17.1.2",
+      "27.4"
+    ]
+  },
+  {
+    "id": "17.4",
+    "section": "17.4",
+    "title": "Naval or Strategic Display",
+    "summary": "An off-map display containing generalized At Sea and Inshore areas; Game Specific Rules provide details on its usage.",
+    "text": "**17.4 Naval or Strategic Display**\n\nThe Naval or Strategic Display is an off-map display that contains areas generalizing the surrounding Land Areas and At Sea and Inshore boxes. Game Specific Rules will provide details on usage of this display.\n\n**Design Note:** *This may not be present in all games.*\n\n**17.4.1 Control Effects on Retreats (7.2.3)**\n\nRather than requiring a retreat when Control of an At Sea or Inshore Box changes, a naval unit may elect to remain in its location and incur an automatic Strike 1 hit.",
+    "crossRefs": [
+      "7.2.3"
+    ]
+  },
+  {
+    "id": "17.5",
+    "section": "17.5",
+    "title": "Naval Bombardment",
+    "summary": "Naval Units can conduct a single Naval Bombardment within range using their Combat Support value as their Strike value.",
+    "text": "**17.5 Naval Bombardment**\n\nNaval Units, no more than one per target (23.2) *(Exception: Not ADF Tracks or Naval Units)*, can conduct a single Naval Bombardment within range in hexes on the Operational Map, or from an Inshore Box to its associated Land/Island Land Area, during each Strike Phase using the Combat Support value as their Strike value. Cross-reference the Naval Unit's Combat Support value with the appropriate terrain and roll the die. There is no ADF. They can provide this only from an All-Sea hex or from an Inshore Box. They can conduct the Naval Bombardment if there are no enemy Naval Units within 10 hexes along as straight a path as possible and cannot cross a land hexside or, when applicable, in the same Inshore Box.",
+    "crossRefs": [
+      "23.2"
+    ]
+  },
+  {
+    "id": "18.0",
+    "section": "18.0",
+    "title": "FORMATIONS, HQS, & ARTILLERY",
+    "summary": "Introduces Formations, HQ units, and Artillery in the Advanced Game, including their capabilities and restrictions.",
+    "text": "**18.0 Formations, HQs, & Artillery**\n\nMost of the game's ground units have their unit type symbol colored to designate their Formation (15.2.10).\n\nHQs are among the most important units in the game. HQs have inherent combat capabilities and allow subordinate units to Reconstitute and receive Replacements (27.9.3). The loss of an HQ and its capabilities can be a crippling blow to a formation.",
+    "crossRefs": [
+      "15.2.10",
+      "27.9.3"
+    ]
+  },
+  {
+    "id": "18.1",
+    "section": "18.1",
+    "title": "Subordination",
+    "summary": "Defines which ground units are subordinate to which HQs, based on unit type symbol color and nationality.",
+    "text": "**18.1 Subordination**\n\nAll ground units in the game are subordinate as follows:\n\n1. All non-HQ units with a non-white colored unit type symbol are subordinate to the HQ with that same color within that nationality.\n2. All non-HQ units with a white unit type background are subordinate to any of their nationality's HQs.\n3. HQ units with a white unit type can subordinate any unit of that nationality.\n\nGame Specific Rules will include additional subordination notes.\n\nSubordination is important for purposes such as HQ and artillery Combat Support and Supply Determination.",
+    "crossRefs": []
+  },
+  {
+    "id": "18.2",
+    "section": "18.2",
+    "title": "HQ Capabilities",
+    "summary": "Each HQ has Combat Support, HQ Strike, Air Defense, Chemical Weapons Support, and Bridging capabilities.",
+    "text": "**18.2 HQ Capabilities**\n\nEach HQ is assumed to include combat support elements such as Engineers, Reconnaissance assets, electronic warfare units, organic artillery, and, for some countries, Unmanned Aerial Vehicles (UAVs) for both reconnaissance and strike. HQs have two combat capabilities: Combat Support (18.2.1) and HQ Strikes (18.2.2). They also provide Air Defense Fire (18.2.3), Chemical Weapons Support (18.2.4), and Bridging capabilities (18.2.5).\n\nDuring the Reorganization Phase of each game turn, depending on its status, an HQ will rotate back to full capability if it is not Out of Supply [see SOP].",
+    "crossRefs": [
+      "18.2.1",
+      "18.2.2",
+      "18.2.3",
+      "18.2.4",
+      "18.2.5"
+    ]
+  },
+  {
+    "id": "18.2.1",
+    "section": "18.2.1",
+    "title": "Combat Support Strength Combat Capability",
+    "summary": "Each supplied non-Supreme HQ can provide combat support by adding its full range value as combat strength after any doubling/halving modifications.",
+    "text": "**18.2.1 Combat Support Strength Combat Capability**\n\nEach supplied non-Supreme HQ can provide combat support. When applying support add the full range value of the HQ support as combat strength after any doubling/halving or other modifications to the supported units.\n\n*Example: if a DPRK 5-5-8 Mech Inf Bde is attacking a USMC 1-1-4 battalion, the initial odds are 5:1. Both sides apply one HQ to support, each with a range, and combat support value, of \"4.\" Now the ratio is 9:5, which becomes 1.5:1.*\n\nTo be eligible to receive support, the attacked hex must be within the range of the HQ providing the support and at least one of the units involved must be subordinate to the HQ providing the support.\n\nNo more than two HQs can support an attack; no more than one HQ can support the defense.",
+    "crossRefs": []
+  },
+  {
+    "id": "18.2.2",
+    "section": "18.2.2",
+    "title": "HQ Strike Combat Capability",
+    "summary": "An HQ Strike can be made against any detected ground unit in range, resolved on the Advanced Strike Table.",
+    "text": "**18.2.2 HQ Strike Combat Capability**\n\nAn HQ Strike can be made against any detected (21.0) ground unit in range of the HQ unit. The Strike range for HQs is listed on the counter.\n\nHQ Strikes are resolved on the Advanced Strike Table. Use the appropriate column. If the firing HQ has taken a step-loss, apply a \"+1\" DRM to the Strike.\n\nHQs can also conduct Interdiction Strikes. Resolve this on the Advanced Interdiction table by cross-referencing the column noted for use by the type of HQ with the type of terrain and applying any DRMs.\n\nA target can only be struck once during the HQ Strike Segment.",
+    "crossRefs": [
+      "21.0"
+    ]
+  },
+  {
+    "id": "18.2.3",
+    "section": "18.2.3",
+    "title": "Air Defense DRM Capability",
+    "summary": "HQs provide a \u20131 DRM to any ADF against enemy units landing or performing a mission within two hexes of the HQ.",
+    "text": "**18.2.3 Air Defense DRM Capability**\n\nHQs provide a \"\u20131\" DRM to any ADF against enemy units landing or performing a mission within two hexes of the HQ. This ADF capability can be used any number of times in a game turn and does not count against the HQ's combat capabilities.\n\n**18.2.3.1 Theater Weapon Defense (TWD) HQs Capability:** Some HQs are designated as TWD HQs and provide a \"+1\" DRM against Theater Weapon Strikes within three hexes of the HQ: US, RU, PRC, MNCNE, MND-NE, and any Supreme HQ.\n\n**Design Note:** *With recent empirical evidence of the efficacy of such missiles to hard kill such targets, we felt it was time to add this. Technically, the S-300/400 have better range, but, in practice, it shouldn't matter that often.*",
+    "crossRefs": []
+  },
+  {
+    "id": "18.2.4",
+    "section": "18.2.4",
+    "title": "Chemical Weapons (CW) Support Capability",
+    "summary": "Each supplied non-Supreme HQ can place a Chemical Weapons marker on combats involving subordinate units within range, reducing enemy ER by three.",
+    "text": "**18.2.4 Chemical Weapons (CW) Support Capability**\n\nEach supplied non-Supreme HQ can be used to place a Chemical Weapons (CW) marker on combats involving subordinate units. The hex must be within the HQ's range, the HQ cannot be Isolated or OOS, and a CW Point must be available. The number of markers in the countermix is a hard limit. Once a marker is placed, the effects last until the marker is removed at the end of the turn after which it can be placed again assuming CW Points are available. In general, a CW marker reduces the ER of units in the target hex by three and entering or exiting costs an additional MP.",
+    "crossRefs": []
+  },
+  {
+    "id": "18.2.5",
+    "section": "18.2.5",
+    "title": "HQ Bridging Capability",
+    "summary": "Friendly HQ units can create temporary bridges across major and minor rivers; HQ Bridges function as normal bridges until removed.",
+    "text": "**18.2.5 HQ Bridging Capability**\n\nFriendly HQ units can create temporary bridges across major and minor rivers. HQ Bridges function in all respects as normal bridges.\n\nAt the end of a friendly Movement Segment, an HQ that is not in an EZOC can create one bridge across a major or minor river hexside using the Advanced Game bridge repair procedure (27.10.2).\n\n*Exception: An airborne HQ can only place an HQ bridge if it can also trace a Line of Communication to a friendly Supply Source (19.1), and it is not using Airbase/Airfield Supply (19.1.2).*\n\nTo indicate the engineer bridging effort, place the HQ's Bridge marker in one of the hexes with the arrow pointing to the hexside being bridged. Each HQ can have only one such bridge in place at a time. Once placed, the HQ Bridge remains in operation until one of the following occurs:\n\na) It is removed voluntarily by the player at the end of a subsequent friendly Movement Segment;\nb) The placing HQ cannot trace an LOC of 4 or fewer Motorized MPs to either hex containing the Bridged hexside at the end of a Movement Segment;\nc) Any enemy ground unit ends its Movement Segment in a hex containing a bridge hexside (apply only if the other hexside is not occupied by a friendly combat unit (2.2.2));\nd) It is destroyed per Bridge Damage/Destruction (27.10.1);\ne) A Nuclear Attack is successfully resolved in a hex containing the bridge hexside. (Only available via GSR.)\n\nIf any one of these events occurs, remove the HQ Bridge marker immediately. If the HQ Bridge marker is removed due to c, d, or e above, remove it permanently from the game.\n\nAn HQ Bridge marker that is removed for any reason cannot be placed again until the end of the next friendly Movement Segment.",
+    "crossRefs": [
+      "27.10.2",
+      "19.1",
+      "19.1.2",
+      "2.2.2",
+      "27.10.1"
+    ]
+  },
+  {
+    "id": "18.2.6",
+    "section": "18.2.6",
+    "title": "HQ Capability Restrictions",
+    "summary": "The only HQ combat capability usable under a Clearing marker or in an All-Sea/Inshore/At Sea Box is Combat Support; each HQ may use its capabilities twice per game turn.",
+    "text": "**18.2.6 HQ Capability Restrictions**\n\nThe only HQ combat capability which can be used if the HQ is under a Clearing marker or in an All-Sea hex, Inshore Box, or At Sea Box, i.e., on an AMPH, is Combat Support. For an Amphibious Assault the Combat Support Strength is halved rounded down.\n\n**Design Note:** *This CS represents the use of drones.*\n\nEach HQ can utilize its combat capabilities twice during a game turn. It can, however, use these capabilities only once in any single Strike Phase or Combat Segment (so it cannot, for example, support two combats in the same Combat Segment).\n\nRotate the HQ 90\u00b0 (just like Attack Helicopters) when the HQ conducts a Strike or provides Combat Support. An HQ that is rotated 180\u00b0 is not eligible to use any combat capabilities this GT.\n\nHQ combat capabilities can be reduced by enemy Special Operations Forces Raids or Strikes via placement of Strike markers (27.3). Each time an HQ receives a Strike result (1, 2, or X), it loses one of its combat capabilities for the rest of that game turn.",
+    "crossRefs": [
+      "27.3"
+    ]
+  },
+  {
+    "id": "18.3",
+    "section": "18.3",
+    "title": "Supreme HQs",
+    "summary": "Supreme HQs have extended range for HQ Strikes and cannot provide combat or CW support; all units of a side are subordinate to them.",
+    "text": "**18.3 Supreme HQs**\n\nThe GSR will indicate if a side has a Supreme HQ. All units of a side are subordinate to it.\n\n**18.3.1 Combat Capabilities**\n\nSupreme HQs cannot provide combat or CW support. They have an extended range, as shown on the counter, for their HQ Strikes (representing Surface-to-Surface missiles).",
+    "crossRefs": []
+  },
+  {
+    "id": "18.4",
+    "section": "18.4",
+    "title": "HQ Step Losses",
+    "summary": "HQs with a step loss incur a +1 DRM to their HQ Strike capability.",
+    "text": "**18.4 HQ Step Losses**\n\nHQs with a step loss incur a \"+1\" DRM to their HQ Strike capability.",
+    "crossRefs": []
+  },
+  {
+    "id": "18.5",
+    "section": "18.5",
+    "title": "Elimination",
+    "summary": "HQs are eliminated like other units when all their steps are destroyed.",
+    "text": "**18.5 Elimination**\n\nHQs are eliminated, like other units, when all their \"steps\" are destroyed.",
+    "crossRefs": []
+  },
+  {
+    "id": "18.6",
+    "section": "18.6",
+    "title": "Artillery",
+    "summary": "Artillery and MLRS units provide fire support and can conduct Strikes and column shifts in combat during the Advanced Game.",
+    "text": "**18.6 Artillery**\n\nArtillery (including MLRS and Rocket Artillery) units are specifically dedicated to providing fire support. Artillery units are treated as ground units in most respects except that they can also provide column shifts in combat (9.5.6) and conduct Strikes in the Advanced Game during Strike Phases. Artillery that are part of a formation can only provide Combat Support to units that belong to that same formation or a sub-formation of its HQ.\n\nThey are treated similarly to HQs regarding their combat capability usage and recovery (19.5, 27.3).",
+    "crossRefs": [
+      "9.5.6",
+      "19.5",
+      "27.3"
+    ]
+  },
+  {
+    "id": "18.6.1",
+    "section": "18.6.1",
+    "title": "Artillery Strikes",
+    "summary": "Artillery units can conduct Strikes during the Artillery Strike step using the \"Other HQ/Arty\" column; they can also conduct Interdiction Strikes.",
+    "text": "**18.6.1 Artillery Strikes**\n\nArtillery units can conduct strikes during the Artillery Strike step of the Strike Phase. All such Strikes are conducted using the \"Other HQ/Arty\" column cross-referenced with the appropriate terrain and using all applicable DRMs. A unit cannot be the target of more than one Artillery Strike in a Phase. This is in addition to any HQ Strike.\n\nArtillery units can also conduct Interdiction Strikes by cross-referencing the column noted for use by Artillery with the appropriate terrain type and applying any DRMs.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.0",
+    "section": "19.0",
+    "title": "SUPPLY",
+    "summary": "Advanced Game supply rules supersede the optional Standard Game supply rules; supply is checked twice in Initiative Turns and once in Contested Turns.",
+    "text": "**19.0 Supply**\n\n**Design Note:** *In order to perform at maximum effectiveness, ground units must be \"in supply.\" This represents the steady flow of beans and bullets (food and ammunition) as well as spare parts, clothing, mail, and everything else a unit needs to be fully functional.*\n\nThese rules supersede the optional supply rules in the Standard Game. Supply is checked twice in Initiative Turns and only once in Contested Turns as per the Sequence of Play which should be followed exactly as the two Supply Phases are slightly different.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.1",
+    "section": "19.1",
+    "title": "Supply Sources",
+    "summary": "Each side has four possible Supply Sources\u2014Urban hexes, Supply Depots, Ports, and Beachheads\u2014each with a range in Motorized MPs.",
+    "text": "**19.1 Supply Sources**\n\nEach side has four possible Supply Sources: Urban hexes, Supply Depots, Ports, and Beachheads. GSRs may specify additional Supply Sources; also see (19.1.2). Each has a range over which it can supply HQs and ground units. Ranges (in Motorized MP) are:\n\n- Beachhead: 4 MPs\n- Urban hex (in friendly country): 6 MPs\n- Supply Depot: 8 MPs\n\nUrban hexes in a friendly country that do not contain an enemy control marker are supply sources throughout the game. Such hexes with an enemy control marker cease to function as supply sources until they are retaken by friendly forces.\n\nA Beachhead can only provide supply if the owning player Controls (not Contested) the Inshore box of the Sea Zone in which it is situated, and it is not a Storm turn. Use the appropriate side of the Beachhead counter to indicate its ability to provide supply.\n\nThe GSR may specify additional locations, conditions, or requirements affecting Supply Sources.",
+    "crossRefs": [
+      "19.1.2"
+    ]
+  },
+  {
+    "id": "19.1.1",
+    "section": "19.1.1",
+    "title": "Ports",
+    "summary": "A friendly-controlled port not in an EZOC can provide supply if allowed by GSR.",
+    "text": "**19.1.1 Ports**\n\nA friendly-controlled port not in an EZOC can provide supply, if allowed by GSR. The GSR may specify additional conditions.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.1.2",
+    "section": "19.1.2",
+    "title": "Airbase/Airfield Supply",
+    "summary": "If a side has any level of Air Superiority, airborne and airmobile units may mark any non-Strike 2/non-Destroyed friendly Airbase or Airfield as a Supply Source with a range of 4 Motorized MPs.",
+    "text": "**19.1.2 Airbase/Airfield Supply**\n\nIf their side has any level of Air Superiority, airborne and airmobile units can mark any one friendly-controlled Airbase or Airfield that is not in an EZOC that is not marked Strike 2 or Destroyed as a Supply Source (19.1). Such an Airbase or Airfield has a supply range of 4 Motorized MPs. Airborne or Airmobile HQs using it for supply can only supply their subordinate Airborne or Light Infantry units. Mark the Airbase/Airfield being used for such supply with the appropriate Airborne Supply during any Supply Phase. The marker can be removed and placed elsewhere during a Supply Phase unless it has been used to supply units in that turn. If a nationality does not have an appropriate marker, it cannot use Airbase/Airfield Supply.",
+    "crossRefs": [
+      "19.1"
+    ]
+  },
+  {
+    "id": "19.1.3",
+    "section": "19.1.3",
+    "title": "AMPHs",
+    "summary": "Units embarked on AMPHs are always in supply.",
+    "text": "**19.1.3 AMPHs**\n\nUnits embarked on AMPHs are always in supply.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.2",
+    "section": "19.2",
+    "title": "Line of Communication (LOC)",
+    "summary": "Ground units must trace a contiguous line of hexes using motorized movement back to a Supply Source or within 4 MPs to an in-supply HQ.",
+    "text": "**19.2 Line of Communication (LOC)**\n\nTo be in supply, ground units (including HQs) must be able to trace a contiguous line of hexes using motorized movement back to a Supply Source (according to Supply Source range) or no more than 4 MPs to an HQ to which it is subordinate that is itself in supply during the Supply Phase of each game turn. One MSU (19.2.3) can be used to extend the range between the Supply Source and the HQ and/or unit. [See LOC Diagram.] This LOC cannot be traced into or through enemy units, EZOCs, prohibited terrain, or enemy-controlled Urban hexes. Enemy-controlled Cities and Installation in hexes can be Bypassed.\n\nFriendly combat units (2.2.2) negate EZOCs for the purpose of tracing supply.",
+    "crossRefs": [
+      "19.2.3",
+      "2.2.2"
+    ]
+  },
+  {
+    "id": "19.2.1",
+    "section": "19.2.1",
+    "title": "Airmobile/Airborne/Amphibious Assault",
+    "summary": "Units already in supply when they use Airborne, Airmobile, or Amphibious Assault movement are in supply for the remainder of that turn.",
+    "text": "**19.2.1 Airmobile/Airborne/Amphibious Assault**\n\nUnits that are already in supply at the time they use Airborne (8.5.3) or Airmobile (8.5.4) Movement or Amphibiously Assault (8.5.8) are in supply for the remainder of that turn.",
+    "crossRefs": [
+      "8.5.3",
+      "8.5.4",
+      "8.5.8"
+    ]
+  },
+  {
+    "id": "19.2.2",
+    "section": "19.2.2",
+    "title": "MSUs",
+    "summary": "An MSU must itself be in supply from a Supply Source in order to extend the LOC to HQs or ground units.",
+    "text": "**19.2.2 MSUs**\n\nIn order for an MSU to extend the LOC to HQs or ground units, it must itself be in supply from a Supply Source (19.1).",
+    "crossRefs": [
+      "19.1"
+    ]
+  },
+  {
+    "id": "19.2.3",
+    "section": "19.2.3",
+    "title": "Adjacency",
+    "summary": "A ground unit can trace to an adjacent Supply Source or in-supply MSU or HQ regardless of movement cost.",
+    "text": "**19.2.3 Adjacency**\n\nA ground unit can trace to an adjacent Supply Source or in supply MSU or HQ regardless of the movement cost. A Leg unit can always do so; a Motorized or Mechanized unit can only do so into terrain that is not prohibited to it for movement.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.3",
+    "section": "19.3",
+    "title": "Supply Points",
+    "summary": "Each scenario designates the number of Supply Points each side receives at game start; players spend Supply Points for MSUs, Supply Depots, resupply, reconstitution, and track repair.",
+    "text": "**19.3 Supply Points**\n\nEach scenario designates the number of Supply Points that each side receives at the start of the game. Players place their \"Supply Points\" markers on the Game Record Track to record the number of Supply Points available. Each player can spend Supply Points throughout the turn for creating MSUs, converting MSUs into Supply Depots (19.4), providing Emergency Resupply (19.6), Reconstituting HQ units (18.4), rebuilding Destroyed Installations (27.9.1), repairing Air Defense Tracks (27.9.2), and Replacements for Air Units (27.9.3.3).\n\nOnce a player's Supply Points reach zero, he can no longer spend them for any purpose until more Supply Points arrive.\n\nSupply Points can be replenished if the scenario dictates that they are received during the game or by converting depots or MSUs back into Supply Points. Supply Points can also be gained by eliminating enemy Supply Depots and MSUs (19.4.1).",
+    "crossRefs": [
+      "19.4",
+      "19.6",
+      "18.4",
+      "27.9.1",
+      "27.9.2",
+      "27.9.3.3",
+      "19.4.1"
+    ]
+  },
+  {
+    "id": "19.4",
+    "section": "19.4",
+    "title": "Supply Depots and MSUs",
+    "summary": "Each nationality may begin with Supply Depots and MSUs as specified in the scenario; during the First Supply Phase players can create new MSUs and Supply Depots or convert either to Supply Points.",
+    "text": "**19.4 Supply Depots and MSUs**\n\nEach nationality may begin with Supply Depots and MSUs as specified in the scenario. These can be set up anywhere in a player's home country as desired.\n\nDuring the First Supply Phase of each game turn, both players can spend Supply Points to create new MSUs and Supply Depots or convert either to Supply Points.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.4.1",
+    "section": "19.4.1",
+    "title": "MSU Creation and Conversion",
+    "summary": "A player may spend one Supply Point to create an MSU atop a Supply Depot or friendly-controlled Urban hex; two MSUs can be created by removing a Supply Depot at no Supply Point cost.",
+    "text": "**19.4.1 MSU Creation and Conversion**\n\nA player may spend one Supply Point to create an MSU and place it atop a Supply Depot or friendly-controlled Urban hex in a friendly country. Two MSUs can also be created by removing a Supply Depot and placing them in the Depot's former hex. This process costs no Supply Points.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.4.2",
+    "section": "19.4.2",
+    "title": "MSU Conversion to Supply Depot",
+    "summary": "A player may convert an MSU into a Supply Depot for two Supply Points by placing a Supply Depot in the hex the MSU occupies, which must itself be in supply.",
+    "text": "**19.4.2 MSU Conversion to Supply Depot**\n\nA player may convert an MSU into a Supply Depot for two Supply Points by placing (or flipping the MSU) a Supply Depot in the hex the MSU occupies. This hex must itself be in supply from a Supply Source.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.4.3",
+    "section": "19.4.3",
+    "title": "Supply Point Conversion",
+    "summary": "Players can convert Supply Depots and MSUs back into Supply Points by removing them from the map.",
+    "text": "**19.4.3 Supply Point Conversion**\n\nPlayers can \"convert\" Supply Depots and MSUs into Supply Points by removing the Depot or MSU from the map and adding Supply Points to the player's total, two for Supply Depots or one per MSU, on the Game Record Track.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.4.4",
+    "section": "19.4.4",
+    "title": "Supply Depot Creation",
+    "summary": "Players can create new Supply Depots by spending 4 Supply Points and placing one in a hex that is in supply and not in an enemy ZOC.",
+    "text": "**19.4.4 Supply Depot Creation**\n\nPlayers can create new Supply Depots by spending 4 Supply Points and placing one in a hex that is in supply from another Supply Source and not in an enemy ZOC.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.4.5",
+    "section": "19.4.5",
+    "title": "Limits",
+    "summary": "Supply Depots/MSUs are limited to the counter-mix; eliminated Supply Depots/MSUs are available to be rebuilt.",
+    "text": "**19.4.5 Limits**\n\nSupply Depots/MSUs are limited to the counter-mix. Supply Depots/MSUs eliminated for any reason are available to be rebuilt.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.4.6",
+    "section": "19.4.6",
+    "title": "Supply and Isolation",
+    "summary": "Supply Depots/MSUs are never out of supply; MSUs can be Isolated.",
+    "text": "**19.4.6 Supply and Isolation**\n\nSupply Depots/MSUs are never out of supply. MSUs can be Isolated. (19.7)",
+    "crossRefs": [
+      "19.7"
+    ]
+  },
+  {
+    "id": "19.4.7",
+    "section": "19.4.7",
+    "title": "Movement & Combat",
+    "summary": "MSUs move as normal ground units; Supply Depots/MSUs can be attacked like any other unit and may cause over-stacking losses; eliminating enemy Supply Depots/MSUs gives the eliminating player one Supply Point.",
+    "text": "**19.4.7 Movement & Combat**\n\nMSUs have a movement allowance and can move normally during any friendly Movement Segment. They can be transported by Sea Transport in the same manner as other units.\n\nSupply Depots/MSUs either alone or stacked with other units can be attacked like any other units. They can only be used to satisfy step losses if there are no other units in the hex still capable of taking a step loss. If forced to retreat, Supply Depots are eliminated, while MSUs are eliminated only if forced to retreat into an EZOC.\n\nSupply Depots and MSUs eliminated in ground combat provide the eliminating player one Supply Point to their total on the Game Record Track.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.5",
+    "section": "19.5",
+    "title": "Effects of Being Marked as Out of Supply",
+    "summary": "Out of supply units have Attack and Movement ratings halved, ER reduced by one, cannot move in Elite Reaction or Exploitation segments, and cannot receive Replacements.",
+    "text": "**19.5 Effects of Being Marked as Out of Supply**\n\nA unit that is out of supply (OoS) has its Attack and Movement ratings halved (9.4) (to a minimum of one), and its Efficiency Rating reduced by one.\n\nAny unit that is out of supply cannot move in either the Elite Reaction or Exploitation Movement Segments.\n\nAirmobile Mobility class units that are marked out of supply cannot move by intrinsic airmobile movement until resupplied. (They could be moved by expending Airmobile Points.)\n\nHQs/Arty that are out of supply retain the current number of combat capabilities, but, once used, may not recover them during the Reorganization Phase. OoS HQs do not provide DRMs for Air Defense Fire.\n\nUnits that are out of supply cannot receive Replacements even if placed into Supply via Emergency Resupply.",
+    "crossRefs": [
+      "9.4"
+    ]
+  },
+  {
+    "id": "19.6",
+    "section": "19.6",
+    "title": "Emergency Resupply",
+    "summary": "During either Supply Phase, players can expend up to three Supply Points per unit or HQ to attempt resupply via the Emergency Resupply Table; successful resupply lasts the entire turn.",
+    "text": "**19.6 Emergency Resupply**\n\nDuring either Supply Phase of the Game Turn, both players can expend Supply Points to attempt to re-supply ground units. The counter mix represents a limit on the number of markers that may be placed.\n\nFor this purpose, a player can spend up to three Supply Points in a Supply Phase. Each point of allocation can be used to resupply an individual unit OR the three points can resupply one HQ. When this occurs, decrease the player's remaining Supply Points (one for each individual unit OR three for an HQ) and roll once for each such attempt on the Emergency Resupply Table. If the result is \"Supply\", mark the unit(s) with an Emergency Resupply counter. If an HQ is successfully resupplied, it becomes a temporary Supply Source that can be used immediately to provide supply to subordinate units. Otherwise, it remains unsupplied. In either case, the SPs are spent. Only one resupply attempt can be made per unit or HQ in any given Emergency Resupply Phase. Emergency Resupply lasts for the entire turn. The marker is removed during the appropriate step in the SOP.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.7",
+    "section": "19.7",
+    "title": "Isolation",
+    "summary": "Isolated units are cut off from their formations and completely surrounded by enemy units, differing from being out of supply.",
+    "text": "**19.7 Isolation**\n\nIsolation is not the same, in game terms, as being out of supply. While supply deals with units that are unable to receive adequate food and munitions for combat, isolated units represent those that are cut off from their formations and completely surrounded by enemy units.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.7.1",
+    "section": "19.7.1",
+    "title": "Determining Isolation",
+    "summary": "During the Isolation/Surrender Phase, players determine which units are Isolated by checking if they can trace a path free of enemy units or ZOCs to a friendly Supreme HQ or any Supply Source.",
+    "text": "**19.7.1 Determining Isolation**\n\nDuring the Isolation/Surrender Phase of each game turn, both players determine which, if any, of their units are Isolated. Players place \"Isolated\" markers atop such units.\n\nIsolated units are those that cannot trace a path of contiguous land hexes (of any length) free of enemy units or their ZOCs to any friendly Supreme HQ or any Supply Source (19.1). Game Specific Rules may provide additional methods to avoid Isolation. EZOCs occupied by friendly units do not count for this purpose. The path cannot be traced through/over hexes/hexsides that the unit is prohibited from entering/crossing. The GSR may modify the conditions for Isolation.\n\nUnits that currently possess an Emergency Supply marker or can trace an LOC to any HQ with one are not Isolated.\n\nAn MSU is a Supply Source for the purpose of determining Isolation even if it is, itself, Isolated.\n\n**Design Note:** *In effect, the units in the \"pocket\" use up the MSU to avoid Isolation themselves.*\n\nAirborne, Airmobile, and Marine units can never become Isolated on the same turn that they use Airborne or Airmobile Movement or Amphibiously Assault.",
+    "crossRefs": [
+      "19.1"
+    ]
+  },
+  {
+    "id": "19.7.2",
+    "section": "19.7.2",
+    "title": "Effects of Isolation",
+    "summary": "Isolated units have attack, defense, and movement halved; Isolated HQs lose all combat capabilities and cannot modify Air Defense Fire.",
+    "text": "**19.7.2 Effects of Isolation**\n\nThe attack, defense, and movement ratings of Isolated units are halved (rounded down to a minimum of 1). Strike marker (27.3) effects should be assessed before halving. If a unit is both OoS and Isolated, all effects apply, but a value can only be halved once. Isolated HQs cannot use any combat capabilities (rotate them 180\u00b0), nor can they modify Air Defense Fire. Isolated units cannot receive replacements. Isolated units are subject to surrender (see below).",
+    "crossRefs": [
+      "27.3"
+    ]
+  },
+  {
+    "id": "19.7.3",
+    "section": "19.7.3",
+    "title": "Recovering from Isolation",
+    "summary": "As the first step in the Isolation/Surrender Phase, both players remove Isolation markers from units that are no longer Isolated.",
+    "text": "**19.7.3 Recovering from Isolation**\n\nAs the first step in the Isolation/Surrender Phase of each turn, both players remove Isolation markers from units that are no longer Isolated.",
+    "crossRefs": []
+  },
+  {
+    "id": "19.7.4",
+    "section": "19.7.4",
+    "title": "Surrender",
+    "summary": "During the Isolation/Surrender Phase, Isolated units that fail an ER Check immediately surrender, are permanently removed, and are worth twice as many VPs as eliminated units.",
+    "text": "**19.7.4 Surrender**\n\nDuring the Isolation/Surrender Phase of each game turn, both players determine whether any of their previously and still isolated units surrender.\n\nMake an ER Check (2.3.3) for each Isolated unit.\n\nUnits that fail this check immediately surrender. They are permanently removed from the game and are worth twice as many VPs as eliminated units. Surrendered units cannot be reconstituted.\n\n*Exception: MSUs are removed from the map and they may be reused.*",
+    "crossRefs": [
+      "2.3.3"
+    ]
+  },
+  {
+    "id": "20.0",
+    "section": "20.0",
+    "title": "SPECIAL OPERATIONS FORCES",
+    "summary": "Special Operations Forces (SOF) conduct missions including Raids, Reconnaissance, and Targeting against enemy targets behind the front lines.",
+    "text": "**20.0 Special Operations Forces**\n\n**Design Note:** *Most nations have numerous and capable Special Operations Forces units. These units are highly trained for specific missions and are usually found operating behind enemy lines. As we have seen in the recent operations in Iraq and Afghanistan, they are an integral and important element of modern war-fighting.*",
+    "crossRefs": []
+  },
+  {
+    "id": "20.1",
+    "section": "20.1",
+    "title": "Mission Allocation and Eligible Targets",
+    "summary": "Covers the SOF Mission Markers each side receives and how they allocate markers to eligible targets before resolving missions.",
+    "text": "**20.1 Mission Allocation and Eligible Targets**",
+    "crossRefs": []
+  },
+  {
+    "id": "20.1.1",
+    "section": "20.1.1",
+    "title": "Special Operations Forces Mission Markers",
+    "summary": "Both sides receive a specified number of SOF Mission markers listed in the scenario setup; new markers may be received as reinforcements.",
+    "text": "**20.1.1 Special Operations Forces Mission Markers**\n\nBoth sides receive a specified number of Special Operations Forces (SOF) Mission markers listed in the scenario setup. Each side may also receive new markers as designated by the reinforcement schedule.\n\nDuring the SOF Phases of each game turn, each player, as designated by the SOP, can allocate some or all of his SOF markers to missions (up to the limit of SOF markers that he has) and resolve the missions.",
+    "crossRefs": []
+  },
+  {
+    "id": "20.1.2",
+    "section": "20.1.2",
+    "title": "Allocation Procedure",
+    "summary": "To allocate missions, a player places his SOF marker atop an eligible enemy target on the map; all missions are allocated before resolving any.",
+    "text": "**20.1.2 Allocation Procedure**\n\nTo allocate missions, a player places his SOF marker atop an eligible enemy target on the map. When allocating missions, players allocate all their missions before resolving any. It is permissible to allocate a marker to Recon in the hopes of being able to subsequently conduct a Raid or Targeting mission on the Recon target, but, should the initial Recon mission fail, the second marker cannot roll and must still roll for survival.",
+    "crossRefs": []
+  },
+  {
+    "id": "20.1.3",
+    "section": "20.1.3",
+    "title": "Eligible Mission Targets",
+    "summary": "Lists all valid targets for SOF Raid, Recon, and Targeting missions including airfields, installations, HQs, supply units, and detection tracks.",
+    "text": "**20.1.3 Eligible Mission Targets**\n\n1. All Airfields and Installations (including Bridges) on the map can be targeted for an SOF \"Raid\" Mission.\n2. Any detected (21.0) enemy HQ, Artillery, Supply Depot, or MSU is an eligible target for an SOF \"Raid\" Mission.\n3. Enemy Detection & SAM Tracks are eligible targets for an SOF \"Detection Track Raid\" Mission.\n4. Any enemy Airfield or Installation or any detected enemy ground unit is eligible as a target for an SOF \"Targeting\" Mission.\n5. Any enemy Attack Helicopter based in a non-Airbase/Airfield City or Urban hex is an eligible target for an SOF \"Raid\" Mission.\n6. Any undetected enemy ground unit is an eligible target for an SOF \"Recon\" Mission.\n7. Some hexes can be targeted for an SOF Interdiction \"Raid\" Mission. (23.4.4)\n8. Land-based Theater and Nuclear Points markers (as defined in the GSR) are eligible targets for an SOF \"Raid\" Mission.\n9. Naval Units in Port are an eligible target for an SOF \"Raid\" Mission.",
+    "crossRefs": [
+      "21.0",
+      "23.4.4"
+    ]
+  },
+  {
+    "id": "20.2",
+    "section": "20.2",
+    "title": "Mission Types",
+    "summary": "SOF missions include Raids, Reconnaissance, and Targeting, each with distinct allocation and resolution procedures.",
+    "text": "**20.2 Mission Types**",
+    "crossRefs": []
+  },
+  {
+    "id": "20.2.1",
+    "section": "20.2.1",
+    "title": "Raids",
+    "summary": "SOF Raid missions target HQs, supply units, airfields, installations, helicopters, theater weapons, and naval units in port; each hex or unit can be targeted by one SOF Raid per turn.",
+    "text": "**20.2.1 Raids**\n\nEach SOF Raid mission can target a single one of the following. (You must allocate multiple raids if you wish to attack multiple units/Installations in a single hex.)\n\n- Any detected HQ, Supply Depot, or MSU.\n- Attack Helicopters, Airfields, and Installations (including Bridges).\n- Mountain, High Mountain, Highland, Highland Woods, Rough Woods, Flat Woods, or Jungle hexes targeted for Interdiction (23.4.4).\n- Enemy Detection and/or SAM Track.\n- Enemy Theater Weapon Points.\n- Naval Units in a Port.\n\nA hex, unit, or Installation can only be the target of an SOF Raid once per turn.\n\nA Raid is performed by rolling a die, applying DRMs, and cross-referencing the result with the \"Raid\" column for the appropriate terrain type in the hex and the type of unit/Installation/hex being attacked and apply the results. All successful results are given as Strike 1, Strike 2, or Step Loss. If the mission is successful, immediately place a Strike marker or allocate a step loss to the attacked unit in accordance with the raid result. If the target of the Strike was an Airfield or Airbase, and Strike Damage resulted from the Raid, roll for Collateral Damage. If the target of the Strike was an Attack Helicopter, any result causes a Step Loss against the unit.\n\n**20.2.1.1 Raid Enemy ADF Track:** Each player can Raid the Detection and/or SAM marker on the ADF Track. Each marker can be attacked once per turn.\n\nTo resolve an attack, roll once per mission on the \"Attack Detection/SAM/Theater Weapons\" column of the SOF CRT, apply any DRMs, and apply the results as per the chart.\n\n**20.2.1.2 Raid Enemy Theater Weapon Points:** Theater Weapons Points, i.e., Cruise Missile or SCUD/Missile markers, can be attacked more than once per turn, provided the player allocates an SOF marker per mission.\n\nTo resolve an attack, roll once per mission on the \"Attack Detection/SAM/Theater Weapons\" column of the SOF CRT, apply any DRMs, and apply the results as per the chart.",
+    "crossRefs": [
+      "23.4.4"
+    ]
+  },
+  {
+    "id": "20.2.2",
+    "section": "20.2.2",
+    "title": "Reconnaissance",
+    "summary": "Recon missions are allocated against undetected enemy ground units, supply units, or HQs; a \"D\" result detects the target, enabling Raid or Targeting missions.",
+    "text": "**20.2.2 Reconnaissance**\n\nRecon Missions are allocated against undetected enemy ground units, supply units, or HQs. No more than one Recon attempt can be made per enemy unit per turn.\n\nTo perform a mission, roll a die and read the result for the terrain in the hex and the type of unit being detected under the \"Recon\" column of the SOF CRT. A \"D\" result indicates a successful mission. Place a \"Detected\" marker on the enemy unit. A Raid or Targeting Mission can be allocated against a unit that was detected by Recon in the same Phase, as, while all SOF missions must be declared before any are resolved, they are resolved in any order the owning player desires.",
+    "crossRefs": []
+  },
+  {
+    "id": "20.2.3",
+    "section": "20.2.3",
+    "title": "Targeting",
+    "summary": "SOF Targeting missions place a Targeted marker on detected ground units, airfields, bridges, and installations, allowing favorable DRMs against them for the rest of the turn.",
+    "text": "**20.2.3 Targeting**\n\nEach player can use SOF markers to \"Target\" detected ground units, Airfields, Bridges, and Installations. A successful Targeting mission allows the targeting player to apply favorable DRMs against the targeted unit or Installation during subsequent Strike missions throughout the remainder of the turn. Only one marker can be placed per target.\n\nTo resolve a Targeting mission, roll one die on the \"Targeting\" column of the SOF CRT. A \"T\" indicates the unit is targeted.\n\nPlace a \"Target \u20131\" or a \"Target \u20132\" marker on the targeted unit as indicated by the Game Specific Rules or as noted on the counter.\n\nTargeted markers move with the unit and are removed in the Reorganization Phase. A Targeted unit is Detected (21.0) for the turn.",
+    "crossRefs": [
+      "21.0"
+    ]
+  },
+  {
+    "id": "20.3",
+    "section": "20.3",
+    "title": "Special Operations Forces Survival",
+    "summary": "After each SOF Mission is resolved, roll immediately for Survival on the SOF Survival Table; eliminated SOF counters go to the Eliminated box, others go to the Used box until the Reorganization Phase.",
+    "text": "**20.3 Special Operations Forces Survival**\n\nAfter each SOF Mission has been resolved, immediately roll for Survival on the \"SOF Survival\" Table for the SOF marker that conducted the mission. Roll the die and cross-reference the die roll on the table, applying all modifiers, to find the result. A counter that is Eliminated is placed in the Eliminated box on the Game Information Display and is available as a reinforcement later. If a counter is not Eliminated, it is placed in the Used box until it is moved to the Available box in the Reorganization Phase. If an SOF marker is assigned a mission but is not used in any capacity, it still must make a Survival Roll at the end of the SOF Phase.\n\n**Design Note:** *Some nations have a potentially significant advantage in survivability. This represents their superior air insertion and retrieval capabilities, not necessarily more highly skilled units.*",
+    "crossRefs": []
+  },
+  {
+    "id": "20.4",
+    "section": "20.4",
+    "title": "Reinforcements",
+    "summary": "Each side may receive additional SOF markers as reinforcements placed in the Available box, drawn from counters not yet in play or from the Eliminated box.",
+    "text": "**20.4 Reinforcements**\n\nEach side may receive additional SOF markers as reinforcements. They are placed in the Available box. These can be taken either from counters not yet in play or from those in the Eliminated box on the Game Information Display. However, in no case can a player have in play more markers than are in the counter mix. Such reinforcements unable to be used are lost.",
+    "crossRefs": []
+  },
+  {
+    "id": "21.0",
+    "section": "21.0",
+    "title": "DETECTION",
+    "summary": "In the Advanced Game, ground targets must be Detected before they can be attacked by Strike Missions; detection occurs via Automatic Detection, Air Reconnaissance, Electronic Detection, or SOF Reconnaissance.",
+    "text": "**21.0 Detection**\n\nIn the Advanced Game, ground targets must be Detected before they can be attacked by Strike Missions (Theater Weapon Strikes, HQ Strikes, Helicopter Strikes, or Air Strikes). Enemy units can be Detected in one of four ways:\n\n1. Automatic Detection.\n2. Air Reconnaissance (21.2).\n3. Electronic Detection (21.3).\n4. Detection by Special Operations Forces Reconnaissance (21.4).\n\nA Targeted unit remains Detected for the turn.",
+    "crossRefs": [
+      "21.2",
+      "21.3",
+      "21.4"
+    ]
+  },
+  {
+    "id": "21.1",
+    "section": "21.1",
+    "title": "Automatic Detection",
+    "summary": "Certain targets are always Detected for purposes of Strikes: all Installations, Airfields, Beachheads, Bridges, and all enemy units adjacent to a friendly ground unit.",
+    "text": "**21.1 Automatic Detection**\n\nThe following targets are always \"Detected\" for purposes of Strikes:\n\n1. All Installations, Airfields, Beachheads, and Bridges.\n2. All enemy units adjacent to a friendly ground unit. Units in the same Island Land Area are considered adjacent.",
+    "crossRefs": []
+  },
+  {
+    "id": "21.2",
+    "section": "21.2",
+    "title": "Air Reconnaissance",
+    "summary": "In non-Storm turns, all MSUs and combat units not in Jungle, Highland, Highland Woods, Mountain, or Urban hexes are automatically detected on both the Operational Map and Strategic Display by Air Reconnaissance.",
+    "text": "**21.2 Air Reconnaissance**\n\nIn non-Storm turns, all MSUs and combat units (2.2.2) NOT in Jungle, Highland, Highland Woods, Mountain, or Urban are automatically detected on both the Operational Map and Strategic Display. HQs, Artillery, and Supply Depots are never detected by Air Reconnaissance. GSRs may contain additional rules or restrictions.\n\n**Design Note:** *This reflects Theater Reconnaissance assets such as the U.S. JSTARS platforms, as well as tactical reconnaissance capabilities and UAVs (\"drones\").*\n\n**Play Note:** *Detection Ranges have been removed due to the ubiquitous presence of drones. Game Specific Rules may alter this for specific nationalities and/or conditions.*",
+    "crossRefs": [
+      "2.2.2"
+    ]
+  },
+  {
+    "id": "21.3",
+    "section": "21.3",
+    "title": "Electronic Detection",
+    "summary": "During the Electronic Detection Phase, players alternately roll on the Electronic Detection Table to attempt detection of specific enemy HQs and Artillery units.",
+    "text": "**21.3 Electronic Detection**\n\n**Design Note:** *This represents each side's efforts to detect the other's HQs and Artillery by a host of electronic means. Some nations, with superior electronics and advanced Electronic Warfare capabilities, have a big advantage in this area.*\n\nDuring the Electronic Detection Phase of each game turn, each player\u2014alternating\u2014rolls on the Electronic Detection Table to attempt detection of specific enemy HQs and Artillery units. Supreme HQs or HQs on AMPHs cannot be chosen as targets for Electronic Detection. The Electronic Detection Table and the GSR will indicate the number of allowable rolls per nation.\n\nTo resolve each attempt, designate the target and roll once on the Electronic Detection Table under the appropriate column. A player can attempt to detect a target more than once in the phase. A \"D\" result indicates that the targeted unit was \"Detected\". Place a \"Detected\" marker on all detected targets.",
+    "crossRefs": []
+  },
+  {
+    "id": "21.3.1",
+    "section": "21.3.1",
+    "title": "Weather Effects",
+    "summary": "Storm turns reduce each nationality's Electronic Detection attempts by two.",
+    "text": "**21.3.1 Weather Effects**\n\nStorms reduce each nationality's attempts by two.",
+    "crossRefs": []
+  },
+  {
+    "id": "21.4",
+    "section": "21.4",
+    "title": "Special Operations Forces Reconnaissance",
+    "summary": "SOF Recon is the only means to detect the enemy Supreme HQ or Supply Depots that are not adjacent to a friendly ground unit.",
+    "text": "**21.4 Special Operations Forces Reconnaissance (20.2.2)**\n\nSOF Recon is the only means to detect the enemy Supreme HQ or Supply Depots that are not adjacent to a friendly ground unit.",
+    "crossRefs": [
+      "20.2.2"
+    ]
+  },
+  {
+    "id": "21.5",
+    "section": "21.5",
+    "title": "Naval Detection",
+    "summary": "Naval Detection rules are found in section 17.1.2.",
+    "text": "**21.5 Naval Detection**\n\n[see (17.1.2)]",
+    "crossRefs": [
+      "17.1.2"
+    ]
+  },
+  {
+    "id": "22.0",
+    "section": "22.0",
+    "title": "AIR POWER",
+    "summary": "The Advanced Air Game rules governing Air Unit Basing, Air Superiority Combat, Air-to-Ground Missions, and Air Defenses, replacing Standard Game Air Point and Air Defense Fire rules.",
+    "text": "**22.0 Air Power**\n\n**Design Note:** *This air game is not for the faint of heart. It will add significantly to the time necessary to play the game. It will also provide a much more accurate look at how the belligerents might fight a future war and use air power to affect the outcome.*\n\nThe Advanced Game uses the air units included in the counter mix.\n\n**Important:** *Ignore all Standard Rules regarding Air Points and Air Defense Fire. Substitute the following rules instead:*",
+    "crossRefs": []
+  },
+  {
+    "id": "22.1",
+    "section": "22.1",
+    "title": "Air Unit Basing",
+    "summary": "The Basing Box for an Air Unit is important for range, and for destruction tracking when friendly Airbases/Airfields are damaged, destroyed, or captured.",
+    "text": "**22.1 Air Unit Basing**\n\nThe Basing Box (22.4) for an Air Unit is important for purposes of range and possible destruction as friendly Airbases/Airfields are damaged, destroyed, or captured. It is an abstract representation of all the Airbases/Airfields associated with the Basing Box, e.g., in *Next War: India-Pakistan* all Indian Airbases/Airfields in India are associated with the India Basing Box.",
+    "crossRefs": [
+      "22.4"
+    ]
+  },
+  {
+    "id": "22.1.1",
+    "section": "22.1.1",
+    "title": "The Air Display",
+    "summary": "The Air Display is the central tracking area for all air units; it contains boxes representing Airbases/Airfields and Carrier/Sea Zone basing areas.",
+    "text": "**22.1.1 The Air Display**\n\nThe Air Display is the focal point of the Advanced Air Game. All air units are placed in one of the boxes on this Display, which represent Airbases/Airfields in the operational area. Smaller boxes represent Carrier-based aircraft in the surrounding Sea Zones or Inshore Boxes.",
+    "crossRefs": []
+  },
+  {
+    "id": "22.1.2",
+    "section": "22.1.2",
+    "title": "Basing Limitations",
+    "summary": "The GSR restricts where Air Units can base.",
+    "text": "**22.1.2 Basing Limitations**\n\nThe GSR restrict where Air Units can base.",
+    "crossRefs": []
+  },
+  {
+    "id": "22.1.3",
+    "section": "22.1.3",
+    "title": "Basing Boxes",
+    "summary": "The Air Display includes Ready, Flown, Aborted, and sometimes Recovery boxes; only units in the Ready box are eligible to fly missions.",
+    "text": "**22.1.3 Basing Boxes**\n\nThe Air Display includes boxes divided into areas for Ready, Flown, and Aborted Aircraft. In some cases, a Recovery area is shown. When a Recovery area exists, air units are placed in it, rather than the \"Flown\" area after conducting a mission. All Air Units not currently flying a mission will be in one of these boxes. Only units in the \"Ready\" box are eligible to fly missions. Units in the \"Abort\" or \"Recovery\" box must pass a maintenance die roll (listed in each box) to move to the \"Ready\" box during the Reorganization Phase. Units that fail the die roll spend the following turn in the \"Flown\" box instead.",
+    "crossRefs": []
+  },
+  {
+    "id": "22.1.4",
+    "section": "22.1.4",
+    "title": "Damage to Units in Basing Boxes",
+    "summary": "Units in basing boxes can be damaged when originally Controlled, friendly Airfields or Airbases are damaged or destroyed.",
+    "text": "**22.1.4 Damage to Units in Basing Boxes**\n\nUnits in basing boxes can be damaged when originally Controlled, friendly Airfields or Airbases are damaged (or destroyed) (27.6).",
+    "crossRefs": [
+      "27.6"
+    ]
+  },
+  {
+    "id": "22.2",
+    "section": "22.2",
+    "title": "Aircraft Ratings, Weather, and Mission Eligibility",
+    "summary": "Explains how weather degrades air unit combat ratings, and the conditions under which units are ineligible to fly certain missions.",
+    "text": "**22.2 Aircraft Ratings, Weather, and Mission Eligibility**\n\nEach air unit contains several numeric values; for an explanation of the ratings, see (15.2).\n\nAir units cannot fly a mission that they do not have a rating of \"1\" or more. This rating may be modified by weather.",
+    "crossRefs": [
+      "15.2"
+    ]
+  },
+  {
+    "id": "22.2.1",
+    "section": "22.2.1",
+    "title": "Weather Effects on Air Unit Ratings",
+    "summary": "Bad weather degrades combat ratings; values can only be halved once; Overcast halves ratings for non-All-Weather units, Storms halve all units' ratings.",
+    "text": "**22.2.1 Weather Effects on Air Unit Ratings**\n\nBad weather can degrade an air unit's combat ratings. Values can only be halved once; multiple halving effects are ignored.\n\n*Exception: Air units used to conduct Cruise Missile Strikes are immune to Weather conditions.*\n\n**22.2.1.1 Overcast:** All units that have an \"A\" in the upper left corner of their counter (to denote \"All-Weather\" capability) fly normally during Overcast turns. Units without the \"A\" rating have all three of their combat ratings halved (rounded down). This may reduce some units' ratings (i.e., \"1\") to \"0\", thus making them ineligible to fly that particular rating. Units that are obviously incapable of flying any missions (i.e., all three ratings are reduced to \"0\") should be moved to the Flown box as a reminder that they cannot fly any missions.\n\n**22.2.1.2 Storms:** Units with an \"A\" rating have all three of their combat ratings halved (rounded down). Units without an \"A\" rating are prohibited from flying during Storm turns. Ready air units that are prohibited from flying during Storms (or because the weather has reduced all their combat ratings to \"0\") are moved from the \"Ready\" box to the \"Flown\" box during the Weather Phase.\n\n**22.2.1.3 Step Losses:** If a unit takes a step loss while flying a mission (including Air Superiority) that affects its rating such that it would be ineligible for the mission, it is immediately placed in its Flown Box after resolving any air-to-air combat round in which it is engaged.",
+    "crossRefs": []
+  },
+  {
+    "id": "22.2.2",
+    "section": "22.2.2",
+    "title": "Carrier Air Wings Eligibility",
+    "summary": "Carrier-based air units may be ineligible for particular missions based on their range and the location of the parent CV unit; carrier-based units are always ineligible if their carrier is in Port.",
+    "text": "**22.2.2 Carrier Air Wings Eligibility**\n\nCarrier based air units may be ineligible for particular missions based on their range and the location of the parent CV unit. The GSR will detail the range effects and list wing compositions. Carrier based air units are always ineligible if their carrier is in Port.",
+    "crossRefs": []
+  },
+  {
+    "id": "22.3",
+    "section": "22.3",
+    "title": "Aircraft Range",
+    "summary": "The range letter on each aircraft counter (S/M/L/U) determines how far the unit can fly missions; Air Transport missions have a range of Unlimited.",
+    "text": "**22.3 Aircraft Range**\n\nThe range of each aircraft (the letter in the upper right hand corner of the counter: S = Short; M = Medium; L = Long; U = Unlimited) determines how far an air unit can fly, and from where. Air Transport missions have a range of U (8.5.2). Range allowances will be specified in the GSR.",
+    "crossRefs": [
+      "8.5.2"
+    ]
+  },
+  {
+    "id": "22.4",
+    "section": "22.4",
+    "title": "Moving Units on the Air Base Displays",
+    "summary": "At game start all air units begin in Ready boxes; during the Air/Naval Phase units may move from Ready to Air Superiority Missions Box or fly other missions; Aborted units go to the Abort box.",
+    "text": "**22.4 Moving Units on the Air Base Displays**\n\nAt the start of a game, all At Start air units will begin in one of the Air Display's \"Ready\" boxes.\n\nDuring the Air/Naval Phase, each player may move any eligible air units from \"Ready\" boxes to the Air Superiority Missions Box. Any units that are \"Aborted\" throughout the turn are immediately placed in the \"Abort\" box in their base country (or carrier).\n\nUnits remaining in the Air Superiority Missions Box at the conclusion of Air Superiority Combat are the only units eligible to fly Escort or Interception *(Exception: Carrier-based Air Units (17.1.4 #2))* missions during the remainder of the game turn. As units are chosen to fly these missions, remove them from the Air Superiority Missions Box and place them with their mission on the target on the game map. After the mission is complete, if they were not Aborted, they are placed in the \"Flown\" or \"Recovery\" area of their original basing box (or carrier).\n\nCarrier-based units must move with their CVs and CVNs. If separate Carrier Basing Boxes are provided for each At Sea Box/Sea Zone and a carrier changes At Sea Boxes/Sea Zones, the Carrier Air Wing is moved to the Carrier Basing Box of the sea zone. Each unit is placed in the same box it occupied in the other sea zone.\n\nDuring the Reorganization Phase of each game turn, all units in \"Flown\" boxes are moved to the same base's \"Ready\" box. Each unit in the \"Abort\" or \"Recovery\" box undergoes a maintenance check to determine whether it will fly missions during the next game turn. Roll one die for each such unit. If the result falls within the range listed on that base's \"Abort\" or \"Recovery\" box for \"Ready,\" place the unit in the \"Ready\" box. If not, place the unit in the \"Flown\" box.\n\nDuring the Reinforcement and Replacement Phase of each game turn, a side may receive air units as reinforcements. When this occurs, place the reinforcements as specified in the Game Specific Rules.",
+    "crossRefs": [
+      "17.1.4"
+    ]
+  },
+  {
+    "id": "22.5",
+    "section": "22.5",
+    "title": "Air Superiority and Air Combat",
+    "summary": "Air Superiority Levels are determined by performing Air Superiority Combat during each turn's Air/Naval Phase; each side's aerial reconnaissance capabilities are determined by the Air Superiority Level.",
+    "text": "**22.5 Air Superiority and Air Combat**\n\nIn the Advanced Game, Air Superiority Levels are determined by performing Air Superiority Combat during each turn's Air/Naval Phase. Each side's aerial reconnaissance capabilities are determined by the Air Superiority Level for this Game Turn.",
+    "crossRefs": []
+  },
+  {
+    "id": "22.6",
+    "section": "22.6",
+    "title": "Air Superiority",
+    "summary": "Air Superiority Levels are determined by the ratio of friendly to enemy aircraft remaining in the Air Superiority Box at the end of Air Superiority Combat.",
+    "text": "**22.6 Air Superiority**\n\nAir Superiority Levels are determined by the ratio of friendly and enemy aircraft remaining in the Air Superiority Box of the Air Display at the end of Air Superiority Combat. Refer to the Air Superiority Display. If one side has zero units in the Air Superiority Box, consider it to have one unit for the purposes of calculating Air Superiority.",
+    "crossRefs": []
+  },
+  {
+    "id": "22.6.1",
+    "section": "22.6.1",
+    "title": "Allocating Units to Air Superiority",
+    "summary": "During the Air Superiority Sortie Step, both players move half their aircraft from damaged Airbases/Airfields with Strike 1 and 2 markers to the Flown box, then the opposing player may move half their aircraft to the Flown box for captured/destroyed Airbases.",
+    "text": "**22.6.1 Allocating Units to Air Superiority**\n\nDuring the Air Superiority Sortie Step of the Air/Naval Phase of each Game Turn, both players count the number of their Airbases/Airfields with Strike 1 and 2 markers. The owning player must move half that number of aircraft (rounded down to a minimum of 1) to the Flown box in the appropriate Basing box.\n\nNext, both players count the number of their originally controlled, friendly Airbases/Airfields either captured or destroyed in the previous turn or the current turn's Initiative Special Operations Forces Phase (if applicable). There is a Special marker for recording this on the General Records Track. The opposing player may move half that number of aircraft (rounded down to a minimum of 1) into the Flown box in the appropriate Basing box.",
+    "crossRefs": []
+  },
+  {
+    "id": "22.6.2",
+    "section": "22.6.2",
+    "title": "Air Superiority Combat",
+    "summary": "Once units are placed in the Air Superiority Box, Air Superiority Combat ensues through a sequence of AWACS Advantage check, engagement declaration, air combat, and Air Superiority Level determination.",
+    "text": "**22.6.2 Air Superiority Combat**\n\nOnce the units are placed, Air Superiority Combat ensues. It is composed of the following steps:\n\n1. Check the AWACS Advantage Level (marked on the map or player aid card). The side with Advantage chooses that many engagements, followed by his opponent choosing one. If the AWACs Advantage is 0, alternate, Initiative/First player first, choosing one engagement. Continue alternating in this fashion.\n\n*Example: The Allied side has an AWACs Advantage of 2. The Allied player chooses an F-22 to engage with a non-Allied MiG-29 and an F-35 to engage with a non-Allied Su-35. The non-Allied player then chooses a single engagement. They alternate in this fashion until all are engaged or declared as \"Avoiding Combat\".*\n\n2. If, after choosing all engagements, one side has remaining unengaged air units, the owning player may choose to:\n- Engage the air unit against the enemy unit of his choice (A single engagement cannot contain more than three air units (22.6.4)).\n- Avoid combat. The excess units automatically survive Air Superiority Combat and remain in the Air Superiority Box at the conclusion of combat.\n\n3. Perform Air Combat according to (22.6.3).\n4. All units that survive Air Superiority Combat, along with any excess units that chose to avoid combat, remain in the Air Superiority Box.\n5. Determine this turn's Air Superiority Level, based on the ratio of each side's remaining air units in the Air Superiority Box.\n6. If a side achieves Air Supremacy, move the AWACs Advantage in its favor by two; if any other level of Air Superiority, then change it by one.\n\n*Example of Air Superiority Adjustment: The PRC currently has an AWACs Advantage level of \"1\". The Allies achieve Air Advantage. The AWACs Advantage marker is adjusted to \"0\".*",
+    "crossRefs": [
+      "22.6.3",
+      "22.6.4"
+    ]
+  },
+  {
+    "id": "22.6.3",
+    "section": "22.6.3",
+    "title": "Air Combat",
+    "summary": "Air Combat is resolved in three sequential stages\u2014Long-range, Stand-off, and Dogfight\u2014based on unit capabilities.",
+    "text": "**22.6.3 Air Combat**\n\nEach Air Combat is resolved in the following three stages, assuming at least one side has appropriate capabilities, i.e., Long Range and/or Stand-off (22.6.5):\n\n- **Long-range Combat:** This is the first stage of combat that occurs, as air units with long-range sensors and weapons engage at 30-100 miles. Any unit with \"**\" after its Air Combat Rating can fire during Long-range combat. All Long-range combat is simultaneous.\n\n- **Stand-off Combat:** This stage occurs after Long-range combat. It represents units firing radar-guided missiles at ranges of 10-30 miles. Any unit with \"*\" or \"**\" after its Air Combat Rating can fire during Stand-off combat. Stand-off combat is simultaneous, regardless of Air-to-Air Combat Ratings, except in the case of units that earned Advantage over their opponent in the Long-range Combat stage, which always fire before their \"Disadvantaged\" opponent.\n\n- **Dogfight Combat:** This is the concluding stage of Air Combat. It represents air units firing heat seeking missiles and guns at ranges from point-blank to 10 miles. All units are eligible to fire in Dogfight Combat. Dogfights are resolved sequentially, from highest to lowest Air-to-Air Combat Rated unit. After all units with the same Air-to-Air Combat Rating have fired, losses are allocated before continuing with the next highest rated units firing. Dogfight combat is only simultaneous between two aircraft with the same Air-to-Air Combat Rating.\n\n*Exception: A unit that earned Advantage over its opponent in the directly preceding combat stage always fires before that opponent.*\n\n**Play Note:** *For Air Superiority Combat, I recommend choosing one engagement and conducting all the stages for that combat since re-engagement does not apply.*",
+    "crossRefs": [
+      "22.6.5"
+    ]
+  },
+  {
+    "id": "22.6.4",
+    "section": "22.6.4",
+    "title": "Multi-unit Engagements in Air Combat",
+    "summary": "When a player has excess units after all engagements, multi-unit engagements may occur; a single engagement cannot contain more than three air units.",
+    "text": "**22.6.4 Multi-unit Engagements in Air Combat**\n\nWhenever a player who has excess units after all engagements have been chosen decides to engage enemy units with his excess units, multi-unit engagements will occur. A single engagement cannot contain more than three air units (two against one). The following rules govern multi-unit engagements:\n\n**22.6.4.1 Engaging:** The unit that is being attacked by two enemy units can fire at either unit but not both during a given stage. It can fire at one unit in one stage and the other in a subsequent stage. If it is Advantaged, that Advantage is only against one of the opposing units (the one against which it obtained the \"Ad\" result).\n\nIf the two units both have Long-range or Stand-off capability, they both fire simultaneously at the single unit with any results being cumulative. In dogfights, if the two units have different Air-to-Air Combat Ratings, their firing is not simultaneous, and results are applied separately as they fire.\n\n**22.6.4.2 Re-engagement:** Re-engagement is allowed only during Air Intraception Combat and never in Air Superiority Combat. Units that destroy or abort their enemy during the Long-range or Stand-off stage of Air Superiority Combat may not engage another enemy unit. They are finished for the remainder of Air Superiority Combat.",
+    "crossRefs": []
+  },
+  {
+    "id": "22.6.5",
+    "section": "22.6.5",
+    "title": "Resolving Air Combat",
+    "summary": "To resolve Air Combat, start with the first applicable stage, compare Air Combat Ratings to find the initial column on the Air Combat Table, apply DRMs, roll the die, and apply results.",
+    "text": "**22.6.5 Resolving Air Combat**\n\nTo resolve an Air Combat, start with the first stage (22.6.3) for which at least one side has appropriate capabilities and can conduct combat, i.e., Long Range, Stand-off, or Dogfight. The firing player compares the Air Combat Rating (15.2.3) of his aircraft to the Air-to-Air Combat Rating of the defending aircraft. The difference determines the initial column of the Air Combat Table on which the combat will be resolved.\n\nThe attacking player then determines any DRMs that apply to the type of combat. Refer to the Advanced Air Combat Table for applicable modifiers.\n\nThe attacking player then rolls the die, applies the modifiers, and cross-references the result with the appropriate column. Results are applied as per (22.6.3).\n\nIf two units gain an Advantage result against each other, neither receives the Advantage (treat as no result for both).",
+    "crossRefs": [
+      "22.6.3",
+      "15.2.3"
+    ]
+  },
+  {
+    "id": "22.6.6",
+    "section": "22.6.6",
+    "title": "Breaking Off",
+    "summary": "A player may voluntarily Abort any air unit from an Air Superiority or Interception engagement at any stage of Long-Range or Stand-off combat.",
+    "text": "**22.6.6 Breaking Off**\n\nA player may, after any stage of Long-Range or Stand-off combat, voluntarily Abort any air unit, from the units involved in an Air Superiority or Interception engagement. Simply place the unit in the appropriate Abort Box. Intercepted player (Interceptor Combat) or AWACs disadvantaged player (Air Superiority Combat) declares first. If AWACs is 0, then non-Initiative/First player chooses first.\n\n*Example: A U.S. F-22 intercepts a PRC Strike Mission consisting of one JH-7 escorted by a J-10. During Long Range Combat, the F-22 causes the J-10 to Abort; the JH-7 elects to Abort rather than face certain destruction.*",
+    "crossRefs": []
+  },
+  {
+    "id": "22.6.7",
+    "section": "22.6.7",
+    "title": "Air Superiority Survival",
+    "summary": "Units that survive Air Superiority can be used as interceptors or escorts in the subsequent Strike Phases.",
+    "text": "**22.6.7 Air Superiority Survival**\n\nUnits that survive Air Superiority can be used as interceptors or escorts in the subsequent Strike Phases.",
+    "crossRefs": []
+  },
+  {
+    "id": "23.0",
+    "section": "23.0",
+    "title": "AIR-TO-GROUND MISSIONS",
+    "summary": "Covers all types of air-to-ground missions available to air units, including strikes, combat support, and aerial mining.",
+    "text": "Air units can perform multiple different types of air-to-ground missions. During either Strike Phase units in the Ready Box can perform missions. Those with a Strike Rating of \"1\" or more can perform Strike missions against eligible target units on the game map, displays, or against any enemy Detection, SAM, or AAA Track (24.0). Wild Weasel (15.2.9) units can only perform Wild Weasel Strikes against enemy Air Defense Tracks. During any Combat Segment, any unit with a Combat Support Rating of \"1\" or more can perform a Combat Support Mission. Players can also conduct Aerial Mining Missions (23.6).\n\n**Play Note:** *Collectively, any unit designated as a strike or combat support unit in a mission is a Strike aircraft for all purposes. Air units assigned as Escorts are not Strike aircraft, even though they may be part of a Strike mission.*",
+    "crossRefs": [
+      "15.2.9",
+      "23.6",
+      "24.0"
+    ]
+  },
+  {
+    "id": "23.1",
+    "section": "23.1",
+    "title": "Preparing and Allocating a Mission",
+    "summary": "Defines how air-to-ground strike missions are composed, with up to four units per mission including escorts and defense suppression.",
+    "text": "**23.1 Preparing and Allocating a Mission**\n\nUp to four units can participate in each air-to-ground Strike mission: up to two Strike air units as well as up to two non-Strike air units that can be assigned to the mission as Escorts or Defense Suppression. All Escorts must come from the Air Superiority Box. Wild Weasels can fly as either Strike or Defense Suppression from the Ready Box.\n\nUnits cannot fly a mission for which they do not have a rating of at least \"1\" (after adjusting for Weather). Thus, an F-15C with \"5*-0-0\" Air-to-Air Combat Ratings could fly neither Combat Support nor Strike Missions, but, if it is in the Air Superiority Box, can Escort (or Intercept) those missions.",
+    "crossRefs": []
+  },
+  {
+    "id": "23.2",
+    "section": "23.2",
+    "title": "Allocation and Sequencing",
+    "summary": "Governs how missions are announced and sequenced at the start of each Strike Phase, including valid target types.",
+    "text": "**23.2 Allocation and Sequencing**\n\nAt the beginning of each Strike Phase (or during the Combat Segment for Combat Support), each player announces the targets for his air-to-ground mission(s) per the Sequence of Play.\n\nNo more than one Air and one Helicopter Strike can be allocated against a single target per Strike Phase. Air Strike Missions can be targeted against:\n\n1. Any detected enemy ground unit, Naval unit, HQ, MSU, or Supply Depot.\n2. Any enemy Installation, Airfield, Bridge, or Beachhead.\n3. Each of the enemy's Air Defense Track markers (Detection, SAM, AAA). (24.0)\n4. Any hex to interdict movement.\n\nHelicopter Strike Missions can be targeted against:\n\n1. Any detected enemy ground unit, HQ, MSU, or Supply Depot.\n2. Any hex to interdict movement.\n3. Any enemy Beachhead.\n\nAs missions are announced, each player places each air-to-ground mission (1 to 4 air units) in a stack in or adjacent to its target. For Strikes and Wild Weasel missions, all missions must be announced before any are resolved. For Combat Support missions, all missions (attacker and defender) are announced, placed, and resolved, as ground combats are announced and resolved.\n\nAny attacking unit that survives ADF (Detection, possible Interception, SAMs, and AAA) (24.0) resolves its mission.",
+    "crossRefs": [
+      "24.0"
+    ]
+  },
+  {
+    "id": "23.3",
+    "section": "23.3",
+    "title": "Resolving Wild Weasel Missions",
+    "summary": "Describes how Wild Weasel missions targeting enemy Air Defense Tracks are allocated and resolved.",
+    "text": "**23.3 Resolving Wild Weasel Missions**\n\nWild Weasel Missions (15.2.9) can be allocated against enemy Air Defense Tracks (24.1).\n\nThese missions are allocated and resolved in the same manner as other Strikes, with the following exceptions:\n\n- Any number of Wild Weasel Missions may target the enemy Air Defense Tracks in a single Strike Phase.\n- They are resolved before any other Strike Missions during each Strike Phase (i.e., the results achieved from Wild Weasel Missions lower the enemy Air Defense capabilities before other friendly Striking units come under attack).\n\nEach Striking Wild Weasel air unit in a mission must choose one of the Air Defense Tracks as its target. As an exception to normal targeting, if two Wild Weasels are used in a single Wild Weasel mission, they can each attack the same Track or separate Tracks, at the owning player's discretion. Attacks are resolved in the same manner and with the same DRMs as Strike Missions, but they are always resolved in the same column of the Strike Table: where \"Wild Weasel\" and \"Air Defense Tracks\" intersect; see Advanced Strike chart for results which are not applied until all Wild Weasel Strikes have been resolved.",
+    "crossRefs": [
+      "15.2.9",
+      "24.1"
+    ]
+  },
+  {
+    "id": "23.4",
+    "section": "23.4",
+    "title": "Resolve Strike Missions",
+    "summary": "Provides the procedure for resolving air strike missions against targets.",
+    "text": "**23.4 Resolve Strike Missions**\n\nResolve Strike Missions as directed below.",
+    "crossRefs": []
+  },
+  {
+    "id": "23.4.1",
+    "section": "23.4.1",
+    "title": "Air Strikes",
+    "summary": "Explains how individual air strike units attack targets using the Strike or Interdiction Table.",
+    "text": "**23.4.1 Air Strikes**\n\nStrike unit(s) in the mission individually attack the target. To resolve the attack, roll once per Strike unit and refer to the Strike or Interdiction Table. Cross-reference the unit's Strike Rating and the Terrain of the target (or use \"Air Defense Track\" or \"Hardened Target\" (see Advanced Play Aid) rows if applicable). Read down the column to the intersection with the die roll result (as modified by DRMs) to find the Strike Result. If there is no such column, then the Strike is ineffective.\n\nStrike die rolls may be modified as indicated on the Advanced Player Aid Card. Stand-off Strikes may not be used for Interdiction.\n\nResults differ depending on the type of target being attacked. They include step losses, Strike hits, and decreases to the Air Defense Tracks. See the Strike Table for details. Apply all results immediately except for Collateral Damage (27.7.4) and reductions to Air Defense Tracks from non-Wild Weasel Strikes. Collateral Damage and Air Defense Track reductions are applied at the end of the current Strike Phase.",
+    "crossRefs": [
+      "27.7.4"
+    ]
+  },
+  {
+    "id": "23.4.2",
+    "section": "23.4.2",
+    "title": "Helicopter Strikes",
+    "summary": "Covers how Attack Helicopters perform strike missions, including detection and air defense exposure.",
+    "text": "**23.4.2 Helicopter Strikes**\n\nHelicopter Strikes can be made against any valid target within the attack helicopter's Range. Rotate the helicopter 90\u00b0 for each strike mission. An Attack Helicopter that is rotated 180\u00b0 is not eligible to perform a mission.\n\nEach Helicopter Strike is composed of a single Attack Helicopter. No escorts or Defense Suppression Wild Weasels are allowed.\n\nHelicopter Strikes undergo Local Detection (24.2) and, if detected, \"Local\" SAM (24.5.2) and AAA (24.6.2) Fire.\n\nThese Strikes are resolved on the Strike Table using the \"Helo 1\" or \"Helo 2\" (corresponding to the unit's Combat Support Rating) Strike columns.",
+    "crossRefs": [
+      "24.2",
+      "24.5.2",
+      "24.6.2"
+    ]
+  },
+  {
+    "id": "23.4.3",
+    "section": "23.4.3",
+    "title": "Hardened Targets",
+    "summary": "Lists the types of targets considered hardened, which have their own terrain row on the Strike Table.",
+    "text": "**23.4.3 Hardened Targets**\n\nSome targets in the game are \"hardened\" targets and have their own Terrain row on the Strike Table. These represent targets that are underground or specially protected and reinforced against air attacks. Hardened targets are:\n\n1. Supreme HQs.\n2. All Supply Depots (for either side).\n3. Beachheads.\n4. Ports (when attacked by Cruise Missiles/Theater Weapons (26.0)).\n5. SCUD/Ballistic Missile/Cruise Missile Points.\n6. Others as specified in Game Specific Rules.",
+    "crossRefs": [
+      "26.0"
+    ]
+  },
+  {
+    "id": "23.4.4",
+    "section": "23.4.4",
+    "title": "Interdiction Results",
+    "summary": "Explains how successful Interdiction strike results affect hexes, making enemy movement more costly.",
+    "text": "**23.4.4 Interdiction Results**\n\nIf a Strike (Air, Helicopter, Artillery, or HQ) or SOF Raid achieves a successful result on the Interdiction Strike Table or SOF CRT, the hex is interdicted. Results are cumulative to a maximum of Interdiction Strike 2, i.e., two Interdiction Strike 1 results become an Interdiction Strike 2.\n\nAny unit entering or exiting an interdicted hex pays an additional +1 or +2 MPs as indicated by the Interdiction Strike marker. A unit moving through (entering and exiting) pays the additional cost only once. In addition, units cannot use any road to enter the hex; they must use the underlying terrain of the hex for movement costs. Bridges can still be used.",
+    "crossRefs": []
+  },
+  {
+    "id": "23.5",
+    "section": "23.5",
+    "title": "Resolving Combat Support Missions",
+    "summary": "Governs how air units provide combat support to ground combat, including the number of units each side may allocate.",
+    "text": "**23.5 Resolving Combat Support Missions**\n\nThe attacking player in a combat can allocate up to two air units (23.1) plus two other air units (as Escorts and/or Defense Suppression) and/or one or two Attack Helicopters to support that combat. The defending player can allocate one combat support capable air unit plus two other air units (as Escorts and/or Wild Weasels) and/or one Attack Helicopter to support that combat.\n\nIf two air units are flying Combat Support for a given attack, they must both be part of the same mission. They cannot fly as separate missions. Each Attack Helicopter that flies a Combat Support Mission flies individually. Thus, there is one enemy Detection attempt against the air mission and one Detection attempt against each Attack Helicopter.\n\nAir and helicopter units that survive enemy air defenses (24.0) apply their Combat Support Ratings as DRMs to the ground combat. For units supporting an attack, their Combat Support Rating is applied as a negative DRM. For units supporting the defense, their Combat Support Rating is applied as a positive DRM. Thus, a U.S. A-10C provides a \"\u20134\" DRM to an attack or a \"+4\" DRM to a defense, while a U.S. Marine AH-1 helicopter would provide a \"\u20131\" or \"+1\".\n\nAdverse DRMs inflicted on aircraft or helicopter units flying missions are applied differently than against Strike and Wild Weasel missions. Since Combat Support aircraft and helicopters apply the Combat Support Rating as a direct DRM to a ground combat, a \"+#\" result from SAM and/or AAA is subtracted from the affected unit's Combat Support Rating. Thus, a U.S. AH-64 Apache unit (Combat Support Rating = \"2\") that takes a \"+2\" result from SAM and/or AAA fire loses both Combat Support points and cannot effectively support the combat.",
+    "crossRefs": [
+      "23.1",
+      "24.0"
+    ]
+  },
+  {
+    "id": "23.6",
+    "section": "23.6",
+    "title": "Aerial Mining Missions",
+    "summary": "Covers how aircraft can lay aerial mines in enemy-coastal or naval hexes to disrupt movement.",
+    "text": "**23.6 Aerial Mining Missions**\n\nAerial Mining can only be conducted during non-Storm turns. Unless restricted by GSR, each player, non-Allied first, can conduct one Aerial Mining Mission by attempting to place a \"1\" density Mine marker (if available) or flip an existing marker to its \"2\" side in the target hex. He can then assign up to two escorts and/or Wild Weasels to the mission. If the target hex is along a friendly country's coastline and not within two hexes of an enemy HQ, Naval Unit, or Installation, the mission undergoes Local Detection and, if detected, Local SAM but not AAA; otherwise, use the Naval Unit's ADF values or the enemy's ADF values respectively.\n\nThe Mine marker is treated as an air unit with a \"(0)\" Air-to-Air Combat Rating. Any result from ADF on the nominal Mine marker \"Air Unit\" permanently removes the marker from the game.\n\n**Design Note:** *Removal of the Mine marker from the game represents the destruction of the limited assets which can conduct aerial mining.*",
+    "crossRefs": []
+  },
+  {
+    "id": "24.0",
+    "section": "24.0",
+    "title": "AIR DEFENSES",
+    "summary": "Introduces the two air defense systems in the Advanced Game: the national integrated ADF network (Normal ADF) and local short-range systems (Local ADF).",
+    "text": "**24.0 Air Defenses**\n\nAir Defense Fire (ADF) is resolved on the Advanced Game Air Defense Table. There are two air defense systems modeled in the Next War series. The first is each nation's integrated air defense system of radars, interceptor aircraft, long-range SAM sites, and AAA sites. This system is represented in the game through each nation's air defense tracks. HQ units, however, help extend the reach of long-range radars, interceptors, and SAMs as an Army advances. This is referred to as \"Normal ADF\". The second air defense system in the game is the \"Local ADF\" system of short-range SAMs and AAA found in the various armies to provide a bubble of protection over nearby military units. Missions resolve ADF using the values from the appropriate method of Detection, e.g. Normal Detection results in Normal SAM and AAA.\n\nThe results on the Detection Table determine the side's ability to defend against the mission: an \"ED\" result allows Interception and SAM/AAA fire, while a \"D\" result allows only SAM/AAA fire. Mark detected strikes with any handy marker to designate which can be intercepted and which are subject just to ADF.\n\n**Play Note:** *For convenience, we suggest using \"Target -2\" for \"ED\" and \"Target -1\" for \"D\"; remember these do not denote DRMs for detection, Interception, SAM, AAA, or Strikes. The Next War Series Supplement has markers for this purpose.*",
+    "crossRefs": []
+  },
+  {
+    "id": "24.1",
+    "section": "24.1",
+    "title": "The \"Normal\" Air Defense Network",
+    "summary": "Describes the national air defense track system representing each side's integrated SAM, AAA, and detection capabilities.",
+    "text": "**24.1 The \"Normal\" Air Defense Network**\n\nEach side has an air defense network represented by a numbered track. Players move \"Detection,\" \"AAA,\" and \"SAM\" markers up and down the tracks to represent each country's current air defense capabilities. When a player attempts to detect or attack an incoming Mission using \"Normal ADF\", he uses his current track values modified by appropriate DRMs (see Advanced Game Tables PAC) to resolve the attempt. These tracks can be attacked by Air Strikes, Wild Weasel missions, and (for the Detection/SAM Tracks) Special Operations Forces (20.1.3) missions. All three tracks can be repaired (27.9.2).\n\n*Important: Except in the case of Wild Weasel Missions, all Detection attempts are made before any subsequent Interceptor/SAM/AAA combat is allocated and resolved.*",
+    "crossRefs": [
+      "20.1.3",
+      "27.9.2"
+    ]
+  },
+  {
+    "id": "24.1.1",
+    "section": "24.1.1",
+    "title": "Permanent Air Defenses",
+    "summary": "Notes that some Land Areas and Holding Boxes have printed ADF values that override the track values.",
+    "text": "**24.1.1 Permanent Air Defenses**\n\nSome Land Areas/Holding Boxes contain permanently printed Air Defense values. If these apply, they must be used in place of the ADF Track. The GSR may provide additional rules.",
+    "crossRefs": []
+  },
+  {
+    "id": "24.2",
+    "section": "24.2",
+    "title": "The \"Local\" Air Defense Network",
+    "summary": "Explains the short-range local air defense system that applies when a mission is not subject to Normal ADF procedures.",
+    "text": "**24.2 The \"Local\" Air Defense Network**\n\nWhenever a unit is not subject to \"Normal ADF\" procedures, it may be subject to \"Local ADF\". When a player attempts to detect or attack an incoming Air Strike, Combat Support, Air Transport, Paradrop, or Airmobile Mission, he uses the values labeled as \"Local\" on the Advanced Game Air Defense Table. These values cannot be altered during the game.",
+    "crossRefs": []
+  },
+  {
+    "id": "24.3",
+    "section": "24.3",
+    "title": "Applying Air Defense Fire",
+    "summary": "Outlines when and how ADF detection attempts are made as missions are launched against targets.",
+    "text": "**24.3 Applying Air Defense Fire**\n\nAny time that an Air Strike, Combat Support, Air Transport, Airborne Movement/Paradrop, or Airmobile Movement mission is launched into the playing area or against either side's Air Defense Track, the attacked side attempts to detect it using the appropriate ADF values (24.1 & 24.2) as described below. Players conduct Detection, if eligible, once against each enemy air mission.",
+    "crossRefs": [
+      "24.1",
+      "24.2"
+    ]
+  },
+  {
+    "id": "24.3.1",
+    "section": "24.3.1",
+    "title": "Air Unit Strike & Combat Support",
+    "summary": "Specifies when Normal vs. Local ADF is used against air strike and combat support missions based on target location.",
+    "text": "**24.3.1 Air Unit Strike & Combat Support**\n\nIf the target is the Air Defense Track or the target hex is either in an enemy country or within two hexes of an enemy HQ and/or Installation make a die roll using \"Normal ADF\" (17.1.5/24.1) for each mission. If the conditions above do not apply, then use \"Local ADF\" (17.1.5/24.2).",
+    "crossRefs": [
+      "17.1.5",
+      "24.1",
+      "24.2"
+    ]
+  },
+  {
+    "id": "24.3.2",
+    "section": "24.3.2",
+    "title": "Helicopter Strike & Combat Support",
+    "summary": "Specifies that Local ADF applies to all helicopter strike and combat support missions.",
+    "text": "**24.3.2 Helicopter Strike & Combat Support**\n\nUse \"Local ADF\" (24.2) against all such missions.",
+    "crossRefs": [
+      "24.2"
+    ]
+  },
+  {
+    "id": "24.3.3",
+    "section": "24.3.3",
+    "title": "Airmobile Movement/Transport",
+    "summary": "Defines ADF procedures for airmobile and transport missions based on target location relative to enemy forces.",
+    "text": "**24.3.3 Airmobile Movement/Transport**\n\nIf the mission's target hex is either in an enemy country or within two hexes of an enemy HQ, within a Naval Umbrella (17.1.5), use \"Local ADF\" (24.2) for Detection and SAMs. The mission is also subject to Local AAA if it is Detected and the origin or target is within two hexes or in the same Island Land Area of an enemy ground unit or Installation.",
+    "crossRefs": [
+      "17.1.5",
+      "24.2"
+    ]
+  },
+  {
+    "id": "24.3.4",
+    "section": "24.3.4",
+    "title": "Aerial Mining/Air Transport/Airborne Movement/Paradrop",
+    "summary": "Details the ADF detection process for aerial mining, air transport, airborne movement, and paradrop missions based on air superiority and location.",
+    "text": "**24.3.4 Aerial Mining/Air Transport/Airborne Movement/Paradrop**\n\nDetection for units flying these missions is determined by where the target hex for the mission is, the type of mission being flown, proximity to enemy units and HQs or Installations, and the current Air Superiority Level (22.6) as follows:\n\n1. If the mission's target hex is in or the mission flies over an enemy country or enemy-controlled Land Area or At Sea Box, use \"Normal ADF\" (24.1). Detected missions that survive enemy SAMs (24.5) only undergo AAA fire (24.6) if they are within two hexes of an enemy ground unit or Installation.\n\n2. *Or*, if the mission's target hex is in a friendly country, within two hexes of an enemy HQ, within a Naval Umbrella (17.1.5), or into an enemy-controlled Land Area and\u2026\n   a. \u2026if the mission side has any level of Air Superiority or it is Contested, use \"Local ADF\" (24.2); or\n   b. \u2026if the non-mission side has any level of Air Superiority, use \"Normal ADF\" (24.1).\n\n3. *Or*, if the mission's target hex is in a friendly or neutral country and\u2026\n   a. \u2026if the mission side has any level of Air Superiority or it is Contested, there is no ADF, or\n   b. \u2026if the non-mission side has any level of Air Superiority, \"Normal ADF\" (24.1) is used and SAM and/or AAA fire is only conducted if the target hex is within two hexes of any enemy ground unit or Installation or within a Naval Umbrella.",
+    "crossRefs": [
+      "22.6",
+      "24.1",
+      "24.2",
+      "24.5",
+      "24.6",
+      "17.1.5"
+    ]
+  },
+  {
+    "id": "24.4",
+    "section": "24.4",
+    "title": "Intercepting Air Strikes/Combat Support",
+    "summary": "Explains how interceptors from the Air Superiority Box can be allocated to intercept detected enemy missions.",
+    "text": "**24.4 Intercepting Air Strikes/Combat Support**\n\nFirst, each player can allocate interceptors from his air units in the Air Superiority Box against any enemy strikes or combat support missions within range that were detected with an \"ED\" result on the Detection Table. Either one or two air units from the Air Superiority Box can intercept each Mission. Air Combat ensues as detailed below. Except for Interceptions against Wild Weasel Missions, all Interceptors are allocated before any air combats are resolved. Each ground unit in an Air Transport/Airborne Movement/Paradrop mission is carried by a nominal air unit that has an Air-to-Air Combat Rating of \"(1)\" if attacked by enemy interceptors.",
+    "crossRefs": []
+  },
+  {
+    "id": "24.4.1",
+    "section": "24.4.1",
+    "title": "Interceptor Combat",
+    "summary": "Details how interceptor combat is resolved, including engagement rules, re-engagement, and voluntary abort.",
+    "text": "**24.4.1 Interceptor Combat**\n\n1. The ensuing air combat is fought in the same manner as Air Superiority Combat (22.6.3-6). Unengaged air units cannot fire during this air combat unless re-engagement (22.6.4.2) occurs.\n\n2. The intercepting player chooses which interceptor(s) will engage which units in the Strike Mission. He must, however, engage Escorting air units first. If he has more Interceptors than the Strike has Escorts, he may engage one of the Striking (or Wild Weasel (15.2.9)) aircraft. If the Strike Mission has more Escorts than Interceptors, the Escorts may \"gang up\" on the Interceptor, as in Air Superiority Combat. If the Interceptors cannot fire in the round, e.g., no Long Range, the Escort(s) choose the engagement(s). Only units that can fire in a round can engage.\n\n3. If, after either Long-range or Stand-off combat, an interceptor or escorting unit is no longer engaged (because it has destroyed or aborted its original opponent), the player may re-engage such a unit against any other air unit in the combat. Example: an interceptor that shot down or aborted its opponent during Long-range combat could re-engage and fire at a Striking unit during Stand-off combat. If an escort shot down or aborted an interceptor during Standoff combat, it could re-engage another intercepting unit during Dogfight Combat.\n\n4. Units with their Air-to-Air Combat Rating (15.2.3) in parentheses cannot fire in air combat. The number in parentheses is used to determine any attacker's differential. (Thus, a B-52 cannot fire in air combat, but enemy aircraft would fire versus the B-52's Air-to-Air Combat Rating of one.) Other Striking aircraft that have an Air-to-Air Combat Rating can fire if engaged by enemy interceptors but suffer a \"+2\" DRM.\n\n**Design Note:** *This DRM represents the extra difficulty in performing air combat maneuvers with a load of air-to-ground ordnance under your wings. This is an area where there is much diversity between aircraft. Some older aircraft, for example, cannot rapidly switch their radars between air and ground attack modes. And some attack jets can handle more radical maneuvers than others when burdened with a bomb load. For you purists out there, feel free to rate the units on your own to reflect this. We suggest a scale of +1 to +4.*\n\n5. The interception is finished at the conclusion of Dogfight Combat. Return surviving Interceptors and Escorts to the \"Flown\" box of their base country. Surviving Strike units remain, and they will subsequently undergo Air Defense Fire. First, though, the Intercepting player resolves the remainder of his Interceptions.\n\n6. After any round of Combat, any air unit can voluntarily Abort the mission.",
+    "crossRefs": [
+      "22.6.3",
+      "22.6.4.2",
+      "15.2.9",
+      "15.2.3"
+    ]
+  },
+  {
+    "id": "24.5",
+    "section": "24.5",
+    "title": "SAM Fire",
+    "summary": "Covers how SAM fire is resolved against air units in missions after interceptor combat.",
+    "text": "**24.5 SAM Fire**\n\nAfter Interceptor combat, resolve SAM fire versus remaining air units in missions that were detected. From this point on, resolve each Strike or Combat Support air unit's SAM, AAA, and Strike/Combat Support mission to its conclusion before resolving the next air unit in the mission. This is important, as SAM and AAA fire produce DRMs for the ensuing Strike or Combat Support die roll. SAM and AAA attack Transport/Paradrop missions once for the entire missions, not once per ground unit.",
+    "crossRefs": []
+  },
+  {
+    "id": "24.5.1",
+    "section": "24.5.1",
+    "title": "SAM Attacks vs. Normal Detection",
+    "summary": "Explains SAM attack resolution using the defending country's current SAM rating when a mission is normally detected.",
+    "text": "**24.5.1 SAM Attacks vs. Normal Detection**\n\nRoll once against each Strike air unit and any accompanying Wild Weasels (15.2.9) (not once per Mission) on the Advanced Game Air Defense Table under the column representing the defending country's current SAM rating (and applying listed modifiers). Implement results immediately, as indicated by the ADF Table.\n\n**Play Note:** *This fire is against only the mission air units and any Wild Weasel units that accompany the mission. Interceptors and Escorts cannot be attacked by SAMs/AAA.*",
+    "crossRefs": [
+      "15.2.9"
+    ]
+  },
+  {
+    "id": "24.5.2",
+    "section": "24.5.2",
+    "title": "SAM Attacks vs. \"Local\" Detection",
+    "summary": "Explains SAM attack resolution under Local detection, with different handling for Combat Support missions.",
+    "text": "**24.5.2 SAM Attacks vs. \"Local\" Detection**\n\nIf a mission is detected by Local Detection, the ensuing SAM fire is resolved under the \"Local\" column on the Advanced Game Air Defense Table.\n\nFor Combat Support Missions (23.5) only, the \"+1\" and \"+2\" results are implemented differently. They are not DRMs, but, rather, they are subtracted (to a minimum of zero) from the air or helicopter unit's Combat Support Rating. Thus, it is possible for a unit to fly to the target, and, after taking a result, have no remaining Combat Support Strength to support the combat.",
+    "crossRefs": [
+      "23.5"
+    ]
+  },
+  {
+    "id": "24.6",
+    "section": "24.6",
+    "title": "AAA Fire",
+    "summary": "Governs AAA fire against air units that lack Stand-off capability, timing based on Normal vs. Local detection.",
+    "text": "**24.6 AAA Fire**\n\nEach air unit that does not have Stand-off capability (for its Strike or CS Rating) may be attacked by AAA fire during its Mission. If the mission was Normal or Local Detected, the AAA fire occurs before the unit attacks, otherwise if it was undetected by Normal Detection (only), AAA attacks after the mission.\n\n**Play Note:** *AAA after the strike essentially is rolling to see if the air unit aborts although losses can occur.*",
+    "crossRefs": []
+  },
+  {
+    "id": "24.6.1",
+    "section": "24.6.1",
+    "title": "AAA vs. Normal Detection",
+    "summary": "Explains how AAA fire is resolved against normally detected air missions using the Air Defense Table.",
+    "text": "**24.6.1 AAA vs. Normal Detection**\n\nResolve AAA fire by rolling one die on the Air Defense Table and checking the appropriate \"AAA\" column. Implement results immediately. Results of \"+1\" or \"+2\" against a unit that has already made its attack have no effect.",
+    "crossRefs": []
+  },
+  {
+    "id": "24.6.2",
+    "section": "24.6.2",
+    "title": "AAA Fire vs. \"Local\" Detection",
+    "summary": "Specifies that AAA fire against locally detected missions is resolved on the Local column of the Air Defense Table.",
+    "text": "**24.6.2 AAA Fire vs. \"Local\" Detection**\n\nFor those air units or helicopters undergoing Local Detection procedures, AAA fire is resolved on the \"Local\" column.",
+    "crossRefs": []
+  },
+  {
+    "id": "24.7",
+    "section": "24.7",
+    "title": "Weather Effects on Detection, SAM, and AAA Fire",
+    "summary": "Notes that bad weather adversely affects all detection, SAM, and AAA die rolls during non-clear turns.",
+    "text": "**24.7 Weather Effects on Detection, SAM, and AAA Fire**\n\nAir Defenses are adversely affected by bad weather. During non-clear turns, all Detection, SAM, and AAA die rolls incur adverse DRMs as indicated on the charts.",
+    "crossRefs": []
+  },
+  {
+    "id": "24.8",
+    "section": "24.8",
+    "title": "Results vs. Defense Suppression",
+    "summary": "Clarifies that SAM/AAA hit results have no effect on air units designated as Defense Suppression.",
+    "text": "**24.8 Results vs. Defense Suppression**\n\nIn all cases, \"+#\" results have no effect on air units designated as Defense Suppression.",
+    "crossRefs": []
+  },
+  {
+    "id": "24.9",
+    "section": "24.9",
+    "title": "Attacking the ADF Track",
+    "summary": "Explains that Air and Cruise Missile Strikes can attack ADF Tracks in addition to SOF Raids, with range requirements.",
+    "text": "**24.9 Attacking the ADF Track**\n\nIn addition to SOF Raids (20.2.1.1), ADF Tracks can be attacked by Air (including Wild Weasel) and Cruise Missile Strikes. To do so, the Strike must be within range of the Operational (hex) Map. GSRs may provide additional rules.",
+    "crossRefs": [
+      "20.2.1.1"
+    ]
+  },
+  {
+    "id": "25.0",
+    "section": "25.0",
+    "title": "MOVEMENT AND TRANSPORT",
+    "summary": "Provides additional movement rules for the Advanced Game beyond those in the Standard Game.",
+    "text": "**25.0 Movement and Transport**\n\nThis section provides additional movement rules to those in the Standard Game.",
+    "crossRefs": []
+  },
+  {
+    "id": "25.1",
+    "section": "25.1",
+    "title": "Aerial Transport Mission",
+    "summary": "Covers how Air Transport, Paradrop, and Airmobile Movement missions can use escort and defense suppression air units.",
+    "text": "**25.1 Aerial Transport Mission**\n\nAir Transport (8.5.2), Paradrop (25.1.1), and Airmobile Movement (8.5.4) missions can be escorted by up to two Escort and/or Defense Suppression air units.\n\n**Play Note:** *Airmobile Movement doesn't need Escorts since they can't be intercepted, but they can use Defense Suppression.*",
+    "crossRefs": [
+      "8.5.2",
+      "25.1.1",
+      "8.5.4"
+    ]
+  },
+  {
+    "id": "25.1.1",
+    "section": "25.1.1",
+    "title": "Advanced Airborne Movement (Paradrop)",
+    "summary": "Modifies the Standard Game Airborne Movement rules by using the right-side results of the Paradrop Table.",
+    "text": "**25.1.1 Advanced Airborne Movement (Paradrop)**\n\nThis rule modifies the Standard Game Rules regarding Airborne Movement (8.5.3) as follows.\n\nWhen rolling on the Paradrop Table, use the results to the right of the slash to determine the effect of the drop. Results and their effects are listed below the chart.",
+    "crossRefs": [
+      "8.5.3"
+    ]
+  },
+  {
+    "id": "25.2",
+    "section": "25.2",
+    "title": "Rebasing",
+    "summary": "Describes how air units can change bases by flying Rebasing Missions during the Reorganization Phase.",
+    "text": "**25.2 Rebasing**\n\nCertain air units, as outlined in the Game Specific Rules, can change bases by flying a Rebasing Mission. This occurs during the Reorganization Phase and is not subject to Detection, Interception, or SAM/AAA fire. To rebase, the owning player moves any eligible unit (there is no limit to the number of units that can Rebase during a turn) from the \"Ready\" box of its current base to the \"Flown\" box of the new base or from the \"Flown\" or \"Recovery\" box of its current base to the \"Abort\" box of its new base regardless of range. Units can Rebase from one Abort box to another.",
+    "crossRefs": []
+  },
+  {
+    "id": "25.3",
+    "section": "25.3",
+    "title": "Mobile Supply Units",
+    "summary": "Notes that MSUs move as normal ground units and can be transported by Sea Transport.",
+    "text": "**25.3 Mobile Supply Units**\n\nMSUs move as normal ground units. Strike results may limit their movement. MSUs can be transported by Sea Transport (8.5.7).",
+    "crossRefs": [
+      "8.5.7"
+    ]
+  },
+  {
+    "id": "25.4",
+    "section": "25.4",
+    "title": "Contested Sea Movement",
+    "summary": "Describes how failed Contested Sea Movement results differ in the Advanced Game, potentially causing Strike damage to naval and sea transport units.",
+    "text": "**25.4 Contested Sea Movement**\n\nThe results for failing a Contested Sea Movement (8.5.6.4.1) change in the Advanced Game. Depending on the roll, Naval Units or Sea Transport may incur an \"Abort or Strike #\" result. Apply a Strike result, if chosen, to any one unit of the moving player's choice. Naval Units have the option of returning to their point of origin (Abort) or continuing their movement but receiving damage (Strike #) (27.4). Sea Transport returns to its point of origin on any result other than success.",
+    "crossRefs": [
+      "8.5.6.4.1",
+      "27.4"
+    ]
+  },
+  {
+    "id": "26.0",
+    "section": "26.0",
+    "title": "THEATER WEAPONS",
+    "summary": "Introduces Theater Weapon Strikes (Cruise and Ballistic/SCUD missiles) as a special strike type governed by the Game Specific Rules.",
+    "text": "**26.0 Theater Weapons**\n\n**26.1 Theater Weapon Strikes**\n\nThe Game Specific Rules will list the availability and limits of Cruise and Ballistic (SCUD) missiles.\n\nTheater Weapons can be targeted against specific targets (see Advanced Player Aid Card for valid targets per type).\n\nTheater Weapon Strikes cannot be Detected. Cruise Missiles can only be defended against by Naval CIWS (17.1.3). Certain HQs provide an additional DRM (18.2.3.1) against both Ballistic and Cruise Missile Strikes.",
+    "crossRefs": [
+      "17.1.3",
+      "18.2.3.1"
+    ]
+  },
+  {
+    "id": "26.1",
+    "section": "26.1",
+    "title": "Theater Weapon Strikes",
+    "summary": "Specifies availability, targeting, and defense against Cruise and Ballistic missile strikes.",
+    "text": "**26.1 Theater Weapon Strikes**\n\nThe Game Specific Rules will list the availability and limits of Cruise and Ballistic (SCUD) missiles.\n\nTheater Weapons can be targeted against specific targets (see Advanced Player Aid Card for valid targets per type).\n\nTheater Weapon Strikes cannot be Detected. Cruise Missiles can only be defended against by Naval CIWS (17.1.3). Certain HQs provide an additional DRM (18.2.3.1) against both Ballistic and Cruise Missile Strikes.",
+    "crossRefs": [
+      "17.1.3",
+      "18.2.3.1"
+    ]
+  },
+  {
+    "id": "26.1.2",
+    "section": "26.1.2",
+    "title": "Allocation and Resolution",
+    "summary": "Explains how players allocate and resolve multiple Theater Weapon Strikes against targets.",
+    "text": "**26.1.2 Allocation and Resolution**\n\nPlayers alternate announcing targets. Multiple missiles can be allocated to the same target. For each point allocated, reduce the appropriate markers on the Game Information Display. After all missiles have been allocated, players resolve them in any order they choose using the appropriate column on the Strike Chart along with any applicable DRMs. All Strikes are resolved before any results are implemented.",
+    "crossRefs": []
+  },
+  {
+    "id": "26.1.3",
+    "section": "26.1.3",
+    "title": "Site-busting",
+    "summary": "Describes the Site-busting mechanic where land-based Theater Weapon points markers can be attacked like an Air Defense Track.",
+    "text": "**26.1.3 Site-busting**\n\nGame Specific Rules will detail whether a particular player has land-based Theater Weapons that allows the missile points marker to be attacked similar to an Air Defense Track. The result indicates the number of points lost, i.e., spaces the marker is moved down the track.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.0",
+    "section": "27.0",
+    "title": "HITS AND DAMAGE",
+    "summary": "Covers how combat damage is applied to units and installations in the Advanced Game, including step losses, strike markers, and destruction.",
+    "text": "**27.0 Hits and Damage**\n\nIn general, damage comes in the form of step losses, eliminations, Strike damage, and (for Installations/Airfields) destruction.\n\nAny time a particular combat result calls for a \"step loss,\" flip the affected unit to its back (reduced) side. If the unit is already on its reduced side or if the unit has no reduced side, the unit is eliminated. Any time a particular combat result calls for Strike Damage against a unit/Installation, place the appropriate Strike marker on the affected unit/Installation. Strike damage is cumulative as explained below. Some Strike damage will have effects which carry over into the following turn per the Reorganization Phase of the SOP (most notably on HQs and Artillery).",
+    "crossRefs": []
+  },
+  {
+    "id": "27.1",
+    "section": "27.1",
+    "title": "Unit Damage",
+    "summary": "Explains how Strike 1 and Strike 2 markers accumulate on units and eventually cause step losses.",
+    "text": "**27.1 Unit Damage**\n\nIf the unit bears a Strike 1 marker and receives:\n\n1. another Strike 1 result, replace the Strike 1 marker with a Strike 2 marker.\n2. a Strike 2 result, apply a step loss to the unit and remove the marker.\n\nIf the unit bears a Strike 2 marker and receives either a Strike 1 or the Strike 2 result, apply a step loss to the unit and remove the marker.\n\nIf the unit receives a Step Loss result, apply a step loss to the unit and remove the marker.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.1.1",
+    "section": "27.1.1",
+    "title": "Supply Depots/MSUs [19.4]",
+    "summary": "Covers the specific Strike damage rules for Supply Depots and MSUs.",
+    "text": "**27.1.1 Supply Depots/MSUs (19.4)**\n\nIf the Supply Depot/MSU bears a Strike 1 marker and receives:\n\n1. another Strike 1 result, replace the Strike 1 marker with a Strike 2 marker.\n2. a Strike 2 result, replace the Strike 1 marker with a Strike 2 marker.\n\nIf a Supply Depot/MSU bears a Strike 2 marker and receives another Strike 2 result, remove the Supply Depot/MSU from the map. Ignore a Strike 1 result in this case.\n\nAn MSU created from a Supply Depot that has Strike or Targeted markers on it retains those markers as well. It does not retain any Detected marker (MSUs follow the detection rules as for normal units).",
+    "crossRefs": [
+      "19.4"
+    ]
+  },
+  {
+    "id": "27.2",
+    "section": "27.2",
+    "title": "Installation Damage",
+    "summary": "Explains how Strike markers accumulate on Installations and Airfields, leading to destruction.",
+    "text": "**27.2 Installation Damage**\n\nIf an Installation/Airfield that bears a Strike 1 marker receives:\n\n1. another Strike 1 result, replace the Strike 1 marker with a Strike 2 marker.\n2. a Strike 2 result, mark the Installation as Destroyed.\n\nAn Installation/Airfield that bears a Strike 2 marker and receives a Strike 1, Strike 2, or Destroyed result is Destroyed.\n\nDestruction of an Installation/Airfield occurs immediately. Subsequent Strikes in the same turn have no further effect (including Collateral Damage). VPs earned for Destroying an Installation/Airfield (12.1.2) more than once can only be earned if the Installation/Airfield was fully repaired (27.9.1). While Destroyed, they do not earn VP nor do Installations require a Clearing Operation for control.",
+    "crossRefs": [
+      "12.1.2",
+      "27.9.1"
+    ]
+  },
+  {
+    "id": "27.2.1",
+    "section": "27.2.1",
+    "title": "Deliberate Damage",
+    "summary": "Allows friendly players to deliberately damage their own Installations when enemy units are adjacent, using the Deliberate Damage Table.",
+    "text": "**27.2.1 Deliberate Damage**\n\nA friendly-controlled Installation/Airfield may be deliberately damaged by the current owner at the start of any Hex Control Step in which enemy units are within two hexes (including under a Clearing marker in the hex) of the Installation/Airfield. Roll on the Deliberate Damage Table and apply any DRMs to determine the effect. No collateral damage rolls are made due to damage inflicted deliberately. A Deliberate Damage attempt can be made in the same Hex Control Step in which the Installation/Airfield is captured. No VP are awarded, but this does count as a Strike and/or an Airbase Destroyed this turn for all purposes.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.3",
+    "section": "27.3",
+    "title": "Effects on Ground Units",
+    "summary": "Summarizes how Strike markers affect ground unit ratings, referencing the Strike Effects Table.",
+    "text": "**27.3 Effects on Ground Units**\n\nSee Strike Effects Table. Combat effects of Strike markers are applied before any halving or doubling.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.3.1",
+    "section": "27.3.1",
+    "title": "Strike 1",
+    "summary": "Details the specific movement, combat, and supply penalties imposed by a Strike 1 marker on ground units.",
+    "text": "**27.3.1 Strike 1**\n\nGround units subtract one from their Attack, Defense, Movement, and Efficiency Ratings. These ratings can't be reduced below 1. They cannot move during either a Friendly Exploitation Movement Segment or an Elite Reaction Movement Segment.\n\nHQs/Artillery lose one Combat Capability for the remainder of the game turn and are rotated to indicate this.\n\nSupply Depots and MSUs flipped or expended to create the other type of Supply counter retain their \"Strike 1\" marker.\n\nMSUs cannot move in the Initiative Movement Segment and have their movement value halved in the Basic Movement Segment.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.3.2",
+    "section": "27.3.2",
+    "title": "Strike 2",
+    "summary": "Details the more severe penalties from a Strike 2 marker on ground units, including restrictions on special movement segments.",
+    "text": "**27.3.2 Strike 2**\n\nGround units subtract two from their Attack, Defense, Movement, and Efficiency Ratings. These ratings can't be reduced below 1. Ground units cannot move during a friendly Exploitation Movement Segment or an Elite Reaction Movement Segment.\n\nHQs/Artillery can only move one hex during any other friendly Movement Segment. They lose one Combat Capability for the remainder of the game turn and are rotated to indicate this.\n\nUnits cannot be moved by Airborne (25.1.1), Airmobile (8.5.4), or Sea Transport (8.5.7).\n\nSupply Depots cannot be expended to create MSUs nor can newly purchased MSUs be placed atop a Supply Depot. They cannot be expended to create Supply Points (19.4). A Supply Depot's range is reduced from eight to four motorized MPs.\n\nMSU movement is restricted as above. In addition, they cannot be flipped to create a Supply Depot, nor can they be expended to create Supply Points.",
+    "crossRefs": [
+      "25.1.1",
+      "8.5.4",
+      "8.5.7",
+      "19.4"
+    ]
+  },
+  {
+    "id": "27.3.3",
+    "section": "27.3.3",
+    "title": "\"X\" Result",
+    "summary": "Describes the most severe strike result, which eliminates Supply Depots/MSUs and causes HQ/Artillery to lose a combat capability.",
+    "text": "**27.3.3 \"X\" Result**\n\nThe unit loses a step. Supply Depots and MSUs are eliminated. HQs/Artillery lose one Combat Capability for the remainder of the game turn and are rotated to indicate this.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.4",
+    "section": "27.4",
+    "title": "Naval Units and Sea Transport",
+    "summary": "Governs how naval units with Strike results may retreat, remove markers, and how elimination and return to play is handled.",
+    "text": "**27.4 Naval Units and Sea Transport**\n\nAt the end of a Combat Segment's Naval Surface Combat step or a Strike Phase, a naval unit which incurred a Strike result may retreat to the nearest friendly port or At Sea Box, or, if in an All-Sea hex, to the Inshore Box (if friendly). A naval unit that incurs a Strike 1 or Strike 2 result can only reduce or remove the marker if it retreats to a friendly port (see below), otherwise it retains it. The Strike value is a DRM in Naval Surface Combat (+1 or +2). During its retreat, the Naval Unit can only enter friendly-controlled or Contested At Sea or Inshore Boxes. For this purpose, All-Sea hexes are always friendly-Controlled. If a Naval Unit elects to retreat to a port, it cannot move for the rest of the turn.\n\nIf a naval unit that bears a Strike 1 marker receives:\n\n1. another Strike 1 result, replace the Strike 1 marker with a Strike 2 marker.\n2. a Strike 2 result, the naval unit is Eliminated.\n\nA naval unit that bears a Strike 2 marker and receives a Strike 1, Strike 2 or Destroyed result is Eliminated.\n\nIf a naval unit is Eliminated, remove it from the map and place it on the Game Turn track four turns ahead, e.g., if Eliminated on GT 3, place it on GT 7 as a reinforcement.\n\nStrike markers can only be removed or reduced if the Naval Unit is in a friendly port during the Reorganization Phase. GSRs may restrict which Ports can repair which Naval Units. In this instance, a Naval Unit may choose a more distant Port that can repair it over a closer one that cannot.\n\nUnless Aborted, ground units utilizing Sea Transport or embarked on AMPHs that incur Strike hits suffer Step losses. Remove one step from the unit or stack for each Strike result incurred, i.e., 1 or 2; eliminate all embarked units on an \"X\" result. In addition, make a Collateral Damage roll against any embarked Attack Helicopters.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.4.1",
+    "section": "27.4.1",
+    "title": "Carrier Air Units",
+    "summary": "Explains how an X result on a CV/CVN triggers setting aside its Carrier Air Wing until the carrier returns.",
+    "text": "**27.4.1 Carrier Air Units**\n\nIf a CV/CVN incurs an \"X\" result, set aside its Carrier Air Wing (CAW) (30.1) until the CV/CVN returns to play. If other same nationality CAWs are in play, the player can remove any air units he desires if the number of CAWs matches the number of CV/CVNs in the box.",
+    "crossRefs": [
+      "30.1"
+    ]
+  },
+  {
+    "id": "27.5",
+    "section": "27.5",
+    "title": "Attack Helicopters",
+    "summary": "Describes how attack helicopters take step losses and are never given Strike markers.",
+    "text": "**27.5 Attack Helicopters**\n\nAttack helicopters are reduced and eliminated through step losses just as ground units. They never receive Strike markers, though they may suffer step loss, elimination, or rebasing when their Airfield, Airbase, or AMPH receives damage from a Strike or an SOF Raid (20.2.1).",
+    "crossRefs": [
+      "20.2.1"
+    ]
+  },
+  {
+    "id": "27.6",
+    "section": "27.6",
+    "title": "Air Units",
+    "summary": "Notes that most air units are eliminated after two step losses and that Strike results cause collateral damage rather than directly affecting air units.",
+    "text": "**27.6 Air Units**\n\nMost air units are eliminated after two step losses. A few units have only one step and are eliminated when that step is lost. Strike results do not directly affect air units, but they can cause collateral damage (27.7.4).",
+    "crossRefs": [
+      "27.7.4"
+    ]
+  },
+  {
+    "id": "27.7",
+    "section": "27.7",
+    "title": "Effects on Installations and Beachheads",
+    "summary": "Covers how Strike markers affect Airbases/Airfields, Ports, Beachheads, and potentially cause collateral damage.",
+    "text": "**27.7 Effects on Installations and Beachheads**",
+    "crossRefs": []
+  },
+  {
+    "id": "27.7.1",
+    "section": "27.7.1",
+    "title": "Airbases/Airfields",
+    "summary": "Details operational restrictions imposed on Airbases and Airfields bearing Strike 2 or Destroyed markers.",
+    "text": "**27.7.1 Airbases/Airfields**\n\nGround units cannot use Air Transport (8.5.2), Airborne Movement (25.1.1), or Airmobile Movement (8.5.4) from or to Airbases or Airfields that have a \"Strike 2\" marker.\n\nAttack helicopters cannot fly from Airfields or Airbases that bear a \"Strike 2\" or \"Destroyed\" marker, but they may, or must in the case of Destroyed, Rebase after resolving Collateral Damage. If they cannot Rebase they are eliminated.\n\nAn Airbase/Airfield marked as Destroyed cannot be used for any purpose. Captured Airbases/Airfields retain whatever marker they have, but damage no longer affects the originally owning player; nor does it affect the new owner in Air Superiority Sortie Step 1a or 1b. The Controlling player may repair them to use them for Attack Helicopter basing and/or Airmobile Movement.",
+    "crossRefs": [
+      "8.5.2",
+      "25.1.1",
+      "8.5.4"
+    ]
+  },
+  {
+    "id": "27.7.2",
+    "section": "27.7.2",
+    "title": "Ports",
+    "summary": "Explains how Strike damage reduces port capacity, and how Destroyed ports affect naval units and capacity.",
+    "text": "**27.7.2 Ports**\n\nReduce the capacity of a port by the amount of Strike damage inflicted, i.e., a Strike 1 result reduces capacity by 1 (normally from 2 to 1).\n\nIf a Port is Destroyed, it has a capacity of 0, and it cannot be used for any purpose until Repaired. Any naval units in Port are immediately placed in any adjacent all-sea hex.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.7.3",
+    "section": "27.7.3",
+    "title": "Beachheads",
+    "summary": "Details how Strike results reduce Beachhead capacity, and how markers interact with subsequent Strikes.",
+    "text": "**27.7.3 Beachheads**\n\nA Strike 1 reduces a Beachhead to a capacity of 1; a Strike 2 reduces it to a capacity of 0. A Beachhead with a Strike 1 marker that receives another Strike 1 or Strike 2 result receives a Strike 2 marker. A Beachhead with a Strike 2 marker already on it ignores Strike 1 results, but it is flipped to its No Supply side on another Strike 2 or \"X\" result. A Beachhead that receives an \"X\" result is flipped to its No Supply side; place a Strike 2 marker if one is not present. Strike results against a Beachhead on its No Supply side with a Strike 2 marker are ignored.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.7.4",
+    "section": "27.7.4",
+    "title": "Collateral Damage",
+    "summary": "Covers how Strike hits against Airfields and Airbases may cause collateral damage to air units, airmobile points, and attack helicopters.",
+    "text": "**27.7.4 Collateral Damage**\n\nStrike hits against Airfields and Airbases may cause collateral damage to air units, airmobile points, and/or attack helicopters.\n\n**27.7.4.1 Immediate Damage:** If the Strike Hit is caused by an SOF Raid, then roll immediately for Collateral Damage according to the Strike result.\n\n**27.7.4.1 Cumulative Damage:** Otherwise, the roll is not made until the appropriate step in the Strike Phase. Within a Phase, similar to Installation Damage (27.2) Collateral Damage is cumulative. Use an appropriate Collateral Damage marker (or rotate the Strike/Destroyed marker 90/180 degrees as a reminder).\n\nFor each Strike result within a Phase, add or increase the Collateral Damage marker (or flip) as appropriate. A Strike 1 places a Collateral Damage Strike 1. An additional Strike 1 or Strike 2 replaces that with a Collateral Damage Strike 2 or Destroyed respectively.\n\n**27.7.4.3 Previous Phase Strike 2 Damage:** If the Airbase/Airfield had a Strike 2 marker from a previous Phase, do not roll for Collateral Damage if it is damaged again, e.g., if the Strike 2 was placed in the SOF Phase, and an air Strike inflicts an additional Strike result in the Strike Phase, no Collateral Damage roll is made.\n\n**27.7.4.4 Versus Air Units and Airmobile Points:** When a Collateral Damage roll is required, roll one die and refer to the Collateral Damage Table. Find the die roll result under the column representing the Strike Damage Result (use the damage result inflicted not the final damage result) and the type of target (Airfield or Airbase) that was attacked. This will determine whether damage occurred, and, if so, what units/points were affected. Results are as follows:\n\n- **Am Pt** \u2014 One enemy Airmobile Point is immediately destroyed. Reduce the available Airmobile Points marker on the Game Information Display.\n- **Air** \u2014 One step from an air unit of the attacked player's choice is immediately destroyed. The owning player immediately removes one step from an air unit (or eliminates a one-step or already reduced unit).\n- **Air\\*** \u2014 One step from an air unit of the attacking player's choice is immediately destroyed. The enemy player immediately removes one step from an air unit (or eliminates a one-step or already reduced unit).\n\nWhen removing a step, it must come from an air unit in or flying from a Basing Box corresponding to wherever the Airbase/Airfield was located. Units in the Flown, Ready, Aborted, or Air Superiority boxes can be chosen. If there are no units in or flying from the Basing Box from which to extract damage, then no damage occurs.\n\nAn air unit can only take a step loss once due to collateral damage in any given Phase, e.g., it could be reduced in the First Special Operations Forces Phase and eliminated in the First Strike Phase but not both in the same phase.\n\n**27.7.4.5 Versus Attack Helicopters based at the Target:** In addition, for each Attack Helicopter based at the Airfield or Airbase, roll once on the Collateral Damage Table under the column labeled Helicopter. A result of \"Step\" eliminates one step from the helicopter. A result of \"Elim\" eliminates the entire unit. In any event, if the Airbase/Airfield was Destroyed by the attack, each helicopter, after making the Collateral Damage roll, is immediately rebased to the nearest friendly hex (6.5.1) with the capacity to hold it. The player may choose a more distant Airfield or Airbase over a closer City/Urban hex. It is rotated to 180\u00b0 to reflect that it cannot fly any more missions this turn (see 6.5.4).",
+    "crossRefs": [
+      "27.2",
+      "6.5.1",
+      "6.5.4"
+    ]
+  },
+  {
+    "id": "27.8",
+    "section": "27.8",
+    "title": "Detection/SAM/AAA Tracks",
+    "summary": "States that Strike hits versus enemy Air Defense Tracks decrease the current value of the affected track.",
+    "text": "**27.8 Detection/SAM/AAA Tracks**\n\nStrike hits versus enemy Air Defense Tracks (24.1) decrease the current value of the affected Track as indicated on the chart.",
+    "crossRefs": [
+      "24.1"
+    ]
+  },
+  {
+    "id": "27.9",
+    "section": "27.9",
+    "title": "Repair/Recovery/Reconstitution",
+    "summary": "Covers the overall framework for repairing Strike damage, recovering Air Defense Tracks, and reconstituting eliminated units.",
+    "text": "**27.9 Repair/Recovery/Reconstitution**",
+    "crossRefs": []
+  },
+  {
+    "id": "27.9.1",
+    "section": "27.9.1",
+    "title": "Units/Airfields/Installations",
+    "summary": "Explains how Strike markers are removed during the Reorganization Phase and how Destroyed Airbases/Ports are repaired using Supply Points.",
+    "text": "**27.9.1 Units/Airfields/Installations**\n\nDuring the Reorganization Phase of each game turn, players remove \"Strike 1\" counters and reduce \"Strike 2\" markers to their \"Strike 1\" sides. \"Destroyed\" markers on Installations are not affected. Airfields/Airbases and Ports can be \"repaired\" from \"Destroyed\" status by spending two Supply Points. Upon the expenditure, place a \"Strike 2\" marker on an Airbase or Port or a \"Strike 1\" marker on an Airfield.\n\nWhen repairing Airbases/Airfields from Destroyed status, rotate the Strike marker 180\u00b0. These are not counted during the Air Superiority step for the purposes of (22.6.1). An Airbase/Airfield under repair that takes damage, does not roll for Collateral Damage. If it is Destroyed again, it does not count for Air Superiority Sortie Step 1b (see 27.2 for VP).\n\nTo begin repair or flip/remove Strike markers, the hex must be friendly-Controlled and able to trace a LOC to a Supply Source as if it was a ground unit. Players are never required to repair Installations.",
+    "crossRefs": [
+      "22.6.1",
+      "27.2"
+    ]
+  },
+  {
+    "id": "27.9.2",
+    "section": "27.9.2",
+    "title": "Air Defense Tracks",
+    "summary": "Explains how players can spend Supply Points during the Reorganization Phase to repair Air Defense tracks.",
+    "text": "**27.9.2 Air Defense Tracks**\n\nDuring the Reorganization Phase of each game turn, each player may increase the value of his Air Defense tracks by spending Supply Points (19.3): 1 AAA for every 4 Supply Points, 1 DET or SAM for every 2 Supply Points spent. Players can spend no more than 4 Supply Points in this manner on a given turn.\n\nTracks can be Repaired to levels above their starting point but not beyond the maximum of the Track, i.e., 10 for Detection and SAMs, 3 for AAA. GSRs may provide additional limits.",
+    "crossRefs": [
+      "19.3"
+    ]
+  },
+  {
+    "id": "27.9.3",
+    "section": "27.9.3",
+    "title": "Reconstitution and Recovery",
+    "summary": "Describes the process for recovering and reconstituting combat, HQ, artillery, air, and helicopter units.",
+    "text": "**27.9.3 Reconstitution and Recovery**\n\nCombat, HQ, artillery, air, and helicopter units can recover steps and/or be reconstituted, i.e., brought back from elimination. Eliminated Airmobile Points can also be recovered. See the Replacement/Reconstitution table on the Standard & Advanced Play Aid for costs. The GSR may have additional rules.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.9.3.1",
+    "section": "27.9.3.1",
+    "title": "Ground Unit Recovery",
+    "summary": "Governs which ground units can recover a step and the restrictions around supply, EZOC, and Replacements.",
+    "text": "**27.9.3.1 Ground Unit Recovery:** Any combat, HQ, or artillery unit that recovers a step cannot be marked Out of Supply (19.5) nor be in an EZOC. Units cannot receive Replacements if using Emergency Resupply.",
+    "crossRefs": [
+      "19.5"
+    ]
+  },
+  {
+    "id": "27.9.3.2",
+    "section": "27.9.3.2",
+    "title": "Ground Unit Reconstitution",
+    "summary": "Details placement rules for reconstituted combat and artillery units, including proximity to Formation HQ.",
+    "text": "**27.9.3.2 Ground Unit Reconstitution:** Reconstituted combat, HQ, and artillery units are placed in a hex that is not in an EZOC, is in supply, and is not isolated.\n\nCombat and artillery units that are reconstituted must be placed within two hexes of their Formation HQ, if possible. If the Formation HQ is not available, units can use any HQ to which they or their Formation is subordinate. If no such HQ is available, units can be placed in any friendly Urban hex, City hex, Beachhead, or friendly Holding Box. HQs and Intrinsic Airmobile units recover steps by expending Supply Points, in addition to Replacement Points for the latter. They must not be marked Out of Supply (19.5).\n\nHQs can also be reconstituted. They are placed, at full strength, on the map by choosing the first attainable condition from the following list:\n\n1. A hex within 4 hexes of a subordinate unit.\n2. In a friendly country within four hexes of a supplied, non-isolated subordinate unit.\n3. In the same or adjacent hex to the Supreme HQ.\n4. In any friendly Urban, City, or Beachhead hex.\n\nAn HQ or Artillery unit that recovers a step or is reconstituted is rotated 90 degrees to indicate that it loses one combat capability for the following turn.",
+    "crossRefs": [
+      "19.5"
+    ]
+  },
+  {
+    "id": "27.9.3.3",
+    "section": "27.9.3.3",
+    "title": "Air Unit, Helicopter, Airmobile Point Replacements",
+    "summary": "Explains how Supply Points can be used to bring damaged air and helicopter units back to full strength or return destroyed units to play.",
+    "text": "**27.9.3.3 Air Unit, Helicopter, Airmobile Point Replacements:** Players can spend Supply Points to return damaged air or helicopter units to full strength or bring destroyed units back into the game. Spending two Supply Points will allow a player to flip a damaged unit to full strength, bring a destroyed unit back on to the map on its damaged side, or replace an Airmobile point. A unit cannot be brought back into play and brought to full strength in the same Replacement Phase. Place any air unit that receives replacements in the appropriate Flown Box as a Reinforcement. Mark any attack helicopter unit receiving replacements as having used one mission. Airmobile Points cannot be replaced past the maximum established by the scenario/reinforcements.\n\nUse the Airmobile Points Destroyed marker to keep track. Move it up the track when points are destroyed and down the track when they are rebuilt to help keep track of the current total.\n\nThe Game Specific Rules will delineate which unit types can receive replacements.\n\nWhen bringing a destroyed air unit back into the game, the player must choose randomly from all the available air units of the type they are replacing. When bringing a destroyed attack helicopter unit back into the game, it can be placed at any friendly Airbase/Airfield within stacking limits. Mark any reconstituted attack helicopter unit as having used one mission.\n\n**27.9.3.4 Air Unit Consolidation:** Players may consolidate damaged Air Units during the Reinforcement and Replacement Phase. If two Air Units of the same nationality and type are in the same Basing Box, eliminate one damaged unit and flip the other over to its full strength side. Place the newly consolidated Air Unit in the Flown Box. There is no VP adjustment for consolidation.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.9.3.4",
+    "section": "27.9.3.4",
+    "title": "Air Unit Consolidation",
+    "summary": "Allows players to consolidate two damaged same-type air units in the same Basing Box into one full-strength unit.",
+    "text": "**27.9.3.4 Air Unit Consolidation:** Players may consolidate damaged Air Units during the Reinforcement and Replacement Phase. If two Air Units of the same nationality and type are in the same Basing Box, eliminate one damaged unit and flip the other over to its full strength side. Place the newly consolidated Air Unit in the Flown Box. There is no VP adjustment for consolidation.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.10",
+    "section": "27.10",
+    "title": "Bridge Damage and Repair",
+    "summary": "Adds Strikes and SOF Raids as additional ways to damage and destroy bridges beyond the standard ground unit rules.",
+    "text": "**27.10 Bridge Damage and Repair**\n\nAlong with ground unit bridge destruction (8.3.4), there are two additional ways to damage/destroy bridges: Strikes and SOF Raids.",
+    "crossRefs": [
+      "8.3.4"
+    ]
+  },
+  {
+    "id": "27.10.1",
+    "section": "27.10.1",
+    "title": "Bridge Damage/Destruction",
+    "summary": "Describes how bridges accumulate damage like Installations and are considered fully functional until destroyed.",
+    "text": "**27.10.1 Bridge Damage/Destruction**\n\nBridges accumulate damage and are destroyed in the same manner as an Installation (27.2). A bridge is fully functional until marked destroyed.",
+    "crossRefs": [
+      "27.2"
+    ]
+  },
+  {
+    "id": "27.10.1.1",
+    "section": "27.10.1.1",
+    "title": "SOF Bridge Destruction",
+    "summary": "Explains how SOF units can be assigned Bridge Destruction missions during any SOF Phase.",
+    "text": "**27.10.1.1 SOF Bridge Destruction:** In any applicable SOF Phase, either player may assign his SOF markers to a Bridge Destruction mission. The player must specify in which of the two hexes containing the bridge hexside the raid is taking place. The mission is resolved as a Raid against an Installation. There is a \u20131 DRM for SOF Raids against bridges.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.10.1.2",
+    "section": "27.10.1.2",
+    "title": "Strike Bridge Destruction",
+    "summary": "Allows any player to conduct Strikes against bridges, specifying the hexside and applying a +2 DRM.",
+    "text": "**27.10.1.2 Strike Bridge Destruction:** Either player may conduct Strikes against a bridge. The player must specify in which of the two hexes containing the bridge hexside the Strike is taking place. In addition to other modifiers that apply, Strikes against bridges incur a +2 DRM.",
+    "crossRefs": []
+  },
+  {
+    "id": "27.10.2",
+    "section": "27.10.2",
+    "title": "Bridge Repair",
+    "summary": "Modifies the Standard Game Bridge Repair rule to require Supply Point expenditure and HQ LOC tracing.",
+    "text": "**27.10.2 Bridge Repair**\n\nThis rule modifies the Standard Game Bridge Repair rule (8.3.4.2). Unless placing an HQ Bridge, the repairing player must expend a Supply Point, and repair can be attempted only if a friendly HQ is able to trace a Line of Communication (19.2) of four Motorized MPs or less to one of the hexes containing the bridge hexside and no enemy unit occupies either hex containing the bridge hexside being repaired.\n\n*Exception: If a friendly, non-HQ ground unit is in a hex containing the bridge hexside being repaired, then an attempt can be made regardless of the presence of an enemy unit.*\n\n**27.10.2.1 Strike Damage Removal:** Strike 1 & 2 markers on bridges are removed/reduced as appropriate in the Reorganization Phase. A Destroyed bridge that is Repaired does not replace the Destroyed marker with a Strike 2 marker; just remove the marker.",
+    "crossRefs": [
+      "8.3.4.2",
+      "19.2"
+    ]
+  },
+  {
+    "id": "27.10.2.1",
+    "section": "27.10.2.1",
+    "title": "Strike Damage Removal",
+    "summary": "States how Strike markers on bridges are removed during the Reorganization Phase.",
+    "text": "**27.10.2.1 Strike Damage Removal:** Strike 1 & 2 markers on bridges are removed/reduced as appropriate in the Reorganization Phase. A Destroyed bridge that is Repaired does not replace the Destroyed marker with a Strike 2 marker; just remove the marker.",
+    "crossRefs": []
+  },
+  {
+    "id": "28.0",
+    "section": "28.0",
+    "title": "UN RESOLUTIONS",
+    "summary": "Introduces the UN Resolution mechanic where a die roll each Initiative Phase may trigger a ceasefire demand.",
+    "text": "**28.0 UN Resolutions**\n\n**Design Note:** *Mark Herman has graciously allowed us to use a version of his UN Resolution mechanics from Flashpoint: Golan.*\n\nDuring the Initiative Phase, one player makes a UN Resolution Die Roll to determine whether the United Nations will take action to \"force\" a halt to hostilities. Roll one die and add any applicable modifier due to any generated UN Resolution DRM (Game Specific Rules). If the result is 10 or greater, then the UN has passed a resolution demanding that the warring parties accept a Ceasefire that will go into effect during the Victory Determination Step of that turn, i.e., both sides get one turn to improve their position vis \u00e0 vis the victory point difference.",
+    "crossRefs": []
+  },
+  {
+    "id": "28.1",
+    "section": "28.1",
+    "title": "Veto",
+    "summary": "Allows either side to veto a UN ceasefire resolution, at the cost of granting 5 VPs to the opponent.",
+    "text": "**28.1 Veto**\n\nThe Game Specific Rules will specify an order for Vetoes. If the UN Resolution DR results in a ceasefire, a side may Veto it. If no side chooses to veto the Resolution, then the ceasefire is in effect (and cannot be vetoed later to avoid a Victory Point penalty), and the game will conclude at the end of the turn. If any side chooses to veto the Resolution, ignore the Die Roll and continue to play, including rolling again for another Resolution in the next Initiative Phase. The side that vetoes a Resolution gives his opponent 5 VPs. The chance to Veto the cease fire occurs only once for each side per Resolution.",
+    "crossRefs": []
+  },
+  {
+    "id": "28.2",
+    "section": "28.2",
+    "title": "Refusing to Obey a UN Ceasefire",
+    "summary": "Details the VP penalty for each turn a side disobeys an unvetoed UN ceasefire, and the special case for the GT1 Initiative player.",
+    "text": "**28.2 Refusing to Obey a UN Ceasefire**\n\nIf a Ceasefire is not Vetoed, each side, with the side which had Initiative on GT 1 choosing first, may refuse to obey the UN ceasefire. For each and every Initiative Phase in which the player continues to disobey, his opponent earns 10 Victory Points. If the GT 1 Initiative player chooses to disobey the Ceasefire, his opponent can defend himself with no penalty.",
+    "crossRefs": []
+  },
+  {
+    "id": "29.0",
+    "section": "29.0",
+    "title": "ADVANCED RULES ALTERNATE PLAY",
+    "summary": "Provides optional rules that give players alternatives to standard Advanced Game rules for increased variety.",
+    "text": "**29.0 Advanced Rules Alternate Play**\n\nThese rules are intended to provide the players with options that affect the series rules as opposed to the Optional Rules that appear in the Game Specific Rules. They are intended to outline options and their effects within the context of a specific game.\n\nPlayers are free, of course, to play with some, none, or all the Advanced Game rules; however maximum enjoyment will be obtained by using them all. *Caveat emptor.*",
+    "crossRefs": []
+  },
+  {
+    "id": "29.1",
+    "section": "29.1",
+    "title": "Air Power",
+    "summary": "Allows players to use Standard Game air rules with Advanced Game scenarios, with specified modifications.",
+    "text": "**29.1 Air Power**\n\nPlayers may, upon mutual agreement, choose to use the Standard Game Air rules with the Advanced Game Scenarios. In this case, all Standard Game Air rules apply with the following changes:",
+    "crossRefs": []
+  },
+  {
+    "id": "29.1.1",
+    "section": "29.1.1",
+    "title": "Air Points [6.1]",
+    "summary": "Doubles the number of Air Points received when using Standard Game air rules with Advanced Game scenarios.",
+    "text": "**29.1.1 Air Points (6.1)**\n\nDouble the number of Air Points received when rolling on the Standard Game Air Points Table.",
+    "crossRefs": [
+      "6.1"
+    ]
+  },
+  {
+    "id": "29.1.2",
+    "section": "29.1.2",
+    "title": "Air Strikes",
+    "summary": "Describes how Air Points can be allocated as Strike points and resolved using the Advanced Strike Table when using Standard Game air rules.",
+    "text": "**29.1.2 Air Strikes**\n\nAir Points can be used to conduct Strikes. Standard ADF is used and subtracts from the air points allocated. A player can allocate up to 4 Air Points as Strike points (the total Strike points is the Strike column used in the Strike) along with 2 escorts for a total of 6 Air Points. Resolve the strike on the appropriate column of the Advanced Strike Table.",
+    "crossRefs": []
+  },
+  {
+    "id": "29.1.3",
+    "section": "29.1.3",
+    "title": "Collateral Damage",
+    "summary": "Notes that collateral damage from the Advanced Collateral Damage table becomes a permanent Air Point loss when using Standard Game air rules.",
+    "text": "**29.1.3 Collateral Damage**\n\nAir losses generated from the Collateral Damage table translate into a permanent Air Point loss regardless of \"owning\" or \"enemy\" player.",
+    "crossRefs": []
+  },
+  {
+    "id": "29.2",
+    "section": "29.2",
+    "title": "Air Power Fog of War",
+    "summary": "Optional rules to obscure the air battle picture by forcing blind allocation of units against unknown enemy strikes.",
+    "text": "**29.2 Air Power Fog of War**\n\nThe following rules are intended to obscure the air battle picture by forcing players to allocate units blindly against enemy strikes and air superiority missions.",
+    "crossRefs": []
+  },
+  {
+    "id": "29.2.1",
+    "section": "29.2.1",
+    "title": "Strike Missions",
+    "summary": "When allocating a Strike mission under Fog of War, the number and type of aircraft are not revealed until after the detection roll.",
+    "text": "**29.2.1 Strike Missions**\n\nWhen allocating a Strike mission, the allocating player does not reveal the number or type of aircraft in the Strike until after the detection roll has been made. If the Detection roll is an \"ED\", then the allocating player indicates the number of attacking aircraft but not the type. *(Exception: If a Wild Weasel aircraft is present, that fact must be revealed.)* The intercepting player must then indicate which aircraft, if any, will intercept the unknown aircraft. Once the interceptors are allocated (or not), play proceeds normally.\n\nThe above will necessitate some record keeping as all Strikes and targets are allocated before the detection process is begun and all detection rolls are made prior to allocating interceptors.",
+    "crossRefs": []
+  },
+  {
+    "id": "29.2.2",
+    "section": "29.2.2",
+    "title": "Air Superiority Hidden Assignment",
+    "summary": "During Air Superiority allocation, each player secretly chooses an aircraft before simultaneously placing units in the Air Superiority Box.",
+    "text": "**29.2.2 Air Superiority Hidden Assignment**\n\nDuring the Air Superiority Allocation step, each player chooses an aircraft unit without revealing it to the opposing player. Both units are placed simultaneously into the Air Superiority Box engaging each other.\n\nWhen all units for one player have been placed, but the opposing player has more units to assign, those additional units may be placed in any engagement so long as no more than two units are engaging a single enemy unit.\n\nOnce all units have been placed, the player with an AWACS Advantage may change engagements equal to the current AWACs level in one of two ways:\n\n1. Switch any two aircraft units' places. Simply pick them up and switch their places in the Air Superiority Box.\n2. Avoid an engagement entirely. Place the aircraft unit in the appropriate Flown Box.",
+    "crossRefs": []
+  },
+  {
+    "id": "29.3",
+    "section": "29.3",
+    "title": "Air Unit Reconstitution and Recovery",
+    "summary": "Optional rule allowing reconstitution or recovery of any air unit regardless of GSR restrictions, using the process in (27.9.3.3).",
+    "text": "**29.3 Air Unit Reconstitution and Recovery**\n\nAs an option, players may use the process in (27.9.3.3) to reconstitute or recover any air unit regardless of any restrictions outlined in the GSR.",
+    "crossRefs": [
+      "27.9.3.3"
+    ]
+  },
+  {
+    "id": "29.4",
+    "section": "29.4",
+    "title": "Jettisoning Ordnance",
+    "summary": "Allows air units in Strike or Combat Support missions to jettison ordnance before air-to-air combat to avoid penalties, at the cost of not being able to complete their mission.",
+    "text": "**29.4 Jettisoning Ordnance**\n\nAir Units allocated to Strike or Combat Support missions before resolving any air-to-air combat stage jettison their ordnance if attacked in Air-to-Air Combat. If they do so, they cannot conduct a Strike or Combat Support after the Interception Air-to-Air Combat, but they do not incur the detrimental DRMs in aerial combat.",
+    "crossRefs": []
+  },
+  {
+    "id": "29.5",
+    "section": "29.5",
+    "title": "HQ Supply Range",
+    "summary": "Optional rule using HQ movement range (instead of uniform 4 MPs) for tracing supply.",
+    "text": "**29.5 HQ Supply Range**\n\nRather than the nominal, uniform 4 Motorized MPs for tracing supply, use the HQ's range as the number of MPs, e.g., U.S. units can trace to the U.S. 82nd Airborne Division HQ using 5 Motorized MPs. If an HQ has no support range use 3 as the range for this rule.",
+    "crossRefs": []
+  },
+  {
+    "id": "30.0",
+    "section": "30.0",
+    "title": "SPECIAL UNIT NOTES",
+    "summary": "Provides special rules and notes for specific unit types including Carrier Air Wings, Naval Air Units, and US Army and Marine Corps HQs.",
+    "text": "**30.0 Special Unit Notes**\n\nThis section provides special rules and notes for specific unit types used in the Next War series.",
+    "crossRefs": []
+  },
+  {
+    "id": "30.1",
+    "section": "30.1",
+    "title": "Carrier Air Wings (CAW)",
+    "summary": "Defines the standard composition of Carrier Air Wings for each nation's carrier type.",
+    "text": "**30.1 Carrier Air Wings (CAW)**\n\nUnless otherwise stated in the GSR, CAWs always and only consist (barring GSR) of the following air units:\n\n- US CVN BG: 1 x F/A-18E, 2 x F/A-18F, & 1 x EA-18G\n- CW CV BG: 1 x F-35B\n- FR CVN BG: 1 x Rafale-M\n- PRC CV/CVN BG: 1 x J-15\n\n*Important: CAW air units are never included with the USAF air units as part of any setup instructions. They always arrive when their carrier arrives. Individual air units are drawn randomly within an aircraft type (e.g., F/A-18F).*",
+    "crossRefs": []
+  },
+  {
+    "id": "30.2",
+    "section": "30.2",
+    "title": "Naval Air Units",
+    "summary": "Classifies all air units based on a CV BG, CVN BG, or AMPH as Naval Air for rules and Strike table purposes.",
+    "text": "**30.2 Naval Air Units**\n\nFor the purposes of the rules and Strike table, all air units based on a CV BG, CVN BG, or AMPH are Naval Air.",
+    "crossRefs": []
+  },
+  {
+    "id": "30.3",
+    "section": "30.3",
+    "title": "US Army HQs",
+    "summary": "Clarifies that all US Army units are subordinate to any US Army HQ regardless of formation.",
+    "text": "**30.3 US Army HQs**\n\nFor all purposes, US Army units are subordinate to any US Army (but not USMC) HQ, regardless of their formation.\n\n*Example: the 82nd Airborne HQ can provide combat support and supply to a brigade of the US 101st Airmobile Division.*\n\n**Design Note:** *BCTs are designed to be almost fully self-sufficient fire and maneuver units. Divisional HQs are, rather than dedicated HQs with specific subordinate units, command and control/administrative functions allowing for great flexibility in assigning BCTs to HQs which are not, nominally, in their \"chain of command\".*",
+    "crossRefs": []
+  },
+  {
+    "id": "30.4",
+    "section": "30.4",
+    "title": "US Marine Corps HQs",
+    "summary": "Details the special rules for US Marine Expeditionary Force HQs and their MEU sub-HQs.",
+    "text": "**30.4 US Marine Corps HQs**\n\nU.S. Marine Expeditionary Force (MEF), when available, appears piecemeal and includes additional HQ units called MEUs. These HQs are subordinate to any MEF HQ.\n\nThese MEU HQs function as normal HQs for all purposes except that they may utilize their combat capability only once during a turn (i.e., they are rotated 180 degrees upon use). These HQs also contain only a single step.\n\nOnce an MEF HQ appears on the map, the Allied player must remove a MEU HQ from the map when it can trace a Line of Communication to the MEF HQ. After removal, the player may also place it back onto the map during an Amphibious Assault involving U.S. Marines. In this case, simply place one MEU HQ in a hex with a successfully assaulting unit. The MEU HQs are removed when they once again meet the requirements above.\n\n**Design Note:** *The MEUs are Battalion Landing Force HQs. They exist, in game terms, to provide the Marines with HQ support while they are conducting amphibious landings, either when the main HQ (MEF) isn't present or as a raid or diversion.*",
+    "crossRefs": []
+  }
+]

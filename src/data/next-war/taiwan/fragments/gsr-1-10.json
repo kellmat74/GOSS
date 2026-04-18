@@ -1,0 +1,848 @@
+[
+  {
+    "id": "taiwan-1.0",
+    "section": "1.0",
+    "title": "Introduction",
+    "summary": "Overview of the Game Specific Rules, how they interact with Series Rules, and key new mechanics introduced in NWT 2nd Edition.",
+    "text": "**1.0 Introduction** [Standard/Advanced]\n\nThese rules extend both the Standard and Advanced series rules and add extra nuances for the situation in Taiwan. Unless otherwise specified, Game Specific Rules take precedence over any of those rules which they may contradict. Most rules are marked \"[Standard]\" or \"[Advanced]\" when applicable.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-1.0.1",
+    "section": "1.0.1",
+    "title": "Rules References",
+    "summary": "Explains the notation for Series Rules references versus Game Specific Rules references.",
+    "text": "**1.0.1 Rules References**\n\nReferences structured like this [8.2] refer to the Series Rules. If the reference has \"GSR,\" e.g., [GSR 1.3], it refers to these Game Specific Rules.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-1.1",
+    "section": "1.1",
+    "title": "Components",
+    "summary": "Lists all physical components included in Next War: Taiwan.",
+    "text": "**1.1 Components**\n\n*Next War: Taiwan* contains the following:\n\n• One 22\" x 34\" Operational game map\n• One 22\" x 17\" Operational game map extension\n• One 22\" x 34\" Strategic map\n• Four and a half sheets of 9/16\" Counters\n• One *Standard & Advanced Rules* Game Rules booklet\n• One Game Specific Rules (GSR) booklet (this one)\n• Seven 8½ x 11\" Play-aids:\n  - 2 Identical CRT & TEC cards\n  - 1 Standard & Advanced Game Player Aid card\n  - 1 Advanced Sequence of Play card\n  - 1 Standard Sequence of Play & Advanced ADF Resolution Chart\n  - 1 Master Allied Reinforcement Chart & Strike Effects Table\n  - 1 Unit Identification and Naval Movement card\n• Two 11 x 17\" Play-aids:\n  - 2 Advanced Game Player Aid cards\n• Two 10-sided dice (0-9)",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-1.2",
+    "section": "1.2",
+    "title": "Glossary Additions",
+    "summary": "Defines three new acronyms specific to Next War: Taiwan.",
+    "text": "**1.2 Glossary Additions**\n\nAAZ - Amphibious Assault Zones\n\nNSP – National Supply Point\n\nTSSP – Theater Stockpile Supply Point",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-1.3",
+    "section": "1.3",
+    "title": "US Ground Unit Restrictions",
+    "summary": "Restricts which US ground formations are available in NWT to specific Army divisions; US Marine Corps references are ignored.",
+    "text": "**1.3 US Ground Unit Restrictions**\n\nThe only US ground Formations used in *NWT* are the units of the US Army 10th [5], 11th [3], 25th [4], 82nd [5], and 101st [5] divisions, and US Marine Corps. Ignore references to other US Army units in the Master Allied Reinforcement Table.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-1.4",
+    "section": "1.4",
+    "title": "Game Play Guidance",
+    "summary": "Highlights the key new mechanics players should familiarize themselves with before playing NWT 2nd Edition.",
+    "text": "**1.4 Game Play Guidance**\n\nThere are some new mechanics introduced in *Next War: Taiwan, 2nd Edition* with which you should become familiar: Amphibious Assault Zones [GSR 2.4.1] and their associated Beach Defense Tracks [GSR 5.5]. In addition, the Supply Point rules have undergone a major overhaul in terms of usage and \"shipment\" [GSR 10.2/10.3] and in terms of air unit replacement [GSR 8.4].\n\nSome other nuances I would like to call your attention to are Chinese Interservice Rivalry [GSR 7.2] and Chinese DF-21/26 A2/AD [GSR 15.1.3] as this changes the way Cruise Missiles interact with Naval units.\n\nIt is also important to differentiate between Allied AAZ Anti-Ship Attacks [GSR 5.5.2] and Naval SSMs [GSR 15.2]. These are two different things.",
+    "crossRefs": ["2.4.1", "5.5", "5.5.2", "7.2", "10.2", "10.3", "8.4", "15.1.3", "15.2"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-1.5",
+    "section": "1.5",
+    "title": "Allied vs. non-Allied",
+    "summary": "Defines which nations are 'Allied' (ROC/Taiwan and aligned nations) versus 'non-Allied' (PRC/China and aligned nations) throughout the rules.",
+    "text": "**1.5 Allied vs. non-Allied**\n\nSeveral references throughout the rules use the terms Allied and non-Allied. Allied refers to the Republic of China (ROC/Taiwan) and any nations aligned with it (typically, the United States (US), Commonwealth (CW), and Japan (JPN) and, sometimes the Socialist Republic of Vietnam (SRV) and the Philippines (PH)). Non-Allied refers to the People's Republic of China (PRC/China) and any nations aligned with it (potentially Malaysia (MA) and the Philippines (PH)). When the rules specify a nation, that rule applies only to that nation.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-1.5b",
+    "section": "1.5",
+    "title": "New Markers",
+    "summary": "Describes new game markers included to assist with play: Port Capacity Used, Air Unit Basing, Naval SSM Strike, and Naval Surface Combat.",
+    "text": "**1.5 New Markers**\n\nThere are some new markers included to assist with play. These include:\n\n• Port Capacity Used - track how much capacity has been used in a turn.\n• Air Unit Basing – track which Basing Box an air unit came from.\n• Naval SSM Strike – to differentiate between Cruise/Ballistic missiles and Naval SSMs.\n• Naval Surface Combat – to track who is firing at whom during large surface combats.\n\nI hope these help!",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.0",
+    "section": "2.0",
+    "title": "Terrain",
+    "summary": "Game-specific terrain rules for Taiwan, covering friendly map edges, the Hsuehshan Tunnel, points of interest, beaches/AAZs/ports, sea transport limitations, non-playable hexes, the urban capital, and neutrals.",
+    "text": "**2.0 Terrain** [8.0 Standard/Advanced]",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.1",
+    "section": "2.1",
+    "title": "Friendly Map Edges",
+    "summary": "Defines 'friendly map edges' for retreat purposes on the Taiwan island map, distinguishing ROC from all other units.",
+    "text": "**2.1 Friendly Map Edges**\n\nDue to the nature of the terrain (it is an island after all), \"friendly map edges\" for retreat purposes need special definition:\n\n• **ROC:** Closer to any friendly Supply Source, City, or Installation hex.\n• **All others:** Closer to a friendly Supply Source on the Operational Map (Taiwan) [GSR 10.0].",
+    "crossRefs": ["10.0"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.2",
+    "section": "2.2",
+    "title": "Hsuehshan Tunnel",
+    "summary": "The 'Snow Mountain' tunnel between hexes 4711 and 4712 applies a –2 DRM to all Interdiction attempts against either hex.",
+    "text": "**2.2 Hsuehshan Tunnel**\n\nThis \"Snow Mountain\" tunnel runs between hexes 4711 and 4712; as marked on the map, a \"–2\" DRM is applied for all Interdiction attempts against either hex.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.3",
+    "section": "2.3",
+    "title": "Points of Interest",
+    "summary": "Rules for the Formosa Plastics Complex and Semiconductor Manufacturing Companies (SMCs), which are special hexes with combat, VP, and control implications.",
+    "text": "**2.3 Points of Interest**\n\n**2.3.1 Formosa Plastics Complex**\n\nThis complex is in hex 2807. As marked on the map, defenders in this hex receive a column shift left on the CRT and may roll to voluntarily ignore retreat results [9.8.3]. In addition, it costs an additional Movement Point to enter the hex. The hex starts in Allied control. If enemy-Controlled, both sides must conduct a Clearing Operation to control the hex as if it was an Installation.\n\n**2.3.2 Semiconductor Manufacturing Companies (SMC)**\n\nThese facilities in Taipei (4710), Hsinchu (4207), Taichung (3307), Tainan (2009), and Kaohsiung (1613) represent some of the main \"prizes\" on Taiwan. Control and/or destruction of them would have global ramifications. They are not Installations, but they can be damaged and destroyed via Deliberate Damage [27.2.1] or Combat. If combat is conducted in the hex, roll on the Deliberate Damage Table without any DRMs to see if collateral damage occurs. Strike damage is not Repaired.\n\nCapturing a non-Destroyed SMC earns 3 VP. Destroying an SMC, regardless of Control, earns the opponent 1 VP.",
+    "crossRefs": ["9.8.3", "27.2.1"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.4",
+    "section": "2.4",
+    "title": "Beaches, Amphibious Assault Zones, and Ports",
+    "summary": "Defines the Amphibious Assault Zone (AAZ) system, port locations, and restrictions on which side can use Eastern vs. Western AAZs and ports based on Air Superiority.",
+    "text": "**2.4 Beaches [8.3.1.7], Amphibious Assault Zones, and Ports**\n\nUsable Beaches for Amphibious Assault are marked with a light blue coloring. All-sea hexes which can be used for AMPHs conducting an Amphibious Assault are outlined in dark blue. Together, these hexes define the Amphibious Assault Zone (AAZ).",
+    "crossRefs": ["8.3.1.7"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.4.1",
+    "section": "2.4.1",
+    "title": "Amphibious Assault Zones (AAZ) Locations",
+    "summary": "Lists the locations and compass designations (W/N/E) of all AAZs on the Taiwan Operational Map.",
+    "text": "**2.4.1 Amphibious Assault Zones (AAZ) Locations**\n\nThe Kaohsiung, Tainan, Chiaiyi, Hsinchu, Hengchun, Taichung, and Taipei AAZs are Western. The Keelung AAZ is Northern. The Toucheng, Hualien, Su-ao, and Taitung AAZs are Eastern. These are marked on the Operational Map with (W), (N), and (E) respectively.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.4.2",
+    "section": "2.4.2",
+    "title": "Port Locations",
+    "summary": "Identifies which ports are Eastern, Northern, or Western for purposes of AAZ and supply rules.",
+    "text": "**2.4.2 Port Locations**\n\nThe following ports are Eastern: Taitung (2118), Hualien (3616), and Su-ao (4415). Keelung (5011) is the only Northern Port. All other Ports are Western.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.4.3",
+    "section": "2.4.3",
+    "title": "Restrictions",
+    "summary": "Governs which player can use Eastern vs. Western ports and AAZs based on Air Superiority level and control of the Taiwan Straits Inshore Box.",
+    "text": "**2.4.3 Restrictions**\n\nThe non-Allied player can generally use Western Ports and Beach zones. The Eastern Ports and AAZs require Air Superiority or Supremacy to be used for any non-Allied purpose. Similarly, the Allies can generally use Eastern Ports and AAZs but can use Western Ports and AAZs only during turns in which they have achieved Air Supremacy. Either side can use the Northern Ports and AAZ if that side has some level of Air Superiority above Contested.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.5",
+    "section": "2.5",
+    "title": "Sea Transport Landing Capacity Limitations",
+    "summary": "Specifies higher-than-standard Sea Transport Landing Capacity limits for three key Taiwan ports, and the PRC Beachhead Landing Limit rules.",
+    "text": "**2.5 Sea Transport Landing Capacity Limitations**\n\n**2.5.1 Ports**\n\nThe Sea Transport Landing Limitations [8.5.7.4] for certain Ports in Taiwan are higher than the standard two stacking points as follows:\n\n| Port | SP |\n|---|---|\n| Kaohsiung (1513) | 4 SP |\n| Shengang (3306) | 3 SP |\n| Keelung (5011) | 3 SP |\n\nThese are marked on the map with a white number near the Port.\n\n**2.5.2 Non-Allied Beachhead**\n\nThe PRC Beachhead Landing Limit starts at two Stacking Points and can increase over the course of some scenarios (or at setup). This is indicated on the reinforcement schedule.\n\nUnless option 17.15 is chosen, the PRC can only use one Beachhead.",
+    "crossRefs": ["8.5.7.4", "17.15"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.6",
+    "section": "2.6",
+    "title": "Non and Partially Playable Hexes",
+    "summary": "Identifies non-playable shaded hexes and two partially playable hexes (4808 and 4809) with special movement restrictions.",
+    "text": "**2.6 Non and Partially Playable Hexes**\n\nCertain hexes on the map contain areas which are shaded [1021, 1121, and 4006]. These hexes are non-playable and prohibited for ground units but are not All Sea hexes. ZOCs do not project across these prohibited hexsides.\n\nHexes 4808 and 4809 are special cases; they are partially playable. Units in those hexes are in the non-shaded portion of the hex, e.g., movement is not possible between 4808 and 4908 or 4809, and it **cannot** be bridged using an HQ. If the bridge in 4809 is still intact, movement is possible between 4708 and 4809 across the bridge, but it **cannot** be repaired nor bridged using an HQ.\n\nSimilarly, hexside 2806-2906 cannot be crossed using ground movement nor can it be bridged using an HQ.\n\nAs a reminder, hexsides prohibited to ground movement are marked with a solid black line.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.7",
+    "section": "2.7",
+    "title": "Urban Capital",
+    "summary": "Specifies the four hex numbers that together comprise the Urban Capital hexes of Taipei.",
+    "text": "**2.7 Urban Capital**\n\nJust to be clear, the following four Urban hexes comprise the Urban Capital hexes of Taipei: 4610, 4611, 4709, 4710.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-2.8",
+    "section": "2.8",
+    "title": "Neutrals",
+    "summary": "Defines neutrality: if a country has not intervened via Scenario Special Rule, setup, or game play, it is Neutral and controls no Island Land Areas associated with that nationality.",
+    "text": "**2.8 Neutrals**\n\nIf a country/nationality has not intervened, i.e., by Scenario Special Rule (SSR), setup, or game play, it is Neutral. Neither side controls any Island Land Areas or Land Areas associated with that nationality.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-3.0",
+    "section": "3.0",
+    "title": "Units",
+    "summary": "Covers game-specific unit rules including the PRC PCH 191 MLS rocket artillery and optional counters.",
+    "text": "**3.0 Units** [2.0 Standard/Advanced]",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-3.1",
+    "section": "3.1",
+    "title": "PRC PCH 191 MLS",
+    "summary": "The PRC PCH 191 Multiple Launch System rocket artillery units are placed in the PRC Holding Box and conduct Strikes with a range of 18; they cannot be moved from the Holding Box.",
+    "text": "**3.1 PRC PCH 191 MLS**\n\nThese rocket artillery units are poised along the Chinese coast to strike Taiwan. To simulate their effects, in all Advanced Game scenarios the non-Allied player places these two units in the PRC Holding Box during setup. The units are treated as Artillery in all respects except that they cannot be moved from the Holding Box.\n\nThey conduct Strikes/Combat Support with a range of 18. Count the range from the West map edge, e.g., using 3302 as 8 (like Attack Helicopter or Airmobile Transport), the Strike can reach 3311.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-3.2",
+    "section": "3.2",
+    "title": "Optional Counters",
+    "summary": "All counters with a star are Optional counters not available for play unless chosen via Section 17 optional rules.",
+    "text": "**3.2 Optional Counters**\n\nAll counters with a star on them are Optional and have rules associated with them. They are not available for play unless chosen as optional rules. See Section 17.",
+    "crossRefs": ["17.0"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-4.0",
+    "section": "4.0",
+    "title": "Weather",
+    "summary": "Game-specific weather rules including the non-Allied player's ability to choose the starting Season, which applies DRMs to the Weather Die Roll.",
+    "text": "**4.0 Weather** [4.0 Standard/22.2 Advanced]",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-4.1",
+    "section": "4.1",
+    "title": "Season",
+    "summary": "Before the scenario begins, the non-Allied player chooses the starting Season, which applies a DRM (–1 for Summer, +0 for Spring/Fall, +1 for Winter) to the Weather Die Roll.",
+    "text": "**4.1 Season**\n\nBefore a scenario begins, the non-Allied player can choose the Season in which the game begins. Seasonal choices affect the Weather Die Roll [4.0].\n\n**Weather DRMs:**\n\n| Season | DRM |\n|---|---|\n| Summer | –1 |\n| Spring/Fall | +0 |\n| Winter | +1 |",
+    "crossRefs": ["4.0"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-4.2",
+    "section": "4.2",
+    "title": "Weather Effects",
+    "summary": "Weather affects only the Taiwan Straits At Sea Box, Taiwan Straits Inshore Box, and the Operational Map; Allied naval units in an affected area may retreat to the Japan Holding Box.",
+    "text": "**4.2 Weather Effects**\n\nWeather affects only the Taiwan Straits At Sea Box, Taiwan Straits Inshore Box, and the Operational Map. See 4.1 and 22.2 for Weather effects. Allied naval units in an affected area may retreat to the Japan Holding Box. [GSR 17.9].",
+    "crossRefs": ["4.1", "17.9"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.0",
+    "section": "5.0",
+    "title": "Naval Affairs",
+    "summary": "Comprehensive rules for the naval dimensions of the Taiwan conflict, including the Strategic Display, Sea Control, Naval Movement Restrictions, AAZ Beach Defenses, Mines, Airmobile Points, and Naval Unit Repair.",
+    "text": "**5.0 Naval Affairs** [7.0 Standard/17.0 Advanced]",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.1",
+    "section": "5.1",
+    "title": "Strategic Display",
+    "summary": "Describes the Pacific Ocean Strategic Display with its Holding Boxes, At Sea Boxes, Inshore Boxes, and Island Land Areas.",
+    "text": "**5.1 Strategic Display**\n\nThe Strategic Display contains a representative portion of the Pacific Ocean. This Display contains four types of locations: Holding Boxes, At Sea Boxes, Inshore Boxes, and Island Land Areas.\n\nHolding Boxes represent abstract home country or territorial areas of the major participants. At Sea Boxes are represented as areas or zones, and they can contain Inshore Boxes and/or Land Areas.\n\nInshore Boxes are square and represent the littorals of specific portions of the At Sea Box. Island Land Areas are hexagonal in shape and represent an abstraction of some significant portion of land (or collection of islands) which is not represented with a full map.\n\nAlthough we provide the entire Pacific Theater Strategic Display, players can effectively ignore the Gulf of Tonkin when playing only *Next War: Taiwan, 2nd Edition*.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.1.1",
+    "section": "5.1.1",
+    "title": "Holding Boxes",
+    "summary": "Holding Boxes always contain a nominal Port and in most cases Airbases; the PRC and Japan Holding Boxes on the main map correspond to the same locations on the Strategic Display.",
+    "text": "**5.1.1 Holding Boxes**\n\nHolding Boxes always contain a nominal Port and, in most cases, Airbases. The Holding Boxes have special rules [GSR 6.5].\n\nThe PRC and Japan Holding Boxes on the main map represent the same locations as the ones depicted on the Strategic Display.\n\nThe PRC and US Holding Boxes are Home Holding Boxes used for generating Supply Points [GSR 10.2].",
+    "crossRefs": ["6.5", "10.2"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.1.2",
+    "section": "5.1.2",
+    "title": "At Sea Boxes/Areas",
+    "summary": "At Sea Boxes on the Strategic Display are represented as areas; all rules applying to At Sea Boxes/Sea Zones apply to those areas.",
+    "text": "**5.1.2 At Sea Boxes/Areas**\n\nAt Sea Boxes on the Strategic Display are represented as areas. All the rules which apply to At Sea Boxes/Sea Zones apply to those areas as well.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.1.3",
+    "section": "5.1.3",
+    "title": "Inshore Boxes",
+    "summary": "Inshore Boxes are contained within At Sea Boxes and can only be entered after first entering the associated At Sea Box; the Taiwan Straits Inshore Boxes on the Operational Map and Strategic Display represent the same location.",
+    "text": "**5.1.3 Inshore Boxes**\n\nInshore Boxes are contained within At Sea Boxes and, unless otherwise specified, can only be entered after first entering the associated At Sea Box [8.5.6]. The Taiwan Straits Inshore Boxes on the Operational map and on the Strategic Display represent the same location.",
+    "crossRefs": ["8.5.6"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.1.4",
+    "section": "5.1.4",
+    "title": "Island Land Areas",
+    "summary": "Rules governing Island Land Areas: entry methods, stacking, combat, control determination, clearing operations, and supply for units in Island Land Areas.",
+    "text": "**5.1.4 Island Land Areas**\n\nSome At Sea Boxes also contain Island Land Areas depicted as single large hexes.\n\nGround units can use Air or Sea Transport or Airmobile Movement to enter or leave a friendly-Controlled Island Land Area.\n\nMarine ground units in an Island Land Area can embark on AMPHs in the associated Inshore Box.\n\nEnemy-Controlled Island Land Areas can be entered by Airmobile Movement subject to the restrictions below. Island Land Areas can be entered via Amphibious Assault from the associated Inshore Box per those rules, i.e., treat the Island Land Area as a \"hex.\" Only three Stacking Points of units can Amphibiously Assault an Island Land Area.\n\nNaval Units can conduct Naval Bombardment from Inshore Boxes against Island Land Areas [17.5].\n\nSpecific Island Land Area rules:\n\n**5.1.4.1 Senkakus:** Airmobile Movement and Helicopter Strikes/CS are permitted to/from the Japan Holding Box and to/from any hex on or north of hexrow 41xx in Taiwan.\n\n**5.1.4.2 Paracels:** Airmobile Movement and Helicopter Strikes/CS are permitted to/from the PRC, Vietnam, and Philippines Holding Boxes.\n\n**5.1.4.3 Spratly Islands:** Airmobile Movement and Helicopter Strikes/CS are permitted to/from the Malaysia, Vietnam, Indonesia, and Philippines Holding Boxes.\n\n**5.1.4.4 Penghu:** Airmobile Movement and Helicopter Strikes/CS are permitted to/from the PRC Holding Box and any hex of Taiwan. Airborne Movement/Paradrop is permitted from the PRC Holding Box, Japan Holding Box, and Taiwan.\n\n**5.1.4.5 Taiwan Straits Inshore Box:** Airmobile Movement and Helicopter Strikes/CS are permitted to/from any All-Sea hex on the Operational Map by expending 5MP.\n\n**5.1.4.6 Island Land Area Stacking:** Both sides can stack together in the same Island Land Area. The Stacking Limit, per side, is three Stacking Points.\n\n**5.1.4.7 Island Land Area Combat:** When opposing sides conduct combat in an Island Land Area, it is conducted normally in any appropriate Combat Segment. Treat the terrain as Rough. Retreat results are ignored. Amphibiously Assaulting units which do not eliminate the defender do not take an additional step loss; they are simply placed in the Island Land Area. Opposing units can co-exist in the Island Land Area until one side is eliminated or withdraws.\n\n**5.1.4.8 Island Land Area Control:** To determine if a side must conduct a successful Clearing Operation [8.4.1] to control an Island Land Area, the beginning status, current control, and/or presence of enemy combat units in the Land Area (see below) must be considered. See 18.1.3.1 for starting status.\n\n**5.1.4.8.1 Uncontrolled:** Unless previously occupied by enemy combat units, whether Control was established or not, an Uncontrolled Island Land Area does not need to be Cleared. To establish Control, a combat unit must be in the Island Land Area during the Hex Control step of the Reorganization Phase.\n\n**5.1.4.8.2 Clearing Island Land Areas:** Any Island Land Area previously occupied by enemy combat units regardless of Control or such an Area starting enemy-Controlled must be Cleared. When a Clearing Operation is required, a Clearing Marker is randomly drawn and placed when the player's forces are the sole occupiers of the Island Land Area. If the enemy subsequently places units in the Island Land Area, the Clearing Marker is removed if units coexist. The Minimum Safe Stacking Point requirement is two (2).\n\n**5.1.4.9 Island Land Areas and Supply:** Units in an Island Land Area are in supply if the associated Inshore Box is friendly-Controlled or Contested, or that side has Air Supremacy.",
+    "crossRefs": ["17.5", "8.4.1", "18.1.3.1"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.2",
+    "section": "5.2",
+    "title": "Sea Control",
+    "summary": "Taiwan-specific Sea Control procedure with a modified check order covering Inshore Boxes, At Sea Boxes, and the use of Naval SSM Points and DF-21/26 to influence Sea Control rolls.",
+    "text": "**5.2 Sea Control**\n\nFollow the Series Rules for Sea Control with the variations described in the following steps below during the appropriate Steps of the Sequence of Play (Step 7 in Standard and 5 & 6 of the Advanced Air/Naval Phase). There can be only one check per Inshore/At Sea box regardless of the number of conditions it meets [7.2.1/7.2.2]:\n\n1. Check for Inshore Boxes appropriately.\n2. If there are any Allied Controlled At Sea Boxes, check for any non-Allied Controlled or Contested At Sea Boxes connected to them first.\n3. Then:\n   a. Always check for the Spratly Islands and Taiwan Straits At Sea Box.\n   b. If non-Allied Controlled/Contested, check the Ryukyu Islands, Northern Approaches, and Marianas (in that order).\n4. Then, if any checked At Sea Box became or remained non-Allied Controlled, check for any adjacent At Sea Boxes which were Allied Controlled prior to this Sea Control step.\n\nBoth players can affect any required Sea Control die rolls by expending a Naval SSM Point [GSR 15.2.2] or using a DF-21/26 [automatic in Standard Game/GSR 15.1.3.4].",
+    "crossRefs": ["7.2.1", "7.2.2", "15.2.2", "15.1.3.4"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.2.1",
+    "section": "5.2.1",
+    "title": "Japanese Intervention",
+    "summary": "If Japan intervenes at Level 2 or higher, the Sea of Japan At Sea and East Sea Inshore Boxes are permanently Allied Controlled and not rolled for in the Sea Control step.",
+    "text": "**5.2.1 Japanese Intervention**\n\nIf Japan intervenes at Level 2 or higher, the Sea of Japan At Sea and East Sea Inshore Boxes are permanently Allied Controlled and are not rolled for in the Sea Control step.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.3",
+    "section": "5.3",
+    "title": "Non-Allied Naval Movement Restrictions",
+    "summary": "PRC Naval units are restricted to specific sea areas and cannot move freely into all At Sea Boxes; other non-Allied navies are similarly restricted to adjacent areas from their Holding Box.",
+    "text": "**5.3 Non-Allied Naval Movement Restrictions**\n\nPRC Naval units are only allowed to move into the PRC Holding Box and East China Sea, Taiwan Straits, South China Sea, Ryukyu Islands, and Spratly Islands At Sea Boxes (including the associated Inshore Boxes and All-Sea/Coastal hexes). If the non-Allied player takes control of the Senkakus Land Area, they can move into the Central Approaches At Sea Box.\n\nOther non-Allied naval units can only enter their own Holding Box and At Sea Boxes adjacent to their Holding Box (and associated Inshore Boxes and/or all-sea hexes), e.g., if the Philippines enters the war on the non-Allied side, it's SAG and AMPH can only enter the Philippines Holding Box, South China Sea, Spratly Islands, Celebes Sea, Philippines Sea, Central Approaches, and Taiwan Straits At Sea Boxes as well as the Inshore Boxes/all-sea/Coastal hexes associated with them.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.4",
+    "section": "5.4",
+    "title": "Naval Unit Return",
+    "summary": "ROC, VN, MA, and PH Naval Units are permanently removed from the game when they suffer an 'X' result.",
+    "text": "**5.4 Naval Unit Return** [27.4 Advanced]\n\nAs an exception, ROC, VN, MA, and PH Naval Units are permanently removed when suffering an \"X\" result.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.5",
+    "section": "5.5",
+    "title": "AAZ Beach Defenses",
+    "summary": "The Allied player tracks and improves Beach Defense levels for each AAZ on a Beach Defense Track; defenses modify Naval movement, combat, movement costs, and can be attacked by various means.",
+    "text": "**5.5 AAZ Beach Defenses**\n\nThe ROC has spent a great deal of time and money strengthening their beach defenses with everything from Normandy style hedgehogs and strongpoints to short-range anti-ship missiles. To represent this, the Allied player tracks the level of each AAZ's [GSR 2.4.1] Beach Defenses on the Beach Defense Track provided.\n\nAll Beach Defenses automatically start in the 1(-) box for free. Each scenario will specify the number of Beach Defense Points the Allied player has to distribute between the AAZs in the scenario's play area. Each Beach Defense Track box lists its Value and the Cost (in parentheses) to reach that box in Beach Defense Points, e.g., the 2(3) box has a value of two and costs three Beach Defense Points to reach from the 1(-) box. This is not a cumulative cost.\n\nOnce all Beach hexes associated with an AAZ are non-Allied Controlled [GSR 5.5.3.4] or if a marker reaches the 0 box, remove the marker from the Beach Defense Track.",
+    "crossRefs": ["2.4.1", "5.5.3.4"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.5.1",
+    "section": "5.5.1",
+    "title": "Beach Defense Effects",
+    "summary": "Lists the five effects of an active Beach Defense Track marker: DRM to Naval movement/Sea Transport, combat Defense Strength bonus, nominal ROC unit in undefended beach hexes, Anti-Ship Attacks, and movement cost increase for non-Allied units.",
+    "text": "**5.5.1 Beach Defense Effects**\n\nIf the track's marker is greater than zero:\n\na. Non-Allied Naval movement or Sea Transport into the AAZ is a Contested Sea Movement. Apply a positive DRM equal to the Track's current Value.\n\nb. Combats add the Beach Defense value to the Defense Strength of any units, including the nominal unit (see below), defending that hex.\n\nc. If no ground unit is defending a Beach hex, the hex is considered to contain a nominal independent ROC unit. It has a Defense Strength equal to 1 plus the Beach Defense value and an ER of 5. Only a result including a Retreat allows the attacker to advance.\n\nd. The Allied player may conduct Anti-Ship Attacks [GSR 5.5.2].\n\ne. Entering or exiting a Beach hex costs a moving non-Allied unit the normal terrain cost plus the value of the Beach Defense marker, e.g., if the Beach Defense marker is in the 2(3) space, entering a Flat Beach hex costs a PRC Leg unit 3 MPs (1+2). Airmobile Movement and Paradrops are allowed, but both types of movement, if successful, require a roll on the Paradrop/Airmobile Table.\n\nNone of these effects apply to a Beach hex containing a Beach Defense Destroyed marker [GSR 5.5.3.4].",
+    "crossRefs": ["5.5.2", "5.5.3.4"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.5.2",
+    "section": "5.5.2",
+    "title": "Beach Defense Anti-Ship Attack",
+    "summary": "During Step b of the Strike Phase, the Allied player can conduct one Anti-Ship Strike per AAZ with a Beach Defense marker against Naval Units in the AAZ or within 5 hexes.",
+    "text": "**5.5.2 Beach Defense Anti-Ship Attack**\n\nDuring Step b of a Strike Phase, for each AAZ with a marker still on the Beach Defense Track, the Allied player can conduct one Strike against a Naval Unit in a Beach's AAZ or an All-Sea hex within 5 hexes of an AAZ beach hex(es) [see GSR 5.5.1d above]. These attacks do not use Naval SSM Points.\n\n**5.5.2.1 Standard Game Anti-Ship Attack:** Roll a die; on a 0-5, the Naval Unit is \"damaged\". It must retreat to a friendly Holding Box, and it may not move for the rest of the turn.\n\n**5.5.2.2 Advanced Game Anti-Ship Attack:** The Naval Unit must be Detected. The Strike is conducted as a Taiwanese (non-US) Naval SSM Strike using the Naval 2 column for resolution.",
+    "crossRefs": ["5.5.1"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.5.3",
+    "section": "5.5.3",
+    "title": "Attacking a Beach Defense Marker",
+    "summary": "A Beach Defense marker can be reduced by Air Strike, Naval Bombardment, SOF Raid, expending Movement Points, or Rocket Artillery; each method has specific procedures.",
+    "text": "**5.5.3 Attacking a Beach Defense Marker**\n\nA Beach Defense marker can be attacked in multiple ways. Beach Defenses are Hardened Targets and Installations. For Strikes, each Strike result – 1, 2, X – reduces the track by 1, 2, or 3, respectively, i.e., do not place Strike markers.\n\n**5.5.3.1 by Air Strike:**\n\nStandard: Once in the Strike step of the Initiative/Air/Naval Phase [GSR 13.2]. Each marker is within 2 hexes of an Installation for ADF purposes.\n\nAdvanced: Once in each Strike Phase by Air Strike. Each marker is within 2 hexes of an HQ for ADF purposes.\n\n**5.5.3.2 by Naval Bombardment:** [Advanced] The non-Allied player can conduct a Naval Bombardment [17.5] during the Strike Phase against that Beach's Defense marker if within range of a Beach hex in that AAZ.\n\n**5.5.3.3 by SOF Raid:** [Advanced] As an Installation target [20.1.3 #9] in Flat Terrain.\n\n**5.5.3.4 by Expending Movement Points:** If a non-Allied combat unit expends three MPs in a Beach hex during a friendly Movement Segment, reduce the Beach Defense marker by one. Only one unit can use this method per Beach hex, and this method can only be used once per Beach hex. Mark with a Beach Defense Destroyed marker until the Beach Defenses reach 0, then remove both the Beach Defense Track marker and the Beach Defense Destroyed markers from that AAZ.\n\n**5.5.3.5 by Rocket Artillery:** [Advanced] The non-Allied player can conduct Artillery Strikes with the PCH 191 MLS units [GSR 3.1] during the Strike Phase. No more than one such Strike per AAZ per Strike Phase.",
+    "crossRefs": ["13.2", "17.5", "20.1.3", "3.1"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.5.4",
+    "section": "5.5.4",
+    "title": "Increasing Beach Defenses",
+    "summary": "Beach Defenses can be increased during the Reorganization Phase; Standard game uses free points, Advanced game uses ROC National Supply Points to pay the track cost.",
+    "text": "**5.5.4 Increasing Beach Defenses**\n\nDuring the Reorganization Phase, Beach Defenses can be increased as follows:\n\n**5.5.4.1 Standard Game:** The Allied player receives two Beach Defense Points each turn that they can use to increase any two Beach Defense markers, that are still on the track, by one.\n\n**5.5.4.2 Advanced Game:** The Allied player may use ROC National Supply Points [GSR 10.3.1] to increase Beach Defense markers during the Reinforcement and Replacement Phase. Any Beach Defense Marker that is still on the track can be increased by one by spending the Cost in Supply Points, e.g., from 1(-) to 1(2) for two Supply Points. The Allied player cannot spend more than four Supply Points per turn in this manner.",
+    "crossRefs": ["10.3.1"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.6",
+    "section": "5.6",
+    "title": "Mines",
+    "summary": "The non-Allied player can only place mines in Northern and Eastern hexes; mine clearance is limited to one die roll per AAZ per turn.",
+    "text": "**5.6 Mines**\n\n**5.6.1 Mine Placement Restrictions**\n\nThe non-Allied player can only place mines in Northern and Eastern hexes. The Allied player can place mines in any eligible hex.\n\n**5.6.2 Mine Clearance**\n\nNo more than one Mine Clearance die roll can be made per AAZ per turn.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.7",
+    "section": "5.7",
+    "title": "Airmobile Points",
+    "summary": "Nationalities with Airmobile Point markers track them separately; US Airmobile Points can move any Allied airmobile-capable unit, while others can only move units of their own nationality.",
+    "text": "**5.7 Airmobile Points**\n\nNationalities with Airmobile Point markers track those separately (JPN, PH, PRC, SRV, US). US Airmobile Points can move any Allied airmobile capable unit. Others can only move units of their own nationality.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-5.8",
+    "section": "5.8",
+    "title": "Naval Unit Repair",
+    "summary": "Non-Allied Naval Units repair only in their Holding Box; ROC Naval Units repair only in ROC Ports; other Allied Naval units can repair in their Holding Box, the US Holding Box, Indian Ocean/Australia Holding Box, or Japan.",
+    "text": "**5.8 Naval Unit Repair**\n\nNon-Allied Naval Units can be repaired only in their Holding Box. ROC Naval Units can be repaired only in ROC Ports. All other Allied Naval units can be repaired in their Holding Box, in the US Holding Box, Indian Ocean/Australia Holding Box, or in Japan.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-6.0",
+    "section": "6.0",
+    "title": "Movement & Stacking",
+    "summary": "Game-specific movement and stacking rules including multinational stacking penalties, air/airborne/sea transport limits, Holding Box rules, and Clearing Operations in the ROC.",
+    "text": "**6.0 Movement & Stacking** [8.0 Standard/25.0 Advanced]",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-6.1",
+    "section": "6.1",
+    "title": "Multinational Stacking",
+    "summary": "Ground units from different nationalities stacked together have their Efficiency Ratings reduced by one for all purposes; this does not apply to the US and CW.",
+    "text": "**6.1 Multinational Stacking**\n\nGround units from different nationalities that stack together have their Efficiency Ratings reduced by one for all purposes.\n\nThis does not apply to the US and CW.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-6.2",
+    "section": "6.2",
+    "title": "Air Transport Limitations",
+    "summary": "In any allowable Movement Segment, the Allies can transport three Stacking Points by Air Transport; the non-Allied player can transport one Stacking Point (Allied limit may increase per reinforcement schedule).",
+    "text": "**6.2 Air Transport Limitations**\n\nIn any allowable Movement Segment, the Allies can transport three Stacking Points; the non-Allied player can transport one Stacking Point. The Allied limit is increased as indicated in the reinforcement schedule.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-6.3",
+    "section": "6.3",
+    "title": "Airborne Movement Limitations",
+    "summary": "Per-turn Airborne/Paradrop Movement limits: US/JPN/CW combined can use four stacking points, PRC can use three, all others are limited to one stacking point each.",
+    "text": "**6.3 Airborne Movement Limitations**\n\nUnless modified by Scenario Special Rules, in any allowable Movement Segment, a side can use Airborne/Paradrop Movement as follows:\n\n• **US/JPN/CW:** four stacking points of airborne units for all three combined\n• **PRC:** three stacking points of airborne units\n• **All Others:** one stacking point of airborne units",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-6.4",
+    "section": "6.4",
+    "title": "Sea Transport Limitations",
+    "summary": "The non-Allied player can Sea Transport four Stacking Points per eligible Movement Segment; the Allied player can also transport four Stacking Points, with Vietnam, Malaysia, and the Philippines limited to one each per Game Turn.",
+    "text": "**6.4 Sea Transport Limitations**\n\nThe non-Allied player can transport four Stacking Points per eligible Movement Segment by Sea Transport. The non-Allied limit is increased as indicated in the reinforcement schedule.\n\nThe Allied player can transport four Stacking Points per eligible Movement Segment. The Allied limit is increased as indicated in the reinforcement schedule.\n\nVietnam, Malaysia, and the Philippines can each transport one Stacking Point of ground units per Game Turn.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-6.5",
+    "section": "6.5",
+    "title": "Holding Boxes",
+    "summary": "Rules for the two Holding Boxes (PRC and Japan) on the Operational Map, covering which units can enter them, airmobile movement, naval movement, attacks against installations, and PRC Holding Box Port Destruction Effects.",
+    "text": "**6.5 Holding Boxes**\n\nThere are two Holding Boxes shown on the Operational map: PRC and Japan. These correspond to the same areas on the Strategic Display. In addition, there are Holding Boxes on the Strategic Display for the US/Guam, Korea (North and South), Thailand, Malaysia, Vietnam, and the Philippines. The entire area with the label is the Holding Box in all cases. Some of these will not be used in Next War: Taiwan, only when combining multiple Next War games.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-6.5.1",
+    "section": "6.5.1",
+    "title": "PRC Holding Box",
+    "summary": "Only PRC ground units, attack helicopters, and naval units can enter the PRC Holding Box; it serves as a reinforcement/staging area with special Airmobile Movement, Attack Helicopter, and Naval movement rules.",
+    "text": "**6.5.1 PRC Holding Box**\n\nOnly PRC ground units, attack helicopters, and naval units can enter the PRC Holding Box.\n\nThe Holding Box can be used to receive and hold reinforcements. Ground units must utilize some other mode of movement to enter or leave the Holding Box, e.g., Air or Sea Transport, Airborne Movement.\n\n**6.5.1.1 Airmobile Movement & Attack Helicopters:** To conduct Airmobile Movement or Attack Helicopter Combat Support/Strike from the PRC Holding Box to Taiwan, count hexes starting from the west edge of the Operational map, with the moving unit having already expended eight hexes of movement, e.g., enter the red portion of the map with 16 hexes of Airmobile Movement remaining.\n\nAttack Helicopters can Rebase [6.5.1.2] from the PRC Holding Box to a friendly-Controlled Airbase/Airfield/Urban/City hex in Taiwan and vice versa.\n\n**6.5.1.2 Naval Units:** PRC Naval units can move from the PRC Holding Box directly to any all-sea hex, friendly-Controlled Port in Taiwan, the Taiwan Straits Inshore Box, or the East China Sea, Taiwan Straits, or South China Sea At Sea Boxes and vice versa.\n\nThis counts as the units' \"one At Sea Box\" for movement limitations.",
+    "crossRefs": ["6.5.1.2"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-6.5.2",
+    "section": "6.5.2",
+    "title": "Japan Holding Box and Basing Box",
+    "summary": "Only Japanese, US, and CW units can enter the Japan Holding Box; the first Cruise Missile or Air Strike on the Japan Holding Box automatically brings Japan into the conflict at Intervention Level 4.",
+    "text": "**6.5.2 Japan Holding Box and Basing Box**\n\nOnly Japanese, US, and CW units can enter the Japan Holding Box.\n\n**6.5.2.1 Japanese Activation:** The first Cruise Missile or Air Strike on the Japan Holding/Basing Box will automatically bring Japan into the conflict at Level 4 Intervention and increase the US Intervention Level by two without VP cost.\n\n**6.5.2.2 Naval Units:** Units can move directly to or from the Holding Box to the Senkakus, Yellow Sea, or East Sea At Sea/Inshore Boxes.\n\n**6.5.2.3 Attack Helicopters:** Helicopters in the Japan Holding Box can Rebase to any friendly-Controlled Airfield/Airbase/Urban/City hex in Taiwan.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-6.5.3",
+    "section": "6.5.3",
+    "title": "US and Indian Ocean/Australia Holding Boxes",
+    "summary": "These boxes hold US and CW units for setup, reinforcement, and repair; the non-Allied player cannot enter them and no Air Missions or Strikes can be conducted by units in them.",
+    "text": "**6.5.3 US and Indian Ocean/Australia Holding Boxes**\n\nThese Boxes are used for holding US and CW units at set up, for reinforcements, and for repair. They cannot be attacked [GSR 6.5.4], the non-Allied player cannot enter them, and no Air Missions (except Air Transport) or Strikes can be conducted by units in them. All Allied Naval Units can enter these boxes to repair.",
+    "crossRefs": ["6.5.4"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-6.5.4",
+    "section": "6.5.4",
+    "title": "Attacks Against Holding Box Installations",
+    "summary": "Advanced rule governing Strikes and SOF Raids against Installations and Airfields in Holding Boxes, including PRC Holding Box Port Destruction Effects on Submarine Threat Level and Sea Transport.",
+    "text": "**6.5.4 Attacks Against Holding Box Installations** [Advanced]\n\nAttacks against HQs and units in a Holding Box follow the normal rules. Installations and Airfields in Holding Boxes are conducted as follows:\n\n**6.5.4.1 Installation and Airfield Strikes/SOF Raids:** Holding Boxes may contain several Installations, and some contain Airfields. They are treated normally for all purposes, e.g., they can receive Strike and Destroyed markers. These Installations and Airfields are:\n\n• in terrain shown in that Holding Box for all purposes.\n• within two hexes of an HQ for Detection and Air Defense Fire.\n• for SOF Raids they are \"occupied, but by less than a brigade\" causing a +1 Raid DRM.\n\nThe Port icons in a Holding Box represent multiple such facilities. After a successful Strike/Raid against such a Port, place Strike/Destroyed markers as appropriate. If a Destroyed result is achieved from the Strike/Raid itself, record the VP; subsequent strikes can still be conducted against other such Ports. Reduce remaining Strike markers as appropriate during the Reorganization Phase, removing any Destroyed markers.\n\nRegardless of Strike or Destroyed markers present on Airbases, Airfields, or Ports in a Holding/Basing Box, they are assumed to have an undamaged Airbase and Port enabling the use of Airmobile Movement, Air Transport, Airborne Movement, or Sea Transport.\n\n**6.5.4.2 PRC Holding Box Port Destruction Effects:** For each accumulated Destroyed result, the Submarine Threat Level is reduced by one immediately [7.4.3].\n\nIn addition, each time a Destroyed result is achieved against the PRC Holding Box Port, the non-Allied player must remove an AMPH from play (place any embarked units in the PRC Holding Box) as if it had received an \"X\" result, except place it two turns ahead on the Game Information Display as if it were a Reinforcement. In addition, the non-Allied Sea Transport limit is reduced by one while each such unit remains on the Game Information Display. If all PRC AMPHs have been converted to SAGs [7.3.2.1], only the Sea Transport Limit is reduced for two turns.\n\n**6.5.4.3 Escalatory Attacks: PRC, Japan, and Guam:** [Advanced] The non-Allied player receives 1 VP for each non-ROC Allied Air and/or Cruise/Ballistic Missile Strike conducted in the PRC Holding Box. This VP is not applicable after the non-Allied player conducts an Air and/or Cruise/Ballistic Missile Strike against either Japan or Guam or resolves a Nuclear Attack anywhere.",
+    "crossRefs": ["7.4.3", "7.3.2.1"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-6.6",
+    "section": "6.6",
+    "title": "Clearing Operations in the Republic of China",
+    "summary": "All non-Allied Clearing Operations in the ROC incur an additional –1 DRM due to the numerous reserve and paramilitary organizations within the ROC.",
+    "text": "**6.6 Clearing Operations in the Republic of China** [Standard/Advanced]\n\nDue to numerous reserve and paramilitary-type organizations within the ROC, all non-Allied Clearing Operations incur an additional –1 DRM (as noted on the chart).",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-7.0",
+    "section": "7.0",
+    "title": "Combat",
+    "summary": "Game-specific combat rules covering multinational combat DRMs and Chinese Interservice Rivalry between PRC Marines and PRC Amphibious Mechanized Infantry.",
+    "text": "**7.0 Combat** [9.0 Standard/Advanced]",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-7.1",
+    "section": "7.1",
+    "title": "Mixed Nationalities in Combat",
+    "summary": "When different nationalities of units attack together, they may incur a '+1' DRM for each nationality beyond the first.",
+    "text": "**7.1 Mixed Nationalities in Combat**\n\nWhen different nationalities of units attack together, they may incur a \"+1\" DRM for each nationality beyond the first (see CRT for details).",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-7.2",
+    "section": "7.2",
+    "title": "Interservice Rivalry",
+    "summary": "Any attack in Taiwan involving both PRC Marines and PRC Amphibious Mechanized Infantry incurs a +1 DRM due to PLA interservice rivalry.",
+    "text": "**7.2 Interservice Rivalry**\n\nAny attack in Taiwan, i.e., the Operational Map, that involves both PRC Marines and PRC Amphibious Mechanized Infantry incurs a +1 DRM.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.0",
+    "section": "8.0",
+    "title": "Reinforcements & Replacements",
+    "summary": "Comprehensive rules for both sides' reinforcements and replacements, including ROC Reserves, PRC reinforcements, International Allied reinforcements, air unit replacements, and Ballistic Missile/Naval SSM reinforcements.",
+    "text": "**8.0 Reinforcements & Replacements** [10.0 Standard/Advanced]",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.1",
+    "section": "8.1",
+    "title": "Standard Game",
+    "summary": "Both sides receive Reinforcements as outlined in each scenario; these rules also apply to the Advanced Game unless otherwise specified.",
+    "text": "**8.1 Standard Game**\n\nBoth sides receive additional units or other points, e.g., Airmobile Points, as outlined in each scenario. Unless otherwise specified, these Reinforcement rules also apply to the Advanced Game.\n\nReinforcements are listed for the turn they arrive. In other words, if a given reinforcement is listed for GT2, then in the Reinforcement Phase of GT2, it is pulled from the counter mix and placed, or the points marker is increased in accordance with the rules below.\n\nThe MARC shows the order of arrival for all Allied International reinforcements. Use only the Standard column for the Standard Game; use all columns for the Advanced Game. Some listings are in italics because those units are either optional or have special rules associated with them. If a Reinforcement Group includes counters that did not come with the game, ignore them unless otherwise instructed.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.1.1",
+    "section": "8.1.1",
+    "title": "Reinforcements",
+    "summary": "Reinforcement allows activation of ROC reserves and insertion of US and other forces into the theater; the Scenario Reinforcement Tables and MARC group reinforcements into 'packets' as indicated by each scenario.",
+    "text": "**8.1.1 Reinforcements**\n\nIn game terms, Reinforcement allows activation of reserves for the ROC as well as the insertion of US and other forces into the theater. In general, the Scenario Reinforcement Tables and the Master Allied Reinforcement Chart (MARC) group these reinforcements into \"packets\" that arrive as indicated by the scenario. In addition, Replacements, Supplies, Airmobile Points, Cruise Missile Points, and others are also specified.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.1.2",
+    "section": "8.1.2",
+    "title": "ROC Reserves",
+    "summary": "ROC Reserve units are indicated by 'A' or 'C' on their counter; they are randomly placed in friendly Controlled Beach, Urban, City, or Installation hexes per their Theater Command Setup Area, or eliminated if no eligible hex is available.",
+    "text": "**8.1.2 ROC Reserves**\n\nROC Reserve units are indicated by an \"A\" or \"C\" in the upper right corner of the counter. Some of these units may begin the game on the map following the setup rules for ROC units [GSR 18.1.2], otherwise these units arrive in the Reinforcement/Replacement Phase of the game turn as directed by the scenario. Unless placed during scenario setup, they are randomly chosen and placed in any friendly-Controlled Beach, Urban, City, or Installation hex according to their Theater Command Setup Area [GSR 18.1.2.1]. The hex cannot be in an EZOC. If no such hex is available, the unit cannot be placed and is eliminated.\n\nThe Allied player must form two separate pools: one for the \"A\" (2-3-4) brigades and one for the \"C\" (2-2-4) brigades. Scenario reinforcement schedules will specify from which pool to randomly choose Reserve units.",
+    "crossRefs": ["18.1.2", "18.1.2.1"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.1.3",
+    "section": "8.1.3",
+    "title": "PRC Reinforcements",
+    "summary": "PRC reinforcements are placed in the PRC Holding Box (or Ready Box for air units) as indicated by each scenario; PRC Attack Helicopters may go directly to Taiwan if the non-Allied side has Air Superiority above Contested.",
+    "text": "**8.1.3 PRC Reinforcements** [Standard/Advanced]\n\nPRC reinforcements are placed in the PRC Holding Box (or Ready Box of the PRC Basing Box for Air Units) as indicated by each scenario. If the non-Allied side had any level of Air Superiority above Contested on the turns they arrive, PRC Attack Helicopters can be placed at any friendly-Controlled Airbase/Airfield/Urban/City hex in Taiwan; otherwise, they are placed in the PRC Holding Box.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.1.4",
+    "section": "8.1.4",
+    "title": "International Allied Reinforcements",
+    "summary": "Non-ROC Allied reinforcements have specific rules for entry into the game, covering Naval and Marines (at setup and as reinforcement) and Non-marine Ground Unit and Attack Helicopter arrival procedures.",
+    "text": "**8.1.4 International Allied Reinforcements**\n\nNon-ROC Allied reinforcements have specific rules for entry into the game as described below.\n\n**8.1.4.1 Naval and Marines**\n\n8.1.4.1.1 At Setup: Place units as follows:\n\n• **US, CW SAGs:** Any At Sea Box.\n• **JPN SAG/AMPH:** Sea of Japan, Ryukyu Islands, East China Sea, Northern Approaches At Sea Box, Japan Holding Box.\n• **CVN BG/CV BG/AMPH:** Indian Ocean/Australia Box, US Box, Celebes Sea, Philippine Sea, or Central Approaches At Sea Box.\n• **USMC units:** Are placed either in the Japan Holding Box or embarked on an AMPH if one is arriving as part of the same reinforcement group or as part of setup.\n• **Non-USMC Allied marines:** Are placed in the Indian Ocean/Australia Holding Box.\n\n8.1.4.1.2 As Reinforcement:\n\n• Non-USMC Allied marine reinforcements are placed in the Indian Ocean/Australia Box or any friendly Operational Map Port subject to Contested Sea Movement tracing from the Indian Ocean/Australia Box.\n• For all arriving US and CW Naval Units and USMC ground and attack helicopter units that are part of the same Reinforcement group, the Allied player rolls a die. If the roll is less than the R# listed on the Master Allied Reinforcement Table, the group arrives in the Indian Ocean/Australia Holding Box instead of the US Box.\n• USMC units that arrive in a Box without an AMPH must use Air or Sea Transport to move out (or an AMPH can come pick them up).\n\n*Exception: The Allied player may always choose to have USMC Reinforcements marked \"B\" arrive in the Japan Holding Box regardless of the roll.*\n\n• JPN units arrive in the Japan Holding Box.\n\n**8.1.4.2 Non-marine Ground Unit & Attack Helicopter Arrival:** [Standard]\n\n8.1.4.2.1 At Setup: Units placed during setup are placed in an appropriate Holding Box:\n• CW: Indian Ocean/Australia\n• US: Japan\n• JPN: Senkakus Island Land Area, Japan\n\n8.1.4.2.2 As Reinforcement: Units arriving as reinforcements do not count against Air or Sea Transport Limits.\n\nIf the Allied player has Air Superiority or Supremacy, all Leg ground units and Attack Helicopters can arrive in the ROC by Air Transport.\n\nGround units are placed at any friendly Airbase (not Airfield) not in an enemy ZOC (*Exception:* Storm delays).\n\nAttack Helicopter units can arrive at any friendly-Controlled Airbase/Airfield/Urban/City hex not in an enemy ZOC.\n\nOtherwise, they may, at the player's option, be delayed a turn or placed in an appropriate Holding Box as indicated below:\n• CW: Indian Ocean/Australia\n• non-CW: Japan\n\nNon-Leg ground units can land in any friendly-Controlled Port in Taiwan not in an enemy ZOC if:\n• the Philippines are Allied or Neutral, and\n• the Philippine Sea and Central Approaches At Sea Boxes are Contested or Allied Controlled, and\n• the Spratly Islands and South China Sea At Sea Boxes are Allied Controlled, and\n• both the Taiwan Straits At Sea and Inshore Boxes are Allied Controlled, and\n• no enemy Naval Units are in any of the above locations through which movement is traced.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.2",
+    "section": "8.2",
+    "title": "Advanced Game",
+    "summary": "Advanced Game reinforcement rules supplement the Standard Game rules, covering Air Unit Reinforcements, Ground Unit & Attack Helicopter arrival modifications, Japanese restrictions, and Weather Effects on arrival.",
+    "text": "**8.2 Advanced Game**\n\nThese reinforcement rules are in addition to the Reserves and Reinforcements from the Standard Game.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.2.1",
+    "section": "8.2.1",
+    "title": "Air Unit Reinforcements",
+    "summary": "During the Reinforcement and Replacement Phase, air unit reinforcements are placed per nationality-specific arrival rules for USAF/CW, USMC, USN/CW Naval Air, and Japanese air units.",
+    "text": "**8.2.1 Air Unit Reinforcements**\n\nDuring the Reinforcement and Replacement Phase of each game turn, a player can receive air units as reinforcements. Place these reinforcements as follows:\n\n**8.2.1.1 USAF and CW Arrival:** During the game, these air units can reinforce to the ROC if the Allies had any level of Air Superiority above Contested for that turn. If not, or during Setup, then the air units may be placed in Japan or in the Philippines if the Philippines has entered the war [GSR 18.3.3.3].\n\nIn either case, they are placed in the \"Ready\" box.\n\n**8.2.1.2 USMC Air Arrival:** If optional rule 17.1.2 is chosen, then USMC F-35Bs may base in a US AMPH box (when an AMPH present), otherwise USMC Air Units are placed in the same manner as Air Force units. They may Rebase later to an eligible Basing Box.\n\n**8.2.1.3 USN & CW Naval Air Arrival:** Carrier Air Wings [30.1] are placed in the appropriately numbered Carrier Basing Box.\n\n**8.2.1.4 Japanese Air Units:** If Japan has intervened at Level 2 or higher [GSR 18.3.2.3], and an Air Unit arrives as a reinforcement, the Allied player may either place that type of unit at full strength (if it has been eliminated) or bring that type of unit up to full strength (if it has been damaged).",
+    "crossRefs": ["18.3.3.3", "17.1.2", "18.3.2.3"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.2.2",
+    "section": "8.2.2",
+    "title": "Ground Unit & Attack Helicopter Arrival",
+    "summary": "Advanced Game modifications to Standard Game ground unit arrival: units cannot arrive at Destroyed/Strike-marked Airbases; ground units arriving by Air Transport must undergo ADF if near enemy HQ or Naval ADF Umbrella.",
+    "text": "**8.2.2 Ground Unit & Attack Helicopter Arrival** [Advanced: modifies GSR 8.1.4.2]\n\n**8.2.2.1 Leg Ground Units and Attack Helicopters:** The Advanced game follows 8.1.4.2.1 with these modifications:\n\n• Units cannot arrive at an Airbase/Airfield in the ROC that is either Destroyed or contains a Strike 2 marker.\n• Ground units arriving on the Operational Map by Air Transport must undergo ADF only if they arrive in any hex within two hexes of an enemy HQ or within a Naval Unit's Naval ADF Umbrella range [17.1.5]. Aborted units are placed in an appropriate Holding Box.",
+    "crossRefs": ["8.1.4.2", "17.1.5"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.2.3",
+    "section": "8.2.3",
+    "title": "Japanese Restrictions",
+    "summary": "Unless Japan is at Intervention Level 4, Japanese ground and naval units are restricted to the Japan Holding Box, Senkakus Island Land Area, and specific At Sea/Inshore Boxes.",
+    "text": "**8.2.3 Japanese Restrictions**\n\nUnless Japan is at Intervention Level 4, Japanese ground and naval units are restricted to:\n\n• Japan Holding Box\n• Senkakus Island Land Area\n• the following At Sea/Inshore Boxes:\n  - Sea of Japan,\n  - Ryukyu Islands,\n  - East China Sea/Yellow Sea,\n  - Northern Approaches.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.3",
+    "section": "8.3",
+    "title": "Weather Effects",
+    "summary": "On 'Storm' Turns, no units except All Weather capable air units can arrive in the ROC; units intended for the ROC may instead arrive in Japan or, for those able, in the US Holding Box.",
+    "text": "**8.3 Weather Effects**\n\nOn \"Storm\" Turns, no units except All Weather capable air units can arrive in the ROC. Units intended for the ROC may, instead, arrive in Japan, or, for those able, arrive in the US Holding Box.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.4",
+    "section": "8.4",
+    "title": "Air Unit and Helicopter Replacement",
+    "summary": "Process for replacing eliminated or damaged air units of specific types for JPN/ROK/CW/FR, US, PRC, and RU nationalities using Supply Points; other nationalities and Wild Weasel units cannot use this process.",
+    "text": "**8.4 Air Unit and Helicopter Replacement** [27.9.3.1]\n\nThe process can be used only for the following unit types:\n\n• **JPN, ROK, CW, FR:** F-2A, F-15J, F-35A, Rafale (not Rafale-M), Typhoon, and Airmobile Points.\n• **US:** A-10, F-15 (any type), F-16, F/A-18 (any except WW), F-35 (any type), AH-64, and Airmobile Points.\n• **PRC:** H-6, J-7, JH-7, J-8, J-10, J-11, JF-17, Zhi-10, and Airmobile Points.\n• **RU:** MiG-29, Su-24, Su-25, Su-27, Tu-22, Mi-24, and Airmobile Points.\n\nOther nationalities and Wild Weasel units cannot use this process.\n\nUS and CW units based in the USA/Guam Basing Box and PRC units and Airmobile Points based in the PRC do not have to spend Supply Points [GSR 10.3] to use this process, i.e., there is an unlimited pool of Supply Points for this purpose in the US and the PRC.\n\nUS Airmobile Points can be reconstituted only in Taiwan and only using Theater Supply Points. PRC air units based in the Philippines must be replaced in the PRC.\n\nUS, CW, and Japanese units based in Japan and/or Taiwan must use appropriate Theater Supply Points for this purpose.\n\nEliminated Japanese air units must be rebuilt in Japan using Japanese Supply Points.\n\nEligible Eliminated air units can always be rebuilt in the USA/Guam or PRC.",
+    "crossRefs": ["10.3"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-8.5",
+    "section": "8.5",
+    "title": "Ballistic Missile and Naval SSM Reinforcements",
+    "summary": "If the US intervenes at Level 2+, it provides additional Ballistic Missile and Naval SSM Points to the ROC per scenario Reinforcement Schedules, arriving via Sea Transport or Air Transport depending on Allied Sea/Air control.",
+    "text": "**8.5 Ballistic Missile and Naval SSM Reinforcements**\n\nIf the US intervenes at Level 2 or higher, it provides additional Ballistic Missile and Naval SSM Points to the ROC per the latter's scenario specific Reinforcement Schedules. However, due to the difficulty of delivery in a hostile environment, the points arrive in one of two ways (they are lost if not delivered on the turn of arrival):\n\n**8.5.1 Sea Transport**\n\nIf the Allied player can trace a contiguous LOC of friendly Controlled At Sea and Inshore Boxes from the US Holding Box to a functioning, friendly-Controlled, unmined Port in Taiwan, they arrive normally and on schedule. Otherwise, make a Contested Sea Movement roll for the set of Points for each location in the path requiring one. A Point is lost for each Strike result (Allied player's choice). This method uses one point of available Allied Sea Transport for the following turn [GSR 10.3.1.1].\n\n**8.5.2 Air Transport**\n\nIf the Allied player had any level of Air Superiority above Contested, the Points arrive via Air Transport. This method uses one point of available Allied Air Transport capacity for the following turn.",
+    "crossRefs": ["10.3.1.1"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-9.0",
+    "section": "9.0",
+    "title": "Subordination",
+    "summary": "There are no Supreme HQs in Next War: Taiwan; subordination rules clarify relationships for US Marine units, US Army units, and PRC Airborne units.",
+    "text": "**9.0 Subordination** [18.1 Advanced]\n\nThere are no Supreme HQs in Next War: Taiwan.\n\nIn addition to normal Subordination [18.1]:\n\n• US Marine units are subordinate to any US Marine HQ.\n• All US Army combat units [2.2.2] are subordinate to any US Army HQ.\n• The PRC Airborne is slightly unique. The Airborne combat units [2.2.2] are independent, but the Airborne HQ is the parent HQ only for PRC Airborne combat units, e.g., it can only provide Supply, CS for those units.",
+    "crossRefs": ["18.1", "2.2.2"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.0",
+    "section": "10.0",
+    "title": "Supply",
+    "summary": "Game-specific supply rules for the Taiwan theater, covering Ports as supply sources, the National Supply Point / Theater Stockpile Supply Point system, shipping supply, and detailed non-Allied and Allied supply considerations.",
+    "text": "**10.0 Supply** [19.0 Advanced]\n\nBecause of the nature of the battle area, special rules are required for determining supply and isolation. Units in Holding Boxes are always in supply and never Isolated.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.1",
+    "section": "10.1",
+    "title": "Ports as Supply Sources",
+    "summary": "Ports are Supply Sources with a Supply Range of six MPs; which Ports can be used depends on Air Superiority Level and control of the Taiwan Straits Inshore Box.",
+    "text": "**10.1 Ports as Supply Sources**\n\nIn general, Ports are Supply Sources for both players' units. They have a Supply Range of six MPs [19.1]. To be used as a Supply Source, they must be friendly-Controlled and cannot be in an enemy ZOC. The rules below [GSR 10.3.3/10.4.5] will delineate which Ports can be used under certain circumstances based on Air Superiority Level and control of the Taiwan Straits Inshore Box.",
+    "crossRefs": ["19.1", "10.3.3", "10.4.5"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.2",
+    "section": "10.2",
+    "title": "Supply Points in General",
+    "summary": "Supply Points are divided into National Supply Points (NSP) and Theater Stockpile Supply Points (TSSP); both players must 'ship' supply outside their Home Holding Box, tracked with appropriate Supply Point markers.",
+    "text": "**10.2 Supply Points in General**\n\nSupply Points are divided into two kinds: National (NSP) and Theater Stockpile (TSSP). NSPs belong to that nationality, i.e., ROC or JPN. TSSPs are Supply Points shipped into a location where they can be used for applicable purposes in those Holding Boxes/Operational Map [GSR 10.4.2.1] or trans-shipped, e.g., from the Theater Stockpile [GSR 10.4.2.1] in Japan to the National Supply Points in Korea or the TSSP in the Indian Ocean/Australia Holding Box to the NSP in Vietnam (if Korea and/or Vietnam is in play for use within those nations).\n\nRecord these Supply Points with the appropriate Supply Point marker.",
+    "crossRefs": ["10.4.2.1"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.2.1",
+    "section": "10.2.1",
+    "title": "Shipping Supply",
+    "summary": "In any friendly Movement Segment, a player can ship Supply Points from their Home Holding Box to any available location in play using Sea Transport.",
+    "text": "**10.2.1 Shipping Supply**\n\nIn any friendly Movement Segment, the player can, using available Sea Transport, ship Supply Points from the Home Holding Box to any available location in play. The Allied player can use this same process to ship Supply Points between Theaters.\n\nEach shipment of Supply Points is one Sea Transport movement. Each Supply Point shipped consumes one point of available Sea Transport [see also GSR 8.5.1] (track using the \"Sea Transport Used\" marker). Each shipment must have a designated delivery point, i.e., Port or Beachhead, that has available capacity [8.3.1.9/8.5.7.4], e.g., the non-Allied player declares he will use 2 Sea Transport to ship 2 Supply Points from the PRC to Tainan and another 2 Sea Transport to ship 2 Supply Points to the Beachhead nearby. Each shipment can be subject to Contested Sea Movement rolls as applicable. Strike results reduce the number of Supply Points transferred, e.g., a Strike 1 result reduces the number of Supply Points by one.\n\n**10.2.1.1 AMPH Delivery:** In addition, an AMPH that is not transporting ground units can carry and deliver one Supply Point from a Home Holding Box/TSSP marker to a Port or Beachhead. Unloading in a Port counts against that Port's Capacity, but it does not count against a Beachhead's. Consider the Supply Point a Marine unit for rule 8.5.8.3. A Strike result against the AMPH eliminates the Supply Point. Players should use any spare marker to represent the Supply Point.",
+    "crossRefs": ["8.5.1", "8.3.1.9", "8.5.7.4", "8.5.8.3"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.2.2",
+    "section": "10.2.2",
+    "title": "Supply Point Arrival",
+    "summary": "Supply Points must arrive at specific Ports/Beachheads; each arriving via Sea Transport consumes Port/Beachhead Capacity, while Holding Boxes have unlimited Port Capacity.",
+    "text": "**10.2.2 Supply Point Arrival**\n\nSupply Points must arrive at specific Ports/Beachheads and each one arriving via Sea Transport consumes Port/Beachhead Capacity. Holding Boxes have an unlimited Port Capacity.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.2.3",
+    "section": "10.2.3",
+    "title": "Supply Point Generation",
+    "summary": "The US and PRC have unlimited Supply Points in their Home Holding Box; to use them outside that Box, they must be shipped to an applicable location.",
+    "text": "**10.2.3 Supply Point Generation**\n\nThe US and PRC have an unlimited number of Supply Points for use in the Home Holding Box [GSR 5.1.1]. For use outside the Home Holding Box, they must be moved to a location where they can be used for applicable purposes in those Holding Boxes/Operational Map or trans-shipped, e.g., from the Theater Stockpile [GSR 10.4.2.1] in Japan to the National Supply Points in Korea or the TSSP in the Indian Ocean/Australia Holding Box to the NSP in Vietnam (if Korea and/or Vietnam is in play for use within those nations).\n\nRecord these Supply Points with the appropriate Supply Point marker.",
+    "crossRefs": ["5.1.1", "10.4.2.1"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.2.4",
+    "section": "10.2.4",
+    "title": "Supply Point Usage",
+    "summary": "Any activity on the Operational Map or in a non-Home Holding Box that uses Supply Points requires those points to come from the appropriate type of Supply Point.",
+    "text": "**10.2.4 Supply Point Usage**\n\nTo perform any activity on the Operational Map or in a non-Home Holding Box that uses Supply Points, e.g., to replace an HQ, establish a Supply Depot, build an HQ bridge, increase ADF [GSR 13.7], Emergency Resupply, etc., or pay for Air Unit Basing Costs requires those points to come from the appropriate type of Supply Point.",
+    "crossRefs": ["13.7"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.3",
+    "section": "10.3",
+    "title": "Non-Allied Supply Considerations",
+    "summary": "Non-Allied Supply Point rules covering PRC TSSP shipment, Supply Depot establishment and maintenance, non-Allied Supply Sources and Usage, and Philippines Air Unit Basing Costs.",
+    "text": "**10.3 Non-Allied Supply Considerations**",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.3.1",
+    "section": "10.3.1",
+    "title": "Non-Allied Supply Points",
+    "summary": "The non-Allied player ships Supply Points from PRC to ROC or Philippines via the ROC and PH Theater Stockpile Supply Point markers; if no Beachhead, Port, or Supply Depot exists in Taiwan, all stockpiled points are lost.",
+    "text": "**10.3.1 Non-Allied Supply Points**\n\nThe non-Allied player can ship Supply Points from the PRC to the ROC or Philippines. The marker labeled \"ROC\" represents the Theater Stockpile Supply Points shipped across the straits and into Taiwan. The marker labeled \"PH\" represents TSSPs shipped to the Philippines.\n\nIf the non-Allied player has no Beachhead, friendly-Controlled Port, or Supply Depot in Taiwan, all stockpiled Supply Points are lost.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.3.2",
+    "section": "10.3.2",
+    "title": "Supply Depot Establishment, Maintenance, and Usage",
+    "summary": "The only method for the non-Allied player to establish a Supply Depot in Taiwan is to spend four Supply Points from its ROC TSSP; the depot must trace LOC of 6 MPs to a Port or Beachhead and costs 1 Supply Point per turn to maintain.",
+    "text": "**10.3.2 Supply Depot Establishment, Maintenance, and Usage**\n\nAs an exception to 19.4.2, the only method for the non-Allied player to establish a Supply Depot in Taiwan is to spend four Supply Points from its ROC TSSP [GSR 10.3.3]. The Supply Depot hex must be able to trace an LOC of 6 MPs or less to an eligible Port or Beachhead [GSR 10.2.2].\n\nTo maintain it, one Supply Point must be spent from the ROC TSSP at the beginning of each Supply Phase. An LOC is not required to maintain the Supply Depot or its status as a Supply Source.\n\nIf it is not maintained, remove the Supply Depot and add 2 Supply Points to the non-Allied ROC TSSP. It can be re-established following the rules above.",
+    "crossRefs": ["19.4.2", "10.3.3", "10.2.2"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.3.3",
+    "section": "10.3.3",
+    "title": "Non-Allied Supply Sources and Usage",
+    "summary": "Friendly-Controlled Western and Northern Beachheads and Ports are non-Allied Supply Sources; Eastern Beachheads and Ports require Air Superiority; all require the Taiwan Straits Inshore Box to not be Allied-only Controlled.",
+    "text": "**10.3.3 Non-Allied Supply Sources and Usage**\n\nFriendly-Controlled Western and Northern Beachheads and Ports [GSR 2.4.1/2] are Supply Sources. Eastern Beachheads and Ports are Supply Sources if the non-Allied player has Air Superiority or Supremacy. In addition, all non-Allied Beachheads and Ports only function as a Supply Source if the Taiwan Straits Inshore Box is non-Allied Controlled or Contested.\n\nOnce a Supply Depot is established, it acts as a normal Supply Depot for all purposes, e.g., creating MSUs, while it is maintained.",
+    "crossRefs": ["2.4.1", "2.4.2"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.3.4",
+    "section": "10.3.4",
+    "title": "Philippines Air Unit Basing Costs",
+    "summary": "If the Philippines enters the war on the non-Allied side, the PRC must trace LOC to the Philippines or spend one TSSP each Reinforcement and Replacement Step 3, or move those air units to the Flown Box.",
+    "text": "**10.3.4 Philippines Air Unit Basing Costs**\n\nIf the Philippines enters the war on the non-Allied side, the PRC can rebase air units there. During each Reinforcement and Replacement Step 3 the non-Allied player must either:\n\n1. trace a Line of Communications from the PRC Holding Box to the Philippines via friendly-Controlled At Sea Boxes or\n2. spend one TSSP from its Philippines Theater Stockpile\n\nIf no Line of Communication exists and no Supply Point is spent during a turn, move those air units to the Flown Box until a Reinforcement and Replacement Step 3 when the conditions above are satisfied.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.4",
+    "section": "10.4",
+    "title": "Allied Supply Considerations",
+    "summary": "Allied Supply rules covering the Allied Supply Point and marker system (NSPs vs. TSSPs), Allied Shipping Supply, CW Provided Supply Points, Allied Supply Sources and Usage, US Supply Depot Establishment and Maintenance, US MSUs, USMC HQ Supply, and Air Unit Basing Costs.",
+    "text": "**10.4 Allied Supply Considerations**",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.4.1",
+    "section": "10.4.1",
+    "title": "Allied Supply Points and Markers",
+    "summary": "Unlike most other games in the series, Allied Supply Points are separated into actual ROC and JPN National Supply Points (NSPs) and Theater Stockpile (ROC, ROK, and VN) Supply Points (TSSPs).",
+    "text": "**10.4.1 Allied Supply Points and Markers**\n\nUnlike in most other games in the series, Supply Points for the Allies are kept separate: actual ROC and JPN NSPs and Theater Stockpile (ROC, ROK, and VN) Supply Points (TSSPs). NSPs can only be used on that nation's units and affect its tracks, e.g., only ROC NSPs can be used to increase the ROC Air Defense Tracks. All other Allied units use TSSPs which must be shipped in to be used.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.4.2",
+    "section": "10.4.2",
+    "title": "Allied Shipping Supply",
+    "summary": "The Allied player uses the Shipping Supply process to ship TSSPs into and between Theaters for use by non-ROC/JPN Allied units; Theater Stockpiles are located in specific Holding Boxes.",
+    "text": "**10.4.2 Allied Shipping Supply**\n\nThe Allied player can use the Shipping Supply [GSR 10.2.1] process to ship Supply Points into and/or between Theaters. These TSSPs can be used for non-ROC/JPN Allied units in that Theater, e.g., HQs, Air Units, Basing Costs [GSR 10.2.4].\n\nThey must be shipped into a Theater where they can be used for applicable purposes in those Holding Boxes/Operational Maps [GSR 10.2.4] or shipped into a specific nation, e.g., from the Theater Stockpile in Japan to the NSP in Korea or the Theater Stockpile in the Indian Ocean/Australia Holding Box to the NSP in Vietnam (if Korea and/or Vietnam is in play for use within those nations).\n\n**10.4.2.1 Theater Stockpiles:** TSSPs can be stockpiled in Holding Boxes/Operational Maps for usage there or later transshipment. Theater Stockpiles are located as follows:\n\n| Theater | Holding Box/Operational Map |\n|---|---|\n| ROC | Taiwan |\n| ROK | Japan |\n| VN | Indian Ocean/Australia |\n\nUnless otherwise specified by scenario setup, any Supply Points received as Reinforcements before the game starts can be placed in any Theater Stockpile as desired unless otherwise directed.\n\nThe Allied player can transfer TSSPs to an associated NSP pool, e.g., ROC Theater Stockpile to the ROC NSP and ROK Theater Stockpile to the JPN NSP, at any point after the TSSP is shipped into that nation.",
+    "crossRefs": ["10.2.1", "10.2.4"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.4.2.2",
+    "section": "10.4.2.2",
+    "title": "Avoiding Contested Movement",
+    "summary": "For the ROC Theater, the Allied player can avoid Contested Sea Movement die rolls by using twice the number of available Sea Transport, e.g., four Sea Transport to ship two Supply Points.",
+    "text": "**10.4.2.2 Avoiding Contested Movement:** Except for the ROC Theater, the Allied player can avoid any Contested Sea Movement die roll required, but this uses twice the number of available Sea Transport, e.g., by using four Sea Transport to ship two Supply Points.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.4.3",
+    "section": "10.4.3",
+    "title": "CW Provided Supply Points",
+    "summary": "If the CW Intervenes, its Supply Points are automatically added to the VN Theater Stockpile when they arrive.",
+    "text": "**10.4.3 CW Provided Supply Points**\n\nIf the CW Intervenes, its Supply Points [GSR 18.3.3.2] are automatically added to the VN Theater Stockpile when they arrive.",
+    "crossRefs": ["18.3.3.2"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.4.5",
+    "section": "10.4.5",
+    "title": "Allied Supply Sources and Usage",
+    "summary": "Friendly-Controlled Eastern and Northern Ports and Beachheads are Allied Supply Sources if the Taiwan Straits Inshore Box is Allied Controlled or Contested; Western Ports/Beachheads require the Inshore Box to be Allied Controlled.",
+    "text": "**10.4.5 Allied Supply Sources and Usage**\n\nFriendly-Controlled Eastern and Northern Ports [GSR 2.4.2] and Beachheads are Supply Sources if the Taiwan Straits Inshore Box (only) is either Allied Controlled or Contested. Western Ports and Beachheads are Supply Sources if the Taiwan Straits Inshore Box (only) is Allied Controlled.\n\nIn both cases above, the Allies must have some level of Air Superiority above Contested.\n\nOnly ROC units can use Urban hexes, ROC Supply Depots, and ROC MSUs. US and CW units can use Ports, US Beachheads, the US Supply Depot, and US MSUs. Other Allied units can only use Ports.",
+    "crossRefs": ["2.4.2"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.4.6",
+    "section": "10.4.6",
+    "title": "US Supply Depot Establishment and Maintenance",
+    "summary": "The only method for a non-ROC Allied unit to establish a US Supply Depot in Taiwan is to spend four Supply Points from its ROC TSSP; the depot must trace LOC of 6 MPs to a Port or Beachhead and costs 1 Supply Point per turn to maintain.",
+    "text": "**10.4.6 US Supply Depot Establishment and Maintenance**\n\nAs an exception to 19.4.2, the only method to establish a US Supply Depot in Taiwan is to spend four Supply Points from its ROC TSSP [GSR 10.2]. The Supply Depot hex must be able to trace an LOC of 6 MPs or less to an eligible Port or Beachhead [GSR 10.4.5]. This is the only method by which a non-ROC Allied Supply Depot can be placed in Taiwan.\n\nOnce established, it acts as a normal Supply Depot for all purposes, e.g., creating MSUs, while it is maintained.\n\nTo maintain it, the Allied player must spend one Supply Point from the ROC TSSP Stockpile at the beginning of each Supply Phase. An LOC is not required to maintain the Supply Depot or its status as a Supply Source.\n\nIf it is not maintained, remove the Supply Depot and add 2 Supply Points to the Allied ROC TSSP. It can be established again following the rules above.",
+    "crossRefs": ["19.4.2", "10.2", "10.4.5"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.4.7",
+    "section": "10.4.7",
+    "title": "US MSUs",
+    "summary": "During Step 3 of any First Supply Phase, the Allied player may spend one ROC TSSP to create one US MSU at a Beachhead or Port Supply Source; only one MSU can be created per turn.",
+    "text": "**10.4.7 US MSUs**\n\nDuring Step 3 of any First Supply Phase, the Allied player may spend one ROC TSSP to create one US MSU at a Beachhead, Port (if a Supply Source [GSR 10.3.1]), or Allied Supply Depot. Only one MSU can be created in any given turn. The MSU can only extend Supply LOC from the US Supply Depot or Port/Beachhead Supply Sources.",
+    "crossRefs": ["10.3.1"],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.4.8",
+    "section": "10.4.8",
+    "title": "USMC HQ Supply",
+    "summary": "A USMC HQ in any Coastal Hex is a Supply Source for USMC units if the Taiwan Straits At Sea and Inshore Boxes are Allied Controlled or Contested and an AMPH is in or adjacent to specified locations.",
+    "text": "**10.4.8 USMC HQ Supply**\n\nA USMC HQ in any Coastal Hex is a Supply Source for USMC units if the Taiwan Straits At Sea and Inshore Boxes are Allied Controlled or Contested and an AMPH is in either the Taiwan Straits Inshore box, or adjacent All-Sea hex.",
+    "crossRefs": [],
+    "module": "taiwan"
+  },
+  {
+    "id": "taiwan-10.4.9",
+    "section": "10.4.9",
+    "title": "Air Unit Basing Costs",
+    "summary": "If any non-ROC Allied air units are based in Taiwan, during Step 3 of the Reinforcement and Replacement Phase the Allied player must spend one ROC TSSP to maintain them, or move them to the Flown Box.",
+    "text": "**10.4.9 Air Unit Basing Costs**\n\nIf any non-ROC Allied air units are based in Taiwan, then, during Step 3 of the Reinforcement and Replacement Phase, the Allied player must spend one ROC TSSP to maintain them. If not spent, move all those air units to the Flown Box. They return to the Ready Box when an appropriate Supply Point is spent during that SOP step.",
+    "crossRefs": [],
+    "module": "taiwan"
+  }
+]
