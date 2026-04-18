@@ -16,6 +16,8 @@ export interface LearnChapter {
   // Scenario overlay annotations populated by mergeLearn()
   scenarioGate?: string;
   scenarioModule?: string;
+  // Optional rules gate: hide this chapter unless ALL listed option IDs are active
+  optionGate?: string[];
 }
 
 /**
@@ -34,6 +36,8 @@ export interface LearnDecision {
   scenarioGate?: string;
   appendedBlocks?: LearnBlock[];
   scenarioModule?: string;
+  // Optional rules gate: hide this decision unless ALL listed option IDs are active
+  optionGate?: string[];
 }
 
 /**

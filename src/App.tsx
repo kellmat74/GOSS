@@ -9,29 +9,35 @@ import { AskPanel } from "./components/Ask/AskPanel";
 import { LearnPanel } from "./components/Learn/LearnPanel";
 import { SoPFlowchart } from "./components/Flowchart/SoPFlowchart";
 import { InfoPanel } from "./components/InfoPanel";
+import { OptionsPanel } from "./components/Options/OptionsPanel";
 import { QuickRefBar } from "./components/QuickRef/QuickRefBar";
 import { RulesProvider } from "./context/RulesContext";
 import { GlossaryProvider } from "./context/GlossaryContext";
 import { useSoPProgress } from "./hooks/useSoPProgress";
+import { useOptionalRules } from "./hooks/useOptionalRules";
 import { mergeRules } from "./utils/mergeRules";
 import { mergeSequence } from "./utils/mergeSequence";
 import { mergeLearn } from "./utils/mergeLearn";
 import { getVisibleGames, getGameById } from "./data/registry";
 import type { Phase, RuleEntry, SequenceOverlay } from "./types/goss";
 import type { LearnData, LearnOverlay } from "./types/learn";
-import type { GameSystemConfig, ModuleConfig } from "./types/platform";
+import type { GameSystemConfig, ModuleConfig, ComplexityLevel } from "./types/platform";
 
-type View = "sop" | "flowchart" | "rules" | "ask" | "learn" | "info";
+type View = "sop" | "flowchart" | "rules" | "ask" | "learn" | "options" | "info";
 
 const THEME_KEY = "wc-theme";
 const GAME_SYSTEM_KEY = "wc-game-system";
 const MODULE_KEY = "wc-module";
 const SCENARIO_KEY = "wc-scenario";
+const COMPLEXITY_KEY = "wc-complexity";
+
+// ---------------------------------------------------------------------------
+// Theme hook
+// ---------------------------------------------------------------------------
 
 function useTheme() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     try {
-      // Migrate old key
       const old = localStorage.getItem("goss-theme");
       if (old === "light" || old === "dark") {
         localStorage.setItem(THEME_KEY, old);
@@ -56,22 +62,19 @@ function useTheme() {
   return { theme, toggleTheme: () => setTheme((t) => (t === "dark" ? "light" : "dark")) };
 }
 
+// ---------------------------------------------------------------------------
+// Game selection hook
+// ---------------------------------------------------------------------------
+
 function useGameSelection() {
   const visibleGames = useMemo(() => getVisibleGames(), []);
 
   const [gameSystemId, setGameSystemId] = useState<string>(() => {
     try {
-      // Migrate old key
       const oldModule = localStorage.getItem("goss-game-module");
-      if (oldModule) {
-        localStorage.setItem(MODULE_KEY, oldModule);
-        localStorage.removeItem("goss-game-module");
-      }
+      if (oldModule) { localStorage.setItem(MODULE_KEY, oldModule); localStorage.removeItem("goss-game-module"); }
       const oldScenario = localStorage.getItem("goss-scenario");
-      if (oldScenario) {
-        localStorage.setItem(SCENARIO_KEY, oldScenario);
-        localStorage.removeItem("goss-scenario");
-      }
+      if (oldScenario) { localStorage.setItem(SCENARIO_KEY, oldScenario); localStorage.removeItem("goss-scenario"); }
       return localStorage.getItem(GAME_SYSTEM_KEY) || visibleGames[0]?.id || "goss";
     } catch { return visibleGames[0]?.id || "goss"; }
   });
@@ -84,16 +87,29 @@ function useGameSelection() {
     try { return localStorage.getItem(SCENARIO_KEY) || null; } catch { return null; }
   });
 
-  const gameConfig = useMemo(() => getGameById(gameSystemId) ?? visibleGames[0], [gameSystemId, visibleGames]);
+  const [complexity, setComplexity] = useState<ComplexityLevel>(() => {
+    try {
+      const saved = localStorage.getItem(COMPLEXITY_KEY);
+      if (saved === "standard" || saved === "advanced") return saved;
+    } catch { /* ignore */ }
+    return "standard";
+  });
+
+  const gameConfig = useMemo(
+    () => getGameById(gameSystemId) ?? visibleGames[0],
+    [gameSystemId, visibleGames],
+  );
 
   useEffect(() => { localStorage.setItem(GAME_SYSTEM_KEY, gameSystemId); }, [gameSystemId]);
   useEffect(() => { moduleId ? localStorage.setItem(MODULE_KEY, moduleId) : localStorage.removeItem(MODULE_KEY); }, [moduleId]);
   useEffect(() => { scenario ? localStorage.setItem(SCENARIO_KEY, scenario) : localStorage.removeItem(SCENARIO_KEY); }, [scenario]);
+  useEffect(() => { localStorage.setItem(COMPLEXITY_KEY, complexity); }, [complexity]);
 
   const changeGameSystem = (id: string) => {
     setGameSystemId(id);
     setModuleId(null);
     setScenario(null);
+    setComplexity("standard");
   };
 
   const changeModule = (id: string | null) => {
@@ -101,75 +117,158 @@ function useGameSelection() {
     setScenario(null);
   };
 
-  return { visibleGames, gameConfig, gameSystemId, moduleId, scenario, changeGameSystem, changeModule, setScenario };
-}
+  const changeComplexity = (c: ComplexityLevel) => {
+    // Only allow if game supports it
+    if (gameConfig?.complexityLevels?.includes(c)) {
+      setComplexity(c);
+    }
+  };
 
-// Static imports for GOSS (the only game system currently).
-// When adding a second game, these move to dynamic import() in each game's config.ts.
-import gossSequence from "./data/goss/sequence.json";
-import gossRulesData from "./data/goss/rules.json";
-import warRulesData from "./data/goss/war/rules.json";
-import hurtgenRulesData from "./data/goss/hurtgen/rules.json";
-import lfRulesData from "./data/goss/lucky-forward/rules.json";
-import awRulesData from "./data/goss/atlantic-wall/rules.json";
-import warOverlayData from "./data/goss/war/sequence-overlay.json";
-import hurtgenOverlayData from "./data/goss/hurtgen/sequence-overlay.json";
-import lfOverlayData from "./data/goss/lucky-forward/sequence-overlay.json";
-import awOverlayData from "./data/goss/atlantic-wall/sequence-overlay.json";
-import gossLearnData from "./data/goss/learn.json";
-import warLearnOverlayData from "./data/goss/war/learn-overlay.json";
-import hurtgenLearnOverlayData from "./data/goss/hurtgen/learn-overlay.json";
-import lfLearnOverlayData from "./data/goss/lucky-forward/learn-overlay.json";
-import awLearnOverlayData from "./data/goss/atlantic-wall/learn-overlay.json";
-
-const GOSS_BASE_RULES = gossRulesData as RuleEntry[];
-const GOSS_BASE_PHASES = gossSequence.phases as Phase[];
-const GOSS_MODULE_RULES: Record<string, RuleEntry[]> = {
-  war: warRulesData as RuleEntry[],
-  hurtgen: hurtgenRulesData as RuleEntry[],
-  "lucky-forward": lfRulesData as RuleEntry[],
-  "atlantic-wall": awRulesData as RuleEntry[],
-};
-const GOSS_MODULE_OVERLAYS: Record<string, SequenceOverlay> = {
-  war: warOverlayData as SequenceOverlay,
-  hurtgen: hurtgenOverlayData as SequenceOverlay,
-  "lucky-forward": lfOverlayData as SequenceOverlay,
-  "atlantic-wall": awOverlayData as SequenceOverlay,
-};
-const GOSS_BASE_LEARN = gossLearnData as LearnData;
-const GOSS_MODULE_LEARN_OVERLAYS: Record<string, LearnOverlay> = {
-  war: warLearnOverlayData as LearnOverlay,
-  hurtgen: hurtgenLearnOverlayData as LearnOverlay,
-  "lucky-forward": lfLearnOverlayData as LearnOverlay,
-  "atlantic-wall": awLearnOverlayData as LearnOverlay,
-};
-
-/** Returns base + module data for the selected game. Currently only GOSS. */
-function useGameData(_gameConfig: GameSystemConfig | undefined, moduleId: string | null) {
-  // TODO: When adding a second game, switch on gameConfig.id and use dynamic imports
   return {
-    baseRules: GOSS_BASE_RULES,
-    basePhases: GOSS_BASE_PHASES,
-    moduleRules: moduleId ? GOSS_MODULE_RULES[moduleId] ?? [] : [],
-    moduleOverlay: moduleId ? GOSS_MODULE_OVERLAYS[moduleId] ?? null : null,
-    baseLearn: GOSS_BASE_LEARN,
-    moduleLearnOverlay: moduleId ? GOSS_MODULE_LEARN_OVERLAYS[moduleId] ?? null : null,
+    visibleGames, gameConfig, gameSystemId, moduleId, scenario, complexity,
+    changeGameSystem, changeModule, setScenario, changeComplexity,
   };
 }
+
+// ---------------------------------------------------------------------------
+// Async game data hook — loads from config's dynamic import() loaders
+// ---------------------------------------------------------------------------
+
+interface GameData {
+  baseRules: RuleEntry[];
+  basePhases: Phase[];
+  baseLearn: LearnData;
+  moduleRules: RuleEntry[];
+  moduleOverlay: SequenceOverlay | null;
+  moduleLearnOverlay: LearnOverlay | null;
+}
+
+const EMPTY_LEARN: LearnData = { chapters: [] };
+
+function useGameData(
+  gameConfig: GameSystemConfig | undefined,
+  moduleId: string | null,
+  complexity: ComplexityLevel,
+) {
+  const [data, setData] = useState<GameData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (!gameConfig) {
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
+    let cancelled = false;
+
+    const moduleConfig = moduleId
+      ? gameConfig.modules.find((m) => m.id === moduleId) ?? null
+      : null;
+
+    const isAdvanced = complexity === "advanced";
+
+    Promise.all([
+      // Base rules (standard always; advanced appended on top)
+      gameConfig.baseData.rules(),
+      isAdvanced && gameConfig.baseData.advancedRules
+        ? gameConfig.baseData.advancedRules()
+        : Promise.resolve(null),
+      // Sequence (advanced replaces standard when available)
+      isAdvanced && gameConfig.baseData.advancedSequence
+        ? gameConfig.baseData.advancedSequence()
+        : gameConfig.baseData.sequence(),
+      // Learn
+      isAdvanced && gameConfig.baseData.advancedLearn
+        ? gameConfig.baseData.advancedLearn()
+        : (gameConfig.baseData.learn ? gameConfig.baseData.learn() : Promise.resolve(null)),
+      // Module rules
+      moduleConfig?.data.rules ? moduleConfig.data.rules() : Promise.resolve(null),
+      isAdvanced && moduleConfig?.data.advancedRules
+        ? moduleConfig.data.advancedRules()
+        : Promise.resolve(null),
+      // Module sequence overlay
+      isAdvanced && moduleConfig?.data.advancedSequenceOverlay
+        ? moduleConfig.data.advancedSequenceOverlay()
+        : (moduleConfig?.data.sequenceOverlay ? moduleConfig.data.sequenceOverlay() : Promise.resolve(null)),
+      // Module learn overlay
+      moduleConfig?.data.learnOverlay ? moduleConfig.data.learnOverlay() : Promise.resolve(null),
+    ]).then((results) => {
+      if (cancelled) return;
+      const [
+        baseRulesRaw, advRulesRaw, seqRaw, learnRaw,
+        modRulesRaw, modAdvRulesRaw, overlayRaw, learnOverlayRaw,
+      ] = results;
+
+      const baseRules: RuleEntry[] = [
+        ...((baseRulesRaw as any)?.default ?? []),
+        ...((advRulesRaw as any)?.default ?? []),
+      ];
+      const basePhases: Phase[] =
+        (seqRaw as any)?.default?.phases ?? [];
+      const baseLearn: LearnData =
+        (learnRaw as any)?.default ?? EMPTY_LEARN;
+      const moduleRules: RuleEntry[] = [
+        ...((modRulesRaw as any)?.default ?? []),
+        ...((modAdvRulesRaw as any)?.default ?? []),
+      ];
+      const moduleOverlay: SequenceOverlay | null =
+        (overlayRaw as any)?.default ?? null;
+      const moduleLearnOverlay: LearnOverlay | null =
+        (learnOverlayRaw as any)?.default ?? null;
+
+      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay });
+      setLoading(false);
+    }).catch((err) => {
+      if (!cancelled) {
+        console.error("Failed to load game data:", err);
+        setLoading(false);
+      }
+    });
+
+    return () => { cancelled = true; };
+  }, [gameConfig?.id, moduleId, complexity]);
+
+  return { data, loading };
+}
+
+// ---------------------------------------------------------------------------
+// App
+// ---------------------------------------------------------------------------
 
 function App() {
   const [view, setView] = useState<View>("sop");
   const { theme, toggleTheme } = useTheme();
   const {
-    visibleGames, gameConfig, gameSystemId, moduleId, scenario,
-    changeGameSystem, changeModule, setScenario,
+    visibleGames, gameConfig, gameSystemId, moduleId, scenario, complexity,
+    changeGameSystem, changeModule, setScenario, changeComplexity,
   } = useGameSelection();
 
-  const { baseRules, basePhases, moduleRules, moduleOverlay, baseLearn, moduleLearnOverlay } = useGameData(gameConfig, moduleId);
+  const { data, loading } = useGameData(gameConfig, moduleId, complexity);
 
-  const allRules = useMemo(() => mergeRules(baseRules, moduleRules), [baseRules, moduleRules]);
-  const phases = useMemo(() => mergeSequence(basePhases, moduleOverlay, scenario), [basePhases, moduleOverlay, scenario]);
-  const learnChapters = useMemo(() => mergeLearn(baseLearn, moduleLearnOverlay, scenario), [baseLearn, moduleLearnOverlay, scenario]);
+  const allRules = useMemo(
+    () => mergeRules(data?.baseRules ?? [], data?.moduleRules ?? []),
+    [data?.baseRules, data?.moduleRules],
+  );
+
+  const {
+    activeOptions, allRules: allOptionalRules, toggleOption, resetToDefaults,
+  } = useOptionalRules(
+    gameSystemId,
+    moduleId,
+    gameConfig?.optionalRules ?? [],
+    gameConfig?.supplements ?? [],
+  );
+
+  const phases = useMemo(
+    () => mergeSequence(data?.basePhases ?? [], data?.moduleOverlay ?? null, scenario, activeOptions),
+    [data?.basePhases, data?.moduleOverlay, scenario, activeOptions],
+  );
+
+  const learnChapters = useMemo(
+    () => mergeLearn(data?.baseLearn ?? EMPTY_LEARN, data?.moduleLearnOverlay ?? null, scenario, activeOptions),
+    [data?.baseLearn, data?.moduleLearnOverlay, scenario, activeOptions],
+  );
 
   const {
     progress, currentPhase, currentSubPhase, currentSegment,
@@ -183,22 +282,32 @@ function App() {
     if (gameConfig?.features.flowchart) t.push({ key: "flowchart", label: "Flowchart" });
     t.push({ key: "rules", label: "Rules" });
     if (gameConfig?.features.ask) t.push({ key: "ask", label: "Ask" });
+    if (gameConfig?.features.options) t.push({ key: "options", label: "Options" });
     t.push({ key: "info", label: "Info" });
     return t;
   }, [gameConfig]);
 
   const handleSidebarSelect = (phaseIndex: number, subPhaseIndex?: number, segmentIndex?: number) => {
-    // Steps and Learn both consume progress state — stay put on those.
-    // Other tabs (Rules/Ask/Flowchart/Info) don't, so bounce back to Steps.
     if (view !== "sop" && view !== "learn") setView("sop");
     goToPhase(phaseIndex, subPhaseIndex, segmentIndex);
   };
 
-  // Get current module config for scenario label lookup
   const currentModule: ModuleConfig | undefined = gameConfig?.modules.find((m) => m.id === moduleId);
   const scenarioLabel = scenario
     ? (currentModule?.scenarios.find((s) => s.id === scenario)?.label ?? "All Scenarios")
     : "All Scenarios";
+
+  // Loading screen
+  if (loading && !data) {
+    return (
+      <div className={`flex h-screen items-center justify-center ${theme === "dark" ? "bg-stone-900" : "bg-white"}`}>
+        <div className="text-center">
+          <div className="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-2 border-stone-300 border-t-accent-500" />
+          <p className="text-sm text-stone-400">Loading {gameConfig?.name ?? "game data"}…</p>
+        </div>
+      </div>
+    );
+  }
 
   const sidebar = (
     <div className="flex h-full flex-col">
@@ -231,6 +340,8 @@ function App() {
             onModuleChange={changeModule}
             scenario={scenario}
             onScenarioChange={setScenario}
+            complexity={complexity}
+            onComplexityChange={changeComplexity}
           />
         }
         tabs={tabs}
@@ -280,7 +391,16 @@ function App() {
             exampleQuestions={gameConfig.askConfig.exampleQuestions}
           />
         )}
-        {view === "info" && <InfoPanel />}
+        {view === "options" && gameConfig?.features.options && (
+          <OptionsPanel
+            allRules={allOptionalRules}
+            supplements={gameConfig.supplements ?? []}
+            activeOptions={activeOptions}
+            onToggle={toggleOption}
+            onResetToDefaults={resetToDefaults}
+          />
+        )}
+        {view === "info" && <InfoPanel gameConfig={gameConfig} />}
       </AppShell>
       <RuleModal />
       <QuickRefBar
@@ -294,8 +414,9 @@ function App() {
   );
 }
 
-/** Build OOB lazy-load map from game config */
-function buildOobModules(config: GameSystemConfig): Record<string, () => Promise<{ default: unknown }>> {
+function buildOobModules(
+  config: GameSystemConfig,
+): Record<string, () => Promise<{ default: unknown }>> {
   const map: Record<string, () => Promise<{ default: unknown }>> = {};
   for (const mod of config.modules) {
     if (mod.data.oob) {

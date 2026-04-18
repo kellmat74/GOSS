@@ -9,30 +9,63 @@ import type {
 /**
  * Deep-clone base learn chapters and apply a module overlay.
  * If a specific scenario is selected, also applies scenario-specific overrides.
+ * If activeOptions is provided, filters out chapters/decisions whose optionGate
+ * requirements are not met.
  * Base data is never mutated. Parallels mergeSequence() for the SoP.
  */
 export function mergeLearn(
   base: LearnData,
   overlay: LearnOverlay | null,
   scenario?: string | null,
+  activeOptions?: Set<string>,
 ): LearnChapter[] {
-  if (!overlay || overlay.modifications.length === 0) {
-    return base.chapters;
-  }
+  let chapters: LearnChapter[] = JSON.parse(JSON.stringify(base.chapters));
 
-  const chapters: LearnChapter[] = JSON.parse(JSON.stringify(base.chapters));
-
-  for (const mod of overlay.modifications) {
-    applyModification(chapters, mod, overlay.moduleLabel);
-  }
-
-  if (scenario && overlay.scenarioOverrides?.[scenario]) {
-    for (const mod of overlay.scenarioOverrides[scenario].modifications) {
+  if (overlay && overlay.modifications.length > 0) {
+    for (const mod of overlay.modifications) {
       applyModification(chapters, mod, overlay.moduleLabel);
+    }
+
+    if (scenario && overlay.scenarioOverrides?.[scenario]) {
+      for (const mod of overlay.scenarioOverrides[scenario].modifications) {
+        applyModification(chapters, mod, overlay.moduleLabel);
+      }
     }
   }
 
+  // Filter by active options (after all overlay modifications)
+  if (activeOptions) {
+    chapters = filterChaptersByOptions(chapters, activeOptions);
+  }
+
   return chapters;
+}
+
+/**
+ * Filter chapters and decisions by optionGate.
+ * A chapter/decision is kept if it has no optionGate, or all listed option IDs
+ * are present in activeOptions.
+ */
+function filterChaptersByOptions(
+  chapters: LearnChapter[],
+  activeOptions: Set<string>,
+): LearnChapter[] {
+  return chapters
+    .filter((ch) => passesOptionGate(ch.optionGate, activeOptions))
+    .map((ch) => ({
+      ...ch,
+      decisions: ch.decisions.filter((d) =>
+        passesOptionGate(d.optionGate, activeOptions),
+      ),
+    }));
+}
+
+function passesOptionGate(
+  optionGate: string[] | undefined,
+  activeOptions: Set<string>,
+): boolean {
+  if (!optionGate || optionGate.length === 0) return true;
+  return optionGate.every((id) => activeOptions.has(id));
 }
 
 function applyModification(

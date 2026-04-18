@@ -3,33 +3,77 @@ import type { Phase, SubPhase, SequenceOverlay, SequenceModification } from "../
 /**
  * Deep-clone phases and apply a scenario overlay.
  * If a specific scenario is selected, also applies scenario-specific overrides.
- * Returns a new phases array with scenario annotations merged in.
+ * If activeOptions is provided, filters out phases/sub-phases whose optionGate
+ * requirements are not met (i.e., any required option ID is not in activeOptions).
  * Base sequence.json is never mutated.
  */
 export function mergeSequence(
   basPhases: Phase[],
   overlay: SequenceOverlay | null,
-  scenario?: string | null
+  scenario?: string | null,
+  activeOptions?: Set<string>
 ): Phase[] {
-  if (!overlay || overlay.modifications.length === 0) return basPhases;
-
   // Deep clone
-  const phases: Phase[] = JSON.parse(JSON.stringify(basPhases));
+  let phases: Phase[] = JSON.parse(JSON.stringify(basPhases));
 
-  // Apply base game-module modifications (apply to all scenarios)
-  for (const mod of overlay.modifications) {
-    applyModification(phases, mod, overlay.moduleLabel);
-  }
-
-  // Apply scenario-specific overrides if a scenario is selected
-  if (scenario && overlay.scenarioOverrides?.[scenario]) {
-    const override = overlay.scenarioOverrides[scenario];
-    for (const mod of override.modifications) {
+  if (overlay && overlay.modifications.length > 0) {
+    // Apply base game-module modifications (apply to all scenarios)
+    for (const mod of overlay.modifications) {
       applyModification(phases, mod, overlay.moduleLabel);
+    }
+
+    // Apply scenario-specific overrides if a scenario is selected
+    if (scenario && overlay.scenarioOverrides?.[scenario]) {
+      const override = overlay.scenarioOverrides[scenario];
+      for (const mod of override.modifications) {
+        applyModification(phases, mod, overlay.moduleLabel);
+      }
     }
   }
 
+  // Filter by active options (after all overlay modifications)
+  if (activeOptions) {
+    phases = filterByOptions(phases, activeOptions);
+  }
+
   return phases;
+}
+
+/**
+ * Recursively filter phases and sub-phases whose optionGate requirements
+ * are not met. An item is kept if:
+ *   - it has no optionGate, OR
+ *   - every option ID in optionGate is present in activeOptions
+ */
+function filterByOptions(phases: Phase[], activeOptions: Set<string>): Phase[] {
+  return phases
+    .filter((phase) => passesOptionGate(phase.optionGate, activeOptions))
+    .map((phase) => ({
+      ...phase,
+      subPhases: filterSubPhasesByOptions(phase.subPhases, activeOptions),
+    }));
+}
+
+function filterSubPhasesByOptions(
+  subPhases: SubPhase[],
+  activeOptions: Set<string>
+): SubPhase[] {
+  return subPhases
+    .filter((sp) => passesOptionGate(sp.optionGate, activeOptions))
+    .map((sp) => ({
+      ...sp,
+      subPhases: sp.subPhases
+        ? filterSubPhasesByOptions(sp.subPhases, activeOptions)
+        : undefined,
+    }));
+}
+
+function passesOptionGate(
+  optionGate: string[] | undefined,
+  activeOptions: Set<string>
+): boolean {
+  if (!optionGate || optionGate.length === 0) return true;
+  return optionGate.every((id) => activeOptions.has(id));
 }
 
 /** Find an item by id across all 3 levels. Returns the item and its parent array. */

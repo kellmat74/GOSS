@@ -14,6 +14,8 @@ export interface SubPhase {
   appendedContent?: string;
   appendedNotes?: string[];
   scenarioModule?: string;
+  // Optional rules gate: hide this item unless ALL listed option IDs are active
+  optionGate?: string[];
 }
 
 export interface Phase {
@@ -31,6 +33,8 @@ export interface Phase {
   appendedContent?: string;
   appendedNotes?: string[];
   scenarioModule?: string;
+  // Optional rules gate: hide this item unless ALL listed option IDs are active
+  optionGate?: string[];
 }
 
 export interface SequenceOfPlay {

@@ -1,7 +1,7 @@
 import { useState } from "react";
+import type { GameSystemConfig } from "../types/platform";
 
-const LIVE_URL = "https://kellmat74.github.io/GOSS/";
-const DOWNLOAD_URL = `${import.meta.env.BASE_URL}GOSS-Assistant.html`;
+const APP_LIVE_URL = "https://kellmat74.github.io/GOSS/";
 const FEEDBACK_URL = import.meta.env.VITE_FEEDBACK_URL || "";
 
 type FeedbackType = "bug" | "suggestion" | "question";
@@ -113,7 +113,18 @@ function FeedbackForm() {
   );
 }
 
-export function InfoPanel() {
+interface InfoPanelProps {
+  gameConfig?: GameSystemConfig;
+}
+
+export function InfoPanel({ gameConfig }: InfoPanelProps) {
+  const gameName = gameConfig?.name ?? "Wargame Companion";
+  const gameSubtitle = gameConfig?.subtitle ?? "";
+  const downloadName = gameConfig
+    ? `${gameConfig.shortName}-Assistant.html`
+    : "Wargame-Companion.html";
+  const downloadUrl = `${import.meta.env.BASE_URL}${downloadName}`;
+
   return (
     <div className="mx-auto max-w-2xl space-y-8 py-4">
       {/* Offline Export */}
@@ -127,17 +138,17 @@ export function InfoPanel() {
         <p className="mb-4 text-sm leading-relaxed text-stone-500 dark:text-stone-400">
           To use the Ask feature, visit the hosted version at{" "}
           <a
-            href={LIVE_URL}
+            href={APP_LIVE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-accent-500 underline hover:text-accent-400"
           >
-            {LIVE_URL}
+            {APP_LIVE_URL}
           </a>
         </p>
         <a
-          href={DOWNLOAD_URL}
-          download="GOSS-Assistant.html"
+          href={downloadUrl}
+          download={downloadName}
           className="inline-block rounded-lg bg-accent-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-700"
         >
           Save as HTML
@@ -157,10 +168,10 @@ export function InfoPanel() {
       <section>
         <h2 className="mb-3 text-lg font-bold">About</h2>
         <p className="text-sm leading-relaxed text-stone-500 dark:text-stone-400">
-          <strong>GOSS Assistant</strong> is an interactive companion app for the{" "}
-          <em>Grand Operational Simulation Series (GOSS) 2020</em> tabletop wargame system
-          by Decision Games. It provides a step-by-step sequence of play,
-          searchable rules reference, visual flowcharts, and AI-powered rules Q&A.
+          <strong>{gameName}</strong>
+          {gameSubtitle ? ` — ${gameSubtitle}` : ""} is an interactive companion app
+          providing a step-by-step sequence of play, searchable rules reference,
+          and AI-powered rules Q&amp;A. This is an unofficial fan-made tool.
         </p>
       </section>
 
