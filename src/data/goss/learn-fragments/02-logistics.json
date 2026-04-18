@@ -1,0 +1,287 @@
+{
+  "chapters": [
+    {
+      "id": "joint-logistics",
+      "title": "Joint Logistics Phase",
+      "phaseRef": "joint-logistics-phase",
+      "ruleRef": "16.0",
+      "intro": "The Logistics Phase is where the entire GD gets priced: you allocate TPs, absorb SI losses, roll once per army for AmP/FP delivery, then cascade ADV from army down to corps and formations. Every decision here locks in for all GTs of the GD (3.3.1d). Plan the whole day before you commit a single TP.",
+      "decisions": [
+        {
+          "id": "tp-allocation",
+          "title": "Allocating Truck Points to Ammo, Fuel, and Motorization",
+          "when": "Truck Point Assignment Segment, first segment of the Joint Logistics Phase (16.1.2).",
+          "ruleRefs": ["16.1.2", "16.1.2a", "16.1.2b", "16.1.2c"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Each TP goes to exactly one of three buckets: **ammo**, **fuel**, or **motorization** (16.1.2). The split is permanent for the GD, and every downstream roll — AmP delivery, FP delivery, corps support, motorization — draws from the buckets you set here."
+            },
+            {
+              "kind": "prose",
+              "text": "### Caps and floors\n\n1) Max 7 TP count for ammo delivery (16.1.2a). You can stack more than 7 as SI insurance, but the 8th+ TP adds nothing to the roll unless SI destroys one.\n2) Max 8 TP count for fuel delivery (16.1.2b). Same insurance logic.\n3) **Allied armies must allocate 1 ammo TP per supported corps** (16.1.2a). This sets the ceiling on how many corps you can support this GD — reductions from SI do not change it.\n4) Axis armies must allocate at least 1 TP per army to ammo (16.1.2a).\n5) Motorization TPs have no cap (16.1.2c)."
+            },
+            {
+              "kind": "prose",
+              "text": "### What motorization TPs do\n\n- Motorize Leg units for Mech road movement (7.12.3a).\n- Let a Leg formation trace a Mech GenS path (15.2.3).\n- Transfer AmP between armies — 1 motorization TP moves up to 2 AmP (16.3.5)."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Motorization TPs are immune to supply interdiction (16.2.0 Exception). If you are expecting heavy SI and need guaranteed capacity — e.g., to transfer AmP to a Schwerpunkt army — motorization is the untouchable slot."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "The Allied corps-support ceiling is set by **pre-SI** ammo TP, not post-SI (16.1.2a). Losing a TP to SI does not force you to drop a corps, as long as your Step 2 army ADV still supports the count."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Am I planning a major attack this GD? → Bias ammo TP high to protect corps count and push ADV up.",
+                "Am I planning a Mech breakthrough? → Every fuel TP matters; running short means low/no-fuel rolls next GT.",
+                "Do I need to shift AmP to another army? → Reserve motorization TPs for the transfer (16.3.5).",
+                "Is SI likely this GD? → Pad ammo and/or fuel by 1-2 TP over what the Logistics Table columns reward, as SI insurance."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "supply-interdiction",
+          "title": "Running (or Absorbing) Supply Interdiction",
+          "when": "Supply Interdiction Segment, after TP allocation (20.4, 20.4.1).",
+          "ruleRefs": ["20.4", "20.4.1", "20.7.2"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "SI is the only way to degrade the enemy's logistics after they have committed TPs. Missions fly only in **Clear or POvr** atmospheric conditions (20.4) — in Ovr, Storm, or Snow the segment is skipped entirely."
+            },
+            {
+              "kind": "prose",
+              "text": "### Procedure for each mission\n\n1) Mission player secretly picks the number of SI missions and the AP composition (mission + escort) of each (20.4.1).\n2) Mission player declares number of missions and which enemy army each targets.\n3) Non-mission player declares intercepting AP per mission.\n4) Mission player reveals the first mission's mission AP and ASup escort AP.\n5) Conduct ASup (20.6.2).\n6) Flak suppression by surviving ASup escorts; surviving Flak points apply as a DRM (20.7.2).\n7) Mission player rolls 1d10 to pick target type: **0-4 = fuel TPs, 5-9 = ammo TPs** (20.4.1).\n8) Mission player rolls 1d10 to resolve. DRMs: -1 with 3 surviving mission AP, +1 with 1 surviving mission AP, +1 for every 4 surviving Flak points (round down). Modified DR 2 or less = success, -1 TP of that type for the GD."
+            },
+            {
+              "kind": "prose",
+              "text": "### Per-mission limits\n\n- Min 2 AP, max 3 AP on mission strength per SI (20.4.1). Always fly with 3 AP if you can afford it — the difference between +1 DRM and -1 DRM is huge on a DR needing 2 or less."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Target type is rolled, not chosen (20.4.1 step 7). You commit to attacking an army, not to hitting ammo or fuel specifically — so the defender should over-stock the category they can least afford to lose as pure insurance."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "SI removes 1 TP per success and the TP is gone for the entire GD. This is why a successful SI can cascade into an ADV drop (16.3.2 Step 5a) — a missing TP shifts the Logistics Table column left, potentially driving the AmP delivery negative."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Is the weather Clear or POvr? → If no, skip. If yes, both sides may fly SI.",
+                "Do I have Flak-capable units near enemy army HQs? → Each 4 surviving Flak points adds +1 DRM to enemy SI resolution (20.7.2).",
+                "Am I the attacker? → Always commit 3 AP per mission; secretly spread bluffs across enemy armies to stretch their intercepts."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adv-cascade",
+          "title": "The ADV Cascade (Ammo Delivery Procedure)",
+          "when": "Ammo Delivery Segment, after SI resolves (16.3.2). This is the heart of the Logistics Phase.",
+          "ruleRefs": ["16.3.2", "16.2.1", "15.4.1", "15.4.2b", "16.3.5"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Every army runs the same 8-step procedure (16.3.2) once per GD. The output is: final army ADV, stockpiled AmP, and a per-corps ADV for every supported corps. That per-corps ADV governs GA limits (16.3.3), Art ammo depletion (16.3.0), and defensive column shifts for unsupported corps (16.3.4)."
+            },
+            {
+              "kind": "prose",
+              "text": "### The 8 steps\n\n1) Place the army ADV marker at its scenario-set base ADV (16.3.2 Step 1). Scenario rules — usually on the GTRT — give you the starting value.\n2) Optionally earmark AmP from the stockpile for transfer to another army. Requires motorization TPs: 1 TP moves up to 2 AmP (16.3.2 Step 2, 16.3.5).\n3) Optionally trade ADV for AmP or vice versa: lower ADV by 1 to add 2 AmP (max 10 AmP created this way), or spend 2 AmP to raise ADV by 1 (16.3.2 Step 3).\n4) Decide which subordinate corps the army will support, then adjust army ADV for the count (16.3.2 Step 4, 15.4.1):\n   - **Fewer than 3 corps:** +1 ADV (only +1, even if 1 corps).\n   - **3 corps:** no change.\n   - **Each corps over 3:** -1 ADV.\n   Unsupported corps get ADV 0 and eat the unsupported penalties (15.4.3, 16.3.4). The army cannot support a count that would drive its ADV to 0.\n5) Roll 1d10 on the Logistics Table for AmP delivered (16.3.2 Step 5, 16.2.1). Apply -2 DRM if the GenS path from PSS to army HQ is extended (16.2.2). Positive result → add to stockpile. Negative result → pull AmP from stockpile first; if short, reduce army ADV by 1 for each 2 AmP still owed (round down).\n6) Each supported corps inherits an ADV equal to the army's post-Step-5 ADV (16.3.2 Step 6).\n7) Each supported corps then adjusts its own ADV for the number of formations it supports (16.3.2 Step 7, 15.4.2b):\n   - **Fewer than 3 formations:** +1 ADV.\n   - **3 formations:** no change.\n   - **Each formation over 3:** -1 ADV.\n   A corps cannot drop below 0 ADV. Unsupported formations get no adjustment and their units pay the 15.4.3 penalties.\n8) Optionally spend army stockpile AmP to boost individual supported corps: **2 AmP = +1 corps ADV** (16.3.2 Step 8). This is your Schwerpunkt lever."
+            },
+            {
+              "kind": "prose",
+              "text": "### Counting formations (15.4.2a)\n\n- **1 formation:** Allied Divs; Axis Tank, Pz, PzG, Mot Divs.\n- **0.5 formation:** Axis non-Mech Divs and all Axis BGs; all Allied BG/CvGp.\n\nRound fractions down. A German corps with 2 Inf Divs + 1 Pz Div counts as 2 formations (0.5 + 0.5 + 1 = 2), so it gets +1 ADV in Step 7 — a real Axis math advantage in infantry-heavy sectors."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Each army rolls **once** in Step 5, and that single DR locks in the ADV for the entire GD — AM, PM, and Night (3.3.1d). A bad roll with an extended GenS path (-2 DRM) can both shrink the stockpile AND drag the army ADV down, cascading a penalty onto every supported corps for every GT of the day."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "The magic number is **3**. Armies are designed to comfortably support 3 corps, corps to support 3 formations. Fewer than 3 on either level gives +1 ADV; each one over 3 costs -1. Consolidating attacks into fewer, fuller corps is almost always better ADV math than spreading across extras."
+            },
+            {
+              "kind": "callout",
+              "variant": "caution",
+              "text": "Choosing not to support a corps is not free. Unsupported corps have ADV 0, their Art units have ADV 0 (15.4.3a), they pay AmP to get GA designations (16.3.4), and their defenders eat a column-shift-right penalty (15.4.3e). Use non-support only for genuinely quiet sectors."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Is my army HQ on a normal or extended GenS path? → Extended path is -2 DRM on delivery (16.2.2); fix it first if possible.",
+                "How many corps do I actually need to attack with this GD? → Drop support on quiet-sector corps to buy +1 army ADV (Step 4).",
+                "Do I have a Schwerpunkt corps that needs extra GAs? → Save 2 AmP per ADV point and spend in Step 8 (16.3.2).",
+                "Is the army stockpile near cap? → Spend AmP in Step 3 (raise ADV) or Step 8 (boost corps) rather than letting a positive delivery overflow — cap is 20 without a depot, 40 with one (16.3.6).",
+                "Can I afford to convert ADV → AmP in Step 3? → Up to 10 AmP if you expect a quiet GD and want to bank for a future push."
+              ]
+            },
+            { "kind": "rule", "ruleRef": "16.3.2", "text": "Full 8-step procedure is in 16.3.2 — worth reading once end-to-end before your first game." }
+          ]
+        },
+        {
+          "id": "fuel-delivery",
+          "title": "Delivering Fuel and Allocating to HQs",
+          "when": "Fuel Delivery Segment, after ammo delivery is complete (16.4.1, 16.4.2).",
+          "ruleRefs": ["16.4.1", "16.4.2", "16.4.4", "16.4.4a"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Fuel uses the same Logistics Table as ammo — same roll, same -2 DRM for extended GenS (16.2.2) — but the **right-side value** in each cell is FP delivered (16.2.1). Each army rolls once, adds the result to its FP stockpile (cap 20, or 40 with a depot, per 16.4.1), then allocates FP to HQs."
+            },
+            {
+              "kind": "prose",
+              "text": "### Allocation to HQs (16.4.4)\n\nEvery Mech Div, Mech BG, Allied formation, and all corps/army HQs need FP. The HQ's FP count sets its **fuel state**: Normal, Low, or No Fuel. Required FP by type:\n\n| Type | Normal | Low |\n|---|---|---|\n| Mech Divisions | 2 | 1 |\n| Mech BG | 1 | 0.5 |\n| Allied Corps HQ | 2 | 1 |\n| Axis Corps HQ | 1 | 0.5 |\n| Army HQ | 1 | 0.5 |\n\nAllocate nothing → No Fuel. The Mech units subordinate to that HQ inherit the state and will roll on the Fuel Level Table next GT (16.4.5)."
+            },
+            {
+              "kind": "prose",
+              "text": "### Costly extras and discounts\n\n- **Early US Armored Divs (1st, 2nd, 3rd)** cost an extra 0.5 FP at Low / 1 FP at Normal before any attachments (16.4.4).\n- **Div with 3+ attached Mech units** adds the Mech BG fuel cost on top — but free Tk/TD/AT attachments per 9.6.2b do not count (16.4.4).\n- **Reduced Mech Div (HQ has 7 or fewer Mech Bn.'s subordinate)** gets half fuel cost. Round up to nearest half only after all HQs are allocated (16.4.4a).\n- **Axis Leg formations not in the table** need no fuel; their Mech sub-units follow the superior corps HQ's state (16.4.3b)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "An OhS HQ can only draw FP from its own OhS stockpile, not the army stockpile (16.4.2). An isolated pocket burns through its own reserves fast — plan fuel for the relieving force, not the surrounded one."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Low fuel is dramatically safer than No fuel. The Fuel Level Table (16.4.5) gives Low fuel 2-8 MA, but No fuel 0-5 MA with zeros on low rolls. If you have FP to spare, push every Mech HQ to at least Low."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Do I have enough FP for every Mech Div to reach at least Low fuel? → If not, prioritize the formations you need to move next GT.",
+                "Are any of my Divs reduced (7 or fewer Mech Bn.'s)? → Halve their fuel cost (16.4.4a).",
+                "Am I leaving a quiet-sector corps' HQ without FP? → That is a legitimate call — its Mech units just cannot move normally.",
+                "Is my FP stockpile at cap? → Under-allocate intentionally so the next delivery is not wasted."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "depot-placement",
+          "title": "Moving or Placing a Depot",
+          "when": "Depot Placement Segment, late in the Joint Logistics Phase (15.8.0).",
+          "ruleRefs": ["15.8.0", "15.8.1", "15.8.2"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Depots do two big things: they extend the army's GenS path from the PSS in 18-Mech-MP hops (15.8.1), and they double both the AmP and FP stockpile caps from 20 to 40 (16.3.6, 16.4.1). If your front is moving forward faster than 18 Mech MP, you will eventually need to relocate a depot or you lose GenS on the army HQ."
+            },
+            {
+              "kind": "prose",
+              "text": "### Relocation cost (15.8.2)\n\n1) Army HQ must already be in the target town/city hex — the HQ cannot move during relocation.\n2) At the end of the current Joint Logistics Phase, earmark **half** the army's TPs; they are unusable for two full GDs.\n3) Spend **6 FP** from the army stockpile.\n4) Place the depot on the GTRT two GDs out. At the end of that GD's Joint Logistics Phase, place it in the target hex.\n5) Only one depot relocation at a time per army."
+            },
+            {
+              "kind": "callout",
+              "variant": "caution",
+              "text": "If an enemy unit enters a depot hex, the depot is immediately eliminated (15.8.0). It goes on the GTRT for recycle next Joint Logistics Phase. Keep depots out of exploit range of any enemy Mech formation."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Is my army HQ more than 18 Mech MP from the PSS without a depot chain? → You are losing GenS to the army; relocate or place now.",
+                "Am I regularly capping AmP or FP deliveries? → A depot doubles caps to 40 — the half-TP/6-FP cost pays back fast.",
+                "Is this a quiet GD for this army? → Best window to eat the half-TP hit."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "replacement-points",
+          "title": "Converting Recycle Steps and Banking GD RePs",
+          "when": "Replacement Point Segment, final segment of the Joint Logistics Phase (22.1.1).",
+          "ruleRefs": ["22.1.1", "22.2.1", "22.3", "22.4.3"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "This segment only produces RePs. Actually **spending** RePs happens later during the Replacement Segment of the friendly Combat Phase (22.5), so here you are just doing math: convert recycle steps, read scenario RePs, collect refit RePs."
+            },
+            {
+              "kind": "prose",
+              "text": "### Conversion rates (22.2.1)\n\n- **Axis Inf recycle:** 4 steps → 1 Inf ReP.\n- **Axis Arm recycle:** 4 steps → 1 Arm ReP.\n- **Allied Inf recycle:** 5 steps → 1 Inf ReP.\n- **Allied Arm recycle:** 3 steps → 1 Arm ReP.\n\nLeftovers carry over to the next GD. Allied Arm recycle is the best-priced conversion in the game — 3 steps for an Arm ReP is cheap compared to the Axis 4-for-1."
+            },
+            {
+              "kind": "prose",
+              "text": "### Other sources\n\n- **GD RePs (22.3):** Scenario-set or table-rolled RePs per army per GD.\n- **Refit (22.4.3):** Formations declared into refit (in Joint Command Phase, 20+ hexes from enemies, 5-GD minimum stay) get bonus RePs per GD:\n  - Allied non-Arm Div or Axis Leg Div: 3 Inf RePs.\n  - Allied non-Arm Bde/Rgt or Axis Leg indep: 1 Inf ReP.\n  - Allied Arm Div or Axis Mech Div: 2 Inf + 1 Arm ReP.\n  - Allied Arm Bde/Rgt or Axis Mech Bde/Rgt: 1 Inf + 1 Arm ReP.\n\nRefit RePs do not accumulate (22.4.3) — use them the GD received or lose them."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Isolated units do not garner recycle steps (22.2). Step losses suffered while isolated are pure losses — no conversion possible. Feeding units into encirclements is expensive twice over."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "A battered formation that gets pulled to refit for 5 GDs can produce 10-20 RePs on its own. If you have the operational slack, rotation beats point-trickle every time."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Do I have a beat-up Arm Div I can pull to refit? → 5 GDs = 10 Inf + 5 Arm RePs, plus step transfers (22.4.2).",
+                "Am I carrying recycle-step leftovers? → Fine, they carry over, but check if one more step pushes you past a threshold.",
+                "Are scenario GD RePs a flat number or a table roll? → Check the scenario before banking on expected output (22.3)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "joint-fuel-value-determination",
+      "title": "Joint Fuel Value Determination Phase",
+      "phaseRef": "joint-fuel-value-determination-phase",
+      "ruleRef": "16.4.5",
+      "intro": "Happens prior to the Allied Player Turn every GT — AM, PM, and Night (3.3.1e). Roll once per HQ in Low or No fuel; the resulting value governs Mech movement for the coming GT. Normal-fuel HQs skip the roll entirely (16.4.5a).",
+      "decisions": [
+        {
+          "id": "fuel-value-roll",
+          "title": "Rolling Fuel Value and Choosing How to Apply It",
+          "when": "Every GT before the Allied turn, for every HQ in Low or No fuel state (16.4.5).",
+          "ruleRefs": ["16.4.5", "16.4.5a", "16.4.5b"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### Procedure (16.4.5a)\n\n1) Skip any HQ in Normal fuel — it operates without restriction.\n2) For each HQ in Low or No fuel, roll 1d10.\n3) Apply -2 DRM if any segment of the GenS path from PSS to that HQ is extended.\n4) Cross-reference modified DR with the HQ's fuel state on the Fuel Level Table:\n\n| Fuel\\DR | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| No Fuel | 0 | 0 | 1 | 1 | 2 | 2 | 3 | 3 | 4 | 5 |\n| Low fuel | 2 | 3 | 4 | 5 | 5 | 6 | 6 | 7 | 7 | 8 |\n\nThe cell value is the HQ's **fuel value** for this GT."
+            },
+            {
+              "kind": "prose",
+              "text": "### Two ways to spend it (16.4.5b)\n\n**Option 1 — Flat MA for all:** Every Mech class unit subordinate to the HQ has MA equal to the fuel value, full stop. Simple; good for coherent defensive moves.\n\n**Option 2 — Full MA for a few, nothing for the rest:** Up to `fuel value` Mech units get full MA; all others cannot move.\n\n- **If the HQ has 10 or fewer Mech Bn.'s subordinate**, Option 2 is halved: only `ceil(fuel value / 2)` units get full MA (16.4.5b-a). For Allied formations, count all subordinate units (even Leg) as Mech for this threshold only.\n- Counting rules (16.4.5b-b/c/d/e): full Bn. or 3-step hybrid = 1, 1-2 step Co. or 2-step hybrid = 0.5, Z-steps do not count. Units drawing fuel directly from a corps/army HQ count together with all other such units when checking the 10-unit threshold."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Option 2's half-fuel-value cap on small formations (≤10 Mech Bn.'s) is easy to miss (16.4.5b-a). For a small formation with a fuel value of 4, Option 2 only lets 2 units move at full MA — Option 1 (MA 4 for everyone) is usually the better deal at that point."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "This phase happens every GT, not just AM (3.3.1e). A formation that rolled a good fuel value in AM may be in a different fuel state by PM if the HQ used FP — or the dice may simply punish you on the second roll. Fuel-starved formations have highly variable effective MA across a single GD."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Is the HQ on an extended GenS path? → -2 DRM hurts brutally on the No Fuel line (0 MA on DR 0-3 already).",
+                "Do I need a unified defensive line? → Option 1 gives every unit the same reduced MA.",
+                "Do I need a spearhead? → Option 2 lets the best units move full MA while the rest wait — check the 10-unit cap first.",
+                "Did my HQ drop from Normal to Low between AM and PM? → It rolls now and cannot skip."
+              ]
+            },
+            { "kind": "rule", "ruleRef": "16.4.5b", "text": "Full Option 1/Option 2 procedure with the 10-unit edge case is in 16.4.5b — read it the first time you field a reduced formation." }
+          ]
+        }
+      ]
+    }
+  ]
+}

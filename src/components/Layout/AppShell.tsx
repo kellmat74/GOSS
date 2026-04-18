@@ -57,7 +57,7 @@ export function AppShell({
         }`}
       >
         <div className="sticky top-0 z-10 border-b border-stone-200 bg-stone-50 p-3 dark:border-stone-700 dark:bg-stone-800">
-          <h1 className="text-lg font-bold tracking-tight">{title} <span className="text-xs font-normal text-stone-500">v4.2</span></h1>
+          <h1 className="text-lg font-bold tracking-tight">{title} <span className="text-xs font-normal text-stone-500">v4.3</span></h1>
           {subtitle && (
             <div className="mt-1 text-sm text-stone-500 dark:text-stone-400">
               {subtitle}

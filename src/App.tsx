@@ -6,6 +6,7 @@ import { GameSelector } from "./components/Layout/GameSelector";
 import { RulesSearch } from "./components/RulesReference/RulesSearch";
 import { RuleModal } from "./components/RulesReference/RuleModal";
 import { AskPanel } from "./components/Ask/AskPanel";
+import { LearnPanel } from "./components/Learn/LearnPanel";
 import { SoPFlowchart } from "./components/Flowchart/SoPFlowchart";
 import { InfoPanel } from "./components/InfoPanel";
 import { QuickRefBar } from "./components/QuickRef/QuickRefBar";
@@ -14,11 +15,13 @@ import { GlossaryProvider } from "./context/GlossaryContext";
 import { useSoPProgress } from "./hooks/useSoPProgress";
 import { mergeRules } from "./utils/mergeRules";
 import { mergeSequence } from "./utils/mergeSequence";
+import { mergeLearn } from "./utils/mergeLearn";
 import { getVisibleGames, getGameById } from "./data/registry";
 import type { Phase, RuleEntry, SequenceOverlay } from "./types/goss";
+import type { LearnData, LearnOverlay } from "./types/learn";
 import type { GameSystemConfig, ModuleConfig } from "./types/platform";
 
-type View = "sop" | "flowchart" | "rules" | "ask" | "info";
+type View = "sop" | "flowchart" | "rules" | "ask" | "learn" | "info";
 
 const THEME_KEY = "wc-theme";
 const GAME_SYSTEM_KEY = "wc-game-system";
@@ -113,6 +116,8 @@ import warOverlayData from "./data/goss/war/sequence-overlay.json";
 import hurtgenOverlayData from "./data/goss/hurtgen/sequence-overlay.json";
 import lfOverlayData from "./data/goss/lucky-forward/sequence-overlay.json";
 import awOverlayData from "./data/goss/atlantic-wall/sequence-overlay.json";
+import gossLearnData from "./data/goss/learn.json";
+import hurtgenLearnOverlayData from "./data/goss/hurtgen/learn-overlay.json";
 
 const GOSS_BASE_RULES = gossRulesData as RuleEntry[];
 const GOSS_BASE_PHASES = gossSequence.phases as Phase[];
@@ -128,6 +133,10 @@ const GOSS_MODULE_OVERLAYS: Record<string, SequenceOverlay> = {
   "lucky-forward": lfOverlayData as SequenceOverlay,
   "atlantic-wall": awOverlayData as SequenceOverlay,
 };
+const GOSS_BASE_LEARN = gossLearnData as LearnData;
+const GOSS_MODULE_LEARN_OVERLAYS: Record<string, LearnOverlay> = {
+  hurtgen: hurtgenLearnOverlayData as LearnOverlay,
+};
 
 /** Returns base + module data for the selected game. Currently only GOSS. */
 function useGameData(_gameConfig: GameSystemConfig | undefined, moduleId: string | null) {
@@ -137,6 +146,8 @@ function useGameData(_gameConfig: GameSystemConfig | undefined, moduleId: string
     basePhases: GOSS_BASE_PHASES,
     moduleRules: moduleId ? GOSS_MODULE_RULES[moduleId] ?? [] : [],
     moduleOverlay: moduleId ? GOSS_MODULE_OVERLAYS[moduleId] ?? null : null,
+    baseLearn: GOSS_BASE_LEARN,
+    moduleLearnOverlay: moduleId ? GOSS_MODULE_LEARN_OVERLAYS[moduleId] ?? null : null,
   };
 }
 
@@ -148,10 +159,11 @@ function App() {
     changeGameSystem, changeModule, setScenario,
   } = useGameSelection();
 
-  const { baseRules, basePhases, moduleRules, moduleOverlay } = useGameData(gameConfig, moduleId);
+  const { baseRules, basePhases, moduleRules, moduleOverlay, baseLearn, moduleLearnOverlay } = useGameData(gameConfig, moduleId);
 
   const allRules = useMemo(() => mergeRules(baseRules, moduleRules), [baseRules, moduleRules]);
   const phases = useMemo(() => mergeSequence(basePhases, moduleOverlay, scenario), [basePhases, moduleOverlay, scenario]);
+  const learnChapters = useMemo(() => mergeLearn(baseLearn, moduleLearnOverlay, scenario), [baseLearn, moduleLearnOverlay, scenario]);
 
   const {
     progress, currentPhase, currentSubPhase, currentSegment,
@@ -160,7 +172,8 @@ function App() {
 
   // Build tabs from game features
   const tabs = useMemo(() => {
-    const t = [{ key: "sop", label: "Steps" }];
+    const t = [{ key: "sop", label: "SoP" }];
+    if (gameConfig?.features.learn) t.push({ key: "learn", label: "Learn" });
     if (gameConfig?.features.flowchart) t.push({ key: "flowchart", label: "Flowchart" });
     t.push({ key: "rules", label: "Rules" });
     if (gameConfig?.features.ask) t.push({ key: "ask", label: "Ask" });
@@ -169,7 +182,9 @@ function App() {
   }, [gameConfig]);
 
   const handleSidebarSelect = (phaseIndex: number, subPhaseIndex?: number, segmentIndex?: number) => {
-    if (view !== "sop") setView("sop");
+    // Steps and Learn both consume progress state — stay put on those.
+    // Other tabs (Rules/Ask/Flowchart/Info) don't, so bounce back to Steps.
+    if (view !== "sop" && view !== "learn") setView("sop");
     goToPhase(phaseIndex, subPhaseIndex, segmentIndex);
   };
 
@@ -181,6 +196,11 @@ function App() {
 
   const sidebar = (
     <div className="flex h-full flex-col">
+      <div className="px-3 pt-3 pb-1">
+        <div className="text-[10px] font-semibold uppercase tracking-widest text-stone-400 dark:text-stone-500">
+          Index
+        </div>
+      </div>
       <PhaseOverview
         phases={phases}
         currentPhaseIndex={progress.currentPhaseIndex}
@@ -232,6 +252,19 @@ function App() {
         )}
         {view === "flowchart" && gameConfig?.features.flowchart && <SoPFlowchart />}
         {view === "rules" && <RulesSearch rules={allRules} />}
+        {view === "learn" && gameConfig?.features.learn && (
+          <LearnPanel
+            chapters={learnChapters}
+            phases={phases}
+            currentPhase={currentPhase}
+            currentSubPhase={currentSubPhase}
+            currentSegment={currentSegment}
+            progress={progress}
+            totalPhases={phases.length}
+            onAdvanceTurn={resetProgress}
+            onGoToPhase={goToPhase}
+          />
+        )}
         {view === "ask" && gameConfig?.features.ask && (
           <AskPanel
             rules={allRules}

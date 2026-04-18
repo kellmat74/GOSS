@@ -12,6 +12,7 @@ export interface ModuleConfig {
     rules: () => Promise<{ default: unknown }>;
     sequenceOverlay?: () => Promise<{ default: unknown }>;
     oob?: () => Promise<{ default: unknown }>;
+    learnOverlay?: () => Promise<{ default: unknown }>;
   };
 }
 
@@ -26,12 +27,14 @@ export interface GameSystemConfig {
     oob: boolean;
     quickRef: boolean;
     ask: boolean;
+    learn?: boolean;
   };
   modules: ModuleConfig[];
   baseData: {
     rules: () => Promise<{ default: unknown }>;
     sequence: () => Promise<{ default: unknown }>;
     quickRef?: () => Promise<{ default: unknown }>;
+    learn?: () => Promise<{ default: unknown }>;
   };
   askConfig: {
     workerUrl: string;

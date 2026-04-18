@@ -6,10 +6,11 @@ export const gossConfig: GameSystemConfig = {
   shortName: "GOSS",
   subtitle: "Grand Operational Simulation Series",
   features: {
-    flowchart: true,
+    flowchart: false,  // deprecated — content not kept up to date
     oob: true,
     quickRef: true,
     ask: true,
+    learn: true,
   },
   modules: [
     {
@@ -48,6 +49,7 @@ export const gossConfig: GameSystemConfig = {
         rules: () => import("./hurtgen/rules.json"),
         sequenceOverlay: () => import("./hurtgen/sequence-overlay.json"),
         oob: () => import("./hurtgen/oob.json"),
+        learnOverlay: () => import("./hurtgen/learn-overlay.json"),
       },
     },
     {
@@ -95,6 +97,7 @@ export const gossConfig: GameSystemConfig = {
     rules: () => import("./rules.json"),
     sequence: () => import("./sequence.json"),
     quickRef: () => import("./quick-ref.json"),
+    learn: () => import("./learn.json"),
   },
   askConfig: {
     workerUrl: "https://goss-ask-proxy.kellmat.workers.dev",

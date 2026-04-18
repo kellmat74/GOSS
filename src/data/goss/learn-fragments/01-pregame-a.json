@@ -1,0 +1,313 @@
+{
+  "chapters": [
+    {
+      "id": "air-allocation",
+      "title": "Joint Air Allocation Phase",
+      "phaseRef": "joint-air-allocation-phase",
+      "ruleRef": "20.0",
+      "intro": "Both sides lock in their AP budget for the full Game Day, split it across four mission types, and shuffle Flak units between map and off-map pool. Every AP choice here constrains what you can do for the next two GTs (AM and PM), so plan the whole day before committing.",
+      "decisions": [
+        {
+          "id": "determine-ap-pool",
+          "title": "Sizing the AP Pool for the Day",
+          "when": "Joint Air Allocation Phase, Determine AP Available segment (20.1).",
+          "ruleRefs": ["20.1", "19.3.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### Steps\n\n1) Consult the GT Record Track and scenario rules for your starting AP count this GD (20.1).\n2) Check the atmospheric condition that will be determined in the following Weather Phase — you'll pay the cost when you spend, not when you allocate. AP availability is set by the GTRT, but each AP's *effective* value is adjusted per (19.3.0).\n3) Note the effective AP per condition so you don't over-promise: Clear = full; POvr = 1/2 each (round down); Ovr = 1/4 each (round down); Storm or Snow = no air ops (19.3.0)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "AP allocations lock in for the whole GD — you cannot reshuffle at PM. Weather is rolled *after* Air Allocation, so if variable weather is in play, you're committing blind (3.3.1a, 3.3.1b)."
+            },
+            {
+              "kind": "rule",
+              "ruleRef": "20.1.2",
+              "text": "Once you hit zero AP in a mission type, that mission type is done for the GD — full procedure in (20.1.2)."
+            }
+          ]
+        },
+        {
+          "id": "mission-mix",
+          "title": "Splitting AP Across the Four Mission Types",
+          "when": "Joint Air Allocation Phase, Allocate AP to Missions segment (20.1.1).",
+          "ruleRefs": ["20.1.1", "20.1.3", "20.6"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "You must pre-commit every AP to exactly one of four mission types. Unallocated AP are wasted (20.1.3).\n\n- **GS (Ground Support):** hex attacks during the Combat Phase (20.2).\n- **GI (Ground Interdiction):** sets an interdiction value that slows enemy movement all GD (20.3.1).\n- **SI (Supply Interdiction):** abstract attacks on enemy TP during the Logistics Phase (20.4).\n- **ASup (Air Superiority):** escorts your missions or intercepts theirs (20.6)."
+            },
+            {
+              "kind": "prose",
+              "text": "### Steps\n\n1) Decide posture. Attacking? Weight GS. Defending or slowing a breakthrough? Weight GI. Starving a logistics-thin enemy army? SI. Contested air? ASup (20.1.3).\n2) Total allocation cannot exceed available AP (20.1.1).\n3) Check for scenario sector/army restrictions — some scenarios require AP to be pre-assigned to specific armies or map sectors (20.1.1, 20.6.1)."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Allocate SI to round numbers — each SI mission consumes 2 or 3 AP, and a 3-AP mission gets a -1 DRM on resolution versus +1 for a lonely single-AP mission (20.4.1)."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Do you need to interrupt enemy movement this GD? Bias GI (20.3.1).",
+                "Is the opponent planning heavy GS? Allocate ASup to intercept — ASup is your only tool against GS (20.6).",
+                "Are scenario ATPs available for air supply? Remember ATP is a separate pool, not AP (20.1.3)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "asup-escort-intercept",
+          "title": "ASup: Escorts, Intercepts, and the GI Exception",
+          "when": "Joint Air Allocation Phase (AP commits), resolved live during missions (20.6).",
+          "ruleRefs": ["20.6", "20.6.1a", "20.6.2"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Each ASup AP is assignable once per GD — either as escort or as interceptor (20.6). Escorts and interceptors cancel 1-for-1, and each surviving interceptor aborts 1 mission AP or ATP (20.6.2).\n\n- **Escort-eligible missions:** GS, SI, air supply (20.6).\n- **Intercept-eligible missions:** GS, SI, GI, air supply (20.6)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "You cannot assign escort ASup to your own GI missions (20.6, 20.6.1a). GI is always unescorted — enemy interceptors directly reduce your GI AP before the Interdiction Value is rolled, and there is nothing you can do about it."
+            },
+            {
+              "kind": "prose",
+              "text": "### When the clash happens\n\n1) **ASup vs GI:** resolved during the Joint Weather Phase, *before* the GI value roll. Surviving GI AP is what you roll with (20.6.1a).\n2) **ASup vs GS/SI/air supply:** resolved when the mission is flown — escort/intercept declared, then mission AP is reduced by any survivors (20.6.2).\n3) Aborted AP are gone for the entire GD, not just the mission (20.6.2)."
+            }
+          ]
+        },
+        {
+          "id": "flak-exchange",
+          "title": "Withdrawing and Returning Flak",
+          "when": "Joint Air Allocation Phase, Flak Exchange segment (20.7.2).",
+          "ruleRefs": ["20.7.2", "20.7.1"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "You can pull Flak-capable units off the map to bolster off-map defense against enemy SI, and return previously withdrawn Flak. Each step of a dedicated Flak unit counts as 1 Flak point; other Flak-capable units (HQs, Allied Art Bn 1943+, certain Arm/Tk Bn) count per (20.7.1).\n\nWithdrawn Flak is treated as if occupying the SI target hex when resolving (20.7.2). Each group of 4 un-suppressed Flak points adds +1 to the SI mission DR (harder to succeed for the attacker)."
+            },
+            {
+              "kind": "prose",
+              "text": "### Steps\n\n1) Remove Flak-capable units from the map (your choice which) (20.7.2).\n2) Return previously withdrawn Flak by placing it on the GTRT — it arrives next GD in or adjacent to any friendly army HQ during the Movement Phase, and it may not move that GT (20.7.2).\n3) Withdrawn Flak can support any army, regardless of original assignment (20.7.2)."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "Withdrawal is the abstraction for 'pulling assets back to defend the supply depots.' It trades on-map Flak (affects air missions against units and GS/GI) for off-map Flak (only affects SI against your TPs) (20.7)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weather",
+      "title": "Joint Weather Phase",
+      "phaseRef": "joint-weather-phase",
+      "ruleRef": "19.0",
+      "intro": "Weather is rolled every GT (not just AM) and affects LOS, AP values, and ground movement. The second segment — Ground Interdiction Value — converts today's GI AP into the actual values that will slow enemy units across each air sector.",
+      "decisions": [
+        {
+          "id": "weather-determination",
+          "title": "Reading the Weather",
+          "when": "Joint Weather Phase, Weather Determination segment (19.0).",
+          "ruleRefs": ["19.0", "19.3.0", "19.4.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Weather has two layers: **atmospheric condition** (Clear / POvr / Ovr / Storm) and **ground condition** (Dry / Wet / Mud / Snow / Freeze). Scenarios are either historical (GTRT-dictated) or variable (roll on the Weather Table) — check scenario rules (19.1.0, 19.2.0)."
+            },
+            {
+              "kind": "prose",
+              "text": "### Atmospheric effects summary\n\n- **Clear:** no effect; full LOS (19.3.1).\n- **Partial Overcast:** AP x 0.5, air observation 3 hexes, +1 DRM GS errors, GI DRMs apply (19.3.2).\n- **Overcast:** AP x 0.25, LOS capped at 2 hexes, no air observation, no air supply, no SI (19.3.3).\n- **Storm:** LOS 1 hex, no AP, no air observation, no NGS (19.3.4)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Storm and Snow kill all air operations for the GT — your GI value is zero regardless of what AP you allocated (19.3.4). Plan for this when committing AP in the prior Air Allocation Phase."
+            },
+            {
+              "kind": "rule",
+              "ruleRef": "19.4.0",
+              "text": "Ground conditions (Mud especially) cascade into movement costs and GenS paths — see (19.4.0) and (15.2.6)."
+            }
+          ]
+        },
+        {
+          "id": "gi-value",
+          "title": "Rolling Each Sector's Ground Interdiction Value",
+          "when": "Joint Weather Phase, Ground Interdiction Value segment (20.3.1).",
+          "ruleRefs": ["20.3.1", "20.6.1a", "19.3.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Each side with GI AP determines an interdiction value per air sector. Allied resolves first, then Axis. The value sits on the sector track and applies to both AM and PM GTs — you roll only once per GD (20.3.1)."
+            },
+            {
+              "kind": "prose",
+              "text": "### Steps (for each sector)\n\n1) Determine AP allocated to GI in this sector (20.3.1).\n2) Adjust for atmospheric conditions and precipitation (19.3.0, 19.5.0).\n3) Resolve enemy ASup interceptors — GI **cannot** be escorted (20.6.1a). Subtract aborted AP from your GI total.\n4) Re-adjust AP based on ASup results (20.3.1).\n5) Find adjusted AP in the top row of the Interdiction Value Table. If between two columns, use the **lower** (20.3.1).\n6) Roll 1d10; apply weather DRM: -1 POvr; -2 POvr with rain; -2 Ovr; -3 Ovr with rain (20.3.1).\n7) Cross-index DR with AP column. Left value = Leg interdiction; right value = Mech interdiction. A dash = no effect (20.3.1)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Because GI is flown unescorted (20.6.1a), a small ASup intercept can gut a big GI investment before you even roll. When committing to heavy GI, factor in enemy ASup strength."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "The values are Leg/Mech — Mech units need to expend more MP to trigger interdiction. Pure Mech breakouts are less vulnerable to moderate GI than infantry advances (20.3.1)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "command",
+      "title": "Joint Command Phase",
+      "phaseRef": "joint-command-phase",
+      "ruleRef": "3.3.1c",
+      "intro": "Six back-to-back segments where both sides reorganize before any shots are fired: rest GT selection, attachment/detachment and reserve shuffles, naval availability, lull negotiation, leader activation, and surrender checks. Skip any segment and you will regret it later.",
+      "decisions": [
+        {
+          "id": "rest-gt",
+          "title": "Designating the Rest GT",
+          "when": "Joint Command Phase, Rest GT Designation segment (3.5).",
+          "ruleRefs": ["3.5", "3.5.1", "3.5.2", "3.5.3"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Both sides must designate one rest GT per GD unless scenario rules override (3.5). The Allied side defaults to the Night GT (3.5.1); the Axis player secretly designates AM, PM, or Night each GD (3.5.2)."
+            },
+            {
+              "kind": "prose",
+              "text": "### During a rest GT (3.5.3)\n\n- Units may not enter PA or Exploit mode.\n- Units already in Exploit may remain in Exploit.\n- No adjacent-to-adjacent movement against the same or another enemy.\n- No voluntary mode changes."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Rest GTs do not block ENA — you can still extend the night, but activated units suffer normal ENA penalties (3.5). Movement over half MA, TA markers, defensive GAs over half CS, heavy FS, and CR supporting GAs all trigger fatigue during rest (3.5.4)."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Mech units using Mech road movement staying 6+ hexes from enemies are exempt from rest-turn restrictions (3.5.4a) — use a rest GT to reposition reserves safely."
+            }
+          ]
+        },
+        {
+          "id": "command-shuffles",
+          "title": "Attachments, Detachments, Boundaries, Refit, Reserve",
+          "when": "Joint Command Phase, Command segment (9.0, 25.0, 22.4).",
+          "ruleRefs": ["9.6", "9.2", "22.4", "25.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Four overlapping decisions happen here. Units must be in command to detach/attach, and attaching units must trace a GenS path to the receiving HQ (9.6)."
+            },
+            {
+              "kind": "prose",
+              "text": "### 1. Attach/detach (9.6)\n\n- Formation attachment cap: max 6 units, max 4 larger than 1-step Co, max 1 Art (9.6.2).\n- Formation detachment cap: max 6 assigned units (9.6.1).\n- US Divs get a free Tk + TD/AT attachment that does not count toward limits or fuel (9.6.2b).\n\n### 2. Boundaries (9.2)\n\n- Army/corps boundaries may be modified (if scenario allows).\n- Keep boundaries straight — max one dogleg. Extend at least 10 hexes past the front into enemy territory (9.2).\n- Units outside their ZOP are OoC the instant they leave it; the one-hex-outside-during-Movement grace only applies mid-phase (9.2).\n\n### 3. Refit (22.4)\n\n- Enter: all formation units 20+ hexes from enemies, in GenS, in command (22.4.1).\n- Minimum 5 Command Phases in refit before voluntary release (22.4.5).\n- Involuntary release triggers at 8 hexes (22.4.4).\n- Bonus RePs per GD: Leg/non-Arm Divs get 3 Inf; Mech/Arm Divs get 2 Inf + 1 Arm (22.4.3).\n\n### 4. Army Reserve (25.0)\n\n- Max 4 formations per army (BGs count as 1/2) (25.0).\n- Reserve area hex(es) must be 10+ hexes from enemies; formations enter when all units are 7+ hexes from enemies and within 4 hexes of the reserve hex (25.0).\n- 9+ consecutive GTs in reserve = automatic MR bonus on release (25.2).\n- Forced release at 5 hexes (25.2)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Attachment math is the most common bookkeeping mistake. Re-count before every Command Phase — exceeding 6 units, 4 above-Co-size, or 1 Art is illegal (9.6.2). Attached regiments count each subordinate unit toward the cap."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "Emergency command changes during the Movement Phase are legal (9.4.1) but the attached unit cannot attack or spot for FS that GT. If you need a unit in the fight, attach it here, not mid-GT."
+            }
+          ]
+        },
+        {
+          "id": "naval",
+          "title": "Naval Unit Assignment",
+          "when": "Joint Command Phase, Naval Unit Assignment segment (11.9.0).",
+          "ruleRefs": ["11.9.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Only relevant if a side has naval units available this scenario (11.9.0).\n\n### Steps\n\n1) Determine the number and type of naval units available for this GD per scenario rules (11.9.0).\n2) Each available naval unit can fire once in AM and once in PM (11.9.0).\n3) Note any scenario ammo-depletion or range restrictions."
+            }
+          ]
+        },
+        {
+          "id": "lull",
+          "title": "Lull Declaration",
+          "when": "Joint Command Phase, Lull Determination segment (24.1).",
+          "ruleRefs": ["24.1", "24.1.1", "24.2", "24.3"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Lulls let both sides reorganize with massively reduced combat — useful when both players need to rebuild, or when scenario rules mandate it (24.0). Lulls are per-army, Allied side requests first (24.1.1)."
+            },
+            {
+              "kind": "prose",
+              "text": "### Steps\n\n1) Allied side announces whether it requests a lull (24.1.1).\n2) Axis side grants or declines (24.1.2). If declined, play continues normally. If granted, the lull begins immediately.\n3) Requesting side (Side One) secretly notes the planned end GT — voluntary lulls run at least 21 GTs (24.1.2).\n4) If a lull is already active, Side Two can announce a counter-offensive after 15 GTs have elapsed (24.3)."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "During a lull, Side One activates 1 formation/army plus 3 corps/army Art; Side Two activates 2 formations/army plus 6 corps/army Art, but may only attack active Side One units (24.2). The designer-intended trade is 'quiet time' for 'bounded skirmishes.'"
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Ending the lull triggers a surprise window: full GD auto-GenS for both sides; one-column surprise shift on first 2 GTs of GAs by the ending side; opponent Art halved on first GT (24.4). If you plan to break a lull, time it with a prepared offensive."
+            }
+          ]
+        },
+        {
+          "id": "leader-activation",
+          "title": "Leader Activation Checks",
+          "when": "Joint Command Phase, Leader Activation segment (23.1).",
+          "ruleRefs": ["23.1", "23.2.1"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Ldrs de-activate at the end of every Night GT or ENA. Before ops resume, each side rolls to wake them back up (23.1)."
+            },
+            {
+              "kind": "prose",
+              "text": "### Steps\n\n1) For each Ldr on the map, roll 1d10 (23.1).\n2) **DR less than** the Ldr's activation value = activated. Flip face-up; optionally place in any stack with a subordinate HQ or unit (23.1).\n3) **DR greater than or equal to** = inactive for the GD. Ldr stays on its designated HQ and follows the HQ; if HQ dies, Ldr dies too (23.1).\n4) Isolated Ldrs still roll but stay with the isolated stack if activated (23.1).\n5) Activated Ldrs have MA 12 regardless of HQ fuel status, and can switch between Mech and Leg movement mid-phase (23.1)."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Activated Formation Ldrs give +1 MP to subordinates, a -1 DRM on PRCs, a favorable GA column shift (once per player turn), and negate multi-formation GA penalties (23.2.1a-e). Always place activated Ldrs where the biggest action of the GD will be."
+            }
+          ]
+        },
+        {
+          "id": "surrender",
+          "title": "Surrender Checks for Isolated Units",
+          "when": "Joint Command Phase, Surrender segment (15.7.1).",
+          "ruleRefs": ["15.7.1", "15.7.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "A unit is isolated if it cannot trace any GenS path and no friendly in-GenS unit is within 3 hexes (15.7.0). Isolated/OoS units roll a defensive PRC here; failure = surrender and removed from the map (15.7.1)."
+            },
+            {
+              "kind": "prose",
+              "text": "### DRMs (15.7.1)\n\n- **+2** for each AM GT after the first that the unit checks for surrender (so +2 on GD 2, +4 on GD 3, etc.). Use a bottleneck or spade marker under the isolated marker to track.\n- **+1** if any unit within 2 hexes (1 intervening) already surrendered this GT.\n- **-1** if stacked with a Ldr (23.2.1e)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Units that surrender or die while isolated do not generate recycle steps (22.2.0) and cost extra ReP to resurrect (22.5.2a). Keep them in a separate pile — mixing them with normal eliminated units is a common scoring error."
+            },
+            {
+              "kind": "callout",
+              "variant": "caution",
+              "text": "The Surrender Segment is the single most commonly skipped segment of this phase. Scan every isolated/OoS marker before you move on — missing it leaves enemy units alive that should be gone (15.7.1)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

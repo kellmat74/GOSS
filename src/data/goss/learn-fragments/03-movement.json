@@ -1,0 +1,497 @@
+{
+  "chapters": [
+    {
+      "id": "mode-determination",
+      "title": "Mode Determination Phase",
+      "phaseRef": "allied-mode-determination-phase",
+      "ruleRef": "5.0",
+      "intro": "This is where you commit. Mode sets what each unit can do for the rest of the GT — attack, exploit, rest, sprint down roads, or sit as a reserve. Picking wrong here cascades through everything later, and you cannot voluntarily change mode again until next GT (5.0).",
+      "decisions": [
+        {
+          "id": "pick-mode-per-formation",
+          "title": "Picking a Mode for Each Formation",
+          "when": "Friendly Mode Determination Phase, the only time you can voluntarily change modes (5.0).",
+          "ruleRefs": ["5.0", "5.1.0", "5.2.0", "5.3.0", "5.4.0", "5.5.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Every unit is in exactly one of five modes (5.0). Default is **Tac** — flexible, required for almost every utility action (break down, CR, fatigue recovery, ferrying, construction, receiving RePs, reinforcement entry) (5.1.3). You only leave Tac when you have a specific reason."
+            },
+            {
+              "kind": "prose",
+              "text": "### The five modes\n\n1) **Tac** — default. Can move, attack as TA, do admin. Lowest commitment (5.1.0).\n2) **PA (Prepared Assault)** — gets a favorable column shift in GA (13.7.3) and can combine across hexes for multi-hex attacks. Costs: PA movement is only 1-2 hexes and you *must* attack if adjacent at GA time (5.2.4). Many disqualifiers (5.2.1).\n3) **Exploit** — moves in the Exploit Phase, can overrun (5.3.4b). Whole formation/Rgt must go together (5.3.0). Mech only (or Leg w/ transport). No fatigue, not adjacent to enemy, in GenS and command, not no-fuel.\n4) **MR (Maneuver Reserve)** — pull a formation off the line. After 9 GTs you get the MR bonus period: MA bonus roll, favorable GA shift, auto-GenS, no fatigue during ENA/rest (5.4.4a–d).\n5) **Strat** — +50% MA along roads (5.5.3b). Mech-only (or Leg+transport). Many restrictions: can't go adjacent to enemy, can't be in observed hexes, can't fight (5.5.4, 5.5.6). +2 GI DRM against it (20.3.2b) and gives attackers 2 column shifts if GA'd (5.5.6)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "PA has eight disqualifiers: HQs, Art, overstacked, OoS, Fatigue-2, OoC, units that couldn't reach adjacency with PA movement, units on transport (5.2.1). Check all eight before placing a PA marker."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Do not place more PA markers than your corps ADV can support. One ADV = one PA *or* two TAs (16.3.3). Over-designating PA forces you to remove them at Attacker Adjustment and wastes the attack designation."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Is this unit fighting this GT adjacent to an enemy? → Tac (TA) or PA",
+                "Do I want multi-hex converging attacks on one hex? → PA for all attackers (5.2.4)",
+                "Is this formation going deep behind a breakthrough? → Exploit, but verify all six conditions (5.3.0)",
+                "Do I want this formation rested and refitted? → MR, count to 9 GTs (5.4.4)",
+                "Am I road-marching reserves across the map? → Strat, keep clear of enemy LOS (5.5.4)"
+              ]
+            },
+            {
+              "kind": "rule",
+              "ruleRef": "5.1.3",
+              "text": "Full Tac-required action list is in 5.1.3 — worth reading once."
+            }
+          ]
+        },
+        {
+          "id": "artillery-stance",
+          "title": "Artillery Stance (IB vs OoB)",
+          "when": "Same phase. Mode Determination is the *only* time you can flip Art stance (5.6.0).",
+          "ruleRefs": ["5.6.0", "5.6.1"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Towed Art must be **IB (in-battery)** to fire a FS mission and **OoB (out-of-battery)** to move. SPA can fire either way (5.6.0). Flip the counter now or miss the window for the whole GT."
+            },
+            {
+              "kind": "prose",
+              "text": "Exception: **one-hex IB movement** (5.6.1) lets non-static towed Art ≤ 155mm (German ≤ 150mm, British ≤ 25lb) shuffle one hex while in-battery. Not available for G-suffix guns, mixed-Art Bns, across streams/fords, or into constricted terrain."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "If you flipped Art OoB this turn, it cannot fire this GT. Only flip OoB when you genuinely need to displace — the combat value of IB Art is usually worth more than the repositioning."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Art units must be OoB to enter Strat mode (5.5.1). All IB Art is automatically in Tac mode; OoB Art may be in Tac, MR, Strat, or Exploit (5.6.0)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "construction-phase",
+      "title": "Construction Phase",
+      "phaseRef": "allied-construction-phase",
+      "ruleRef": "17.3",
+      "intro": "Construction is three steps in order: complete finished projects, advance ongoing bridges, start new ones (17.3.0). Only Eng units build bridges; non-HQ/non-Art units can help with fieldworks. All builders must be Tac, in GenS/OhS, not fatigued, and can do nothing else that GT (17.3.0).",
+      "decisions": [
+        {
+          "id": "bridge-construction",
+          "title": "Deciding to Build a Bridge",
+          "when": "Construction Segment, Steps 1-3 (17.3.0). You can start, advance, or complete in this phase.",
+          "ruleRefs": ["17.3.1", "17.3.1b"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### Eng step math (17.3.1b)\n\n| Crossing | 1 Eng step | 2 Eng steps | 3 Eng steps |\n|---|---|---|---|\n| Stream | 1 GT | 1 GT | 1 GT |\n| River | 3 GTs | 2 GTs | 1 GT |\n| Major River | N/A | 3 GTs | 2 GTs |\n| Great River | N/A | N/A | 4 GTs |\n\nStacking Eng steps scales roughly linearly. You need 3 steps minimum for a Great river bridge. 2-step minimum for a Major river."
+            },
+            {
+              "kind": "prose",
+              "text": "### Siting rules (17.3.1)\n\n1) Eng must be **adjacent** to the river hexside the bridge crosses.\n2) No enemy unit may occupy either of the two hexes the bridge connects, **or** any hex adjacent to the constructing Eng — unless friendlies also hold both bridge-ends.\n3) If those conditions break at any phase during construction, the marker is removed immediately (progress lost).\n4) Adjacent enemies always observe Eng building bridges (8.2.0); VP/HVP enemies with LOS also observe. Builders get no DW shifts while working (17.3.1a–b)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "An Eng building a bridge is always observable by adjacent enemy, even in MCT (17.3.1, 8.2.3). Expect offensive FS unless you mask with nearby combat units or it's a Night GT (8.1.2b)."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "The enemy-adjacency check runs every phase — not just when you start. A reserve unit moving up to the far bank mid-construction kills the project. Protect the far bank before committing Eng."
+            },
+            {
+              "kind": "rule",
+              "ruleRef": "17.3.1a",
+              "text": "Procedure for stacking spade markers under the bridge marker to count GTs remaining: 17.3.1a."
+            }
+          ]
+        },
+        {
+          "id": "fieldwork-construction",
+          "title": "Deciding to Build Fieldworks (IP / ET-2)",
+          "when": "Construction Segment Step 3 (new) or Step 1 (completion) (17.3.0).",
+          "ruleRefs": ["17.3.3", "17.3.3a", "17.3.3b"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### IP (Improved Position) — 17.3.3a\n\n- **2+ non-HQ/non-Art steps, OR 1 Eng step:** 1 GT. Starts this Construction Phase, done next.\n- **1 Eng + 1 non-HQ/non-Art step, OR 2+ Eng steps:** 0 GT. Start in Construction Phase, complete in the **Quick Construction Segment** at end of your Movement Phase — same GT (17.3.3a).\n- IPs can be built adjacent to and observable by enemy."
+            },
+            {
+              "kind": "prose",
+              "text": "### ET-2 — 17.3.3b\n\n- Requires a completed IP in the hex (unless the hex is Village/Town/City).\n- **1 Eng + 1 non-HQ/non-Art step:** 1 GT.\n- **2+ Eng steps:** 0 GT (completes in Quick Construction).\n- You **cannot initiate** an ET-2 if the constructing unit is observable by enemy ground. OCT terrain (woods, hedgerow) doesn't hide you for ET-2 initiation; only MCT does (17.3.3b, 8.2.3).\n- Already-started ET-2s can continue even if observed.\n\nIPs can be stacked same-GT with ET-2: complete the IP in Step 1 this Construction Phase, then initiate an ET-2 on top in Step 3 (17.3.3b)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "ET-2 observability check is at *initiation*, not during construction. If you want ET-2 in open terrain adjacent to enemy LOS, start it during a Night GT when all OCT becomes MCT (8.1.2b, 17.3.3b)."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Village/town/city hexes skip the IP prerequisite for ET-2 (17.3.3b). Fortifying a village is a one-step operation."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Do I have 1 Eng adjacent and can I spare its GT? → IP this turn in Quick Const (17.3.3a)",
+                "Is this hex under LOS from enemy VP/ground? → ET-2 must wait for Night GT unless in MCT (17.3.3b)",
+                "Am I building in a town/city? → Skip the IP, start ET-2 directly (17.3.3b)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prepared-demolition",
+          "title": "Prepared Bridge Demolition",
+          "when": "Demolition Segment of the Construction Phase (17.3.2c).",
+          "ruleRefs": ["17.3.2c", "17.3.2b"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Prepared demolition is *much* more reliable than hasty (17.3.2c vs 17.3.2b). Attempt it here when retreating or when a bridge sits near the enemy front.\n\n### Procedure (17.3.2c)\n\n1) Bridge must be within 8 hexes of an enemy unit.\n2) Eng must be adjacent to the bridge hexside and will not move next Movement Phase.\n3) One attempt per bridge per Construction Phase. An Eng stack can attempt every adjacent bridge.\n4) Roll 1d10:\n   - +1 DRM if enemy unit is adjacent to the bridge.\n   - +1 DRM if Night GT or ENA period.\n   - −2 DRM if more than one Eng step attempting.\n5) Modified DR ≤ 5 = success; bridge marked destroyed (17.3.2c)."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Stacking 2 Eng steps gets you −2 DRM and effectively guarantees success absent night/adjacency penalties (17.3.2c). If the bridge matters, commit the second step."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "Hasty demolition (17.3.2b) is a defender's last-resort during enemy GA/overrun. The prepared version here is your proactive tool — always prefer it when you control timing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combat-reserve-designation",
+      "title": "Combat Reserve Designation",
+      "phaseRef": "allied-combat-reserve-designation-segment",
+      "ruleRef": "5.8.0",
+      "intro": "You place CR markers on eligible Tac Bns behind your line. CR is not a mode — it's a defensive modifier you spend. One CR = one favorable column shift when the defender needs it (13.8.2).",
+      "decisions": [
+        {
+          "id": "place-cr-markers",
+          "title": "Who Gets a CR Marker",
+          "when": "CR Designation Segment of the Movement Phase (5.8.0). You can also remove old markers here.",
+          "ruleRefs": ["5.8.0", "13.8.2"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### Eligibility (all four required, 5.8.0)\n\n1) Personnel-type unit (not Art, not HQ).\n2) In Tac mode.\n3) **Not adjacent to an enemy unit.**\n4) Bn-sized with at least **2 steps remaining.**\n\nDisqualified: Co.-sized units, 1-step Bns, RE units (4.6.3), OoS, OoC, Fatigue-1 or -2 (5.8.0)."
+            },
+            {
+              "kind": "prose",
+              "text": "### When the marker comes off (5.8.0)\n\n- The unit is adjacent to an enemy unit at the start of a friendly Movement Phase.\n- The unit moves.\n- The unit takes any AS hit from a FS mission.\n- The unit defends against a GA (any result).\n- You spend the CR bonus."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "CR units cannot be marked TA later this GT (5.8.0). A CR unit is committed to defensive support only — don't pick your best offensive Bn."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Place CR units 1-2 hexes behind your front. They support adjacent defensive GAs through 13.8.2 without being adjacent themselves, keeping them off TA markers and letting them contribute from cover."
+            },
+            {
+              "kind": "rule",
+              "ruleRef": "13.8.2",
+              "text": "CR column-shift mechanics and stacking limits for defensive GA support are in 13.8.2."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "movement-segment",
+      "title": "Movement Segment",
+      "phaseRef": "allied-movement-segment",
+      "ruleRef": "7.0",
+      "intro": "The meat of your turn. Move in a strict order (7.5.2), account for MA modifications in the right sequence (7.6.1), watch for interruptions from enemy GI (20.3) and MHs (7.7), and end inside stacking limits (6.0). Most turn-to-turn mistakes live here.",
+      "decisions": [
+        {
+          "id": "movement-order",
+          "title": "Following the Five-Step Order",
+          "when": "Beginning of the Movement Phase — this order is mandatory (7.5.2).",
+          "ruleRefs": ["7.5.2", "7.5.1", "9.4.1"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### The strict order (7.5.2)\n\n1) **Place reinforcements** & conduct required withdrawals (21.0, 21.4). You may also conduct **emergency command changes** — attach units at the start, though they can't attack or conduct offensive FS this GT (9.4.1). Enemy GI attacks fire during Steps 2-4 against your own moving units (20.3.0).\n2) **Strat mode** units move (5.5.0).\n3) **CdM attacks** declared and conducted (7.14.0).\n4) **Tac mode** units move — Mech road movement first (7.10.0), then non-road (7.11.0).\n5) **PA mode** units move (5.2.3)."
+            },
+            {
+              "kind": "prose",
+              "text": "**During Step 4** you may also: breakdown/recombine (18.4.0/18.7.0), mount/dismount (7.12.0), and place delay markers (7.13.0) — each at the ½-MA cost listed in its rule."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Units that may *not* move at all in the Movement Phase: CR-marked (remove marker first), Exploit mode, MR mode, zero-fuel Mech, and under-construction units (7.5.1). MR and Exploit units only move in the Exploit Phase."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "Strat moves first so enemy GI and your own CdM operate on the cleared battlefield; Tac Mech-road second so traffic doesn't block itself; PA last so the attack arrangement is the last thing you commit to."
+            }
+          ]
+        },
+        {
+          "id": "ma-calculation",
+          "title": "Calculating a Unit's MA for This Phase",
+          "when": "Before moving any unit, apply modifications in the order in 7.6.1.",
+          "ruleRefs": ["7.6.1", "7.6.1a", "7.6.1b", "7.6.1c", "7.6.1d", "7.6.1e", "7.6.1f", "7.6.2"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### Order matters — follow 7.6.1a through 7.6.1f literally\n\n1) **(7.6.1a) Fuel.** Mech units in low/no fuel get fuel-value MA from 16.4.5.\n2) **(7.6.1b) Increases** (all round up, apply after fuel, before reductions):\n   - Strat mode: +50% MA (5.5.0).\n   - MR bonus period: roll d10 on MR MA Bonus Table, +1 DRM if this is first GT after MR (5.4.4a).\n   - Leg road bonus: +2 MA if all conditions in 7.6.2 met.\n   - Ldr bonus (23.2.1a). Cumulative with Strat/MR.\n3) **(7.6.1c) Halve** if **any one** of: OoS, OoC, Fatigue-1, Exploit mode in AM/PM Exploit Phase.\n4) **(7.6.1d) Quarter** if **two or more** of the halving conditions, or Fatigue-2. Never go below ¼ of base MA from 7.6.1c/d.\n5) **(7.6.1e) Ground condition** (wet, snow, mud). Per mode/class rules below.\n6) **(7.6.1f) Night GT** +1 MP per hex for Mech off primary/secondary roads and Leg off any road type."
+            },
+            {
+              "kind": "prose",
+              "text": "### Ground conditions snapshot (7.6.1e)\n\n- **Wet:** Mech −2 MA unless on primary/secondary roads (Mech road movement). Leg unaffected.\n- **Snow:** Mech ÷3 off-road, −1 on road. Leg ÷3 unless on primary/secondary roads.\n- **Mud:** Mech ÷2 off-road. Leg ÷2 off primary/secondary roads."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Divisions always round **up** (7.6.1). Fatigue-2 units keep ≥ ¼ base MA even if three halving conditions apply (7.6.1d)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "**Leg road bonus requires all five conditions** (7.6.2): Tac mode, GenS+command, start on and move *entirely* along primary/secondary roads, never adjacent to enemy, never observed. One miss kills the bonus."
+            }
+          ]
+        },
+        {
+          "id": "adjacency-zoc-mh",
+          "title": "Moving Adjacent to Enemy & Movement Halts",
+          "when": "Each hex you enter — every terrain and adjacency cost is cumulative (7.0).",
+          "ruleRefs": ["7.8.0", "7.7.0", "7.7.1", "7.7.3", "7.9.0", "7.7.5"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### Adjacency MP cost (7.8.0)\n\n- Leg: +1 MP entering a hex adjacent to any enemy.\n- Mech: +2 MP entering a hex adjacent to any enemy.\n- Multiple adjacent enemies do **not** stack this cost.\n- Ignored if: Exploit-phase hex is MCT (5.3.4a); enemy is pure AFV and entered hex is MCT with no road to the enemy hex; CDO entering MCT."
+            },
+            {
+              "kind": "prose",
+              "text": "### Movement Halts (7.7) — stop immediately on entry\n\n- **Art MH (7.7.1):** Entering a non-MCT hex adjacent to 2+ steps of non-Art/non-HQ enemy, inside range of a red-hexagon enemy Art that's not AD.\n- **Heavy AT/Flak MH (7.7.2):** Entering a non-MCT hex adjacent to red-hexagon enemy heavy AT or Flak (any size).\n- **DW MH (7.7.3):** Moving next to an enemy unit in an ET, Fort, or Ft Area (not IP).\n- **GI MH (7.7.4):** Step loss or fatigue result from enemy GI (20.3.0) halts the unit in the target hex.\n- **Delay marker MH (7.13.2):** Any enemy delay marker you enter."
+            },
+            {
+              "kind": "prose",
+              "text": "### The 7.9.0 restriction (ET-3 / Fort / Ft Area)\n\nYou may **never** move from one hex adjacent to an enemy-occupied intact ET-3/Fort/Ft Area directly into another hex adjacent to the same. Plan routes around this — you'll need a detour through a non-adjacent hex."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "The **GenS movement restriction (7.7.5):** you cannot move into a hex where you can't trace GenS within 3 hexes of an enemy (i.e., 2 intervening hexes). Exception: CDO and MR-bonus units. OoS units can't move adjacent to enemy at all (7.7.5)."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "MHs exist so fast columns can't zip past dug-in artillery or forts untouched. Always sweep your planned route for red-hexagon symbols and DW hexes before committing MPs."
+            }
+          ]
+        },
+        {
+          "id": "mech-road-movement",
+          "title": "Using Mech Road Movement",
+          "when": "Step 4a of the Movement Phase (7.5.2), or always for Strat-mode units (Step 2).",
+          "ruleRefs": ["7.10.0", "7.10.1", "7.10.2", "7.10.3", "7.11.2"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Mech road movement is the fast lane for Mech (and Leg on TP/AIT) in Tac/Strat/Exploit mode. You pay road rates per hex.\n\n### Rules of the road (7.10.0)\n\n1) Start the phase in a road hex — or, during **dry** ground conditions, a clear hex (treat as road at 1.5 MP/hex).\n2) Move entirely along contiguous road hexes through road-connected hexsides.\n3) No extra MP for bridges over streams/rivers (7.10.2) (ford costs still apply if using a ford).\n4) Strat-only restriction: cannot use clear-as-road dry-condition trick (5.5.4 limits Strat to roads)."
+            },
+            {
+              "kind": "prose",
+              "text": "### Intersections (7.10.1)\n\nYou can only switch from one road to another where their symbols **intersect** in a hex — not where they merely exist. Exception: clear-as-road dry conditions lets you enter a clear hex for 1.5 MP then exit along any road in the hex (7.10.1)."
+            },
+            {
+              "kind": "prose",
+              "text": "### Mech road stacking (7.10.3)\n\n- Entering a hex with **one** Mech unit in it: +2 MP and your move **must end** in that hex.\n- Entering a hex with **more than one** Mech: only allowed if you + the existing stack qualify for special stacking (6.2.0) at a max of two Mech at phase end.\n- Special-stacked units (6.2.0) and two 1-step Mech Cos stacked together are treated as one unit for Mech road stacking (7.10.3)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Heavy and super-heavy AFVs cannot enter/exit a constricted terrain hex via a **trail** (7.10.0, 7.11.2). Route them on primary or secondary roads through constricted terrain."
+            },
+            {
+              "kind": "rule",
+              "ruleRef": "7.10.2a",
+              "text": "Bridge bottleneck marker mechanics (13 Mech crossings per phase) are in 7.10.2a if the scenario uses them."
+            }
+          ]
+        },
+        {
+          "id": "ground-interdiction",
+          "title": "Handling Enemy Ground Interdiction",
+          "when": "During your own Steps 2-4 — the active player rolls GI against their own moving units (20.3.0).",
+          "ruleRefs": ["20.3", "20.3.1", "20.3.2", "20.3.2b", "20.3.2c"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "You're rolling enemy GI against your own moving units. The interdiction value per air sector was set in the Joint Weather Phase (20.3.1). Here's how it interrupts you."
+            },
+            {
+              "kind": "prose",
+              "text": "### When a GI check fires (20.3.2)\n\n1) Only MP spent on actual movement count (not mount/dismount/breakdown).\n2) Units entirely within 6 hexes of an enemy are **exempt** — start counting MP only after crossing the 6-hex line (20.3.2).\n3) The check fires in the first hex where the unit's MP exceeds the sector's interdiction value by at least 1 (20.3.2a).\n4) Check again each time MP crosses another multiple of the interdiction value (20.3.2c).\n5) Roll 1d10 on the GI Attack Table with DRMs (20.3.2b):\n   - −1 pure AFV target.\n   - −1 per friendly Flak point in range (20.7.1).\n   - −1 atmospheric not clear.\n   - +1 using Mech road movement.\n   - +2 Strat mode. **Not cumulative** with the road +1.\n6) Any result other than No Effect stops the unit in the target hex (7.7.4, 20.3.2b)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Strat columns eat a +2 DRM plus road +1 is suppressed — but the +2 still bites hard against clear-weather interdiction. Fatigue-2 + step loss on 8-9 can wreck a reserve move. Route Strat units through Flak coverage or away from interdicted sectors."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Units moving entirely within 6 hexes of enemy are exempt from GI (20.3.2). Short-hop shuffling near the front bypasses air interdiction entirely — useful for repositioning CRs and delay-marker placers."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "What's the interdiction value in this sector? → That's how many MP you get before the first check (20.3.1)",
+                "Am I going farther than the interdiction value beyond the 6-hex exempt zone? → Expect multiple GI checks (20.3.2c)",
+                "Is the target pure AFV or under Flak? → Stack the −1 DRMs, risk is lower (20.3.2b)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "stacking-and-end-of-phase",
+          "title": "Ending Inside Stacking Limits",
+          "when": "End of each friendly Movement/Exploit Phase — overstacked units are penalized (6.7.0).",
+          "ruleRefs": ["6.1.0", "6.2.0", "6.3.0", "6.4.0", "6.7.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### Base limits (6.1.0)\n\n- **Non-constricted:** 2 Bns + 1 Co + 2 Z-steps, plus any free-stacking from 6.2.0.\n- **Constricted:** 1 Bn + 1 Co + 1 Z-step, plus 6.2.0.\n- Max 2 Z-steps anywhere non-constricted; max 1 in constricted.\n- Z-steps otherwise don't count for Mech road stacking."
+            },
+            {
+              "kind": "prose",
+              "text": "### Free-stacking additions (6.2.0)\n\n- **German AFV Co (6.2.1):** 1 free AFV Co with any Mech Bn or Mech personnel/Recon Co subordinate to the same formation. Max 3 free AFV Cos non-constricted, 2 constricted.\n- **Eng/AT Co (6.2.2, all nationalities):** 1 free Eng or AT Co with a Bn-sized personnel/Recon or 2-step hybrid. Max 2 free non-constricted, 1 constricted. TD/PzJ may substitute for towed AT.\n- **US Arm Cav (6.2.3):** M5 Co free-stacks with Arm Cav Bn, substituting for the Eng/AT slot.\n\nFully loaded stack caps: **German 10** non-constricted, **6** constricted; **Allied 7** non-constricted, **4** constricted (6.3.0, 6.4.0)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Overstacked units at phase end: the phasing player must eliminate enough units to meet the limit (6.7.0). Also they can't enter PA, Strat, or use Mech road movement (6.7.0). Count your stack during the move, not after."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "Allied limits are tighter than German (7 vs 10 non-constricted) because Allied divisions have more support assets built into their inherent transport and divisional integrity — the game models US/CW doctrine by constraining hex density."
+            },
+            {
+              "kind": "rule",
+              "ruleRef": "6.2.0",
+              "text": "Special-stacking rules for moving multiple units as one are in 6.2.0 — particularly the restriction that you use the slowest MA and the lowest PR."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quick-construction",
+      "title": "Quick Construction Segment",
+      "phaseRef": "allied-quick-construction-segment",
+      "ruleRef": "17.3.3",
+      "intro": "Your last construction window in the turn. Only projects you queued in the Construction Phase with a 0-GT completion time finish here — IPs and ET-2s built by the right unit combos (17.3.3a, 17.3.3b).",
+      "decisions": [
+        {
+          "id": "finish-zero-gt-projects",
+          "title": "Completing 0-GT IPs and ET-2s",
+          "when": "After Movement Phase, before Command Status Segment (17.3.3).",
+          "ruleRefs": ["17.3.3", "17.3.3a", "17.3.3b"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### What completes here (17.3.3a, 17.3.3b)\n\n- IPs started with 1 Eng + 1 non-HQ/non-Art step, or 2+ Eng steps.\n- ET-2s started with 2+ Eng steps (must still meet observation rules at *initiation* — ongoing work is safe).\n\nFlip the under-construction marker to its finished side."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Only units under the construction marker and still meeting 17.3.0 conditions finish (Tac, GenS/OhS, not fatigued). If one moved or took a hit mid-turn, construction was already halted (17.3.0)."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Quick Construction effectively gives you same-GT fortification of just-captured villages/towns. ET-2 in village/town/city skips the IP prerequisite (17.3.3b) — if you advanced into one this turn, stack Eng here next Construction Phase and ET-2 it same-GT."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enemy-inactive-exploit",
+      "title": "Enemy Inactive Exploit Phase",
+      "phaseRef": "axis-inactive-exploit-phase",
+      "ruleRef": "3.3.2d",
+      "intro": "During your turn, the enemy gets an Inactive Exploit Phase. Their MR formations can convert to Exploit, they declare CdM, and Exploit units move and overrun (3.3.2d). You react with GS and Art FS — but you can't conduct a normal Combat Phase here.",
+      "decisions": [
+        {
+          "id": "what-enemy-can-do",
+          "title": "What the Enemy Can Do in Your Turn",
+          "when": "Inactive Player Exploit Phase inside your Player Turn (3.3.2d).",
+          "ruleRefs": ["3.3.2d", "5.3.4", "5.3.4a", "5.3.4b", "5.3.4c", "7.14.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### The three steps (3.3.2d)\n\n1) **MR → Exploit conversion.** Eligible MR formations may enter Exploit now (5.3.0, 5.4.3). They must meet all Exploit conditions: not fatigued, not adjacent to enemy, in GenS/command, not no-fuel, Mech class (or Leg+TP/AIT).\n2) **CdM declarations.** The inactive player declares coup-de-main attempts on major/great river bridges (7.14.0) — one per bridge.\n3) **Exploit movement + overruns.** Exploit units move in the same order as Tac (Mech road first, then non-road, per 7.5.2). They may overrun in MCT or at extra cost (5.3.4b)."
+            },
+            {
+              "kind": "prose",
+              "text": "### MA in this phase (5.3.4)\n\n- **AM/PM GT:** up to ½ MA in *each* friendly Exploit Phase (so they split movement across Inactive and Active exploit phases).\n- **Night GT / ENA:** full MA, but only in **one** of the two Exploit Phases. The inactive player must pick (3.3.5)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "Your own PA-adjacent enemies get kicked out of Exploit: a unit starting this phase adjacent to one of *your* PA-mode units must retreat and revert to Tac (5.3.4a). Your PA marker placement in Mode Determination indirectly suppresses enemy Exploit."
+            }
+          ]
+        },
+        {
+          "id": "your-reactions",
+          "title": "Your Reactions as the Active Player",
+          "when": "During enemy Exploit movement and overruns (5.3.4c, 5.3.5).",
+          "ruleRefs": ["5.3.4c", "5.3.5", "20.2.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### Ground Support on exploit movement (5.3.4c)\n\n- One GS attack per hex entered, max one GS per hex per target unit.\n- Target hex must be within **6 hexes** of one of your ground units, **not MCT** (ignoring FW), and **observable** (ground or air observation).\n- If the exploit unit retreats from the GS result, it immediately loses its Exploit marker (5.3.4c).\n- Use standard GS procedures from 20.2.1."
+            },
+            {
+              "kind": "prose",
+              "text": "### Art FS during enemy overruns (5.3.5)\n\n- Only the **defender** (you) can conduct FS against an overrun, not the overrunning attacker.\n- If your defending unit is in an ET/Fort/Ft Area: you may fire a **medium** capacity Art FS mission at the overrunning force (5.3.5).\n- If not in a DW but the defender is a Bn: you may fire a **light** capacity Art FS mission (5.3.5).\n- The target hex for this FS is the **last hex the attacker entered before the overrun hex** (5.3.5)."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Keep AP in reserve and Art IB on your flanks specifically to punish enemy exploit. GS on exploit units is one of the few ways to strip Exploit markers mid-phase (5.3.4c)."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "The overrunning enemy unit **cannot** fire offensive FS against your defender in the overrun (5.3.5). If you're in a DW or your Bn is the target, always at least consider a defensive Art mission — the attacker has no air/Art answer inside the overrun."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Is there an enemy MR formation that could flip to Exploit this phase? → Anticipate a sudden 6-12 hex move (5.4.3, 5.3.4)",
+                "Do I have AP uncommitted and enemy Exploit hexes observable within 6 hexes of my units? → GS attack opportunity (5.3.4c)",
+                "Is my defender in a DW or a Bn? → Art FS available vs overrun (5.3.5)"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

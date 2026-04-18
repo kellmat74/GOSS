@@ -1,0 +1,239 @@
+{
+  "chapters": [
+    {
+      "id": "attacker-designation",
+      "title": "Attacker Designation Segment",
+      "phaseRef": "allied-attacker-designation-segment",
+      "ruleRef": "10.2",
+      "intro": "Units already in PA mode are attack-designated by virtue of their mode. This segment is where you commit additional Tac-mode stacks to a tactical assault (TA) and clean up delay markers. A unit still attack-designated at the end of the Attacker Status Adjustment Segment must attack (10.2.0).",
+      "decisions": [
+        {
+          "id": "designate-tas",
+          "title": "Deciding which Tac stacks to TA",
+          "when": "Start of your Attacker Designation Segment (10.2.0). PA stacks are already committed; TA is your chance to add more attacks.",
+          "ruleRefs": ["10.2.0", "5.1.2", "16.3.3", "7.12.3"],
+          "blocks": [
+            { "kind": "prose", "text": "### Steps\n\n1) Designate eligible Tac-mode stacks as TA (10.2.0, 5.1.2).\n2) Attempt to remove any delay markers in your TA/PA hexes (7.13.3). Failure removes the attack designation.\n3) Count total planned GAs against each corps' ADV (16.3.3) — excess will be culled in the Attacker Status Adjustment Segment (12.1.0)." },
+            { "kind": "callout", "variant": "gotcha", "text": "Each corps gets 1 PA GA or 2 TA GAs per point of ADV (16.3.3). An unsupported corps has ADV 0 and can only attack by spending AmP from its army stockpile (16.3.4)." },
+            { "kind": "callout", "variant": "caution", "text": "Units riding TPs or Allied inherent transport cannot be attack-designated (7.12.3). Dismount in an earlier phase if you want them to attack." },
+            { "kind": "ask", "items": [
+              "Does this stack have a realistic GAV ratio against the target? If not, don't designate — save the ADV slot.",
+              "Is there a delay marker on this hex (7.13.3)? If yes, plan for a PRC — or skip it.",
+              "Are there more adjacent attack-designated stacks than will fit ADV? Some will be culled in 12.1.0 — designate the strongest options."
+            ] },
+            { "kind": "rule", "ruleRef": "12.1.0", "text": "Mandatory removal in 12.1.0 will trim excess TA stacks before GAs resolve — don't panic-designate." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "replacement",
+      "title": "Replacement Segment",
+      "phaseRef": "allied-replacement-segment",
+      "ruleRef": "22.5",
+      "intro": "Spend ReP to rebuild step-reduced units on the map and resurrect eliminated units from the box (22.5.0). Replacing is always cheaper than resurrecting, and eligibility is tighter than most players expect.",
+      "decisions": [
+        {
+          "id": "rebuild-onmap",
+          "title": "Rebuilding on-map units",
+          "when": "Replacement Segment of your Combat Phase (22.5.1). You have ReP in the pool and want to recover step losses.",
+          "ruleRefs": ["22.5.1", "22.5.1a", "22.2.1"],
+          "blocks": [
+            { "kind": "prose", "text": "### Eligibility for on-map ReP (22.5.1)\n\nThe receiving unit must be:\n\n1) Listed on the Unit Replacement Table.\n2) In **Tac mode**.\n3) In GenS and in command.\n4) Not attack-designated.\n5) Not fatigued.\n6) A Leg unit not adjacent to an enemy (adjacency OK if in OCT); **or**, a Mech unit not adjacent to an enemy and not observed by an enemy ground unit." },
+            { "kind": "prose", "text": "### Steps\n\n1) Verify the receiving unit meets all eligibility checks (22.5.1).\n2) Spend the exact Inf/Arm ReP cost shown on the Unit Replacement Table for that unit type.\n3) Flip or remove one step-loss marker. **Only one step per GT** per unit (22.5.1)." },
+            { "kind": "callout", "variant": "gotcha", "text": "Units in MR mode cannot receive replacements — the rule requires Tac mode specifically (22.5.1). Cycle damaged units to Tac mode the turn before you plan to replace." },
+            { "kind": "callout", "variant": "tip", "text": "RE and Ersatz Bn. consolidation (22.5.1b, 22.5.1c) lets you transfer whole-step chunks directly into Inf units without the full ReP cost — cheap way to fill holes if the PR math works." }
+          ]
+        },
+        {
+          "id": "resurrect-eliminated",
+          "title": "Resurrecting from the Eliminated Units Box",
+          "when": "Same segment (22.5.2). You have ReP left after prioritizing on-map rebuilds.",
+          "ruleRefs": ["22.5.2", "22.5.2a", "22.5.2b"],
+          "blocks": [
+            { "kind": "prose", "text": "### Steps\n\n1) Pick a unit from the Eliminated Units Box.\n2) Pay the **resurrection cost** on top of normal ReP: 0.5 Inf for Leg, 0.5 Arm for Mech (22.5.2a). One-step units skip this surcharge.\n3) If the unit was isolated when eliminated, add **+1 Inf ReP** on top (22.5.2a).\n4) Pay the normal first-step ReP cost from the table.\n5) Place in or adjacent to the unit's superior HQ, which must be in GenS (22.5.2b). The unit enters in GenS automatically, at one step only." },
+            { "kind": "callout", "variant": "why", "text": "Resurrection is a tax on top of replacement, so it's always worse per-step than rebuilding on-map. Prioritize on-map rebuilds; resurrect only when the box has units you need back in formation (e.g., a missing Bn. breaking RIB)." },
+            { "kind": "callout", "variant": "gotcha", "text": "Axis/Allied ReP conversion rates differ (22.2.1): Axis 4 recycle → 1 ReP for both Inf and Arm; Allied 5 Inf → 1 Inf ReP but only 3 Arm → 1 Arm ReP. Allied armor recycles fastest in the game." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fire-support",
+      "title": "Fire Support Segment",
+      "phaseRef": "allied-fire-support-segment",
+      "ruleRef": "11.0",
+      "intro": "Three sub-segments run in strict order (11.1.0): active-side Offensive Air Support, inactive-side Defensive Support, active-side Offensive Support. Each mission softens up the target hex — AS markers you stick here become column shifts in the GA (13.7.3, 11.6.1). Fully resolve each mission before starting the next.",
+      "decisions": [
+        {
+          "id": "fs-overview",
+          "title": "Sequencing your FS missions across the three sub-segments",
+          "when": "Start of the FS Segment (11.1.0). You've allocated AP, Art, and NGS; now decide what fires where and in which order.",
+          "ruleRefs": ["11.1.0", "11.2.4", "11.4.3"],
+          "blocks": [
+            { "kind": "prose", "text": "### The three sub-segments (11.1.0)\n\n1) **Sub-Segment 1** — Active side declares and conducts GS missions.\n2) **Sub-Segment 2** — Inactive side declares any NGS/GS, conducts Art, then conducts NGS/GS.\n3) **Sub-Segment 3** — Active side declares NGS, conducts Art, then conducts NGS.\n\nAll missions against a given target hex must complete before moving to the next target." },
+            { "kind": "prose", "text": "### Mission capacity = spotter (11.2.4)\n\n- **Light** (11.2.4a): Co. spotter, or unobserved. Max Allied 2 Art / Axis 1 Art, no GS, 1 DD NGS.\n- **Medium** (11.2.4b): Bn. spotter, or Co. in ET/Fort/Ft Area, or air observation. Max Allied 3 / Axis 2 Art, 1 GS, 2 DD.\n- **Heavy** (11.2.4c): Bn. in PA or in ET/Fort/Ft Area. Max US 16 / other Allied 12 / Axis 8 Art, 2 GS, heavy NGS stack." },
+            { "kind": "callout", "variant": "tip", "text": "The US-16 / Axis-8 heavy-capacity asymmetry (11.2.4c) is the single biggest Allied firepower advantage in the game. Designate Bns as PA or move them into ET hexes specifically to unlock heavy missions." },
+            { "kind": "callout", "variant": "gotcha", "text": "FS missions are sequential, not parallel — conduct each one to completion (AD check included) before starting the next (11.0). This means defensive fire against your PA stacks resolves before your own Offensive Support — your final assault force may already be hurting." }
+          ]
+        },
+        {
+          "id": "offensive-air-support",
+          "title": "Offensive Air Support (Sub-Segment 1)",
+          "when": "First action in the FS Segment — active side only (11.1.0, 20.2.0).",
+          "ruleRefs": ["20.2.0", "20.2.1", "20.2.3", "20.6.0"],
+          "blocks": [
+            { "kind": "prose", "text": "### Steps (20.2.1)\n\n1) Identify observing unit (11.2.1) or confirm air observation (8.3.0).\n2) Declare target hex.\n3) State number of missions, AP per mission, and escort AP per mission.\n4) Opposing player declares intercept AP.\n5) Resolve air superiority (20.6.0) — each escort cancels one intercept, and vice versa.\n6) Roll on the **Mission Error Table** (20.2.3).\n7) Resolve the mission on the FS Table (11.6.0)." },
+            { "kind": "prose", "text": "### Key Mission Error DRMs (20.2.3)\n\n- **+1** woods / hedgerow / rough-2 / town; **+2** forest / bocage / city\n- **+1** POvr; **+2** Ovr\n- **+1** per enemy Flak unit in range (max +2)\n- **−1** target in Strat mode\n- **−1** US/CW missions from Sep 1944 onward\n\nDR 9+ = abort. DR 8 = scatter to a new hex." },
+            { "kind": "callout", "variant": "caution", "text": "On a scatter (DR 8) the mission redirects to a random adjacent hex (20.2.3). If that hex holds friendly troops and no Flak, you just bombed yourself. Keep flanks clear when targeting terrain that invites scatter." },
+            { "kind": "callout", "variant": "why", "text": "GS resolves first in the sub-segment order (11.1.0) so that AS markers from your air stick on the defender before they fire back. Each AS = 1R column shift in the GA (13.7.3), max 2 — your air is a GA-shaping tool, not just a damage tool." }
+          ]
+        },
+        {
+          "id": "defensive-support",
+          "title": "Defensive Support (Sub-Segment 2)",
+          "when": "After your GS resolves — the inactive (defending) side fires (11.1.0).",
+          "ruleRefs": ["11.1.0", "11.5.0", "11.6.0"],
+          "blocks": [
+            { "kind": "prose", "text": "### What the defender does (11.1.0)\n\n1) Declare any NGS or GS missions.\n2) Declare and resolve Art missions.\n3) Resolve declared NGS/GS.\n\nThe defender cannot fire GS and NGS at the same target hex in this sub-segment — pick one (11.2.3)." },
+            { "kind": "prose", "text": "### As the attacker, what this means for you\n\n- Your PA stacks are the juiciest targets — attack-designated units get **no Group A terrain DRMs** and **no Group B DW DRMs** (11.5.1, 11.5.2). They're exposed.\n- Each AS on your attacking stack becomes a 1L shift against you in the GA (13.7.4), max 2.\n- After defensive fire resolves, you'll have a clearer picture of which attacks are still worth pressing before the Attacker Status Adjustment Segment (12.0)." },
+            { "kind": "callout", "variant": "gotcha", "text": "Heavy Art on defense fires at −1 BF per unit (11.4.1f). Sectors where the enemy relies on heavy-caliber Art have weaker defensive barrages — a small Allied advantage when planning attack axes." }
+          ]
+        },
+        {
+          "id": "offensive-support",
+          "title": "Offensive Support (Sub-Segment 3)",
+          "when": "Final FS sub-segment — active side's Art and NGS (11.1.0).",
+          "ruleRefs": ["11.1.0", "11.4.1g", "11.8.0", "11.7.0"],
+          "blocks": [
+            { "kind": "prose", "text": "### Steps (11.1.0)\n\n1) Declare any NGS missions.\n2) Declare and conduct Art missions.\n3) Conduct declared NGS.\n\nThis is the last softening fire before the GA. Prioritize target hexes you're about to assault." },
+            { "kind": "prose", "text": "### Intensive fire (11.4.1g)\n\nFor 1 AmP, you get one extra 8-point volley per 8-point volley you already have. Auto-depletes one Art unit per intensive volley conducted.\n\nRequires: corps ADV ≥ 1, Art in a supported formation, mission has at least one full 8-point volley." },
+            { "kind": "prose", "text": "### Ammunition depletion (11.8.0)\n\nRoll 1d10 after each Art mission. Cumulative DRMs:\n\n- **+1** per volley after the first (intensive counts)\n- **+1** if all firing units are NW\n- **+2** if the Art unit's GenS is extended\n\nIf modified DR > corps ADV, deplete (DR − ADV) Art units." },
+            { "kind": "callout", "variant": "tip", "text": "Advance-after-FS (11.7.0): if all units in the target hex are removed by numerical hits, adjacent attack-designated units may advance into the empty hex — but they can't spot for more FS missions, and if they revert from PA to Tac they can't conduct a GA this segment. Weigh the trade." },
+            { "kind": "callout", "variant": "gotcha", "text": "AD escalates fast. A 3-volley intensive fire mission on an extended GenS path starts at +4 before volley count — on a corps with ADV 2 you're nearly guaranteed to burn Art units. Budget your ADV across the whole segment, not just one mission." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attacker-status-adjustment",
+      "title": "Attacker Status Adjustment Segment",
+      "phaseRef": "allied-attacker-status-adjustment-segment",
+      "ruleRef": "12.0",
+      "intro": "Your last off-ramp before the GA. Mandatory removals come first, then you can voluntarily peel off attack designations from units you no longer want to commit (12.0). A unit still attack-designated at the start of the GA Segment must attack (13.4.0).",
+      "decisions": [
+        {
+          "id": "remove-designations",
+          "title": "Trimming attack designations before the GA",
+          "when": "After all FS resolves. You've seen the damage on both sides and know which attacks are still viable.",
+          "ruleRefs": ["12.1.0", "12.2.0", "16.3.3"],
+          "blocks": [
+            { "kind": "prose", "text": "### Mandatory removals, in order (12.1.0)\n\n1) Any attack-designated unit no longer adjacent to an enemy — strip the marker (units displaced by defensive fire often end up here).\n2) More TA stacks adjacent to a defending hex than can legally attack — PA outranks TA, and only one TA stack can attack a single hex (13.4.1).\n3) More GAs planned than corps ADV allows (16.3.3) — trim the excess, **unless** you spend AmP from the army stockpile (16.3.4) to buy additional GAs." },
+            { "kind": "prose", "text": "### Voluntary removal (12.2.0)\n\n- **Units in MCT**: just remove the designation — your choice to stay, retreat one hex, or withdraw into a DW.\n- **Units not in MCT**: roll a PRC on the **lowest** attack PR in the stack.\n  - **Pass**: remove the designation, same options as above.\n  - **Fail**: attack designation stays — the unit **must** attack." },
+            { "kind": "callout", "variant": "caution", "text": "Mandatory removal (12.1.0) bans retreat — units lose the marker in place. Voluntary removal in MCT lets you retreat or withdraw into a DW, but outside MCT it's a PRC gamble (12.2.0). Plan cover carefully before you PA in open terrain." },
+            { "kind": "callout", "variant": "tip", "text": "If defensive fire devastated a stack, voluntary-remove rather than attack with a broken force. A failed PRC at least costs you the attack you weren't going to win anyway; the win condition here is saving units from a doomed assault." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ground-assault",
+      "title": "Ground Assault Segment",
+      "phaseRef": "allied-ground-assault-segment",
+      "ruleRef": "13.0",
+      "intro": "The combat heart of the game. You resolve GAs one at a time in any order (13.2.0), each one walking through the same 8-step procedure. Column shifts move you along the GAT ratio row; DRMs modify the 2d10 roll. Two levers, very different effects — the interaction is what most new players miss.",
+      "decisions": [
+        {
+          "id": "identify-hexes",
+          "title": "Steps 1 & 2: Target hex and attacking hexes",
+          "when": "Start of each individual GA. You pick the defender, then designate which attack-designated stacks are joining in.",
+          "ruleRefs": ["13.3.0", "13.3.2", "13.4.0", "13.4.1", "13.4.2"],
+          "blocks": [
+            { "kind": "prose", "text": "### Steps\n\n1) Identify the defending hex (13.3.0). All units in the hex defend together, up to the stacking limit (13.3.1).\n2) Defender picks the **terrain line** — one of 4 columns across the top of the GAT (13.3.2). Choice is open: defender uses any terrain present in the hex, no matter how little of it.\n3) Designate the attacking units (13.4.0). Must be attack-designated (PA or TA), adjacent to the defending hex, and eligible to enter it (13.4.2)." },
+            { "kind": "prose", "text": "### Multi-hex attack rules (13.4.1)\n\n- All attacking units must be in **PA mode** if attacking from more than one hex.\n- **TA stacks can never combine** with units from other hexes — they're limited to single-hex attacks." },
+            { "kind": "callout", "variant": "gotcha", "text": "Mech class units cannot attack across unbridged rivers/fords with normal CS — they need standoff (13.4.2, 13.5.2), which halves their CS and forfeits advance. Pure AFVs in marsh/swamp/soft ground without a road: standoff only." },
+            { "kind": "callout", "variant": "tip", "text": "Resolve GAs in the order that opens flanks. A successful GA clears adjacent defender hexes that would otherwise generate 1L supporting-hex shifts against your next attack (13.7.4a). Stack the easy wins first." }
+          ]
+        },
+        {
+          "id": "unit-status-and-gav",
+          "title": "Steps 3 & 4: Unit status checks and calculating GAV",
+          "when": "Units declared, terrain line chosen. Now resolve the pre-combat checks and compute combat strength.",
+          "ruleRefs": ["13.5.0", "13.5.1", "13.5.2", "13.6.0", "13.6.1", "13.6.2"],
+          "blocks": [
+            { "kind": "prose", "text": "### Status checks in order (13.5.0)\n\n1) Isolated defender **surrender check** (13.5.1) — may cancel the GA entirely.\n2) **Standoff** declarations (13.5.2). Attacker first, then defender. Standoff units halve CS, contribute no Arm/AT bonus, cannot advance, cannot be lead-PR — but they're not step-loss candidates in the normal order.\n3) Declare use of **OhS** at full CS (13.5.3) — such units go OoS at the end of the GA.\n4) ENA/rest-GT half-strength option for defender (13.5.4).\n5) Hasty bridge demolition check (13.5.6a).\n6) Bridge collapse check for H/VH AFVs (13.5.6b)." },
+            { "kind": "prose", "text": "### Calculating GAV (13.6.0)\n\n1) Determine each unit's CS as printed (4.2.2), modified by **13.6.1** conditions individually — **do not round per unit, keep fractions**.\n2) Add all participating unit CS for that side.\n3) Round the total up. That's the GAV.\n4) Divide attacker GAV by defender GAV → ratio → match to the column on the defender's terrain line, rounding **down** to the closest column at or below (13.6.2)." },
+            { "kind": "callout", "variant": "gotcha", "text": "A unit may never lose more than ¼ of its CS to halving modifiers (13.6.1) — two halving conditions cap it at quarter strength, not lower. But fatigue-2 and marsh-Mech quarter a unit by their own rule (13.6.1b), separate from the halving cap." },
+            { "kind": "callout", "variant": "why", "text": "The 'retain fractions, round at the end' rule (13.6.0) is a big deal. A six-unit stack each halved to 2.5 CS rounds to 15 total (round once), not 18 (6 × 3). Rounding per-unit cheats you out of column shifts that sometimes matter." }
+          ]
+        },
+        {
+          "id": "column-shifts",
+          "title": "Step 5: Column shifts — moving the ratio",
+          "when": "GAV ratio computed. Now apply shifts that move you to a different column on the GAT for this attack.",
+          "ruleRefs": ["13.7.0", "13.7.1", "13.7.3", "13.7.4", "13.7.4a", "13.7.4b"],
+          "blocks": [
+            { "kind": "prose", "text": "### What column shifts do\n\nShifts change which GAT column you use for the roll. **Right shifts** favor the attacker (higher odds); **left shifts** favor the defender (13.7.0). All shifts are cumulative, then clamped to the leftmost/rightmost column on the defender's terrain line (13.7.2)." },
+            { "kind": "prose", "text": "### Major attacker shifts (13.7.3)\n\n- **1R** attackers in PA mode\n- **1R** per AS on defender stack (max 2)\n- **1R** defender in CR\n- **1R** defender hex overstacked\n- **1R** defender's superior HQ has ADV 0\n- **1R** any defender in Exploit mode\n- **2R** any defender in Strat mode\n- **1R** per Eng-stack cancelling DWs; additional 1R per Eng-stack in town/city if all DW shifts cancelled and no defending Eng (max 3 town / 4 city, 13.7.4b)\n- **1R** if CDO is lead unit vs DW (13.7.4c)" },
+            { "kind": "prose", "text": "### Major defender shifts (13.7.4)\n\n- **1L** defender in VP/HVP\n- **1L** per AS on any attacking stack (max 2)\n- **1L** attacker stack overstacked\n- **1L** night GT or ENA\n- **1L** IP / **2L** ET-2 or WN / **3L** ET-3, Fort, StP, Ft Area\n- **1L per supporting hex** with adjacent friendly defenders (13.7.4a) — no cap\n- **1L** multi-formation attackers (9.9.0)\n- **1L** attackers green; **2L** any attacker raw\n- **1L** deep mud (unless attacker is in town/city hex)" },
+            { "kind": "callout", "variant": "gotcha", "text": "Supporting hexes (13.7.4a) have no cap and are a common surprise. Each adjacent friendly-to-defender hex that hasn't already defended this phase generates a 1L — a fortified line with 3 adjacent support stacks is already −3 before terrain shifts apply. Clear the flanks with FS or separate GAs first." },
+            { "kind": "callout", "variant": "why", "text": "Column shifts vs DRMs: shifts move the column you roll on (changing the whole results distribution), while DRMs modify a single 2d10 roll within a column. Shifts are usually bigger leverage — a 3-column swing dwarfs even a +25 DRM most of the time. Prioritize getting the column right." },
+            { "kind": "callout", "variant": "tip", "text": "Engineers and CDO are force multipliers against DWs (13.7.4b, 13.7.4c). Each attacking Eng-stack cancels one DW shift. Against a town/city with no defending Eng, extra Eng-stacks after cancellation become attacker shifts up to town/city maximum. Never assault fortifications without Eng." }
+          ]
+        },
+        {
+          "id": "drms",
+          "title": "Step 6: DRMs — Proficiency, CR, RIB, Armor/AT",
+          "when": "Final column set. Now compute DRMs for the 2d10 roll.",
+          "ruleRefs": ["13.8.0", "13.8.1", "13.8.2", "13.8.3", "13.8.4", "13.8.4a", "13.8.4g"],
+          "blocks": [
+            { "kind": "prose", "text": "### Four DRM categories, each subtracting lower side from higher\n\n1) **Proficiency** (13.8.1): pick a non-standoff lead unit each side. Subtract smaller PR from larger. **5 DRM per point.** The lead PR unit takes the first mandatory step loss.\n2) **Combat Reserve** (13.8.2): up to 3 CR units per side, all traced ≤3 hexes to a participating friendly (restrictions in 13.8.2). **5 DRM per bonus.**\n3) **Regimental Integrity** (13.8.3): max 2 Rgts for attacker (up to 6 bonuses total), 1 Rgt for defender (max 3). Rules in 13.8.3a/b. **5 DRM per bonus.**\n4) **Armor/AT** (13.8.4): each side picks a lead Arm/AT unit. Compare per the four cases in 13.8.4b-e. **10 DRM per bonus** — **15 DRM** if your Arm/AT ≥5 and you're in clear terrain with no MCT (13.8.4g)." },
+            { "kind": "prose", "text": "### Putting it together (13.8.0)\n\n- For each category, subtract defender total from attacker total. Keep the sign.\n- Sum all four categories to get the final DRM.\n- Final DRM is capped at ±60." },
+            { "kind": "callout", "variant": "gotcha", "text": "Terrain and DWs cap Arm/AT bonuses hard (13.8.4c). Woods/town/hedgerow = max 2. Forest/rough-2/bocage = max 1. City or marsh = max 1. At night/ENA, max is 2 regardless of terrain (13.8.4f). Your tank advantage can vanish in the wrong hex." },
+            { "kind": "callout", "variant": "why", "text": "Armor vs AT direction matters (13.8.4a-e). When attacker Arm vs defender AT: you modify by terrain + DW. When Arm vs Arm: terrain only (no DW). When attacker AT vs defender Arm: terrain only, and the defender's **offensive** Arm is used. Getting the case wrong is the #1 DRM-math error in the game." },
+            { "kind": "callout", "variant": "tip", "text": "Pure AFV without combined arms gets Arm/AT reduced to zero in MCT or marsh (13.6.1d, 13.8.4). Always pair tanks with infantry for close-terrain GAs. A bare tank stack in a forest is a very expensive lead-PR volunteer." }
+          ]
+        },
+        {
+          "id": "determine-result",
+          "title": "Step 7: Rolling the result",
+          "when": "Column and DRMs set. Both players roll 2d10 (13.9.0).",
+          "ruleRefs": ["13.9.0", "13.9.1", "13.9.2", "13.10.3"],
+          "blocks": [
+            { "kind": "prose", "text": "### Steps (13.9.0)\n\n1) **Attacker rolls 2d10**, applies the final DRM, cross-indexes with the FAC on the defender's terrain line. Reads the **Defender's Results** column on the top half of the GAT — those results hit the defender.\n2) **Defender rolls 2d10**, same DRM applied to their DR, uses the bottom half. Reads the **Attacker's Results** column — those hit the attacker.\n\nBoth sides use the same final DRM sign; it just gets added or subtracted from each DR respectively." },
+            { "kind": "prose", "text": "### Reading a result (13.9.2)\n\nResults are shown as combinations of three symbols:\n\n- **\\*** = mandatory PRC for that side\n- **(#)** = mandatory hits (1–3)\n- **#** = discretionary hits (1–3, no parentheses)" },
+            { "kind": "callout", "variant": "caution", "text": "If the **pre-column-shift GAV ratio** was below the leftmost GAT column, the attacker ignores max step loss on mandatory hits (13.10.3). This single rule turns marginal attacks into army-wrecking disasters. Always verify your raw ratio meets the minimum before committing." }
+          ]
+        },
+        {
+          "id": "apply-results",
+          "title": "Step 8: Applying results — mandatory PRC, hits, and retreat choices",
+          "when": "Both rolls made. Attacker applies their result to the defender first, then defender applies to the attacker (13.10.0).",
+          "ruleRefs": ["13.10.0", "13.10.1", "13.10.2", "13.10.3", "13.10.4", "13.10.4a", "13.10.4b", "13.10.4c"],
+          "blocks": [
+            { "kind": "prose", "text": "### Order on each side (13.10.0)\n\n1) **Mandatory PRC** if the result included `*` (13.10.1) — use lead-PR unit, modified by ET/DW defenders and any leader. Fail adds +1 discretionary hit to that side. Fort defenders auto-pass.\n2) **Reduce / convert** mandatory hits (13.10.2): defender may strip an ET-3 to cancel 1 mandatory hit; Recon/CDO-only stacks may convert 1 mandatory to 1 discretionary (with restrictions).\n3) **Apply mandatory hits** as step losses (13.10.3) in strict priority order: Lead-PR unit → Lead Arm/AT unit → any Eng unit that gave a column shift. Max step loss applies unless the ratio gate in 13.10.3 was breached.\n4) **Resolve discretionary hits** (13.10.4): affected side declares Hold / Limited retreat / Full retreat and resolves accordingly." },
+            { "kind": "prose", "text": "### The three discretionary-hit options (13.10.4a, b, c)\n\n- **Hold position** (13.10.4a): PRC on lowest-PR unit. ET-2/ET-3/Fort/Ft Area auto-pass. Pass → absorb all as step losses + up to 2 fatigue, max step loss waived. Fail → must retreat, cascade of step losses if unable.\n- **Limited retreat** (13.10.4b): requires valid 1-hex path. PRC same as Hold. Pass → retreat at least 1 hex, then absorb remainder as step losses + fatigue with max step loss waived.\n- **Full retreat** (13.10.4c): retreat the maximum possible, one hex per discretionary hit up to unit max (13.11.1)." },
+            { "kind": "prose", "text": "### Max retreat distances (13.11.1)\n\n- Defending Leg: **2 hexes** | Attacking Leg: **1 hex**\n- Defending Mech: **4 hexes** | Attacking Mech: **2 hexes**\n- Low/no fuel and certain terrain force stops — Mech must stop in first woods/forest/marsh/bocage/hedgerow/soft ground/swamp/RR embankment/constricted terrain entered off-road." },
+            { "kind": "callout", "variant": "gotcha", "text": "Retreating into a non-MCT hex adjacent to an enemy unit costs one extra step loss from the retreating stack (13.11.3). This loss does NOT count toward fulfilling discretionary hits. Plan retreat paths to avoid skirting enemy-occupied hexes in the open." },
+            { "kind": "callout", "variant": "why", "text": "The three-way choice reflects a real tactical decision. Hold is great in ET-2+ (auto-pass PRC, no max step loss cap on step loss resolution). Limited retreat gives ground but preserves units. Full retreat trades position for survival — each hex retreated cancels one hit. Read the terrain before choosing." },
+            { "kind": "callout", "variant": "tip", "text": "Fort and defending-in-Fort units ignore **all** discretionary hits (13.10.4) and auto-pass mandatory PRCs (13.10.1). Until the Fort itself is reduced, the garrison is tactically nearly invulnerable. Bring heavy Art (11.4.1f) to convert numerical hits away from AS in FS, and be ready for a grinding affair." }
+          ]
+        },
+        {
+          "id": "advance-after-ga",
+          "title": "Advance after GA",
+          "when": "All hits resolved, retreats executed, defending hex possibly empty (13.12.0).",
+          "ruleRefs": ["13.12.0", "13.12.1", "13.12.2", "13.12.3", "13.12.4", "13.12.5", "13.13.0"],
+          "blocks": [
+            { "kind": "prose", "text": "### When you can advance (13.12.1)\n\n- The defending hex must be unoccupied by the end of the GA (for any reason).\n- Only attack-designated units that participated in the GA may advance (13.12.1).\n- Advance is **never mandatory** — you can always stop or decline.\n- After completing the advance, remove all attack designations from participants." },
+            { "kind": "prose", "text": "### Maximum advance distance (13.12.3)\n\nCount the defender's hex as the 1st hex.\n\n- Units in **Tac or Exploit**: **1 hex** (into defender's hex only)\n- **Leg in PA**: **2 hexes**\n- **Mech in PA**: **4 hexes**\n\nIf the defender was eliminated before retreating, advance is capped at the total unresolved hits (mandatory + discretionary) (13.12.3)." },
+            { "kind": "prose", "text": "### Path restrictions (13.12.4, 13.12.5)\n\n- Normal path: follow the defender's retreat path.\n- Mech units may deviate if every hex entered is clear terrain or road-connected.\n- Mech must stop in the first off-road hex containing woods / forest / marsh / bocage / hedgerow / soft ground / swamp / RR embankment / constricted terrain.\n- Must stop if advancing into a hex **adjacent to an ET, Fort, or intact Ft Area** — even if empty (13.12.5a).\n- Mud caps advance at 1 hex (Ldr can +1 to 2 max) (13.12.5b).\n- Night/ENA caps advance at 1 hex (Ldr +1 to 2) (13.12.5c).\n- Low-fuel Mech can advance only 1 hex; no-fuel Mech cannot advance at all (13.12.5d)." },
+            { "kind": "callout", "variant": "tip", "text": "Mech Recon in PA can advance one hex farther than the retreat path allows if the whole advance is on roads or clear terrain (13.12.3) — the deepest penetration tool in the game. Park Recon in assault stacks when pursuit matters." },
+            { "kind": "callout", "variant": "gotcha", "text": "Standoff units **cannot advance** (13.5.2). If you used standoff to cross a river or bypass combined-arms rules, those units stay put no matter how far the defender ran. Factor this into your post-combat position plan before committing to standoff." },
+            { "kind": "prose", "text": "### End of segment\n\nOnce all GAs in the segment are complete, remove **all AS markers** from both sides (13.13.0). AS never carries over past the Combat Phase." }
+          ]
+        }
+      ]
+    }
+  ]
+}

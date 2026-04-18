@@ -1,0 +1,692 @@
+{
+  "module": "hurtgen",
+  "moduleLabel": "HHF",
+  "modifications": [
+    {
+      "target": "command",
+      "action": "gate",
+      "gate": "HHF: US command structure changes mid-game. Until Oct 22 (GD 41) the 1st Army controls all US units; the 9th Army activates that AM GT and must be given its own ZOP (HHF (9.2.1), (9.2.2)). Historical British/US boundary rules also constrain what can cross the Maas (HHF (9.2.4))."
+    },
+    {
+      "target": "command.command-shuffles",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### HHF command specifics (HHF (9.2))\n\n- **Before Oct 22 (GD 41):** 1st Army controls every US unit on map — units labeled for 9th Army are still subordinated to 1st Army for command purposes (HHF (9.2.1)).\n- **Oct 22 AM GT:** declare a 1st/9th Army boundary. It must be a straight east-west line north of Aachen (W2926). Any 9th Army-assigned unit left in 1st Army ZOP is OoC until it crosses — they may use full MA as normal fuel to relocate (HHF (9.2.2)).\n- **V Corps is rigged small:** until Oct 31 (GD 50) only the 102nd Cav Grp and 62/V AFA Btn may operate on-map. The Cav Grp is limited to six hexes from the south edge (HHF (9.2.3)). Specific units release on later dates per HHF (9.2.3a).\n- **Trace path trick:** V Corps formations trace GenS up to 12 MP from Kalterherberg (W3545) or W2845 — the corps HQ is formally off-map (HHF (9.2.3))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "On the Oct 22 boundary day, every unit flagged as 9th Army that's not already inside the new northern ZOP becomes OoC until it moves across (HHF (9.2.2)). Plan the Oct 21 night positioning so relocations are short — OoC units can't attack or designate PA on the first active turn."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "HHF freezes V Corps small because historically its divisions were tied down south of the Hurtgen — the designer uses HHF (9.2.3a) to simulate that southern front gradually releasing units northward rather than giving you the whole corps day one."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command",
+      "action": "add",
+      "insertAfter": "command-shuffles",
+      "decision": {
+        "id": "hhf-xxx-corps-reaction",
+        "title": "XXX Corps and the British Reaction Trigger",
+        "when": "Every GT — the Allied player checks British reaction status whenever German units threaten the 21st AG ZOP (HHF (9.2.4), (9.2.4c)).",
+        "ruleRefs": ["9.2.4", "9.2.4a", "9.2.4b", "9.2.4c"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "XXX Corps sits on the left of the 1st Army line. Its ZOP (north of the 21st AG boundary printed on the map) is restrictive on both sides — keep the rules straight or units end up OoC or prematurely active (HHF (9.2.4))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Core restrictions (HHF (9.2.4), (9.2.4a))\n\n- British units never cross the Maas east except into friendly-controlled territory within the 21AG boundary.\n- XXX Corps PSS is any primary-road hex west of the Maas inside the 21AG ZOP.\n- XXX Corps units cannot GA German units east of the Nov 16 start line, except within four hexes of Geilenkirchen (W3113) or after a reaction trigger.\n- Only one US Cav Grp may be attached to XXX Corps. Other US units stay out of XXX ZOP unless reaction has triggered (HHF (9.2.4b)).\n- Units crossing the 21AG boundary the wrong way are OoC until they re-enter their own ZOP (HHF (9.2.4b))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Reaction trigger (HHF (9.2.4c))\n\n1) September: German units that didn't start west of the Maas may not cross west at all — no check needed.\n2) Oct 1 (GD 20) onward: if any German unit is west of the Maas, or within one hex of Geleen (W1712), the Allied player checks reaction.\n3) First violation → US 7th Armored Division arrives that GT on a primary road between W0301 and W1601, assigned to XXX Corps.\n4) Each following AM GT while violations persist, roll 1d10 per German division with violating units. Any DR > 4 activates the Guards Armored Division.\n5) When Gds Arm arrives, XXX Corps HQ, 5 AGRA (6 Btns), XXX CE, both XXX AT, two XXX Recon, and three Coys of the 79th Armored all arrive that GT.\n6) 43rd Div + 8th Armored Bde arrive the GD after."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Once reaction ends (no German units violating restrictions) most XXX Corps units withdraw west of the Maas and cannot GA/FS east of the river again unless the trigger fires again. Only the 43rd Div, 8th Arm Bde, three Art Btns, two corps independents, and the corps HQ can stay east — plan British deployments assuming a quick retreat is forced (HHF (9.2.4c))."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "HHF treats the British 21AG as a separate theatre that only wakes up if the Germans get aggressive north of the Maas. Designer intent: Keep British reinforcements hidden unless the German player invites them by threatening 9th Army's rear (HHF (9.2.4c))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics",
+      "action": "gate",
+      "gate": "HHF modifies logistics heavily: US armies stop tracking fuel on Nov 15 (HHF (16.2.2)); XXX Corps uses a flat ADV with no logistic table through October (HHF (16.2.3)); and the Germans can draw on a Fuhrer Ammo Reserve starting Nov 1 at the cost of VPs (HHF (16.2.4))."
+    },
+    {
+      "target": "joint-logistics.tp-allocation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### HHF TP notes (HHF (16.2))\n\n- **US post-Nov 15:** all GenS formations are treated as Normal Fuel without tracking. TP previously spent on fuel free up for ammo delivery or motorization — rebalance every AM GT from Nov 15 on (HHF (16.2.2)).\n- **XXX Corps:** doesn't use the Logistics Table at all. ADV is a flat 5 regardless of formations assigned; max 2 AmP per GD after XXX Corps HQ arrives (HHF (16.2.3)).\n- **Lull minimums:** during a lull both sides must still dedicate at least one TP to fuel and one TP to ammo. No more than two TPs per GD may bring Allied Reinforcement Pool units (HHF (16.2.5), (21.5))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "The US fuel-tracking drop on Nov 15 is a real logistics win for the Allied player. Every TP previously spent on fuel delivery can now go to ammo or motorization — plan late-November offensives around this step-change rather than a gradual buildup (HHF (16.2.2))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "British formations in the XXX Corps are 'Low' Fuel all of September and October, which caps Mech MA even on quiet GDs (HHF (16.2.3)). Normal Fuel only kicks in Nov 1 unless the XXX Corps reaction ends the restriction (HHF (9.2.4c))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics",
+      "action": "add",
+      "insertAfter": "replacement-points",
+      "decision": {
+        "id": "hhf-fuhrer-reserve",
+        "title": "The Fuhrer Ammo Reserve (Axis only)",
+        "when": "Beginning Nov 1 (GD 51) and after — at the moment the German player chooses to tap it, typically during the Joint Logistics Phase (HHF (16.2.4)).",
+        "ruleRefs": ["16.2.4"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "Hitler set aside ammo and fuel for the Ardennes offensive. If the Allies threaten breakthrough, the German player can tap that stockpile — but the VP cost is brutal (HHF (16.2.4))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Procedure (HHF (16.2.4))\n\n1) Declare the draw during any phase the German player has an opportunity to add to a stockpile — typically after rolling ammo/fuel delivery.\n2) Add the chosen number of AmP or FP directly to the German stockpile. No TP required.\n3) Subtract **1 VP per AmP or FP drawn** from the German VP total (add to Allied VP).\n4) The reserve holds 12 AmP + 12 FP. No more than 12 of each may be taken across the whole game."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Every point you pull here directly trades German VPs for short-term ammo/fuel. Against the HHF campaign VP thresholds a 12+12 pull costs 24 VPs — often the difference between a German Strategic and an Allied Tactical victory. Tap this only when an Allied breakthrough is imminent (HHF (16.2.4))."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "HHF (16.2.4) models Hitler's actual reluctance to release Ardennes stockpiles — the game rewards that reluctance by making the reserve disproportionately costly. Use it as last-ditch insurance, not a planning tool."
+          }
+        ]
+      }
+    },
+    {
+      "target": "construction-phase",
+      "action": "gate",
+      "gate": "HHF: the German player may build and occupy ET-3 starting Sep 26 (GD 15). ET-3s are only placed in village/town/city hexes within Germany, take two Construction Phases to complete, and cap at 10 on map (HHF (17.3.3c))."
+    },
+    {
+      "target": "construction-phase",
+      "action": "add",
+      "insertAfter": "fieldwork-construction",
+      "decision": {
+        "id": "hhf-et3-construction",
+        "title": "Building ET-3 (Axis only, HHF)",
+        "when": "Beginning of the Axis Construction Phase on any GD starting Sep 26 (GD 15) onward (HHF (17.3.3c)).",
+        "ruleRefs": ["17.3.3c", "17.3.3b"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "ET-3 is the strongest fieldwork in the game — it contributes a 3L column shift in GA (13.7.4) and can absorb one mandatory hit via stripping (13.10.2). Only the Axis may build or occupy them in HHF (HHF (17.3.3c))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Procedure (HHF (17.3.3c))\n\n1) Target hex must be in GenS, contain a village/town/city, and lie within the borders of Germany.\n2) Replace one existing ET-2 in that hex with an 'under-construction' ET-3 at the start of the Axis Construction Phase.\n3) The ET-3 completes at the start of the **next** Axis Construction Phase — two Construction Phases total.\n4) Only one ET-3 may be started per Construction Phase, and only every other GD.\n5) Map cap: 10 ET-3 total. Each overwrite requires an existing ET-2 under your control.\n6) You may reverse direction: replace an ET-3 with an ET-2 during the same window. The removed ET-3 can be re-placed two GDs later."
+          },
+          {
+            "kind": "prose",
+            "text": "### ET-2 rule change (HHF (17.3.3b))\n\nIn HHF only the Axis may build an ET-2 without a prior IP in the hex. For Axis purposes, clear hexes east of and adjacent to the Roer River and Erf Canal count as 'town' for this rule — so ET-2s can sprout directly on the river line without needing an IP first (HHF (17.3.3b))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Queue ET-3 upgrades along your planned defensive axis **before** the Allies arrive at each village. An ET-3 on the first line gives you that 3L terrain shift plus a free mandatory-hit absorb before you're even assaulted — a huge return for two Construction Phases and an ET-2 consumed (HHF (17.3.3c))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "HHF's Westwall hexes are already Ft Areas (HHF (17.5.0)) — don't try to stack ET-3 on them. ET-3 is for non-Westwall villages behind the fortified line, especially the Roer towns (HHF (17.3.3c))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "construction-phase.fieldwork-construction",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### HHF specifics (HHF (17.3.3b), (17.5.0))\n\n- The only Ft Areas in HHF are the Westwall hexes shown on the map. Only German units receive full Westwall benefit (HHF (17.5.0)).\n- Scenarios starting in September apply the **Westwall Upgrade** ramp: defending Germans get +1 column shift on GDs 1-3, +2 on GDs 4-6 (starting Sep 15), and the full +3 from GD 7 (Sep 18) onward. FS DRMs are unaffected (HHF (17.5.1))."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "HHF (17.5.1) reflects that the Westwall was under-manned and decaying when the Allies arrived. The ramp gives you a narrow Sep 12-17 window where concentrated Allied attacks can break Westwall hexes before the full fortress bonus kicks in."
+          }
+        ]
+      }
+    },
+    {
+      "target": "weather",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### HHF weather (HHF (19.2.1), (19.2.2))\n\n- The GTRT prints historical atmospheric + ground conditions per GT. Players can either play historical or roll variable by mutual agreement (HHF (19.2.2)).\n- If rolling variable, determine atmospheric first, then ground. Apply any GD-level DRMs to both. The **previous GT's ground condition** influences the DR range for the next — read the GTRT Weather Table carefully (HHF (19.2.2)).\n- Night GT and ENA ground conditions are set via the separate Night Ground Condition chart on the Weather Table (HHF (19.2.2))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "weather.gi-value",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "HHF adds a flat **+1 DRM to all Ground Interdiction Value DRs** (HHF (20.3)). This pushes interdiction values up throughout the campaign — every Allied movement calculation needs to account for it, and German sectors with any AP allocated to GI hit harder than in the base game."
+          }
+        ]
+      }
+    },
+    {
+      "target": "air-allocation.mission-mix",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### HHF map specifics (HHF (20.1.1), (20.4))\n\n- **No separate air sectors** — AP you allocate can support any friendly army anywhere on the maps (HHF (20.1.1)). You don't have to pre-assign AP to specific sectors like in some base-game scenarios.\n- **SI cap:** maximum of three SI missions per GD regardless of AP budget (HHF (20.4)). Plan the targets, don't oversubscribe."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Because HHF allows free AP routing, you can swing concentrated GS or GI to wherever the day's Schwerpunkt is after weather resolves. Keep a flexible mission pool rather than pre-carving AP by sector (HHF (20.1.1))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "fire-support",
+      "action": "gate",
+      "gate": "HHF: the Westwall fortification ramp gives German defenders growing column shifts through Sep 12-18 (HHF (17.5.1)). On Allied-ended lulls the Allied player may unleash a one-time Carpet Bombing mission in the Fire Support Segment (HHF (20.8))."
+    },
+    {
+      "target": "fire-support",
+      "action": "add",
+      "insertAfter": "offensive-air-support",
+      "decision": {
+        "id": "hhf-carpet-bombing",
+        "title": "Carpet Bombing (Allied, HHF)",
+        "when": "On any GD that an Allied-requested lull ends (Allied was Side 1). The mission is the **first** action in the Fire Support Segment, during either AM or PM (HHF (20.8)).",
+        "ruleRefs": ["20.8"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "Carpet bombing is a one-shot Allied special mission. It lays a blanket of markers over a target strip and rolls for hits on each — no spotter required, no FS column shifts granted. You get one attempt per lull-end event (HHF (20.8))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Setup (HHF (20.8))\n\n1) Prepare 16 carpet-bombing markers (blue ace of spades recommended).\n2) Place **4 markers** in city hexes within 14 hexes of a friendly unit — your call which cities.\n3) Place **12 markers** in hexes within 2 hexes of a friendly unit. These 12 must form straight lines of hexes along a SW-NE or NW-SE axis. You may split them into two groups of 6 (stacked parallel) or keep all 12 in one line."
+          },
+          {
+            "kind": "prose",
+            "text": "### Resolution (HHF (20.8))\n\n1) For each marker roll 1d10.\n   - **+2 DRM** hex is intact Westwall.\n   - **+1 DRM** hex has an Axis ET.\n2) Modified DR 0-4: marker stays on the map. DR 5-9: remove it.\n3) For each remaining marker, roll 1d10 again.\n   - **0-1:** one step eliminated from the hex (owner's choice).\n   - **2-4:** place an AS marker on units in the hex.\n   - **5-9:** no effect.\n4) Carpet markers remain until the Administrative Phase. Exploit-phase units entering a hex with a marker spend +2 MP (HHF (20.8))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Max leverage from carpet bombing is against hex lines with weak terrain and no ET — the DRMs stack against you on Westwall/ET hexes (HHF (20.8)). Target the open ground behind the German front, then push your PA attacks through fresh AS markers on the same GT."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "The mission being free-to-use after an Allied-initiated lull ends is the designer's intended 'surprise resumption' bonus (HHF (20.8), (24.4)): breaking the lull already gives you a column shift and GenS advantage; carpet bombing layers AS markers on the primary assault axis for that same GT."
+          }
+        ]
+      }
+    },
+    {
+      "target": "update-game-turn-indicator",
+      "action": "gate",
+      "gate": "HHF: ENA is always available — Rest GTs do **not** suppress ENA activity (HHF (3.4)). Plan rest-GT fatigue budgeting differently than the base game."
+    },
+    {
+      "target": "replacement",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### HHF replacement twists (HHF (22.3.4), (22.7))\n\n- **Axis:** cannot resurrect units using RE units before Sep 15 (GD 4) — the first three days of any September scenario lock out RE-based resurrection entirely (HHF (22.3.4)).\n- **Luftwaffe Static Flak Coys:** cannot be replaced via ReP and do not generate ReP when eliminated. Starting Oct 1 (GD 20), one eliminated Static Flak Coy per seven GDs may be placed directly on the map in any German-controlled town/city hex inside Germany — no ReP cost (HHF (22.7))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Luftwaffe Static Flak Coys are a separate track — don't mix them with normal Flak counters in your ReP math. They're replaced on their own seven-GD cycle, and never via the replacement table (HHF (22.7))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command.leader-activation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### HHF leader specials (HHF (23.4.1), (23.4.2))\n\nHHF adds scenario-specific leader abilities on top of the base GOSS (23.0) bonuses. The four most impactful:\n\n- **Collins (VII Corps, Allied):** if stacked with a VII Corps division HQ at AM GT start, that division's units may move in any order during a Friendly Movement Phase regardless of movement type (HHF (23.4.1)).\n- **Allen (104th Inf Div, Allied):** if stacked with 104th HQ, any 104th infantry unit auto-activates during ENA; 104th PAs at night don't suffer the -1 column shift (HHF (23.4.1)).\n- **Rose (3rd Arm Div, Allied):** if stacked with an armor unit of 3rd Arm, all AFV-symbol units of 3rd Arm in that stack may advance after GA as Recon (GOSS (13.10.2a)) (HHF (23.4.1)).\n- **Harmon (2nd Arm Div, Allied):** if stacked with 2nd Arm HQ, all subordinates get +1 advance hex; if adjacent to or stacked with an offensive GA, Harmon gives 2 favorable column shifts to one GA (HHF (23.4.1)).\n- **Manteuffel (5Pz Army), Brandenburg (7A), vLuettwitz (XLVII Pz) (Axis):** various formation-level MA / column-shift bonuses — see HHF (23.4.2) for exact conditions. Note vLuettwitz's shift cannot stack with other leader shifts."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Allied leader shifts and Allen's night PA exemption make some Allied formations dramatically more effective — specifically stacking Harmon with the 2nd Arm HQ on a Schwerpunkt day gives two column shifts on top of whatever your ground situation is (HHF (23.4.1))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "ground-assault",
+      "action": "add",
+      "insertAfter": "column-shifts",
+      "decision": {
+        "id": "hhf-westwall-upgrade",
+        "title": "Westwall Upgrade Ramp (September only)",
+        "when": "Any Ground Assault against a German-occupied intact Westwall hex during a scenario that starts in September (HHF (17.5.1)).",
+        "ruleRefs": ["17.5.0", "17.5.1"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "The Westwall wasn't at full readiness when the Allies arrived. HHF models this with a three-stage upgrade ramp in September scenarios. Once past Sep 18 (GD 7), full fortress benefits apply (HHF (17.5.1))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Column shift schedule (HHF (17.5.1))\n\n- **Sep 12-14 (GDs 1-3):** defending Germans get **+1 favorable column shift** instead of the normal Ft Area shift.\n- **Sep 15-17 (GDs 4-6):** **+2 favorable column shifts**.\n- **Sep 18 (GD 7) onward:** full **+3 favorable column shifts** — Westwall is fully effective (HHF (17.5.1)).\n- FS DRMs are **not** affected by the upgrade — only the GA column shifts (HHF (17.5.1))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "If you're playing September Rush and need Westwall hexes as VP objectives, prioritize attacks on GDs 1-3 when you only eat a 1L shift. Every day beyond that makes the same GA progressively harder (HHF (17.5.1))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Only German units get the full Westwall benefit (HHF (17.5.0)). If Allies capture and occupy a Westwall hex, it still counts as Ft Area for the defender but without the German-only buffs — read HHF (17.5.0) carefully before occupying."
+          }
+        ]
+      }
+    },
+    {
+      "target": "mode-determination.pick-mode-per-formation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "HHF removes **Green Divisions** (GOSS (4.4.4)) and **Kangaroos** (GOSS (4.5.5)) from play (HHF (4.0)). Don't plan for Green-Div column penalties or Kangaroo-based Mech transport of Leg units — they don't exist in HHF."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command",
+      "action": "add",
+      "insertAfter": "surrender",
+      "decision": {
+        "id": "hhf-roer-dams",
+        "title": "The Roer Dam Floodgates (Axis only)",
+        "when": "Any AM GT during which the German player controls both the Urft Dam (E0539/E0540) and Schwamanuel Dam (E0637/E0737) hexes — announce the decision during the Command Phase (HHF (27.1.1), (27.1.2)).",
+        "ruleRefs": ["27.1", "27.1.1", "27.1.2", "27.1.3", "27.1.4"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "Opening the dam floodgates is a one-way button the German player can press at any time. It floods the Roer and essentially locks the Allies out of a Roer crossing for 10+ GDs — but it costs 40 VPs immediately (HHF (27.1), (28.2))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Trigger and flood stage (HHF (27.1.2), (27.1.3))\n\n1) German player announces the floodgates open. Effect is irreversible.\n2) Two GTs after the announcement the Roer enters **flood stage**.\n3) Blue-tinted Roer hexes become marsh (except town/city).\n4) Any FWs in the blue-tinted hexes are removed (including town/city FWs).\n5) No FW construction in blue-tinted hexes during flood.\n6) Secondary/trail road bridges over the Roer are unusable.\n7) Engineers cannot ferry across. No new bridges may be built during flood stage.\n8) Existing Roer bridge markers are destroyed (remove from map).\n9) GenS paths cannot cross the Roer except via an intact primary-road bridge."
+          },
+          {
+            "kind": "prose",
+            "text": "### Flood end (HHF (27.1.4))\n\nAt the start of the 10th GD of flood stage, German rolls 1d10. On 9+ flood ends immediately; +2 DRM per GD thereafter. Once flood ends, blue hexes stay marsh for two more GDs, then the Roer reverts to a minor river and secondary bridges come back."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Opening the floodgates gifts the Allied player 40 VPs (HHF (28.2)). Against the HHF campaign scoring thresholds that is typically the line between an Allied Tactical and an Allied Operational victory — do not open unless the alternative is losing the Roer line entirely (HHF (27.1.2))."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "HHF frames this as the historical 'would he or wouldn't he' choice. Flooding shuts the Allies out of the Roer crossing for at least 10 GDs, during which the Germans can redeploy west of the Rhine — at the cost of a chunk of VPs and the future Roer bridges you'd eventually need to re-use (HHF (27.1))."
+          }
+        ]
+      }
+    }
+  ],
+  "scenarioOverrides": {
+    "bloody-bucket": {
+      "label": "Scenario 1: Bloody Bucket (Learning)",
+      "modifications": [
+        {
+          "target": "air-allocation",
+          "action": "gate",
+          "gate": "HHF Scenario 1: Air Power is NOT used in Bloody Bucket. Skip the entire Joint Air Allocation Phase (HHF (30.2.0))."
+        },
+        {
+          "target": "weather",
+          "action": "gate",
+          "gate": "HHF Scenario 1: Weather is fixed — every GT is Overcast atmospheric with 2-hex LOS and Mud ground. Skip weather rolls (HHF (30.2.1))."
+        },
+        {
+          "target": "command",
+          "action": "gate",
+          "gate": "HHF Scenario 1: Skip the full Command Phase. No command boundaries, no lulls, no leaders, no surrender checks, no OoC penalties. All US units are treated as attached to the 28th Inf Div HQ; all Germans to the 275th VG Div HQ — no multi-formation penalties either way (HHF (30.2.0), (30.2.4))."
+        },
+        {
+          "target": "joint-logistics",
+          "action": "gate",
+          "gate": "HHF Scenario 1: Supply, TP, and the full Logistics system are skipped. All units are auto in supply as long as they can trace enemy-free hexes to their map edge (US=west, German=east or Westwall/ET-3) (HHF (30.2.0), (30.2.4))."
+        },
+        {
+          "target": "joint-fuel-value-determination",
+          "action": "gate",
+          "gate": "HHF Scenario 1: Fuel Value Determination is skipped — no fuel-level rolls (HHF (30.2.0))."
+        },
+        {
+          "target": "mode-determination",
+          "action": "gate",
+          "gate": "HHF Scenario 1: Only **Tactical** and **Prepared Assault** modes are used. No Strategic, Refit, Reserve, or Exploit modes exist in Bloody Bucket (HHF (30.2.0))."
+        },
+        {
+          "target": "active-exploit-phase",
+          "action": "gate",
+          "gate": "HHF Scenario 1: The Active Exploit Phase is skipped — Bloody Bucket has no Exploit modes at all (HHF (30.2.0))."
+        },
+        {
+          "target": "enemy-inactive-exploit",
+          "action": "gate",
+          "gate": "HHF Scenario 1: The Inactive Exploit Phase is skipped — Bloody Bucket has no Exploit modes at all (HHF (30.2.0))."
+        },
+        {
+          "target": "supply-determination-segment",
+          "action": "gate",
+          "gate": "HHF Scenario 1: Skip Supply Determination — all units auto-supplied per HHF (30.2.4)."
+        },
+        {
+          "target": "air-resupply-segment",
+          "action": "gate",
+          "gate": "HHF Scenario 1: Air Resupply is not used (HHF (30.2.0))."
+        },
+        {
+          "target": "replacement",
+          "action": "gate",
+          "gate": "HHF Scenario 1: Replacements use fixed pools, not the GOSS ReP table. Germans have 4 Inf + 1 Arm ReP starting GD 54 (Nov 4 AM); US has 12 Inf + 3 Arm starting GD 55 (Nov 5 AM). No resurrections (HHF (30.5.0))."
+        },
+        {
+          "target": "fire-support",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Bloody Bucket FS (HHF (30.2.2))\n\nNo air, no naval, no Art units exist. Each side instead gets a flat pool of **FS Mission Points** per player turn:\n\n- **German:** 9 MP per player turn through Nov 4 (GD 54). From Nov 5 AM (GD 55) onward, **18 MP per player turn**. Max 8 MP per mission.\n- **US:** 24 MP per player turn. Max 6 MP per mission, or **8 MP** if the target hex is adjacent to an Allied unit in PA or if the Allied unit is in an ET.\n- Max 4 FS missions per GT may be considered Heavy Artillery (GOSS (11.4.1g)).\n- Range is ignored — any MP can hit anywhere in the playing area (HHF (30.2.2))."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "Concentrate US MP into 8-MP heavy missions against defending German ET-3s and Westwall — the PA-adjacency cap unlocks the larger missions precisely when you most need to soften defenses (HHF (30.2.2))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "construction-phase",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Bloody Bucket FW setup (HHF (30.2.3))\n\n- Germans place 2 ET-3 (village hexes only) and 4 ET-2 at the start. No additional ET-3 may be built during the scenario.\n- US places 1 IP in Germeter (E2330) and 1 IP in the 294 CE Btn's hex. All placed ET/IPs must be occupied by a friendly unit (HHF (30.2.3))."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "september-rush": {
+      "label": "Scenario 2: The September Rush",
+      "modifications": [
+        {
+          "target": "command",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "callout",
+                "variant": "gotcha",
+                "text": "Scenario 2 excludes GOSS (9.2.2) (formation integrity) per HHF (31.2.0) — units may operate outside their parent formation without the usual penalties. This changes how aggressively you can split formations across the map."
+              },
+              {
+                "kind": "prose",
+                "text": "### September-only special move (HHF (31.2.3))\n\nAfter all units set up but **before** the first GT, the German player may move his units using Tactical mode with these limits:\n\n- No movement adjacent to US units.\n- No movement westward.\n- Mech formations use half their normal MA; fuel is not a concern.\n\nTreat this as a one-shot pre-game repositioning window; the German side typically uses it to shore up Westwall occupancy (HHF (31.2.3))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### September Rush logistics (HHF (31.6.0))\n\n- Each side uses the GTRT to determine ADV and TP. GOSS (15.0) and (16.0) apply.\n- The scenario excludes GOSS (16.4.4g) and (16.4.4h), (20.8.0), (21.5.2), (21.5.3), (21.6.2), (21.6.3), (21.7.0), (22.7.0), and the base lull rules (24.0) per HHF (31.2.0)."
+                }
+            ]
+          }
+        },
+        {
+          "target": "fatigue-recovery-segment",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### US fatigue trigger in Sep 12-14 (HHF (31.2.4))\n\nOn every GT during GDs 1-3 (Sep 12-14), each Allied unit checks fatigue if it **moves more than half its MA** or **enters PA mode**.\n\n1) Roll 1d10 for each triggering unit:\n   - DR 6-8: one fatigue hit.\n   - DR 9: two fatigue hits.\n2) PA-triggered units check immediately when the PA marker is removed.\n3) Move-triggered units check after completing movement that phase."
+              },
+              {
+                "kind": "prose",
+                "text": "### 2nd Armored Division (HHF (31.2.5))\n\nThe 2nd Arm Div conducts the HHF (31.2.4) fatigue check for the **first nine GTs after arrival**. Plan its Schwerpunkt carefully — pushing a full MA move on its first GT risks knocking out the division's hitting power before it reaches the line."
+              },
+              {
+                "kind": "callout",
+                "variant": "caution",
+                "text": "Don't burn MA indiscriminately GDs 1-3. A corps-wide push at half MA keeps fatigue risk low; half-MA movement means zero checks and you preserve PA capacity for Westwall assaults on GDs 4+ (HHF (31.2.4))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "air-allocation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Scenario 2 air restrictions (HHF (31.2.6))\n\nConsult the GTRT for daily AP availability. **If using historical weather, no more than half the Allied AP may be assigned to a single mission type.** Allocation must be spread across at least two mission types (HHF (31.2.6))."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "october": {
+      "label": "Scenario 3: October Trick or Treat",
+      "modifications": [
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### October logistics (HHF (32.2.0), (32.6.0))\n\n- All basic and exclusive rules apply **except** (16.4.4g) is excluded — so the Allied Logistics Table trailing-column adjustment is off for this scenario (HHF (32.2.0)).\n- GOSS (17.5.2) (fortress supply) is also excluded (HHF (32.2.0)).\n- US 1st Army starts with **6 AmP and 6 FP** in stockpile; German 7th Army starts with **4 AmP and 3 FP** (HHF (32.6.0))."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "The excluded (16.4.4g) means the Allied logistics table works on a simpler curve for October — plan TP allocations from the GTRT's direct ADV column rather than running extra adjustments (HHF (32.2.0))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "attacker-designation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### October US attack restrictions (HHF (32.2.3))\n\n- First two GTs (Oct 2 AM + PM): all US prepared assaults get **+1 favorable column shift** (HHF (32.2.3)).\n- **VII Corps may not make any GAs** until the AM GT of Oct 8 (GD 27).\n- Exception: the 9th Infantry Division may GA within 8 hexes of W3837 regardless of VII Corps restriction.\n- If the German side GAs any VII Corps unit (except 9th Inf), the no-attack restriction is lifted immediately (HHF (32.2.3))."
+              },
+              {
+                "kind": "callout",
+                "variant": "gotcha",
+                "text": "The VII Corps lockout is strict until Oct 8. Plan your opening week attacks around XIX Corps and the 9th Inf pocket near W3837 — pushing VII Corps infantry into attack designation before GD 27 wastes their ADV (HHF (32.2.3))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "air-allocation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Scenario 3 air (HHF (32.2.4))\n\nConsult the GTRT for daily AP. If using historical weather, no more than half the Allied AP may be assigned to a single mission type (HHF (32.2.4))."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "november": {
+      "label": "Scenario 4: November's Turkey Shoot",
+      "modifications": [
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### November logistics (HHF (33.6.0))\n\n- **Allied player does NOT use the Logistics Table at all.** All HQ are treated as Normal Fuel. GOSS (15.0) applies; GOSS (16.3.2a) Steps 1-5 apply (skip Steps 6-9). TP listed on the GTRT are for motorization only (HHF (33.6.0)).\n- **German side uses the full Logistics Table** — GOSS (15.0) and (16.0) still apply on the Axis side.\n- Starting stockpiles: US 1st & 9th Armies each hold **4 AmP**; German 7th Army holds **4 AmP + 3 FP**; German 5th Pz Army holds **3 AmP + 2 FP** (HHF (33.6.0))."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "The asymmetric November logistics (HHF (33.6.0)) heavily favor the Allied player — no fuel tracking and no Step 6-9 calculations dramatically speed up Allied planning. Spend the saved planning time on fire support sequencing (HHF (33.6.0))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "command",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### XIII Corps restrictions (HHF (33.2.3))\n\nUntil Geilenkirchen (W3113) is Allied controlled:\n\n- **102nd Inf Division:** no GAs at all.\n- **7th Armored Division:** only 6 units per friendly GT may be in PA or Tactical Assault mode (any 6 — you can rotate, but the cap is hard).\n- **84th Inf Division and 113th Cav Grp:** remain assigned to the British XXX Corps.\n\nOnce Geilenkirchen falls, all restrictions lift. The 84th automatically returns to XIII Corps the next GT; 113th Cav Grp may transfer back the next AM GT (HHF (33.2.3)).\n\nThe 84th Inf counts as 'within the XXX Corps ZOP' for all boundary purposes until Geilenkirchen falls (HHF (33.2.2))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "fire-support",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "callout",
+                "variant": "caution",
+                "text": "Scenario 4: the Allied player **must** conduct a Carpet Bombing mission on AM GT of Nov 16 (GD 66) per HHF (33.2.5) — it is not optional. Place your 16 markers to support the opening offensive; see HHF (20.8) for the full procedure."
+              }
+            ]
+          }
+        },
+        {
+          "target": "air-allocation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Scenario 4 air (HHF (33.2.4))\n\nAP from GTRT daily. If using historical weather, no more than half the Allied AP may be assigned to a single mission type (HHF (33.2.4))."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "campaign": {
+      "label": "Campaign: Hell's Forest",
+      "modifications": [
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Campaign logistics (HHF (34.6.0))\n\n- All GOSS (15.0) and (16.0) rules apply in full for the entire campaign.\n- Do **not** use the scenario starting stockpile numbers from Scenarios 3 or 4; both sides draw ADV and TP from the GTRT directly (HHF (34.6.0)).\n- Use the special rules for whichever monthly scenario you start from, then swap in each subsequent month's special rules as the calendar advances (HHF (34.2.0))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "command",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Campaign lulls (HHF (34.2.3))\n\n- Only **September** has a mandated lull. After that, lulls are player-initiated per GOSS (24.0) only when you want one.\n- The VII and XIII US Corps attack constraints from the October and November scenarios are **off** during the campaign — you may assault with any corps on any GD (HHF (34.2.3))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "air-allocation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Campaign air (HHF (34.2.2))\n\nAP from GTRT. If using historical weather, no more than half the Allied AP may be assigned to a single mission type (HHF (34.2.2))."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

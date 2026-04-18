@@ -212,50 +212,13 @@ export function PhaseStepper({
         </div>
       )}
 
-      {/* Notes (future AI Tips) */}
-      {active.notes.length > 0 && (
-        <div className="mb-4 rounded-lg bg-amber-50/50 p-4 dark:bg-amber-900/10">
-          <h3 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-amber-600 dark:text-amber-500">
-            💡 Tips
-          </h3>
-        <ul className="space-y-1.5 border-l-2 border-amber-600/30 pl-3">
-          {active.notes.map((note, i) => (
-            <li
-              key={i}
-              className="flex gap-2 text-sm text-stone-500 dark:text-stone-400"
-            >
-              <span className="mt-0.5 text-stone-300">&bull;</span>
-              <RuleInlineText text={note} />
-            </li>
-          ))}
-        </ul>
-        </div>
-      )}
-
-      {/* Scenario appended tips */}
-      {active.appendedNotes && active.appendedNotes.length > 0 && (
-        <div className="mb-4 rounded-lg bg-blue-50/50 p-4 dark:bg-blue-900/10">
-          <h3 className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
-            {active.scenarioModule && (
-              <span className="rounded bg-blue-500 px-1 py-0.5 text-[10px] font-bold text-white">
-                {active.scenarioModule}
-              </span>
-            )}
-            💡 Scenario Tips
-          </h3>
-          <ul className="space-y-1.5 border-l-2 border-blue-400/30 pl-3">
-            {active.appendedNotes.map((note, i) => (
-              <li
-                key={i}
-                className="flex gap-2 text-sm text-stone-500 dark:text-stone-400"
-              >
-                <span className="mt-0.5 text-blue-400">&bull;</span>
-                <RuleInlineText text={note} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {/*
+        Tips + Scenario Tips are intentionally NOT rendered in the Steps view.
+        They've moved to the Learn tab, which paginates with the Stepper in
+        lockstep. The `notes` / `appendedNotes` arrays remain in sequence.json
+        as archived data pending final audit (see docs/notes-vs-learn-comparison.md).
+        To re-enable temporarily, restore the blocks from git history.
+      */}
 
       {/* Checklist */}
       {checklistItems.length > 0 && (

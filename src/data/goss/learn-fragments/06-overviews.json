@@ -1,0 +1,113 @@
+{
+  "chapters": [
+    {
+      "id": "pregame-day-overview",
+      "title": "Pre-Game Day — Overview",
+      "phaseRef": "joint-pre-game-day-activities",
+      "ruleRef": "3.3.1",
+      "intro": "Before either side takes a turn, both players jointly set up the Game Day: air, weather, command, logistics, and fuel. Decisions made here lock in for the entire GD — you cannot reshuffle AP missions or TP allocations mid-day. Treat this as mission planning, not bookkeeping.",
+      "decisions": [
+        {
+          "id": "pregame-sequence",
+          "title": "What locks for the Game Day vs. what varies each GT",
+          "when": "Before the AM Allied Player Turn begins (3.3.1).",
+          "ruleRefs": ["3.3.1", "3.3.1b", "3.3.1e"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### Phases run in order\n\n1) Air Allocation (3.3.1a, AM only).\n2) Weather (3.3.1b, every GT).\n3) Command (3.3.1c, AM only).\n4) Logistics (3.3.1d, AM only).\n5) Fuel Value Determination (3.3.1e, every GT)."
+            },
+            {
+              "kind": "callout",
+              "variant": "why",
+              "text": "**Weather and Fuel repeat every GT; everything else is set once for the GD.** Atmospheric conditions change AM vs. PM vs. Night, so the GI roll and fuel value roll happen each GT. Your AP mission allocations, TP assignments, attachments, and rest-GT pick do not."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "Do I know the weather forecast? Check before committing AP — you're allocating now but may not know conditions yet (3.3.1a precedes 3.3.1b).",
+                "Which corps absolutely must attack this GD? Plan TP, AP, and ADV around them.",
+                "Which formations are resting this GD? Don't waste supply/ammo on them.",
+                "Am I over 3 corps on any army? If so, the ADV cascade penalty kicks in — consider detaching during Command Phase (9.6.1)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pregame-weather-first",
+          "title": "Plan weather-first",
+          "when": "When drafting your AP and logistics decisions (19.3.0).",
+          "ruleRefs": ["19.3.0", "20.1.3"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "Weather cascades into almost everything pre-game day decisions touch: AP values are halved in POvr and quartered in Ovr; Storm or Snow cancels air operations entirely (19.3.0). Supply interdiction and ground interdiction both pull from the AP pool, so a bad weather forecast means fewer effective points everywhere."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "You allocate AP **before** weather is rolled (3.3.1a precedes 3.3.1b). With variable weather, you're committing blind — plan for the worst plausible condition on scenarios that roll weather."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "player-turn-overview",
+      "title": "Player Turn — Overview",
+      "phaseRef": "allied-player-turn",
+      "ruleRef": "3.3.2",
+      "intro": "The active player runs the full sequence: mode determination, construction, movement, combat, exploit, then end-of-turn housekeeping. The inactive player has one window during your turn — the Inactive Exploit Phase — so plan defensively for that. Axis and Allied turns use the same sequence (3.3.3).",
+      "decisions": [
+        {
+          "id": "player-turn-plan-holistically",
+          "title": "Plan the turn before committing to any mode",
+          "when": "Start of your active player turn (3.3.2 / 3.3.3).",
+          "ruleRefs": ["3.3.2", "5.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "### Phases in order\n\n1) Mode Determination (sets what each formation can do this turn).\n2) Construction (bridges, fieldworks, demolitions).\n3) Combat Reserve Designation.\n4) Movement.\n5) Quick Construction.\n6) Enemy Inactive Exploit (the other side moves now).\n7) Attacker Designation → Replacements → Fire Support → Ground Assault.\n8) Active Exploit.\n9) Air Resupply → Supply Determination → Ammo Replenishment → Fatigue Recovery → Delay Marker Removal."
+            },
+            {
+              "kind": "callout",
+              "variant": "gotcha",
+              "text": "**Mode choice cascades through the whole turn and cannot be undone.** A formation in Strat mode cannot attack this turn; one in Tac mode has reduced MA. Figure out which formations attack, which exploit, and which rest **before** you pick modes (5.0)."
+            },
+            {
+              "kind": "callout",
+              "variant": "tip",
+              "text": "Use the **inactive** half of each GT — when the other player is active — to observe enemy dispositions, spot supply weaknesses, and plan your own turn. By the time your active phases begin, the decisions should already be made."
+            },
+            {
+              "kind": "ask",
+              "items": [
+                "What's the weather this GT? Bad weather means consolidate, not attack (19.0).",
+                "Which formations are attacking? They need TA mode, ammo, and fire support.",
+                "Which formations are exploiting? They need Exploit-eligible mode and fresh MA.",
+                "Which formations are resting this GD? Keep them off the front line (3.5.3)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "player-turn-inactive-exploit-awareness",
+          "title": "Anticipate the enemy's Inactive Exploit window",
+          "when": "When positioning units during your Movement Phase (3.3.2d / 3.3.3d).",
+          "ruleRefs": ["3.3.2d", "21.0"],
+          "blocks": [
+            {
+              "kind": "prose",
+              "text": "After your Movement Phase but before your Ground Assault, the other side gets an Inactive Exploit Phase — their Exploit-eligible formations can move and overrun. This is your biggest reactive risk: units left in the open after your Movement can be cut off or engaged before you've even fought your combats."
+            },
+            {
+              "kind": "callout",
+              "variant": "caution",
+              "text": "Do **not** leave a salient or exposed flank after your Movement Phase. A lone unit in open terrain is easy prey for the enemy's Exploit: without adjacent friendlies there's no MP surcharge (7.8.0) slowing them down, and unless you have red-hex Art or heavy AT/Flak in range to trigger a Movement Halt (7.7.1, 7.7.2), an Exploit-mode formation can walk past and isolate it from its GenS trace (7.7.5)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
