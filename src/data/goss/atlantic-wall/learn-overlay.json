@@ -1,0 +1,1079 @@
+{
+  "module": "atlantic-wall",
+  "moduleLabel": "AW",
+  "modifications": [
+    {
+      "target": "",
+      "action": "add",
+      "insertAfter": "pregame-day-overview",
+      "chapter": {
+        "id": "aw-airborne-stage",
+        "title": "Airborne Assault Stage",
+        "phaseRef": "aw-airborne-assault-stage",
+        "ruleRef": "41.0",
+        "intro": "AW adds a dedicated Airborne Assault Stage that fires before the normal Game Day for D-Day and airborne-heavy scenarios. Paratroop drops happen in their own mini-turn sequence with distinct movement, combat, and recovery rules (41.0). Plan drops carefully — bad weather and flak zones scatter formations.",
+        "decisions": [
+          {
+            "id": "aw-airborne-drops",
+            "title": "Dropping Airborne Divisions on D-Day",
+            "when": "Airborne Assault Stage — Segments 1 and 2 (Drop Zone Placement and Airborne Drop), June 6 AM only (AW (41.1.0), (41.2.0)).",
+            "ruleRefs": [
+              "41.1.0",
+              "41.1.1",
+              "41.1.2",
+              "41.1.2a",
+              "41.1.3",
+              "41.2.0",
+              "41.2.1",
+              "41.2.2",
+              "41.2.3",
+              "41.2.3a"
+            ],
+            "blocks": [
+              {
+                "kind": "prose",
+                "text": "Airborne drops model three uncertainties: DZ placement scatter, DZ effectiveness status (A-E), and per-unit scatter with Fog-of-War dummy counters (AW (41.1.0)-(41.2.3))."
+              },
+              {
+                "kind": "prose",
+                "text": "### Steps (AW (41.1.1), (41.1.2), (41.1.3), (41.2.2), (41.2.3))\n\n1) **Pegasus Bridge first (AW (41.1.1)):** place Ox&Buck Coy in C5217, roll 1d10. 0-8: both bridges captured. 9: glider reduced, German rolls for bridge destruction.\n2) **Place each DZ (AW (41.1.2)):** roll scatter per DZ. Division main DZs don't physically scatter (6 AB: N/W, 82 AB: W, 101 AB: E) per AW (41.1.2a).\n3) **Determine DZ Status (A-E) (AW (41.1.3)):** modified DR with DRMs for adjacent Germans (+1 or +2 for AA), terrain (+1/+2).\n4) **Generate dummy mix (AW (41.2.2)):** per DZ, roll 1d10 per Btn landing to add dummy counters to the FoW pool.\n5) **Land units (AW (41.2.3)):** land non-FoW first (any order), then draw FoW counters randomly. Each unit rolls scatter + terrain + enemy-hex procedure.\n6) **Scatter table (AW (41.2.3a)):** NS / S1-S6 / ES. Terrain eliminations: DR 9 in Woods/Town; DR 8-9 in City/Bocage/Marsh/Forest; any Water."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "Allied: spread dummy FoW units widely during Segment 2 (AW (41.2.2)). Each DZ with poor status generates more dummies — and every FoW forces a German PR check to cross the hex (AW (41.6.1)). Dummies are a time-and-fuel tax on the German reaction, not just deception."
+              },
+              {
+                "kind": "callout",
+                "variant": "gotcha",
+                "text": "Dropping onto an enemy-occupied hex forces each German unit (except WN/StP) to take a PR check, then the Allied unit attacks all surviving Germans (AW (41.2.3b)). FoW units attacking here only have strength 1 / PR 6. High-value units landing on a StP hex is often a one-way trip — plan DZs to avoid known StP locations."
+              },
+              {
+                "kind": "callout",
+                "variant": "why",
+                "text": "AW designer's note (AW (15.4.0)) specifies the DZ-tethering rule simulates operational doctrine — historical airborne operations were re-supplied by airlift and couldn't maneuver freely. The DZ-Status + FoW + scatter chain reinforces this by gating effectiveness on how the initial drop went, not on later Allied decisions."
+              }
+            ]
+          },
+          {
+            "id": "aw-d-day-stages",
+            "title": "D-Day Pre-Game: Airborne and Amphibious Stages",
+            "when": "Immediately before the June 6 AM GT (in any scenario using the D-Day modules). Airborne Assault runs first, then Amphibious Assault — only after both complete does normal SoP begin (AW (41.0), (42.0), (42.4.0)).",
+            "ruleRefs": [
+              "41.0",
+              "41.1.0",
+              "41.1.1",
+              "41.2.0",
+              "42.0",
+              "42.4.0",
+              "42.5.0",
+              "42.6.0",
+              "42.7.0",
+              "42.16.0"
+            ],
+            "blocks": [
+              {
+                "kind": "prose",
+                "text": "D-Day scenarios insert two mini-games before the regular June 6 AM GT. The **Airborne Assault Stage** (11 segments) and **Amphibious Assault Stage** (3 sub-phases of 8 segments each) use their own charts and tables. Both sides participate — this isn't solitaire despite the Amphibious Module being designed for solitaire play (AW (41.0), (42.0))."
+              },
+              {
+                "kind": "prose",
+                "text": "### Airborne order (AW (41.0))\n\n1) Drop Zone Placement + Pegasus Bridge mission (AW (41.1.1)).\n2) Airborne Drop (para units + FoW dummies).\n3) 1st Allied Movement + regroup + bridge demolition.\n4) Glider Landing + Merville Battery mission (AW (41.4.1)).\n5) 1st Allied Combat.\n6) 1st German Movement (activation-gated).\n7) 1st German Combat.\n8-11) Repeat: 2nd Allied Move, 2nd Allied Combat, 2nd German Move, 2nd German Combat."
+              },
+              {
+                "kind": "prose",
+                "text": "### Amphibious sub-phase order (AW (42.4.0))\n\n**Extra segments (June 6 AM, 1st sub-phase only):** Pointe du Hoc (AW (42.5.0)), Utah Drift (AW (42.6.0)), DD Tanks (AW (42.7.0)).\n\nThen each sub-phase: 1) Landing → 2) German Fire → 3) Allied Fire (incl. NGF) → 4) Allied Movement → 5) German Movement → 6) Assault Combat → 7) Demolition → 8) Pin Recovery.\n\nIf any beach isn't cleared by end of June 6 PM, repeat the full Amphibious Stage prior to each subsequent GT until all beaches clear (AW (42.16.0))."
+              },
+              {
+                "kind": "callout",
+                "variant": "caution",
+                "text": "A beach is cleared only when **no German units remain on the Display AND all obstacles are cleared** (AW (42.16.0)). Leaving a single WN alive extends the Amphibious Stage for that beach indefinitely — and delays the AG's naval unit availability per AW (38.3.0)."
+              },
+              {
+                "kind": "callout",
+                "variant": "why",
+                "text": "The sequence is deliberately front-loaded (airborne before amphibious) to mirror history: paratroops dropped hours before the beach landings. Segment ordering within Amphibious (German fire before Allied fire in sub-phase 1) models Germans opening up as the first wave hits the beach (AW (42.4.0))."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "target": "",
+      "action": "add",
+      "insertAfter": "aw-airborne-stage",
+      "chapter": {
+        "id": "aw-amphibious-stage",
+        "title": "Amphibious Assault Stage",
+        "phaseRef": "aw-amphibious-assault-stage",
+        "ruleRef": "42.0",
+        "intro": "The Amphibious Assault Stage runs an 8-segment mini-turn sequence for beach landings (42.0): landing, German fire, Allied fire, Allied movement, German movement, assault combat, demolition, pin recovery. Special D-Day rules (Pointe du Hoc, Utah drift, DD tanks) fire during these segments. Beach clearing and WN/StP mechanics dominate the first few GDs.",
+        "decisions": [
+          {
+            "id": "aw-beach-clearing",
+            "title": "Getting off the Beach: Fire, Breaches, Exits",
+            "when": "Each Amphibious Sub-Phase, all 8 segments in order (AW (42.4.0), (42.8.0)-(42.15.0)). Repeats until the beach is cleared (AW (42.16.0)).",
+            "ruleRefs": [
+              "42.8.0",
+              "42.8.1",
+              "42.8.2",
+              "42.9.0",
+              "42.10.0",
+              "42.10.1",
+              "42.11.0",
+              "42.11.1",
+              "42.11.5",
+              "42.11.6",
+              "42.11.6a",
+              "42.11.6b",
+              "42.11.7",
+              "42.14.0",
+              "42.14.1",
+              "42.16.0"
+            ],
+            "blocks": [
+              {
+                "kind": "prose",
+                "text": "Each sub-phase runs the full 8-segment cycle. Units traverse rows on the Beach Display (Sea → Beach → Shingle → [Pavilion, Omaha only] → Coastal Defense → Beach Exit), clearing obstacles and breaching seawalls/draws, until either the beach is fully cleared or the sub-phase ends."
+              },
+              {
+                "kind": "prose",
+                "text": "### Critical checkpoints (AW (42.8.1), (42.9.0), (42.10.1), (42.11.6), (42.11.7))\n\n1) **Landing + obstacle check (AW (42.8.1)):** each unit in Sea Box rolls 1d10 against current obstacle level. Low tide: vehicles only, DR 0 = step loss. Medium tide: +1 DRM, everybody. High tide: DR unmodified, everybody. Drift check only in 1st sub-phase of June 6 AM.\n2) **German Fire (AW (42.9.0)):** sub-phase caps each Allied box at 1 fire per sub-phase. Start Beach Row, work up. WN fire factor doubles if Allied units are same-box or adjacent with no Beach-Row unit shielding.\n3) **Allied Fire (AW (42.10.1)):** Naval Gunfire value per beach listed on Display, roll 1d10 vs NG Value per beach to determine attack count. DR 0-2 kills WN/armor step; DR 0-2 = 2 steps on personnel/weapon (3-5 = 1 step).\n4) **Allied Movement + Breaches (AW (42.11.1), (42.11.6)):** vehicles 2 MP per beach/shingle/pavilion box (foot = 1). Seawalls need 2 breaches (first lets personnel through, second opens to vehicles). Rangers/CDO only breach 1st step; Engineers/AVRE breach both.\n5) **Demolition (AW (42.14.0), (42.14.1)):** auto-clear check per sub-sector — modified (9 − DR) ÷ 2 rounded up = obstacles removed. Engineers may either clear obstacles OR make a breach this segment, not both.\n6) **Exit (AW (42.11.7)):** only from Beach Exit Boxes, not through enemy-occupied boxes. Units must consolidate from invasion units into standard units. AVRE/Centaur and corps/army Eng Btns don't exit before June 7 AM."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "Prioritize breaching over advancing in Sub-Phase 1 (AW (42.11.6)). AVREs commit their full remaining MP to a breach attempt, but each successful breach unlocks follow-on waves. A single opened draw on Omaha is worth more than 5 step losses on the front line — it turns the beach from a kill-zone into a pipeline."
+              },
+              {
+                "kind": "callout",
+                "variant": "gotcha",
+                "text": "Units creating an overstack are **immediately pinned** (AW (42.11.3)). Cramming the same Beach Exit Box with multiple waves means you're paying pins to push through — and pinned units can't exit. Stagger exits across adjacent sub-sectors rather than funneling everything through one cleared draw."
+              },
+              {
+                "kind": "callout",
+                "variant": "caution",
+                "text": "Corps/army Engineer Btns and AVRE/Centaur units **cannot exit the Display until June 7 AM** (AW (42.11.7)). Budget the initial Battlefield-Map forces knowing your heavy armor support arrives a full GD later."
+              }
+            ]
+          },
+          {
+            "id": "aw-dday-special-segments",
+            "title": "D-Day Pre-Game: Pointe du Hoc, Utah Drift, DD Tanks",
+            "when": "June 6 AM GT, 1st Amphibious Sub-Phase only — the three extra segments before the regular Landing Segment (AW (42.4.0), (42.5.0), (42.6.0), (42.7.0)).",
+            "ruleRefs": [
+              "42.5.0",
+              "42.6.0",
+              "42.7.0",
+              "42.7.1",
+              "42.7.2",
+              "42.7.3"
+            ],
+            "blocks": [
+              {
+                "kind": "prose",
+                "text": "Three historical contingencies are resolved before the first beach landing. Each is a self-contained DR sequence with lasting consequences for the rest of the day."
+              },
+              {
+                "kind": "prose",
+                "text": "### Pointe du Hoc (AW (42.5.0))\n\n1) US places 2 Ranger invasion units in hex C6402.\n2) German rolls 1d10: DR 0 = guns in place (full StP), DR 1+ = guns gone (weakened StP).\n3) In Allied Movement Phase: each ranger step rolls 1d10. DR 0-3 = 1 hit on StP (first kills guns, second kills StP).\n4) Germans roll 1d10 per step. DR 0-2 = 1 step eliminated.\n5) If StP survives, second assault in PM GT with survivors. Survive both = rangers eliminated.\n6) If eliminated: surviving ranger steps sit in hex as defense-1 / PR-8 units with no retreat option; any US unit entering removes them and returns one ranger step as next-segment replacement."
+              },
+              {
+                "kind": "prose",
+                "text": "### Utah drift (AW (42.6.0))\n\nSingle 1d10. DR 8-9: use \"planned\" sub-sectors. DR 0-7: use \"actual\" sub-sectors (historical, ironically less defended). Applies to ALL Utah units — one roll.\n\n### DD Tanks (AW (42.7.0), (42.7.1), (42.7.2), (42.7.3))\n\nMust-swim: at least 1 DD per beach (Sword/Juno/Gold/Utah); on Omaha the 741st (Easy Red 1+2) is mandatory, rest optional.\n\n1) Place swimming DDs in Beach Boxes of target sub-sectors.\n2) For each step swimming: roll 1d10 on DD Survival Table. DR 0 = step survives, anything else = eliminated. No obstacle check.\n3) Drift check for all non-Utah beaches (Utah skips drift): 1d10 per surviving unit on Beach Drift Table. Drift off display = eliminated. Move survivors to Shingle Box of their new sub-sector."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "On Omaha, weigh the 741st's forced swim against the other DD units' option: the Omaha drift table is harsher than the British beaches (AW (42.7.3)). Landing the optional DDs via normal landing craft saves drift risk — the 741st already has to swim regardless, don't compound the exposure."
+              },
+              {
+                "kind": "callout",
+                "variant": "caution",
+                "text": "Utah Drift is a **single DR** for everybody (AW (42.6.0)). If it hits the \"planned\" sectors you may face stronger defenses than the historical \"actual\" sector landing. Both outcomes are committed before any German fire occurs — plan your naval gunfire priority accordingly."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics",
+      "action": "gate",
+      "gate": "AW reorganizes base 15.0 and 16.0 entirely. Allied logistics ramps through five distinct stages (June 6, 7, 8-9, 10, 11+ up to army HQ and depot activation) with different ADVs, PSS rules, GenS path lengths and TP counts at each step (AW (15.0), (15.3.0)-(15.9.0)). German logistics likewise step down over time: ADV 7 on June 6, 5 on June 7, 4 on June 8-11, 3 from June 12, 2 from August 1 (AW (16.2.0), (16.3.0), (16.4.0), (16.5.0), (16.7.0)). Read the AW (15.0) and (16.0) stages for the GD you are playing before applying any base logistics decision."
+    },
+    {
+      "target": "joint-logistics.tp-allocation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### Allied TP is on a custom delivery cycle (AW (15.2.0)-(15.2.2))\n\nUntil an Allied army depot activates, each AG has **6 TP** dedicated only to ammo and fuel delivery (never motorization) — not the base GOSS pool. That 6 is modified before you roll:\n\n1) **Embarked steps (AW (15.2.1a)):** −1 per full 50 steps on the Naval Transit Display, then roll 2d10 for the remainder to check for another −1. +1 bonus if embarked total is zero.\n2) **Weather (AW (15.2.1b)):** −2 if Storm in the AG's weather sector.\n3) Floor is 2 TP, ceiling is 8 TP.\n4) Allocate the adjusted TP between AmP and fuel (at least 1 to each), then roll per GOSS (16.2.0).\n5) Distribute the AmP/FP obtained to corps (AW (15.2.3)). Once assigned, they cannot transfer between corps."
+          },
+          {
+            "kind": "prose",
+            "text": "### German TP scales with the calendar (AW (16.2.0)-(16.7.0))\n\n- **June 6:** 3 TP, motorization only. 7th Army starts with 8 AmP + 8 FP (AW (16.2.0)).\n- **June 8-11:** 6 TP for army logistics + 1 bonus TP for Strategic Map motorization only (AW (16.4.0)).\n- **July 2 onward:** same as June 12-July 1 baseline; check the sector's weather — Ovr/Storm adds extra AmP/FP to stockpile (AW (16.5.0)).\n- **August 1+:** drops to 5 TP, Strategic Map bonus TP gone, additional AmP gone (AW (16.7.0))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Until an Allied army HQ activates, AmP and FP belong to the **corps**, not the army — and cannot transfer between corps in the same AG (AW (15.2.3)). Misallocating early can strand one corps with ammo while its neighbor starves."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Allied: unloading embarked units off the Naval Transit Display isn't just about getting combat power ashore — it directly raises your TP floor (AW (15.2.1a)). A clean anchorage on an AM GT can swing a −2 TP hit back to +0 on the very next Transport and Logistics Phase."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics.fuel-delivery",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### Airborne fuel separation (AW (15.3.0), (15.4.0))\n\nJune 6: all Allied units are in Normal Fuel and no GenS is required. Airborne HQs trace from their own DZ — not from a beach PSS (AW (15.3.0)).\n\nJune 7: airborne divisions are **Low Fuel and cannot be allocated FP** (AW (15.4.0)). They trace a 6 Leg or 6 Mech GenS path from the AB HQ, which must stay within one hex of its primary DZ. Airborne-assigned artillery also cannot use AmP to replenish."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "AW designer explicitly simulates historical operational limits on airborne units — keeping them tethered near DZs until corps HQs activate (AW (15.4.0) designer's note). Don't plan to sprint an airborne division across the map in the first four GDs; the DZ leash and Low Fuel state will stop you."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics.depot-placement",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### AW army-HQ and depot activation triggers (AW (15.8.0)-(15.9.0))\n\nArmy HQs don't arrive via naval transit — they appear when activation conditions are met, checked in the depot placement segment each Transport and Logistics Phase.\n\n- **US 1st Army (AW (15.8.1a)):** Omaha-Utah linked by road, road never within 7 hexes of a non-isolated German unit, Isigny and Carentan both Allied-controlled and 7+ hexes from non-isolated Germans.\n- **US 3rd Army (AW (15.8.1b)):** needs 1st Army depot active, Cherbourg operational (AW (1.2.6f), the 21-GD repair timer), and a clean road corridor from Cherbourg. Auto-activates one depot (AW (15.9.1)).\n- **British 2nd Army (AW (15.8.2a)):** all three CW beaches linked, Bayeux or Caen Allied-controlled, clean 7-hex German buffer.\n- **1st Canadian Army (AW (15.8.2b)):** needs British 2nd Army depot active, Caen AND Bayeux fully Allied-controlled, II Canadian Corps + one British corps subordinated. Auto-activates one depot (AW (15.9.2)).\n\nActivating an AG's first depot jumps ADV to 4 for all subordinate armies, swaps amphibious logistics for full GOSS (15.0)/(16.0), and unlocks the logistics weather DRM (−1 Ovr+rain, −2 Storm) (AW (15.9.0))."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Allied: the US 1st Army depot cannot activate until **Landefront Cherbourg** has been declared by the Germans (AW (15.9.1)). If the Germans delay evacuation of pockets outside Cherbourg to avoid the declaration, your entire depot-driven logistics upgrade stalls. Push Cherbourg isolation aggressively even if you can't take the port yet."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "A second Allied depot cannot activate until 7 GDs after the first (AW (15.9.0)). Plan depot placement timing around the breakout: early for Cobra, later if you're playing Campaign from June 6."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command",
+      "action": "gate",
+      "gate": "AW: the 12AG/21AG boundary is locked on June 6 and only starts flexing once both Vire hexes fall (AW (9.2)). US 1st/3rd Army boundary is player-defined after 3rd Army activation, with Brittany mandatorily in 3rd Army's zone (AW (9.2.1)). CW 2nd/1st Canadian split is player-defined after 1st Canadian activation (AW (9.2.2)). Boundary changes: once every 3 GDs."
+    },
+    {
+      "target": "command.command-shuffles",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### Allied AG boundary (AW (9.2))\n\nFixed line C2007 → C2031 → E2502 → south edge, unchangeable until both Vire hexes (E2517, E2618) are Allied-controlled. After Vire falls:\n\n1) Boundary runs from Vire to east edge of map F.\n2) At most 2 turns in the line, unless following a primary road or river.\n3) You may shift the boundary up to 2 hexes left or right, but only once every 3 GDs.\n\n### LXXXVI Corps quirk (Axis) (AW (16.1.1))\n\nThe LXXXVI Corps can be attached to either 7th Army or PG West. It traces its own PSS off the east map edge, does **not** need to trace through an army HQ, and doesn't count toward the army's corps total for ADV. It's auto-Low Fuel — pay ½ FP to bring it to Normal. Cap: 6 corps assets, 2 Inf formations, 1 Mech formation."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Axis: use LXXXVI Corps as a flexible anchor. Its self-contained supply (AW (16.1.1)) lets you reinforce either flank without restructuring your main-army corps slots or fuel allocations."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command",
+      "action": "add",
+      "insertAfter": "command-shuffles",
+      "decision": {
+        "id": "aw-cherbourg-landefront",
+        "title": "Cherbourg Isolation and Landefront Declaration (Axis)",
+        "when": "Any Transport and Logistics Phase after US forces cut the Cotentin — the moment the Cherbourg garrison cannot trace GenS to any other German PSS, the Axis must declare Landefront Cherbourg (AW (1.2.6d)).",
+        "ruleRefs": [
+          "1.2.6a",
+          "1.2.6d",
+          "1.2.6e",
+          "1.2.6f"
+        ],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "Cherbourg is a self-contained logistic pocket with a decaying ADV clock (AW (1.2.6d)). Declaration is **mandatory** the moment isolation occurs — it's not a choice for the Axis, but how you staff the pocket and when the Allies trigger isolation are both tactical decisions (AW (1.2.6d), (1.2.6e))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Landefront effects (AW (1.2.6d))\n\n1) Hex A3609 becomes a PSS and effective corps HQ for all units in the pocket.\n2) Cap: 3 formations + 12 corps asset units (StP/WN don't count). Excess formations cost −1 ADV; excess corps assets get OhS markers.\n3) ADV starts at 4, drops 1 every 21 GTs. When ADV hits 0, every unit checks surrender as if OoS and isolated.\n4) All Mech are Normal Fuel on the declaration GD; from the second GD all HQs are Low Fuel."
+          },
+          {
+            "kind": "prose",
+            "text": "### Cherbourg morale (AW (1.2.6e))\n\n- **−1 PR** the GT a US unit captures any Cherbourg perimeter hex.\n- **−2 PR** if any Cherbourg town/city hex is Allied-occupied.\n- **PR = 1** if C3609 is captured — and every Axis unit in the peninsula (including WN/StP) must surrender-check every AM GT from then on."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "The 21-GT ADV clock (AW (1.2.6d)) starts at declaration, not at isolation — so the Allied player has 84 GTs before the garrison auto-surrenders. Plan assault timing with the cap in mind: the longer you stall, the weaker the defense gets."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Allied: Cherbourg port takes **21 GDs of repair** after all four port hexes (C3609, C3709, C3809, C3909) fall before the US 3rd Army can activate (AW (1.2.6f)). If your scenario window is tight, you may never see 3rd Army even with Cherbourg taken — factor the timer into your offensive plan."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "The 3rd Army activation is deliberately gated on Cherbourg operational (AW (1.2.6f) designer's note) — historically the port was used for bulk supply unloading that enabled 3rd Army, and the rule models the Pluto pipeline benefits as a later fuel delivery boost rather than a separate mechanic."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command",
+      "action": "add",
+      "insertAfter": "command-shuffles",
+      "decision": {
+        "id": "aw-strategic-map",
+        "title": "The Strategic Map: Reinforcement & Breakout Module",
+        "when": "Beginning June 6 AM GT — Strategic Map activity occurs once per GD in the AM GT only. This is the off-map theater where German reinforcements marshal and both sides maneuver once the Allies reach Brittany/the Seine (AW (27.0), (1.3.8)).",
+        "ruleRefs": [
+          "27.0",
+          "27.1.0",
+          "27.2.0",
+          "27.3.0",
+          "27.3.1",
+          "27.3.2",
+          "27.3.3",
+          "27.3.4",
+          "27.3.5",
+          "27.3.7"
+        ],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "AW includes a 57-location Strategic Map (sectors A, B, C, D) tracking units off the Battlefield Map. It's the arrival pipeline for German reinforcements via rail/leg/Mech and, post-breakout, a secondary maneuver space for both sides. APs assigned to Strategic interdiction are unavailable on the Battlefield Map that GD (AW (1.3.8))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Movement types (AW (27.3.0))\n\nMovement groups up to 6 units each. One pass per Strategic Movement Segment in the AM GT:\n- **Rail (German only, AW (27.3.1)):** up to 4 attempts per group; capacity drops monthly (12 groups in June, 10 July, 8 August) and each sector has its own cap. Each group exceeding a sector cap is a −1 DRM on all German logistic DRs that GD (AW (27.3.1b)). Mech/Art Btns count as 2 units in a rail group.\n- **Mech (both sides, AW (27.3.2)):** up to 2 attempts per group; requires ½ FP per group (AW (27.3.2b)). Groups without fuel move as leg.\n- **Leg (both sides, AW (27.3.3)):** 1 attempt per segment.\n\n### Interdiction (AW (27.3.4), (27.3.5))\n\n- German: roll 1d10, must beat the sector's interdiction value (leg/Mech value left of slash, rail right). Modified by weather on adjacent Battlefield sector and Allied AP committed to Strategic interdiction.\n- Allied: DR 1-9 succeeds. Weather DRMs affecting Germans are **subtracted** for Allies. Allied units can never enter Honfleur, Lisieux, or Amiens boxes."
+          },
+          {
+            "kind": "prose",
+            "text": "### Entering/exiting the Battlefield Map (AW (27.3.1d), (27.3.2d), (27.3.7))\n\n- Mech groups starting in an entry box (four-pointed star) that pass interdiction: place at the entry hex, use no more than ½ MA that GT. Some entry hexes print a custom MA reduction — use that instead.\n- Groups NOT starting in an entry box that exit the Strategic Map still stop at the Battlefield entry hex and don't move further that Movement Phase.\n- Exiting: need at least half MA remaining, stop in the first location box, wait for next AM GT's Strategic Movement Segment."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Axis: concentrate rail capacity in one sector each GD. Overstack in a sector where interdiction is low (sector C typically) rather than spreading across all four — the −1 logistic DRM per excess group hurts less than failing multiple interdiction DRs (AW (27.3.1b), (27.3.4))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Once any Allied unit enters a Strategic Map sector, that sector's German rail capacity is **permanently lost** for the rest of the campaign (AW (27.3.1e)). The total map capacity is unchanged, but you've just crowded other sectors. Allied players should raid empty German sectors during breakout to slice rail capacity."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "AW's Strategic Map exists to abstract three months of maneuver outside Normandy without forcing map-expansion counters. Using it well trades some Battlefield Map AP (each AP to Strategic interdiction is AP not on the front) for bigger effects on the reinforcement pipeline (AW (27.3.4), (1.3.8))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command",
+      "action": "add",
+      "insertAfter": "command-shuffles",
+      "decision": {
+        "id": "aw-strategic-combat",
+        "title": "Strategic Map Combat",
+        "when": "Each friendly Strategic Movement Segment, once per GD, between opposing groups in the same location box (AW (27.4.0)).",
+        "ruleRefs": [
+          "27.4.0",
+          "27.4.1",
+          "27.4.1a",
+          "27.4.1b",
+          "27.4.2",
+          "27.4.2a",
+          "27.4.2b",
+          "27.4.2c",
+          "27.5.0"
+        ],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "Strategic Map combat is deliberately abstracted — no Ground Assault table, no column shifts, no Fire Support segment. A single combat value comparison yields step losses and an optional retreat (AW (27.4.2))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Procedure (AW (27.4.1a), (27.4.1b), (27.4.2))\n\n1) Each side totals current combat strength of all units (attacker = offensive, defender = defensive). HQ strength ignored unless HQs are the only unit type. Artillery barrage strength adds to totals.\n2) Apply modifiers (all cumulative, round fractions up):\n   - Mech units in a leg group: half strength.\n   - OoS: half strength.\n   - Units in a rail group: half strength (cannot attack).\n   - Defender in a town box: ×1.5.\n   - Defender in a city box: ×2.\n3) Each side may commit up to 8 AP (allocated to GS) — each AP = +2 combat strength.\n4) Add force ratio bonus (not cumulative):\n   - +2 if larger force ≥ 2× smaller.\n   - +4 if ≥ 3×. +6 if ≥ 4×.\n5) Each side picks lead PR (added to strength), lead armor or AT value, +1 for active leader, +1 defender in city, +2 defender in fortress.\n6) Subtract smaller total from larger. Combat value ≤ 1 is a draw (1 step each side, no retreat). Otherwise loser takes step losses; if retreating, losses halve (AW (27.4.2a))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Fortress exception (AW (27.4.1))\n\nIf Allies move into a location with a fortress symbol and Germans occupy it, Germans may **withdraw into the fortress** — at which point Allies may declare a siege and remain without attacking. Fortress defenders take half losses and are never required to retreat (AW (27.4.2a))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Retreating units need a **valid retreat path toward a friendly supply source** (AW (27.4.2c)) — if they can't, they must stay and eat the full combat value in losses. Surrounding a German location box on the Strategic Map before attacking is devastating."
+          }
+        ]
+      }
+    },
+    {
+      "target": "weather",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### AW weather sectors (AW (19.0), (19.2.0))\n\nAW has **two weather sectors** (eastern and western) because the campaign area is too large for one. Campaign and June-6-start scenarios use historical weather for June 6-7, then roll variable (AW (19.2.1), (19.2.2)):\n- June 6 GD: POvr, dry ground.\n- June 7 AM: Ovr, dry.\n- June 7 PM/Night: Clear, dry.\n- June 8 AM onward: roll per weather sector."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Axis: clear weather in the eastern sector boosts Allied interdiction on your Strategic Map reinforcements (AW (27.3.4)). Ovr/Storm weather adds AmP/FP to your stockpile (AW (16.4.0), (16.5.0)). The same weather roll flips both ways — plan German reinforcements around sector-specific weather, not a single map-wide forecast."
+          }
+        ]
+      }
+    },
+    {
+      "target": "air-allocation.mission-mix",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### Air transport points (AW (20.5))\n\nATP (6 per GD) become available starting June 11 AM. Until then, Allied air transport capacity is busy supporting airborne bridgeheads and cannot be used for other missions (AW (20.5) designer's note). Don't budget ATP-based resupply before June 11 GD.\n\n### Air superiority (AW (20.6))\n\nIgnore GOSS (20.6.0) — there's no ASup track. If you fly an SI mission, you commit up to 4 GS AP as escort for Flak suppression using GOSS (20.7.2)."
+          }
+        ]
+      }
+    },
+    {
+      "target": "fire-support",
+      "action": "gate",
+      "gate": "AW adds three FS-layer modules absent from base: naval gunfire (AW (11.9)), carpet bombing (AW (20.8.0)-(20.8.6)) which requires 4-GD advance planning, and CDO special assaults against WN/StP on D-Day (AW (4.5.6a)). StP/WN often have organic artillery with an arc of fire — allocate a naval unit against them to zero their FS for the GD (AW (4.5.10b))."
+    },
+    {
+      "target": "fire-support.offensive-support",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### Naval gunfire availability (AW (11.9))\n\nOnly Allied side has naval units. 5 types: BB, Monitor, CA, CL, DD. Roll 1d10 per type per task force (Western/US, Eastern/CW) each GD — result is how many are available. Record on AP Track. Post-GD limits:\n- **July 1+:** Western TF loses everything except DD.\n- **July 8+:** Eastern TF capped at 1 BB or Mon, 1 CA, 2 CL, 4 DD.\n- ADV is **4** and unmodifiable. Failed AD check removes that unit for the GD.\n\n### StP/WN arc-of-fire play (AW (4.5.10b))\n\nIf a naval unit is allocated against a StP/WN in the AM GT, that position's FS barrage factor is **zero for both AM and PM**. Mark with a red Ace of Spades. A decisive use of limited naval assets."
+          }
+        ]
+      }
+    },
+    {
+      "target": "fire-support",
+      "action": "add",
+      "insertAfter": "offensive-air-support",
+      "decision": {
+        "id": "aw-carpet-bombing",
+        "title": "Carpet Bombing (Allied)",
+        "when": "Pre-plan 4 GDs in advance, execute in the Offensive Air Support sub-segment (AW (20.8.1), (20.8.3)). Campaign: one mission per week per AG starting July 1. Scenarios 4 and 5 each allow one CB per AG (AW (20.8.2)).",
+        "ruleRefs": [
+          "20.8.0",
+          "20.8.1",
+          "20.8.2",
+          "20.8.3",
+          "20.8.4",
+          "20.8.5",
+          "20.8.6"
+        ],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "Carpet bombing uses Heavy Bomber (HB) AP as pre-planned ground support. It does NOT require observation, cannot be stacked with GS or naval in the target hex, and costs you **half of all Allied AP on both AGs for the GD of execution** (AW (20.8.3), (20.8.6))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Planning (AW (20.8.1), (20.8.2))\n\n1) Minimum 3 HB points per mission. Write down mission GT, target hex, nationality, HB count.\n2) 4-GD lead time. Any change = restart the 4-GD counter.\n3) Weather on mission GT must be clear. If not, postpone GT by GT (the HBs stay committed).\n4) Campaign only allows CB starting **July 1 GD**; early plans must target July 1 or later."
+          },
+          {
+            "kind": "prose",
+            "text": "### Execution (AW (20.8.3)-(20.8.5))\n\n1) Place a blue spade marker in the planned target hex.\n2) Each additional HB adds 1 adjacent marker. 3rd+ marker must be adjacent to at least 2 other CB markers — builds a connected blob.\n3) For each marked hex, conduct 3 FS volleys using the Carpet Bombing Table strength (strength varies by total CB missions conducted to date).\n4) DRMs: −3 ET/WN/Cherbourg fortified area; −6 StP; −1 pure AFV unit. Density DRMs apply.\n5) Results: +1 AS hit to every unit (max 1), targets cannot retreat, max step loss doesn't apply — all numerical hits are step losses, random unit selection if excess."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Carpet bombing is strongest vs units in clear terrain without ET (AW (20.8.3)). Target the hex right behind the German front line where you plan the next GA — guaranteed AS markers + step losses + forced no-retreat turn the follow-up PA attack into a lopsided fight."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Committing CB costs half of **both AGs'** AP for the GD (AW (20.8.6)). Don't plan CB on the same GD you were counting on heavy GS/GI from the other AG. Coordinate with your AG partner before locking the 4-GD plan."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "The 4-GD planning window reflects real operational-level bomber tasking. AW uses the lag to force the Allied player to commit before weather and tactical situation are fully known — you're betting on a future Schwerpunkt (AW (20.8.1))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "fire-support",
+      "action": "add",
+      "insertAfter": "offensive-air-support",
+      "decision": {
+        "id": "aw-cdo-special-assault",
+        "title": "CDO/Ranger Special Assault (D-Day only)",
+        "when": "End of the Allied Movement Phase on June 6 AM, PM, or Night GTs, against a WN or StP (AW (4.5.6a)).",
+        "ruleRefs": [
+          "4.5.6",
+          "4.5.6a"
+        ],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "CDO and Ranger Btns can launch a one-off special assault against a WN or StP on D-Day — before regular GA. The attacking force must include at least one ranger/CDO Btn with more than one step, launched from a single hex. Only one per WN/StP per GT (AW (4.5.6a))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Procedure (AW (4.5.6a))\n\n1) Sum the ranger/CDO + engineer + pure AFV steps in the attacking stack.\n2) Roll 1d10. If DR ≤ total: 1 hit on WN/StP. If DR > total: attacker takes (DR − total) step losses, ranger/CDO taking the first loss.\n3) 1 hit = 1 step off the WN/StP + 1 discretionary hit on any other unit in the hex.\n4) You may still conduct a standard tactical GA on the same hex that GT — but the assault participants can't be in it."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Stack engineers + AFVs with the ranger/CDO Btn to improve both hit probability and step-loss cushion (AW (4.5.6a)). A 2-step CDO + 1 eng + 1 AFV step = DR 0-4 auto-hits the fortification."
+          }
+        ]
+      }
+    },
+    {
+      "target": "construction-phase",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### AW ET-3 construction (AW (17.3.3c))\n\nBoth sides may build ET-3 starting June 8 AM. Replace an ET-2 with an under-construction ET-3 at the start of a friendly Construction Phase; completes next friendly Construction Phase. Each side limited to one ET-3 every 3 GDs and 10 on the map at once. You can also reverse direction — swap an ET-3 back to ET-2 on an eligible GD — but the removed ET-3 can only be re-placed 3 GDs later.\n\n### Bocage lets ET-2 act as ET-3 in GA (AW (1.2.7b))\n\nDefending units in a Bocage hex may treat an ET-2 as an ET-3 for reducing FS numerical/mandatory hits in GA (GOSS (11.6.2), (13.9.2b)). Worth siting ET-2 in Bocage over other terrain when you have the choice."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Allied ET-3 construction is available — but AW intermediate scenarios **forbid ET-3 construction entirely** (AW (31.10.0)). Only the D-Day scenario and Campaign use the full (17.3.3c) rule; in intermediate scenarios, only pre-placed ET-3s exist."
+          }
+        ]
+      }
+    },
+    {
+      "target": "replacement",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### AW replacement specifics (AW (22.1.6), (22.1.7), (22.1.8))\n\n- **Canadian:** max 2 Inf ReP per GD (drawn from CW pool).\n- **Polish:** max 1 Inf ReP per GD (drawn from CW pool).\n- **Free French 2nd Arm Div:** max 1 Inf ReP per GD (drawn from US pool). No cap on armor ReP.\n- **Luftwaffe units (FJ, LW, Flak):** +1 Inf ReP per GD **bonus** that doesn't stockpile — use it or lose it, any Luftwaffe Inf unit eligible.\n- **17th MG Btn, Sturm Btn:** don't contribute to step-loss totals at all.\n\n### WN disbanding for ReP (AW (4.5.9b))\n\nFrom June 7 AM onward, the Axis may voluntarily remove WN during the Administrative Phase. Every **2 WN removed** = 1 Inf ReP usable immediately on a German leg infantry unit (defensive PR ≤ 6) that both WN can trace a 6-Leg MP path to. Cannot resurrect eliminated units; cannot create breakdown Coys."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Axis: disbanding WN in the interior (not on the front) is a clean way to rebuild broken Inf Btns without waiting on the ReP table (AW (4.5.9b)). WN deep inland have little defensive value by June 12 anyway — trade them for steps on the active front."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command.leader-activation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### AW formation leader highlights (AW (23.2.1d), (23.2.1e))\n\nIn addition to base GOSS (23.0) benefits, AW layers scenario-specific abilities:\n\n**Allied:**\n- **Frost (1 AB):** +2 MP to subordinates, +1 shift and ignore 1 discretionary hit defending in town/city.\n- **Gale (6 AB, with 6 AB HQ):** up to 3 defensive + 2 offensive shifts per Combat Phase, max 2 per GA.\n- **Gavin (82 AB):** +2 shifts (not the standard +1), +2 MP to leg subordinates.\n- **Ridgeway (82 AB, with HQ):** +1 PR to one sub-formation (max 9).\n- **Roberts (11 Arm, with HQ):** +1 hex advance after GA for 11 Arm subordinates.\n- **Robertson (2 Inf, with HQ):** 2 Inf attached units move in any order.\n- **Taylor (101 AB):** +1 PR (off/def) to 101 AB units stacked or adjacent (max 9).\n\n**Axis:**\n- **Meyer (12 SS, with HQ):** 2 shifts instead of 1, splittable across 2 GAs; negates multi-formation penalty; pure AFV +1 advance hex and ignores enemy movement halts; stacked units get one overrun in a regular Movement Phase.\n- **Wunsche (12 SS):** stacked subordinate gets +1 advance hex after GA."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Meyer's combined package (AW (23.2.1e)) is the single strongest leader in AW. Keeping him alive and positioned with 12 SS HQ on Schwerpunkt GTs layers 2 favorable shifts, free overrun, multi-formation penalty immunity, and AFV bonuses simultaneously — a decisive force multiplier for the Axis defense of Caen."
+          }
+        ]
+      }
+    },
+    {
+      "target": "mode-determination.pick-mode-per-formation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### AW special unit classes (AW (1.6), (4.5.9), (4.5.10), (4.5.5), (4.5.6))\n\nAW adds two fortification classes that behave like units for combat purposes:\n- **WN (Wiederstandnesten):** treated as ET-2 for FS and GA shifts; 1-step unit with printed intrinsic defense; cannot attack; defensive PR 5; may observe FS for one formation; no GenS check until June 12.\n- **StP (Strongpoint):** treated as Fort unless assaulted through a hexside outside its arc of fire (then ET-2 for GA, still Fort for FS); defensive PR 6; no GenS check until June 12.\n- **Kangaroos (CW only):** available August 7 AM; first use must be a Canadian II Corps Inf unit; CW-only transport (AW (4.5.5)).\n- **Rangers/Commandos (AW (4.5.6)):** −2 DRM to ignore movement halts; up to 6 CDO attached to 6 AB Div; treat WN/StP as forts when lead unit in GA.\n- **Hedgerow cutter tanks (AW (1.2.7d)):** roll starting July 15 AM (−1 DRM per GD past July 22). On DR 0-1, Sherman steps in a GA allow up to 2-hex Bocage advance and negate the defender's mandatory-to-discretionary conversion."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Bocage and Hedgerow hexes are movement-covering terrain (AW (1.2.7a)), so they block most movement halts until hedgerow cutters arrive. The +/-1 PR penalty to place a delay marker in Bocage also disappears once cutters are operational (AW (7.9.5))."
+          }
+        ]
+      }
+    }
+  ],
+  "scenarioOverrides": {
+    "aw-intro": {
+      "label": "Introductory Scenarios (1-3)",
+      "modifications": [
+        {
+          "target": "command",
+          "action": "gate",
+          "gate": "AW Intro (Scenarios 1-3): Skip the entire Command Phase. No command boundaries, lulls, leaders, surrender, OoC penalties, or multi-formation rules. Ignore GOSS (3.2.0)-(3.5.0) and (9.0) entirely (AW (31.0), (31.1.0))."
+        },
+        {
+          "target": "joint-logistics",
+          "action": "gate",
+          "gate": "AW Intro: No Logistics Table, no fuel rolls, no AmP delivery, no TP for delivery (AW (31.11.0)). Units are in GenS if they can trace an enemy-free path to their PSS. Fail to trace = OhS marker; if the OhS unit then moves >½ MA, contributes to FS, attacks, or defends without halving strength, it becomes OoS."
+        },
+        {
+          "target": "joint-fuel-value-determination",
+          "action": "gate",
+          "gate": "AW Intro: Joint Fuel Value Determination is skipped — ignore all references to fuel, AmP, Maneuver Reserve, ENA, bridge collapse (AW (31.0))."
+        },
+        {
+          "target": "air-allocation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### AW Intro air (AW (31.0), (31.2.0))\n\nEach scenario specifies its own AP pool. No Strategic Map assignment, no air supply, no Strategic Interdiction. Ignore Maneuver Reserve and ATP rules."
+              }
+            ]
+          }
+        },
+        {
+          "target": "active-exploit-phase",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### AW Intro Exploit (AW (31.5.0))\n\nNo Exploitation Phase. Instead, at the start of a friendly Movement Phase, Mech units may be flagged Exploit. They do NOT move in the Movement Phase. After all GAs resolve in the Combat Phase, Exploit units move up to ½ MA and may overrun (GOSS (7.11.0)). Remove the marker when movement is done. Exploit units don't pay extra for moving adjacent to enemies unless the hex lacks movement-covering terrain."
+              }
+            ]
+          }
+        },
+        {
+          "target": "movement-segment.adjacency-zoc-mh",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### AW Intro Movement Halts (AW (31.8.0))\n\nIgnore GOSS (7.3.3a) and (7.3.3b). Halts occur only when:\n- A PA-mode unit moves adjacent to an enemy unit.\n- A unit enters a hex adjacent to an enemy unit AND the hex lacks movement-covering terrain.\n\nFort/ET halts (GOSS (7.3.3c)) still apply."
+              },
+              {
+                "kind": "callout",
+                "variant": "why",
+                "text": "AW designer note (AW (31.8.0)): the simplified halt rule drops the artillery-spotting requirement from the full rules. For intro scenarios most hexes are in range anyway, so the simplification loses little fidelity while speeding play."
+              }
+            ]
+          }
+        },
+        {
+          "target": "construction-phase",
+          "action": "gate",
+          "gate": "AW Intro: Initial setup places all ET. Construction benefits of ET-2 apply normally; **ET-3 may NOT be built** during intermediate scenarios (AW (31.10.0))."
+        }
+      ]
+    },
+    "aw-goodwood": {
+      "label": "1: Operation Goodwood",
+      "modifications": [
+        {
+          "target": "air-allocation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Goodwood air (AW (32.2.0), (32.2.1))\n\n- Allied only. 32 AP per GD starting July 18 PM GT (AW (32.2.1)).\n- AM GT of July 18: the Allied side conducts a pre-scenario Carpet Bombing mission (AW (32.2.2)) — no AP cost, built into the scenario.\n- No German AP."
+              },
+              {
+                "kind": "prose",
+                "text": "### Goodwood CB setup (AW (32.2.2))\n\nBefore July 18 AM GT begins, every German-occupied hex in the box 5120-5125 → 5625-5620 receives one AS hit + a DR. Cumulative DRMs: −1 if ≤2 steps, −1 if pure AFV, −1 if ET-2, −2 if ET-3.\n- 0: no effect.\n- 1-3: 1-step loss.\n- 4-6: 2 steps.\n- 7-9: 3 steps.\n\nAll affected units: no movement halts generated, halved MA if moving out while marked, Axis PR checks at end of July 18 AM/PM German turn to remove the marker. All residual markers clear at end of July 18 PM German turn."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "The opening Goodwood CB does the damage of a full-scale carpet bombing mission at zero AP cost — but it hits a fixed box, so pre-position Allied attacks to exploit the AS-marked corridor on the very first GT (AW (32.2.2))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "fire-support",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Goodwood FS (AW (32.3.0), (32.5.0), (32.5.1a))\n\nNaval gunfire is baked into the artillery group totals — no separate NG points. Allied side gets 4 AGRA groups (16 pts, range 7 each, 2 groups per corps) plus divisional HQ (12 pts, range 6). Group assignments (II Cdn vs I/VIII Corps) are locked at start — no switching during the scenario.\n\n### German FS (AW (32.5.2a))\n\nEach German arty unit fires once per GT, marked Ammo Depleted after firing (cleared at GT end). NW (AW (32.5.2b)) fire once per GD; Heavy Flak Coys (AW (32.5.2c)) contribute 1 pt range 4 to FS missions and fire once per player turn."
+              }
+            ]
+          }
+        },
+        {
+          "target": "weather",
+          "action": "gate",
+          "gate": "Goodwood weather is fixed (AW (32.4.0)): July 18 clear/dry all GTs; July 19 POvr/wet all GTs; July 20 AM Ovr/wet, PM+Night Ovr/mud. No rolls."
+        },
+        {
+          "target": "movement-segment",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Goodwood movement (AW (32.7.0)-(32.7.2))\n\n- **No TP** — no mount/dismount, no inherent div TP, no Strat movement.\n- **2nd Cdn Div + 2nd Cdn Armor Bde + 2 II Cdn Corps arty** cannot voluntarily cross east of the 2nd Cdn boundary. Forced retreats east must move back next Allied Movement Phase; may not enter PA or be designated for TA until west of the line.\n- **German side:** only units west of the 49th British Division east boundary may move or initiate GAs. Pz Coys of 12 SS Div are exempt. All units defend normally and may observe/conduct FS."
+              }
+            ]
+          }
+        },
+        {
+          "target": "construction-phase",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Goodwood bridging (AW (32.6.0), (32.6.1))\n\nNo demolition or construction except: at end of July 19 AM only, if a hex south of the Orne is Allied-occupied and started the scenario German-occupied, the Allied player may place 1 bridge across one river hexside at that location. Max 3 bridges for the scenario, 1 per GT (AW (32.6.1))."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "aw-epsom": {
+      "label": "2: Operation Epsom",
+      "modifications": [
+        {
+          "target": "air-allocation",
+          "action": "gate",
+          "gate": "Epsom: Allied only, 24 AP per GD from scenario start. No German AP, no CB mission (AW (33.2.0))."
+        },
+        {
+          "target": "fire-support",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Epsom naval (AW (33.3.0))\n\n- 1 BB (8 FS pts) + 1 CA (6 FS pts).\n- Only one naval unit per FS mission.\n- Each is available once per GD (AM OR PM).\n- Any hex within 5 hexes of C3620 is in range of either.\n\n### Epsom artillery (AW (33.5.0), (33.5.1a))\n\nAllied: 1 artillery group (VIII Corps, 16 pts range 6) + divisional HQ (12 pts range 6). Reset at end of each player turn. German side uses standard per-unit FS with Ammo Depleted markers (AW (33.5.2a))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "weather",
+          "action": "gate",
+          "gate": "Epsom weather is fixed (AW (33.4.0)): June 25 POvr/dry, June 26 POvr/wet all GTs, June 27 AM POvr/dry then clear/dry, June 28-29 clear/dry, June 30 AM clear/dry then POvr/wet."
+        },
+        {
+          "target": "movement-segment",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Epsom movement (AW (33.7.0)-(33.7.2))\n\n- **No TP** available. No Strat movement.\n- **VIII Corps inactive until June 26 AM GT** — no movement, construction, FS observation/conduct, or GAs. From June 26 AM, fully active.\n- Except for 15 Inf Div, no VIII Corps unit may move west of the 49th Inf Div boundary.\n- 49th Inf Div may not move east of its boundary.\n- **German:** only units west of 49th Bde east boundary may move/attack. 12 SS Pz Coys are exempt."
+              },
+              {
+                "kind": "callout",
+                "variant": "caution",
+                "text": "The VIII Corps delay is strict — the scenario's entire opening GT is German reaction time. Use June 25 AM/PM for any pre-positioning of already-active units (49th Bde) and FS concentration; VIII Corps comes online on GT 4 (AW (33.7.1))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "construction-phase",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Epsom bridging (AW (33.6.0), (33.6.1))\n\nBridge demolition at end of friendly Movement Phase or via hasty demo (17.3.3a/b). No heavy bridges, no bridge collapse. At start of any GT Allies have a unit south of the Odon, they may place 1 bridge in that Allied-occupied hex. Max 3 bridges, 1 per GT."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "aw-cherbourg": {
+      "label": "3: Battle for Cherbourg",
+      "modifications": [
+        {
+          "target": "air-allocation",
+          "action": "gate",
+          "gate": "Cherbourg: Allied only, 36 AP per GD (AW (34.2.0), (34.2.1))."
+        },
+        {
+          "target": "fire-support",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Cherbourg naval (AW (34.3.0))\n\n1 BB + 1 CA + 2 CL + 3 DD available. GOSS (11.3.2)/(11.4.2) + AW (11.9.0) apply with exceptions:\n- Available every AM AND PM (no Ammo Depletion check).\n- Range traced from any full sea hex.\n- Allocating one naval unit against a barrage-capable WN/StP zeroes that position's FS for the GT.\n\n### Cherbourg ADV (AW (34.5.3a), (34.5.3b))\n\n- US ADV 6 flat.\n- German ADV: 4 (to June 20 Night), 3 (June 21 AM to June 24 Night), 2 (June 25 AM to end).\n- No AmP, split fire, NW/Flak depletion, or ADV modification."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "Zeroing a WN/StP's barrage by allocating a naval unit (AW (34.3.0)) is massively valuable on Cherbourg — the defensive positions stack multiple artillery batteries and an AP-equivalent naval strike costs nothing in your FS mission budget."
+              }
+            ]
+          }
+        },
+        {
+          "target": "weather",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Cherbourg weather (AW (34.4.0))\n\nJune 19 all GTs: POvr/dry. From June 20 AM, roll:\n- 1d10 for atmospheric: 0-4 clear, 5-6 POvr, 7-9 Ovr.\n- If POvr/Ovr, 2nd 1d10 for ground: 0-3 dry, 4-6 wet, 7-9 mud."
+              }
+            ]
+          }
+        },
+        {
+          "target": "movement-segment",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Cherbourg movement (AW (34.7.0)-(34.7.2))\n\n- **No TP** but Allied divisions retain inherent TP capability. No Strat movement.\n- Allied movement: unrestricted.\n- **German restrictions** (represent Allied GI out-of-scope):\n  - Night or Ovr atmospheric: full MA.\n  - POvr AM/PM: Mech −2 MA, Leg −1 MA.\n  - Clear AM/PM: all MA reduced by one-third."
+              }
+            ]
+          }
+        },
+        {
+          "target": "replacement",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Cherbourg replacements (AW (34.10.0)-(34.10.2))\n\n- US may declare a GD-long lull once at start of any AM GT. Effects:\n  - Allied units move 1 hex per GT.\n  - German units move up to 1/3 printed MA.\n  - Units starting adjacent to enemy may only move closer to GenS.\n  - No combat either side.\n  - All US Btns with ≥1 step loss replace one step. Keep all units/breakdown Coys separate — Btns broken down and then with a Coy loss can replace the Coy OR reconstitute.\n  - US cannot exceed starting-scenario step totals.\n- Germans receive 6 Inf ReP steps the GD Allies declare the lull. Distribute to reduced Inf units (max 1 per unit), no resurrections."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "The Allied lull in Cherbourg (AW (34.10.1)) is a one-time strategic reset button — time it for a GT after your initial assault when German ReP arrivals won't swing combat but your own step-replenishment does. Declaring too early wastes the ReP before you've taken losses worth refilling."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "aw-hedgerows": {
+      "label": "4: Battle of the Hedgerows",
+      "modifications": [
+        {
+          "target": "joint-logistics",
+          "action": "gate",
+          "gate": "Hedgerows Scenario 4: intermediate logistics. Simplified ADV/AmP/fuel/TP schedule — each Allied army starts 5 AmP + 3/GT, German 2 AmP + 1/GT (2 AmP/GT if eastern sector Ovr-with-rain/Storm). 3 TP per Allied army, 2 TP German — all motorization only (AW (36.5.0)-(36.5.5))."
+        },
+        {
+          "target": "air-allocation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Hedgerows air (AW (36.2.0), (36.2.1))\n\n- US 44 AP/GD, CW 40 AP/GD. No increase in air effort (AW (20.1.1c) disabled).\n- **8 HB points available to each AG for ONE Carpet Bombing mission.** Missions on different GDs only; both are the third AG attack. Half all AP for both AGs on CB day. CB may be pre-planned before scenario start.\n- German 6 AP/GD with abort procedure."
+              }
+            ]
+          }
+        },
+        {
+          "target": "fire-support",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Hedgerows naval (AW (36.3.0))\n\nStandard AW (11.9.0) NGF rules apply with limits:\n- **Western TF:** DD only, no other types.\n- **July 8 GD+ Eastern TF:** max 1 BB or Mon, 1 CA, 2 CL, 4 DD."
+              }
+            ]
+          }
+        },
+        {
+          "target": "replacement",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Hedgerows ReP (AW (36.6.0)-(36.6.2))\n\nSimple fixed-flow replacements per GOSS (22.1.3):\n- **21st AG:** 3 Inf + 3 Arm ReP per AM GT.\n- **12th AG:** 4 Inf + 4 Arm ReP per AM GT.\n- **German:** 1 Inf + 1 Arm ReP per AM GT."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "aw-cobra": {
+      "label": "5: Cobra",
+      "modifications": [
+        {
+          "target": "command",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Cobra opening (AW (37.1.0))\n\nThe scenario begins with the US 1st Army just ending a **cancelled lull (side 1)** — you start with the post-lull mechanic active. Plan your AM GT 146 (July 25) offensive with that context: side-1 column shift on first GA, GenS advantage in effect."
+              }
+            ]
+          }
+        },
+        {
+          "target": "joint-logistics",
+          "action": "gate",
+          "gate": "Cobra Scenario 5: All Allied armies (2 Br, 1 Cdn, 1 US) have one depot. HQ/depot placement is flexible as long as all are in GenS. Allied AmP starts 7 + 4/GT; German 2 + 1/GT (2/GT in bad eastern weather). TPs motorization only (AW (37.5.0)-(37.5.5))."
+        },
+        {
+          "target": "air-allocation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Cobra air + CB (AW (37.2.0), (37.2.1))\n\nSame structure as Hedgerows: US 44 AP, CW 40 AP, German 6 AP per GD. **8 HB per AG for one Carpet Bombing** each, separate GDs, halved AP on CB day. CB pre-planning permitted before scenario start.\n\nCobra is historically the carpet-bombing breakout — the Allied CB plan should be locked in before the first GT to open the German front line on or near July 25."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "Cobra's scenario structure rewards an opening-day carpet bombing straight into the 12AG axis of advance (AW (37.2.1)). Drop the CB markers along the breakout corridor, accept the half-AP penalty for that GD, and lean on naval FS to make up the difference."
+              }
+            ]
+          }
+        },
+        {
+          "target": "fire-support",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Cobra naval (AW (37.3.0))\n\nStandard AW (11.9.0) with restrictions:\n- **Western TF:** DD only.\n- **Eastern TF:** capped at 1 BB or Mon, 1 CA, 2 CL, 4 DD (whole scenario)."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "aw-dday": {
+      "label": "6: D-Day, The Sixth of June",
+      "modifications": [
+        {
+          "target": "mode-determination.pick-mode-per-formation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### June 6 special rules (AW (38.5.0)-(38.5.7))\n\n- **Traffic jams (AW (38.5.1)):** all Allied Mech MA halved. No Strat Road movement.\n- **Movement halts (AW (38.5.2)):** June 6 AM only — Allied ignore halts generated by German leg units; no extra MP to move adjacent to leg units.\n- **PA restriction (AW (38.5.3)):** Allies may NOT enter PA mode or conduct PA attacks on June 6.\n- **Commandos (AW (38.5.4)):** CDO special assaults (AW (4.5.6a)) available.\n- **German MA (AW (38.5.7)):** June 6 AM/PM, German units starting within 6 hexes of a beach-triangle hex halve MA."
+              },
+              {
+                "kind": "callout",
+                "variant": "gotcha",
+                "text": "No Allied PA on June 6 (AW (38.5.3)) — you cannot put any unit in Prepared Assault mode that GD. Standard tactical attacks only. This is a major constraint on how aggressive the Allied assault can be off the beaches; plan Tactical-mode attacks through the breaches and save PA for June 7."
+              }
+            ]
+          }
+        },
+        {
+          "target": "air-allocation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### D-Day air (AW (38.2.0), (38.2.1))\n\n- June 6 GD: US 18 AP, CW 16 AP. German 0 AP.\n- June 7 GD+: US 44, CW 40, German 6 (with abort procedure).\n- No HB or ATP rules — ignore them.\n- Ignore Strategic Map assignment, air supply, Strategic Interdiction."
+              }
+            ]
+          }
+        },
+        {
+          "target": "fire-support",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### D-Day naval (AW (38.3.0))\n\n- Naval units **not available** on June 6 (they're supporting the landings via the Amphibious Module).\n- June 7 AM+ or first GT after all beaches clear: use AW (11.9.0).\n- If any beach isn't cleared on June 7 AM, that beach's AG gets NO naval unit roll that day. Each GT until all beaches clear, that AG uses June 6 PM NGS procedures (per AW (42.0)) for not-yet-cleared beaches. No NGS on June 6 Night."
+              },
+              {
+                "kind": "callout",
+                "variant": "caution",
+                "text": "Leaving a beach uncleared by June 7 AM means that AG gets no Battlefield Map naval gunfire at all that day (AW (38.3.0)). Closing out even one WN on June 6 PM to get the beach declared cleared has outsized downstream value."
+              }
+            ]
+          }
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### D-Day logistics (AW (38.6.0)-(38.6.3))\n\nFull GenS per AW (15.0)/(16.0). Use AW (35.0) logistic procedures. Ignore Strategic Map/Embarked Units.\n\n- **Allied ADV:** June 6 — 5 per corps. June 7+ — 3 per corps. AB divs always 2 (82/101/6 AB). Each AG gets 2 AmP per GT, split between corps.\n- **German ADV:** June 6 — 7 (WN/StP exempt from AD all scenario). June 7+ — 5. 2 AmP in stockpile, +1/GT (+2/GT if eastern weather Ovr-rain/Storm).\n- **TP for motorization only:** Allies 1/AG, Germans 2."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "aw-campaign": {
+      "label": "Campaign Game",
+      "modifications": [
+        {
+          "target": "joint-logistics",
+          "action": "gate",
+          "gate": "AW Campaign: two logistics modes. **Full rules** (AW (39.4.0) onward, recommended): all GOSS + AW (15.0)/(16.0)/(27.0) active. **Simplified** (AW (39.2.0)): use AW (35.0) SoP/logistics, ignore Strategic Map, Naval Transit Display, Logistic Table, fuel/AmP procedures except per AW (39.2.4a)/(39.2.4b) schedules. Designer notes simplified rules were never fully playtested — balance may shift."
+        },
+        {
+          "target": "air-allocation",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Campaign air (AW (39.2.1))\n\n- AW (38.2.0)/(38.3.0) apply.\n- CB mission GD: Allied AP availability = 0.\n- ATPs available for standard GOSS resupply from **June 12 AM**.\n- Allied AP changes allowed only via:\n  - **+16 AP permanently** to US the AM GT after Cherbourg is fully operational (AW (1.2.6f)).\n  - **−20 AP** to US from August 1 through August 15 GDs.\n- These modifiers apply to the US total including additions."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "The +16 US AP from a repaired Cherbourg (AW (39.2.1)) is the single biggest air boost in the campaign. Factor the 21-GD port repair timer (AW (1.2.6f)) into your offensive timing — the August air surge is contingent on capturing the port complex in early July."
+              }
+            ]
+          }
+        },
+        {
+          "target": "replacement",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Campaign reinforcements (AW (39.3.0))\n\n- AW (35.0) applies.\n- Use the June 6-10 arrival schedule in AW (38.8.0) for initial Allied reinforcements.\n- From June 11, use the Allied Activation Lists (AW (40.0)) and the German Activation List (AW (40.3.0)).\n- Random arrival rule (AW (35.3.1)) applies — reinforcement timing has a variance component, not a fixed date."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

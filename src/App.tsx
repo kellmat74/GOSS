@@ -117,7 +117,10 @@ import hurtgenOverlayData from "./data/goss/hurtgen/sequence-overlay.json";
 import lfOverlayData from "./data/goss/lucky-forward/sequence-overlay.json";
 import awOverlayData from "./data/goss/atlantic-wall/sequence-overlay.json";
 import gossLearnData from "./data/goss/learn.json";
+import warLearnOverlayData from "./data/goss/war/learn-overlay.json";
 import hurtgenLearnOverlayData from "./data/goss/hurtgen/learn-overlay.json";
+import lfLearnOverlayData from "./data/goss/lucky-forward/learn-overlay.json";
+import awLearnOverlayData from "./data/goss/atlantic-wall/learn-overlay.json";
 
 const GOSS_BASE_RULES = gossRulesData as RuleEntry[];
 const GOSS_BASE_PHASES = gossSequence.phases as Phase[];
@@ -135,7 +138,10 @@ const GOSS_MODULE_OVERLAYS: Record<string, SequenceOverlay> = {
 };
 const GOSS_BASE_LEARN = gossLearnData as LearnData;
 const GOSS_MODULE_LEARN_OVERLAYS: Record<string, LearnOverlay> = {
+  war: warLearnOverlayData as LearnOverlay,
   hurtgen: hurtgenLearnOverlayData as LearnOverlay,
+  "lucky-forward": lfLearnOverlayData as LearnOverlay,
+  "atlantic-wall": awLearnOverlayData as LearnOverlay,
 };
 
 /** Returns base + module data for the selected game. Currently only GOSS. */

@@ -1,0 +1,833 @@
+{
+  "module": "lucky-forward",
+  "moduleLabel": "LF",
+  "modifications": [
+    {
+      "target": "command",
+      "action": "gate",
+      "gate": "LF: Army boundaries are fixed and must be garrisoned at open flanks (LF (9.11.0)–(9.11.4)). Three US armies (1st, 3rd, 7th) and up to four German armies (1st, 7th, 5th Pz, 19th) operate on separate logistics and may not freely transfer AmP/FP (LF (9.10.1), (9.10.3)). The 5th Pz Army activates GD 8 and withdraws GD 46; the German 7th Army deactivates end of Sep (LF (9.10.3), (29.3.14))."
+    },
+    {
+      "target": "command.command-shuffles",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### LF army structure (LF (9.10.1), (9.10.3))\n\n- **Three US armies:** 3rd Army is the main force. Only the portions of 1st and 7th Armies that operated near 3rd Army are on map (LF (9.10.1)).\n- **Four German armies:** 1st Army is the main force. The 5th Pz Army arrives GD 8 and withdraws GD 46. The 7th Army deactivates at end of September per LF (29.3.14). Only the parts of the German 7th and 19th Armies adjacent to 1st Army are present (LF (9.10.3)).\n- **Boundaries are fixed.** Players may not move army boundaries on the set-up/game maps unless a scenario rule explicitly allows it (LF (9.10.1), (9.10.3)).\n- **Do not track replacements or recycle steps by army** — each side keeps a single side-wide pool (LF (9.10.1)).\n- **No cross-army AmP/FP transfer:** 1st Army and 5th Pz may not transfer AmP/FP to the 7th or 19th Armies (LF (29.3.10))."
+          },
+          {
+            "kind": "prose",
+            "text": "### 83rd Inf Div restriction (LF (9.10.2))\n\nThe 83rd Div arrives GD 16 and is on loan to 3rd Army with three restrictions until GD 26:\n\n1) It **must** stay assigned to XX Corps.\n2) Attacks by 83rd Div units **do not** count toward US fort assault training (LF (17.6.3c)).\n3) The division may **not** attack across, or cross to the east side of, the Moselle River.\n\nIn Sep Extended or Campaign, starting AM GT of GD 27 the 83rd deactivates and must immediately relocate to the northernmost XX Corps position along the Moselle (LF (9.10.2))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "The 83rd Div is a common trap — players push it into Metz fort assaults to stack more steps, then realize those attacks don't advance the fort attack track (LF (9.10.2)b, (17.6.3c)). Save 83rd steps for the Saar Moselle triangle and west-bank mop-up, not for fort training."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command",
+      "action": "add",
+      "insertAfter": "command-shuffles",
+      "decision": {
+        "id": "lf-boundary-garrisons",
+        "title": "Open Flank Garrisons Between Armies",
+        "when": "Start of each player's GT — every army checks for open flank hexes with an adjacent enemy army (LF (9.11.0)).",
+        "ruleRefs": ["9.11.0", "9.11.1", "9.11.2", "9.11.3", "9.11.4"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "LF locks army boundaries to block ahistorical flank rushes. If you outrun the neighboring army, you must garrison the open road hexes on the boundary or your opponent places your steps for you (LF (9.11.0), (9.11.4))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Open flank hex definition (LF (9.11.0))\n\nA primary or secondary road hex is an open flank hex when **all three** are true:\n\n1) It sits on the army boundary and passes into an enemy army's ZOP behind that enemy army's frontline.\n2) It is more than 6 Mech MP from the nearest friendly frontline unit adjacent to an enemy.\n3) It is more than two hexes from a friendly non-HQ/non-Art unit."
+          },
+          {
+            "kind": "prose",
+            "text": "### Garrison requirements (LF (9.11.3))\n\n1) You must garrison every open flank road hex within **one GT** of it being created.\n2) Minimum **two steps** of any non-HQ/non-Art unit per hex. A Recon step counts as two.\n3) Garrison units must be within two hexes of the enemy army boundary **and** within two hexes of the open flank hex.\n4) No more than 10 hexes between adjacent garrison units or frontline qualifying units.\n5) Mark garrisons with a spade marker — they cannot move except when attacked or when the frontline pushes forward enough to close the hex.\n6) You may swap in a replacement garrison; the original can then move normally."
+          },
+          {
+            "kind": "prose",
+            "text": "### When garrisons are in play (LF (9.11.1), (9.11.2))\n\n- **US 1st/3rd boundary:** active while the 1st Army is on map (GD 1–25) (LF (9.11.1)).\n- **US 3rd/7th boundary (XV Corps):** active from GD 9 to end of Dec/campaign. Note that in Sep, XV Corps is formally assigned to 3rd Army but the Allied player must treat the **future** 7th Army boundary as if it were already in play (LF (9.11.1)).\n- **German 7th/1st boundary:** active only while the German 7th Army is on map (GD 1–25) (LF (9.11.2)).\n- **German 1st or 5th Pz / 19th boundary:** active the entire game (LF (9.11.2))."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Failure to garrison isn't a minor penalty — the opposing player picks your infantry steps from the closest available unit(s) (breaking them down if needed) to fill the requirement, and then places them for you (LF (9.11.4)). A greedy penetration that skips the garrison can cost you your best frontline steps."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "LF (9.11.0) models the historical need to cover army seams. Designer intent: you can outrun your neighbor corps within your own army, but not your neighbor army. Plan Schwerpunkt advances with a garrison budget baked in."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics",
+      "action": "gate",
+      "gate": "LF logistics are deeply asymmetric and army-specific. 3rd Army drives the campaign; 1st, 7th US and 7th/19th German Armies each use simplified fixed ADV+AmP rules with no fuel points (LF (29.3.8), (29.3.8a), (29.3.10b)). A post-lull 15-GD window hands 3rd Army full-fuel, 4-AmP/day super-logistics (LF (29.5.5)). Starting GD 58 the German side can tap the Fuhrer Ammo/Fuel Reserve at VP cost (LF (16.4.1a))."
+    },
+    {
+      "target": "joint-logistics.tp-allocation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### LF TP notes (LF (29.3.8), (29.3.8a), (29.3.10b))\n\n- **3rd Army (Sep start):** 3 TP motorization-only on GD 1 (LF (29.3.8)). From GD 2–8 the 3rd Army can never receive more than **6 FP** when determining fuel delivery, no matter the roll (LF (29.3.8a)).\n- **US 1st Army (GD 3–26) and US 7th Army (from GD 26):** 1 AmP per AM GT, cap 5 AmP in stockpile, 1 TP motorization-only, no fuel points — all HQs are low fuel (LF (29.3.8a)). 7th Army stays on these rules until **GD 58** (LF (29.3.8a)).\n- **German 7th and 19th Armies:** fixed ADV 4, may convert 1 ADV point to 2 AmP (max 2 AmP/GD created that way), cap 5 AmP stockpile, 1 TP motorization-only, no FP — Mech HQs are low fuel (LF (29.3.10b)).\n- **Lull minimums:** during a lull each side must still assign at least one TP to fuel **and** at least one TP to ammo delivery. The Allied side may use no more than two TP per GD to bring in reinforcements from the Sept Reinforcement Pool (LF (24.2), (29.3.11))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Because 1st and 7th Armies don't track fuel points and have tiny TP budgets, treat their TP as a dedicated motorization budget — there's nothing else to spend it on. Spend all your serious logistics planning on 3rd Army, which is the only US army running the full Logistics Table in most scenarios (LF (29.3.8a))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "US 7th Army keeps the LF (29.3.8a) restrictions until GD 58 — even deep into October. Don't assume the army upgrades on the same day 1st Army deactivates; XV Corps units stay on the starvation logistic diet well past the Sep Extended window (LF (29.3.8a))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics",
+      "action": "add",
+      "insertAfter": "tp-allocation",
+      "decision": {
+        "id": "lf-post-lull-fuel-bonanza",
+        "title": "The 15-GD Post-Lull Logistics Window (3rd Army)",
+        "when": "First 15 GDs after a qualifying Allied lull ends — or GD 65–79 if starting the Nov scenario (LF (24.0), (29.5.5)).",
+        "ruleRefs": ["24.0", "29.5.5", "29.5.7"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "The Allied player can trade a 28-GD October lull for a short post-lull window of massively upgraded 3rd Army logistics. This is the single biggest strategic decision the Allied player makes in LF and the design pivot of the whole campaign (LF (24.0), (29.5.5))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Lull qualification (LF (24.0))\n\n1) The Allied player must declare the lull **on or prior to GD 36** and the German player must grant it.\n2) The lull must last a minimum of **28 GDs**.\n3) The German player cannot launch a counter-offensive until the lull has run at least 10 GDs. If Germany breaks the lull after that, only the Allied side keeps the logistic benefits.\n4) If the Allied player does **not** declare a qualifying lull on or before GD 36, **neither side** gets the listed logistic benefits — Allied 7th Army stays on LF (29.3.8a) logistics through end of November, 3rd Army uses the left-of-slash ADV on the GTRT (LF (29.4.3))."
+          },
+          {
+            "kind": "prose",
+            "text": "### 3rd Army during the 15-GD window (LF (29.5.5))\n\n1) Base ADV 5 (skip step 5 of GOSS (16.3.2)).\n2) **4 AmP each AM GT.**\n3) All units are Normal Fuel — no fuel tracking at all.\n4) Each assigned corps has **2 TP for motorization** (ignore the GTRT TP row).\n\nOn day 16 post-window, 3rd Army rolls in with 12 FP stockpile, all its accumulated AmP **plus 2d10 more**, and switches back to the GTRT ADV and TP (right-of-slash) (LF (29.5.5))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Mirror: German 1st Army post-lull (10-GD window) (LF (29.5.7))\n\nThe German side gets a shorter mirror: the first **10 GDs** after the lull ends, 1st Army runs base ADV 4, 2 AmP/AM GT, Normal Fuel everywhere, and 3 TP for motorization. Then it swings back to the GTRT with 8 FP stockpile and +1d10 bonus AmP (LF (29.5.7))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "This is why Allied players declare lulls. Between the 4 AmP/day, Normal Fuel across the entire army, and 2 TP/corps for motorization, 3rd Army can run PA assaults continuously for all 15 GDs without AD or fuel rolls bottlenecking anything (LF (29.5.5)). Queue your Metz fort and Moselle bridgehead pushes for the first week of the window."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Miss the GD 36 declaration deadline and you lose the window entirely (LF (24.0)). That also strands 7th Army on LF (29.3.8a) logistics all the way to GD 88 — a huge penalty on XV Corps operations in Nov (LF (29.4.3)). Calendar the lull decision on GD 30 to give yourself buffer."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "LF (24.0) models the historical October ammunition pause. The design trades a full month of offensive tempo for a compressed November spike — it's a Patton-grade bet that concentrated supply beats continuous pressure."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics",
+      "action": "add",
+      "insertAfter": "replacement-points",
+      "decision": {
+        "id": "lf-fuhrer-reserve",
+        "title": "The Fuhrer Ammo/Fuel Reserve (Axis only)",
+        "when": "Any Joint Logistics Phase on or after GD 58 (Nov 1). The German player adds drawn points to the 1st Army stockpiles at the start of the phase (LF (16.4.1a)).",
+        "ruleRefs": ["16.4.1a"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "Hitler's pre-Ardennes stockpile is available to the German side if the Allies threaten breakthrough — but every point sold immediately gives Allied VPs (LF (16.4.1a))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Procedure (LF (16.4.1a))\n\n1) Declare the draw at the start of any Joint Logistics Phase from GD 58 onward.\n2) Add the chosen AmP/FP directly to 1st Army's stockpile. No TP required.\n3) Pay the VP cost — **1 VP per AmP, 2 VP per FP** — to the Allied side.\n4) The reserve caps at 12 AmP + 12 FP across the entire game."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "FP draws cost double (LF (16.4.1a)). A full 12 FP pull costs 24 VPs on its own — that's often the difference between a German operational and an Allied operational win at the LF VP thresholds (LF (29.5.11), (29.6.11)). Pull ammo before fuel unless you have a specific Mech counterattack locked in."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics",
+      "action": "add",
+      "insertAfter": "replacement-points",
+      "decision": {
+        "id": "lf-fuel-reinforcements",
+        "title": "Reinforcements Arriving at Low or No Fuel",
+        "when": "Any Joint Logistics Phase on a GD when reinforcements arrive under a scenario rule that specifies low/no fuel entry (LF (16.5.0)).",
+        "ruleRefs": ["16.5.0", "29.3.8"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "Several LF scenarios bring units on at low fuel. The fuel value rolls happen in the Joint Logistics Phase and shape whether that reinforcement is combat-ready on arrival (LF (16.5.0))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Procedure (LF (16.5.0))\n\n1) **Corps/army asset units** entering a corps/army ZOP adopt that HQ's current fuel value.\n2) **Reinforcements joining a formation already on-map:** use the fuel value of the formation's on-map units — no separate roll.\n3) **A formation with no on-map presence yet:** roll fuel value for the formation.\n\nReinforcements must always use option 1 in GOSS (16.4.5b) (LF (16.5.0))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "All US 3rd Army reinforcements arriving before GD 27 enter at **low fuel** per LF (29.3.8). That caps Mech MA on arrival, so don't plan to use newly arrived Mech divisions for PA assaults in their first AM GT on map unless they roll into full fuel."
+          }
+        ]
+      }
+    },
+    {
+      "target": "weather",
+      "action": "gate",
+      "gate": "LF adds fog along rivers in POvr conditions (LF (19.3.5)), deep mud with sweeping movement penalties (LF (19.4.3b)), and a full Flood track driven by the heaviest European rainfall since 1909 (LF (19.4.6)). Beginning GD 66 the Allied player rolls for flood each GT (LF (29.5.2))."
+    },
+    {
+      "target": "weather.weather-determination",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### LF weather additions (LF (19.3.5), (19.3.6), (19.4.3b), (19.4.6))\n\n- **Fog (LF (19.3.5)):** in POvr, roll 1d10 vs the fog value in parens on the POvr column. If the DR hits, every hex adjacent to any type of river (not streams) is treated as night for movement, observation, air, and combat inside the hex. Ignore fog when tracing LOS **through** a fog hex — only LOS **into** a fog hex is blocked.\n- **Snow atmospheric (LF (19.3.6)):** treat as storm (GOSS (19.3.4)). Don't confuse with Snow ground conditions (GOSS (19.4.5)) — they roll independently.\n- **Deep mud (LF (19.4.3b)):** trails and railroads cease to exist except for RR movement; primary/secondary roads only get standard Mech road-cost reductions (no bonus); Mech units cannot enter PA mode unless they start on a primary/secondary road; PA movement is 1 hex for everyone. GA attacks suffer a 1L column shift if all attacking units are not on roads.\n- **Flood (LF (19.4.6)):** a separate track driven by the Weather Determination Player Aid Card. Can only trigger once per scenario. Roll each GT from GD 66 on in Nov scenarios (LF (29.5.2))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Fog is a POvr-only effect (LF (19.3.5)) and only kicks in **adjacent to rivers**. This is a huge tempo hit on Moselle and Saar crossings — plan bridging and Moselle bridgeheads for clear/Ovr GTs where possible, and expect fog to tank your observation value on any GT where POvr rolls up."
+          }
+        ]
+      }
+    },
+    {
+      "target": "weather",
+      "action": "add",
+      "insertAfter": "gi-value",
+      "decision": {
+        "id": "lf-flood-track",
+        "title": "The Flood Track (November Rainfall)",
+        "when": "Each AM GT starting GD 66 (or earlier if the scenario's flood roll triggers), throughout the Joint Weather Phase (LF (19.4.6), (19.4.6a), (29.5.2)).",
+        "ruleRefs": ["19.4.6", "19.4.6a", "19.4.6b", "19.4.6c", "19.4.6d"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "November 1944 had the heaviest rainfall in Europe in 35 years. 3rd Army's Eng-built Moselle bridges were washed out except for Pont-a-Mousson. The Flood track reproduces this as a rising/falling escalation of river effects (LF (19.4.6))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Flood effects by level (LF (19.4.6c))\n\n- **F0:** +1 MP to cross any watercourse unless using Mech road movement, a Leg-on-road bridge crossing, or ferrying.\n- **F1:** double MP cost to cross any watercourse unless along a primary/secondary/railroad bridge. Trail bridges and fords become unusable. Stream crossings on secondary/railroad bridges take +1 MP. **Add one GT to all bridge construction times** (applied once on the first GT F1 hits, not per GD).\n- **F2:** streams treated as rivers, rivers as major rivers, major rivers as great rivers. Remove **all** completed and under-construction bridge markers. Trail/RR bridges and fords unusable. Secondary-road stream bridges unusable."
+          },
+          {
+            "kind": "prose",
+            "text": "### Deep mud retreat cap (LF (19.4.6d))\n\nWhen deep mud ground conditions are in effect, max retreat is 1 hex unless the retreat is entirely along a primary road (then 2 hexes). Leader bonuses can still modify advance/retreat limits."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "F2 literally deletes every in-progress bridge marker on the map (LF (19.4.6c)). If you're in the middle of a Moselle crossing when the Flood track hits F2, your bridgehead is on its own until the river falls back and you start construction from scratch. Never commit all your bridging capacity to simultaneous Moselle projects during high-flood GDs."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "Flood can only trigger **once per scenario** (LF (19.4.6b)) — don't panic-plan for repeated events. Read the Weather Determination card and treat the flood like a single eventual shock rather than an ongoing weather category."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-fuel-value-determination",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### LF fuel-level caveats (LF (29.3.8), (29.3.8a), (29.3.10b))\n\n- On GD 1 (Sep start), the US player skips the Logistics Table entirely — all units are **low fuel** except CvGps which are Normal (LF (29.3.8)).\n- For every GD the US 1st Army (GD 3–26) and US 7th Army (from GD 26 through GD 58) are on map, **all HQs are low fuel with no option to upgrade** (LF (29.3.8a)). Skip the fuel value roll for these armies.\n- German 7th and 19th Armies never receive FP — Mech HQs are low fuel by rule, independents adopt their superior HQ's fuel (LF (29.3.10b))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "mode-determination.pick-mode-per-formation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Patton (3rd Army leader) doubles the PA assaults allowed by GOSS (16.3.3) for any formation whose HQ he starts the AM GT stacked with, and gives +1 advance hex after GA (LF (23.2.2a)). Plan PA-heavy GDs by staging Patton onto the formation HQ that will do the assault work — this is a primary lever for 3rd Army pace."
+          }
+        ]
+      }
+    },
+    {
+      "target": "construction-phase",
+      "action": "gate",
+      "gate": "LF: starting Oct 1 (GD 27) Germans may upgrade one ET-2 to ET-3 every other GD (LF (17.3.3c)). Both sides have hard bridge-construction caps — Allies 10 bridges (GT 1–57), Germans 6 bridges (GT 1–102) (LF (17.3.1d)). German Hvy bridge units captured by Allies hand back VPs and expand the Allied bridge cap (LF (17.3.1c))."
+    },
+    {
+      "target": "construction-phase.bridge-construction",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### LF bridge caps (LF (17.3.1d))\n\n- **Allied:** max 10 bridges built/repaired between GT 1 and GT 57. Repairs of a pre-existing bridge count as half a bridge; new bridges across rivers without a printed bridge count as one; new bridges across major rivers count as two.\n- **German:** max 6 bridges from GT 1 to GT 102. Bridges placed by German heavy-bridge units **do not** count against the German cap.\n- Either side may remove their own placed bridge marker at the end of their Construction Phase to refund the slot (LF (17.3.1d))."
+          },
+          {
+            "kind": "prose",
+            "text": "### German Hvy bridge units (LF (17.3.1c))\n\n- An unstacked German Hvy bridge subject to Allied GA is **automatically captured/eliminated**. Allies get +2 bridges on their cap per capture; Germans lose 1 bridge on their cap.\n- If the Hvy bridge is stacked with another unit, it takes the first mandatory step loss in any GA on the stack — Germans still pay the bridge-cap penalty, but Allies don't gain capacity.\n- Either case: Allies receive **+1 VP per Hvy bridge captured** (LF (17.3.1c)).\n- If the German player moves a Hvy bridge unit off-map, it is treated as abandoned/captured — same cap and VP effects."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Hunt unstacked German Hvy bridges with Cav/Mech Recon — two caps can swing the Allied bridge budget from 10 to 14 and saves German engineering capacity, which is a major strategic loss for the Axis in November Moselle operations (LF (17.3.1c), (17.3.1d))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "construction-phase.fieldwork-construction",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### LF ET-3 upgrades (LF (17.3.3c))\n\nStarting Oct 1 (GD 27), or the first GD of Nov/Dec scenarios, the German player may replace one ET-2 with an under-construction ET-3 every other GD:\n\n1) Target hex must be in GenS and contain a village/town/city.\n2) Two Eng steps must be in the hex.\n3) The ET-3 flips to constructed at the next friendly Construction Phase.\n4) Quick construction **cannot** be used for ET-3 upgrades.\n5) If you skip an eligible GD, you cannot bank the upgrade — you miss the window.\n6) Map cap = the LF counter mix (24 ET-3 total).\n7) ET-3 markers may be recycled — remove during Construction Phase, marker is available the next Construction Phase."
+          },
+          {
+            "kind": "prose",
+            "text": "### Westwall ramp (LF (17.5.0))\n\nIn LF the Westwall was also neglected. German defenders in WW hexes receive:\n\n- **GD 1–7:** 1L shift only.\n- **GD 8–15:** 2L shifts.\n- **GD 16+:** full 3L shifts.\n- The −7 Ft Area FS DRM applies on all GDs regardless of ramp.\n- All WW hexes are intact at scenario start, even those west of the Sep 1 front line (LF (17.5.0))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "If the Allied player can push into WW hexes before GD 16, each assault saves one column shift vs the fully upgraded version (LF (17.5.0)). The Sep timing window is narrow — but more forgiving than HHF's shorter ramp."
+          }
+        ]
+      }
+    },
+    {
+      "target": "construction-phase",
+      "action": "add",
+      "insertAfter": "fieldwork-construction",
+      "decision": {
+        "id": "lf-minefields",
+        "title": "German Minefields (replacing Delay Markers from GD 48)",
+        "when": "Any German Construction Phase from GD 48 onward, and at setup for Nov/Dec scenarios (LF (7.13.0), (7.13.4), (7.13.4a)).",
+        "ruleRefs": ["7.13.0", "7.13.4", "7.13.4a", "7.13.4b", "7.13.4c"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "In the Lorraine historical campaign the Germans dug in behind mines. LF reframes delay markers as minefields starting GD 48 — they look like delay markers but mechanically stop Allied movement cold and have to be cleared (LF (7.13.4))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Transition: GD 1 to GD 48 (LF (7.13.0))\n\n- Germans are capped at **12 delay markers** on map at any time.\n- The 9 markers placed at Sep scenario start count toward this 12.\n- Standard GOSS (7.13.1), (7.13.3) placement and removal apply.\n- On GD 48, the 12-marker cap lifts and delay markers become minefields per LF (7.13.4)."
+          },
+          {
+            "kind": "prose",
+            "text": "### Minefield setup (Nov/Dec start) (LF (7.13.4a))\n\n1) Pool all minefield markers face-down.\n2) Randomly pick one marker for each ET-3 on the setup map.\n3) Place each marker adjacent to its ET-3, in any terrain, numerical side down.\n4) Max **2 minefields adjacent to any ET-3** at setup (more can appear in play if ET-3 placement overlaps).\n5) No minefield in an ET-3 or Fort hex."
+          },
+          {
+            "kind": "prose",
+            "text": "### Laying mines in play (LF (7.13.4a))\n\n1) During the German Construction Phase, pick a hex not containing a Fort counter and not observed by an Allied ground unit. Engineer density/LOS rules treat the Eng unit as being in an open hex regardless of terrain.\n2) Hex must have **2 Eng steps in GenS, not fatigued**.\n3) Conduct a PRC using the Eng unit's defensive PR.\n4) If passed, draw one minefield marker from the pool, place it in the hex with a spade marker (under construction).\n5) Mining takes a full GT — the AM Construction placement completes at the PM Construction Phase.\n6) Max **1 mining attempt per hex per GT**.\n7) Cannot lay more markers than the game provides.\n\nDuring a lull, each divisional formation under full lull conditions may auto-lay one minefield per GD in the AM Construction Phase — no Eng or PRC — provided the hex isn't Allied-observed or adjacent to an Allied unit (LF (7.13.4a))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Minefield effects (LF (7.13.4b))\n\n- German units: +1 MP to enter and +1 MP to exit a completed minefield hex.\n- Allied units entering a minefield hex **immediately halt** movement/advance. Leader advance bonuses don't get them through.\n- Allied GenS can be traced **into** but not **through** a minefield hex.\n- Allied units cannot leave a minefield hex except by clearing it (LF (7.13.4c)), retreating in the Attacker Adjustment Segment, or involuntary retreat from FS/GA — with heavy penalties:\n  - **FS:** retreating unit must take the first numerical hit as a step loss and auto-fails the step-2 PR check.\n  - **GA:** units must hold position (GOSS (13.10.4a)) and auto-fail the PRC.\n- Allied units can enter a minefield hex in any mode including PA.\n- Allied units currently in a minefield **cannot** be attack-designated."
+          },
+          {
+            "kind": "prose",
+            "text": "### Clearing minefields (LF (7.13.4c))\n\nAt end of the Allied Attack Designation Segment:\n\n1) Hex must contain at least one Inf or Eng step, in GenS and not fatigued.\n2) If **no** Axis LOS to the hex, the marker is auto-removed.\n3) Otherwise reveal the marker, conduct a PRC applying the marker's modifier.\n4) Apply -1 DRM per Eng step in the hex; -1 DRM if the clearing unit is in PA mode.\n5) Pass → marker removed. Fail → marker remains."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Entering a minefield hex is a one-way door for Allied units. If you push a Mech stack into a minefield and then eat a German FS mission the next GT, your unit takes the first hit as a step loss and auto-fails the PR check (LF (7.13.4b)). Send Eng+Inf first, clear, **then** exploit."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Clearing without Axis LOS is automatic (LF (7.13.4c)a). Recon sweeps to break LOS on an adjacent hex can turn a hard PRC into a free lift — particularly useful against the ET-3-adjacent mine belt in Nov/Dec (LF (7.13.4a))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "construction-phase",
+      "action": "add",
+      "insertAfter": "fieldwork-construction",
+      "decision": {
+        "id": "lf-metz-forts",
+        "title": "The Metz Fort Complex and Assault Training",
+        "when": "Any scenario that includes Metz forts at setup — primarily Sep, Sep Extended, Nov, and campaign. Fort strength increments tick every 6 GDs in the Joint Logistics Phase (LF (17.6.0), (17.6.1)).",
+        "ruleRefs": ["17.6.0", "17.6.1", "17.6.3", "17.6.3a", "17.6.3b", "17.6.3c", "17.6.3d", "17.6.3e", "17.6.3f", "17.6.3g"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "Metz is the defining terrain problem in LF. Three classes of forts (A strongest, defensive PR 8; B defensive PR 7; C defensive PR 6) occupy the hexes per the Fort Track, and they can strengthen over time if the Allies let them (LF (17.6.0), (17.6.1))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Fort Track growth (LF (17.6.1))\n\n- Starting GD 7 and every 6 GDs thereafter (GD 7, 13, 19, etc.), during the Replacement Point Segment move each fort's strength marker up one box if **no US unit occupies the fort's hex**.\n- Stops once the marker reaches the box with the fort icon (maximum strength).\n- If a fort takes a step loss before maxing, track the max with a red ace-of-spades until the blue marker catches up (LF (17.6.1))."
+          },
+          {
+            "kind": "prose",
+            "text": "### GA against a Metz fort (LF (17.6.3b))\n\n1) Clear any German units **outside** the fort in that hex first — they can be assaulted normally but you cannot advance into the fort hex even if the fort ends up empty.\n2) Attackers must be in **PA mode** and must have started the Movement Phase in the same hex or adjacent.\n3) Only units stacked in the fort hex participate — no adjacent-hex help.\n4) Once in the fort hex, exits are restricted: max 1 hex via Tactical non-road movement; exit hex cannot be adjacent to another fort (LF (17.6.3b))."
+          },
+          {
+            "kind": "prose",
+            "text": "### FS vs Metz forts (LF (17.6.3a))\n\n- Units inside and outside the fort are targeted as separate hexes for FS — but unit density still applies across the whole hex.\n- **All FS numerical hits against a fort or units inside** convert to AS hits, capped at 2 AS.\n- **Exception:** if a heavy Art unit participated, the volley strength was 8, and at least one un-modified DR of 9 rolled, you may apply one step loss to the fort in addition to AS results. Maximum one step loss per qualifying volley no matter how many 9s (LF (17.6.3a)).\n- Treat an unoccupied Metz fort as occupied by a Bn for FS capacity purposes (GOSS (11.2.4))."
+          },
+          {
+            "kind": "prose",
+            "text": "### US Fort Attack Track and assault training (LF (17.6.3c))\n\n1) After each GA against a fort (result doesn't matter), move the US fort-attack marker up one box.\n2) Red boxes: if **at least one Eng step participated**, roll 1d10.\n   - Roll < the box number → you gain one engineering combat shift.\n   - In the 4 Box specifically, result ≤ 1 moves the marker one box right (not up).\n   - Roll ≥ box number → marker drops one box until another GA against a fort.\n   - If no Eng step participated → marker drops one box immediately.\n3) Each shift gained requires **1 Eng/ranger step** in the assaulting stack. Max 5 shifts total on the track.\n4) Exception to GOSS (13.7.3, m): multiple Eng steps in the attack count, so you can actually reach positive net shifts against fort defense shifts (LF (17.6.3c))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Divisional assault training (LF (17.6.3d))\n\nAfter all 5 Eng shifts have been achieved:\n\n- To train a Div, it must be an **Inf Div with 2 Inf Bn in CR for 18 GTs**.\n- Any number of divisions may train simultaneously.\n- If the CR units are attacked or used as GA modifiers, training interrupts until CR is re-met — but prior training GTs still count.\n- Alternative: during an Allied-initiated lull (LF (24.0)), for every 6 GDs of lull length (round down) the Allied player may designate one Div as fort-assault trained — no CR required, but the Div cannot voluntarily activate during the lull.\n- Once trained: all assigned Leg Inf steps in that Div count as combat Eng for fort assaults.\n- Training **expires 15 GDs after any Div unit takes part in an offensive GA** (LF (17.6.3d))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Fort supply and surrender (LF (17.6.3f), (17.6.3g))\n\nIf a fort can't trace GenS, it may trace fort supply up to 10 hexes (in hexes, not MP) to any Metz city hex or to Thionville east of the Moselle, subject to no unbridged Moselle crossings, no enemy-occupied hexes, no adjacency to enemy units except MCT (LF (17.6.3f)). In fort supply, attack strength is quartered, defense unaffected, ADV = current strength.\n\nIsolated forts that exhaust OhS and are adjacent to Allied units must check for surrender at the start of the AM Command Phase Surrender Segment (LF (17.6.3g))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Occupying Metz fort hexes before the GD 7 strength tick blocks the growth (LF (17.6.1)). Even a single Inf Bn parked in an adjacent hex doesn't count — only occupation of the fort's own hex stops the buff. Plan a token infantry push early if you want to cap forts at setup strength."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Assault training expires if any Div unit joins an offensive GA and 15 GDs tick over (LF (17.6.3d)). Don't over-commit your fort-trained Div to general GAs once trained — keep them specialized for fort assaults or schedule retraining around downtime."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "LF models Metz as a uniquely engineered problem (LF (17.6.0)). The Fort Attack Track is a pedagogy tool — it pushes the Allied player to make repeated attacks (even unsuccessful ones) to earn shifts, reflecting actual 3rd Army doctrinal learning through the campaign."
+          }
+        ]
+      }
+    },
+    {
+      "target": "update-game-turn-indicator",
+      "action": "gate",
+      "gate": "LF: ENA is only available from GD 83 onward (LF (3.4)). For most of the campaign, Night GTs cycle straight from PM to AM."
+    },
+    {
+      "target": "replacement",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### LF replacement/refit twists (LF (22.4), (22.5.2c), (4.6.3a))\n\n- **Refit rates:** Allied non-Arm Divs get 4 Inf ReP per GD. Allied Arm Divs get 3 Inf + 2 Arm ReP. German non-activated Divs may enter refit before activation (LF (22.4)).\n- **German resurrection via RE units:** starts GD 6, and is capped at one Bn every two GDs. GOSS (22.5.2c) otherwise applies. Static fortress Art and all Metz fortress units (yellow stripe) cannot be used to resurrect or transfer steps (LF (22.5.2c)).\n- **Metz NCO schools (vSgr, Wa NCO Rgts):** cannot receive ReP nor be resurrected. Each step loss these units suffer gives the Allied player **2 VPs** per scenario victory table (LF (4.6.3a))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "The vSgr (three Bn) and Wa NCO (two Bn) Rgts in Metz are VP batteries for the Allied side (LF (4.6.3a)). At 2 VP per step, a full sweep of the NCO units can easily exceed 20 VP — and they can't be rebuilt. Prioritize FS and GA that can score step losses on these formations."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command.leader-activation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### LF leader highlights (LF (23.2.2a), (23.2.2b))\n\nLF adds scenario-specific leader bonuses on top of GOSS (23.2.1). The ones that most change planning:\n\n- **Patton (3rd Army):** stacked with a formation HQ at AM GT → that formation can run **double** the GOSS (16.3.3) PA assault count for the day, and advance +1 hex after GA (LF (23.2.2a)).\n- **Haislip (XV Corps):** stacked with any XV Corps formation HQ → that formation moves in any order (except CdM) and gets 2 extra GA shifts (off/def, split as desired) (LF (23.2.2a)).\n- **John Wood (4th Arm Div):** provides 2 combat shifts instead of 1 to any GA involving Mech units of 4th Arm; participating Mech units advance +1 hex along a road (LF (23.2.2a)).\n- **Bob Grow (6th Arm Div):** stacked with 6th Arm HQ at AM GT → all 6th Arm units +1 advance hex after GA (LF (23.2.2a)).\n- **Manteuffel (5 Pz Army, Axis):** stacked with an assigned corps HQ at AM GT → one Mech formation assigned to that HQ gets +1 MP for both AM and PM GTs, and one GA per GT gets a favorable shift (no stacking with other leader shifts) (LF (23.2.2b)).\n- **v. Knobelsdorff (1st Army, Axis):** stacked with an assigned corps HQ at AM GT → up to 2 defensive column shifts per GT to GAs involving that corps's formations, splittable across two combats (LF (23.2.2b))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Patton is the single most impactful activation in the US army (LF (23.2.2a)). Double PA capacity lets you alpha-strike a Metz fort cluster or a Moselle bridgehead in a single GD — stack him with the division HQ that will bear the brunt, not with the Army HQ where he doesn't trigger the formation bonus."
+          }
+        ]
+      }
+    },
+    {
+      "target": "fire-support",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### LF FS additions (LF (20.0), (24.4))\n\n- **Carpet Bombing is not available** in LF — skip the HHF-style carpet mission entirely (LF (20.0)).\n- Axis has no ATP. Allies have **2 ATP on all GDs after GD 26** (every scenario) (LF (20.0)).\n- **Max 3 supply-interdiction missions per side per GD** (LF (20.0)).\n- **Max 4 AP (after weather reductions) to any single GS mission** (LF (20.0)).\n- Treat the entire map as one air sector for ASup, GI and German GS missions; Allied GS must be assigned to specific corps in the Joint Air Allocation Phase and can then hit anywhere in that corps's ZOP (LF (20.0)).\n- **First GT after a lull ends:** the lull-ending player conducts FS before the inactive player's defensive FS (LF (24.4)).\n- **First GD after a lull ends:** unobserved FS missions use **-2** instead of -4 if the target is OCT due to FW, fortified area, or fort (LF (24.4))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "FS against Metz forts converts all numerical hits to AS (cap 2), unless you get a heavy-Art volley-8 with an unmodified 9 (LF (17.6.3a)). Don't expect FS alone to break a Metz fort — the math rewards FS for suppressing units before GA, not destroying the fort itself."
+          }
+        ]
+      }
+    },
+    {
+      "target": "ground-assault",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Metz fort GAs have unique constraints: attackers must be in PA mode, must have started the Movement Phase in or adjacent to the fort hex, and only units stacked on the fort hex count (LF (17.6.3b)). Adjacent hexes do not contribute. Plan the pre-assault staging carefully — mis-positioning kills the attack before it rolls."
+          }
+        ]
+      }
+    },
+    {
+      "target": "movement-segment",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### Moselle and LF-specific terrain (LF (1.2.1), (1.2.2), (7.10.2b), (15.9.0a))\n\n- The Moselle is the campaign's dominant water obstacle. Major River Bridgeheads cannot be placed in a hex occupied by a Metz fort (LF (15.9.0a)).\n- Fords over major rivers follow LF (7.10.2b) — check the errata before routing Mech columns through what looks like a ford on the map.\n- Rough-2 hexes impose the LF-specific movement penalties per LF (1.2.2)."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Once minefields are active (GD 48+), Allied units that enter a minefield hex cannot be attack-designated and cannot leave without clearing or retreat (LF (7.13.4b)). Treat minefield hexes as 'commit only after clearing' rather than as a normal MCT."
+          }
+        ]
+      }
+    }
+  ],
+  "scenarioOverrides": {
+    "gremercy-forest": {
+      "label": "Intro: Battle for Gremercy Forest",
+      "modifications": [
+        {
+          "target": "joint-logistics",
+          "action": "gate",
+          "gate": "LF Intro: Simplified logistics — no Logistics Table, no fuel tracking, all units auto-supplied. Skip most of the Joint Logistics Phase (LF (29.2.0))."
+        },
+        {
+          "target": "command",
+          "action": "gate",
+          "gate": "LF Intro: Simplified command — skip boundaries, lulls, garrison checks, and OoC penalties. This is a learning scenario focused on the 35th Inf and 6th Arm Div tactical fight (LF (29.2.0))."
+        },
+        {
+          "target": "air-allocation",
+          "action": "gate",
+          "gate": "LF Intro: Check LF (29.2.0) scenario sheet — introductory scenarios typically skip or simplify air allocation to focus on ground combat."
+        }
+      ]
+    },
+    "september": {
+      "label": "September Scenario",
+      "modifications": [
+        {
+          "target": "command",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### September pre-game special move (LF (29.3.4))\n\nAfter both sides complete setup and before the first GT, the German side may move any non-frontline units up to **half their normal MA** using Mech road movement or Tactical. This pre-game move is **not subject to GI**.\n\nUse this to reposition Eng units toward Metz, seat 5th Pz Army arrivals, and backfill the Moselle line (LF (29.3.4))."
+              },
+              {
+                "kind": "callout",
+                "variant": "gotcha",
+                "text": "The German 5th Pz Army arrives GD 8 and withdraws GD 46 (LF (9.10.3)). Plan its commitment in a narrow window — you have roughly 38 GDs of Mech punch before it's pulled off the map."
+              }
+            ]
+          }
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### September logistics summary (LF (29.3.8), (29.3.8a), (29.3.10), (29.3.10a), (29.3.10b))\n\n- **US 3rd Army:** skips Logistics Table on GD 1. All units low fuel except CvGps; ADV 2 (no mods); 3 TP motorization-only. From GD 2–8, 3rd Army's fuel delivery is **capped at 6 FP regardless of roll** (LF (29.3.8), (29.3.8a)).\n- **US 1st Army:** from GD 3 (5th Arm Div arrival) through GD 26 — fixed ADV 2, 1 AmP/AM GT, cap 5 AmP, 1 TP motorization-only, no fuel points (LF (29.3.8a)).\n- **US 7th Army:** activates GD 26, same rules as 1st Army until GD 58 (LF (29.3.8a)).\n- **German 1st Army:** full Logistics Table from the start.\n- **German 5th Pz Army:** arrives GD 8 — on GD 8 Command Phase, German player allocates GTRT TP between 1st and 5th Pz, and may freely transfer 1st Army AmP/FP to 5th Pz. Each uses the base ADV from the GTRT (LF (29.3.10a)).\n- **German 7th/19th Armies:** ADV 4, may convert 1 ADV point to 2 AmP (max 2 AmP/GD created), cap 5 AmP, 1 TP motorization-only, no fuel points (LF (29.3.10b)).\n- **7th Army deactivates per LF (29.3.14)** at end of Sep."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "The GD 2–8 6-FP cap on 3rd Army (LF (29.3.8a)) throttles September offensives on purpose. Plan your Moselle-push tempo to peak on GD 8–12 when the 5th Pz complication kicks in and supply loosens slightly."
+              }
+            ]
+          }
+        },
+        {
+          "target": "fatigue-recovery-segment",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### US fatigue on GD 1–3 (LF (29.3.5), (29.3.5a))\n\nOn every GT during GDs 1–3, Allied units check fatigue if either:\n\n1) The unit moves more than half its modified MA in a Movement or Exploit Phase (check after movement, and after rest-turn fatigue).\n2) The unit enters PA mode (check when the PA marker comes off).\n\nFatigue DR (1d10):\n- **0–5:** no effect.\n- **6–8:** 1 fatigue hit.\n- **9:** 2 fatigue hits.\n\nCap of 2 fatigue hits (GOSS (14.1.0)). If already fatigued, max 1 additional hit (LF (29.3.5a))."
+              },
+              {
+                "kind": "callout",
+                "variant": "caution",
+                "text": "Burning full MA on GD 1–3 risks fatigued units that can't enter PA on GD 4+ when the Westwall ramps up (LF (29.3.5), (17.5.0)). Most players move Mech at half MA on GD 1 to keep PA capacity available when Westwall assaults become viable."
+              }
+            ]
+          }
+        },
+        {
+          "target": "replacement",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### September Allied Reinforcement Pool (LF (29.3.11))\n\nOn GD 1, the Allied player places most 3rd/XX/XII/XV corps/army asset units in an opaque container (see LF (29.3.11) for the exclusion list and unit counts). On GD 2+:\n\n1) Assign TP to the pool during the Joint Logistics Phase TP Assignment Segment — those TP cannot be used for anything else that GD.\n2) For each TP assigned, draw **5 random units** from the pool.\n3) Units arrive on any road hex on the western edge of Map 1 or 4.\n4) Drawn units adopt their superior HQ's current fuel state.\n5) XV Corps-flagged units drawn before GD 7 are held aside; they enter on GD 7+ on any XV Corps ZOP road hex. They cannot be reassigned to other corps.\n\nDuring a lull, no more than **2 TP per GD** can be used for this purpose (LF (24.2), (29.3.11))."
+              },
+              {
+                "kind": "callout",
+                "variant": "gotcha",
+                "text": "You can't cherry-pick from the reinforcement pool (LF (29.3.11)). Plan for 1-TP 5-unit pulls that may be mostly CvGps or AFA Bns when you needed Inf. The randomness is a design feature — build TP expectations around averages, not the unit you actually want."
+              }
+            ]
+          }
+        },
+        {
+          "target": "construction-phase",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### September setup FW (LF (29.3.12))\n\nAt scenario start the German player may place 6 ET-3 and 24 ET-2 in any German-occupied hex (ET-3 must meet LF (17.3.3c) placement criteria). Further ET-3 **cannot** be constructed during September unless the scenario extends past GD 27 (LF (29.3.12))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "update-game-turn-indicator",
+          "action": "gate",
+          "gate": "LF September: ENA is not yet available — it unlocks GD 83 (LF (3.4))."
+        }
+      ]
+    },
+    "october": {
+      "label": "October (Extended September)",
+      "modifications": [
+        {
+          "target": "command",
+          "action": "gate",
+          "gate": "LF October: this is the Sept-Extended scenario running through GD 35. The 83rd Inf Div deactivates on GD 27 and must relocate to the northernmost XX Corps position along the Moselle (LF (9.10.2), (29.3.15)). 1st Army deactivates per LF (29.3.15)."
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### October logistics bridge (LF (29.4.3), (29.4.4))\n\n- **3rd Army:** continues LF (29.3.8) procedures. From GD 27 onward use the ADV to the **left of the slash** on the GTRT until GD 35 (if Extended Sep) or until a lull is declared (if campaign).\n- **7th Army (US):** stays on LF (29.3.8a) logistics; if no lull is declared on or before GD 36, those restrictions continue through the end of November (LF (29.4.3)).\n- **German 1st, 5th Pz, 19th Armies:** continue LF (29.3.9), (29.3.10) logistics. If a qualifying lull occurs, they shift to LF (29.5.7) on the GD the lull ends (LF (29.4.4)).\n- **German 7th Army:** no longer active (LF (29.4.4))."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "October is the lull decision month. Every GD past GD 27 that you don't declare a lull ticks the Oct–Nov offensive tempo for Germany and weakens your post-lull 3rd Army spike (LF (24.0), (29.5.5)). If you haven't closed Nancy and the Moselle bridgeheads by GD 30, seriously consider declaring the lull on GD 36."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "november": {
+      "label": "November Scenario",
+      "modifications": [
+        {
+          "target": "weather",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### November weather (LF (29.5.2))\n\n- **GD 65:** fixed Ovr + mud. Do not roll for flooding or fog.\n- **GD 66+:** weather randomly determined each GT per GOSS (19.2.2) — no historical weather option.\n- Roll for flood starting GD 66 per LF (19.4.6a).\n\nThis is the scenario that most often sees flood conditions reshape the Moselle/Saar map (LF (19.4.6))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### November logistics (LF (29.5.5), (29.5.7))\n\nFor GD 65–79 (first 15 GDs):\n\n- **3rd Army:** ADV 5, 4 AmP/AM GT, all units Normal Fuel, 2 TP/corps for motorization (ignore GTRT). Starts with **10 AmP in stockpile** (LF (29.5.5)).\n- **7th Army:** ADV 4 fixed, 1 AmP/AM GT, may convert 1 ADV↔2 AmP (cap 1 per AM GT), start 3 AmP stockpile (cap 4 carry-over), 2 TP motorization-only, all units Normal Fuel (LF (29.5.5)).\n\nFor GD 65–74 (first 10 GDs) the German 1st Army runs LF (29.5.7) with ADV 4, 2 AmP/AM GT, all units Normal Fuel, 3 TP motorization-only. Starts with **6 AmP in stockpile** (LF (29.5.7)).\n\nGerman 19th Army: ADV 3 fixed, 1 AmP/AM GT, convert 1 ADV↔2 AmP (cap 1 per AM GT), start 2 AmP (cap 4), 2 TP motorization-only, Normal Fuel throughout (LF (29.5.7))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "command",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### November lull benefits by corps (LF (29.5.10))\n\nThe scenario starts after a 28-day lull, but only **one 3rd Army corps** benefits from the post-lull column shifts and FS bonuses (LF (24.4)):\n\n1) The Allied player secretly writes down one 3rd Army corps before setup.\n2) After German setup, reveal the chosen corps.\n3) Units assigned to the **unchosen** corps cannot enter PA mode on GD 65 and receive none of the LF (24.4) benefits."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "The secret corps choice is the scenario's largest single bluff (LF (29.5.10)). Most players pick XII Corps for the Moselle assault or XX Corps for the Metz push — the German defender's setup hinges on guessing which. Factor your GD 65 column shifts into the pick: the unobserved FS -2 vs -4 on fortified/OCT hexes is massive (LF (24.4))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "construction-phase",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### November fieldwork setup (LF (29.5.9))\n\nGerman side places:\n\n- 14 ET-3 in 1st Army ZOP within 8 hexes of the frontline.\n- 10 ET-3 in 1st Army ZOP at least 12 hexes from the frontline.\n- 30 ET-2 anywhere within 6 hexes of the frontline within 1st Army ZOP.\n- 10 ET-2 at least 12 hexes from the frontline.\n- 3 ET-3 and 10 ET-2 within 6 hexes of the 19th Army ZOP frontline.\n- 2 ET-2 at least 10 hexes from the frontline in the 19th Army ZOP.\n- IPs in all other front-line hexes occupied by a non-HQ/non-Art step.\n\nThe Allied side may place an ET-2 on any front-adjacent hex occupied by 2+ non-HQ/non-Art steps. Minefield placement per LF (7.13.4) runs alongside this (LF (29.5.9))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "fire-support",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "callout",
+                "variant": "caution",
+                "text": "The chosen corps gets LF (24.4) first-GT FS bonuses — unobserved FS on fortified/OCT hexes shifts from -4 to -2. This is the single most valuable November bombardment window. Plan the 10 AmP stockpile usage around the chosen corps's first-day FS barrage (LF (29.5.5), (24.4), (29.5.10))."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "december": {
+      "label": "December Scenario",
+      "modifications": [
+        {
+          "target": "update-game-turn-indicator",
+          "action": "gate",
+          "gate": "LF December: ENA is available (unlocks GD 83 per LF (3.4)). Plan Night GT budgets around ENA availability for both sides."
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### December logistics (LF (29.6.5), (29.6.7))\n\nFrom GD 88 onward:\n\n- **3rd Army:** ADV 4 (adjusted per GOSS (16.3.2), skip step 5), 2 AmP/AM GT, 4 TP motorization, all units Normal Fuel. Dec-start stockpile: 10 AmP (campaign continues carry-over) (LF (29.6.5)).\n- **US 7th Army:** ADV 4 fixed, 1 AmP/AM GT, may convert 1 ADV↔2 AmP (cap 1 per AM GT), 2 TP motorization-only, Normal Fuel (LF (29.6.5)).\n- **German 1st Army:** returns to **full GOSS (16.0) logistics** on GD 88. Dec-start stockpile: 5 AmP + 5 FP. Campaign carries over whatever's in stockpile (LF (29.6.7))."
+              },
+              {
+                "kind": "callout",
+                "variant": "why",
+                "text": "December is the first time the German 1st Army runs full logistics all campaign (LF (29.6.7)). This is deliberate: designer models the pre-Ardennes resupply. Pull Fuhrer Reserve AmP/FP selectively — the full system plus reserve gives the Axis real offensive tempo for a narrow window (LF (16.4.1a))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "weather",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### December weather (LF (29.6.2))\n\nSee LF (29.6.2) for the historical/variable determination rules. The Maginot Line counts as automatically upgraded in Dec per LF (17.6.4)c — German units in Maginot hexes benefit from IPs immediately (LF (17.6.4))."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "campaign": {
+      "label": "Campaign",
+      "modifications": [
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Campaign logistics (LF (29.3)–(29.6))\n\nThe campaign chains each monthly scenario's logistics with transitions driven by the lull decision:\n\n- **Sep → Oct:** logistics continue under LF (29.3.8), (29.3.8a), (29.3.10). 3rd Army switches to left-of-slash GTRT ADV on GD 27 and stays there until the lull is declared (LF (29.4.3)).\n- **Lull declared on/before GD 36 and lasting 28+ GDs:** for the 15 GDs after the lull ends, run the LF (29.5.5) 3rd Army post-lull window; for the 10 GDs after, run the LF (29.5.7) German 1st Army post-lull window.\n- **No qualifying lull:** 7th Army stays on LF (29.3.8a) through end of Nov; 1st and 19th German Armies stay on LF (29.3.9), (29.3.10) until GD 88 (LF (29.4.4)).\n- **Dec (GD 88+):** full GOSS (16.0) logistics for German 1st Army; US 3rd/7th Army run LF (29.6.5) (LF (29.6.5), (29.6.7))."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "The campaign's logistic rhythm rewards disciplined lull management (LF (24.0)). Declare early in October, milk the post-lull spike from roughly GD 65–79, then ride out the winter transition in December. Skip the lull and you starve XV Corps through November — a concrete -40 VP or worse swing against typical thresholds (LF (29.5.11))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "command",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Campaign scenario mechanics (LF (29.5.0), (29.6.0))\n\nWhen running a campaign from GD 1 through GD 87 or GD 102:\n\n1) Ignore monthly scenario-specific setup sections (LF (29.5.1), (29.5.2), (29.5.4), (29.5.6), (29.5.7), (29.5.8), (29.6.1), (29.6.2), (29.6.6), (29.6.7)) — those are for standalone monthly scenarios.\n2) Keep using the broader logistic/RE/reinforcement procedures in each month's 29.x.0 section.\n3) Continue with corps and army boundaries established at scenario start — do not reset boundaries to the November or December setup maps.\n4) Carry over all AmP and FP stockpiles between months."
+              }
+            ]
+          }
+        },
+        {
+          "target": "command",
+          "action": "add",
+          "insertAfter": "command-shuffles",
+          "decision": {
+            "id": "lf-map-intervals-2fad",
+            "title": "Map Intervals and the 2nd French Armored Division (Campaign)",
+            "when": "As XV Corps advances east — check each GT for open intervals on the SE map edge and for 2nd FF Arm Div Saverne Gap conditions (LF (27.1.1), (27.2.0), (27.3.0)).",
+            "ruleRefs": ["27.1.0", "27.1.1", "27.1.2", "27.2.0", "27.3.0", "27.3.1"],
+            "blocks": [
+              {
+                "kind": "prose",
+                "text": "VI Corps (off-map 7th Army) didn't advance uniformly with XV Corps historically, leaving an open SE flank. LF models this with **map intervals** that open when XV Corps units enter them and close on specific GDs — if left unmasked, Germans can feed the 716th VG Div onto the map from the SE edge (LF (27.1.0), (27.1.1), (27.1.2))."
+              },
+              {
+                "kind": "prose",
+                "text": "### Intervals (LF (27.1.1))\n\n- **Interval One:** Map 4-2453 to 4-4552. Closes GD 27 Command Phase.\n- **Interval Two:** 4-4653 to 3-2352. Closes GD 58 Command Phase.\n- **Interval Three:** 3-2453 to 3-2740. Closes GD 63 Command Phase.\n- **Interval Four:** 3-2739 to 5-3258. Closes the GT after the 2nd FF Arm Div CC exits the SE map edge per LF (27.2.0). When Interval Four closes, the German 19th Army deactivates and its units transfer to German 1st Army command (LF (27.1.1)).\n\nAn interval is **open** when an XV Corps Allied unit enters any hex on or east of its western boundary."
+              },
+              {
+                "kind": "prose",
+                "text": "### Masking requirement (LF (27.1.1))\n\n1) On the GT after an interval opens, the Allied player must assign a minimum of **9 non-HQ/non-Art steps** to mask it.\n2) Masking steps must move adjacent to any map edge hex within the interval.\n3) They remain there until replaced with an equal number of steps or until the interval closes."
+              },
+              {
+                "kind": "prose",
+                "text": "### If an interval is unmasked (LF (27.1.2))\n\n- GT 1 unmasked: German player may enter one regiment of 716th Inf Div (plus division assets) from the interval edge.\n- GT 3 consecutive: second regiment + division slice + fusilier Bn.\n- GT 6 consecutive: the remainder of the 716th Div.\n- Entered 716th units may be withdrawn at any time by tracing enemy-free hexes to an open interval edge — withdrawn units re-enter only via LF (27.3.1), 2 GDs later with steps refreshed (LF (27.1.2))."
+              },
+              {
+                "kind": "prose",
+                "text": "### 2nd FF Arm Div and the Alsatian Plain (LF (27.2.0), (27.3.0))\n\nWhen the Allied frontline has advanced east of Map 5 hex column 12xx for any hex, one CC of the 2nd FF Arm Div must exit the SE map edge within 2 GTs. It re-enters on Map 5 between 1858 and 2858 two GTs later. Once the first CC has re-entered, the rest of the division may follow the same procedure (LF (27.2.0))."
+              },
+              {
+                "kind": "callout",
+                "variant": "caution",
+                "text": "Nine steps per interval adds up fast (LF (27.1.1)). If you open Intervals Two and Three simultaneously while still masking Interval One, you can lose an entire division's worth of infantry to garrison duty. Time XV Corps advances to line up with interval close dates (GD 27, 58, 63) so you don't maintain multiple simultaneous masks."
+                }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

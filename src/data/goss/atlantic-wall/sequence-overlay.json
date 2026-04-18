@@ -13,11 +13,7 @@
         "timing": "conditional",
         "player": "both",
         "description": "June 6 AM GT only. The D-Day Airborne Assault occurs immediately before the beginning of the June 6 AM GT. Both sides conduct activity during this stage. Charts and tables are on the Airborne Assault Tables Card (AW (41.0)).",
-        "notes": [
-          "The Airborne Assault Stage is NOT a solitaire exercise — both sides conduct movement and combat during this stage (AW (41.0)).",
-          "All DZs remain on the Battlefield Map until the June 10 AM GT (AW (41.1.0)).",
-          "After the Airborne Assault Stage, proceed to the Amphibious Assault Stage (AW (42.0)) before starting the normal June 6 AM GT."
-        ],
+        "notes": [],
         "subPhases": [
           {
             "id": "aw-airborne-dz-placement",
@@ -169,11 +165,7 @@
         "timing": "conditional",
         "player": "both",
         "description": "Conducted prior to the June 6 AM GT (after the Airborne Assault Stage), and then prior to each subsequent GT until all beaches are fully cleared. There are three sub-phases, each with 8 segments (AW (42.0)).",
-        "notes": [
-          "Normally there will be two Amphibious Stages: June 6 AM GT and June 6 PM GT. If all beaches are not cleared by the end of June 6 PM, continue each successive GT until cleared (AW (42.4.0)).",
-          "The first sub-phase of June 6 AM has three EXTRA segments before the Landing Segment: Pointe du Hoc Assault, Utah Beach Drift, and DD Tank Segments (AW (42.4.0)).",
-          "Naval units are NOT available for NGS on June 6 — they are supporting the landings. NGS available starting June 7 AM or when all beaches are cleared (AW (38.3.0))."
-        ],
+        "notes": [],
         "subPhases": [
           {
             "id": "aw-amphibious-special-segments",
@@ -295,20 +287,14 @@
       "action": "modify",
       "gate": "AW: ENA is NOT used in Atlantic Wall. Ignore all references to Extended Night Activity.",
       "patch": {
-        "appendContent": "### Sequence of Play (SoP) (31.1.0)\n\nIgnore GOSS (3.2.0) thru (3.5.0) and (9.0). Much of the activity of a regular GT has been abstracted out of the introductory scenarios. The regular SoP has been modified with some phases deleted entirely. The below sequence of play is used in the first three scenarios.\n\n### Sequence of Play (Intermediate) (35.1.0)\n\nWhen playing the intermediate scenarios, all phases of the SoP are used however some sub-phases may be skipped or modified. Changes to the GT sequence are noted below.",
-        "appendNotes": [
-          "Check your scenario tier to know which SoP modifications apply — introductory scenarios strip out most logistics and command phases, while intermediate and full scenarios progressively add complexity."
-        ]
+        "appendContent": "### Sequence of Play (SoP) (31.1.0)\n\nIgnore GOSS (3.2.0) thru (3.5.0) and (9.0). Much of the activity of a regular GT has been abstracted out of the introductory scenarios. The regular SoP has been modified with some phases deleted entirely. The below sequence of play is used in the first three scenarios.\n\n### Sequence of Play (Intermediate) (35.1.0)\n\nWhen playing the intermediate scenarios, all phases of the SoP are used however some sub-phases may be skipped or modified. Changes to the GT sequence are noted below."
       }
     },
     {
       "target": "joint-air-allocation-phase",
       "action": "modify",
       "patch": {
-        "appendContent": "### Air Points & Naval Units (Intermediate) (35.4.0)\n\nEach Scenario will outline the use and availability of APs and naval units.\n\n### Air Points (38.2.0)\n\nIgnore all rules applying to Strategic Map assignment, air supply mission, and Strategic Interdiction.",
-        "appendNotes": [
-          "Allied air superiority is a major advantage in AW — the Luftwaffe has very limited AP. Use Allied air primarily for GS and GI to support the breakout from the beachhead."
-        ]
+        "appendContent": "### Air Points & Naval Units (Intermediate) (35.4.0)\n\nEach Scenario will outline the use and availability of APs and naval units.\n\n### Air Points (38.2.0)\n\nIgnore all rules applying to Strategic Map assignment, air supply mission, and Strategic Interdiction."
       }
     },
     {
@@ -316,52 +302,35 @@
       "action": "modify",
       "gate": "AW: All scenarios use simplified logistics — no full Logistics Table. ADV, AmP, fuel, and TP rules vary by scenario tier (AW (35.5.0)).",
       "patch": {
-        "appendContent": "### Logistics (Intermediate) (35.5.0)\n\nEach Scenario will list logistic rules that apply, however in all intermediate scenarios or in all campaign games that players do not use the full logistic rules; apply the below rules. In all cases, GOSS GenS rules apply unless specifically stated otherwise.\n\n### Allied Fuel (35.5.1)\n\nAllied Mech unit printed MA is reduced as follows:\n• June 7 AM to June 11 AM GT: -4.\n• June 12 AM to July 2 AM GT: -2.\n• July 3 AM GT to end of scenario: all Mech units have their full printed MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above.\n\n### German Fuel (35.5.2)\n\nThe following movement restrictions are in effect for both the friendly Movement and Exploitation Phases.\n• Beginning on the June 9 AM GT the German side must secretly designate one GT as a \"low fuel\" GT. On that GT, German Mech units subtract two from their printed MA.\n• During the remaining two GTs of that GD all Mech units may move a maximum of one-half their printed MA and may only move one hex while in PA mode.\n• Each GD the German side may select a number of formations or BG to operate with their full MA.\n• Until the July 3 AM GT, one formation, or four independent BGs may operate with their full MA.\n• Beginning the July 4 AM GT, two division formations or eight independent BG may operate with their full MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above.\n\n### Ammo Depletion (Intermediate) (35.5.3)\n\nScenario instructions will outline each side's ADV. Adjust army and corps ADV based on the number of formations assigned and the use of AmP. AmP arrival is dictated in each scenario's rules. Do not use the Logistics Table.\n\n### Depots (35.5.4)\n\nDepots may be moved and/or new depots may be activated. On the GD and for the two following GDs, that a depot is moved and/or activated; all Mech units subordinate to that army reduce their printed MA by two. Use the procedures outlined in GOSS (15.8.2) & AW (15.9.0). Exception: Ignore TP and FP requirements.",
-        "appendNotes": [
-          "Allied fuel restrictions (-4 MA early, -2 mid-game) severely limit Mech mobility in the beachhead phase — plan offensives around when fuel improves (AW (35.5.1)).",
-          "The German low-fuel mechanic is secret — the Allied player never knows which GT the German chose. This adds significant uncertainty to German counterattack timing (AW (35.5.2)).",
-          "Depot activation penalties (-2 MA for 3 GDs) mean you should plan depot moves well in advance of planned offensives (AW (35.5.4))."
-        ]
+        "appendContent": "### Logistics (Intermediate) (35.5.0)\n\nEach Scenario will list logistic rules that apply, however in all intermediate scenarios or in all campaign games that players do not use the full logistic rules; apply the below rules. In all cases, GOSS GenS rules apply unless specifically stated otherwise.\n\n### Allied Fuel (35.5.1)\n\nAllied Mech unit printed MA is reduced as follows:\n• June 7 AM to June 11 AM GT: -4.\n• June 12 AM to July 2 AM GT: -2.\n• July 3 AM GT to end of scenario: all Mech units have their full printed MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above.\n\n### German Fuel (35.5.2)\n\nThe following movement restrictions are in effect for both the friendly Movement and Exploitation Phases.\n• Beginning on the June 9 AM GT the German side must secretly designate one GT as a \"low fuel\" GT. On that GT, German Mech units subtract two from their printed MA.\n• During the remaining two GTs of that GD all Mech units may move a maximum of one-half their printed MA and may only move one hex while in PA mode.\n• Each GD the German side may select a number of formations or BG to operate with their full MA.\n• Until the July 3 AM GT, one formation, or four independent BGs may operate with their full MA.\n• Beginning the July 4 AM GT, two division formations or eight independent BG may operate with their full MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above.\n\n### Ammo Depletion (Intermediate) (35.5.3)\n\nScenario instructions will outline each side's ADV. Adjust army and corps ADV based on the number of formations assigned and the use of AmP. AmP arrival is dictated in each scenario's rules. Do not use the Logistics Table.\n\n### Depots (35.5.4)\n\nDepots may be moved and/or new depots may be activated. On the GD and for the two following GDs, that a depot is moved and/or activated; all Mech units subordinate to that army reduce their printed MA by two. Use the procedures outlined in GOSS (15.8.2) & AW (15.9.0). Exception: Ignore TP and FP requirements."
       }
     },
     {
       "target": "joint-fuel-value-determination-phase",
       "action": "modify",
       "patch": {
-        "appendContent": "### Allied Fuel (35.5.1)\n\nAllied Mech unit printed MA is reduced as follows:\n• June 7 AM to June 11 AM GT: -4.\n• June 12 AM to July 2 AM GT: -2.\n• July 3 AM GT to end of scenario: all Mech units have their full printed MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above.\n\n### German Fuel (35.5.2)\n\nThe following movement restrictions are in effect for both the friendly Movement and Exploitation Phases.\n• Beginning on the June 9 AM GT the German side must secretly designate one GT as a \"low fuel\" GT. On that GT, German Mech units subtract two from their printed MA.\n• During the remaining two GTs of that GD all Mech units may move a maximum of one-half their printed MA and may only move one hex while in PA mode.\n• Each GD the German side may select a number of formations or BG to operate with their full MA.\n• Until the July 3 AM GT, one formation, or four independent BGs may operate with their full MA.\n• Beginning the July 4 AM GT, two division formations or eight independent BG may operate with their full MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above.",
-        "appendNotes": [
-          "AW replaces GOSS fuel tracking with direct MA penalties — no fuel points to manage, but the penalties are significant early in the campaign."
-        ]
+        "appendContent": "### Allied Fuel (35.5.1)\n\nAllied Mech unit printed MA is reduced as follows:\n• June 7 AM to June 11 AM GT: -4.\n• June 12 AM to July 2 AM GT: -2.\n• July 3 AM GT to end of scenario: all Mech units have their full printed MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above.\n\n### German Fuel (35.5.2)\n\nThe following movement restrictions are in effect for both the friendly Movement and Exploitation Phases.\n• Beginning on the June 9 AM GT the German side must secretly designate one GT as a \"low fuel\" GT. On that GT, German Mech units subtract two from their printed MA.\n• During the remaining two GTs of that GD all Mech units may move a maximum of one-half their printed MA and may only move one hex while in PA mode.\n• Each GD the German side may select a number of formations or BG to operate with their full MA.\n• Until the July 3 AM GT, one formation, or four independent BGs may operate with their full MA.\n• Beginning the July 4 AM GT, two division formations or eight independent BG may operate with their full MA.\nNote: Reduce unit MA for ground conditions, GenS status and Exploit movement after reducing for the above."
       }
     },
     {
       "target": "allied-fire-support-segment",
       "action": "modify",
       "patch": {
-        "appendContent": "### Fire Support (FS) Missions (31.9.0)\n\nUnlike in the standard GOSS rules FS mission types are consolidated into one FS mission for each target hex. Only one FS mission is allowed in a single target hex. Each mission may consist of multiple volleys. Ammo depletion DRs only effect artillery mission point availability.\n• Coy sized units may only observe for one FS mission.\n• Btn sized units may observe for two FS missions.\n• Air, naval and artillery mission points are totaled into one mission. This total is used to determine the strength and number of volleys in each mission.\n\n### Naval Unit Availability (11.9.0)\n\nOnly the Allied side has naval units. The Allied side determines the number and type of naval units available for the current GD as follows:\n• There are five types of naval units available as shown at the top of the Naval Unit Availability chart. The five types are: Battleship (BB), Monitor (MN), Heavy Cruiser (CA), Light Cruiser (CL), and Destroyer (DD).\n• Below each type are two numbers or dashes separated by a slash. Left of the slash is for the western task force (US). Right is for the eastern task force (CW).\n• On the left of the chart is one column representing DR results from 0 to 9.\n• Each nationality rolls 1d10 for each type of naval unit. The result is the number of naval units of that type available to that task force.\n• Beginning the July 1 GD, the Western TF loses all naval units except for DD.\n• Beginning the July 8 GD, the Eastern TF may have a maximum of 1 BB or 1 Mon, 1 CA, 2 CL and 4 DD. The CW player rolls normally, however Eastern TF may not have more naval units than listed above.\n• Record the number and type of naval units available for that GD on the AP Track Record.\n• Scenario instructions may set limits on number of naval units available.\n• Naval units are subject to ammunition depletion. Their ADV is four; this value may not be modified. If a naval unit fails to pass the AD check, it may not be used again that GD. This check does not affect availability for following GDs.\n\n### Naval Gunfire Support (38.3.0)\n\nNaval units are not available on June 6 (they are supporting the landings).\n• Starting June 7 AM GT or on the first GT after all beaches are cleared use AW (11.9.0).\n• If any beach is not cleared of German units on the June 7 AM GT, the AG that has any beach that is not cleared does not roll for naval units. Each GT until all beaches are cleared, that AG NGS support on any not cleared beach uses the same procedures as called for in AW (42.0), the June 6 PM GT. NGS is not available on the June 6 Night GT.",
-        "appendNotes": [
-          "Naval gunfire is a massive force multiplier in AW — each battleship and cruiser provides significant FS points that don't require ammo tracking. Use NGS on the toughest German positions."
-        ]
+        "appendContent": "### Fire Support (FS) Missions (31.9.0)\n\nUnlike in the standard GOSS rules FS mission types are consolidated into one FS mission for each target hex. Only one FS mission is allowed in a single target hex. Each mission may consist of multiple volleys. Ammo depletion DRs only effect artillery mission point availability.\n• Coy sized units may only observe for one FS mission.\n• Btn sized units may observe for two FS missions.\n• Air, naval and artillery mission points are totaled into one mission. This total is used to determine the strength and number of volleys in each mission.\n\n### Naval Unit Availability (11.9.0)\n\nOnly the Allied side has naval units. The Allied side determines the number and type of naval units available for the current GD as follows:\n• There are five types of naval units available as shown at the top of the Naval Unit Availability chart. The five types are: Battleship (BB), Monitor (MN), Heavy Cruiser (CA), Light Cruiser (CL), and Destroyer (DD).\n• Below each type are two numbers or dashes separated by a slash. Left of the slash is for the western task force (US). Right is for the eastern task force (CW).\n• On the left of the chart is one column representing DR results from 0 to 9.\n• Each nationality rolls 1d10 for each type of naval unit. The result is the number of naval units of that type available to that task force.\n• Beginning the July 1 GD, the Western TF loses all naval units except for DD.\n• Beginning the July 8 GD, the Eastern TF may have a maximum of 1 BB or 1 Mon, 1 CA, 2 CL and 4 DD. The CW player rolls normally, however Eastern TF may not have more naval units than listed above.\n• Record the number and type of naval units available for that GD on the AP Track Record.\n• Scenario instructions may set limits on number of naval units available.\n• Naval units are subject to ammunition depletion. Their ADV is four; this value may not be modified. If a naval unit fails to pass the AD check, it may not be used again that GD. This check does not affect availability for following GDs.\n\n### Naval Gunfire Support (38.3.0)\n\nNaval units are not available on June 6 (they are supporting the landings).\n• Starting June 7 AM GT or on the first GT after all beaches are cleared use AW (11.9.0).\n• If any beach is not cleared of German units on the June 7 AM GT, the AG that has any beach that is not cleared does not roll for naval units. Each GT until all beaches are cleared, that AG NGS support on any not cleared beach uses the same procedures as called for in AW (42.0), the June 6 PM GT. NGS is not available on the June 6 Night GT."
       }
     },
     {
       "target": "allied-construction-phase",
       "action": "modify",
       "patch": {
-        "appendContent": "### Fieldworks (FW) (31.10.0)\n\nInitial scenario setup will detail where FW are placed at the beginning of the scenario, and may include ET-3s. All rules pertaining to the construction and benefits of FWs are in effect.\nException: ET-3s may not be built.",
-        "appendNotes": [
-          "ET-3 construction is prohibited in introductory scenarios — only pre-placed fieldworks are available (AW (31.10.0))."
-        ]
+        "appendContent": "### Fieldworks (FW) (31.10.0)\n\nInitial scenario setup will detail where FW are placed at the beginning of the scenario, and may include ET-3s. All rules pertaining to the construction and benefits of FWs are in effect.\nException: ET-3s may not be built."
       }
     },
     {
       "target": "allied-movement-segment",
       "action": "modify",
       "patch": {
-        "appendContent": "### Movement Halts (31.8.0)\n\nIgnore GOSS (7.3.3a) & (7.3.3b), movement halts occur when:\n• A unit in PA mode moves adjacent to an enemy unit.\n• A unit enters a hex that is adjacent to an enemy unit and the hex does not contain movement covering terrain.\nMovement halts generated by Forts and ETs are still in effect (GOSS (7.3.3c)).\n**Designer's Note:** in the more advanced rules, the requirement for artillery is back in effect. I wanted to initially simplify the creation of a movement halt in these easier scenarios — besides most hexes would be in range of artillery in these situations anyway.\n\n### Exploitation Movement (31.5.0)\n\nAt the beginning of a friendly Movement Phase, Mech units may be placed in Exploit mode. Ignore all references to Exploitation Phases, Maneuver Reserve, and Exploit Mode.\n• Units in Exploit mode may not move in the Movement Phase.\n• In the Combat Phase after all GAs have been resolved, Units in Exploit mode may move up to one-half of their printed MA and if able conduct an overrun attack (GOSS (7.11.0)).\n• Remove the Exploit marker once the unit has completed movement and overruns.\n• Units in Exploit mode do not pay the extra MP for moving adjacent to enemy units, unless there is no movement covering terrain in that hex.",
-        "appendNotes": [
-          "AW introductory scenarios simplify movement halts — no artillery requirement, just adjacency to enemy in open terrain. This makes defensive positions in covering terrain much stronger (AW (31.8.0))."
-        ]
+        "appendContent": "### Movement Halts (31.8.0)\n\nIgnore GOSS (7.3.3a) & (7.3.3b), movement halts occur when:\n• A unit in PA mode moves adjacent to an enemy unit.\n• A unit enters a hex that is adjacent to an enemy unit and the hex does not contain movement covering terrain.\nMovement halts generated by Forts and ETs are still in effect (GOSS (7.3.3c)).\n**Designer's Note:** in the more advanced rules, the requirement for artillery is back in effect. I wanted to initially simplify the creation of a movement halt in these easier scenarios — besides most hexes would be in range of artillery in these situations anyway.\n\n### Exploitation Movement (31.5.0)\n\nAt the beginning of a friendly Movement Phase, Mech units may be placed in Exploit mode. Ignore all references to Exploitation Phases, Maneuver Reserve, and Exploit Mode.\n• Units in Exploit mode may not move in the Movement Phase.\n• In the Combat Phase after all GAs have been resolved, Units in Exploit mode may move up to one-half of their printed MA and if able conduct an overrun attack (GOSS (7.11.0)).\n• Remove the Exploit marker once the unit has completed movement and overruns.\n• Units in Exploit mode do not pay the extra MP for moving adjacent to enemy units, unless there is no movement covering terrain in that hex."
       }
     }
   ],
@@ -380,22 +349,12 @@
         {
           "target": "joint-air-allocation-phase",
           "action": "modify",
-          "gate": "AW Intro: AP available per scenario. Ignore Strategic Map air rules. No air transport. Ignore all references to Maneuver Reserve, fuel, ammo points, ENA, and bridge collapse (AW (31.0)).",
-          "patch": {
-            "appendNotes": [
-              "Introductory scenarios dramatically simplify air — just use the AP listed in your scenario setup. No strategic air, no air supply, no ATP."
-            ]
-          }
+          "gate": "AW Intro: AP available per scenario. Ignore Strategic Map air rules. No air transport. Ignore all references to Maneuver Reserve, fuel, ammo points, ENA, and bridge collapse (AW (31.0))."
         },
         {
           "target": "joint-command-phase",
           "action": "modify",
-          "gate": "AW Intro: Ignore GOSS (3.2.0) through (3.5.0) and (9.0). Command phase functions are abstracted — Allied player only designates movement (AW (31.1.0)).",
-          "patch": {
-            "appendNotes": [
-              "Most command functions are removed in introductory scenarios — no corps/army assignments, no rest GTs, no lull determination. Focus on movement and combat (AW (31.1.0))."
-            ]
-          }
+          "gate": "AW Intro: Ignore GOSS (3.2.0) through (3.5.0) and (9.0). Command phase functions are abstracted — Allied player only designates movement (AW (31.1.0))."
         },
         {
           "target": "joint-logistics-phase",
@@ -658,13 +617,7 @@
         {
           "target": "joint-logistics-phase",
           "action": "modify",
-          "gate": "AW Scenario 4: Intermediate logistics. No Logistics Table. ADV and AmP per scenario. Simplified reinforcements — units arrive 2 GDs later than Activation List (AW (35.0), (36.0)).",
-          "patch": {
-            "appendNotes": [
-              "Scenario 4 uses intermediate logistics — simpler than full rules but more involved than introductory. Check AW (35.5.0) for fuel penalties and depot rules.",
-              "Allied reinforcements arrive 2 GDs later than listed because the Strategic Map/Naval Transit Display is not used (AW (35.3.0))."
-            ]
-          }
+          "gate": "AW Scenario 4: Intermediate logistics. No Logistics Table. ADV and AmP per scenario. Simplified reinforcements — units arrive 2 GDs later than Activation List (AW (35.0), (36.0))."
         },
         {
           "target": "update-game-turn-indicator",
@@ -724,13 +677,7 @@
         {
           "target": "joint-logistics-phase",
           "action": "modify",
-          "gate": "AW Scenario 5: Intermediate logistics. No Logistics Table. ADV and AmP per scenario. Carpet bombing may be available (AW (35.0), (37.0)).",
-          "patch": {
-            "appendNotes": [
-              "Cobra features the massive Allied carpet bombing that broke the German line — check scenario rules for carpet bombing availability and restrictions (AW (37.0)).",
-              "Allied reinforcements arrive 2 GDs later than Activation List (AW (35.3.0))."
-            ]
-          }
+          "gate": "AW Scenario 5: Intermediate logistics. No Logistics Table. ADV and AmP per scenario. Carpet bombing may be available (AW (35.0), (37.0))."
         },
         {
           "target": "update-game-turn-indicator",
@@ -782,14 +729,7 @@
         {
           "target": "joint-logistics-phase",
           "action": "modify",
-          "gate": "AW Scenario 6: Intermediate logistics with full Airborne and Amphibious modules active. June 6-12. Use SoP from AW (35.1.0). Naval units available starting June 7 AM or after all beaches cleared (AW (38.0)).",
-          "patch": {
-            "appendNotes": [
-              "This is the full D-Day experience — Airborne and Amphibious stages on June 6, then normal GTs with simplified logistics through June 12 (AW (38.1.0)).",
-              "The scenario can be split — play just the US (12th AG) or CW (21st AG) side separately (AW (38.11.0)).",
-              "Naval units are NOT available on June 6 (supporting landings). Starting June 7 AM, roll for naval unit availability (AW (38.3.0))."
-            ]
-          }
+          "gate": "AW Scenario 6: Intermediate logistics with full Airborne and Amphibious modules active. June 6-12. Use SoP from AW (35.1.0). Naval units available starting June 7 AM or after all beaches cleared (AW (38.0))."
         },
         {
           "target": "update-game-turn-indicator",
@@ -848,13 +788,7 @@
         {
           "target": "joint-logistics-phase",
           "action": "modify",
-          "gate": "AW Campaign: Full campaign from June 6 onward. Simplified logistics with optional full logistic and strategic rules (AW (39.0)). All Airborne and Amphibious modules active on June 6.",
-          "patch": {
-            "appendNotes": [
-              "The campaign game can use either simplified or full logistics — players choose before starting. Full logistics add the Logistics Table, Strategic Map, and Naval Transit Display (AW (39.4.0)).",
-              "Optional second airborne assault (1st British/Polish AB or second US airborne drop) may be available later in the campaign (AW (39.6.0))."
-            ]
-          }
+          "gate": "AW Campaign: Full campaign from June 6 onward. Simplified logistics with optional full logistic and strategic rules (AW (39.0)). All Airborne and Amphibious modules active on June 6."
         },
         {
           "target": "update-game-turn-indicator",

@@ -212,14 +212,6 @@ export function PhaseStepper({
         </div>
       )}
 
-      {/*
-        Tips + Scenario Tips are intentionally NOT rendered in the Steps view.
-        They've moved to the Learn tab, which paginates with the Stepper in
-        lockstep. The `notes` / `appendedNotes` arrays remain in sequence.json
-        as archived data pending final audit (see docs/notes-vs-learn-comparison.md).
-        To re-enable temporarily, restore the blocks from git history.
-      */}
-
       {/* Checklist */}
       {checklistItems.length > 0 && (
         <div className="mb-6 rounded-lg border border-stone-200 bg-white p-4 dark:border-stone-700 dark:bg-stone-800">

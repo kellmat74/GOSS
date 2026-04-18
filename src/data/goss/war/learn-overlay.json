@@ -1,0 +1,879 @@
+{
+  "module": "war",
+  "moduleLabel": "WaR",
+  "modifications": [
+    {
+      "target": "command",
+      "action": "gate",
+      "gate": "WaR: Command is heavily gated by date. In Dec 16 scenarios neither side may alter corps/army assignments or boundaries until Dec 19 AM GT (WaR (9.2)). Leaders cannot be activated until Dec 17 AM except Peiper who is auto-active from Dec 16 AM (WaR (23.0)). Surrender checks are off until Dec 18 AM (WaR (15.2.1)). Montgomery takes command on a trigger, not on the calendar (WaR (9.2.2a))."
+    },
+    {
+      "target": "command.command-shuffles",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR command specifics (WaR (9.2))\n\n- **Dec 16 scenarios:** German 6th/5th Pz and 5th Pz/7th Army boundaries are printed on the map and frozen until Dec 19 AM GT (WaR (9.2.1)). 5th FJ Div and Lehr Pz Div have narrow exceptions to operate up to five hexes across the 7th/5th Pz boundary without OoC (WaR (9.2.1)).\n- **7th Army Mech lock:** the 7th Army may never hold more than one BG-sized Mech formation assigned until Dec 20 AM, and only if it dedicates one TP per Mech division and one TP per two BG-sized formations to fuel transport (WaR (9.2.1a)).\n- **Allied side:** 1st Army covers all four maps until either Montgomery takes command (WaR (9.2.2a)) or 3rd Army is activated on Dec 21 AM GT. After that, the 1st/3rd Army boundary runs within two hexes of hex row xx02 on the SE/SW maps. V Corps must stay with 1st Army; VIII Corps must go to 3rd Army regardless of HQ position (WaR (9.2.2)).\n- **VIII/V boundary lock:** US units that start the Dec 16 scenarios cannot cross the VIII/V Corps boundary on the NE map until Dec 18 Night GT. Arriving reinforcements are exempt until they reach their assembly areas (WaR (9.2.3)).\n- **Out-of-play area:** NE map hexes 5201 to 5203 to 6409 to 7006 are permanently out of play (WaR (9.2.6)). If players opt-in to use that area, German units inside it cannot enter PA during the Pre-Dawn GT."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Units that end up in the wrong army ZOP after the 3rd Army boundary is drawn on Dec 22 AM GT are marked OoC — plan the Dec 21 GD movement so every corps asset and subordinate division is on its proper side of the xx02 line by the Dec 22 Command Phase (WaR (9.2.2))."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "WaR locks the opening-week command structure because historically OKH and the US chain of command did not react instantly. You get the tactical certainty of fixed boundaries on Dec 16-18 in exchange for losing the flexibility to swing formations between armies until Dec 19+ (WaR (9.2.1))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command",
+      "action": "add",
+      "insertAfter": "command-shuffles",
+      "decision": {
+        "id": "war-montgomery-takes-command",
+        "title": "Montgomery Takes Command & Strategic Withdrawal",
+        "when": "Joint Command Phase, Dec 17 Night GT or later — checked any turn that a German formation penetrates the 26xx hex row on the NE or SE map (WaR (9.2.2a)).",
+        "ruleRefs": ["9.2.2a", "9.2.2", "24.0"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "Montgomery takes command on a trigger, not a date. Once the trigger fires, it stays fired — even if the Germans later pull back — and the Allied player must pay for it with a mandated strategic withdrawal and corps-level lull (WaR (9.2.2a))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Trigger (WaR (9.2.2a))\n\nAll three conditions must be true at the same time:\n\n1) It is the Dec 17 Night GT or later.\n2) At least four units of a single German formation/BG are on or west of the 26xx hex row on the NE or SE map.\n3) Those units can trace a GenS path (may be extended) to their PSS.\n\nMontgomery takes command in the first Joint Command Phase after the condition is met. If 3rd Army has not already been activated, it activates automatically at the same time and the Allied player must draw the 1st/3rd Army boundary (WaR (9.2.2))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Strategic withdrawal (WaR (9.2.2a))\n\n1) Next Joint Command Phase, the Allied player picks one US corps assigned to 1st Army (must have at least one division and six corps assets assigned).\n2) That corps cannot enter PA mode and cannot move closer to German units except westward for the rest of that GD.\n3) No Rest GT required for the withdrawal GD.\n4) At the end of the Night GT, the Allied player runs an ENA period — all units of the corps auto-activate; Allied is side one; units must move up to full printed MA away from the closest German unit toward their PSS. No fatigue for these activations.\n5) Isolated units may still run up to two breakout GAs per GT using PA units, moving in any direction."
+          },
+          {
+            "kind": "prose",
+            "text": "### Forced corps-level lull (WaR (9.2.2a), (24.0))\n\nThe following GD's Command Phase, the Allied player picks one 1st Army corps for a corps-level lull. The German player cannot refuse. Key modifications to GOSS (24.0):\n\n- Lull lasts at least five GDs — nobody can break early.\n- Neither side can activate any units (GOSS (24.2.0)).\n- Allied GS missions continue; GI/SI/ASup/air supply are unaffected by the lull.\n- On the AM GT of the 6th GD: Allied rolls 1d10. 0-4 Allied may end; 5-8 German may end; 9 the lull continues another GD with a -1 DRM each subsequent GD."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Triggering Montgomery is a one-way door. Even a fleeting four-unit penetration west of the 26xx hex row locks in the strategic withdrawal and the 5-GD corps lull. As the German player this is powerful but not free — you give up any remaining surprise benefits and force a reliable Allied withdrawal. As the Allied player, cover the 26xx line aggressively if you want to deny the trigger (WaR (9.2.2a))."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "WaR (9.2.2a) models the real Eisenhower decision to hand the northern shoulder to Montgomery — once it happened, the Allies shifted from counter-attack to deliberate withdrawal-and-regroup for several days. The mandatory lull encodes that pause."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command",
+      "action": "add",
+      "insertAfter": "command-shuffles",
+      "decision": {
+        "id": "war-xxx-corps-activation",
+        "title": "British XXX Corps and the Meuse Trigger",
+        "when": "Any GT once British XXX Corps units arrive (Dec 20 PM on). The Allied player checks activation whenever German units threaten the Meuse line (WaR (9.2.4), (9.2.4b)).",
+        "ruleRefs": ["9.2.4", "9.2.4a", "9.2.4b", "9.2.2b"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "XXX Corps is the Allied backstop west of the Meuse. Until the Germans cross the river or attack a British unit, XXX Corps sits inactive within its own ZOP — it defends normally but cannot move, build, demolish, or cross (WaR (9.2.4), (9.2.4a))."
+          },
+          {
+            "kind": "prose",
+            "text": "### At-start restrictions (WaR (9.2.4a))\n\n- First British unit arrives Dec 20 PM GT; must move by most direct route to Givet (SW3703).\n- Once any XXX Corps unit occupies Givet, the XXX Corps ZOP is everything west of the Meuse from Herstal (NE2101) to the Dec 21 COMZ boundary.\n- Arriving formation/sub-formation HQs need assembly points; subordinates stay within 12 hexes of their HQ.\n- Non-activated XXX Corps units cannot cross the Meuse or leave the XXX ZOP. No construction or demolition. They defend normally.\n- US units cannot be assigned to XXX Corps and must clear the XXX ZOP promptly."
+          },
+          {
+            "kind": "prose",
+            "text": "### Activation triggers (WaR (9.2.4b))\n\n1) Scenario instructions.\n2) Automatic: 29th Arm Bde auto-activates Dec 25 PM GT (if not already) and operates within XXX ZOP plus three hexes east of the Meuse.\n3) Any German FS mission, GA, overrun, or CDM against an XXX Corps unit activates the targeted British formation + all corps assets next Allied player turn.\n4) Any German unit occupying a hex west/northwest of the Meuse inside XXX or COMZ ZOP activates the closest British division HQ + all its subordinates next Allied player turn. If Germans cross at two points ≥10 hexes apart, one division per point activates.\n5) First Command Phase after a (3) or (4) activation, Allied rolls 1d10 + number of German units west of the Meuse. Modified 9+ activates the rest of XXX Corps. 8 or less: check again each Allied Administrative Phase."
+          },
+          {
+            "kind": "prose",
+            "text": "### COMZ interaction (WaR (9.2.2b))\n\nAll US units with a CZ counter code are COMZ. From Dec 16 until XXX Corps arrives, the COMZ ZOP covers everything west of the Meuse from Herstal to Namur to Sedan. COMZ units cannot move east of the Meuse unless scenario rules release them. A German unit crossing the Meuse into COMZ abolishes the COMZ restrictions — all CZ units may then be reassigned to 1st or 3rd Army."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "As German player, attacking any XXX Corps unit directly is often a mistake — you hand the Allied player a free formation activation (WaR (9.2.4b), trigger 3). Route around British units where possible and push the Meuse crossing with mass so trigger (5) still yields a good result if you have to cross."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "If you are the Allied player and a unit assigned to XXX Corps ends up east of the Meuse, you must create an XXX Corps east-of-Meuse ZOP in the next Joint Command Phase (can't overlap 3rd Army/COMZ ZOP, can't extend east of the Ourthe River). US units must exit that zone promptly (WaR (9.2.4b))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command.leader-activation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR leader specials (WaR (23.2.2a), (23.2.2b))\n\nLeaders from scenario instructions arrive stacked with their assigned HQ. Peiper is a KG-specific leader — his bonuses apply only to units marked KG Peiper. Key named effects:\n\n- **Dietrich (6th Pz Army, Axis):** stacked with an SS Div HQ, all mandatory PRC results (asterisks) in offensive GAs where every participating unit is subordinate to that Div convert to discretionary hits (WaR (23.2.2a)).\n- **Manteuffel (5th Pz Army, Axis):** stacked with a subordinate corps HQ at AM GT start, one Mech formation under that corps gets +1 MP for AM and PM GTs (applied after ground/fuel adjustments) plus one favorable column shift once per GD in a GA involving at least one unit of that formation (WaR (23.2.2a)).\n- **Brandenburg (7th Army, Axis):** stacked with a subordinate formation HQ, grants up to two favorable column shifts to a single defensive GA (or split across two defensive GAs) when every participating unit is subordinate. Does not combine with other leader benefits (WaR (23.2.2a)).\n- **vLuettwitz (XLVII Pz Corps, Axis) and Kreuger (LVIII Pz Corps, Axis):** one favorable column shift per GD on offensive or defensive GAs where all participants are subordinate. vLuettwitz can be spent on two GAs per GD; Kreuger once. Neither stacks with other leader benefits (Kreuger does stack with the formation's own leader bonus) (WaR (23.2.2a)).\n- **Patton (3rd Army, Allied):** units of the formation he is stacked with may advance one extra hex after GA, provided they are in PA mode and within normal advance limits (WaR (23.2.2b)).\n- **Collins (VII Corps, Allied):** units of the formation he is stacked with may move during a Friendly Movement Phase in any order regardless of movement type (WaR (23.2.2b))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Dietrich's PRC-conversion is uniquely powerful in massed SS Pz assaults — stacking him with 1SS or 12SS HQ on a Schwerpunkt day converts every asterisk result, which is the difference between a stalled attack and a clean breakthrough (WaR (23.2.2a))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Patton does not arrive until the Dec 20 Night GT (WaR (23.0)). Plan 3rd Army attacks on Dec 21 AM assuming Patton is stacked, but do not expect any Patton bonus earlier than that."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics",
+      "action": "gate",
+      "gate": "WaR: Allied armies NEVER use the full Logistic Table (WaR (16.0), (16.2.1b)). Germans do not use full logistics until Dec 20 AM GT — before that, every German unit is normal fuel and TP is motorization-only (WaR (16.2.1d)). Max German AmP stockpile is 10 per army (WaR (16.3.6))."
+    },
+    {
+      "target": "joint-logistics.tp-allocation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR TP availability (WaR (16.1.1a), (16.1.1b))\n\n**Allied (motorization only):**\n- Dec 16-18: 6 TP (1st Army)\n- Dec 19-20: 12 TP (1st Army)\n- Dec 21-23: 1st Army 8 TP, 3rd Army 6 TP\n- Dec 24-Jan 8: 1st Army 10 TP, 3rd Army 8 TP\n- XXX Corps adds 3 TP (motorization only) once activated (WaR (16.2.1c)).\n- If Montgomery takes command before Dec 21, each Allied army drops to 6 TP.\n\n**German:**\n- Dec 16: no TP.\n- Dec 17-19: 6Pz 2 TP, 5Pz 2 TP, 7A 1 TP — motorization only, cannot be transferred between armies.\n- Dec 20-Jan 8: 16 TP, divided freely between armies per GOSS (16.1.2). Standard GOSS TP assignment applies from this GD on (WaR (16.1.1b))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "82nd and 101st AB Leg units arriving as reinforcements are motorized by TP to their assembly areas for free — those TP don't count against the army pool (WaR (16.1.1a)). Don't reserve dedicated TP for the paratroopers' road march."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Static German Art with range 18+ (WaR (4.3.3)) cannot be transported by TP at all and ignore their printed MA — if you need to displace them, build the plan around Eng units and heavy bridges, not truck points."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics",
+      "action": "add",
+      "insertAfter": "replacement-points",
+      "decision": {
+        "id": "war-stockpile-amp",
+        "title": "AmP Stockpiles and Intensive Barrage (Axis)",
+        "when": "Joint Logistics Phase of the Dec 16 AM GT and at each milestone GD thereafter — AmP arrives pre-positioned, not earned via Logistics Table until Dec 20 (WaR (16.3.6a)).",
+        "ruleRefs": ["16.3.6", "16.3.6a"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "WaR represents Hitler's pre-positioned ammo buildup as one-time stockpile deliveries at the start of each scenario. On top of that, fixed AmP arrivals land on Dec 22, Dec 29, and Jan 5 in four-map campaign play (WaR (16.3.6a))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Starting stockpiles by scenario (WaR (16.3.6a))\n\n- **Dec 16 campaign game:** 10 AmP starting stockpile. Divide between the three armies freely.\n- **All Dec 21 scenarios:** 6 AmP. Add 8 AmP on Dec 22 AM GT in any four-map campaign from Dec 16 or Dec 21.\n- **All Dec 28 scenarios:** 10 AmP. Add 8 AmP on Dec 29 AM, then 6 AmP on Jan 5 AM (campaigns only).\n- **Smaller scenarios:** use the scenario-specific starting value.\n\nThe 10-AmP-per-army stockpile cap (WaR (16.3.6)) applies at the start of every Logistics Phase — overflow is lost."
+          },
+          {
+            "kind": "prose",
+            "text": "### Pre-Dawn restriction (WaR (16.3.6a))\n\n- Starting AmP cannot be used during the Pre-Dawn Surprise GT. They can be used from Dec 16 AM PM onward for intensive fire or Art replenishment.\n- AmP cannot be used to modify German base ADV on Dec 16.\n- Starting Dec 17 AM, stockpiled AmP may be spent to raise the German ADV normally (WaR (16.2.1d))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Hold starting AmP for intensive barrages on Dec 16 AM/PM — that is exactly the window when you want massed fire on the Schwerpunkt and your FS is already constrained (WaR (16.3.6a), (30.3.0)). Don't dump them into ADV boosts before Dec 17 AM — you can't anyway."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "German armies may hold no more than 10 AmP in stockpile at the start of any Logistics Phase (WaR (16.3.6)). Overflow from the Dec 22/Dec 29/Jan 5 deliveries that can't fit is wasted — spend stockpile down to 8-9 AmP before each milestone to avoid losing the windfall."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics.adv-cascade",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR ADV rules (WaR (16.2.1b), (16.2.1d))\n\n**Allied (all scenarios):**\n- No full logistic rules — ever. All HQ/units are fully fueled; no FP exists (WaR (16.2.1b)).\n- Dec 16 base ADV comes from the scenario — do not adjust for supported corps.\n- Dec 17 AM onward: base ADV is 5. Adjust via GOSS (16.3.2) skipping Step 5.\n- 3rd Army counts one off-map corps in addition to on-map corps when determining supported corps (WaR (16.2.1b)).\n- Allied armies may not transfer AmP between them (GOSS (16.3.5) disabled).\n- OhS rules (GOSS (15.5)) kick in starting Dec 18 AM.\n\n**German (Dec 16-19):**\n1) All HQ/units fully fueled.\n2) Base ADV set by scenario.\n3) Dec 17 AM onward: adjust ADV via GOSS (16.3.2) skipping Step 5.\n4) AmP only gained by reducing army ADV (GOSS (16.3.2) Step 3).\n5) TP is motorization only.\n\n**German (Dec 20 onward):** full logistic rules. Base ADV is 3 for all armies. Bastogne-St Vith supply complex adds +2 to all fuel/ammo delivery DRs once operational (WaR (15.2.7), (15.2.7b))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics",
+      "action": "add",
+      "insertAfter": "replacement-points",
+      "decision": {
+        "id": "war-bastogne-st-vith-complex",
+        "title": "Bastogne-St. Vith Supply Complex (Axis)",
+        "when": "Every Supply Determination Segment once both Bastogne hexes (SE2215, 2216) and St. Vith (NE4403) are German controlled — checked first thing in the segment (WaR (15.2.7), (15.2.7a)).",
+        "ruleRefs": ["15.2.7", "15.2.7a", "15.2.7b"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "Historically the Germans planned to reopen the St. Vith–Bastogne rail line and push both towns up to railhead status. In WaR, controlling all three hexes plus clearing the road between them gives the German side a major supply boost (WaR (15.2.7))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Validity check (WaR (15.2.7a))\n\nFirst action of each Supply Determination Segment. Both conditions must be true:\n\n1) No Allied unit is within three hexes of any of the three town hexes (both Bastogne, St. Vith), nor within three hexes of any primary-road hex used to trace GenS between them.\n2) A German unit occupies — or was the last to occupy — all three town hexes.\n\nIf valid, the complex is operational for that segment. If invalid later it goes offline immediately; you may re-establish once the conditions return (WaR (15.2.7a))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Benefits (WaR (15.2.7), (15.2.7b))\n\n- Bastogne becomes a PSS for 5th Pz Army.\n- St. Vith becomes a PSS for either 5th Pz or 6th Pz Army (not both) each GD.\n- **+2 DRM to all German fuel and ammunition delivery die rolls** while operational (applies to GOSS (16.3.0), (16.4.0))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "The +2 DRM on fuel/ammo deliveries is a huge swing — often more valuable than the PSS relocation itself. If you are German and clearing to Bastogne is contested, the opportunity cost of bypassing is measured in failed delivery rolls every GD (WaR (15.2.7b))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "The three-hex buffer requirement is strict. A single US unit creeping within three of the Bastogne-St Vith road deactivates the whole complex that segment — and the German side loses the +2 DRM for that GD's logistics (WaR (15.2.7a))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "joint-logistics",
+      "action": "add",
+      "insertAfter": "replacement-points",
+      "decision": {
+        "id": "war-fuel-dumps",
+        "title": "US Fuel Dumps and Capture",
+        "when": "Joint Logistics Phase — Allied evacuation starting Dec 19 AM; German capture whenever a German unit enters a dump hex (WaR (16.6)).",
+        "ruleRefs": ["16.6.1", "16.6.2", "16.6.3"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "US 1st Army supply dumps in the Liege-Verviers area contain food, ammo, and — crucially — fuel. Capturing them on the advance can put a whole Mech formation into normal fuel without spending FP (WaR (16.6))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Placement (WaR (16.6.1))\n\nIf scenario rules enable fuel dumps, the Allied player places (or secretly notes) dumps at:\n- NE3618 Francorchamps, NE3710 Jalhay, NE3413 Tiege, NE3215 Spa\n- NE2412 Louveigne, NE2305 Fleron, NE2911 Theux, NE3208 Verviers\n\nVerviers counts as two dumps for evacuation purposes."
+          },
+          {
+            "kind": "prose",
+            "text": "### Evacuation (WaR (16.6.2))\n\nStarting Dec 19 AM GT, the Allied player may evacuate three dumps per Joint Logistics Phase until none remain. Evacuated dumps no longer give benefits. The Verviers dump counts as two for the evacuation cap."
+          },
+          {
+            "kind": "prose",
+            "text": "### Capture (WaR (16.6.3))\n\n1) German unit enters an unevacuated dump hex.\n2) Roll 1d10 (−1 DRM if it was the Verviers dump).\n3) Modified 0 = main 1st Army dump captured (only check this result once per game). Any other modified result = no effect, but you may keep checking each future capture.\n\nMain 1st Army dump captured:\n- Next German Joint Logistics Phase, every German HQ that can trace a direct (non-extended) GenS path from the dump location is normal fuel for that GD free of FP.\n- Next Allied Joint Logistics Phase, all 1st Army corps and formation HQs (including army assets) are automatically Low Fuel for that GD; roll fuel values per GOSS (16.4.5).\n\nNon-main dump captured:\n- One Mech formation or two Mech BGs subordinate to 6th Pz Army normal-fueled for the next GD with no FP and no GenS path required. Allied side is unaffected."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Verviers is the single most valuable dump to push for — the -1 DRM doubles your odds on the main-dump capture roll (WaR (16.6.3)). If your 6th Pz spearhead can reach NE3208 before Dec 19 evacuations clear the area, the payoff is enormous."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "As Allied player, prioritize evacuation of the Liege-region dumps (Fleron NE2305, Theux NE2911, Spa NE3215) on the Dec 19 AM and subsequent Logistics Phases — losing the main 1st Army dump is near-terminal for 1st Army fuel (WaR (16.6.2), (16.6.3))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "weather",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR weather (WaR (19.0), (19.2.2), (30.1.1))\n\n- Players choose historical or variable weather before the scenario starts. Historical is printed on the Turn Record Tracks (WaR (19.0)).\n- Dec 16 GTs always use historical weather (overcast/normal ground). Variable rolls can begin from Dec 17 AM if you chose the variable option (WaR (30.1.1)).\n- Variable weather: Allied rolls 1d10 for atmospheric then ground, applying the GT's printed DRMs (shown on the German GTRT as x/y).\n- Night GTs: use the preceding PM GT's modifiers and add +5 to the ground DR. Do not roll during ENA periods — the Night weather carries over.\n- **Dec 27 PM and later:** if atmospheric rolls POvr, re-roll 1d10 (no DRMs). 0-4 upgrades to Ovr; 5+ stays POvr (WaR (19.2.2)).\n- **Dec 28 AM and later:** any Normal ground result becomes Snow if the atmospheric is Ovr (WaR (19.2.2))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Historical weather in WaR sets ground condition to Dry unless the GTRT prints thaw, freeze, or snow for that GT (WaR (19.0)). Do not treat Normal printings as Mud — that would hurt both sides' movement incorrectly."
+          }
+        ]
+      }
+    },
+    {
+      "target": "air-allocation",
+      "action": "gate",
+      "gate": "WaR: no AP on Dec 16. Dec 17-19 Allied 10/GD and German 8/GD. Dec 20-Jan 8 Allied 50/GD, German 8/GD (Dec 17-22) or 6/GD (Dec 23+). Historical weather has AP already printed on the GTRT — do not apply GOSS (19.3) adjustments to those values (WaR (20.1.0a), (20.1.0b))."
+    },
+    {
+      "target": "air-allocation.mission-mix",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR AP assignment (WaR (20.1.1))\n\n- **Before 3rd Army activates:** all Allied AP belong to 1st Army and may operate anywhere on all four maps. No per-army division.\n- **Once 3rd Army activates:** GS-mission AP must be split between 1st and 3rd Army and is restricted to that army's ZOP. SI, ASup, GI, and ATP are not divided and can mission anywhere (WaR (20.1.1)).\n- **Max 2 SI missions per German army per GD.**\n- **Max 4 AP per single GS mission.**\n- **German AP:** never divided by army — may operate anywhere on all four maps each GD (WaR (20.1.1))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Operation Bodenplatte (WaR (20.1.0c))\n\nThe German player chooses on Jan 1 AM GT (historical) or the first clear/POvr AM GT on or after Jan 1 (variable) whether to launch Bodenplatte.\n\n**Conduct:**\n1) All remaining German AP availability becomes zero for the current GD and every GD after (yes, zero).\n2) Allied rolls 1d10 and applies a per-GD AP reduction to all remaining GDs:\n   - 0-3: −18 AP/GD\n   - 4-6: −10 AP/GD\n   - 7-9: −6 AP/GD\n3) Historical weather: the reduction is applied to the GTRT-printed AP; negatives treated as zero.\n\n**Cancel:** German AP untouched; on Jan 1 GD Germans get 24 AP that day only — no further effect."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Bodenplatte is a one-shot Allied AP-shock attack that costs you all remaining German AP. Against an Allied side still sitting on 50 AP/GD on Jan 1, the average -11 AP/GD reduction is a 20%+ dent for the rest of the campaign — worth pulling if you expect at least 5-7 more GDs of contested air. Otherwise cancel for the 24 AP Jan 1 bonus (WaR (20.1.0c))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "German Heavy Flak Coys withdrawn via GOSS (20.7.2) must be assigned to a specific army when withdrawn, and once placed they cannot transfer between armies (WaR (20.1.1)). Bias your withdrawals toward the army whose PSS the Allies are likeliest to SI."
+          }
+        ]
+      }
+    },
+    {
+      "target": "air-resupply-segment",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR air supply (WaR (20.5), (20.5.4))\n\n**Allied ATP:**\n- Dec 18-20: 1 ATP per GD.\n- Dec 21-Jan 8: 4 ATP per GD, each usable once.\n\n**German ATP:** 1 ATP per GD from Dec 18-Jan 8, one use per GD.\n\n**German drop rules modified (WaR (20.5.4)):** a successful German air supply drop removes **10 OoS markers** from non-HQ units within three hexes of the drop zone (replaces GOSS (15.5.1b))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Hold the Allied ATP pool for Bastogne's isolation window (Dec 22-26). Three to four ATPs per GD into a single perimeter can pull an entire defending division out of OoS before the German follow-up attacks arrive (WaR (20.5))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "mode-determination.pick-mode-per-formation",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "WaR disables GOSS (4.4.0) Green Divisions (WaR (4.5.0)) and GOSS (4.6.3) Rear Echelon units — US division PR is pre-adjusted. Do not plan for Green penalties or RE-backed resurrection (WaR (4.5.0)). Assembly areas (GOSS (5.5.7)) are mandatory for every Strat mode unit/formation (WaR (5.5.7), (21.1.1b))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "movement-segment",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR early-game movement frictions (WaR (7.10.2a), (7.10.4))\n\n- **Bridge Bottlenecks (GOSS (7.10.2a))** are in effect from Dec 16 AM through Dec 19 PM in all Dec 16 scenarios. Cleared from Dec 19 Night onward (WaR (7.10.2a)). Dec 21+ scenarios skip this entirely (WaR (36.1.0)).\n- **Traffic Congestion (WaR (7.10.4))** applies to both sides Dec 16-17; from Dec 18 AM it continues for Allied only. Lifts for Germans Dec 18 AM (WaR (30.9.0)). Dec 21+ scenarios skip entirely.\n- **150th Pz Bde (WaR (4.6.11)):** may ignore Movement Halts from enemy units on a 1d10 of 0-3; costs no MP to move adjacent to enemy units. No step recycle or replacement. Must withdraw Dec 27 PM or the Allies score 5 VP (WaR (4.6.11a), (4.6.11b)).\n- **Truppeneinheit (Einheit Stielau, WaR (4.6.10a)):** 18-hex road-only movement, no combat, ignore stacking, 1d10=0 on entering a US-occupied hex eliminates them. All six units removed Dec 20 AM (WaR (4.6.10)). Dec 21+ scenarios do not use them (WaR (36.1.0))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Truppeneinheit's redirect-movement effect (WaR (4.6.10b)) is strongest on Dec 16-17 before the DRM drifts upward. Use them to bottleneck a major US primary road — if the DR lands 0-4, you force an entire Allied stack into a road of your choosing, effectively deleting that unit's movement that GT."
+          }
+        ]
+      }
+    },
+    {
+      "target": "movement-segment.adjacency-zoc-mh",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR MH exception: 150th Pz Bde (WaR (4.6.11a))\n\nHard/600/150x Mot Inf Bn. and Hard/150x PzV KG ignore the extra MP cost to move adjacent to enemy (GOSS (7.8)) and may ignore Movement Halts per GOSS (7.7):\n\n1) Declare the attempt when the unit enters an MH situation.\n2) Roll 1d10.\n3) **0-3:** the unit ignores the halt and may continue moving.\n4) **4-9:** the unit must halt as normal.\n\nThese units cannot recycle steps, cannot receive replacements, and must be withdrawn Dec 27 PM GT (WaR (4.6.11a), (4.6.11b))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "construction-phase",
+      "action": "gate",
+      "gate": "WaR: All Dec 16 scenarios start with every Our/Sauer frontline bridge demolished and unrepairable. Allied construction of bridges/FWs is blocked until Dec 17 AM. Hasty demo is blocked until Dec 16 PM; prepared demo blocked until Dec 17 AM (WaR (3.3.2b), (17.3.0))."
+    },
+    {
+      "target": "construction-phase.fieldwork-construction",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR Westwall and fortifications (WaR (17.5.0))\n\n- Westwall (WW) hexes are Ft Area hexes in WaR.\n- The following WW hexes start destroyed in all Dec 16 scenarios: NE 4601 to 5209 run, plus 5213, 5515, 5617, 5618, 5730, 5731, 5632, 5532, 5433; SE 4507 (WaR (17.5.0)).\n- Heavy bridges may only be built or dismantled by Eng Bns assigned as army-level assets (WaR (17.3.1c))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Don't rely on the printed Westwall symbol — most of the relevant WW hexes along the 1944 front are already destroyed per WaR (17.5.0). Check the destroyed-hex list before planning a defensive fallback to Westwall benefits."
+          }
+        ]
+      }
+    },
+    {
+      "target": "fire-support",
+      "action": "gate",
+      "gate": "WaR: Dec 16 AM Allied FS gets a -1 DRM across the board, and all German GAs get +1 right column shift except against US 4th Inf Div. Ammo depletion is off on Dec 16 AM. Pre-Dawn Surprise GT runs its own heavily restricted FS sequence (WaR (30.2.0), (30.3.0))."
+    },
+    {
+      "target": "fire-support.fs-overview",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR Pre-Dawn Surprise GT FS restrictions (WaR (30.2.0))\n\nDec 16 scenarios start with a Pre-Dawn Surprise GT (not a night GT). Combat sequence is Fire Support → skip Attacker Adjustment → Ground Assault. No air points.\n\n**German offensive FS (WaR (30.2.0)):**\n- All German FS missions: -4 DRM.\n- Max 3 Art units per FS mission.\n- No ammo depletion checks.\n\n**Allied defensive FS (WaR (30.2.0)):**\n- All Allied FS missions: -1 DRM.\n- If the observer is in any FW: max 2 Art units per mission.\n- If the observer is not in a FW: max 1 Art unit per mission.\n- No ammo depletion checks."
+          },
+          {
+            "kind": "prose",
+            "text": "### Dec 16 AM GT FS (WaR (30.3.0))\n\n- Both sides: ammo depletion checks off, all units normal fuel.\n- Allied: all FS missions at -1 DRM.\n- German: in-battery Art may not leave battery this GT. Stockpiled AmP may fund intensive barrages (WaR (16.3.6a))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "The -4 DRM on Pre-Dawn German FS looks crippling, but you still get up to 3 Art per mission and unlimited intensive barrages from AmP stockpile. Concentrate the entire army's Art on one or two breakthrough hexes per army rather than spreading fire across the front (WaR (30.2.0), (16.3.6a))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "The +1 column shift for German GAs does NOT apply against units subordinate to the US 4th Inf Div — both Pre-Dawn and Dec 16 AM (WaR (30.2.0), (30.3.0)). 7th Army attacks against the southern shoulder eat the full Ft/terrain penalty, so factor this into Scenario 4 planning."
+          }
+        ]
+      }
+    },
+    {
+      "target": "ground-assault",
+      "action": "add",
+      "insertAfter": "advance-after-ga",
+      "decision": {
+        "id": "war-pre-dawn-ga",
+        "title": "Pre-Dawn Surprise Ground Assault (Axis)",
+        "when": "The Pre-Dawn Surprise GT of all Dec 16 scenarios. Every German PA unit adjacent to an enemy MUST conduct a GA (WaR (30.2.0)).",
+        "ruleRefs": ["30.2.0", "3.1"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "The Pre-Dawn Surprise GT is a German-only turn. Only the German Mode Determination, Movement, and Combat Phases occur. The Attacker Adjustment Segment is skipped entirely — every PA unit adjacent to an Allied unit must attack (WaR (30.2.0))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Mode limits (WaR (30.2.0))\n\n- Mech may go PA if within 2 intervening hexes of an enemy; Leg within 1 intervening hex.\n- Units not adjacent to enemy must be able to move adjacent during the German Movement Phase, or PA is cancelled and the unit returns to its original hex.\n- Overstacks existing at set-up may enter PA; overstacks formed after set-up trigger GOSS (6.4.0).\n- Heavy bridges and Eng stacked with heavy bridges are ignored for stacking.\n- Units of the 272nd VG Div cannot enter PA — they sit the Pre-Dawn out."
+          },
+          {
+            "kind": "prose",
+            "text": "### Movement (WaR (30.2.0))\n\n1) Only PA-marked units move.\n2) Each must end adjacent to an Allied unit.\n3) German Mot AT units may move as Leg this GT only.\n4) Mech units cannot dismount."
+          },
+          {
+            "kind": "prose",
+            "text": "### GA rules (WaR (30.2.0))\n\n- Recon units cannot convert mandatory step losses to retreats (GOSS (13.10.2)).\n- All German GAs: automatic one right column shift, except vs US 4th Inf Div subordinates.\n- Mot AT units may advance after GA as Leg.\n- GOSS (12.1.0) ADV limits are ignored — go as hard as you can."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "The Pre-Dawn GT is your one chance to burn through the frontline. Skipping Attacker Adjustment means every PA unit is committed the instant it ends its movement adjacent to an enemy (WaR (30.2.0)) — do not PA a unit you're not willing to see attack. Leg units within one hex of the frontline, Mech within two."
+          },
+          {
+            "kind": "callout",
+            "variant": "why",
+            "text": "WaR (30.2.0) recreates the pre-dawn artillery barrage and infiltration assault of Dec 16, 1944. The -4 FS DRM reflects pre-planned barrage accuracy vs. observed fire; the mandatory GA reflects historical commitment of assault troops already at the line."
+          }
+        ]
+      }
+    },
+    {
+      "target": "ground-assault.column-shifts",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "The German +1 column shift is active on Pre-Dawn, Dec 16 AM, and Dec 16 PM/Night (WaR (30.2.0), (30.3.0), (30.4.0), (30.5.0)). It drops off from Dec 17 AM. Concentrate offensive GAs in the first 24 hours of scenario time — every day past Dec 16 Night PM loses that shift (WaR (30.6.0))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "replacement",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR replacement twists (WaR (22.1.1a), (22.1.2), (22.2.1), (22.4.3), (22.5.1), (22.5.2))\n\n- **Scheduled RePs** come from the Allied and German Turn Record Tracks. Ignore the Specialist/Art/Eng/ArmC/Recon notations — just count Inf and Arm (WaR (22.1.1)).\n- **Dec 29 Allied Arm burst:** the Allied side gets 8 Arm RePs on the Replacement Point Segment of Dec 29 (GT 41). Use them that GT only — they cannot be carried over and must rebuild or resurrect US units (WaR (22.1.1a)).\n- **British XXX Corps:** no Inf RePs at all (recycle only). Starting the first AM GT after any XXX unit is activated, the British receive 1 Arm ReP per AM GT. British units can never draw on US Inf/Arm RePs (WaR (22.1.2)).\n- **Recycle step conversion (WaR (22.2.1)):** Germans 5 Inf/ReP, 6 Arm/ReP. US 4 Inf/ReP, 3 Arm/ReP. British 5 Inf/ReP, 3 Arm/ReP. One pool per side — do not track per army.\n- **Refit RePs (WaR (22.4.3)):** German formations get nothing. Allied non-Arm formations get 1 Inf ReP (both Div and BG). RE units (GOSS (22.5.1b)) and RE-backed resurrection (GOSS (22.6.2c)) are disabled.\n- **German PR 9 units cost double to rebuild** (WaR (22.5.1)). Eliminated German units with attack or defense PR 9 cannot be resurrected at all; nor can German AT, Flak, Art, or PzVI units (WaR (22.5.2))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Losing a Tiger II or other German PR-9 step is nearly permanent — they cost double to rebuild and cannot be resurrected once eliminated (WaR (22.5.1), (22.5.2)). Shield PzVI and top-tier SS AFV units behind two-step intermediaries when you can; don't use them as exchange fodder."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "The Dec 29 Allied 8 Arm ReP burst must be used that GT or lost (WaR (22.1.1a)). Front-load damaged armored divisions for rebuild/resurrect that Replacement Point Segment — don't spend US Arm RePs the week before Dec 29."
+          }
+        ]
+      }
+    },
+    {
+      "target": "command.lull",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR mandatory lull check (WaR (24.0), (24.1), (24.2), (24.2.6), (24.3))\n\nAt the start of the Dec 24 AM GT, if Montgomery has not already triggered a strategic withdrawal (WaR (9.2.2a)), check each on-map army for a GA during the PM+Night GTs of Dec 23:\n\n- If any army had at least one subordinate unit that was **not** the subject of a German GA during those two GTs, the Allied player picks one corps of that army (at least two formations assigned) and declares a corps-level lull immediately. German cannot refuse.\n- Each army that meets the condition can force its own corps lull — potentially multiple lulls in one AM.\n\n**Lull effects (WaR (24.2)):**\n1) No activation (GOSS (24.2.0)) — except WaR (24.2.6) for 3rd Army.\n2) No PA assaults.\n3) Max 2 tactical assaults per formation per GT.\n4) Allied offensive PR within the lull corps is -1.\n5) Reassigned units/formations stay lull-affected for the duration.\n6) Corps boundary frozen until the next Joint Command Phase after the lull ends.\n\n**3rd Army exception (WaR (24.2.6)):** one 3rd Army division may be activated (Allied choice); German player is side 2 per GOSS (24.2.0) but may only activate one formation. Different activations allowed each Command Phase.\n\n**Ending the lull (WaR (24.3)):**\n1) After 15 GTs, Allied rolls 1d10 each Command Phase: 0-4 ends, 5+ continues.\n2) Any German unit entering the lull corps ZOP ends it instantly.\n3) Allied voluntary end grants German +5 VP."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "WaR (24.2.6) makes 3rd Army lulls far less crippling than 1st Army lulls. If you must pick a corps to throw into a forced lull, choose one assigned to 3rd Army — you keep one division active, and Patton's army can keep swinging (WaR (24.2.6))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Avoid voluntarily ending a mandatory lull — the German side gets 5 VP outright (WaR (24.3)). Wait for the 15-GT timer or let a German unit violate the lull ZOP and end it for free."
+          }
+        ]
+      }
+    },
+    {
+      "target": "update-game-turn-indicator",
+      "action": "gate",
+      "gate": "WaR: ENA is always in effect (WaR (3.4)). Rest GT rules do not start until the Dec 20 AM GT — every GD before that plays all four GTs (AM/PM/Night/ENA) with no Rest suppression (WaR (3.5))."
+    },
+    {
+      "target": "active-exploit-phase.exploit-movement-vs-regular",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Truppeneinheit units (WaR (4.6.10a)) can move up to 18 hexes along roads each German Movement Phase but cannot capture or destroy fuel dumps and cannot be used to establish German hex control. Don't use them to close Exploit-phase objectives — they are spoilers, not hex-takers (WaR (4.6.10a))."
+          }
+        ]
+      }
+    },
+    {
+      "target": "movement-segment",
+      "action": "add",
+      "insertAfter": "stacking-and-end-of-phase",
+      "decision": {
+        "id": "war-von-der-heydte",
+        "title": "Von Der Heydte Paradrop (Axis)",
+        "when": "Dec 16 AM GT Joint Command Phase, Leader Activation Segment: German rolls 1d10; a 0 drops now, anything else drops on the Dec 17 AM GT Joint Command Phase (WaR (4.6.9a)).",
+        "ruleRefs": ["4.6.9", "4.6.9a", "4.6.9b", "4.6.9c"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "The historical drop failed. The game represents the attempt with a scatter-and-survive roll on three 1-2-6 Inf BU Coys placed in or adjacent to NE4212. If you are playing a Dec 16 scenario that enables it (check scenario rules), don't skip the DR (WaR (4.6.9))."
+          },
+          {
+            "kind": "prose",
+            "text": "### Drop procedure (WaR (4.6.9b))\n\n1) Place three 1-2-6 Inf BU Coys in or adjacent to NE4212 (drop zone — all same hex).\n2) For each Coy, roll 1d10 for survival:\n   - 0-5: unit eliminated (no RePs).\n   - 6-9: unit survives.\n3) For each survivor, roll 1d10 for scatter:\n   - 0: one hex N of DZ. 1-2: NE. 3: SE. 4-5: S. 6: SW. 7-8: NW. 9: DZ itself.\n4) If the landing hex has an Allied unit, roll 1d10: 0-5 eliminated; 6-9 land in an adjacent hex (Allied choice)."
+          },
+          {
+            "kind": "prose",
+            "text": "### On the ground (WaR (4.6.9c))\n\n- Survivors function as Leg units and may move normally during the ensuing German Movement Phase with these exceptions:\n  - Automatically in GenS on the drop GT.\n  - OoS next GT unless they trace a GenS path to a German formation/BG HQ.\n  - Cannot be considered attached to any formation/BG until the following AM GT.\n  - Cannot observe for FS missions until attached.\n  - Cannot enter or capture fuel depot hexes until attached."
+          },
+          {
+            "kind": "callout",
+            "variant": "caution",
+            "text": "Average survivability is brutal: each Coy has a 40% chance to survive the drop and then further risk on scatter into enemy hexes. Plan as if one or zero units reach the ground (WaR (4.6.9b)). Use them to block trails and deny road movement for a turn rather than as an attacking force."
+          }
+        ]
+      }
+    },
+    {
+      "target": "pregame-day-overview",
+      "action": "add",
+      "insertAfter": "pregame-weather-first",
+      "decision": {
+        "id": "war-pre-dawn-turn",
+        "title": "The Pre-Dawn Surprise GT Flow",
+        "when": "First GT of every Dec 16 scenario. Only the German player acts. Play proceeds to Dec 16 AM GT after it completes (WaR (3.1), (30.2.0)).",
+        "ruleRefs": ["3.1", "30.2.0"],
+        "blocks": [
+          {
+            "kind": "prose",
+            "text": "This is NOT a night GT — weather, visibility, and stacking all use normal rules. Only the following phases are conducted (WaR (30.2.0)):\n\n1) German Mode Determination Phase.\n2) German Movement Phase.\n3) German Combat Phase (Fire Support → skip Attacker Adjustment → Ground Assault)."
+          },
+          {
+            "kind": "prose",
+            "text": "### Conditions (WaR (30.2.0))\n\n- Both sides' units are all in GenS and in command.\n- No ammo depletion checks.\n- No AP available — no air missions.\n- PA eligibility: German Mech within 2 intervening hexes, Leg within 1 intervening hex.\n- 272nd VG Div units cannot PA.\n- Starting AmP stockpile cannot be spent this GT (WaR (16.3.6a))."
+          },
+          {
+            "kind": "callout",
+            "variant": "tip",
+            "text": "Use the Pre-Dawn GT to open corridors, not to take cities. Your goal is suppressing and destroying enough US frontline units that the Dec 16 AM GT advance can press through at full strength — pick 2-3 concentrated breakthrough hexes per army and commit there (WaR (30.2.0), (30.3.0))."
+          },
+          {
+            "kind": "callout",
+            "variant": "gotcha",
+            "text": "Every German PA unit that starts adjacent to (or ends its PA movement adjacent to) an Allied unit MUST GA this turn (WaR (30.2.0)). Don't PA a Mech unit you want to hold back for Dec 16 AM — the PA commits it to Pre-Dawn combat."
+          }
+        ]
+      }
+    },
+    {
+      "target": "player-turn-overview",
+      "action": "modify",
+      "patch": {
+        "appendBlocks": [
+          {
+            "kind": "prose",
+            "text": "### WaR opening-week date-rule map\n\nRules change by date rather than by trigger for the first four GDs. Reference cheatsheet:\n\n- **Pre-Dawn GT:** German-only, heavy FS DRMs, mandatory GAs for PA units, no ammo checks, starting AmP locked (WaR (30.2.0)).\n- **Dec 16 AM:** normal SoP resumes. -1 DRM on Allied FS; +1 German column shift (not vs 4th Inf Div); Allied construction/demo off; Peiper activates; Van Der Heydte check; 150th Pz Bde frozen (WaR (30.3.0)).\n- **Dec 16 PM:** hasty demo enabled with +1 DRM; Truppeneinheit arrive; German MR-released; Allied ADV 6 fixed, German ADV 4 fixed (WaR (30.4.0)).\n- **Dec 16 Night:** 1d10/2 Allied activations; Allied CCB/CCR/CCA-5A still cannot voluntarily activate (WaR (30.5.0)).\n- **Dec 17 AM:** 2nd Inf Div auto-activates; most Allied auto-activate (except in FW or out of GenS path to HQ); Eng construction allowed; Axis Art may leave battery; Van Der Heydte drops if not already; Axis TP released for motorization (WaR (30.6.0)).\n- **Dec 17 PM/Night:** all Allied units activated; prepared demo allowed (WaR (30.7.0), (30.8.0)).\n- **Dec 18 AM:** standard GenS+surrender rules in force. Axis traffic congestion ends; Allied keeps it. OhS kicks in (WaR (30.9.0), (15.2.1)).\n- **Dec 19 AM:** command boundary restrictions lifted (WaR (30.10)).\n- **Dec 19 Night:** bridge bottlenecks end (WaR (30.11.0)).\n- **Dec 20 AM:** German full logistics begin (WaR (30.12.0)). Rest GT rules start (WaR (3.5))."
+          }
+        ]
+      }
+    }
+  ],
+  "scenarioOverrides": {
+    "dec16-valkyries": {
+      "label": "Scenario 1: Ride of the Valkyries (6th Pz)",
+      "modifications": [
+        {
+          "target": "air-allocation",
+          "action": "gate",
+          "gate": "WaR Scenario 1: historical weather every GT. AP only on POvr GTs — Allied 4 AP, German 1 AP, usable for GS or ASup missions only (WaR (31.0))."
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Scenario 1 logistics (WaR (31.0))\n\n- **German TP:** 2 (motorization only).\n- **Allied TP:** 3 (motorization only).\n- **6th Pz Army AmP stockpile:** 4 at start.\n- Full logistic rules (GOSS (16.0)) do NOT start on Dec 20 — all German Mech units stay normal fuel and the German ADV is fixed at 3 for both Dec 20 AM and PM GTs. This is a scenario-length exception to WaR (30.12.0).\n- Scenario runs through Dec 20 PM GT end."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "Because Scenario 1 skips the Dec 20 full-logistics transition (WaR (31.0)), plan 6th Pz Army around a clean five-GD offensive with free fuel. Commit the 4 starting AmP into intensive barrage on Dec 16 AM (WaR (16.3.6a), (30.3.0)) and save nothing for Dec 21+ — the scenario ends before it matters."
+              }
+            ]
+          }
+        },
+        {
+          "target": "fire-support",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "callout",
+                "variant": "gotcha",
+                "text": "Scenario 1 AP only appears on POvr atmospheric GTs and is restricted to GS or ASup (WaR (31.0)). Don't plan SI/GI mission chains — they're unavailable all scenario."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "dec16-egg": {
+      "label": "Scenario 2: An Egg is Laid (St. Vith & 106th)",
+      "modifications": [
+        {
+          "target": "air-allocation",
+          "action": "gate",
+          "gate": "WaR Scenario 2: neither side has any AP. Skip air allocation entirely (WaR (32.1.0))."
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Scenario 2 logistics (WaR (32.1.0))\n\n- **German TP:** 1 (motorization only). **Allied TP:** 2.\n- **5th Pz Army AmP stockpile:** 1 at start.\n- German side does not use full logistic rules on Dec 20 — all Mech normal fuel; ADV 3 Dec 20 AM/PM (WaR (32.1.0)).\n- German PSS: SE7002 or SE7009.\n- 82nd AB Div is in GenS if it can trace a path up to 8 hexes to NE3030.\n- All other Allied HQs must trace to NE2627, NE2127, NE1927, or NE1527.\n- Units of 28th Inf Div must attach to an on-map Div HQ; all non-Art corps/army assets must attach to an on-map HQ."
+              },
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "28th Inf Div units must attach to an on-map Div HQ (WaR (32.1.0)). The 106th is your best bet for infantry attachments near St. Vith — plan the Allied Dec 16 AM Command Phase around that attachment rather than trying to run 28th as independents."
+              }
+            ]
+          }
+        },
+        {
+          "target": "command",
+          "action": "gate",
+          "gate": "WaR Scenario 2: sudden-death German victory requires exiting at least four units of four KGs off the west edge at SE1503 and/or SE1008 with a GenS path to the east map edge — the scenario is all about St. Vith + Bastogne vs. the westward exit corridors (WaR (32.5.0))."
+        }
+      ]
+    },
+    "dec16-skyline": {
+      "label": "Scenario 3: A Beautiful Skyline (47th Pz)",
+      "modifications": [
+        {
+          "target": "air-allocation",
+          "action": "gate",
+          "gate": "WaR Scenario 3: neither side has any AP (WaR (33.1.0))."
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Scenario 3 logistics (WaR (33.1.0))\n\n- **German TP:** 1 (motorization only). **Allied TP:** 2.\n- **5th Pz Army AmP stockpile:** 3 at start.\n- German side does not use full logistic rules on Dec 20 — all Mech normal fuel; ADV 3 Dec 20 AM/PM.\n- German PSS: SE1007 or SE2124 (intermediate); SE7015 or SE7019 (main map edge).\n- No replacements, no recycle (WaR (33.4.0)).\n- Lehr Pz Div fully activates on the Dec 16 PM GT.\n- On Dec 17 AM, unless previously activated, all CCR/9A units auto-activate (supplements WaR (30.1.2))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "replacement",
+          "action": "gate",
+          "gate": "WaR Scenario 3: No replacements and no recycle procedures. Do not apply WaR (22.0) at all (WaR (33.4.0))."
+        }
+      ]
+    },
+    "dec16-hard-left": {
+      "label": "Scenario 4: A Hard Left (7th Army)",
+      "modifications": [
+        {
+          "target": "air-allocation",
+          "action": "gate",
+          "gate": "WaR Scenario 4: AP only on POvr AM/PM GTs — Allied 2 AP, German 1 AP, restricted to GS or ASup missions (WaR (34.1.0))."
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Scenario 4 logistics (WaR (34.1.0))\n\n- **German TP:** 1 (motorization only). **Allied TP:** 2.\n- **7th Army AmP stockpile:** 2 at start.\n- German side does NOT use full logistic rules at all during the scenario.\n- Allied PSS: any primary road hex on the south edge of the SE map.\n- German PSS: any west map edge hex marked 7A.\n- Scenario ends Dec 18 Night GT — three days only.\n- No replacements, no recycle (WaR (34.4.0))."
+              },
+              {
+                "kind": "callout",
+                "variant": "gotcha",
+                "text": "Scenario 4 ends Dec 18 Night (WaR (34.1.0)) — you never reach Dec 19 AM boundary changes or Dec 20 full logistics. Plan the whole scenario as a compressed Pre-Dawn+3 GD offensive: surprise shifts off after Dec 16 Night (WaR (30.6.0)), German ADV stays at 3 the whole scenario."
+              }
+            ]
+          }
+        },
+        {
+          "target": "command",
+          "action": "gate",
+          "gate": "WaR Scenario 4: WaR (9.2.7) (southern map edge), (9.2.8) (4th Inf Div area of operations), and (9.2.9a) (CCA/9A Sauer restrictions) all apply. German GAs do NOT get the +1 column shift against 4th Inf Div subordinates (WaR (30.3.0), (30.2.0))."
+        },
+        {
+          "target": "replacement",
+          "action": "gate",
+          "gate": "WaR Scenario 4: No replacements and no recycle procedures (WaR (34.4.0))."
+        }
+      ]
+    },
+    "dec16-meuse": {
+      "label": "Scenario 5: March to the Meuse (Full Dec 16)",
+      "modifications": [
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Scenario 5 logistics (WaR (35.1.0))\n\n- Full two-map game (NE + SE). All WaR (30.1.2) through (30.12.0) special rules are in effect — including the German transition to full logistics (GOSS (16.0)) on Dec 20 AM.\n- WaR (15.0) and (16.0) apply in full. Standard TP and AmP values from the Dec 16 campaign (WaR (16.1.1a/b), (16.3.6a) 10 starting AmP).\n- Replacements and recycle are active; neither side has any RePs in stockpile at start (WaR (35.4.0))."
+              }
+            ]
+          }
+        },
+        {
+          "target": "command",
+          "action": "gate",
+          "gate": "WaR Scenario 5: Sudden-death German strategic victory requires exiting 4 units of a KG from 1SS Pz Div off the NE map west edge north of xx18, OR capturing a Meuse bridge at 1806/1705, 1706/1705, or 1504/1505 — plus occupying any two German VP hexes east of the 30xx column (WaR (35.5.0)). Each requires a traceable GenS path back to a German ultimate supply source."
+        },
+        {
+          "target": "command",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "callout",
+                "variant": "tip",
+                "text": "Scenario 5 end-scenario VP scoring (WaR (35.5.0)) gives the German side +1 VP per Pz Div KG of 4+ units that exit the west side of NE or SE maps on/north of SExx16 with a traceable GenS path. Plan three or four KG exits rather than consolidating — the VP-per-exit math usually beats holding a single deep salient."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "dec21-group": {
+      "label": "Dec 21+ Scenario Group",
+      "modifications": [
+        {
+          "target": "command",
+          "action": "gate",
+          "gate": "WaR Dec 21+: Von Der Heydte (WaR (4.6.9)), Einheit Stielau (WaR (4.6.10)), Bridge Bottlenecks (WaR (7.10.2a)), Traffic Congestion (WaR (7.10.4)), VIII/V Corps boundary restrictions (WaR (9.2.3)), and the 7th Arm Div entry restriction (WaR (9.2.10)) are NO LONGER in effect. Montgomery took command Dec 19 AM (WaR (9.2.2a)); the mandatory lull rule WaR (24.0) still applies. All leaders start activated unless the scenario says otherwise (WaR (36.1.0), (36.1.1), (36.1.5))."
+        },
+        {
+          "target": "command.command-shuffles",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Dec 21 boundaries (WaR (36.1.2))\n\nIn any scenario with more than one army, the owning player must establish corps ZOPs (GOSS (9.2.0), WaR (9.0)). German army boundaries are printed on the scenario map; US 1st/3rd Army boundary is along the xx02 hex row on the SE and SW maps. Both sides may modify army boundaries beginning Dec 23 AM GT."
+              }
+            ]
+          }
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Dec 21+ simplified logistics (WaR (36.1.3))\n\nMost Dec 21 scenarios skip the full Logistics Table:\n\n**German:**\n- All army, corps, and Mech formation HQ: normal fuel.\n- ADV 3.\n- 3 AmP per AM GT (including Dec 21 AM).\n\n**Allied:**\n- All HQ normal fuel.\n- ADV 5.\n- 6 AmP per AM GT.\n\nBoth sides cap at 10 AmP in stockpile at the start of each AM GT. Stockpile is per side — no per-army split.\n\n**Full-logistics option (WaR (36.0)):** if players opt in for any non-campaign scenario, delete the scenario AmP arrivals and give the German side 6Pz 5 TP / 5Pz 8 TP / 7A 3 TP when fewer than all three armies are active; full WaR (16.1.1b) TP when all three armies are on map."
+              }
+            ]
+          }
+        },
+        {
+          "target": "weather",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Dec 21+ weather (WaR (36.1.4))\n\nPlayers may choose variable weather starting the second AM GT of the scenario (first GT stays historical). Scenario-listed AP remains authoritative except for the full four-map campaign; atmospheric adjustments per GOSS (19.3.0) and WaR (20.1.0b) still apply to the printed AP."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "dec21-sauer": {
+      "label": "Scenario A: Sparring on the Sauer",
+      "modifications": [
+        {
+          "target": "air-allocation",
+          "action": "gate",
+          "gate": "WaR Scenario A: Allied 4 AP per AM and PM GT; German 1 AP per AM and PM GT. Historical weather. Weather modifiers to AP still apply per GOSS (19.3.0) (WaR (37.1.0))."
+        },
+        {
+          "target": "joint-logistics",
+          "action": "modify",
+          "patch": {
+            "appendBlocks": [
+              {
+                "kind": "prose",
+                "text": "### Scenario A logistics (WaR (37.1.0))\n\n- **German TP:** 1 (motorization only). **Allied TP:** 6 (motorization only).\n- Simplified logistics per WaR (36.1.3): German ADV 3, 3 AmP/AM GT; Allied ADV 5, 6 AmP/AM GT. 10 AmP cap per side.\n- All HQ normal fuel (Allied and German).\n- Playing area: southeast corner of SE map only (WaR (37.2.0)).\n- German sets up first (WaR (37.3.0)).\n- No scheduled replacements — both sides may recycle step losses (WaR (37.4.0))."
+              },
+              {
+                "kind": "callout",
+                "variant": "caution",
+                "text": "If the German player commits the 11th Pz Div reinforcement (WaR (37.4.1)) — triggered when any Allied unit occupies a hex east/north of the Sauer or Ourthe at the end of a German player turn — the Allied side scores 4 VP immediately. Only bring 11th Pz in if the tactical swing is worth four VPs on a scenario that scores ones and twos."
+              }
+            ]
+          }
+        },
+        {
+          "target": "command",
+          "action": "gate",
+          "gate": "WaR Scenario A: CCR 10th Arm Div is in corps reserve — unactivated and unable to move unless a German unit comes within four hexes of any reserve unit (WaR (37.4.3)). The I SS Pz Corps HQ arrives Jan 1 AM and 9th SS Pz Div arrives Jan 2 AM (minus four extra steps) only if the scenario extends that long (WaR (37.4.1))."
+        }
+      ]
+    }
+  }
+}

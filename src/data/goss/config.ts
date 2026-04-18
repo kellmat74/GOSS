@@ -31,6 +31,7 @@ export const gossConfig: GameSystemConfig = {
         rules: () => import("./war/rules.json"),
         sequenceOverlay: () => import("./war/sequence-overlay.json"),
         oob: () => import("./war/oob.json"),
+        learnOverlay: () => import("./war/learn-overlay.json"),
       },
     },
     {
@@ -71,6 +72,7 @@ export const gossConfig: GameSystemConfig = {
         rules: () => import("./atlantic-wall/rules.json"),
         sequenceOverlay: () => import("./atlantic-wall/sequence-overlay.json"),
         oob: () => import("./atlantic-wall/oob.json"),
+        learnOverlay: () => import("./atlantic-wall/learn-overlay.json"),
       },
     },
     {
@@ -90,6 +92,7 @@ export const gossConfig: GameSystemConfig = {
         rules: () => import("./lucky-forward/rules.json"),
         sequenceOverlay: () => import("./lucky-forward/sequence-overlay.json"),
         oob: () => import("./lucky-forward/oob.json"),
+        learnOverlay: () => import("./lucky-forward/learn-overlay.json"),
       },
     },
   ],
