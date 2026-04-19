@@ -6,20 +6,12 @@ export function TableModal() {
   const { activeTable, closeTable } = useTables();
   if (!activeTable) return null;
 
-  // Widen the modal for matrices with many columns
-  const colCount = activeTable.type === "matrix" ? activeTable.columns.length : 0;
-  const maxW =
-    colCount > 6 ? "max-w-5xl" :
-    colCount > 3 ? "max-w-4xl" :
-    colCount > 0 ? "max-w-3xl" :
-    "max-w-xl";
-
   return createPortal(
     <div
       className="fixed inset-0 z-[110] flex items-center justify-center bg-black/60 p-4 animate-in fade-in duration-150"
       onClick={(e) => { if (e.target === e.currentTarget) closeTable(); }}
     >
-      <div className={`relative flex max-h-[85vh] w-full ${maxW} flex-col rounded-xl border border-stone-200 bg-white shadow-2xl dark:border-stone-700 dark:bg-stone-900`}>
+      <div className="relative flex max-h-[85vh] w-fit min-w-[320px] max-w-[92vw] flex-col rounded-xl border border-stone-200 bg-white shadow-2xl dark:border-stone-700 dark:bg-stone-900">
         {/* Header */}
         <div className="flex items-center justify-between border-b border-stone-200 px-5 py-3 dark:border-stone-700">
           <div className="flex items-center gap-2">

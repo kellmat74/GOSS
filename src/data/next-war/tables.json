@@ -697,19 +697,33 @@
     "title": "Contested Sea Movement",
     "ruleRef": "8.5.6.4.1",
     "scope": "series",
-    "type": "lookup",
+    "type": "matrix",
+    "rollLabel": "Die Roll",
+    "columns": [
+      "Standard",
+      "Advanced"
+    ],
     "rows": [
       {
         "roll": "≤5",
-        "result": "Sea Movement Successful"
+        "values": [
+          "Successful",
+          "Successful"
+        ]
       },
       {
         "roll": "6–8",
-        "result": "Standard: Aborted · Advanced: Abort or Strike 1"
+        "values": [
+          "Aborted",
+          "Abort or Strike 1"
+        ]
       },
       {
         "roll": "≥9",
-        "result": "Standard: Aborted (transported units incur a Step Loss) · Advanced: Abort or Strike 2"
+        "values": [
+          "Aborted (transported: Step Loss)",
+          "Abort or Strike 2"
+        ]
       }
     ],
     "drmGroups": [
