@@ -1,8 +1,9 @@
-import { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { useRules } from "../../context/RulesContext";
 import { useTables } from "../../context/TablesContext";
 import { GlossaryHighlighter } from "../GlossaryHighlighter";
+import { parseRuleRefNodes } from "../../utils/parseRuleRefs";
 
 export function RuleModal() {
   const { activeRule, history, closeRule, goBack, goNext, goPrev, openRule, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection } = useRules();
@@ -341,119 +342,39 @@ function RuleParagraph({ text, onRuleClick }: { text: string; onRuleClick: (ref:
   );
 }
 
-/** Render rule refs inside already-bold text (no bold parsing to avoid recursion) */
-function InlineRefs({ text, onRuleClick }: { text: string; onRuleClick: (ref: string) => void }) {
-  const parts: (string | { ref: string })[] = [];
-  let remaining = text;
-
-  while (remaining.length > 0) {
-    const parenMatch = remaining.match(/\((\d+\.\d+(?:\.\d+)?(?:[a-z])?)\)/);
-    const bareMatch = remaining.match(/(?<![.\d])(\d+\.\d+\.\d+(?:[a-z])?)(?![.\d])/);
-    const parenIdx = parenMatch?.index ?? Infinity;
-    const bareIdx = bareMatch?.index ?? Infinity;
-    const minIdx = Math.min(parenIdx, bareIdx);
-
-    if (minIdx === Infinity) {
-      parts.push(remaining);
-      break;
-    }
-
-    if (parenIdx <= bareIdx && parenMatch) {
-      parts.push(remaining.slice(0, parenIdx));
-      parts.push({ ref: parenMatch[1] });
-      remaining = remaining.slice(parenIdx + parenMatch[0].length);
-    } else if (bareMatch) {
-      parts.push(remaining.slice(0, bareIdx));
-      parts.push({ ref: bareMatch[1] });
-      remaining = remaining.slice(bareIdx + bareMatch[0].length);
-    }
-  }
-
-  return (
-    <>
-      {parts.map((part, i) =>
-        typeof part === "string" ? (
-          <span key={i}>{part}</span>
-        ) : (
-          <button
-            key={i}
-            onClick={(e) => { e.stopPropagation(); onRuleClick(part.ref); }}
-            className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
-          >
-            ({part.ref})
-          </button>
-        )
-      )}
-    </>
-  );
-}
-
 /** Render inline text with bold markers and rule references */
 function InlineText({ text, onRuleClick }: { text: string; onRuleClick: (ref: string) => void }) {
-  // Parse **bold**, *Important:*, and (X.Y.Z) rule references
-  const parts: (string | { type: "bold"; text: string } | { type: "ref"; ref: string })[] = [];
-  let remaining = text;
+  // Wrap onRuleClick to match parseRuleRefNodes signature (openRule)
+  const getRuleBySection = useRules().getRuleBySection;
 
-  while (remaining.length > 0) {
-    // Find next special token
-    const boldMatch = remaining.match(/\*\*(.+?)\*\*/);
-    // Match (X.Y.Z) in parens OR bare X.Y.Z preceded by word boundary (not mid-number)
-    const parenRefMatch = remaining.match(/\((\d+\.\d+(?:\.\d+)?(?:[a-z])?)\)/);
-    // Bare refs require 3-part (X.Y.Z) to avoid false positives on "1.5 miles" etc.
-    const bareRefMatch = remaining.match(/(?<![.\d])(\d+\.\d+\.\d+(?:[a-z])?)(?![.\d])/);
-
-    const boldIdx = boldMatch?.index ?? Infinity;
-    const parenRefIdx = parenRefMatch?.index ?? Infinity;
-    const bareRefIdx = bareRefMatch?.index ?? Infinity;
-
-    // Pick the earliest match
-    const minIdx = Math.min(boldIdx, parenRefIdx, bareRefIdx);
-
-    if (minIdx === Infinity) {
-      parts.push(remaining);
-      break;
-    }
-
-    if (boldIdx === minIdx && boldMatch) {
-      parts.push(remaining.slice(0, boldIdx));
-      parts.push({ type: "bold", text: boldMatch[1] });
-      remaining = remaining.slice(boldIdx + boldMatch[0].length);
-    } else if (parenRefIdx === minIdx && parenRefMatch) {
-      parts.push(remaining.slice(0, parenRefIdx));
-      parts.push({ type: "ref", ref: parenRefMatch[1] });
-      remaining = remaining.slice(parenRefIdx + parenRefMatch[0].length);
-    } else if (bareRefMatch) {
-      parts.push(remaining.slice(0, bareRefIdx));
-      parts.push({ type: "ref", ref: bareRefMatch[1] });
-      remaining = remaining.slice(bareRefIdx + bareRefMatch[0].length);
-    }
-  }
+  // Split on **bold** first; delegate ref parsing to the shared utility
+  const boldParts = text.split(/(\*\*(?:[^*]|\*(?!\*))+\*\*)/g);
 
   return (
     <GlossaryHighlighter>
       <>
-        {parts.map((part, i) => {
-          if (typeof part === "string") return <span key={i}>{part}</span>;
-          if (part.type === "bold")
+        {boldParts.map((part, i) => {
+          if (part.startsWith("**") && part.endsWith("**")) {
+            const inner = part.slice(2, -2);
             return (
               <strong key={i} className="font-semibold text-stone-900 dark:text-stone-100">
-                <InlineRefs text={part.text} onRuleClick={onRuleClick} />
+                {parseRuleRefNodes(inner, {
+                  getRuleBySection,
+                  openRule: onRuleClick,
+                  keyPrefix: `m-b${i}`,
+                })}
               </strong>
             );
-          if (part.type === "ref")
-            return (
-              <button
-                key={i}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onRuleClick(part.ref);
-                }}
-                className="font-mono text-accent-700 hover:text-accent-500 hover:underline dark:text-accent-400 dark:hover:text-accent-300"
-              >
-                ({part.ref})
-              </button>
-            );
-          return null;
+          }
+          return part ? (
+            <React.Fragment key={i}>
+              {parseRuleRefNodes(part, {
+                getRuleBySection,
+                openRule: onRuleClick,
+                keyPrefix: `m-t${i}`,
+              })}
+            </React.Fragment>
+          ) : null;
         })}
       </>
     </GlossaryHighlighter>
