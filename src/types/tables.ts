@@ -17,10 +17,25 @@ export interface TableDRMGroup {
 export interface TableLookupDef {
   id: string;
   title: string;
-  ruleRef: string;
+  ruleRef?: string;
   scope: "series" | "module";
   type: "lookup";
+  rollLabel?: string;    // default "Die Roll"
+  resultLabel?: string;  // default "Result"
   rows: Array<{ roll: string; result: string }>;
+  drmGroups?: TableDRMGroup[];
+  notes?: string[];
+}
+
+export interface TableMatrixDef {
+  id: string;
+  title: string;
+  ruleRef?: string;
+  scope: "series" | "module";
+  type: "matrix";
+  rollLabel?: string;   // default "Die Roll"
+  columns: string[];    // column headers (left to right)
+  rows: Array<{ roll: string; values: string[] }>;
   drmGroups?: TableDRMGroup[];
   notes?: string[];
 }
@@ -35,5 +50,5 @@ export interface TableImageDef {
   notes?: string[];
 }
 
-export type TableDef = TableLookupDef | TableImageDef;
+export type TableDef = TableLookupDef | TableMatrixDef | TableImageDef;
 export type TablesFile = Record<string, TableDef>;
