@@ -4,6 +4,7 @@ import { Breadcrumb, type BreadcrumbItem } from "../Breadcrumb";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 import { SoPMarkdown } from "./SoPMarkdown";
+import { useTables } from "../../context/TablesContext";
 
 interface PhaseStepperProps {
   phase: Phase | null;
@@ -40,6 +41,7 @@ export function PhaseStepper({
     );
   }
 
+  const { openTable, tables } = useTables();
   const topRef = useRef<HTMLDivElement>(null);
 
   // Scroll the main container to top when step changes (shows header bar)
@@ -118,9 +120,12 @@ export function PhaseStepper({
           )}
         </div>
         <h2 className="mt-1 text-2xl font-bold">{phase.name}</h2>
-        {phase.ruleRef && (
-          <RuleRefBadge ruleRef={phase.ruleRef} className="mt-0.5" />
-        )}
+        <div className="mt-0.5 flex items-center gap-2">
+          {phase.ruleRef && <RuleRefBadge ruleRef={phase.ruleRef} />}
+          {phase.tableRefs?.map((id) => tables[id] && (
+            <TableRefButton key={id} id={id} label={tables[id].title} onOpen={openTable} />
+          ))}
+        </div>
       </div>
 
       {/* Sub-phase indicator */}
@@ -133,9 +138,10 @@ export function PhaseStepper({
             {subPhase.name}
           </div>
           <div className="mt-1 flex items-center gap-2">
-            {subPhase.ruleRef && (
-              <RuleRefBadge ruleRef={subPhase.ruleRef} />
-            )}
+            {subPhase.ruleRef && <RuleRefBadge ruleRef={subPhase.ruleRef} />}
+            {subPhase.tableRefs?.map((id) => tables[id] && (
+              <TableRefButton key={id} id={id} label={tables[id].title} onOpen={openTable} />
+            ))}
             {subPhase.timing && subPhase.timing !== "every-turn" && (
               <span className="rounded bg-blue-100 px-1.5 py-0.5 text-xs font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
                 {subPhase.timing.replace(/-/g, " ").toUpperCase()}
@@ -155,9 +161,10 @@ export function PhaseStepper({
             {segment.name}
           </div>
           <div className="mt-1 flex items-center gap-2">
-            {segment.ruleRef && (
-              <RuleRefBadge ruleRef={segment.ruleRef} />
-            )}
+            {segment.ruleRef && <RuleRefBadge ruleRef={segment.ruleRef} />}
+            {segment.tableRefs?.map((id) => tables[id] && (
+              <TableRefButton key={id} id={id} label={tables[id].title} onOpen={openTable} />
+            ))}
             {segment.timing && segment.timing !== "every-turn" && (
               <span className="rounded bg-blue-100 px-1.5 py-0.5 text-xs font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
                 {segment.timing.replace(/-/g, " ").toUpperCase()}
@@ -286,5 +293,26 @@ export function PhaseStepper({
         )}
       </div>
     </div>
+  );
+}
+
+function TableRefButton({
+  id,
+  label,
+  onOpen,
+}: {
+  id: string;
+  label: string;
+  onOpen: (id: string) => void;
+}) {
+  return (
+    <button
+      onClick={() => onOpen(id)}
+      className="flex items-center gap-1 rounded bg-teal-500/20 px-2 py-0.5 text-xs font-medium text-teal-700 hover:bg-teal-500/30 dark:text-teal-400 dark:hover:bg-teal-500/20 transition-colors"
+      title={`View ${label} table`}
+    >
+      <span>⊞</span>
+      <span>{label}</span>
+    </button>
   );
 }

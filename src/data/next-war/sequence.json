@@ -13,11 +13,11 @@
     },
     {
       "id": "supply-phase",
-      "name": "Supply Phase [13.1 \u2013 Optional]",
+      "name": "Supply Phase [13.1 – Optional]",
       "ruleRef": "13.1",
       "timing": "every-turn",
       "player": "both",
-      "description": "Optional phase \u2014 remove Out of Supply markers from units back in supply and place Out of Supply markers on unsupplied units.",
+      "description": "Optional phase — remove Out of Supply markers from units back in supply and place Out of Supply markers on unsupplied units.",
       "content": "1. Remove Out of Supply markers from units that are no longer out of supply.\n2. Check for unsupplied units. Place an Out of Supply marker on any unit that is unsupplied.",
       "notes": [],
       "subPhases": []
@@ -29,9 +29,12 @@
       "timing": "every-turn",
       "player": "both",
       "description": "Determine initiative, run detection, allocate Air Points, set Air Superiority Level, conduct Strikes, and roll for Sea Control and Mine Clearance.",
-      "content": "1. Determine if either player has the Initiative for the game turn or whether it is a \"Contested\" Game Turn. Both players move their respective \"VPs This Turn\" markers to zero.\n2. Detection \u2014 Allies roll to Detect SSM markers.\n3. Each player rolls on the Standard Game Air Point Chart and records the Air Points received this turn, modifying for weather if necessary. **(6.1 and Standard Game Air Points Chart)**\n4. Allocate Strike Points \u2014 Allied player allocates Air Points to Strike Points. **[NWI/NWT2E 13.2]**\n5. Set Air Superiority Level based on Air Point differential. **(6.4)**\n6. Conduct Strikes \u2014 Allied player conducts Strikes. **[NWI/NWT2E 13.2.2]**\n7. During non-Storm turns, roll for Sea Control: **(7.2.1/7.2.2)**\n   a. Check each eligible Inshore Box.\n   b. Check each eligible At Sea Box.\n8. Both sides roll for Mine Clearance. **(7.5.2)** (not on GT1)\n\n*If neither player holds the Initiative (i.e., it is a \"Contested\" turn), skip directly to the Basic Movement and Combat Phase.*",
+      "content": "1. Determine if either player has the Initiative for the game turn or whether it is a \"Contested\" Game Turn. Both players move their respective \"VPs This Turn\" markers to zero.\n2. Detection — Allies roll to Detect SSM markers.\n3. Each player rolls on the Standard Game Air Point Chart and records the Air Points received this turn, modifying for weather if necessary. **(6.1 and Standard Game Air Points Chart)**\n4. Allocate Strike Points — Allied player allocates Air Points to Strike Points. **[NWI/NWT2E 13.2]**\n5. Set Air Superiority Level based on Air Point differential. **(6.4)**\n6. Conduct Strikes — Allied player conducts Strikes. **[NWI/NWT2E 13.2.2]**\n7. During non-Storm turns, roll for Sea Control: **(7.2.1/7.2.2)**\n   a. Check each eligible Inshore Box.\n   b. Check each eligible At Sea Box.\n8. Both sides roll for Mine Clearance. **(7.5.2)** (not on GT1)\n\n*If neither player holds the Initiative (i.e., it is a \"Contested\" turn), skip directly to the Basic Movement and Combat Phase.*",
       "notes": [],
-      "subPhases": []
+      "subPhases": [],
+      "tableRefs": [
+        "sea-control"
+      ]
     },
     {
       "id": "initiative-movement-combat-phase",
@@ -40,7 +43,7 @@
       "timing": "every-turn",
       "player": "phasing",
       "description": "The Initiative player moves and fights, followed by Elite Reaction and Exploitation sub-segments, then the non-Initiative player reacts and fights. Skipped on Contested turns.",
-      "content": "*(Initiative Turn Only \u2014 skipped if Contested)*",
+      "content": "*(Initiative Turn Only — skipped if Contested)*",
       "notes": [],
       "subPhases": [
         {

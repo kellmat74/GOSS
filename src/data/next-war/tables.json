@@ -1,0 +1,64 @@
+{
+  "sea-control": {
+    "id": "sea-control",
+    "title": "Sea Control",
+    "ruleRef": "7.2",
+    "scope": "series",
+    "type": "lookup",
+    "rows": [
+      { "roll": "≤2", "result": "Non-Allied Control" },
+      { "roll": "3–5", "result": "Contested" },
+      { "roll": "≥6", "result": "Allied Control" }
+    ],
+    "drmGroups": [
+      {
+        "label": "At Sea and/or Inshore",
+        "drms": [
+          { "mod": "−1", "condition": "per non-Allied SAG/CV/CVN present (except CVN BG)" },
+          { "mod": "+1", "condition": "per Allied Naval unit present (except CVN BG)" },
+          { "mod": "+2", "condition": "per Allied CVN BG present" },
+          { "mod": "−x", "condition": "Sub Threat Level" },
+          { "mod": "+x", "condition": "ASW Level" }
+        ]
+      },
+      {
+        "label": "Inshore Box Only",
+        "drms": [
+          { "mod": "−/+1", "condition": "non-Allied/Allied Control of Island Land Area" }
+        ]
+      },
+      {
+        "label": "Game Specific DRMs",
+        "drms": [
+          { "mod": "−/+", "condition": "See Strategic Display" }
+        ]
+      },
+      {
+        "label": "Standard Game",
+        "drms": [
+          { "mod": "−1", "condition": "PRC A2/AD (automatic)" }
+        ]
+      },
+      {
+        "label": "East China Sea, Taiwan Straits, South China Sea, Spratlys, Ryuku, Gulf of Tonkin (Allied only: Sea of Japan)",
+        "drms": [
+          { "mod": "−/+1", "condition": "non-Allied/Allied Air Superiority" },
+          { "mod": "−/+2", "condition": "non-Allied/Allied Air Supremacy" }
+        ]
+      },
+      {
+        "label": "Advanced Game — PRC Expends DF-21/26 Capability",
+        "drms": [
+          { "mod": "−2", "condition": "Range 0 or 1" },
+          { "mod": "−1", "condition": "Range 2" }
+        ]
+      },
+      {
+        "drms": [
+          { "mod": "−1", "condition": "BrahMos Cruise Missile (Range 0 or 1)" },
+          { "mod": "+1", "condition": "Navy expends Naval SSM (Taiwan Straits At Sea/Inshore only)" }
+        ]
+      }
+    ]
+  }
+}

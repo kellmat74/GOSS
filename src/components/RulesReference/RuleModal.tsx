@@ -1,10 +1,12 @@
 import { useEffect, useRef, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { useRules } from "../../context/RulesContext";
+import { useTables } from "../../context/TablesContext";
 import { GlossaryHighlighter } from "../GlossaryHighlighter";
 
 export function RuleModal() {
   const { activeRule, history, closeRule, goBack, goNext, goPrev, openRule, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection } = useRules();
+  const { openTable, tables } = useTables();
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -62,6 +64,16 @@ export function RuleModal() {
               <span className="rounded bg-accent-500/20 px-2 py-0.5 font-mono text-sm text-accent-700 dark:text-accent-400">
                 §{activeRule.section}
               </span>
+              {activeRule.tableRef && tables[activeRule.tableRef] && (
+                <button
+                  onClick={() => openTable(activeRule.tableRef!)}
+                  className="flex items-center gap-1 rounded bg-teal-500/20 px-2 py-0.5 text-xs font-medium text-teal-700 hover:bg-teal-500/30 dark:text-teal-400 dark:hover:bg-teal-500/20 transition-colors"
+                  title="View table"
+                >
+                  <span>⊞</span>
+                  <span>Table</span>
+                </button>
+              )}
             </div>
             <h2 className="mt-2 text-xl font-bold text-stone-900 dark:text-stone-100">
               {activeRule.title}

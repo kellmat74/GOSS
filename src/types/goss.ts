@@ -9,6 +9,7 @@ export interface SubPhase {
   notes: string[];
   checklist: string[];
   subPhases?: SubPhase[];
+  tableRefs?: string[];  // IDs of associated tables in the game's tables.json
   // Scenario overlay annotations (populated by mergeSequence)
   scenarioGate?: string;
   appendedContent?: string;
@@ -28,6 +29,7 @@ export interface Phase {
   content?: string;
   notes: string[];
   subPhases: SubPhase[];
+  tableRefs?: string[];  // IDs of associated tables in the game's tables.json
   // Scenario overlay annotations (populated by mergeSequence)
   scenarioGate?: string;
   appendedContent?: string;
@@ -69,7 +71,8 @@ export interface RuleEntry {
   summary: string;
   text: string;
   crossRefs: string[];
-  module?: string; // undefined = GOSS system rule, "war" = WaR-specific, etc.
+  module?: string;    // undefined = base system rule, "war" = WaR-specific, etc.
+  tableRef?: string;  // ID of an associated table in the game's tables.json
 }
 
 // Scenario overlay fields added to SubPhase/Phase after merge

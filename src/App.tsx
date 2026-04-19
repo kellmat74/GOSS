@@ -13,6 +13,8 @@ import { OptionsPanel } from "./components/Options/OptionsPanel";
 import { QuickRefBar } from "./components/QuickRef/QuickRefBar";
 import { RulesProvider } from "./context/RulesContext";
 import { GlossaryProvider } from "./context/GlossaryContext";
+import { TablesProvider } from "./context/TablesContext";
+import { TableModal } from "./components/Tables/TableModal";
 import { useSoPProgress } from "./hooks/useSoPProgress";
 import { useOptionalRules } from "./hooks/useOptionalRules";
 import { mergeRules } from "./utils/mergeRules";
@@ -22,6 +24,7 @@ import { getVisibleGames, getGameById } from "./data/registry";
 import type { Phase, RuleEntry, SequenceOverlay } from "./types/goss";
 import type { LearnData, LearnOverlay } from "./types/learn";
 import type { GameSystemConfig, ComplexityLevel } from "./types/platform";
+import type { TableDef } from "./types/tables";
 
 type View = "sop" | "flowchart" | "rules" | "ask" | "learn" | "options" | "info";
 
@@ -149,6 +152,7 @@ interface GameData {
   moduleLearnOverlay: LearnOverlay | null;
   baseErrata: import("./types/platform").ErrataFile | null;
   moduleErrata: import("./types/platform").ErrataFile | null;
+  tables: Record<string, TableDef>;
 }
 
 const EMPTY_LEARN: LearnData = { chapters: [] };
@@ -204,12 +208,16 @@ function useGameData(
       // Errata
       gameConfig.baseData.errata ? gameConfig.baseData.errata() : Promise.resolve(null),
       moduleConfig?.data.errata ? moduleConfig.data.errata() : Promise.resolve(null),
+      // Tables
+      gameConfig.baseData.tables ? gameConfig.baseData.tables() : Promise.resolve(null),
+      moduleConfig?.data.tables ? moduleConfig.data.tables() : Promise.resolve(null),
     ]).then((results) => {
       if (cancelled) return;
       const [
         baseRulesRaw, advRulesRaw, seqRaw, learnRaw,
         modRulesRaw, modAdvRulesRaw, overlayRaw, learnOverlayRaw,
         baseErrataRaw, moduleErrataRaw,
+        baseTablesRaw, moduleTablesRaw,
       ] = results;
 
       const baseRules: RuleEntry[] = [
@@ -232,7 +240,13 @@ function useGameData(
       const baseErrata = (baseErrataRaw as any)?.default ?? null;
       const moduleErrata = (moduleErrataRaw as any)?.default ?? null;
 
-      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata });
+      // Merge tables: base first, module overrides by key
+      const tables: Record<string, TableDef> = {
+        ...((baseTablesRaw as any)?.default ?? {}),
+        ...((moduleTablesRaw as any)?.default ?? {}),
+      };
+
+      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata, tables });
       setLoading(false);
     }).catch((err) => {
       if (!cancelled) {
@@ -345,6 +359,7 @@ function App() {
 
   return (
     <GlossaryProvider>
+    <TablesProvider tables={data?.tables ?? {}}>
     <RulesProvider rules={allRules} baseErrata={data?.baseErrata} moduleErrata={data?.moduleErrata}>
       <AppShell
         sidebar={sidebar}
@@ -420,6 +435,7 @@ function App() {
         {view === "info" && <InfoPanel gameConfig={gameConfig} />}
       </AppShell>
       <RuleModal />
+      <TableModal />
       <QuickRefBar
         gameModule={moduleId}
         scenario={scenario ?? "all"}
@@ -427,6 +443,7 @@ function App() {
         oobModules={gameConfig ? buildOobModules(gameConfig) : {}}
       />
     </RulesProvider>
+    </TablesProvider>
     </GlossaryProvider>
   );
 }

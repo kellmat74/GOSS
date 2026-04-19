@@ -1,3 +1,6 @@
+import type { TablesFile } from "./tables";
+export type { TablesFile } from "./tables";
+
 /** A single errata entry targeting a specific rule section. */
 export interface ErrataEntry {
   section: string;       // rule section this corrects, e.g. "6.5.5"
@@ -66,6 +69,8 @@ export interface ModuleConfig {
   data: {
     /** Module-specific errata (e.g. Taiwan GSR corrections) */
     errata?: () => Promise<{ default: ErrataFile }>;
+    /** Module-specific tables (e.g. Taiwan GSR-specific charts) */
+    tables?: () => Promise<{ default: TablesFile }>;
     rules: () => Promise<{ default: unknown }>;
     sequenceOverlay?: () => Promise<{ default: unknown }>;
     oob?: () => Promise<{ default: unknown }>;
@@ -117,6 +122,8 @@ export interface GameSystemConfig {
     advancedLearn?: () => Promise<{ default: unknown }>;
     /** Series-wide errata (applies to all modules of this game) */
     errata?: () => Promise<{ default: ErrataFile }>;
+    /** Die-roll tables, DRM charts, and image-based play aids */
+    tables?: () => Promise<{ default: TablesFile }>;
   };
 
   askConfig: {

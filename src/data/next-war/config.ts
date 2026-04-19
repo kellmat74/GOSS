@@ -1,9 +1,13 @@
-import type { GameSystemConfig, ErrataFile } from "../../types/platform";
+import type { GameSystemConfig, ErrataFile, TablesFile } from "../../types/platform";
 import { taiwanOptionalRules } from "./taiwan/optional-rules";
 
 type ErrataLoader = () => Promise<{ default: ErrataFile }>;
 const errata = (load: () => Promise<unknown>): ErrataLoader =>
   load as ErrataLoader;
+
+type TablesLoader = () => Promise<{ default: TablesFile }>;
+const tables = (load: () => Promise<unknown>): TablesLoader =>
+  load as TablesLoader;
 
 export const nextWarConfig: GameSystemConfig = {
   id: "next-war",
@@ -104,6 +108,7 @@ export const nextWarConfig: GameSystemConfig = {
     advancedSequence: () => import("./advanced-sequence.json"),
     learn: () => import("./learn.json"),
     errata: errata(() => import("./errata.json")),
+    tables: tables(() => import("./tables.json")),
   },
 
   askConfig: {
