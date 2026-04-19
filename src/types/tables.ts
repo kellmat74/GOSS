@@ -3,9 +3,15 @@ export interface TableDRM {
   condition: string; // description of when this modifier applies
 }
 
-export interface TableDRMGroup {
-  label?: string;    // optional section heading (e.g., "Inshore Box Only")
+export interface TableDRMSubGroup {
+  label?: string;
   drms: TableDRM[];
+}
+
+export interface TableDRMGroup {
+  label?: string;       // section heading
+  drms?: TableDRM[];    // present when this is a leaf group
+  subGroups?: TableDRMSubGroup[];  // present when label is a bold header with sub-sections
 }
 
 export interface TableLookupDef {

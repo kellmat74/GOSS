@@ -85,27 +85,46 @@ function LookupTable({ table }: { table: TableLookupDef }) {
             Die Roll Modifiers
           </h3>
           <div className="space-y-3">
-            {table.drmGroups.map((group, i) => (
-              <div key={i}>
-                {group.label && (
-                  <div className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-stone-500 dark:text-stone-400">
+            {table.drmGroups.map((group, i) =>
+              group.subGroups ? (
+                /* Section header with nested sub-groups */
+                <div key={i}>
+                  <div className="mb-2 text-xs font-bold uppercase tracking-wide text-stone-700 dark:text-stone-200">
                     {group.label}
                   </div>
-                )}
-                <div className="space-y-1">
-                  {group.drms.map((drm, j) => (
-                    <div key={j} className="flex gap-3 text-sm">
-                      <span className="w-10 shrink-0 font-mono font-bold text-accent-600 dark:text-accent-400">
-                        {drm.mod}
-                      </span>
-                      <span className="text-stone-600 dark:text-stone-300">
-                        {drm.condition}
-                      </span>
-                    </div>
-                  ))}
+                  <div className="space-y-2.5 border-l-2 border-stone-200 pl-3 dark:border-stone-700">
+                    {group.subGroups.map((sub, j) => (
+                      <div key={j}>
+                        {sub.label && (
+                          <div className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-stone-500 dark:text-stone-400">
+                            {sub.label}
+                          </div>
+                        )}
+                        <div className="space-y-1">
+                          {sub.drms.map((drm, k) => (
+                            <DRMRow key={k} mod={drm.mod} condition={drm.condition} />
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ) : (
+                /* Flat group */
+                <div key={i}>
+                  {group.label && (
+                    <div className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-stone-500 dark:text-stone-400">
+                      {group.label}
+                    </div>
+                  )}
+                  <div className="space-y-1">
+                    {(group.drms ?? []).map((drm, j) => (
+                      <DRMRow key={j} mod={drm.mod} condition={drm.condition} />
+                    ))}
+                  </div>
+                </div>
+              )
+            )}
           </div>
         </div>
       )}
@@ -120,6 +139,17 @@ function LookupTable({ table }: { table: TableLookupDef }) {
           ))}
         </div>
       )}
+    </div>
+  );
+}
+
+function DRMRow({ mod, condition }: { mod: string; condition: string }) {
+  return (
+    <div className="flex gap-3 text-sm">
+      <span className="w-10 shrink-0 font-mono font-bold text-accent-600 dark:text-accent-400">
+        {mod}
+      </span>
+      <span className="text-stone-600 dark:text-stone-300">{condition}</span>
     </div>
   );
 }

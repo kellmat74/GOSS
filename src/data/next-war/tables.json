@@ -47,16 +47,27 @@
         ]
       },
       {
-        "label": "Advanced Game — PRC Expends DF-21/26 Capability",
-        "drms": [
-          { "mod": "−2", "condition": "Range 0 or 1" },
-          { "mod": "−1", "condition": "Range 2" }
-        ]
-      },
-      {
-        "drms": [
-          { "mod": "−1", "condition": "BrahMos Cruise Missile (Range 0 or 1)" },
-          { "mod": "+1", "condition": "Navy expends Naval SSM (Taiwan Straits At Sea/Inshore only)" }
+        "label": "Advanced Game",
+        "subGroups": [
+          {
+            "label": "PRC Expends DF-21/26 Capability",
+            "drms": [
+              { "mod": "−2", "condition": "Range 0 or 1" },
+              { "mod": "−1", "condition": "Range 2" }
+            ]
+          },
+          {
+            "label": "BrahMos Cruise Missile",
+            "drms": [
+              { "mod": "−1", "condition": "Range 0 or 1" }
+            ]
+          },
+          {
+            "label": "Navy Expends Naval SSM",
+            "drms": [
+              { "mod": "+1", "condition": "Taiwan Straits At Sea/Inshore only" }
+            ]
+          }
         ]
       }
     ]
