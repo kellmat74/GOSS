@@ -4,7 +4,7 @@ import { useRules } from "../../context/RulesContext";
 import { GlossaryHighlighter } from "../GlossaryHighlighter";
 
 export function RuleModal() {
-  const { activeRule, history, closeRule, goBack, goNext, goPrev, openRule, getRuleBySection, getRulesForSection, hasNext, hasPrev } = useRules();
+  const { activeRule, history, closeRule, goBack, goNext, goPrev, openRule, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection } = useRules();
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -82,6 +82,7 @@ export function RuleModal() {
             getRulesForSection={getRulesForSection}
             getRuleBySection={getRuleBySection}
             openRule={openRule}
+            getErrataForSection={getErrataForSection}
           />
         </div>
 
@@ -113,17 +114,25 @@ export function RuleModal() {
   );
 }
 
-/** Combined view: base rule + scenario overlays + cross-refs */
+function formatErrataDate(iso: string): string {
+  if (!iso) return "";
+  const d = new Date(iso + "T00:00:00Z");
+  return d.toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
+}
+
+/** Combined view: base rule + errata + scenario overlays + cross-refs */
 function ModalBody({
   activeRule,
   getRulesForSection,
   getRuleBySection,
   openRule,
+  getErrataForSection,
 }: {
   activeRule: import("../../types/goss").RuleEntry;
   getRulesForSection: (section: string) => import("../../types/goss").RuleEntry[];
   getRuleBySection: (section: string) => import("../../types/goss").RuleEntry | undefined;
   openRule: (sectionOrId: string) => void;
+  getErrataForSection: (section: string) => import("../../context/RulesContext").ErrataForSection | null;
 }) {
   // Get all rules for this section (base + scenario overlays)
   const allForSection = getRulesForSection(activeRule.section);
@@ -138,11 +147,46 @@ function ModalBody({
     for (const ref of r.crossRefs) allRefs.add(ref);
   }
 
+  const errata = getErrataForSection(activeRule.section);
+
+  const TYPE_LABEL: Record<string, string> = {
+    correction: "correction",
+    clarification: "clarification",
+    addition: "addition",
+    removal: "removal",
+  };
+
   return (
     <>
       {/* Base rule text */}
       {baseRule && (
         <RuleText text={baseRule.text} onRuleClick={openRule} />
+      )}
+
+      {/* Errata callout — amber, between base rule and scenario overlays */}
+      {errata && (
+        <div className="mt-4">
+          <div className="mb-2 flex items-center gap-2 border-t-2 border-amber-400 pt-2 dark:border-amber-600">
+            <span className="rounded bg-amber-500 px-1.5 py-0.5 text-xs font-bold text-white">
+              ERRATA
+            </span>
+            <span className="text-xs font-semibold text-amber-600 dark:text-amber-400">
+              as of {formatErrataDate(errata.asOf)}
+            </span>
+          </div>
+          <div className="space-y-2">
+            {errata.entries.map((entry, i) => (
+              <div key={i} className="rounded-md bg-amber-50 p-3 dark:bg-amber-900/20">
+                <span className="mb-1 inline-block rounded bg-amber-200 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-800 dark:bg-amber-800/40 dark:text-amber-300">
+                  {TYPE_LABEL[entry.type] ?? entry.type}
+                </span>
+                <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300">
+                  {entry.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       )}
 
       {/* Scenario overlays */}

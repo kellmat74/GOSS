@@ -183,8 +183,8 @@ export function PhaseStepper({
         </div>
       )}
 
-      {/* Description */}
-      <p className="mb-4 leading-relaxed text-stone-600 dark:text-stone-300">
+      {/* Description — AI-generated synopsis; content below is verbatim */}
+      <p className="mb-4 italic leading-relaxed text-stone-600 dark:text-stone-300">
         <RuleInlineText text={active.description} />
       </p>
 

@@ -166,7 +166,7 @@ function RuleRow({ rule, active, onToggle }: RuleRowProps) {
             </span>
           )}
         </div>
-        <p className="mt-0.5 text-xs leading-relaxed text-stone-500 dark:text-stone-400">
+        <p className="mt-0.5 italic text-xs leading-relaxed text-stone-500 dark:text-stone-400">
           {rule.description}
         </p>
       </div>

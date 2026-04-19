@@ -1,0 +1,105 @@
+{
+  "asOf": "2026-03-27",
+  "entries": [
+    {
+      "section": "6.5.2",
+      "type": "correction",
+      "text": "6.5.2 (last sentence) – change \"provide Combat Support in High Mountain\" to \"trace movement through or conduct missions in High Mountain hexes\""
+    },
+    {
+      "section": "17.1.5.4",
+      "type": "addition",
+      "text": "17.1.5.4 – Add Naval SSMs to the list of CIWS defense."
+    },
+    {
+      "section": "18.2.3.1",
+      "type": "addition",
+      "text": "18.2.3.1 – add sentence to end \"Such an HQ can also protect an Installation/Airfield in a Holding Box if the HQ is physically on the Installation/Airfield icon.\""
+    },
+    {
+      "section": "19.2.4",
+      "type": "addition",
+      "text": "19.2.4 [ADD] – Mountain units can use Leg MPs (instead of motorized) to trace an LOC [19.2] through a Highland, Highland Woods, or Mountain hex."
+    },
+    {
+      "section": "23.6",
+      "type": "correction",
+      "text": "23.6 – change the last sentence of 1st paragraph to \"If the target hex lies along a friendly country's coastline and is neither within two hexes of an enemy HQ or Installation nor within the Naval Air Defense Umbrella of an enemy Naval Unit, the mission undergoes Local Detection and, if detected, Local SAM but not AAA. Otherwise, use the Naval Unit's ADF values or the enemy's ADF values, as applicable.\""
+    },
+    {
+      "section": "Advanced Play Aids",
+      "type": "correction",
+      "text": "Advanced Air Combat \"+1 non (NATO/JPN/RU/PRC)\" should include \"AUS\" in the parenthesis; in addition, this DRM also applies to Long Range combat (for the Saudi Typhoon and ROK)."
+    },
+    {
+      "section": "8.1.1.1",
+      "type": "clarification",
+      "text": "8.1.1.1 – The following Formations qualify as divisional:\n  • Any formation in which the HQ is marked as a division, i.e., \"XX\"\n  • USMC: Any number of USMC units may stack when they are not in their TF configuration"
+    },
+    {
+      "section": "8.5.8",
+      "type": "clarification",
+      "text": "8.5.8 – Amphibiously Assaulting Land Areas - Although there are no retreats, per se, in Land Areas, if the assaulting units inflict an \"R\" result or eliminates the enemy units, then the enemy units are considered to have retreated off the beaches and the assaulting units may remain in the Land Area. Otherwise, they take the step loss and retreat to their AMPHs."
+    },
+    {
+      "section": "17.1.5 #1.c",
+      "type": "clarification",
+      "text": "17.1.5 #1.c – This can be used against any enemy Air Mission, not just Air Strikes and Combat Support missions."
+    },
+    {
+      "section": "19.2.3",
+      "type": "clarification",
+      "text": "19.2.3 – Adjacency applies to MSUs and HQs, as well as Supply Sources."
+    },
+    {
+      "section": "20.1.3",
+      "type": "clarification",
+      "text": "20.1.3 – NWI added Nuclear Points markers as valid SOF Targets if the GSR allows. The following markers are valid targets (by game):\n  NWK (all editions)   DPRK (if NWSS2 3.0 in play).\n  NWIP                 ROI, IROP.\n  NWT (all editions)   None.\n  NWP                  None."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "Player Aids – In general, use the latest Advanced Game Tables, Advanced SOP, Terrain Effects Charts, and Combat Results Table. Always use the game specific Standard Game Tables from whichever game you are playing."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "Reinforcement Schedule: In some of the Strategic and Tactical Surprise Scenarios, there are Allied reinforcements scheduled to arrive in GT16. As this is the nominal end of the game, it can cause some confusion. Essentially, they exist in case players wish to continue playing (although things should be well decided by then). In any case, in either scenario, simply continue the arrival of Reinforcements by increasing a letter per Game Turn, i.e., GT17 would see the arrival of \"Q,\" etc."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "US CVNs & Carrier Air Wings – Anytime a US CVN is placed on the map (or Naval/Strategic Display), a Carrier Air Wing arrives with it. In addition, air units from a CAW may not be used while a CV/CVN is in Port; players may wish to move them to the Flown Box as a reminder."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "Range on the Naval/Strategic Display – When counting range for air units, in general, each At Sea Box and Land Area (exclusive of the one they occupy) counts as one area. The NWK Operational Map is considered to be part of both the Yellow Sea and Sea of Japan At Sea Boxes, i.e., Naval Air units in either At Sea Box (or Associated Inshore Box or All-sea hex) can fly missions in Korea, but not into the other At Sea Box unless their range allows it."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "Inshore Boxes & Airmobile/Helicopter Movement – When conducting Airmobile Movement or Attack Helicopter Movement from an Inshore Box to a Land Area, and that area is the Operational Map, i.e., Poland, in general, the GSR will cover that. If it does not, then move to/from any All-Sea hex on the Operational Map by expending 5MP."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "Inshore Boxes & Naval Bombardment/Combat Support – When conducting either of these, it may not be done into a Land Area which is also the Operational Map."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "Nuclear Weapons and Global Thermonuclear War – In the event both sides have nuclear weapons, alternate allocating such markers, then, the player who first placed a marker, makes the Global Thermonuclear War roll and suffers the \"consequences\" for starting it."
+    },
+    {
+      "section": "OR 1.0",
+      "type": "addition",
+      "text": "OR 1.0 Trading Space for Time [Standard/Advanced]\n\nDesign Note: This rule has ramifications on scoring VP in many games, as most are calibrated with the idea that eliminating enemy units will provide VP. You may just have to determine who won via an alternate method.\n\nBoth players may agree to use the following alternate combat results rules. These modify 9.7.1 in the Series Rules.\n\nWhen conducting combat on the Operational Map, rather than taking step losses, a defending stack may always choose to retreat one additional hex instead of taking a step loss. Exception: The defender must take at least one step loss from the lead unit if the final odds column was 11, 12, or 13.\nFor each such step loss taken as a retreat hex, the defending units must retreat one additional hex. If a defender chooses to exchange any step losses in this manner, all defending units must retreat regardless of terrain and may not attempt to ignore the retreat result [9.8.4].\n\nIf a defender chooses to convert step losses into retreat hexes, the attacker reduces his losses in the combat by one (to a minimum of zero). This is in lieu of the Excess Combat Losses [9.7.1.1] reduction.\n\nA defender cannot choose to Voluntarily Ignore a Retreat [9.8.4] when Trading Space for Time."
+    },
+    {
+      "section": "OR 2.0",
+      "type": "addition",
+      "text": "OR 2.0 Air Sortie Reduction for Surprise (Next War: Poland) [Advanced]\n\nIn other games in the series, the level of surprise affected sortie rates, i.e., available air units. To recreate for this game, I suggest the following for non-US bombers (B-1, B-2, B-52):\n\nStrategic Surprise - Baltic Air Policing, half of US & Polish (round up) in Ready; all others in Flown\n\nTactical Surprise - Baltic Air Policing and Polish in Ready, & half of all others in Ready (round up); others in Flown\n\nExtended Buildup – All in Ready."
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "asOf": "2026-03-27",
+  "entries": [
+    {
+      "section": "GSR 13.2.1",
+      "type": "addition",
+      "text": "GSR 13.2.1 – Add \"Air Defense Tracks\" to the list of valid targets."
+    },
+    {
+      "section": "Combat Results Table",
+      "type": "correction",
+      "text": "Column Shifts: Chemical Support does not directly provide column shifts. It reduces the Efficiency Rating of defending units."
+    },
+    {
+      "section": "Combat Results Table",
+      "type": "correction",
+      "text": "Out of Supply and Isolation Effects: Round down (minimum of one), not up as the chart states."
+    },
+    {
+      "section": "Combat Results Table",
+      "type": "addition",
+      "text": "Add \"Marsh\" to the 4th bullet of the Standard Combat Strength Modifiers section."
+    },
+    {
+      "section": "Combat Results Table",
+      "type": "correction",
+      "text": "HQs no longer provide column shifts in the latest Series Rules. Ignore this modifier on the CRT."
+    },
+    {
+      "section": "Master Allied Reinforcement Chart",
+      "type": "correction",
+      "text": "\"L\" – The CW units should be 40 + 42, not 41 + 42."
+    },
+    {
+      "section": "Drawing Air Units",
+      "type": "clarification",
+      "text": "Drawing Air Units - Whenever drawing air units for set up or reinforcements, and there are differences in Pilot Ratings, draw randomly."
+    },
+    {
+      "section": "AWACs",
+      "type": "clarification",
+      "text": "AWACs: When not playing a combined game, the AWACs Advantage marker can never move below 1 for the Allies."
+    },
+    {
+      "section": "ROK Attack Helicopters",
+      "type": "clarification",
+      "text": "ROK Attack Helicopters: New information has come to light. The ROK is not retiring their AH-1s in favor of the new AH-64s. They will operate both aircraft. Use both sets of attack helicopters for the ROK when setting up the game."
+    },
+    {
+      "section": "GSR 2.2",
+      "type": "clarification",
+      "text": "GSR 2.2 The +1 MP cost is only for entering enemy DMZ hexes."
+    },
+    {
+      "section": "GSR 7.1.4",
+      "type": "clarification",
+      "text": "GSR 7.1.4 Reinforcing into a port in the DPRK and/or ROK wherein the In Shore Box is not friendly does count for a Contested Sea Movement DR. Units failing their DR, assuming they survive, are placed in Japan."
+    },
+    {
+      "section": "GSR 15.2",
+      "type": "clarification",
+      "text": "GSR 15.2 – Games should always be played using this option."
+    },
+    {
+      "section": "GSR 16.2.1.4",
+      "type": "clarification",
+      "text": "GSR 16.2.1.4 If the player fails the Arrival Die Roll, the entire row is delayed and arrives in the following turn. However, this pushes back the rest of the reinforcements as well which must still roll for arrival in their new turn of entry. In addition, take note of 2.5.1: a US Army unit which fails its initial Arrival DR and arrives in a turn in which Busan is not available is delayed another turn."
+    },
+    {
+      "section": "Advanced Sequence of Play",
+      "type": "clarification",
+      "text": "Second Special Operations Forces Phase: The intent is that if this is a Contested Turn, players alternate placing all of their SOF Markers and then resolving them. If this is an Initiative Turn, the non-Initiative player takes his SOF phase (the Initiative player has already gone)."
+    },
+    {
+      "section": "Advanced Strike Table",
+      "type": "clarification",
+      "text": "The use of Stand-off weapons is always voluntary."
+    },
+    {
+      "section": "Ground Combat CRT",
+      "type": "clarification",
+      "text": "\"+1: for Multi-Corps attacks by DPRK, ROK, and PRC units\": this DRM is +1 per additional Formation (i.e., Corps) involved."
+    },
+    {
+      "section": "Collapse! Scenario — Allied Reinforcement Schedule #3",
+      "type": "correction",
+      "text": "Allied Reinforcement Schedule #3 – Uijeong should be Uijeongbu (3118)"
+    },
+    {
+      "section": "Collapse! Scenario — Allied Reinforcement Schedule",
+      "type": "addition",
+      "text": "Allied Reinforcement Schedule - Add 8: ROK \"HR\" and \"M\" units with placement hexes on the south map are delayed a turn. Place them, after the delay, on any hex on the south edge map containing either Urban terrain or a road (of any type) leading off the map."
+    },
+    {
+      "section": "General",
+      "type": "correction",
+      "text": "As no Strategic Display was included with this game, no Naval Detection DRMs were included. Players may use the ones indicated on the NWT2E/NWV Strategic Display: East Sea (Sea of Japan) = +1 non-Allied/-2 Allied; Yellow Sea (East China Sea) = -1 non-Allied/-2 Allied."
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "The PRC Artillery unit labeled \"73\" should be \"78\" (Next War: Vietnam)"
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "The Allied Air Transport Limit is 5 (per GSR 5.2) not 3 as Indicated on the counter."
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "The PRC 78GA Bridge has an incorrect background color. (Supplement #3)"
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "The JPN AH-64 is missing its reduced side (Next War: India-Pakistan)"
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "General – Many scenarios state the PRC has 2 CV BGs; there is only 1 CV BG. Ignore any reference to a second one."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "General – Where not specified, Scenario length is 16 turns."
+    },
+    {
+      "section": "2.2",
+      "type": "correction",
+      "text": "2.2 – The +1 MP cost is only for entering enemy DMZ hexes."
+    },
+    {
+      "section": "3.6.1",
+      "type": "correction",
+      "text": "3.6.1 – Rules reference should be 15.2"
+    },
+    {
+      "section": "3.6.3",
+      "type": "correction",
+      "text": "3.6.3 – Rules reference should be 15.13"
+    },
+    {
+      "section": "3.9",
+      "type": "addition",
+      "text": "Add the following rules: 3.9 \"Marine\" Units [8.5.8] All USMC and any Marine, Naval Infantry, or Amphibious units (see the Unit Type Identification Chart) are considered Marines and may conduct Amphibious Assaults and/or Sea Landings."
+    },
+    {
+      "section": "3.9.1",
+      "type": "addition",
+      "text": "3.9.1 Amphibious Mechanized units: These units (units without an \"anchor\" symbol with mechanized movement) may only embark on an AMPH in a Port."
+    },
+    {
+      "section": "6.1.3",
+      "type": "removal",
+      "text": "6.1.3 – delete this (Japanese attacks no longer incur a +1 DRM)"
+    },
+    {
+      "section": "6.2",
+      "type": "correction",
+      "text": "6.2 - change the Allied response part to \"if the Allied player does respond, he no longer earns VP for DPRK usage.\""
+    },
+    {
+      "section": "7.0",
+      "type": "correction",
+      "text": "7.0 – PRC Reinforcements – When arriving, PRC Motorized/Mechanized Reinforcements can only be placed, where applicable, in the Yellow Sea At Sea Box and/or Ports associated with the Yellow Sea At Sea Box if the At Sea and Inshore Boxes are non-Allied-controlled; otherwise, they arrive in N2000 or Hamhung/Hungnam. Leg units may still arrive in any valid Airbase if the non-Allied player had any level of Air Superiority; otherwise, they also arrive in either N2000 or Hamhung/Hungnam."
+    },
+    {
+      "section": "15.18",
+      "type": "addition",
+      "text": "Add 15.18 PRC Stealth Air Units [Advanced; +10 VP Allied] The PRC stealth platforms have a projected in-service date of around 2020. The PRC player may choose this option to include all J-31 air units with the first group of PRC air units."
+    },
+    {
+      "section": "16.1.2",
+      "type": "correction",
+      "text": "16.1.2 – GT 1 Reinforcements – \"Basic Reaction Movement Segment\" should be \"Basic Second Movement Segment\""
+    },
+    {
+      "section": "16.1.3",
+      "type": "correction",
+      "text": "16.1.3 – SSR #9 should reference the 23/VIII Inf Div rather than V Corps."
+    },
+    {
+      "section": "16.1.6",
+      "type": "correction",
+      "text": "16.1.6 – Ignore the reference to \"Arty\" in the introduction. Artillery units are used in the Standard Game."
+    },
+    {
+      "section": "16.1.6",
+      "type": "correction",
+      "text": "16.1.6 – The Submarine Threat Level is 2, and the ASW Level is 1."
+    },
+    {
+      "section": "16.1.6",
+      "type": "correction",
+      "text": "16.1.6 – Ignore the reference to 3-R in the Allied Setup. 3-R became another US SOF marker in 2nd edition. LAR is 3-LAR."
+    },
+    {
+      "section": "16.1.6",
+      "type": "addition",
+      "text": "16.1.6 – In the PRC Reinforcements, add each Corps Zhi-10 Attack Helicopter to the Corps."
+    },
+    {
+      "section": "16.2.3.2",
+      "type": "clarification",
+      "text": "16.2.3.2 – This should've been its own rule rather than embedded in the Wider War rules. Consider 16.2.3.2 to come right before 16.2.3. This boils down to, if you fail the R roll, reinforcements are delayed unless Wider War is in effect, in which case they are diverted to Taiwan (per 16.2.3)."
+    },
+    {
+      "section": "General",
+      "type": "addition",
+      "text": "In all Advanced Game scenarios with PRC intervention, include all J-20s."
+    },
+    {
+      "section": "16.2.5 / 16.2.6",
+      "type": "clarification",
+      "text": "16.2.5, 16.2.6, 16.2.6 – In the Non-Allied Scenario Specifications \"all non-Reserve DPRK\" refers to units whose setup hexes are not in italics, i.e., \"all non-reinforcement DPRK\""
+    },
+    {
+      "section": "16.2.6 / 16.2.7",
+      "type": "correction",
+      "text": "16.2.6 and 16.2.7 (Tactical Surprise and Extended Buildup) – ignore the reference to 1xF-22A setting up in the Japan Basing Box. It enters as a reinforcement on line C. In addition, the US SOF Markers in the reinforcements have already been accounted for in the Allocations."
+    },
+    {
+      "section": "Player Aid Charts — General",
+      "type": "correction",
+      "text": "The Naval ADF chart was inadvertently left off the map. Use the one in Next War: Poland or here: Naval Unit ADF Values: US CVN BG – Detection: 8; SAM: 8; AAA: 3 / AMPH or US/RU SAG – Detection: 7; SAM: 6; AAA: 2 / Other CV/SAG – Detection: 6; SAM: 6; AAA: 2"
+    },
+    {
+      "section": "Standard Game Air Points",
+      "type": "correction",
+      "text": "Standard Game Air Points – the results for a roll of \"7\" on GT1 should read 6 | 0."
+    },
+    {
+      "section": "Standard Game Air Defense Fire",
+      "type": "correction",
+      "text": "Standard Game Air Defense Fire – under \"Firing Side Has…Advantage\" the result for 5-6 should be \"-\"."
+    },
+    {
+      "section": "Ground Unit Bridge Destruction/Repair",
+      "type": "correction",
+      "text": "Ground Unit Bridge Destruction/Repair – This table was left out. Refer to the rules for values or see the table on the Standard Play Aid included in Next War: India-Pakistan."
+    },
+    {
+      "section": "Master Allied Reinforcement Chart",
+      "type": "correction",
+      "text": "L – should include Japanese 4/West under Standard Game and HQ/West under Advanced Game."
+    },
+    {
+      "section": "Air Superiority Display",
+      "type": "addition",
+      "text": "USA/Guam – add \"L Range: may only fly Air Superiority\""
+    },
+    {
+      "section": "Victory Point Table on South Map",
+      "type": "addition",
+      "text": "Add CW/France to \"Per ROK/PRC/RU Air Unit Eliminated (Advanced Game)\" line."
+    },
+    {
+      "section": "Victory Point Table on South Map",
+      "type": "correction",
+      "text": "Change Send non-CVN BG Naval Unit to Turn Track to non-CVN BG Naval Unit Eliminated."
+    },
+    {
+      "section": "Victory Point Table on South Map",
+      "type": "correction",
+      "text": "Change Send CVN BG to Turn Track to CVN BG Eliminated."
+    },
+    {
+      "section": "Combat Results Table",
+      "type": "removal",
+      "text": "Remove the +1 DRM for Japanese attacks"
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "Players should note that all rivers in Korea are Minor."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "There's an extra USAF B-52 in the counter-mix. Burn it, throw it away, or use it. It's your game. I don't use it."
+    },
+    {
+      "section": "GSR 15.1",
+      "type": "clarification",
+      "text": "The \"white\" lines on the map, e.g., N2519, are for use with the optional Air Cushion Vehicle rule (GSR15.1)."
+    },
+    {
+      "section": "Advanced Air Combat Chart",
+      "type": "correction",
+      "text": "Ignore the \"-1 US F-15 with F-22 support\" line on the Advanced Air Combat Chart."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "Despite the slight coloring in their NATO symbol, the DPRK artillery units may support any DPRK unit. Otherwise, they'd be pretty useless."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "The Terrain Effects Charts uses slightly different images for some of the terrain. Most noticeably this is the textured look for Rough and Mountain. Terrain gets darker as it gets \"higher\". So N3604 is Flat Woods, N3603 is Rough, N3503 is Highland, and N3404 is Mountain."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "Various scenarios – When the PRC intervenes at Level 0, that does not affect SOF reinforcements. They are markers, not units."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "DPRK Artillery Formation HQs – These HQs cannot conduct Strikes, Combat Support (they have no range), or Bridging (no HQ Bridge marker), but otherwise function as HQs for Supply and Air Defense purposes."
+    },
+    {
+      "section": "GSR 7.2",
+      "type": "clarification",
+      "text": "The 1st Ed had different Sea Control rules. Over the years, these have changed significantly. Use the Sea Control rules outlined in the latest Series Rules (7.2)."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "Consider a Holding Box to exist for both the PRC and Russia for the purposes of Naval Unit retreat and holding ground units."
+    }
+  ]
+}

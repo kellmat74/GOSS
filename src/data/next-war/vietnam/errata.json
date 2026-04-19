@@ -1,0 +1,260 @@
+{
+  "asOf": "2026-03-27",
+  "entries": [
+    {
+      "section": "General",
+      "type": "addition",
+      "text": "Arrigo Velicogna should be listed in the credits under Research."
+    },
+    {
+      "section": "2.2",
+      "type": "addition",
+      "text": "2.2 – Under Non-Allied, add, \"Exception: Map edge hexes in Laos are always friendly for Thai forces regardless of side.\""
+    },
+    {
+      "section": "2.7",
+      "type": "addition",
+      "text": "2.7 – Add 4708 to the list of hexes."
+    },
+    {
+      "section": "3.2.2.2",
+      "type": "correction",
+      "text": "3.2.2.2 – The reconstitution cost for a PSDF unit is 1."
+    },
+    {
+      "section": "3.2.3",
+      "type": "correction",
+      "text": "3.2.3 – change \"may\" to \"must\" in the first sentence"
+    },
+    {
+      "section": "3.4",
+      "type": "addition",
+      "text": "(add) 3.4 \"Marine\" Units [8.5.8] All USMC and any Marine, Naval Infantry, or Amphibious units (see the Unit Type Identification Chart) are considered Marines and may conduct Amphibious Assaults and/or Sea Landings."
+    },
+    {
+      "section": "6.1.4.5",
+      "type": "addition",
+      "text": "(add) 6.1.4.5 Land Area Stacking: Both sides may stack together in the same Land Area. The Stacking Limit, per side, is three Stacking Points."
+    },
+    {
+      "section": "6.1.4.6",
+      "type": "addition",
+      "text": "(add) 6.1.4.6 Land Area Combat: When opposing sides occupy a Land Area (via Airmobile or Airborne Movement or Amphibious Assault), combat is conducted normally in each appropriate Combat Segment, except that Retreat results are ignored. Treat the terrain as Rough. Opposing units can co-exist in the Land Area until one side is eliminated or withdraws."
+    },
+    {
+      "section": "6.1.4.7",
+      "type": "addition",
+      "text": "(add) 6.1.4.7 Air Defense Fire: Use the ADF values of any one friendly Naval Unit in the associated Inshore Box when ADF is applicable. If none of the above applies, use Local ADF values."
+    },
+    {
+      "section": "6.1.4.8",
+      "type": "addition",
+      "text": "(add) 6.1.4.8 Land Area Control: To control a Land Area, a successful Clearing Operation [8.4.1] must be conducted. A Clearing Marker is randomly drawn and placed when the player's forces are the sole occupiers of the Land Area. If the enemy subsequently places units in the Land Area, the Clearing Marker is removed. The Minimum Safe Stacking Point requirement is two (2)."
+    },
+    {
+      "section": "6.1.4.8.1",
+      "type": "addition",
+      "text": "(add) 6.1.4.8.1 Effects of Land Area Control: When a Land Area is controlled by the enemy, entering its associated At Sea Box, Inshore Box, or All-Sea hexes is always considered a Contested Sea Movement and incurs an additional +1 DRM to the movement."
+    },
+    {
+      "section": "6.1.4.9",
+      "type": "addition",
+      "text": "(add) 6.1.4.9 Land Areas and Supply: Units in a Land Area are considered in supply if the associated Inshore Box is friendly controlled or Contested."
+    },
+    {
+      "section": "6.2.1",
+      "type": "correction",
+      "text": "(update) 6.2.1 Holding Boxes: change from US to US/Guam."
+    },
+    {
+      "section": "6.2.5",
+      "type": "correction",
+      "text": "(replace) 6.2.5 Strikes Against Installations in a Holding Box\n[Advanced]\nInstallations and Airfields in a Holding Box (including SAM and Cruise Missile batteries) can be the target of Strikes and SOF Missions. They can receive Strike and Destroyed markers. These Installations are:\n  in Rough Woods terrain for all purposes (Exception: 6.2.5.1.2 for National Holding Box Ports).\n  within two hexes of an HQ unit for Detection and Air Defense Fire.\n  for SOF Raids they are \"occupied, but by less than a brigade\" and generate a +1 Raid DRM.\n\nThe above refers to Airbases/Installations which have boxes for Strike/Destroyed markers, e.g., Thailand. For Strikes/Raids against Ports in Holding Boxes, i.e., those just showing icons use the following.\n\nThe Port icons in a \"National\" Holding Box represent a collection of such facilities. As such, they can be the targets of Strikes and SOF Raids and receive Strike markers. Consider them to be a notional Port. All nations except the PRC have only a single notional Port. Reduce Strike markers as appropriate during the Reorganization Phase. A Port in a National Holding Box is in Flat terrain for all purposes. For each Destroyed result, the appropriate Submarine Threat or ASW Level is reduced by one in the Reinforcement/Replacement Phase.\n\nException: The U.S. and Indian Ocean Holding Boxes cannot be attacked."
+    },
+    {
+      "section": "8.1",
+      "type": "correction",
+      "text": "8.1 – the reference to 17.3.2.6 should be 17.3.6."
+    },
+    {
+      "section": "8.3",
+      "type": "correction",
+      "text": "8.3 – the two sentences following the bullet points should also be bullet points"
+    },
+    {
+      "section": "8.3 / 8.3.1",
+      "type": "correction",
+      "text": "8.3 & 8.3.1 – Philippine, Malaysian, and Indonesian naval units, and optionally Marines, begin, or enter, play in their home country Holding Box. Otherwise, follow the rules for International Reinforcements."
+    },
+    {
+      "section": "11.3",
+      "type": "correction",
+      "text": "11.3 – the port cannot be in an enemy ZOC to be used as a supply source."
+    },
+    {
+      "section": "14.1",
+      "type": "correction",
+      "text": "14.1 – The PRC is limited to 5 land-based Cruise Missile Strikes per Strike Phase."
+    },
+    {
+      "section": "14.3.8",
+      "type": "correction",
+      "text": "14.3.8 - Change –2 to +2."
+    },
+    {
+      "section": "16.7.2",
+      "type": "correction",
+      "text": "16.7.2 – the image for the PRC J-31 has incorrect values – the actual counter is correct"
+    },
+    {
+      "section": "16.18",
+      "type": "addition",
+      "text": "Add New – 16.18 Additional US Bombers [Advanced; +14VP non-Allied] The Allied player may choose to include the additional B-1B and B-2A from the counter-mix to a scenario. Follow normal set up rules for that air unit type."
+    },
+    {
+      "section": "General",
+      "type": "addition",
+      "text": "Any scenario with SRV 2MR in it, add 1 unit to the count in the setup."
+    },
+    {
+      "section": "17.1.3",
+      "type": "correction",
+      "text": "17.1.3 - SSR 1 should be \"1. Initiative: The non-Allied player has the initiative for GT1-3. GT4 is Contested.\""
+    },
+    {
+      "section": "17.4.5.1",
+      "type": "addition",
+      "text": "17.4.5.1 – Add 1 x Airmobile Point"
+    },
+    {
+      "section": "17.5 / 17.6",
+      "type": "correction",
+      "text": "17.5/17.6 – Add 3 x J-8 to the list of PRC air units in the setup instructions."
+    },
+    {
+      "section": "17.6",
+      "type": "correction",
+      "text": "17.6 – Change 11 MEU to 31 MEU in the US setup instructions."
+    },
+    {
+      "section": "17.7",
+      "type": "correction",
+      "text": "17.7 – Change 15 MEU to 31 MEU in the US setup instruction."
+    },
+    {
+      "section": "18.2.1",
+      "type": "clarification",
+      "text": "18.2.1 – There are 7 x J-11s on the countersheet. Either throw one out or use it. Your choice."
+    },
+    {
+      "section": "Advanced Play Aid",
+      "type": "correction",
+      "text": "Out of Supply Effects, 5th item should read \"HQ/Artillery no combat capability recovery\""
+    },
+    {
+      "section": "Standard Play Aid - ADF",
+      "type": "correction",
+      "text": "Standard Game ADF: \"Target side\" should say \"Firing side\" and \"Mission side\" should say \"Flying side\""
+    },
+    {
+      "section": "Standard Play Aid - Air Points",
+      "type": "correction",
+      "text": "Standard Game Air Points: The results are not in sync with the rules. They should be:\n  The side receives additional Air Points per carrier that is in a friendly Inshore Box or All-Sea hex: +2 for US/+1 otherwise.\n  Each US CVN provides an additional 1 Air Point per carrier that is in an At Sea Box or Contested Inshore Box."
+    },
+    {
+      "section": "Master Allied Reinforcement Schedule",
+      "type": "correction",
+      "text": "Change the CW line under Standard Game in \"D\" to \"1st Australian Div (all units), 2 Gurkha, 1 x SAG\""
+    },
+    {
+      "section": "Master Allied Reinforcement Schedule",
+      "type": "correction",
+      "text": "Change the Commonwealth line under Advanced Game in \"D\" to \"1 x F/A-18F, 1 x EA-18G, (1 x TYPH or CF-18) †\" and should also include the 1st Australian Div HQ."
+    },
+    {
+      "section": "Master Allied Reinforcement Schedule",
+      "type": "correction",
+      "text": "The Commonwealth line under Advanced Game in \"E\" should say \"F-35A\"."
+    },
+    {
+      "section": "Master Allied Reinforcement Schedule",
+      "type": "correction",
+      "text": "The Commonwealth line under Advanced Game in \"L\" should say \"F-35B\"."
+    },
+    {
+      "section": "Master Allied Reinforcement Schedule",
+      "type": "correction",
+      "text": "F-16DJs should be CJs"
+    },
+    {
+      "section": "Strategic Display",
+      "type": "clarification",
+      "text": "PRC AWACs Advantage applies in the Tonkin Gulf for all purposes."
+    },
+    {
+      "section": "Strategic Display - Naval ADF Values",
+      "type": "correction",
+      "text": "Replace the Naval ADF Value chart with this one:\nNaval Unit ADF Values\nUnit Type | Values\nUS CVN BG | Det: 8; SAM: 8; AAA: 3\nUS/JPN/RU SAG/AMPH | Det: 7; SAM: 6; AAA: 2\nCW/FR/PRC/UK Any | Det: 6; SAM: 6; AAA: 2\nOther | Det: 5; SAM: 4; AAA: 1"
+    },
+    {
+      "section": "Counters",
+      "type": "clarification",
+      "text": "There is no Philippines Cruise Missile marker. They only get 2, so rotate the counter 90° after the first shot and 180° after the second. (Supplement #3)"
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "There is an extra US F-16 in the counter-mix. Before setting up, randomly choose one and put it back in the box."
+    },
+    {
+      "section": "Counters",
+      "type": "clarification",
+      "text": "There's an extra USAF B-52 in the counter-mix. Burn it, throw it away, or use it. It's your game. I don't use it."
+    },
+    {
+      "section": "Counters",
+      "type": "clarification",
+      "text": "There is also unaccounted for B-1B and B-2A. See above for an optional rule."
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "The F-16DJs should be CJs."
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "The PRC 163/74GA should be a motorized infantry unit type."
+    },
+    {
+      "section": "2.2",
+      "type": "clarification",
+      "text": "2.2 – For the SRV, southwest edge really means the right-hand corner that leads deeper into Vietnam proper, i.e., 3722-4423."
+    },
+    {
+      "section": "2.3",
+      "type": "clarification",
+      "text": "2.3 – Use the underlying terrain for Strikes (but note the DRM for Jungle). Use the \"any Jungle\" row for SOF operations and combat."
+    },
+    {
+      "section": "3.2.2",
+      "type": "clarification",
+      "text": "3.2.2 – PSDF units in Garrison mode may not be placed in enemy occupied or enemy controlled hexes."
+    },
+    {
+      "section": "6.2.3",
+      "type": "clarification",
+      "text": "6.2.3 – This is an unfortunately worded rule. It really means Holding Boxes represented by countries on the Operational Map, as opposed to those that exist only on the Strategic Display. We had an SRV Holding Box on the map at one point. When we removed that because it duplicated the one on the Strategic Display, we forgot to clarify this rule. This rule applies to both the PRC and Vietnam, but not to places like the Philippines, Malayasia, etc."
+    },
+    {
+      "section": "Strategic Display",
+      "type": "clarification",
+      "text": "Indian Ocean and US Holding Boxes – Naval units in these boxes are not eligible targets, nor can they launch Strikes from those boxes."
+    },
+    {
+      "section": "Map",
+      "type": "clarification",
+      "text": "Hex 1505, Yanshan, is Highland."
+    }
+  ]
+}

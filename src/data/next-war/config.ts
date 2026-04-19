@@ -1,5 +1,9 @@
-import type { GameSystemConfig } from "../../types/platform";
+import type { GameSystemConfig, ErrataFile } from "../../types/platform";
 import { taiwanOptionalRules } from "./taiwan/optional-rules";
+
+type ErrataLoader = () => Promise<{ default: ErrataFile }>;
+const errata = (load: () => Promise<unknown>): ErrataLoader =>
+  load as ErrataLoader;
 
 export const nextWarConfig: GameSystemConfig = {
   id: "next-war",
@@ -86,6 +90,7 @@ export const nextWarConfig: GameSystemConfig = {
         rules: () => import("./taiwan/rules.json"),
         sequenceOverlay: () => import("./taiwan/sequence-overlay.json"),
         learnOverlay: () => import("./taiwan/learn-overlay.json"),
+        errata: errata(() => import("./taiwan/errata.json")),
         // oob, advancedRules, advancedSequenceOverlay added once PDFs arrive
       },
     },
@@ -98,6 +103,7 @@ export const nextWarConfig: GameSystemConfig = {
     advancedRules: () => import("./advanced-rules.json"),
     advancedSequence: () => import("./advanced-sequence.json"),
     learn: () => import("./learn.json"),
+    errata: errata(() => import("./errata.json")),
   },
 
   askConfig: {

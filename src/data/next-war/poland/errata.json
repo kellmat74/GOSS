@@ -1,0 +1,365 @@
+{
+  "asOf": "2026-03-27",
+  "entries": [
+    {
+      "section": "General",
+      "type": "correction",
+      "text": "The Developer (back of the box) is Ralph Shelton."
+    },
+    {
+      "section": "General",
+      "type": "correction",
+      "text": "USN and USMC reinforcements have been updated. See new NATO & US Setup and Reinforcement Play Aid in the Support Folder. Ignore the letter codes on USMC units."
+    },
+    {
+      "section": "1.1",
+      "type": "correction",
+      "text": "1.1 – Only a single d10 is provided. Delete the sixth bullet's last line: \"2 (identical) Advanced Game Player Aid cards\""
+    },
+    {
+      "section": "5.6.4.1",
+      "type": "clarification",
+      "text": "5.6.4.1 – The last sentence is referring to clearing mines in the North Sea/Bornholm Basin connection."
+    },
+    {
+      "section": "6.2",
+      "type": "correction",
+      "text": "6.2 - the first sentence in the third paragraph of 6.2 should read: \"Enemy-controlled, Neutral (Gotland), or Contested Land Areas can...\""
+    },
+    {
+      "section": "13.2",
+      "type": "correction",
+      "text": "13.2 – Remove the last sentence in the first paragraph which references Series Rules 22.5."
+    },
+    {
+      "section": "13.6",
+      "type": "correction",
+      "text": "13.6 & 7 – These sections should be marked \"[Advanced Game]\"."
+    },
+    {
+      "section": "13.7.1",
+      "type": "correction",
+      "text": "13.7.1 - An S-400 on the Operational Map also covers any Land Area adjacent to the Southern Baltic and/or Kaliningrad. (Note this applies to the table on the back of the rules as well.)"
+    },
+    {
+      "section": "14.4",
+      "type": "correction",
+      "text": "14.4 – When using Nuclear Weapons against Naval Units (i.e., in an At Sea/Inshore Box), the marker may be placed only on a single Point Detected Naval Unit. If it is \"full yield\", the Naval Unit is eliminated. Any other result has no effect. If a CVN is eliminated, remove a CAW at the end of the turn."
+    },
+    {
+      "section": "16.8",
+      "type": "addition",
+      "text": "16.8 – Add Suduva to the list of areas which may be chosen in either the Standard or Advanced Game."
+    },
+    {
+      "section": "16.8",
+      "type": "correction",
+      "text": "16.8 – The HQ may be placed in lieu or in addition to the three units."
+    },
+    {
+      "section": "17.1.1",
+      "type": "correction",
+      "text": "17.1.1 – The reference to the Land Area should be 6.7.3 rather than 5.6.6"
+    },
+    {
+      "section": "17.1.2",
+      "type": "correction",
+      "text": "17.1.2 – Replace the Russian setup information with the following: 76 Gds [2 units], 7 AA [2 units], 98 Abn [2 units], 1 GT/WMD, 7GT/WMD, 27/WMD, 79 Rocket Artillery/WMD, 25/6, 138/6, 200 Gds/6, 238 Gds/6, 6 Army Artillery, 6/20 Gds, 9/20 Gds, 5 Gds/20 Gds, 20 Gds Army Artillery, 2 Gds Division/20 Gds [2 units], 4 GT Division/20 Gds [2 units], 1 x Mi-24 in either the Russia or Belarus Land Areas."
+    },
+    {
+      "section": "17.1.3",
+      "type": "correction",
+      "text": "17.1.3 – For Scenario Special Rule #7, the Air Point values are reversed. Switch the Allied and Non-Allied columns."
+    },
+    {
+      "section": "17.1.5",
+      "type": "correction",
+      "text": "17.1.5 – The US and NATO Replacements are missing: US Replacements: GT1 = 1/ GT2 = 2/ GT3 = 3/ GT4+ = 1; NATO Replacements: GT1 = 0/GT2-3 = 2/ GT4+ = 1"
+    },
+    {
+      "section": "18.2.1",
+      "type": "addition",
+      "text": "18.2.1 – Add an entry to Spain: 1 x Typhoon"
+    },
+    {
+      "section": "18.2.3",
+      "type": "correction",
+      "text": "18.2.3 – Change the MiG-31 entry to: 5 x MiG-31 (3x-1, 2x0)"
+    },
+    {
+      "section": "Advanced Game Scenarios",
+      "type": "correction",
+      "text": "Advanced Game Scenarios – when setting up NATO air units, use the following to simulate surprise conditions: Strategic Surprise - Baltic Air Policing; half of other US & Polish (Round up) in Ready; all others in Flown. Tactical Surprise - Baltic Air Policing and Polish in Ready; half of all others in Ready (round up); others in Flown. Extended Buildup - Baltic Air Policing; Polish, US, and half of all others in Ready (round up); others in Flown. In all cases, choose the aircraft randomly."
+    },
+    {
+      "section": "CRT",
+      "type": "addition",
+      "text": "CRT – Add \"DE\" to the list in the note for the \"+1 for combined attacks by different nationalities\""
+    },
+    {
+      "section": "Standard and Advanced Game Tables",
+      "type": "correction",
+      "text": "STANDARD AND ADVANCED GAME TABLES – For Sea Control, ignore the Poland Land Area for the Game Specific At Sea DRMs."
+    },
+    {
+      "section": "17.2.3.3",
+      "type": "addition",
+      "text": "NATO & US SETUP AND REINFORCEMENT – Add to 17.2.3.3 – If not otherwise specified, Naval unit reinforcements arrive in the North Sea."
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "Refugees and Border Guards – The rules references are reversed on these counters. Border Guards should be 5.1 and Refugees should be 16.3."
+    },
+    {
+      "section": "Strategic Display",
+      "type": "correction",
+      "text": "The Exception below the Air Defense Track should read: \"AAA may only be attacked by one Air Strike.\" Ignore the reference to Cruise Missiles."
+    },
+    {
+      "section": "Counters",
+      "type": "clarification",
+      "text": "GSR 1.2.3, ROK F-35 replacements say Next War: Taiwan. While correct, they replace the ROK F-35s in Next War: Korea."
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "We did not provide enough USN F-35C for all previous games. Two F-35C [-2] are missing. When playing, use the other replacement counters as necessary. The next game and/or Supplement will have them. Replace counters as follows: NWK - 2 x B-1B, 6 x F-16D (2 x -2, 2 x -1, 2 x 0), 2 x F-35A (-2, -1), 3 x F-35C (2 x -2, 1 x -1), 1 x F-35B, 1 x CW JSF; NWT - 2 x B-1B, 6 x F-16D (2 x -2, 2 x -1, 2 x 0), 2 x F-35A (-2, -1), 3 x F-35C (2 x -2, 1 x -1), 1 x F-35B, 2 ROK F-35A (technically, these were for NWK), 1 x CW JSF; NWIP - 6 x F-16D (2 x -2, 2 x -1, 2 x 0), 2 x F-35A (-2, -1), 2 x F-35C (-2, -1), 1 x F-35B"
+    },
+    {
+      "section": "Counters",
+      "type": "clarification",
+      "text": "The IT Friuli airmobile unit is identified as a regiment (because it is the 66th Airmobile Infantry Regiment), however, it is a battalion in size. Treat it as a battalion in all respects."
+    },
+    {
+      "section": "GSR 6.1.1",
+      "type": "clarification",
+      "text": "GSR 6.1.1 & 6.6 & 6.6.4 – Per 6.1.1, the Ports in Kaliningrad (and Poland) on the Strategic Display are representative of the actual Ports on the Operational Map. Control of them follows normal hex control rules. So, if at least one Port on the Op Map is functional (and controlled), the Port on the Strategic Display can used for Sea Control. If the Allies take control of 3101, they control the Land Area. Unless the Allied player had already conducted Clearing Operations in the Ports on the Op Map, they would remain under non-Allied control, and the non-Allied player would be able to use the DRM on the Strategic Display. If the non-Allied player only had control of one of the Ports and the Allied player controlled the other (from a Clearing Operation), BOTH players could use the DRM on the Strategic Display (note that these would cancel each other out). If the Allied player controlled both Ports (via Clearing Operations), then the Allied player would get to use the DRM. And, yes, if the non-Allied player manages to get a unit into one of the Ports in Kaliningrad, it would automatically revert to non-Allied control (as normal because it's on the Op Map per Series Rule 8.4.1.6)."
+    },
+    {
+      "section": "6.2",
+      "type": "clarification",
+      "text": "6.2 – Poland is not a \"Land Area\" for the purposes of the Airmobile Movement described in this rule. Always use the Strategic to Operational Transition (or vice versa) rules for Poland found in 6.7.1."
+    },
+    {
+      "section": "6.6",
+      "type": "clarification",
+      "text": "6.6 – Land Areas are also Contested when under a Clearing Marker."
+    },
+    {
+      "section": "GSR 10.2",
+      "type": "clarification",
+      "text": "GSR 10.2 – NATO units may use hexes on the south edge of the map. Assume there's a friendly controlled Land Area there."
+    },
+    {
+      "section": "GSR 13.7",
+      "type": "clarification",
+      "text": "GSR 13.7 S-400s – These rules affect the Advanced Game Air Defense Resolution Chart where applicable, i.e., Poland isn't a \"friendly\" country for Allied Airmobile or Air Transport, etc."
+    },
+    {
+      "section": "GSR 16.8",
+      "type": "clarification",
+      "text": "GSR 16.8 – If the non-Allied player chooses this option, then these units should be set up prior to the Allied setup. In addition, in the Advanced Game, you may place the appropriate HQ with any of the units either as one of the three or in addition to them."
+    },
+    {
+      "section": "GSR 16.12",
+      "type": "clarification",
+      "text": "GSR 16.12 Pre-Positioned Equipment – The ABCT which is chosen will, of course, reduce the number, by one, drawn randomly via the US Reinforcement Schedule."
+    },
+    {
+      "section": "GSR 17.4",
+      "type": "clarification",
+      "text": "GSR 17.4 Strategic Surprise – 2 Gds Army HQ and 201st Division (HQ + 2 units) are At Start units. The 8 units marked \"CMD\" in the upper right are reinforcements."
+    },
+    {
+      "section": "Polish Reinforcements",
+      "type": "clarification",
+      "text": "Polish Reinforcements – Those reinforcements listed as arriving by Airmobile Movement would trace from the southern map edge (and must trace from an Airbase/Airfield to the map edge and back)."
+    },
+    {
+      "section": "Baltic Reinforcements",
+      "type": "clarification",
+      "text": "Baltic Reinforcements – If a unit is drawn, and the Flagged Land Area is enemy controlled, remove the counter from the game. No VP is scored for this. Draw again."
+    },
+    {
+      "section": "Attack Helicopter Rebasing from Lithuania",
+      "type": "clarification",
+      "text": "Attack Helicopter Rebasing from Lithuania - Since Rebasing uses doubled range, any Attack Helicopter based in Vilnius or Aukstaitija to Rebase as if it were in Suduva, i.e., enter the Poland map on the corresponding Suduva edge having spent 7 MPs. For those based in Zemaitija, they may enter the north edge of the map having spent 7 MPs."
+    },
+    {
+      "section": "Subordination",
+      "type": "clarification",
+      "text": "Subordination – The Russian 41st and 58th Army HQs are army HQs. They are only subordinate to the GFMC HQ. Independent units (whit unit type) can trace to any HQ (even the 41st and 58th)."
+    },
+    {
+      "section": "Amphibious Assaults into Land Areas",
+      "type": "clarification",
+      "text": "Amphibious Assaults into Land Areas – When attempting such assaults into Land Areas, if the defenders incur a Retreat result or are eliminated, the assault force advances after combat into the Land Area. Otherwise, the assault force takes an extra step loss and returns to its AMPHs."
+    },
+    {
+      "section": "Advanced Game Tables",
+      "type": "correction",
+      "text": "2nd EDITION ERRATA – ADVANCED GAME TABLES – Under Theater Weapon Targets, remove \"Artillery\" from the Cruise Missile line and add \"detected Artillery\" to the Ballistic Missile line."
+    },
+    {
+      "section": "17.2.4.1",
+      "type": "correction",
+      "text": "17.2.4.1 – \"2 ACR\" should be \"2 CR\""
+    },
+    {
+      "section": "NATO & US Setup",
+      "type": "correction",
+      "text": "US Reinforcement Schedule – Remove USN-1 x SAG from Line I Advanced Game. Change line Q to 1 x USA BCT (random)."
+    },
+    {
+      "section": "TOC",
+      "type": "correction",
+      "text": "TOC – 10.0 should be Isolation and 11.0 should be Supply"
+    },
+    {
+      "section": "GSR 3.4",
+      "type": "addition",
+      "text": "GSR 3.4 - *add* - Russian SAGs: Eliminated Russian SAGs are removed from the game, i.e., not placed on the Game Turn Track to return as a reinforcement."
+    },
+    {
+      "section": "GSR 5.4",
+      "type": "correction",
+      "text": "GSR 5.4 – Remove the line that starts \"GSR 3.1 contains…\". 3.1 no longer contains that information. Refer to the Unit Identification Chart (or use common sense)."
+    },
+    {
+      "section": "GSR 5.6.2",
+      "type": "correction",
+      "text": "GSR 5.6.2 – For Sea Control rolls in an Inshore Box, if two At Sea Boxes contain the Inshore Box and have differing Control statuses, use the one that would cause a Control roll."
+    },
+    {
+      "section": "GSR 6.7",
+      "type": "correction",
+      "text": "GSR 6.7 – Remove Kaliningrad and southernmost Lithuania (Sūduva) from the first sentence."
+    },
+    {
+      "section": "GSR 8.2",
+      "type": "addition",
+      "text": "GSR 8.2 – Add to end: Units entering via Paradrop are subject to ADF. Aborted units may attempt \"reinforcement\" in a subsequent turn as if entering that turn."
+    },
+    {
+      "section": "GSR 8.3.2",
+      "type": "correction",
+      "text": "GSR 8.3.2 – the rules reference should be to 16.17 (not 16.13)."
+    },
+    {
+      "section": "GSR 11.1.1",
+      "type": "correction",
+      "text": "GSR 11.1.1 - the port cannot be in an enemy ZOC to be used as a supply source."
+    },
+    {
+      "section": "GSR 13.7",
+      "type": "correction",
+      "text": "GSR 13.7 – change \"While both are operating\" to \"While they are operating\""
+    },
+    {
+      "section": "GSR 16.8",
+      "type": "correction",
+      "text": "GSR 16.8, 2nd para, 2nd sentence: \"If Sūduva and/or Aukštaitija are chosen, mark all Towns and Cities as non-Allied Controlled.\""
+    },
+    {
+      "section": "GSR 17.1.1",
+      "type": "correction",
+      "text": "GSR 17.1.1: Change after setup non-Allied step reduction to one armored and two mechanized infantry brigades. Delete SSR #8. Ignore the GSR 8.2 requirement for some level of Air Superiority for Allied Airmobile reinforcements. Add a non-Allied Control marker to 4105."
+    },
+    {
+      "section": "GSR 17.1.2",
+      "type": "correction",
+      "text": "GSR 17.1.2 – the SBCT/ABCT reference should be to 30.1 in the accompanying rules or 2.8.1 in the latest rules."
+    },
+    {
+      "section": "GSR 17.1.4",
+      "type": "correction",
+      "text": "GSR 17.1.4 – change after setup non-Allied step reduction to one armored and two mechanized/motorized infantry brigades."
+    },
+    {
+      "section": "GSR 17.1.5",
+      "type": "correction",
+      "text": "GSR 17.1.5 – US 2CR starts in Germany."
+    },
+    {
+      "section": "GSR 17.5",
+      "type": "correction",
+      "text": "GSR 17.5 & 17.6 - Remove the reference in the Polish setup the 2 Corps HQ."
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "237/2 Gds should be 1GT/2 Gds – [no real effect on play as the unit type is correct] (2023 Errata Counters)"
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "Russian Paradrop Limit counter should say \"3\" not \"6\" (2023 Errata Counters)"
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "US 2 CR should not have \"J\" in the upper right corner (2023 Errata Counters)"
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "The USMC AH-1Z should have a reduced side. (2024 Errata Counters)"
+    },
+    {
+      "section": "Counters",
+      "type": "removal",
+      "text": "Remove the 1 and 2 Latvian battalions (they were replaced by the 1 Mech Inf brigade)"
+    },
+    {
+      "section": "GSR 3.3",
+      "type": "clarification",
+      "text": "GSR 3.3 – The text refers to the Russians as \"Motorized\" (because they have orange movement values). Their icons are Mechanized."
+    },
+    {
+      "section": "GSR 17.1.1",
+      "type": "clarification",
+      "text": "GSR 17.1.1 – The scenario's Allied reinforcement instructions regarding Air Transport override both GSR 8.2 and SSR #8."
+    },
+    {
+      "section": "17.1.4",
+      "type": "clarification",
+      "text": "Per 17.1.4, the following are Restricted Waters: Bornholm Basin, Southern Baltic, Northern Baltic, Gulf of Finland, and all associated Inshore Boxes and All-sea hexes."
+    },
+    {
+      "section": "GSR 17.1.6",
+      "type": "clarification",
+      "text": "GSR 17.1.6 – The Play Area is the Expansion Map. Units set up outside the Play Area and can enter it per the rules. The Russian Mi-24 can continue to base in and operate from the Belarus Land Area."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "The Poland, Kaliningrad, and Sūduva Land Areas can't be entered on the Strategic Display as they are represented fully on the Operational Map."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "Units can retreat from the Operational Map into a Land Area if the latter allows entry. Treat it as a hex (although it absorbs all hexes of retreat if more than one is required). Applies also to Advance After Combat."
+    },
+    {
+      "section": "General",
+      "type": "clarification",
+      "text": "When necessary, the following describes which all-sea hexes are associated with which Inshore Box: The Poland Inshore Box would be hexrow 25xx and west; the Kaliningrad Inshore Box would be 26xx and east."
+    },
+    {
+      "section": "GSR 6.4",
+      "type": "clarification",
+      "text": "As implied in GSR 6.4 and 6.5.1, Land Areas are Rough Woods for all purposes."
+    },
+    {
+      "section": "GSR 2.2",
+      "type": "clarification",
+      "text": "The south edge of the expansion map is a friendly map edge. [GSR 2.2/11.1], i.e., it's just a continuation of the east map edge"
+    },
+    {
+      "section": "Swedish SAGs",
+      "type": "clarification",
+      "text": "Swedish SAGs – Both Supplement #2 and #3 contained a Swedish SAG. Only one should be used in NWP2E."
+    }
+  ]
+}

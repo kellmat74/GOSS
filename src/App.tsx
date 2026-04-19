@@ -141,6 +141,8 @@ interface GameData {
   moduleRules: RuleEntry[];
   moduleOverlay: SequenceOverlay | null;
   moduleLearnOverlay: LearnOverlay | null;
+  baseErrata: import("./types/platform").ErrataFile | null;
+  moduleErrata: import("./types/platform").ErrataFile | null;
 }
 
 const EMPTY_LEARN: LearnData = { chapters: [] };
@@ -193,11 +195,15 @@ function useGameData(
         : (moduleConfig?.data.sequenceOverlay ? moduleConfig.data.sequenceOverlay() : Promise.resolve(null)),
       // Module learn overlay
       moduleConfig?.data.learnOverlay ? moduleConfig.data.learnOverlay() : Promise.resolve(null),
+      // Errata
+      gameConfig.baseData.errata ? gameConfig.baseData.errata() : Promise.resolve(null),
+      moduleConfig?.data.errata ? moduleConfig.data.errata() : Promise.resolve(null),
     ]).then((results) => {
       if (cancelled) return;
       const [
         baseRulesRaw, advRulesRaw, seqRaw, learnRaw,
         modRulesRaw, modAdvRulesRaw, overlayRaw, learnOverlayRaw,
+        baseErrataRaw, moduleErrataRaw,
       ] = results;
 
       const baseRules: RuleEntry[] = [
@@ -217,7 +223,10 @@ function useGameData(
       const moduleLearnOverlay: LearnOverlay | null =
         (learnOverlayRaw as any)?.default ?? null;
 
-      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay });
+      const baseErrata = (baseErrataRaw as any)?.default ?? null;
+      const moduleErrata = (moduleErrataRaw as any)?.default ?? null;
+
+      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata });
       setLoading(false);
     }).catch((err) => {
       if (!cancelled) {
@@ -330,7 +339,7 @@ function App() {
 
   return (
     <GlossaryProvider>
-    <RulesProvider rules={allRules}>
+    <RulesProvider rules={allRules} baseErrata={data?.baseErrata} moduleErrata={data?.moduleErrata}>
       <AppShell
         sidebar={sidebar}
         gameSelector={

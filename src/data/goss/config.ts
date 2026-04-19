@@ -1,4 +1,8 @@
-import type { GameSystemConfig } from "../../types/platform";
+import type { GameSystemConfig, ErrataFile } from "../../types/platform";
+
+type ErrataLoader = () => Promise<{ default: ErrataFile }>;
+const errata = (load: () => Promise<unknown>): ErrataLoader =>
+  load as ErrataLoader;
 
 export const gossConfig: GameSystemConfig = {
   id: "goss",
@@ -101,6 +105,7 @@ export const gossConfig: GameSystemConfig = {
     sequence: () => import("./sequence.json"),
     quickRef: () => import("./quick-ref.json"),
     learn: () => import("./learn.json"),
+    errata: errata(() => import("./errata.json")),
   },
   askConfig: {
     workerUrl: "https://goss-ask-proxy.kellmat.workers.dev",

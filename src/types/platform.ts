@@ -1,3 +1,21 @@
+/** A single errata entry targeting a specific rule section. */
+export interface ErrataEntry {
+  section: string;       // rule section this corrects, e.g. "6.5.5"
+  type: "correction" | "clarification" | "addition" | "removal";
+  text: string;          // the errata text (summary or full replacement)
+  edition?: string;      // which edition introduced this entry, e.g. "1st", "2nd"
+}
+
+/**
+ * A compiled errata file covering all changes up to `asOf`.
+ * All entries carry the same date — when a new file ships, bump asOf
+ * so players know something changed since they last checked.
+ */
+export interface ErrataFile {
+  asOf: string;          // ISO date of this file version, e.g. "2026-03-27"
+  entries: ErrataEntry[];
+}
+
 export interface ScenarioDef {
   id: string;
   label: string;
@@ -44,6 +62,8 @@ export interface ModuleConfig {
   /** Module-specific optional rules (e.g. Taiwan GSR §17). Merged with base optionalRules. */
   optionalRules?: OptionalRuleEntry[];
   data: {
+    /** Module-specific errata (e.g. Taiwan GSR corrections) */
+    errata?: () => Promise<{ default: ErrataFile }>;
     rules: () => Promise<{ default: unknown }>;
     sequenceOverlay?: () => Promise<{ default: unknown }>;
     oob?: () => Promise<{ default: unknown }>;
@@ -93,6 +113,8 @@ export interface GameSystemConfig {
     advancedSequence?: () => Promise<{ default: unknown }>;
     /** Advanced Game learn content (replaces/augments base learn when complexity === "advanced") */
     advancedLearn?: () => Promise<{ default: unknown }>;
+    /** Series-wide errata (applies to all modules of this game) */
+    errata?: () => Promise<{ default: ErrataFile }>;
   };
 
   askConfig: {

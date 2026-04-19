@@ -8,6 +8,7 @@ interface RulesSearchProps {
 }
 
 export function RulesSearch({ rules }: RulesSearchProps) {
+  const { sectionsWithErrata } = useRules();
   const [query, setQuery] = useState("");
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const { openRule } = useRules();
@@ -80,7 +81,7 @@ export function RulesSearch({ rules }: RulesSearchProps) {
         ) : (
           <ul className="space-y-1">
             {filtered.map((rule) => (
-              <RuleRow key={rule.id} rule={rule} onOpen={openRule} />
+              <RuleRow key={rule.id} rule={rule} onOpen={openRule} hasErrata={sectionsWithErrata.has(rule.section.toLowerCase())} />
             ))}
           </ul>
         )
@@ -95,6 +96,7 @@ export function RulesSearch({ rules }: RulesSearchProps) {
               expanded={expanded}
               onToggle={toggleExpand}
               onOpen={openRule}
+              sectionsWithErrata={sectionsWithErrata}
             />
           ))}
         </ul>
@@ -107,9 +109,11 @@ export function RulesSearch({ rules }: RulesSearchProps) {
 function RuleRow({
   rule,
   onOpen,
+  hasErrata = false,
 }: {
   rule: RuleEntry;
   onOpen: (section: string) => void;
+  hasErrata?: boolean;
 }) {
   return (
     <li className="rounded-lg border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-800">
@@ -128,6 +132,9 @@ function RuleRow({
         <div className="min-w-0 flex-1">
           <span className="font-medium">{rule.title}</span>
         </div>
+        {hasErrata && (
+          <span className="shrink-0 h-2 w-2 rounded-full bg-amber-400" title="Has errata" />
+        )}
         {rule.crossRefs.length > 0 && (
           <span className="shrink-0 text-xs text-stone-500">
             {rule.crossRefs.length} refs
@@ -145,16 +152,19 @@ function TreeRow({
   expanded,
   onToggle,
   onOpen,
+  sectionsWithErrata,
 }: {
   node: TreeNode;
   depth: number;
   expanded: Set<string>;
   onToggle: (section: string) => void;
   onOpen: (section: string) => void;
+  sectionsWithErrata: Set<string>;
 }) {
   const hasChildren = node.children.length > 0;
   const isExpanded = expanded.has(node.rule.section);
   const indent = depth === 0 ? "" : depth === 1 ? "ml-4" : "ml-8";
+  const hasErrata = sectionsWithErrata.has(node.rule.section.toLowerCase());
 
   return (
     <>
@@ -193,6 +203,9 @@ function TreeRow({
             <div className="min-w-0 flex-1">
               <span className="font-medium">{node.rule.title}</span>
             </div>
+            {hasErrata && (
+              <span className="shrink-0 h-2 w-2 rounded-full bg-amber-400" title="Has errata" />
+            )}
             {hasChildren && (
               <span className="shrink-0 text-xs text-stone-400">
                 {node.children.length}
@@ -212,6 +225,7 @@ function TreeRow({
             expanded={expanded}
             onToggle={onToggle}
             onOpen={onOpen}
+            sectionsWithErrata={sectionsWithErrata}
           />
         ))}
     </>

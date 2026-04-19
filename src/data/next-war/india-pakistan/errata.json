@@ -1,0 +1,45 @@
+{
+  "asOf": "2026-03-27",
+  "entries": [
+    {
+      "section": "2.5",
+      "type": "correction",
+      "text": "2.5 High Mountains – ALL Strikes incur a -2 DRM; not just Air Strikes."
+    },
+    {
+      "section": "3.6",
+      "type": "correction",
+      "text": "3.6 Mountain Infantry – ignore bullet #1 – this has been superseded by showing movement on newer TECs"
+    },
+    {
+      "section": "14.2.2",
+      "type": "correction",
+      "text": "14.2.2 Ballistic Missile Allocation – Players should alternate non-Allied first, as per the SOP."
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "The PRC J-31 air unit which is marked as a replacement for Next War: Taiwan should, instead, be used in this game. When playing NWT, use the J-31 counter from NWIP in that game."
+    },
+    {
+      "section": "Counters",
+      "type": "correction",
+      "text": "The Pakistani JF-17 with M range should be S range like the other two."
+    },
+    {
+      "section": "Ground Unit Bridge Destruction",
+      "type": "correction",
+      "text": "The results should be reversed. Rolls of 6 or less result in Destruction. Rolls of 7 or more are No Effect."
+    },
+    {
+      "section": "Advanced Detection Chart",
+      "type": "addition",
+      "text": "Advanced Detection Chart – add \"+3: Weather is Storm\" to the list of DRMs"
+    },
+    {
+      "section": "Advanced Game Air Defense Resolution Chart",
+      "type": "correction",
+      "text": "Advanced Game Air Defense Resolution Chart on the back of the NWIP GSR is in error with respect to the \"Attack Helicopter Strike or Combat Support/Airmobile Movement\" line.  Replace the \"All\" in the Location/Target area with \"Inside Enemy country or within two hexes of an enemy unit\""
+    }
+  ]
+}
