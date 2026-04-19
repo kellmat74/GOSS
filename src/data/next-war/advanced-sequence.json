@@ -40,7 +40,7 @@
       "timing": "every-turn",
       "player": "both",
       "description": "Initiative Turn Only. The Initiative Player allocates and resolves SOF missions.",
-      "content": "*(Initiative Turn Only)*\n\n1. The Initiative Player allocates and resolves SOF missions, rolls for SOF Marker Survival, and places markers in the Used or Eliminated boxes appropriately. **(20.1.2 \u2013 20.2.4)**",
+      "content": "*(Initiative Turn Only)*\n\n1. The Initiative Player allocates and resolves SOF missions, rolls for SOF Marker Survival, and places markers in the Used or Eliminated boxes appropriately. **(20.1.2 – 20.2.4)**",
       "notes": [],
       "subPhases": []
     },
@@ -53,7 +53,10 @@
       "description": "Conduct Air Superiority Sortie and Combat Resolution steps, determine Air Superiority level, check for At Sea Box and Mine Clearance.",
       "content": "1. **Air Superiority Sortie Step** (do not apply a, b, and c to Basing Boxes under Lack of Runways).\n   a. The owning player must move half the number (rounded down to a minimum of 1) of air units into the Flown box for air units based in a Basing Box, equal to the number of Airbases/Airfields with Strike 1 and 2 markers on them (not Under Repair). **(22.6.1)**\n   b. The opposing player moves half the number (rounded down to a minimum of 1) of air units into the Flown box from air units based in a Basing Box **(22.6.1)** equal to the number of Airbases/Airfields captured or destroyed in the previous turn and this turn's First SOF Phase.\n   c. Reset each side's Airbase Destroyed/Captured This Turn markers to 0.\n   d. Both players place air units in the Air Superiority Box; player with AWACs Advantage last. **(22.6.1)**\n2. **Air Superiority Combat Resolution Step.** **(22.6.2)**\n3. Determine this Turn's Air Superiority level. **(22.6.2 #5)**\n4. Update AWACS Advantage. **(22.6.2 #6)**\n5. During non-\"Storm\" turns, check for control of each Inshore Box associated with a controlled At Sea Box. **(7.2.1/7.2.2)**\n6. During non-\"Storm\" turns, check for control of eligible At Sea Boxes. **(7.2.1/7.2.2)**\n7. Both sides roll for Detection for all Naval units not in Port (not on GT 1).\n8. During non-Storm turns, both sides can attempt Mine Clearance on two separate Mine markers. **(7.5.2)** (not on GT1).",
       "notes": [],
-      "subPhases": []
+      "subPhases": [],
+      "tableRefs": [
+        "sea-control"
+      ]
     },
     {
       "id": "second-sof-phase",
@@ -62,7 +65,7 @@
       "timing": "every-turn",
       "player": "both",
       "description": "If a Contested Turn, both players alternately allocate SOF Missions. Otherwise, the non-Initiative player allocates SOF Missions.",
-      "content": "1. If a \"Contested\" Turn, both players alternating (non-Allied first), or else, the non-Initiative player, allocates SOF Missions, resolves missions, rolls for SOF Marker Survival, and places markers in the Used or Eliminated boxes appropriately. **(20.1.2 \u2013 20.2.4)**",
+      "content": "1. If a \"Contested\" Turn, both players alternating (non-Allied first), or else, the non-Initiative player, allocates SOF Missions, resolves missions, rolls for SOF Marker Survival, and places markers in the Used or Eliminated boxes appropriately. **(20.1.2 – 20.2.4)**",
       "notes": [],
       "subPhases": []
     },
