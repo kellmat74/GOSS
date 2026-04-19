@@ -55,7 +55,11 @@
       "notes": [],
       "subPhases": [],
       "tableRefs": [
-        "sea-control"
+        "sea-control",
+        "air-points",
+        "air-defense-fire",
+        "mine-clearing",
+        "contested-sea-movement"
       ]
     },
     {
@@ -172,7 +176,10 @@
       "notes": [
         "\\*\\* Subject to unit type restrictions (see GSR)."
       ],
-      "subPhases": []
+      "subPhases": [],
+      "tableRefs": [
+        "replacement-reconstitution"
+      ]
     },
     {
       "id": "victory-determination-phase",

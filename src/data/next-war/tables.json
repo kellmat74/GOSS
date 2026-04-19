@@ -71,5 +71,260 @@
         ]
       }
     ]
+  },
+
+  "air-points": {
+    "id": "air-points",
+    "title": "Air Points",
+    "ruleRef": "6.1",
+    "scope": "series",
+    "type": "lookup",
+    "rows": [
+      { "roll": "≤0", "result": "Turn 1: 20/8 · Turn 2: 20/13 · Turn 3: 18/14 · Turn 4: 16/14 · Turn 5: 14/15 · Turn 6: 14/16 · Turn 7–9: 13/21 · Turn ≥10: 12/26" },
+      { "roll": "1",  "result": "Turn 1: 18/7 · Turn 2: 18/12 · Turn 3: 18/13 · Turn 4: 16/14 · Turn 5: 14/14 · Turn 6: 14/15 · Turn 7–9: 12/19 · Turn ≥10: 10/23" },
+      { "roll": "2",  "result": "Turn 1: 16/6 · Turn 2: 16/11 · Turn 3: 16/12 · Turn 4: 14/12 · Turn 5: 14/12 · Turn 6: 14/14 · Turn 7–9: 10/17 · Turn ≥10: 9/20" },
+      { "roll": "3",  "result": "Turn 1: 14/5 · Turn 2: 14/10 · Turn 3: 14/11 · Turn 4: 12/12 · Turn 5: 12/12 · Turn 6: 12/13 · Turn 7–9: 10/15 · Turn ≥10: 8/18" },
+      { "roll": "4",  "result": "Turn 1: 12/4 · Turn 2: 12/9 · Turn 3: 12/10 · Turn 4: 12/10 · Turn 5: 10/11 · Turn 6: 11/12 · Turn 7–9: 10/14 · Turn ≥10: 7/16" },
+      { "roll": "5",  "result": "Turn 1: 12/2 · Turn 2: 12/8 · Turn 3: 12/9 · Turn 4: 12/10 · Turn 5: 10/10 · Turn 6: 10/11 · Turn 7–9: 10/13 · Turn ≥10: 6/14" },
+      { "roll": "6",  "result": "Turn 1: 10/3 · Turn 2: 10/7 · Turn 3: 10/8 · Turn 4: 10/9 · Turn 5: 10/9 · Turn 6: 10/10 · Turn 7–9: 8/11 · Turn ≥10: 5/13" },
+      { "roll": "7",  "result": "Turn 1: 10/2 · Turn 2: 10/6 · Turn 3: 10/7 · Turn 4: 10/8 · Turn 5: 8/8 · Turn 6: 8/9 · Turn 7–9: 7/10 · Turn ≥10: 4/12" },
+      { "roll": "8",  "result": "Turn 1: 8/1 · Turn 2: 8/5 · Turn 3: 8/6 · Turn 4: 8/7 · Turn 5: 7/7 · Turn 6: 6/8 · Turn 7–9: 6/9 · Turn ≥10: 3/10" },
+      { "roll": "≥9", "result": "Turn 1: 6/0 · Turn 2: 6/4 · Turn 3: 6/5 · Turn 4: 6/6 · Turn 5: 6/6 · Turn 6: 6/6 · Turn 7–9: 5/7 · Turn ≥10: 2/9" }
+    ],
+    "drmGroups": [
+      {
+        "drms": [
+          { "mod": "+1", "condition": "Per enemy-controlled Airbase (not Airfield)" }
+        ]
+      },
+      {
+        "label": "Carrier Bonuses (add after rolling)",
+        "drms": [
+          { "mod": "+2", "condition": "Per US CVN in friendly Inshore Box or All-Sea hex" },
+          { "mod": "+1", "condition": "Per non-US carrier in friendly Inshore Box or All-Sea hex" },
+          { "mod": "+1", "condition": "Per US CVN in At Sea Box or Contested Inshore Box" },
+          { "mod": "−1", "condition": "Per Air Point permanently lost" }
+        ]
+      }
+    ],
+    "notes": [
+      "Results shown as non-Allied / Allied",
+      "Overcast + Limited All-Weather: ½ Air Points (round up)",
+      "Overcast + No All-Weather: ¼ Air Points (round up)",
+      "Storm + Limited All-Weather: ¼ Air Points (round up)",
+      "Storm + No All-Weather: No Air Points"
+    ]
+  },
+
+  "air-defense-fire": {
+    "id": "air-defense-fire",
+    "title": "Air Defense Fire",
+    "ruleRef": "6.6",
+    "scope": "series",
+    "type": "lookup",
+    "rows": [
+      { "roll": "≤−1", "result": "*Abort (varies by AS level, −1 to −4)" },
+      { "roll": "0",   "result": "*Abort (−1 to −3) or Abort (−1) depending on AS level" },
+      { "roll": "1",   "result": "*Abort (−1 to −2) or Abort (−1) depending on AS level" },
+      { "roll": "2",   "result": "*Abort (−1 to −2) or Abort (−1) or — depending on AS level" },
+      { "roll": "3",   "result": "*Abort (−1) or Abort (−1) or — depending on AS level" },
+      { "roll": "4–6", "result": "Abort (−1) only when firing side has Advantage or better; — otherwise" },
+      { "roll": "7–8", "result": "Abort (−1) only when firing side has Air Supremacy; — otherwise" },
+      { "roll": "≥9",  "result": "— (No effect)" }
+    ],
+    "drmGroups": [
+      {
+        "drms": [
+          { "mod": "+3", "condition": "Air Transport mission in home or friendly country" },
+          { "mod": "−1", "condition": "Per Escort Air Point (max −2 total)" },
+          { "mod": "−1", "condition": "Target hex in or adjacent to enemy Armor/Mech unit" },
+          { "mod": "−1", "condition": "Attack Helo/Airmobile flew over enemy unit (not target hex)" },
+          { "mod": "−2", "condition": "Target within 2 hexes or same Land Area as enemy Airfield, Installation, or Naval Unit" }
+        ]
+      }
+    ],
+    "notes": [
+      "Results: Abort(−#) = # Air Points or Attack Helo CS Points do not support combat; *Abort = abort AND 1 Air/Airmobile Point permanently lost + transported/paradrop unit step loss or Attack Helo step loss",
+      "Combat/Strike Missions: Abort has No Effect on result",
+      "Transport/Rebase Missions: aborted units return to starting hex; Airmobile Points marked as used",
+      "Immune: missions starting and ending in friendly country, not adjacent to enemy ground units, when AS is in your favor or Contested",
+      "See Standard Game Tables play aid for full die roll × Air Superiority matrix"
+    ]
+  },
+
+  "paradrop-airmobile": {
+    "id": "paradrop-airmobile",
+    "title": "Paradrop/Airmobile",
+    "ruleRef": "8.5.3",
+    "scope": "series",
+    "type": "lookup",
+    "rows": [
+      { "roll": "≤4", "result": "Success (all terrain)" },
+      { "roll": "5",  "result": "Flat/Flat Woods/Rough-Marsh: Success · Rough Woods: —/S1" },
+      { "roll": "6",  "result": "Flat/Flat Woods: Success · Rough-Marsh: —/S1 · Rough Woods: 1/S1" },
+      { "roll": "7",  "result": "Flat: Success · Flat Woods: —/S1 · Rough-Marsh: 1/S1 · Rough Woods: 1/S1" },
+      { "roll": "8",  "result": "Flat: Success · Flat Woods: 1/S1 · Rough-Marsh: 1/S1 · Rough Woods: 1/S2" },
+      { "roll": "≥9", "result": "Flat: 1/S1 · Flat Woods: 1/S1 · Rough-Marsh: 1/S2 · Rough Woods: 1/S2" }
+    ],
+    "drmGroups": [
+      {
+        "drms": [
+          { "mod": "+1", "condition": "Drop hex is in enemy ZOC" },
+          { "mod": "+2", "condition": "Beach hex (Airmobile movement only) [GSR 5.5.1.e]" }
+        ]
+      }
+    ],
+    "notes": [
+      "Results: — = Successful; 1 = Landing unit loses one step; S1/S2 = Place Strike 1 or 2 marker",
+      "Slash notation (—/S1) shows Standard / Advanced result where they differ",
+      "S1/S2 markers apply to Advanced Game only"
+    ]
+  },
+
+  "bridge-repair": {
+    "id": "bridge-repair",
+    "title": "Bridge Repair & HQ Bridge Construction",
+    "ruleRef": "8.3.4",
+    "scope": "series",
+    "type": "lookup",
+    "rows": [
+      { "roll": "≤6", "result": "Repaired / Constructed" },
+      { "roll": "≥7", "result": "No Effect" }
+    ],
+    "drmGroups": [
+      {
+        "drms": [
+          { "mod": "+1", "condition": "Storm" },
+          { "mod": "+2", "condition": "Enemy unit adjacent to bridge hexside" }
+        ]
+      }
+    ],
+    "notes": [
+      "Standard Game: Friendly adjacent division-sized unit may attempt repair",
+      "Advanced Game: Friendly HQ must be within support range and able to trace LOC of 4 Mot. MPs to bridge [18.2.5]"
+    ]
+  },
+
+  "clearing-operations": {
+    "id": "clearing-operations",
+    "title": "Clearing Operations",
+    "ruleRef": "8.4.1",
+    "scope": "series",
+    "type": "lookup",
+    "rows": [
+      { "roll": "Land Area",                    "result": "Min. 5 Stacking Points" },
+      { "roll": "Urban",                         "result": "Min. 4 Stacking Points" },
+      { "roll": "City",                          "result": "Min. 3 Stacking Points" },
+      { "roll": "Installation / Island Land Area", "result": "Min. 2 Stacking Points" }
+    ],
+    "drmGroups": [
+      {
+        "label": "Clearing Roll DRMs",
+        "drms": [
+          { "mod": "−1", "condition": "Per additional Installation in hex" },
+          { "mod": "−1", "condition": "Clearing from Amphibious Assault" },
+          { "mod": "−1", "condition": "Unit(s) Clearing on turn of Para-drop or Airmobile Movement" },
+          { "mod": "−1", "condition": "Clearing in ROC (including Penghu)" },
+          { "mod": "+1", "condition": "Stack includes Leg + Armor and/or Mech. Inf." },
+          { "mod": "+3", "condition": "Clearing originally friendly location [8.4.1.6]" },
+          { "mod": "+/−x", "condition": "Difference between ER and Clearing Number" },
+          { "mod": "−x",   "condition": "Min. Safe Stacking − actual Stacking Points (if below minimum)" }
+        ]
+      }
+    ],
+    "notes": [
+      "Table shows Minimum Safe Stacking Points required by terrain type",
+      "Clearing succeeds if modified die roll ≥ Clearing Number on the counter/installation"
+    ]
+  },
+
+  "mine-clearing": {
+    "id": "mine-clearing",
+    "title": "Mine Clearing",
+    "ruleRef": "7.5.2",
+    "scope": "series",
+    "type": "lookup",
+    "rows": [
+      { "roll": "≤3", "result": "Reduce Mine Density by one" },
+      { "roll": "≥4", "result": "No Effect" }
+    ],
+    "drmGroups": [
+      {
+        "drms": [
+          { "mod": "−2", "condition": "Friendly Naval unit in Port or area of effect [see NWI 5.5.5.2]" }
+        ]
+      }
+    ],
+    "notes": [
+      "Two attempts allowed on different Mine markers per turn"
+    ]
+  },
+
+  "contested-sea-movement": {
+    "id": "contested-sea-movement",
+    "title": "Contested Sea Movement",
+    "ruleRef": "8.5.6.4.1",
+    "scope": "series",
+    "type": "lookup",
+    "rows": [
+      { "roll": "≤5", "result": "Sea Movement Successful" },
+      { "roll": "6–8", "result": "Standard: Aborted · Advanced: Abort or Strike 1" },
+      { "roll": "≥9", "result": "Standard: Aborted (transported units incur a Step Loss) · Advanced: Abort or Strike 2" }
+    ],
+    "drmGroups": [
+      {
+        "drms": [
+          { "mod": "+/−1", "condition": "Per SAG/CV/CVN (moving or in associated At Sea/Inshore Box)" },
+          { "mod": "+/−1", "condition": "Air Supremacy" },
+          { "mod": "+/−1", "condition": "At least one Inshore Box enemy/friendly controlled (At Sea Box or All-Sea hex only)" },
+          { "mod": "−x",   "condition": "ASW Level (vs. Allied only)" },
+          { "mod": "+x",   "condition": "Submarine Threat Level (Allied only)" },
+          { "mod": "+x",   "condition": "Mine Marker Density" },
+          { "mod": "+x",   "condition": "Beach Defense value (AAZ hex only)" },
+          { "mod": "+1",   "condition": "Island Land Area enemy controlled (always Contested in associated At Sea/Inshore/All-Sea hexes)" },
+          { "mod": "+1",   "condition": "non-Allied Naval A2/AD (vs. Allied only) [Standard Game]" },
+          { "mod": "+1",   "condition": "Player expends Naval SSM capability or point [Advanced Game]" }
+        ]
+      }
+    ]
+  },
+
+  "replacement-reconstitution": {
+    "id": "replacement-reconstitution",
+    "title": "Replacement / Reconstitution",
+    "ruleRef": "11.0",
+    "scope": "series",
+    "type": "lookup",
+    "rows": [
+      { "roll": "Inf / Lt. Inf / Mot. Inf / Artillery", "result": "Step Recovery: Div 1, Bde/Rgt 1 · Reconstitution: Div 2 RP, Bde/Rgt 1 RP" },
+      { "roll": "Arm. Cav. / Recon / Mech. / Arm.",     "result": "Step Recovery: Div 3, Bde/Rgt 2 · Reconstitution: Div 4 RP, Bde/Rgt 2 RP" },
+      { "roll": "Abn. / Marines (any type)",             "result": "Step Recovery: Div 2, Bde/Rgt 2 · Reconstitution: Div N/A, Bde/Rgt 4 RP" },
+      { "roll": "Intrinsic Airmobile",                   "result": "Step Recovery: Bde/Rgt 3 (2 RP + 1 SP) · Reconstitution: Bde/Rgt 4 (3 RP + 1 SP)" },
+      { "roll": "HQ (non-Supreme) *",                    "result": "Step Recovery: 1 SP · Reconstitution: 2 SP + 1 RP" },
+      { "roll": "Supreme HQ *",                          "result": "Step Recovery: 1 SP · Reconstitution: 5 SP + 1 RP" },
+      { "roll": "Air Units / Attack Helos / Airmobile Points *", "result": "Step Recovery: 2 SP · Reconstitution: 2 SP" }
+    ],
+    "notes": [
+      "* Advanced Game only",
+      "Two battalions may be reconstituted for half the RP cost of one brigade (rounded up)",
+      "RP = Replacement Point; SP = Supply Point; N/A = Not Allowed"
+    ]
+  },
+
+  "loss-of-airbase": {
+    "id": "loss-of-airbase",
+    "title": "Loss of Airbase/Airfield",
+    "ruleRef": "6.3.1",
+    "scope": "series",
+    "type": "lookup",
+    "rows": [
+      { "roll": "0",   "result": "Air Points [Std]: Lost · Helo [Std & Adv]: Destroyed" },
+      { "roll": "1–2", "result": "Air Points [Std]: Lost · Helo [Std & Adv]: Step Loss & Rebase" },
+      { "roll": "3–9", "result": "Air Points [Std]: No Effect · Helo [Std & Adv]: Rebase only" }
+    ],
+    "notes": [
+      "Roll on the Air Points row each time an Airbase (only) is captured [Standard Game]",
+      "Roll on the Helo row for each helicopter at an Airbase or Airfield when it is captured"
+    ]
   }
 }

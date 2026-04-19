@@ -377,7 +377,8 @@
     "title": "Air Points",
     "summary": "Air Points represent each side's available air power for the current game turn, determined by rolling against the Air Point Chart.",
     "text": "Each side refers to the current game turn column on the Standard Game Air Point Chart and rolls a die. Weather conditions, Airbase control, permanent losses, and the presence of carriers may modify the die roll. The side's modified die roll indicates how many Air Points it receives that GT. Air Points are determined prior to modifying for weather.",
-    "crossRefs": []
+    "crossRefs": [],
+    "tableRef": "air-points"
   },
   {
     "id": "6.2",
@@ -421,7 +422,8 @@
     "text": "When a player successfully takes Control (8.4) of an Airbase (but not Airfield) hex in the enemy country roll one die. On a roll of \"0-2,\" an enemy Air Point is permanently destroyed. On a roll of \"3-9,\" no Air Points are lost.",
     "crossRefs": [
       "8.4"
-    ]
+    ],
+    "tableRef": "loss-of-airbase"
   },
   {
     "id": "6.3.2",
@@ -523,7 +525,8 @@
       "8.5.2",
       "8.5.3",
       "8.5.4"
-    ]
+    ],
+    "tableRef": "air-defense-fire"
   },
   {
     "id": "6.6.1",
@@ -725,7 +728,8 @@
     "title": "Mine Clearing",
     "summary": "Enemy Mine markers may be cleared during the Mine Clearance Step of the Air/Naval Phase if the Inshore Box is friendly-controlled.",
     "text": "Enemy Mine markers may be cleared during the Mine Clearance Step of the Air/Naval Phase if the associated Inshore Box is friendly-controlled. Each player can attempt to clear up to two separate Mine markers during the Mine Clearance Step. Roll separately for each attempt. On a roll of 0-3, reduce the Mine marker Density by one, i.e., from two to one or remove a one; if removed, it is removed from the game. Modify the die roll by \"–2\" if a friendly Naval Unit is present in the Area of Effect.",
-    "crossRefs": []
+    "crossRefs": [],
+    "tableRef": "mine-clearing"
   },
   {
     "id": "7.5.3",
@@ -990,7 +994,8 @@
     "title": "Bridge Damage and Repair",
     "summary": "Any hexside where a road crosses a river contains a bridge hexside; ground units can damage or repair bridges.",
     "text": "**8.3.4 Bridge Damage and Repair**\n\nAny hexside where a secondary road, primary road, or highway crosses a river hexside of any type is a \"bridge\" hexside. Fortifications have no effect on the use of bridges. A unit is \"adjacent\" to a bridge hexside if the hex it is in contains a hexside where a bridge crosses a river.\n\n**8.3.4.1 Bridge Damage/Destruction:** In the Standard Game, only ground units can damage/destroy bridges.",
-    "crossRefs": []
+    "crossRefs": [],
+    "tableRef": "bridge-repair"
   },
   {
     "id": "8.3.4.1",
@@ -1032,7 +1037,8 @@
     "text": "**8.4.1 Clearing Operations**\n\nFriendly units that move or advance after combat into an enemy-controlled Installation, City, or Urban hex are placed under a randomly drawn face-down Clearing marker. During the appropriate step in the Reorganization Phase, the marker is flipped face up and the operation is resolved [8.4.1.2]. Only combat units can be used in Clearing Operations.\n\n**8.4.1.1 Clearing Operations DRMs:** Use the following DRMs when conducting Clearing Operations.\n\n1. **Efficiency Rating:** Subtract the Clearing Number on the marker from the lead unit's ER and add the difference as a DRM, i.e., if the ER is higher than the Clearing Number, then the DRM is positive; if the ER is lower, then it is a negative DRM.\n2. **Minimum Safe Stacking Points (MSSP):** If the unit/stack does not have at least as many SPs as specified for the type of hex [see Clearing Operations table], use the difference as a negative DRM. Use only the highest MSSP that applies.\n3. **Additional Installations:** When an Urban/City hex contains Installations or an Installation hex contains additional Installations, the Clearing Operation die roll is modified by \"–1\" per additional Installation in the hex.\n\n*Example: An Urban hex with an Airbase incurs a –1 DRM. An Airbase with a Port incurs a –1 DRM.*\n\n4. **Special Assault:** An Airmobile and/or Amphibiously Assaulting and/or Airborne/Paradropping unit/stack that attempts a Clearing Operation in the same turn that the landing occurs incurs an additional \"–1\" modifier.\n5. **Combined Arms:** If a stack of units conducting a Clearing Operation contains a Mechanized Infantry unit or both a Leg and an Armor unit, apply a \"+1\" DRM.\n\nGame Specific Rules may include additional DRMs.",
     "crossRefs": [
       "8.4.1.2"
-    ]
+    ],
+    "tableRef": "clearing-operations"
   },
   {
     "id": "8.4.1.2",
@@ -1169,7 +1175,8 @@
       "6.6",
       "8.2",
       "8.3.1.2"
-    ]
+    ],
+    "tableRef": "paradrop-airmobile"
   },
   {
     "id": "8.5.3.1",
@@ -1299,7 +1306,8 @@
       "7.5.3",
       "8.5.6.3",
       "8.5.7"
-    ]
+    ],
+    "tableRef": "contested-sea-movement"
   },
   {
     "id": "8.5.6.5",
@@ -1869,7 +1877,8 @@
     "title": "Replacements",
     "summary": "Each side receives Replacement Points during the game to replace lost steps or reconstitute eliminated units.",
     "text": "**11.0 Replacements**\n\nEach side receives a certain number of Replacement Points during the game. These points are received during the Reinforcement/Replacement Phase of each game turn as dictated by the scenario. These points are listed by nationality and can only be used to replace or reconstitute units of the same nationality. Replacement Points may be spent immediately or saved and accumulated from turn to turn. Players should move the Replacement Points marker on the Game Record Track to record the current number of Replacement Points. Replacement Points can be used to recover lost steps from reduced strength units on the map or to reconstitute eliminated units. Refer to the Replacement costs as listed in the Replacement/Reconstitution Table in the Play Aids.",
-    "crossRefs": []
+    "crossRefs": [],
+    "tableRef": "replacement-reconstitution"
   },
   {
     "id": "11.1",

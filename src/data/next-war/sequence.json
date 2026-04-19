@@ -33,7 +33,11 @@
       "notes": [],
       "subPhases": [],
       "tableRefs": [
-        "sea-control"
+        "sea-control",
+        "air-points",
+        "air-defense-fire",
+        "mine-clearing",
+        "contested-sea-movement"
       ]
     },
     {
@@ -201,7 +205,10 @@
       "description": "Both players place reinforcements per the Reinforcement Schedule, then may use replacement points to replace or reconstitute units. Adjust Submarine Threat and ASW Levels.",
       "content": "1. Both sides, non-Initiative/First player first, place reinforcements in accordance with the Scenario's Reinforcement Schedule. **(10.0)**\n2. Both players, Initiative/First player first, may use replacement points to replace or reconstitute units. Units in enemy ZOCs cannot receive replacements. **(11.0)**\n3. Adjust Submarine Threat and ASW Levels. **(7.4.3)**",
       "notes": [],
-      "subPhases": []
+      "subPhases": [],
+      "tableRefs": [
+        "replacement-reconstitution"
+      ]
     },
     {
       "id": "victory-determination-phase",
