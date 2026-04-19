@@ -778,35 +778,77 @@
     "title": "Replacement / Reconstitution",
     "ruleRef": "11.0",
     "scope": "series",
-    "type": "lookup",
+    "type": "matrix",
+    "rollLabel": "Unit Type",
+    "columns": [
+      "Rcv. Div",
+      "Rcv. Bde/Rgt",
+      "Recon. Div",
+      "Recon. Bde/Rgt"
+    ],
     "rows": [
       {
-        "roll": "Inf / Lt. Inf / Mot. Inf / Artillery",
-        "result": "Step Recovery: Div 1, Bde/Rgt 1 · Reconstitution: Div 2 RP, Bde/Rgt 1 RP"
+        "roll": "Inf / Lt. Inf / Mot. Inf / Arty",
+        "values": [
+          "1",
+          "1",
+          "2",
+          "1"
+        ]
       },
       {
         "roll": "Arm. Cav. / Recon / Mech. / Arm.",
-        "result": "Step Recovery: Div 3, Bde/Rgt 2 · Reconstitution: Div 4 RP, Bde/Rgt 2 RP"
+        "values": [
+          "3",
+          "2",
+          "4",
+          "2"
+        ]
       },
       {
-        "roll": "Abn. / Marines (any type)",
-        "result": "Step Recovery: Div 2, Bde/Rgt 2 · Reconstitution: Div N/A, Bde/Rgt 4 RP"
+        "roll": "Abn. / Marines",
+        "values": [
+          "2",
+          "2",
+          "N/A",
+          "4"
+        ]
       },
       {
         "roll": "Intrinsic Airmobile",
-        "result": "Step Recovery: Bde/Rgt 3 (2 RP + 1 SP) · Reconstitution: Bde/Rgt 4 (3 RP + 1 SP)"
+        "values": [
+          "N/A",
+          "3 (2RP+1SP)*",
+          "N/A",
+          "4 (3RP+1SP)*"
+        ]
       },
       {
         "roll": "HQ (non-Supreme) *",
-        "result": "Step Recovery: 1 SP · Reconstitution: 2 SP + 1 RP"
+        "values": [
+          "1 SP",
+          "N/A",
+          "2SP+1RP",
+          "N/A"
+        ]
       },
       {
         "roll": "Supreme HQ *",
-        "result": "Step Recovery: 1 SP · Reconstitution: 5 SP + 1 RP"
+        "values": [
+          "1 SP",
+          "N/A",
+          "5SP+1RP",
+          "N/A"
+        ]
       },
       {
-        "roll": "Air Units / Attack Helos / Airmobile Points *",
-        "result": "Step Recovery: 2 SP · Reconstitution: 2 SP"
+        "roll": "Air / Helos / Airmobile Pts *",
+        "values": [
+          "2 SP",
+          "—",
+          "2 SP",
+          "—"
+        ]
       }
     ],
     "notes": [
