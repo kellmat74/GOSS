@@ -118,9 +118,15 @@ function useGameSelection() {
   };
 
   const changeComplexity = (c: ComplexityLevel) => {
-    // Only allow if game supports it
-    if (gameConfig?.complexityLevels?.includes(c)) {
-      setComplexity(c);
+    if (!gameConfig?.complexityLevels?.includes(c)) return;
+    setComplexity(c);
+    // If the active scenario is complexity-tagged and no longer valid, reset it
+    if (scenario && moduleId) {
+      const mod = gameConfig.modules.find((m) => m.id === moduleId);
+      const scenarioDef = mod?.scenarios.find((s) => s.id === scenario);
+      if (scenarioDef?.complexity && scenarioDef.complexity !== c) {
+        setScenario(null);
+      }
     }
   };
 

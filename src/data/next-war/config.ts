@@ -76,14 +76,14 @@ export const nextWarConfig: GameSystemConfig = {
       scenarios: [
         { id: "all", label: "All Scenarios" },
         // Standard Scenarios (GSR §18.2)
-        { id: "target-kaohsiung", label: "18.2.1: Target Kaohsiung" },
-        { id: "target-taichung", label: "18.2.2: Target Taichung" },
-        { id: "target-taipei", label: "18.2.3: Target Taipei" },
-        { id: "red-dragon-rising", label: "18.2.4: Red Dragon Rising" },
+        { id: "target-kaohsiung",  label: "18.2.1: Target Kaohsiung",          complexity: "standard" },
+        { id: "target-taichung",   label: "18.2.2: Target Taichung",           complexity: "standard" },
+        { id: "target-taipei",     label: "18.2.3: Target Taipei",             complexity: "standard" },
+        { id: "red-dragon-rising", label: "18.2.4: Red Dragon Rising",         complexity: "standard" },
         // Advanced Scenarios (GSR §18.3)
-        { id: "walkin-on-the-sun", label: "18.3.4: Strategic Surprise — Walkin' on the Sun [Advanced]" },
-        { id: "island-in-the-sun", label: "18.3.5: Tactical Surprise — Island in the Sun [Advanced]" },
-        { id: "black-hole-sun", label: "18.3.6: Extended Buildup — Black Hole Sun [Advanced]" },
+        { id: "walkin-on-the-sun", label: "18.3.4: Strategic Surprise — Walkin' on the Sun", complexity: "advanced" },
+        { id: "island-in-the-sun", label: "18.3.5: Tactical Surprise — Island in the Sun",   complexity: "advanced" },
+        { id: "black-hole-sun",    label: "18.3.6: Extended Buildup — Black Hole Sun",        complexity: "advanced" },
       ],
       optionalRules: taiwanOptionalRules,
       data: {

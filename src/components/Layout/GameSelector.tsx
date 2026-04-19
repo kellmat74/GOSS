@@ -26,8 +26,12 @@ export function GameSelector({
   const activeGame = games.find((g) => g.id === gameSystemId) ?? games[0];
   const modules = activeGame?.modules ?? [];
   const activeModule = modules.find((m) => m.id === moduleId);
-  const scenarios = activeModule?.scenarios ?? [];
   const hasComplexity = (activeGame?.complexityLevels?.length ?? 0) > 1;
+
+  // Filter scenarios by complexity when the game has multiple levels
+  const scenarios = (activeModule?.scenarios ?? []).filter(
+    (s) => !s.complexity || !hasComplexity || s.complexity === complexity
+  );
 
   const selectClass =
     "rounded-md border border-stone-300 bg-white px-2 py-1 text-xs font-medium text-stone-700 dark:border-stone-600 dark:bg-stone-700 dark:text-stone-200 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500";

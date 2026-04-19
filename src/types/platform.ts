@@ -19,6 +19,8 @@ export interface ErrataFile {
 export interface ScenarioDef {
   id: string;
   label: string;
+  /** If set, scenario only appears when the matching complexity level is active. Omit to show always. */
+  complexity?: ComplexityLevel;
 }
 
 /** Standard vs. Advanced game complexity level. */
