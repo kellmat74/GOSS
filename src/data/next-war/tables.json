@@ -888,18 +888,16 @@
     "title": "Terrain Effects Chart",
     "scope": "series",
     "type": "image",
-    "src": "assets/nw/tec.png",
-    "notes": ["PNG not yet extracted — add docs/NW-Series-Rules.pdf to repo and run extraction script."]
+    "src": "assets/nw/tec.png"
   },
 
   "naval-movement-table": {
     "id": "naval-movement-table",
-    "title": "Naval Movement Table",
-    "ruleRef": "7.1",
+    "title": "Naval Movement Guide",
+    "ruleRef": "8.5.6.4",
     "scope": "series",
     "type": "image",
-    "src": "assets/nw/naval-movement.png",
-    "notes": ["PNG not yet extracted — add docs/NW-Series-Rules.pdf to repo and run extraction script."]
+    "src": "assets/nw/naval-movement.png"
   },
 
   "unit-id-chart": {
@@ -907,17 +905,15 @@
     "title": "Unit Identification Chart",
     "scope": "series",
     "type": "image",
-    "src": "assets/nw/unit-id.png",
-    "notes": ["PNG not yet extracted — add docs/NW-Series-Rules.pdf to repo and run extraction script."]
+    "src": "assets/nw/unit-id.png"
   },
 
   "loc-diagram": {
     "id": "loc-diagram",
-    "title": "Lines of Communication Diagram",
-    "ruleRef": "5.1",
+    "title": "Strike Effects & LOC Reference",
+    "ruleRef": "27.3",
     "scope": "series",
     "type": "image",
-    "src": "assets/nw/loc-diagram.png",
-    "notes": ["PNG not yet extracted — add docs/NW-Series-Rules.pdf to repo and run extraction script."]
+    "src": "assets/nw/loc-diagram.png"
   }
 }
