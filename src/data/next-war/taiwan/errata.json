@@ -14,127 +14,127 @@
       "text": "The Airbases in the PRC and Japan Holding Box are not Hardened. The icon is an error."
     },
     {
-      "section": "2.6",
+      "section": "GSR.2.6",
       "edition": "1st",
       "type": "correction",
       "text": "Port Restrictions – Both the PRC and the Allies can use the Northern Port of Keelung at all times."
     },
     {
-      "section": "5.2.2",
+      "section": "GSR.5.2.2",
       "edition": "1st",
       "type": "correction",
       "text": "At Sea Boxes – In addition to the Spratly Islands, always roll for the Taiwan Straits At Sea Box if it is Contested or Allied-controlled."
     },
     {
-      "section": "6.5.3.2",
+      "section": "GSR.6.5.3.2",
       "edition": "1st",
       "type": "correction",
       "text": "The Sub Threat Level is increased when a removed AMPH is returned [6.5.1.3], or, if no AMPHs were removed, then it is increased when the Sea Transport Limit is increased."
     },
     {
-      "section": "10.4.2",
+      "section": "GSR.10.4.2",
       "edition": "1st",
       "type": "correction",
       "text": "The MSU referenced here may also be created in a Port fulfilling the restrictions in 10.4.1."
     },
     {
-      "section": "10.5.1",
+      "section": "GSR.10.5.1",
       "edition": "1st",
       "type": "correction",
       "text": "PRC Isolation – As an exception to the normal Isolation rules, only roll for a PRC unit if it already has a marker on it, i.e., do not roll in the turn the marker is placed."
     },
     {
-      "section": "10.5.3",
+      "section": "GSR.10.5.3",
       "edition": "1st",
       "type": "addition",
       "text": "ADD 10.5.3 US Isolation – As long as a US unit can trace to a friendly-controlled Eastern or Northern Port or Beachhead, it is not Isolated."
     },
     {
-      "section": "13.2.2",
+      "section": "GSR.13.2.2",
       "edition": "1st",
       "type": "addition",
       "text": "Air Unit Ranges – Add another exception: \"The Malaysian air units may participate in Air Superiority. They may only Intercept or Escort in the Spratly Islands Sea Zone.\""
     },
     {
-      "section": "17.18",
+      "section": "GSR.17.18",
       "edition": "1st",
       "type": "addition",
       "text": "Naval Bombardment – Add \"Naval units\" to the exception."
     },
     {
-      "section": "18.1.3",
+      "section": "GSR.18.1.3",
       "edition": "1st",
       "type": "addition",
       "text": "Add Ryukyu Islands to the list of Sea Areas which start Contested."
     },
     {
-      "section": "18.2.4",
+      "section": "GSR.18.2.4",
       "edition": "1st",
       "type": "correction",
       "text": "Updates: PRC Reinforcements – Ignore the Zhi-10 called for in GT8. Allied Reinforcements – Add to GT8: 4 x Random Reserve brigades. Scenario Length is 16 Turns."
     },
     {
-      "section": "18.3.3.5.2",
+      "section": "GSR.18.3.3.5.2",
       "edition": "1st",
       "type": "correction",
       "text": "Philippines – there should be 4 x Marine infantry battalions (not 3)."
     },
     {
-      "section": "18.3.6",
+      "section": "GSR.18.3.6",
       "edition": "1st",
       "type": "addition",
       "text": "Allied Reinforcements – Add to GT10: 4 x Random Reserve brigades"
     },
     {
-      "section": "5.1.4",
+      "section": "GSR.5.1.4",
       "edition": "1st",
       "type": "clarification",
       "text": "Land Areas and ZOCs – Combat units DO NOT exert a ZOC when occupying a Land Area."
     },
     {
-      "section": "6.5.1.3",
+      "section": "GSR.6.5.1.3",
       "edition": "1st",
       "type": "clarification",
       "text": "PRC Holding Box Port Destruction – In the event all PRC AMPHs have been converted, players will have to use some other method to record the reduction in Sea Transport. Also, if there are units embarked on the AMPH, they return to the PRC Holding Box."
     },
     {
-      "section": "6.5.3",
+      "section": "GSR.6.5.3",
       "edition": "1st",
       "type": "clarification",
       "text": "As they represent more than a single such Installation, the Airbase/Port targets in a Holding Box may be targeted more than once per Strike Phase (an exception to SR 23.4)."
     },
     {
-      "section": "8.1.4.4",
+      "section": "GSR.8.1.4.4",
       "edition": "1st",
       "type": "clarification",
       "text": "Indian Ocean Box Arrival – This roll is in addition to and after the roll made in 18.3.3.1 (The 2nd Korean War)."
     },
     {
-      "section": "10.2",
+      "section": "GSR.10.2",
       "edition": "1st",
       "type": "clarification",
       "text": "PRC Supply Depot Establishment – The PRC MSUs may also follow the normal rules for supply."
     },
     {
-      "section": "10.3",
+      "section": "GSR.10.3",
       "edition": "1st",
       "type": "clarification",
       "text": "PRC Supply LOC – \"non-Allied-controlled\" in the last sentence should be read as \"not Allied-Controlled\"; PRC-Controlled or Contested means the Supply LOC is good."
     },
     {
-      "section": "13.2",
+      "section": "GSR.13.2",
       "edition": "1st",
       "type": "clarification",
       "text": "Air Unit Ranges – The exception indicates the Taiwan Straits Inshore Box. This is intended to also allow such units to fly Air Superiority per 13.2.1."
     },
     {
-      "section": "17.1",
+      "section": "GSR.17.1",
       "edition": "1st",
       "type": "clarification",
       "text": "Games should always be played using this option."
     },
     {
-      "section": "18.3.3.5",
+      "section": "GSR.18.3.3.5",
       "edition": "1st",
       "type": "clarification",
       "text": "Orders of Battle – add \"1 x Airmobile Point\" to each of Vietnam, Philippines, & Malaysia (note, this is stated in 18.1.3.4, but it's probably clearer here)."
@@ -218,151 +218,151 @@
       "text": "USAF F-15EX should be 5**-3-5* (i.e., Stand-off Strike capable)"
     },
     {
-      "section": "5.4",
+      "section": "GSR.5.4",
       "edition": "2nd",
       "type": "addition",
       "text": "Add IN to the list of Naval Units that do not return."
     },
     {
-      "section": "5.5",
+      "section": "GSR.5.5",
       "edition": "2nd",
       "type": "correction",
       "text": "Last para should be: Once all Beach hexes associated with an AAZ are marked with a Beach Defense Destroyed marker or if a marker reaches the 0 box, remove the marker from the Beach Defense Track."
     },
     {
-      "section": "5.5.1",
+      "section": "GSR.5.5.1",
       "edition": "2nd",
       "type": "clarification",
       "text": "b and c only apply in Amphibious Assaults."
     },
     {
-      "section": "6.2",
+      "section": "GSR.6.2",
       "edition": "2nd",
       "type": "correction",
       "text": "The non-Allied player can Air Transport 4 Stacking Points (counter is correct)."
     },
     {
-      "section": "6.3",
+      "section": "GSR.6.3",
       "edition": "2nd",
       "type": "correction",
       "text": "The non-Allied player can Paradrop 4 Stacking Points (counter is correct)."
     },
     {
-      "section": "6.5.2.1",
+      "section": "GSR.6.5.2.1",
       "edition": "2nd",
       "type": "correction",
       "text": "Change to any Strike or Nuclear Attack on the Japan Holding Box/Basing Box."
     },
     {
-      "section": "6.5.4.1",
+      "section": "GSR.6.5.4.1",
       "edition": "2nd",
       "type": "addition",
       "text": "Add para: Guam has a single Airbase and Port that can be attacked."
     },
     {
-      "section": "8.1.4.1.1",
+      "section": "GSR.8.1.4.1.1",
       "edition": "2nd",
       "type": "addition",
       "text": "Add JPN: Senkakus Island Land Area, Japan"
     },
     {
-      "section": "8.4",
+      "section": "GSR.8.4",
       "edition": "2nd",
       "type": "addition",
       "text": "Add J-20 to the list for the PRC. CAW air units which are replaced can go in an appropriate Holding Box or CV/CVN."
     },
     {
-      "section": "8.4",
+      "section": "GSR.8.4",
       "edition": "2nd",
       "type": "removal",
       "text": "Remove \"and CW air units\" from the third paragraph."
     },
     {
-      "section": "13.5",
+      "section": "GSR.13.5",
       "edition": "2nd",
       "type": "addition",
       "text": "ADD US Long Range Bombers (B-1, B-2, B-52) can only base in the USA/Guam."
     },
     {
-      "section": "13.9",
+      "section": "GSR.13.9",
       "edition": "2nd",
       "type": "addition",
       "text": "ADD 13.9: The Allied player can use the non-optional USN F-35C in place of any USN F/A-18 at no VP cost."
     },
     {
-      "section": "15.1.3.1",
+      "section": "GSR.15.1.3.1",
       "edition": "2nd",
       "type": "removal",
       "text": "Remove the paragraph starting with \"If there are restrictions on GT1…\" (there are no restrictions)."
     },
     {
-      "section": "15.6.7",
+      "section": "GSR.15.6.7",
       "edition": "2nd",
       "type": "correction",
       "text": "(first sentence) – Change \"ten\" to \"three\"."
     },
     {
-      "section": "16.2",
+      "section": "GSR.16.2",
       "edition": "2nd",
       "type": "correction",
       "text": "(second sentence) – Change \"regardless of the US Intervention Level\" to \"if the US or CW has Intervened at Level 1 or higher\"."
     },
     {
-      "section": "17.1.1",
+      "section": "GSR.17.1.1",
       "edition": "2nd",
       "type": "correction",
       "text": "change to +3 or +6 VP (there are only 2 optional F-35C)"
     },
     {
-      "section": "18.2.4",
+      "section": "GSR.18.2.4",
       "edition": "2nd",
       "type": "correction",
       "text": "The GT5 in PRC Replacements should be 5+"
     },
     {
-      "section": "18.3.1.2",
+      "section": "GSR.18.3.1.2",
       "edition": "2nd",
       "type": "addition",
       "text": "add \"For the CW and Japan, use the VP cost to the left if the US has intervened at Level 2+, otherwise use the one to the right.\""
     },
     {
-      "section": "18.3.3.2",
+      "section": "GSR.18.3.3.2",
       "edition": "2nd",
       "type": "correction",
       "text": "Change to non-Allied ground units enter the Senkakus Island Land Area (even during setup) or the Japanese Holding Box is attacked via Strikes or Nuclear Attack on the Japan Holding Box/Basing Box."
     },
     {
-      "section": "18.3.3.3",
+      "section": "GSR.18.3.3.3",
       "edition": "2nd",
       "type": "clarification",
       "text": "In any scenario in which a nation with an Airmobile Point marker intervenes and no Airmobile Points are specified, it has one."
     },
     {
-      "section": "18.3.3.6",
+      "section": "GSR.18.3.3.6",
       "edition": "2nd",
       "type": "addition",
       "text": "ADD 18.3.3.6 Automatic Increase of Intervention Level\n18.3.3.6.1 US CVN Elimination: Each time a US CVN is sent to the Turn Track (i.e., eliminated), increase the US Intervention Level by one.\n18.3.3.6.2 CV or SAG Elimination: Anytime a non-US CV/SAG is sent to the Turn Track (i.e., eliminated), increase that nation's Intervention Level to 4.\n18.3.3.6.3 US Airbases Attacked: If Guam is targeted by Air and/or Missile Strikes, increase the US Intervention Level by one."
     },
     {
-      "section": "18.3.4",
+      "section": "GSR.18.3.4",
       "edition": "2nd",
       "type": "correction",
       "text": "In each Advanced Game scenario remove \"2 x Mobile Supply Units\" from the non-Allied Scenario Specifications."
     },
     {
-      "section": "18.3.4",
+      "section": "GSR.18.3.4",
       "edition": "2nd",
       "type": "correction",
       "text": "Updates: Add AWACS Advantage-0 to the Non-Allied Scenario Specifications. ROC Setup – remove 2 x Random A Brigades. ROC Reinforcement Schedule – remove GT14. International Reinforcement Schedule: GT10 - J; 1 x Ballistic Missile Point; 1 x Naval SSM Point. GT11 - K & L. GT12 - M; 1 x Ballistic Missile Point; 1 x Naval SSM Point*. GT13 - N & O. GT14 - P & Q & R; 1 x Ballistic Missile Point; 1 x Naval SSM Point*. PRC Reinforcement Schedule: GT13 - 1 x SOF marker; 1 x Airmobile Point. GT14-15 - 1 x SOF marker. Add SSR 7 - Island Land Area Status: The Senkakus Island Land Area, while still part of Japan, start this scenario as Uncontrolled. Design Note: It's a surprise so the Japanese haven't had time to move any assets to defend the islands appropriately."
     },
     {
-      "section": "18.3.5",
+      "section": "GSR.18.3.5",
       "edition": "2nd",
       "type": "correction",
       "text": "Updates: Change the Beach Defense Points to 18. Add AWACS Advantage-1 to the Non-Allied Scenario Specifications. ROC Setup – add 2 x Random A Brigades. JPN Setup – add 1 x Airmobile Point and remove 1 x AH-64 to Level 3. CW Setup – add 1 x SAG and +1 ASW Level to Level 2. International Reinforcement Chart add to GT3 1 x Naval SSM Point*. PRC Reinforcement Chart change GT7 to 35/71GA, 160/71GA, 235/71GA, 71GA Artillery. SSR #6 – add to the final sentence to \"in the Taiwan Straits.\""
     },
     {
-      "section": "18.3.6",
+      "section": "GSR.18.3.6",
       "edition": "2nd",
       "type": "correction",
       "text": "Updates: Add AWACS Advantage-2 to the Non-Allied Scenario Specifications. JPN Setup - remove 1 x AH-64 from Level 3. CW Setup – add +1 ASW Level to Level 2."
@@ -386,7 +386,7 @@
       "text": "ID B – remove JPN 1 x AH-64"
     },
     {
-      "section": "8.4",
+      "section": "GSR.8.4",
       "edition": "2nd",
       "type": "clarification",
       "text": "Carrier Air Wing unit replacement – These must always be replaced in the US/PRC, etc."
@@ -398,7 +398,7 @@
       "text": "The references to which Ports each player can use under the Air Superiority statuses are for use of the Ports for Sea Transport, not for Supply purposes."
     },
     {
-      "section": "20.8",
+      "section": "GSR.20.8",
       "edition": "combined",
       "type": "addition",
       "text": "Initiative – (New rule) – Since both theaters are essentially being played as separate games, differing Initiative will not usually matter, and, on the ground, the local initiative should be paramount anyway. The exception is in the Naval sub-game. In this instance, for Naval Units, the initiative is determined by the NWT theater initiative. In other words, regardless of where they are on the maps, those units conduct their activities according to the initiative results based on NWT. Example: In the Korean Theater, the DPRK/PRC earns Initiative, but in the Taiwan Theater, the Allies snatch the Initiative from the PRC. The Taiwan Theater is treated normally, but all Allied Naval units behave as if they were initiative units regardless of which theater they are in."
