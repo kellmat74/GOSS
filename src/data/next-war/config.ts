@@ -1,4 +1,4 @@
-import type { GameSystemConfig, ErrataFile, TablesFile } from "../../types/platform";
+import type { GameSystemConfig, ErrataFile, TablesFile, QuickRefButtonDef } from "../../types/platform";
 import { taiwanOptionalRules } from "./taiwan/optional-rules";
 
 type ErrataLoader = () => Promise<{ default: ErrataFile }>;
@@ -8,6 +8,15 @@ const errata = (load: () => Promise<unknown>): ErrataLoader =>
 type TablesLoader = () => Promise<{ default: TablesFile }>;
 const tables = (load: () => Promise<unknown>): TablesLoader =>
   load as TablesLoader;
+
+// QuickRef buttons for Next War — all "table" kind (opens TableModal with image)
+// Enable features.quickRef once PNG assets exist at public/assets/nw/*.png
+const nextWarQuickRefButtons: QuickRefButtonDef[] = [
+  { id: "tec",           label: "TEC",   icon: "⛰",  title: "Terrain Effects Chart",         kind: "table", tableId: "terrain-effects-chart" },
+  { id: "naval",         label: "Naval", icon: "⚓",  title: "Naval Movement Table",           kind: "table", tableId: "naval-movement-table"   },
+  { id: "unit-id",       label: "Units", icon: "🎯",  title: "Unit Identification Chart",      kind: "table", tableId: "unit-id-chart"           },
+  { id: "loc",           label: "LOC",   icon: "🗺",  title: "Lines of Communication Diagram", kind: "table", tableId: "loc-diagram"             },
+];
 
 export const nextWarConfig: GameSystemConfig = {
   id: "next-war",
@@ -19,11 +28,12 @@ export const nextWarConfig: GameSystemConfig = {
   features: {
     flowchart: false,
     oob: false,
-    quickRef: false,
-    ask: false,    // Enable once rules are extracted
-    learn: false,  // Enable once AI Coach content is authored
-    options: true, // Optional rules panel — available from day one
+    quickRef: false, // Flip to true once PNG assets exist at public/assets/nw/
+    ask: false,      // Enable once rules are extracted
+    learn: false,    // Enable once AI Coach content is authored
+    options: true,   // Optional rules panel — available from day one
   },
+  quickRefButtons: nextWarQuickRefButtons,
 
   complexityLevels: ["standard", "advanced"],
 

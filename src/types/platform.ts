@@ -82,6 +82,24 @@ export interface ModuleConfig {
   };
 }
 
+/** How a QuickRef sidebar button opens its content */
+export type QuickRefButtonKind =
+  | "json-quickref"  // opens QuickRefModal with data[jsonKey] from quickRef JSON
+  | "oob"            // opens OOBModal with lazy-loaded module oob data
+  | "table";         // calls openTable(tableId) — opens the shared TableModal
+
+export interface QuickRefButtonDef {
+  id: string;
+  label: string;      // text shown under icon, e.g. "TEC", "STK"
+  icon: string;       // emoji icon
+  title: string;      // tooltip text
+  kind: QuickRefButtonKind;
+  /** kind="json-quickref": key in the game's quickRef JSON file */
+  jsonKey?: string;
+  /** kind="table": table ID to pass to TablesContext.openTable() */
+  tableId?: string;
+}
+
 export interface GameSystemConfig {
   id: string;            // "goss", "next-war"
   name: string;          // "GOSS 2020", "Next War Series"
@@ -97,6 +115,9 @@ export interface GameSystemConfig {
     learn?: boolean;
     options?: boolean;   // optional rules panel
   };
+
+  /** Buttons shown in the right-edge quick-reference sidebar strip. */
+  quickRefButtons?: QuickRefButtonDef[];
 
   /** If set, game supports multiple complexity levels (Standard/Advanced). */
   complexityLevels?: ComplexityLevel[];

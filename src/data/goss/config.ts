@@ -1,8 +1,14 @@
-import type { GameSystemConfig, ErrataFile } from "../../types/platform";
+import type { GameSystemConfig, ErrataFile, QuickRefButtonDef } from "../../types/platform";
 
 type ErrataLoader = () => Promise<{ default: ErrataFile }>;
 const errata = (load: () => Promise<unknown>): ErrataLoader =>
   load as ErrataLoader;
+
+const gossQuickRefButtons: QuickRefButtonDef[] = [
+  { id: "tec",      label: "TEC", icon: "⛰",  title: "Terrain Effects Chart", kind: "json-quickref", jsonKey: "tec"      },
+  { id: "stacking", label: "STK", icon: "📦", title: "Stacking Limits",        kind: "json-quickref", jsonKey: "stacking" },
+  { id: "oob",      label: "OOB", icon: "🎖",  title: "Order of Battle",       kind: "oob"                               },
+];
 
 export const gossConfig: GameSystemConfig = {
   id: "goss",
@@ -16,6 +22,7 @@ export const gossConfig: GameSystemConfig = {
     ask: true,
     learn: true,
   },
+  quickRefButtons: gossQuickRefButtons,
   modules: [
     {
       id: "war",

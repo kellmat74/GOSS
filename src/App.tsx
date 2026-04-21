@@ -436,28 +436,18 @@ function App() {
       </AppShell>
       <RuleModal />
       <TableModal />
-      <QuickRefBar
-        gameModule={moduleId}
-        scenario={scenario ?? "all"}
-        scenarioLabel={scenarioLabel}
-        oobModules={gameConfig ? buildOobModules(gameConfig) : {}}
-      />
+      {gameConfig?.features.quickRef && (
+        <QuickRefBar
+          gameConfig={gameConfig}
+          gameModule={moduleId}
+          scenario={scenario ?? "all"}
+          scenarioLabel={scenarioLabel}
+        />
+      )}
     </RulesProvider>
     </TablesProvider>
     </GlossaryProvider>
   );
-}
-
-function buildOobModules(
-  config: GameSystemConfig,
-): Record<string, () => Promise<{ default: unknown }>> {
-  const map: Record<string, () => Promise<{ default: unknown }>> = {};
-  for (const mod of config.modules) {
-    if (mod.data.oob) {
-      map[mod.id] = mod.data.oob;
-    }
-  }
-  return map;
 }
 
 export default App;
