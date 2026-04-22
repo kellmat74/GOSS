@@ -5,15 +5,17 @@ import { nextWarConfig } from "./next-war/config";
 /** All registered game systems. Add new games here. */
 const ALL_GAMES: GameSystemConfig[] = [gossConfig, nextWarConfig];
 
-/** Check if draft mode is active (URL param or localStorage) */
+/**
+ * Check if draft mode is active.
+ * Only the URL param `?draft=true` enables it — intentionally NOT persisted
+ * to localStorage, so draft games never leak to users who don't have the param.
+ * Clear any stale localStorage value left by the old implementation.
+ */
 export function isDraftMode(): boolean {
   if (typeof window === "undefined") return false;
-  if (new URLSearchParams(window.location.search).get("draft") === "true") {
-    // Persist draft mode to localStorage so it survives navigation
-    localStorage.setItem("wc-draft-mode", "true");
-    return true;
-  }
-  return localStorage.getItem("wc-draft-mode") === "true";
+  // Clean up any stale persisted value from the old implementation
+  localStorage.removeItem("wc-draft-mode");
+  return new URLSearchParams(window.location.search).get("draft") === "true";
 }
 
 /** Visible game systems (filters out drafts unless draft mode is active) */
