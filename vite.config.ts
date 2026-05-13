@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/GOSS/',
+  base: '/',
   server: {
     host: true, // expose on local network for iPad access
   },
