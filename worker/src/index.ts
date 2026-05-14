@@ -3,6 +3,7 @@ interface Env {
 }
 
 const ALLOWED_ORIGINS = [
+  "https://rules.battle-captain.com",
   "https://kellmat74.github.io",
   "http://localhost:5173",
   "http://localhost:4173",
