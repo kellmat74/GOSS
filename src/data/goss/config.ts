@@ -115,7 +115,7 @@ export const gossConfig: GameSystemConfig = {
     errata: errata(() => import("./errata.json")),
   },
   askConfig: {
-    workerUrl: "https://goss-ask-proxy.kellmat.workers.dev",
+    workerUrl: "https://goss-ask-proxy.kellmat74.workers.dev",
     systemPromptPreamble:
       "You are a rules expert for GOSS (Grand Operational Simulation Series) 2020, a tabletop wargame system.",
     exampleQuestions: [

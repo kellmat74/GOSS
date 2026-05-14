@@ -17,7 +17,7 @@ interface ChatMessage {
   content: string;
 }
 
-const DEFAULT_WORKER_URL = "https://goss-ask-proxy.kellmat.workers.dev";
+const DEFAULT_WORKER_URL = "https://goss-ask-proxy.kellmat74.workers.dev";
 
 const DEFAULT_EXAMPLE_QUESTIONS = [
   "How does supply work?",
