@@ -1165,6 +1165,844 @@
     "legacyRef": "16.7"
   },
   {
+    "id": "bwn-5",
+    "section": "5",
+    "title": "Unit types & Actions",
+    "summary": "Chapter introducing actions available to Ships, Subs, Aircraft, and Miscellaneous Actions.",
+    "text": "5 Unit types & Actions",
+    "crossRefs": [
+      "5.1",
+      "5.2",
+      "5.3",
+      "5.4"
+    ],
+    "legacyRef": "16",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1",
+    "section": "5.1",
+    "title": "Ships",
+    "summary": "General rules for Surface Ship unit actions; ships move only as TFs via SHIPS event.",
+    "text": "The following rules apply to all Surface Ship unit actions:\n- Ships may never move unless they are part of a Task Force 5.1.2. When not part of a Task Force, a Surface Unit must be in a friendly port facility.\n- Surface Units are never marked 'Spent'.\n- The movement of ships 'at sea' is an Event action (SHIPS) on the turn track. Ships does not move by spending OPS points.",
+    "crossRefs": [
+      "5.1.2"
+    ],
+    "legacyRef": "16.4",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "If a submarine is part of a task force, is there a way for it to remove itself from the TF, besides dissolving the TF? Yes, just activate it normally for whatever it wants to do, place it on the board in the same position as the task force it's leaving and off it goes.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-1-1",
+    "section": "5.1.1",
+    "title": "Applicable Ships Actions",
+    "summary": "Lists the three ship actions: Form a TF (2 OPS), Move ships between TFs (1 OPS), Attack with missiles (1 OPS).",
+    "text": "Remember, ships move only as a Task Force group and only by the SHIPS Event action.\n\nThe other actions that ships can choose are listed below:\n\n| Ship action | OPS cost |\n| --- | --- |\n| Form a Task Force (at a port or at sea where there is an existing Task Force) | 2 OPS |\n| Move ships between Task Forces in the same zone | 1 OPS |\n| Attack with missiles from a Task Force | 1 OPS |",
+    "crossRefs": [
+      "5.1.1.1",
+      "5.1.1.2",
+      "5.1.1.3"
+    ],
+    "legacyRef": "16.4",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1-1-1",
+    "section": "5.1.1.1",
+    "title": "Form a Task Force",
+    "summary": "Create a TF at port (or at sea if existing TF present) for 2 OPS; British/N. French ports count as same port.",
+    "text": "Create a Task Force in a port with any number of ship counters and up to one nuclear submarine.\n\nThe British and northern French ports may be counted as the same port when forming a Task Force.\n\nChoose an available Task Force marker from the Task Force display and place the ship counters into the holding box. Forming a Task Force costs 2 Operations Points.\n\nA Task Force may also be created at sea. To do so you must already have a Task Force at sea in the zone. Move any units from other Task Force(s) in the zone to this newly created Task Force. Any unit moved from a detected force grants that detection status to its new Task Force - place an additional Detection marker on the new Task Force. If there is a friendly nuclear submarine in the Sea Zone which is not Spent, it may join the new Task Force.\n\nThis action may also add ships from a port to an existing Task Force in an adjacent sea. The TF loses its next chance to move.",
+    "crossRefs": [],
+    "legacyRef": "16.4.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "When you create a new TF can you put more than one convoy counter? Yes as many as you like.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-1-1-2",
+    "section": "5.1.1.2",
+    "title": "Move Ships between Task Forces in same Zone",
+    "summary": "Move units between TFs in the same zone for 1 OPS; detection status transfers to new TF.",
+    "text": "Move any units from one Task Force to another existing Task Force(s) as desired.\n\nAny unit moved from a detected force grants the detection status of the originating Task Force to the new Task Force unless the new Task Force already has a higher detection status. This action costs one Operations Point to perform. If there is a friendly nuclear submarine in the Sea Zone which is not Spent, it may join any eligible Task Force.\n\nExample: TF Aegis and TF Hammer are in the same Sea Zone. TF Aegis is marked 'Poor' detected and wishes to send an escort surface unit to TF Hammer which was recently attacked. It does so, and TF Hammer is marked with a 'Poor' detection – the Soviets tracked the escorts as they transferred and now both Task Forces are marked with a 'Poor' detection marker. If TF Hammer was already marked with a 'Good' detection, no detection status would be altered.",
+    "crossRefs": [],
+    "legacyRef": "16.4.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Per rule 11.0, do convoys have to be detached during the ships event to enter port at a cost of 1 OPS point if the remainder of the TF stays at sea? No cost, they just detach for free and enter port.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-1-1-3",
+    "section": "5.1.1.3",
+    "title": "Attacks with Missiles from a Task Force",
+    "summary": "TF may attack eligible targets with missiles for 1 OPS; white/red/NATO blue ship-launched are card-only.",
+    "text": "A Task Force may attack eligible targets with missiles 7.4.1.2.\n\nThis action costs one Operation Point to perform. White, red and NATO blue ship-launched missiles do not use this action and can be launched only via card play.",
+    "crossRefs": [
+      "7.4.1.2"
+    ],
+    "legacyRef": "16.4.3",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1-2",
+    "section": "5.1.2",
+    "title": "Task Forces",
+    "summary": "TFs are surface units + up to one non-SSBN nuclear sub; Slow if any (S) unit present; remain at sea indefinitely.",
+    "text": "Task Forces are formed by placing Surface Units into the relevant Task Force box on the map. The ships remain in the Task Force box and the Task Force marker moves on the map. This helps reduces map clutter and makes tracking of units easier.\n\nTask Forces (TF) are made up of any number of Surface Unit counters and up to one non-SSBN nuclear submarine (without a (D)).\n\nAny number of available Convoy and Amphibious units can be attached to a Task Force. The force becomes Slow if any slow units (counters with an (S)) are part of the Task Force, otherwise it is considered Fast. Each TF must contain at least one Surface Unit.\n\nTask Forces may remain at sea indefinitely. There is no supply limitation in terms of food, fuel etc. SAM ammunition is not tracked (except for units marked (L)). Anti-ship missiles and cruise missiles are tracked either as expended or not expended 9.5.\n\nWhilst at sea a Task Force can merge with another Task Force, swap units between Task Forces in the same zone, detach units (such as Convoys arriving into a port) or create new Task Forces 5.1.1.1.",
+    "crossRefs": [
+      "5.1.1.1",
+      "9.5"
+    ],
+    "legacyRef": "11",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Are the Soviet dissolved TF markers used? I couldn't find a rule for dissolving Soviet TFs. No, but they were left as I didn't have anything better to replace them with.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "TFs in friendly port: They can be targeted by collateral damage and are sitting ducks. They cannot be attacked directly nor detected - but collateral hits on the port can kill them. The TF cannot shoot SAMs (it's in port, for the most part) - BUT it can use its CAP.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-1-2-1",
+    "section": "5.1.2.1",
+    "title": "Task Force Detection",
+    "summary": "TF has three states: Undetected, Poor, Good. See Section 6 for details.",
+    "text": "A Task Force has three possible states: Undetected, Poor Detection, Good Detection.\n\nRefer to Search & Detection section 6 for details.",
+    "crossRefs": [
+      "6"
+    ],
+    "legacyRef": "11.1",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1-3",
+    "section": "5.1.3",
+    "title": "Task Force movement",
+    "summary": "TFs move one zone via SHIPS event; Good moves first, then Poor, then Undetected; Soviets move first each category.",
+    "text": "Remember, ships move only as a Task Force group and only by the SHIPS Event action.\n\nTask Forces may move one zone in any direction desired. All 'Good Detected' Task Forces move first, followed by all 'Poor Detected' Task Forces and finally all 'Undetected' Task Forces.\n\nThe Soviets must move all Task Forces first during each category (Good-Poor-Undetected) followed by NATO.",
+    "crossRefs": [],
+    "legacyRef": "12",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1-3-1",
+    "section": "5.1.3.1",
+    "title": "Bad Weather Effects on Task Forces",
+    "summary": "TFs in Bad Weather zones get a 'Moved' marker instead of moving; remove and move normally next opportunity.",
+    "text": "Any zone currently experiencing Bad Weather slows down Task Force movement. Instead of moving, place a 'Moved' marker on a Task Force in Bad Weather. On the next opportunity to move remove the marker and move normally. Repeat for each Task Force starting in a zone with Bad Weather.",
+    "crossRefs": [],
+    "legacyRef": "12.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "TF in weather, SHIPS happens so it should move but doesnt due to weather - it just gets a 'moving' marker instead. Does this count as a move for triggering detection/attack by an on patrol MP/sub? Similarly does marking a TF with a 'landing' marker count as a move for this purpose? What about ASW? What about declining to move the TF when it gets the chance? No, and on patrol only triggers when you move into an area or through it - in this case you're already there.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-1-3-2",
+    "section": "5.1.3.2",
+    "title": "Amphibious Landing",
+    "summary": "Place 'Landing' marker instead of moving; perform landing on next chance to move. See 8.1.",
+    "text": "Both sides have Amphibious units which represent landing ships loaded with troops and equipment. These must be within a landing Task Force to make an Amphibious Landing.\n\nInstead of moving, a 'Landing' marker may be placed on a Task Force in a zone with an Amphibious Landing symbol. It does not move from the zone but may instead perform an Amphibious Landing on its next chance to move. See 8.1 Amphibious Landing Units & NATO troops delivery.",
+    "crossRefs": [
+      "8.1"
+    ],
+    "legacyRef": "12.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "What happens to the Amphib units after a landing in Bodo? Do they need to sail back to Kola, or do they teleport back a few turns later? Just take it off - its done the job.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-1-3-3",
+    "section": "5.1.3.3",
+    "title": "Soviet Amphibious Landing Units",
+    "summary": "Possible Soviet landing sites are marked on the map.",
+    "text": "Possible Soviet landing sites are marked on the map.",
+    "crossRefs": [],
+    "legacyRef": "13.4",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1-3-4",
+    "section": "5.1.3.4",
+    "title": "Follow-on Soviet Supply Groups",
+    "summary": "Additional Soviet Amphib units arrive during game, treated as full-strength but start with two hits.",
+    "text": "As well as full-strength Amphibious units, the Soviet player receives additional units during the game, listed on the Turn Track. They are treated the same as full-strength units except that they start with two hits and are therefore worth less Troops markers when landing.",
+    "crossRefs": [],
+    "legacyRef": "13.5",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1-3-5",
+    "section": "5.1.3.5",
+    "title": "NATO Landing Units",
+    "summary": "NATO lands troops only in friendly ports without Amphibious Landing rules; exception Soviet-occupied Iceland.",
+    "text": "NATO can land troops only in friendly ports which does not use the Amphibious Landing rules.\n\nAs such port damage and mining 5.1.4 may affect them but there is no Amphibious Landing resolution.\n\nException: Soviet occupied Iceland 8.4.4",
+    "crossRefs": [
+      "5.1.4",
+      "8.4.4"
+    ],
+    "legacyRef": "13.4",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1-3-6",
+    "section": "5.1.3.6",
+    "title": "Entering or Leaving a Port",
+    "summary": "TF units may move into/out of an adjacent port instead of moving; ignore Bad Weather when leaving; reload as appropriate.",
+    "text": "Instead of moving from a zone, when allowed to move a Task Force some or all of its units may move into a port adjacent to the Sea Zone it is currently in. When leaving a port, ignore Bad Weather. Reload units entering a port as appropriate 9.5.",
+    "crossRefs": [
+      "9.5"
+    ],
+    "legacyRef": "12.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Example of Nimrods on Patrol: NATO has a Nimrod 'On Patrol' in the Barents Sea. The Soviet TF in port at Kola - the Nimrod can't do anything & vice versa until the TF leaves port. When the TF leaves, the Nimrod can react to try and place a detection, and Kiev's CAP can try to shoot it down first.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-1-3-7",
+    "section": "5.1.3.7",
+    "title": "Dissolving a NATO Task Force",
+    "summary": "NATO TF delivering Convoy or in Bay of Biscay/Med 1-2 may dissolve to free TF marker; units return via Turn Track.",
+    "text": "A NATO Task Force delivering a Convoy to a Convoy destination port or located in the Bay of Biscay or located in the Mediterranean 1-2 Sea Zone may choose to dissolve itself to free up a Task Force marker. This also allows the units to return to the US without the NATO player having to manage this process.\n\nIf the NATO player wishes to dissolve a Task Force, place the entire contents of the Task Force on the Turn Track underneath a 'Dissolved Task Force' marker two turns from the current turn or three turns from the current turn if the Task Force was in the Mediterranean. They re-enter the game as reinforcements, all arriving in the USA regardless of nationality. In addition, some or all of these units may join one or more existing Task Forces within two zones of the USA when they re-enter the game. If entering in the US, remove all ammunition markers from the units.",
+    "crossRefs": [],
+    "legacyRef": "12.4",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1-3-8",
+    "section": "5.1.3.8",
+    "title": "Task Force Movement Protocol",
+    "summary": "When a TF moves, place it near the border of the old zone so opponent sees the move direction.",
+    "text": "To aid play of the game, when a Task Force moves, place it into the new Sea Zone close to the border of the old zone – in this way your opponent can clearly see which zone it moved from.",
+    "crossRefs": [],
+    "legacyRef": "12.5",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1-4",
+    "section": "5.1.4",
+    "title": "Convoys",
+    "summary": "Convoys = 40-50 merchant ships; worth degrades by hits; mines/port damage add hits on entering/leaving port.",
+    "text": "Convoy counters represent 40-50 merchant ships laden with supplies.\n\nA Convoy counters' worth degrades based on the number of hits taken to reach the Convoy destination port. Some of the Convoys have intrinsic defenses printed on the counter showing SAMs and the Anti-Submarine Warfare value available to the Convoy.\n\nWhen entering or leaving a port, roll for Mines and evaluate any Port Damage. (See charts below) When a Convoy arrives in a Convoy destination port it is evaluated to determine its worth.\n\n- Med Convoys have to go to the Med Convoys Ports.\n- Non-Med Convoys have to go to the Northern Convoys Ports.\n\nSupplies are placed onto the relevant track where they are delivered. Example: supplies delivered by a Med Convoy into a Med Port go onto the Southern War Track.\n\n| Mines | Effects |\n| --- | --- |\n| Light | 2 dices |\n| Heavy | 4 dices |\n\nEach '1-2' causes a hit with all odd hits being allocated to a Convoy by the Soviet player\n\n| Port Damage | Effects |\n| --- | --- |\n| Light | +1 hit to each Convoy |\n| Heavy | +2 hits to each Convoy |\n\nThe extra hits caused by port damage represent the convoy being more time consuming to unload due to damaged port infrastructure, etc and so the convoy ultimately takes an extra day or two to unload.\n\n| Hits | Convoy Effects |\n| --- | --- |\n| 0-2 | NATO Supplies Marker |\n| 3-4 | NATO Partial Supply Marker |\n| 5-6 | No effect |\n| 7-9 | Convoy Massacre |\n| 10 | Additional Convoy Massacre and remove from the map |\n\nThe delivery of a Convoy to any Belgian port, to the Italian port of Taranto and to any Turkish port allows the Convoy to still have some value despite the following damage:\n\n| Delivery to | Effects |\n| --- | --- |\n| Belgian Port | Treat 5 hits as a Partial Supply |\n| Taranto | Treat 5 hits as a Partial Supply |\n| Turkish Port | Treat 5 and 6 hits as a Partial Supply |",
+    "crossRefs": [],
+    "legacyRef": "13.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Per rule 11.0, do convoys have to be detached during the ships event to enter port at a cost of 1 OPS point if the remainder of the TF stays at sea? No cost, they just detach for free and enter port.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "When you create a new TF can you put more than one convoy counter? Yes as many as you like.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-1-4-1",
+    "section": "5.1.4.1",
+    "title": "Convoy Massacre",
+    "summary": "7 hits on a Convoy = 1 Massacre marker; 10 hits = another; 2 markers = +2 Soviet OPS; 3 = +1 NATO loss + reset.",
+    "text": "When the Soviets score a total of seven hits on a single Convoy, and again when the total reaches ten hits on the same Convoy give the Soviet player one Convoy Massacre marker.\n\nWhen the Soviet player has two Convoy Massacre markers in-hand, add two Operations Points to the current Soviet total.\n\nWhen the Soviet player has three Convoy Massacre markers in-hand, add one to the NATO losses score, then return all Convoy Massacre markers to the pool.\n\nNote: A Convoy which takes a tenth hit is removed from the map.\n\nDesign note: Ten loss points represents the loss or heavy damage of about forty merchantmen of a total of approximately eight hundred available to NATO – or ~5% - and that total would have been at full mobilization. A more realistic figure is five to six hundred ships for all but the 'Buildup' scenario.",
+    "crossRefs": [],
+    "legacyRef": "13.3",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1-5",
+    "section": "5.1.5",
+    "title": "Capital Ships",
+    "summary": "Aircraft carriers and ships with (L), (B) or (H) are capital ships; harder to kill, may roll for damage effect.",
+    "text": "All aircraft carriers and any ship with limited ammunition (L) or a damage code (B) or (H) is a capital ship, except for the US Amphibs – which are amphibious units.\n\nCapital ships are harder to kill, because they are in the center of the formation and heavily defended.\n\nCapital ships with a damage modifier symbol (B) and (H) roll to determine the effect of any hit.\n\nThose without a value take a step loss normally. Design note: These units represent multiple ships.\n\nWhen initially damaged, half (round up) of all Air Unit steps based on the carrier must also roll to take a step loss on a 6+. The owner selects those to roll for and applies step losses received.\n\nIf a carrier sinks, the Air Units onboard are destroyed and placed in the Destroyed box.\n\nCarriers without a damage modifier automatically lose half (round up) of their Carrier Air Group per step loss taken and all of the Carrier Air Group if they sink but are never damaged because the counter represents multiple carriers.",
+    "crossRefs": [],
+    "legacyRef": "14",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "When all the steps of F-14 are lost the CV runs out of F-14? Yes. Is there any other way to retrieve F-14 from the CV than by cards? No, only the cards can reinforce the carriers.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-1-5-1",
+    "section": "5.1.5.1",
+    "title": "Damage",
+    "summary": "Roll dice to determine effect of hit on (B)/(H) capital ship; damaged carriers can't fly Strike, lose intrinsic detection.",
+    "text": "To determine the effect of a hit on a capital ship with a damage modifier (B) or (H), calculate the number of dice to roll from the table below, and then apply the highest single die on the result table:\n\n| Damage | Dice to Roll |\n| --- | --- |\n| 1 | NATO missile, Soviet white missile from a ship, Soviet red missile, Tomahaw missile (card) |\n| 2 | Soviet yellow, black or submarine white missile, Soviet or NATO torpedo |\n| 3 | Soviet torpedo from (T) submarine |\n| +1 | Already damaged |\n| +1 | Each additional hit taken at the same time |\n\n| Die Roll | (H) Huge | (B) Big |\n| --- | --- | --- |\n| Sunk | Any 10 | Any 8, 9 or 10 |\n| Damaged (flip) | Otherwise | Otherwise |\n\nDamaged carriers cannot fly Strike aircraft. CAPs receive a modifier when resolving Fighter vs Air Strike combat and a carrier no longer counts for Submarine vs Task Force attacks (it has less helicopters in the air). It also loses its intrinsic detection capability.",
+    "crossRefs": [],
+    "legacyRef": "14.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "If a submarine rolls a N10 (torpedoes, not the doubles generated missile attack) does this hit take effect immediately or can it be removed by a successful ASW roll of 8+? Yes it can be cancelled.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "17.22 Collateral Damage causes step losses to units at or flying from the airbase or port under attack. The step losses can be applied to Capital Ships too, right? And, in that case, they follow the capital ship damage procedure, right? Yes all targets are fair game, and yes they would resolve on the capital damage process.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-1-5-2",
+    "section": "5.1.5.2",
+    "title": "Break-Off",
+    "summary": "Damaged capital ship may form a new TF with previous escorts (same detection status) for free.",
+    "text": "A damaged capital ship may immediately, and for free, form itself and any escorts from its previous force into a new Task Force with the same detection status as the previous one. This allows the damaged ship to break away from the Task Force and return to a base.",
+    "crossRefs": [],
+    "legacyRef": "14.2",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-1-5-3",
+    "section": "5.1.5.3",
+    "title": "Intrinsic MP",
+    "summary": "Undamaged carriers have one intrinsic MP unit for TF detection in own zone; US carriers roll 2 dice; US Amphibs none.",
+    "text": "Each undamaged aircraft carrier (showing an Aircraft symbol) or helicopter carriers (showing a Helicopter symbol) has one Intrinsic Maritime Patrol unit (representing AEW, helos etc.) it is usable only for detecting enemy Task Forces within the carrier's current zone.\n\nEach may roll one die on the Task Force Detection Table [17.10] during the 'ships move' event.\n\nException: US carriers roll two dice each.\n\nException: US Amphibs do not have an intrinsic detection capability.\n\nWhen intrinsic MP are subject to Interception or CAP detection, when rolling for Fighters vs MP attacks treat US carrier intrinsic MP as planes and all other carriers as MP helicopters.\n\nExample: A British Task Force and a Soviet Task Force are in the same Sea Zone. British Harriers on board Illustrious will be able to roll to 'bounce' Kiev's intrinsic MP unit before it can roll to detect the British Task Force. This will be resolved as a Fighter vs MP attack against a MP helicopter – because Kiev is operating helicopters in the AEW role.",
+    "crossRefs": [
+      "17.10"
+    ],
+    "legacyRef": "14.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "What happens to Intrinsic Maritime Patrol when they suffer from a step loss in Fighter vs Maritime Patrol Combat? They are just prevented from detecting, don't worry about casualties and so on - being blind is bad enough.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Is Airborne Early Warning abstracted in this game? Yes they are baked in to each carrier counter which has detection capability within its own zone. E2 and other AWACS are baked into the various fighter counters as part of the tactical value which is predominantly the radar capability.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-1-5-4",
+    "section": "5.1.5.4",
+    "title": "Repairing",
+    "summary": "Damaged capital ship at Major Port rolls for repair: 1-3=5 turns, 4-7=4 turns, 8-10=3 turns.",
+    "text": "A capital ship which is damaged but arrives at a Major Port must roll immediately for repairs.\n\nPlace the unit the indicated number of turns in the future on the Turn Track at full-strength.\n\nIf the unit is a carrier, place its air complement with it on the Turn Track. A damaged capital ship takes no part in the game until it returns to play.\n\n| Die Roll | Damaged Unit |\n| --- | --- |\n| 1-3 | 5 turns |\n| 4-7 | 4 turns |\n| 8-10 | 3 turns |",
+    "crossRefs": [],
+    "legacyRef": "15",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Repaired capital ship will return to major port where it entered? Yes, makes sense.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-2",
+    "section": "5.2",
+    "title": "Subs",
+    "summary": "General rules for all Submarine actions; single sub, 1 OPS, must be fresh; 'Spent'/'On Patrol' for rest of turn.",
+    "text": "The following rules apply to all Submarine actions:\n- Unless specified, all actions are performed with a single submarine and cost 1 Operations Point.\n- All units taking an action must be fresh.\n\nA submarine which takes an action will remain 'Spent' or 'On Patrol' (depending on action taken) for the rest of the turn.",
+    "crossRefs": [],
+    "legacyRef": "16.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "A SSBN/SSN stack moving spends 1 OPS? Yes, 1 ops to move both.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "16.2 says a moving Soviet SSBN may take a non-diesel submarine with it for no extra cost. Must the two subs start together in the same zone or port, or can the Boomer pick up the sub as it moves? The subs have to start together (mid-sea rendezvous is VERY hard).",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Is a sub required to move when it performs a 'move and attack' action? You don't have to move, no. If they don't choose to move then no, an on patrol submarine cannot react.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-2-1",
+    "section": "5.2.1",
+    "title": "Applicable Submarine actions",
+    "summary": "Lists sub actions: move+attack, attack+move, fast move 3 zones, move+On Patrol, missile coordination.",
+    "text": "- 1 submarine moves and then attack.\n- 1 submarine attacks and the moves.\n- 1 submarine 'Fast' moves 3 zones (not (D) submarine).\n- 1 submarine moves and goes 'On Patrol'.\n- Missile coordination: 2-3 subs all move to the same zone and the resolve a missile attack.\n\nSubmarines can leave a TF to perform one of the actions listed above.\n\nSubmarines join a TF when ships move – see the 'Ships' event 4.2.1.3",
+    "crossRefs": [
+      "4.2.1.3"
+    ],
+    "legacyRef": "16.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "A NATO sub attempting to attack an undetected Soviet TF: The only was a sub can attack an undetected TF is via natural 10 roll during an ASW attack yes - though generally it's on from 1-3 dice, depending on the unit.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "If a submarine is part of a task force, is there a way for it to remove itself from the TF, besides dissolving the TF? Yes, just activate it normally for whatever it wants to do, place it on the board in the same position as the task force it's leaving and off it goes.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-2-2",
+    "section": "5.2.2",
+    "title": "Submarine movement allowance",
+    "summary": "Nuclear=2 zones (3 fast); SSBN may tow non-diesel free; (D)=1 zone no fast; (S) diesel=move/attack/patrol, may move 2.",
+    "text": "- Nuclear-powered submarine moves 2 zones, or 3 zones by a 'Fast' move.\n- A moving Soviet SSBN submarine may take a non-disel submarine with it for no extra cost, both are marked as 'Spent'.\n- Diesel-powered (D) submarine moves 1 zone only, and cannot perform a 'Fast' move.\n- Small and Slow (S) Diesel submarine moves 1 zone OR attack OR go on patrol. If moving, the acting player may move any two (S) submarines instead of the usual one.",
+    "crossRefs": [],
+    "legacyRef": "16.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "A SSBN/SSN stack moving spends 1 OPS? Yes, 1 ops to move both.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "16.2 says a moving Soviet SSBN may take a non-diesel submarine with it for no extra cost. Must the two subs start together in the same zone or port, or can the Boomer pick up the sub as it moves? The subs have to start together (mid-sea rendezvous is VERY hard).",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-2-3",
+    "section": "5.2.3",
+    "title": "On Patrol status",
+    "summary": "Sub may move and place 'On Patrol' marker; can interrupt enemy subs (ASW) or react vs entering TFs; then Spent.",
+    "text": "A submarine may move and place an 'On Patrol' marker instead of attacking.\n\nThis allows one 'On Patrol' unit in a zone:\n- to interrupt a moving enemy submarine later in the turn during their action and roll an Anti-Submarine Warfare attack against it\n- or to roll to attack a moving Task Force entering the zone, then flip the 'On Patrol' marker to 'Spent'.\n\nUnits 'On Patrol' can remain so indefinitely.\n\nA unit which is 'On Patrol' cannot have an action spent on it, and can only react to enemy movement into or through their zone (not from).",
+    "crossRefs": [],
+    "legacyRef": "16.2.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "On Patrol only triggers when you move into an area or through it - in this case you're already there.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "When multiple interruptions occur at the same time, which one takes precedence? Only one on-patrol unit can react to each enemy that 'triggers' interception.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Are all the subs (which are at Sea) already 'On Patrol' at the start of the campaigns? No they are not.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-2-4",
+    "section": "5.2.4",
+    "title": "Missile coordination",
+    "summary": "2-3 subs move to same zone and resolve missile attack vs a single TF or facility; costs 1 OPS per sub.",
+    "text": "Two or three submarines can perform this action together. All may move to the same zone and perform a missile attack against a single Task Force 7.4 or a facility 7.5 in range.\n\nThis action costs one Operations Point per submarine taking part.",
+    "crossRefs": [
+      "7.4",
+      "7.5"
+    ],
+    "legacyRef": "16.2.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "17.13 Submarine Launched Missiles when done by a Missile Coordination action: Roll one die, applying modifiers and use the best die rolled to determine the result. So one die, plus one die if you have a good detection. Then apply the modifiers (-4 for 3 subs coordinating). You need a modified value on either die of 4 to get a long-range shot.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-3",
+    "section": "5.3",
+    "title": "Aircrafts",
+    "summary": "General rules for Air Unit actions; 1 OPS per flying unit (escorts/Tankers free); units must be Fresh.",
+    "text": "The following rules apply to all Air Unit actions:\n- All actions cost one Operations Point per flying unit except for escorting fighters and supporting Tankers which are free to fly with any air strike mission.\n- All units taking an action must be Fresh.\n- An Air Unit which takes an action will remain 'Spent' or 'On Patrol' until SHIPS move or the end of the turn.\n  - Exception: Maritime Patrol units only remove 'Spent' markers at the end of the turn.\n\nDesign note: This means that other than Maritime Patrol Air Units could fly up to three times in a turn.",
+    "crossRefs": [],
+    "legacyRef": "16.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "When do air units return to base? Right after completing their mission. FTR remain on patrol (they haven't yet completed their mission and will remain on patrol indefinitely). Can planes be intercepted when returning to base? No. Rebasing is only allowed through card play so landing at another airbase is not relevant. Aircrafts always return to the airbase of origin.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Spent MPs: Do patrolling maritime patrols become spent if they are present and contribute their dice for defense against a sub attack on surface ships? No, they just keep on flying.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-3-1",
+    "section": "5.3.1",
+    "title": "Applicable Air Unit actions",
+    "summary": "Lists air actions: MP fly+ASW/detect, MP/FTR fly+On Patrol, Strike fly+attack (Fighters/Tankers free).",
+    "text": "- 1 Maritime Patrol unit fly and:\n  - attack (Anti-Submarine Warfare)\n  - or attempt to detect Task Forces\n\nNote: If a detection is placed or upgraded on an enemy Task Force, the active player may take one further action of any type as long as the action results in an attempted attack against one of the Task Forces detected.\n\n- 1 MP/fighter fly and go 'On Patrol'\n- 1 or more Strike units fly and attack - Fighters and Tankers fly for free with air strike missions.",
+    "crossRefs": [],
+    "legacyRef": "16.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Stacking of MPs: If multiple maritime patrols are in an area, and a submarine attacks a TF, do the MP's ASW values stack? Yes.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-3-2",
+    "section": "5.3.2",
+    "title": "Movement: Transit to destination Zone",
+    "summary": "Air Units must remain in range of base; trace path TO target, resolve interceptions, then in-zone interception, then CAP.",
+    "text": "All Air Units must always remain within range of their base. The range is counted in zones and the maximum range is shown on the unit's counter.\n\nAir Units must trace their path to a Sea Zone to show how they arrived there:\n1. Check the route TO (but not back from) the target for Interceptions and resolve each in turn.\n2. Resolve any Interception in the target zone.\n3. Resolve CAP by eligible units protecting the attacked target.\n\nExample 1: A Bear-D flies to a zone of interest. A path is traced by the Soviet player and Interceptions are resolved as it flies to the zone. When it arrives in the zone it may be first intercepted and then attacked by any CAP. Only after this can the Bear perform its mission.\n\nExample 2: The Soviet player has a 'Good Detection' on a NATO Task Force indicates its route, resolves all Interceptions along the way and then any CAP within the target zone and finally attacks the target.",
+    "crossRefs": [],
+    "legacyRef": "16.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Can planes be intercepted when returning to base? No. Rebasing is only allowed through card play so landing at another airbase is not relevant. Aircrafts always return to the airbase of origin.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-3-3",
+    "section": "5.3.3",
+    "title": "Interception & CAP",
+    "summary": "Section header for Interception (5.3.3.1) and CAP (5.3.3.2).",
+    "text": "5.3.3 Interception & CAP",
+    "crossRefs": [
+      "5.3.3.1",
+      "5.3.3.2"
+    ],
+    "legacyRef": "17.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "There is a 'free' interception allowed if an enemy strike enters and then exits a zone containing a carrier (even an undetected one).",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-3-3-1",
+    "section": "5.3.3.1",
+    "title": "Interception",
+    "summary": "Air Units intercepted when: in zone w/ allied unit On Patrol, leaving zone w/ allied carrier, or overflying Denmark/Turkey.",
+    "text": "Enemy Air Units are intercepted when:\n- Present within a zone with an allied air unit on an Interception Mission (On Patrol)\n- Leaving a zone with an allied aircraft carrier (your opponent may not know it's there so the choice of whether to declare the presence of one or more carriers and roll the dice is up to you).\n- An enemy Soviet unit overfly Denmark or Turkey. The War Track Fighter symbols show the number of dice to roll 8.2. This number of dice is rolled once against the Strike mission, not once per unit flying. Use the values of the Fighter symbols printed on the map",
+    "crossRefs": [
+      "8.2"
+    ],
+    "legacyRef": "17.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Carrier CAP only intercepts if someone exits their zone. Escorts do not return to base after fighting, they can fight again.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Overflight: Danish and Turkish on map fighters are allowed to roll the full 3 dice allowance against an overflying strike composed of only 1 or 2 air units. The restriction on number of a/c is not the number of dice.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Can 2 FTR (different sides) be on patrol in the same zone? If yes, they will fight as soon as they are present together but that might not be decisive in which case they sit looking at one another for awhile, fighting again at the end of the turn. If a strike enters, the non-strike player is allowed to use his interceptor to try and attack the strike as per standard intercept rules.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-3-3-2",
+    "section": "5.3.3.2",
+    "title": "CAP",
+    "summary": "Fighters always on CAP at home base; land FTR protect zone bases; carrier FTR defend TFs in zone & adjacent facilities.",
+    "text": "Fighters units are always on CAP (counter at home base) except when they are flying a different mission (strike escort, patrol/interception).\n\nA strike attacks a location being protected:\n- Land based fighters protect land bases in their zone (but not Task Forces out at sea).\n- Carrier based fighters defend every Task Force in the Sea Zone and every land facility adjacent to the zone (the carrier does not have to be a target).\n  - An enemy Air Unit is attacked by CAP if present within a Sea Zone with carrier-based FTR prior to completing whatever mission it was sent to perform.\n  - Example 1: MP aircraft are attacked by CAP prior to attempting Task Force detection.\n  - Example 2: A fighter is given an Interception mission in a Sea Zone which is occupied by a carrier. The carrier CAP may attack the interceptor",
+    "crossRefs": [],
+    "legacyRef": "17.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "All FTR are on CAP all the time in effect - you don't need to spend actions/OPS. If your carrier enters a new sea zone and enemy MP are on patrol, the MP may activate to try to detect you at which point you can try to shoot them down. CAP is never spent by resolving combat.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "If an escorted strike is intercepted by CAP in a sea zone en route to the target and combat occurs between an escort and CAP, the escort continues to target. Escorts do not return to base after fighting, they can fight again.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Carrier based CAP no sea-based CAP can only help if the strike flies through their zone or attacks from their zone. The STK must occupy the carrier's sea zone for the carrier to take part in CAP.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "So if an air unit just passes through the sea zone, there is no CAP reaction? Correct in this case, because CAP reaction has not been triggered (17.2) though interception would be triggered (17.3). If the air unit attacks the land facility, all CAP is simultaneous, there is only one 'CAP defence' so you just have to work out which CAP will involve itself and resolve it.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Spent CAP: Under what circumstances will a carrier CAP be spent? Pretty much only if it flies an escort mission - in other words it's no longer really on CAP. Declining fighter vs fighter combat, or flying a combat mission (such as escorting a strike package).",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "While the carrier is in the port its FTR can do CAP against STK attacking that port? CAP could still fly if a carrier was in port, otherwise the carrier is too vulnerable.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-3-4",
+    "section": "5.3.4",
+    "title": "On Patrol Status",
+    "summary": "Only MP or Fighter units may go 'On Patrol'.",
+    "text": "Only MP or Fighter units may go 'On Patrol'.",
+    "crossRefs": [
+      "5.3.4.1",
+      "5.3.4.2"
+    ],
+    "legacyRef": "16.3.1",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-3-4-1",
+    "section": "5.3.4.1",
+    "title": "'On Patrol' with Maritime Patrol units",
+    "summary": "MP may go On Patrol: interrupt enemy sub w/ ASW, or detect moving TF; then Spent and return to base.",
+    "text": "A Maritime Patrol unit may go 'On Patrol' instead of attacking:\n\n- move the unit to a zone within its range, this allows the Maritime Patrol Air Unit:\n  - to interrupt a moving enemy submarine later in the turn during its action and roll an Anti-Submarine Warfare attack against it\n  - or roll to detect a moving Task Force entering or moving through the zone,\n\n  then flip the 'On Patrol' marker to 'Spent' & immediately return the MP unit to its base.\n\n- Enemy fighters present may intercept and resolve CAP before the MP rolls.\n\nA unit which is 'On Patrol' cannot have an action spent on it and can only react to enemy movement.\n\nAir Units that are 'On Patrol' can remain so indefinitely OR the marker can be removed, and the unit placed back at its base 'Fresh' when it is your turn to perform an action.\n\nNote: It is not required to use an 'On Patrol' marker since an MP unit at sea must be On Patrol.\n\nAdditionally, all Task Forces in a Sea Zone with friendly 'On Patrol' Maritime Patrol units benefit from an additional defensive bonus when attacked by submarines (this is built into the combat table).",
+    "crossRefs": [],
+    "legacyRef": "16.3.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "I understand that MP's that are On Patrol go Spent if they make an attack (or detection roll) triggered by a moving sub or TF. I had assumed that an on Patrol Fighter that intercepted would also be spent - but I don't see this in the rules - do they go spent or remain on patrol? They remain on patrol.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Spent MPs: Do patrolling maritime patrols become spent if they are present and contribute their dice for defense against a sub attack on surface ships? No, they just keep on flying.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Scenario 2 question: Scenario 2 has a British Nimrod set up in the North Sea area. Yes it's on patrol. And yes, you also get the setup sequence.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Nimrod Example: Once at sea, the TF's CAP protects the sea zone and all adjacent land facilities, so if the Soviets move a sub out of the Bastion and into the Barents, the Nimrod can react to conduct ASW, but the TF CAP gets to attack the Nimrod first.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-3-4-2",
+    "section": "5.3.4.2",
+    "title": "'On Patrol' with Fighters units",
+    "summary": "Land-based Fighter may go On Patrol in a Sea Zone (Interception); attacks entering Air Units; doesn't spend the unit.",
+    "text": "A land-based Fighter unit may go 'On Patrol' in a Sea Zone. For Fighter units this is called 'Interception':\n\n- move the unit to a zone within its range, this allows a Fighter unit:\n  - to attack any Air Units entering its zone and does not spend the unit.\n\nNote: Carrier based Air Units cannot perform this mission type.\n\nUnits that are On Patrol can remain so indefinitely, OR the marker can be removed, and the unit placed back at its base 'Fresh' when it is your turn to perform an action.\n\nNote: Sending a Fighter unit on an Interception mission into a Sea Zone already occupied by an enemy fighter or carrier-based CAP will trigger combat [5.3.3.2 and 7.1.1.2].\n\nDesign note: It is not required to use an 'On Patrol' marker since a Fighter unit at sea must be intercepting. Carrier Air Units cannot fly this mission type as they would be required to protect their carrier at all times. There is also a 'free' interception allowed if an enemy strike enters and then exits a zone containing a carrier (even an undetected one) 5.3.3.",
+    "crossRefs": [
+      "5.3.3",
+      "5.3.3.2",
+      "7.1.1.2"
+    ],
+    "legacyRef": "16.3.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "FTR remain on patrol (they haven't yet completed their mission and will remain on patrol indefinitely).",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Can 2 FTR (different sides) be on patrol in the same zone? They will fight as soon as they are present together but that might not be decisive in which case they sit looking at one another for awhile, fighting again at the end of the turn. If a strike enters, the non-strike player is allowed to use his interceptor to try and attack the strike as per standard intercept rules.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-3-5",
+    "section": "5.3.5",
+    "title": "Strike units Fly and Attack",
+    "summary": "Strike units + Fighters/Tankers fly and attack; strikes from different bases or different targets resolved separately.",
+    "text": "- One or more Strike units and any number of Fighters and Tankers may fly to a target Task Force or facility and attack.\n\nStrikes by units from different bases are always resolved as separate strikes (carriers at sea in the same zone may fly as one strike). Strikes against different targets are always separate strikes – a strike versus a port/airfield in the same target area is the same target and is therefore one strike.\n\nNote: Fighters may fly part way. If they fight at all, the whole strike is automatically detected thereafter. This can be useful for escorting a strike part way over Denmark or Turkey.",
+    "crossRefs": [],
+    "legacyRef": "16.3.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Escorts: Can escort FTRs come from a different base to the STR a/c they are escorting? No, they would count as separate flights. A rendez-vous in air might not be that easy.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "17.20 Bombing: If splitting between targets in the same zone, split before rolling any. You fly your strike to one location, and then if the target is a land base you may allocate dice between multiple targets if they exist, like up in Kola - where you can fly to North 9-10 and attack both the Soviet ports and airfields at the same time.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Bombing with Soviets: The basic idea here is that the Soviets have to use their missiles so they cannot, for example, use bombs against the German airfields - they have to use their missiles instead. The Soviets can use bombs if they attack troops.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "In the case with three fighters vs. one fighter, how is the combat resolved? One vs One. When the attack units are more than the CAP units, this excess units are not engaged in combat.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-3-6",
+    "section": "5.3.6",
+    "title": "Tankers",
+    "summary": "Soviet Tankers extend Strike range: 2-step = +2 zones to one or +1 to two; 1-step = +1 to one unit.",
+    "text": "The Soviet player has Tanker units which can extend the range of land-based Strike aircraft.\n\n- Each 2-step Tanker unit committed to a Strike mission may extend the range of one Strike unit by 2 zones or two Strike units by 1 zone.\n- A one step Tanker may extend the range of one unit by 1 zone.\n\nSelect the tanking zone by placing the Tanker unit the number of zones from its base as specified above; the Strike mission then counts its actual used distance from this zone.\n\nIf the tanking zone contains enemy Interceptors, resolve Interception detection/attacks as normal. Loss of a Tanker unit has immediate effect in terms of strike range.\n\nExample: A Soviet strike departs the Kola Peninsula with two Badgers. One Tanker unit allows two Strike units one extra point of range, so their transit to the Barents Sea is 'paid for' by the tanker. They refuel over the Barents Sea and continue to East 3, which is 3 zones away at their maximum range.",
+    "crossRefs": [],
+    "legacyRef": "13.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Tankers - really should only be able to fuel STK aircraft - most soviet fighters lacked in-flight refueling capability. So Fighters cannot use Tanker aircraft.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-4",
+    "section": "5.4",
+    "title": "Miscellaneous Actions",
+    "summary": "Repair (2 OPS), De-mine (2 OPS), Launch/Move RORSAT (2 OPS), NATO attack Cuba (6 OPS), Pass.",
+    "text": "| Action | OPS cost |\n| --- | --- |\n| Repair a Facility | 2 OPS |\n| De-mine a Port | 2 OPS |\n| Launch or Move a RORSAT | 2 OPS |\n| NATO may attack Cuba | 6 OPS |\n| Pass, if you have less OPs than the other player | - |",
+    "crossRefs": [
+      "5.4.1",
+      "5.4.2",
+      "5.4.3",
+      "5.4.4",
+      "5.4.5"
+    ],
+    "legacyRef": "16.5",
+    "clarifications": []
+  },
+  {
+    "id": "bwn-5-4-1",
+    "section": "5.4.1",
+    "title": "Repair a Facility",
+    "summary": "Remove a Hit from a damaged facility; 5+ roll required if removal would alter damage status.",
+    "text": "Remove a Hit from a damaged facility. If the removal would alter the damage status (from 'Heavy' to 'Light' or from 'Light' to not damaged), a die roll of 5 or higher is required to alter the status, otherwise the action is wasted.\n\nSee 2.3.8.4 for the effect of damage on facilities.",
+    "crossRefs": [
+      "2.3.8.4"
+    ],
+    "legacyRef": "16.5.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Iceland: 'A facility always retains at least the damage it had when captured.' All bases can be repaired. The line means that if it's already heavily damaged when you land then you can't make it better by landing - it's going to be heavily damaged. You can repair it thereafter however.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-4-2",
+    "section": "5.4.2",
+    "title": "De-Mine a Port",
+    "summary": "Roll 5+ to reduce minefield 1 level (7+ if facility damaged); Heavy → Light → Unmined.",
+    "text": "Roll a die requiring 5+ to reduce a minefield by 1 level, or 7+ if the facility is damaged.\n\n'Heavy mining' reduces to 'Light mining' which reduces to Unmined and removes the Mine marker.",
+    "crossRefs": [],
+    "legacyRef": "16.5.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Mines are only added by cards.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Does the mine counter need to be taken into consideration of a Soviet Task Force if they are landing troops in Denmark? No, the mines marker is for moving through the Danish Strait.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-4-3",
+    "section": "5.4.3",
+    "title": "Launch or Move a RORSAT",
+    "summary": "Launch from Tyuratam or move map RORSAT; 2 OPS; fails (destroys satellite) on roll of 1.",
+    "text": "Launch a RORSAT from Tyuratam or move a RORSAT already on the map to another zone.\n\nThis action costs 2 Operations Points and fails catastrophically on a die roll of '1' which destroys the satellite instead.\n\nSee 2.2.4.1 for full RORSAT rules.",
+    "crossRefs": [
+      "2.2.4.1"
+    ],
+    "legacyRef": "16.5.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "When you pay 2 Ops to move a RORSAT into a sea zone where there are already TFs present, do you get a free detection attempt? Nope. And RORSATs do not get attempts during the same timings as a MP unit on patrol. They can detect only when ships move (but this is free once they're up).",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-4-4",
+    "section": "5.4.4",
+    "title": "NATO may attack Cuba",
+    "summary": "See 8.4.5 for details.",
+    "text": "See 8.4.5 for details.",
+    "crossRefs": [
+      "8.4.5"
+    ],
+    "legacyRef": "16.5.4",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "In the campaign, there is a MP Bear D in Cuba and there is also a card that allows the Soviet to transfert strike planes in Cuba. 21.5 - 'No Soviet air Strike units may base in Cuba while inactive, but one MP unit may base there.' The MP can act as usual, though.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-5-4-5",
+    "section": "5.4.5",
+    "title": "Pass",
+    "summary": "If you have less OPS than your opponent, you may pass; opponent then plays an action, then you act again.",
+    "text": "If you have less Operations Points than your opponent, you may pass and do nothing. Your opponent will then play his action after which you will have another chance to act.",
+    "crossRefs": [],
+    "legacyRef": "16.5.5",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "When a player passes, they must have less OPS than their opponent, the other player takes an action and the passing player then has another chance to play.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
     "id": "bwn-6",
     "section": "6",
     "title": "Search & Detection Status",
