@@ -45,7 +45,9 @@ export const blueWaterNavyConfig: GameSystemConfig = {
       shortLabel: "BWN-A",
       scenarios: [{ id: "all", label: "All Scenarios" }],
       data: {
-        rules: () => import("./rules.json"),
+        // BWN has a single rulebook — rules load from baseData.rules below.
+        // Module data only holds module-specific extras (cards, future scenario overlays).
+        rules: () => Promise.resolve({ default: [] }),
         cards: () => import("./cards.json"),
       },
     },
