@@ -164,7 +164,11 @@ function TreeRow({
 }) {
   const hasChildren = node.children.length > 0;
   const isExpanded = expanded.has(node.rule.section);
-  const indent = depth === 0 ? "" : depth === 1 ? "ml-4" : "ml-8";
+  const indent =
+    depth === 0 ? ""
+    : depth === 1 ? "ml-4"
+    : depth === 2 ? "ml-8"
+    : "ml-12"; // depth 3+ (BWN 4-level sections)
   const hasErrata = sectionsWithErrata.has(node.rule.section.toLowerCase());
   const { getModuleShortLabel } = useRules();
 
