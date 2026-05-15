@@ -1,0 +1,609 @@
+[
+  {
+    "id": "bwn-6",
+    "section": "6",
+    "title": "Search & Detection Status",
+    "summary": "Chapter governing how Task Forces, submarines, and aircraft are detected.",
+    "text": "Chapter 6 covers how Task Forces, submarines, and aircraft become detected (or remain hidden) in Blue Water Navy. It defines the three Task Force detection states, identifies which units may conduct detection, and clarifies that submarines and aircraft do not have a tracked Detection State (their detectability is folded into attack procedures).",
+    "crossRefs": ["6.1", "6.2", "6.3"],
+    "legacyRef": "11"
+  },
+  {
+    "id": "bwn-6-1",
+    "section": "6.1",
+    "title": "Ship (Task Force) Detection",
+    "summary": "Detection of enemy Task Forces; possible states and the rules surrounding them.",
+    "text": "Maritime Patrol aircraft units, RORSATs, and Task Forces' Intrinsic Maritime Patrol can spend actions to attempt enemy TF detection. This section defines the three detection states and the procedures used to apply and degrade them.",
+    "crossRefs": ["6.1.1", "6.1.2", "6.1.3"],
+    "legacyRef": "11.1"
+  },
+  {
+    "id": "bwn-6-1-1",
+    "section": "6.1.1",
+    "title": "Ships (Task Force) Detection Status",
+    "summary": "A Task Force has three possible states: Undetected, Poor Detection, Good Detection.",
+    "text": "A Task Force has three possible states : Undetected, Poor Detection, Good Detection.\n\nUndetected Task Forces have their contents hidden from the enemy and cannot be attacked. To be attacked, a TF should first be Detected.\n\nMaritime Patrol aircraft units, RORSATs and Task Forces Intrinsic Maritime Patrol can spent actions to attempt enemy TF detection.\n\nA unit marked as a Poor Detection which is detected again is upgraded to a Good Detection.",
+    "crossRefs": ["6.1.1.1", "6.1.1.2", "6.1.1.3", "6.1.1.4"],
+    "legacyRef": "11.1"
+  },
+  {
+    "id": "bwn-6-1-1-1",
+    "section": "6.1.1.1",
+    "title": "Poor Detection effect",
+    "summary": "Poor Detection reveals only Amphibs, Convoys, and one Fighter of each type.",
+    "text": "Poor detection Task Forces reveal the presence of Amphibious units and Convoys. Place all Convoy and Amphibious counters within the Task Force close to the Task Force marker on the map so that the enemy player can easily see their presence or lack thereof.\n\nAlso place a single Fighter unit of each type contained within the detected force.\n\nExample: If the Task Force contains 2 US carriers and the French carrier 'Foch', place one F-14 and the F-8 Crusader Fighter unit on top of the Task Force.\n\nDesign note: Poor detection represents a large area in which the enemy could be operating or outdated information such as a 4-hour old detection report, but the presence of fighters will be revealed by radar emissions and communications intercepts).",
+    "crossRefs": [],
+    "legacyRef": "11.1"
+  },
+  {
+    "id": "bwn-6-1-1-2",
+    "section": "6.1.1.2",
+    "title": "Good Detection effect",
+    "summary": "Good Detection reveals the entire Task Force for enemy inspection.",
+    "text": "Good detection Task Forces reveal the entire force for inspection by the enemy.\n\nPlace the entire contents of the Task Force close to the Task Force marker for inspection by the enemy player.\n\nDesign note: A good detection represents an hour-old detection or very accurate location of the Task Force.",
+    "crossRefs": [],
+    "legacyRef": "11.1"
+  },
+  {
+    "id": "bwn-6-1-1-3",
+    "section": "6.1.1.3",
+    "title": "TF Detection Reduction",
+    "summary": "Ships Event movement degrades a TF's detection status by one step.",
+    "text": "When ships move due to the 'Ships' Event (but not the 'Fast' Event), the detection status of a Task Force deteriorates by one step from 'Good' to 'Poor' to 'Undetected'.\n\nDo not remove Convoys or ships already placed close to Task Forces. These are only removed if the owner conducts an action (using OPS) which allows moving counters from one Task Force to another [ 5.1.1.2 ].",
+    "crossRefs": ["5.1.1.2"],
+    "legacyRef": "11.2"
+  },
+  {
+    "id": "bwn-6-1-1-4",
+    "section": "6.1.1.4",
+    "title": "Casualties against Hidden Task Forces",
+    "summary": "When the attacker may choose a target inside a hidden TF, the owner reveals candidates without raising the detection level.",
+    "text": "Occasionally units within a Task Force are hit, and the attacker is allowed to select a unit to take the damage, but the Task Force is hidden from view (because it is only poorly detected). When this happens the owning player reveals the counters of units which could be hit for the enemy to decide.\n\nThis is temporary and does not increase the Detection level of a Task Force.",
+    "crossRefs": [],
+    "legacyRef": "11.3"
+  },
+  {
+    "id": "bwn-6-1-2",
+    "section": "6.1.2",
+    "title": "Search Units",
+    "summary": "Units capable of attempting Task Force detection: MP, Intrinsic MP, RORSATs.",
+    "text": "This section lists units capable of attempting Task Force detection: Maritime Patrol (MP), Intrinsic Maritime Patrol carried by carriers, and RORSATs.",
+    "crossRefs": ["6.1.2.1", "6.1.2.2", "6.1.2.3"],
+    "legacyRef": "11.1"
+  },
+  {
+    "id": "bwn-6-1-2-1",
+    "section": "6.1.2.1",
+    "title": "MP",
+    "summary": "Maritime Patrol units can attempt TF detection via search mission or while On Patrol.",
+    "text": "An MP unit can attempt detection of enemy TF on those two mission types:\n\n- 1 Maritime Patrol unit fly a search Mission and attempt to detect Task Forces in the destination Zone of the mission.\n- 1 Maritime Patrol with 'On Patrol' status may interrupt an enemy unit moving in the zone :\n  - When an enemy submarine unit enters or move in the zone, the MP unit can start an ASW attack against it.\n    Note : ok, not a TF detection task, but better to say it here also.\n  - When an enemy Task Force enters or move in the zone, the MP unit can attempt a TF detection against it. Enemy fighters present in the zone may intercept or resolve CAP before the MP rolls detection.\n\nAfter the detection/attack, the MP unit flips the marker 'On Patrol' to 'Spent' and immediately return the counter to its base.\n\nA MP unit 'On Patrol' cannot have an action spent on it, and can only react to enemy movement.\n\nAir Units that are 'On Patrol' can remain so indefinitely or the marker can be removed, and the unit placed back at its base 'Fresh' when it is your turn to perform an action.",
+    "crossRefs": [],
+    "legacyRef": "11.1",
+    "clarifications": [
+      { "source": "qa", "text": "Patrolling Maritime Patrols do not become 'Spent' if they contribute their ASW dice in defense against a sub attack on surface ships - they just keep on flying.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "On Patrol only triggers when an enemy moves into or through the area - it cannot react to a TF that is already there (e.g., one which received only a 'moving' marker due to weather, or a 'landing' marker).", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Only one on-patrol unit can react to each enemy that triggers interception when multiple triggers happen at the same time.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "If multiple Maritime Patrols are in an area and a submarine attacks a TF, the MPs' ASW values stack.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-6-1-2-2",
+    "section": "6.1.2.2",
+    "title": "Intrinsic MP",
+    "summary": "Each undamaged carrier has an embedded MP asset usable only for in-zone TF detection.",
+    "text": "Capital Ship Carriers have an embedded MP asset :\n\nEach undamaged aircraft carrier (showing an Aircraft symbol) or helicopter carriers (showing a Helicopter symbol) has one intrinsic Maritime Patrol unit (representing AEW, helos etc.)\n\nit is usable only for detecting enemy Task Forces within the carrier's current zone. Each may roll one die on the Task Force Detection Table [ 5.1.2.1 ] during the 'ships move' event.\n\nException: US carriers roll two dice each.\n\nException: US Amphibs do not have an intrinsic detection capability\n\nWhen intrinsic MP are subject to Interception or CAP detection, when rolling for Fighters vs MP attacks treat US carrier intrinsic MP as planes and all other carriers as MP helicopters.\n\nExample: A British Task Force and a Soviet Task Force are in the same Sea Zone. British Harriers on board Illustrious will be able to roll to 'bounce' Kiev's intrinsic MP unit before it can roll to detect the British Task Force. This will be resolved as a Fighter vs MP attack against a MP helicopter - because Kiev is operating helicopters in the AEW role.",
+    "crossRefs": ["5.1.2.1"],
+    "legacyRef": "11.1",
+    "clarifications": [
+      { "source": "qa", "text": "When intrinsic Maritime Patrol suffer a step loss in Fighter vs MP combat, they are just prevented from detecting - don't worry about casualties; being blind is bad enough.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Airborne Early Warning (E-2 Hawkeye, AWACS, etc.) is abstracted into the carrier's intrinsic detection capability and into fighter Tactical Values (which predominantly represent radar).", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-6-1-2-3",
+    "section": "6.1.2.3",
+    "title": "RORSAT",
+    "summary": "Soviet Radar Ocean Reconnaissance Satellites roll for TF detection during SHIPS and FAST events.",
+    "text": "During SHIPS and FAST Events (TF movement) :\n\n- RORSAT units on the map, sharing a zone with enemy TF(s), roll for Task Force Detection - 6.1.2.3 )",
+    "crossRefs": [],
+    "legacyRef": "11.1",
+    "clarifications": [
+      { "source": "qa", "text": "Paying 2 OPS to move a RORSAT into a Sea Zone containing TFs does not grant a free detection attempt. RORSATs also do not get attempts at the same timings as a patrolling MP - they can detect only when ships move (but this is free once they're up).", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-6-1-3",
+    "section": "6.1.3",
+    "title": "Task Force Detection attempt",
+    "summary": "Detection roll procedure and result table used by MP, RORSAT, and Intrinsic MP.",
+    "text": "Usable by: Maritime Patrol units, RORSATs, Task Force Intrinsic Maritime Patrol.\n\nPurpose: Detect enemy Task Forces so they can be attacked.\n\nUnits roll their 'Task Force Detection' dice after modifying the # dice to roll (which may be reduced to zero) through enemy fighter activity [ 7.1.2 ], on the following table. Resolve the dice from lowest to highest value rolled.\n\nTask Force Detection table:\n- Die Roll 1-2: No Effect\n- Die Roll 3-5: Poor Detection. May Upgrade Poor to Good. Place by TF owner unless upgrading.\n- Die Roll 6-8: Poor Detection. May Upgrade Poor to Good. Place by rolling player.\n- Die Roll 9-10: Good Detection marker placed by rolling player. Change the die to a 6 in Bad Weather, or to a 1 in Bad Weather if a RORSAT is rolling.\n\nThe result indicates which player places the detection - that player may place on any eligible Task Force. If a Task Force is already detected, the detection may be upgraded (from 'Poor' to 'Good') instead of placing a new Detection marker.\n\nTask Force Detection Die modifiers:\n- US Carrier intrinsic MP detecting: 2 dice per US carrier\n- >2 Enemy TF in zone: +1 die per TF over 2\n- Soviet ASAT system active (NATO only): -1 DRM per FSP in the ASAT box\n\nOnce a unit allocates all detection dice (not before), the Task Force owner must implement [ 6.1.1 ] and reveal the relevant information depending on detection status of the Task Forces.\n\nFor ease of reference, this is summarized below:\n\nDetection Fog of War effects:\n- Poor Detection: Reveal Amphibs and Convoys present and one fighter of each type present\n- Good Detection: Reveal entire Group",
+    "crossRefs": ["6.1.1", "7.1.2"],
+    "legacyRef": "17.10"
+  },
+  {
+    "id": "bwn-6-2",
+    "section": "6.2",
+    "title": "Submarine Detection",
+    "summary": "Submarines have no Detection State; their stealth is folded into attacker procedures.",
+    "text": "Submarine units do not have Detection State. They are considered to be undetected when at sea.\n\nInstead, the detection probability is embedded in Attack procedures of enemy units, and furtivity level is considered in these procedures (Defense number, and Defense Save optional number, on unit counter).\n\nWhen the attack is done, if the submarine was not killed, it returns to Undetected state.",
+    "crossRefs": [],
+    "legacyRef": "17.8",
+    "clarifications": [
+      { "source": "qa", "text": "Task forces do need to be detected, but submarines do not. The sub counter is just a center of reference - the submarine could be anywhere within ~1000 miles. If you roll the number needed during an attack, you found it and killed it (unless it gets a save or plays a card).", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Submarine stealthiness is baked into their defense values. Many Soviet subs are killed on an 8, while US SSNs need 10s, and many also get a 6+ 'save' against any hit taken.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-6-3",
+    "section": "6.3",
+    "title": "Aircrafts Detection",
+    "summary": "Aircraft have no Detection State; detection is folded into Interception, CAP, and SAM procedures.",
+    "text": "Aircraft units do not have Detection State. Instead, the detection probability is embedded in Attack procedures of enemy units : Interception, CAP, and close protection SAM against Bombing Strike missions.",
+    "crossRefs": [],
+    "legacyRef": "17.2"
+  },
+  {
+    "id": "bwn-7",
+    "section": "7",
+    "title": "Combat",
+    "summary": "Chapter covering all combat resolution: air-to-air, ASW, torpedoes, missiles, and land attacks.",
+    "text": "Chapter 7 covers all combat in Blue Water Navy: Air-to-Air (7.1), ASW (7.2), Submarine Torpedo Attacks on TF (7.3), Missile Attacks on TF (7.4), and Attacks on Land Targets (7.5).",
+    "crossRefs": ["7.1", "7.2", "7.3", "7.4", "7.5"],
+    "legacyRef": "17"
+  },
+  {
+    "id": "bwn-7-1",
+    "section": "7.1",
+    "title": "Air to Air",
+    "summary": "Air-to-air combat resolution against MP, fighters, and strike packages.",
+    "text": "Air-to-Air combat covers Interception and CAP resolution against MP, Fighters, and Air Strike units (escorted or not). The triggering unit determines which sub-procedure applies.",
+    "crossRefs": ["7.1.1", "7.1.2", "7.1.3", "7.1.4"],
+    "legacyRef": "17.2"
+  },
+  {
+    "id": "bwn-7-1-1",
+    "section": "7.1.1",
+    "title": "Interrupting move",
+    "summary": "Sequence in which Interceptions and CAP attacks resolve as Air Units transit to a target zone.",
+    "text": "Air Units must trace their path to a Sea Zone to show how they arrived there.\n\n1. Check the route TO (but not back from) the target for Interceptions and resolve each in turn.\n2. Resolve any Interception in the target zone.\n3. Resolve CAP by eligible units protecting the attacked target.\n\nExample 1: A Bear-D flies to a zone of interest. A path is traced by the Soviet player and Interceptions are resolved as it flies to the zone. When it arrives in the zone it may be first intercepted and then attacked by any CAP. Only after this can the Bear perform its mission.\n\nExample 2: The Soviet player has a 'Good Detection' on a NATO Task Force. A strike is flown, and the Soviet player indicates its route, resolves all Interceptions along the way and then any CAP within the target zone and finally attacks the target.\n\nWhen Interception or CAP attacks occur they are resolved depending on what is the triggering unit (MP, Fighters, Air Strike Escorted or not).",
+    "crossRefs": ["7.1.1.1", "7.1.1.2"],
+    "legacyRef": "17.1",
+    "clarifications": [
+      { "source": "qa", "text": "Air units return to base directly after completing their mission. Fighters remain on patrol (their mission isn't complete - they remain On Patrol indefinitely).", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Planes cannot be intercepted when returning to base. Rebasing is only allowed through card play - aircraft always return to the airbase of origin.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-1-1-1",
+    "section": "7.1.1.1",
+    "title": "Interception",
+    "summary": "Conditions that trigger Interception of an air unit.",
+    "text": "Air Units are intercepted when:\n\n- Present (into or through) a Zone with an enemy Air Unit on an Interception mission (On Patrol),\n- Leaving a zone with an enemy aircraft carrier (you may not know it's there so the choice of whether to declare the presence of one or more carriers and roll the dice is up to your opponent),\n- Overflying Denmark or Turkey. The War Track Fighter symbols show the number of dice to roll [ 8.2.4 ]. This number of dice is rolled once against the Strike mission, not once per unit flying. Use the values of the Fighter symbols printed on the map.",
+    "crossRefs": ["8.2.4"],
+    "legacyRef": "17.2",
+    "clarifications": [
+      { "source": "qa", "text": "An On Patrol Fighter that intercepts remains On Patrol, it does not go Spent.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Carrier CAP only intercepts if someone exits their zone. A Yak-38 from a Soviet carrier that did not exit its zone cannot intercept a strike, but it could fly CAP if the carrier is attacked.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Danish and Turkish on-map fighters roll their full War Track die allowance against overflying strikes regardless of strike size - the air-to-air restriction on # of fighters fighting does not apply to the # of dice from on-map fighter symbols.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-1-1-2",
+    "section": "7.1.1.2",
+    "title": "CAP",
+    "summary": "Conditions under which CAP may roll to attack triggering enemy air units.",
+    "text": "CAP may roll to attack when:\n\n- A strike attacks a location being protected:\n  - Carrier based fighters defend every Task Force in the Sea Zone and every land facility adjacent to the zone (the carrier does not have to be a target).\n  - Land based fighters protect land bases in their zone (but not Task Forces out at sea).\n- An Air Unit is present within a Sea Zone with carrier-based FTR prior to completing whatever mission it was sent to perform.\n\nExample 1: MP aircraft are attacked by CAP prior to attempting Task Force detection.\n\nExample 2: A fighter is given an Interception mission in a Sea Zone which is occupied by a carrier. The carrier CAP may attack the interceptor.",
+    "crossRefs": [],
+    "legacyRef": "17.3",
+    "clarifications": [
+      { "source": "qa", "text": "All Fighter units are on CAP all the time in effect - you don't need to spend actions/OPS. CAP is never spent by resolving combat.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Carrier CAP only helps if the strike flies through their zone or attacks from their zone. The STK must occupy the carrier's sea zone for the carrier to take part in CAP.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "If an air unit just passes through the sea zone without doing anything (no search or attack), there is no CAP reaction (interception may still apply).", "citation": "QA v2.0" },
+      { "source": "qa", "text": "All CAP is simultaneous - there is only one 'CAP defence'. Work out which CAP will involve itself and resolve it as a single defense.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "A carrier in port can still fly CAP against strikes attacking that port - otherwise the carrier is too vulnerable.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Spent CAP only happens by flying an escort mission, declining fighter vs fighter combat, or flying a combat mission like escorting a strike. Otherwise CAP stays Fresh.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-1-2",
+    "section": "7.1.2",
+    "title": "Fighters vs MP",
+    "summary": "Resolution of Fighter attacks against Maritime Patrol (plane or helicopter).",
+    "text": "One 'Fresh' Fighter unit may roll its printed air to air dice minus two dice (minimum one die). A 'Spent' fighter may not roll at all.\n\nAdd the fighter's Tactical Value to each die rolled. Add +1 DRM if the Soviets have the 'Air to Air Missile' Technology marker.\n\n- For each result of 9 or more (6 or more vs a helicopter MP unit) the MP unit is disrupted.\n- On a natural 10 (N8-10 vs a helicopter MP unit) the unit takes a step loss and returns to base 'Spent'.\n\nDisruption effect :\n\n- A disruption result returns the MP unit to its base 'Spent' if it was conducting an Anti-Submarine Warfare mission, or going on-patrol.\n- If it was resolving Task Force detection, it will roll one die less which may reduce it to zero dice - in which case it returns to base 'Spent'.\n\nFight Combat vs Maritime Patrol (MP):\n- Includes vs Intrinsic carrier MP\n- Roll air-to-air dice -2 (min=1) with one Fresh fighter\n- Die Roll + Tactical Value = kills allowed\n  - 9+ vs plane: -1 search, per die\n  - N10 vs plane: Step loss and no search\n  - 6+ vs helo: -1 search, per die\n  - N8-10 vs helo: Step loss and no search\n- Air to Air Technology-Soviet +1 DRM\n- Intrinsic MPs are always helos except for US carriers\n- N : Natural Roll",
+    "crossRefs": [],
+    "legacyRef": "17.5"
+  },
+  {
+    "id": "bwn-7-1-3",
+    "section": "7.1.3",
+    "title": "Fighters vs Fighters",
+    "summary": "Fighter vs Fighter combat resolution with modifier table and decline-combat option.",
+    "text": "If both sides have fighters in the same Sea Zone the Soviet player must declare if he will avoid combat followed by the NATO player.\n\nIf either does so, return their interceptors to base 'Spent', and place a 'Spent' marker on their CAP units. They take no further part in this combat. Otherwise, the opposing fighters will attack one another as follows:\n\nAt most one fighter may roll for each enemy fighter present - roll their air-to-air dice, applying modifiers and add their Tactical Value to each roll. (Minimum one die per unit)\n\nFighter vs Fighter Modifiers:\n- Intercepting Unit: -1 dice\n- CAP 'Spent': -2 dice\n- Detected by Interceptors: +1 dice\n- Damaged Carrier OR Base Light damage: -1 dice\n- Soviet 'Air-to-Air Missile Technology' marker: +1 DRM\n- Base Heavy damage: = 1 Die\n\n- Each die roll that is equal or higher than an enemy fighter Defense value causes a step loss.\n- All dice rolled are allocated by the rolling player as desired.\n- All step losses caused are simultaneous.",
+    "crossRefs": [],
+    "legacyRef": "17.6",
+    "clarifications": [
+      { "source": "qa", "text": "In a 3 vs 1 fighter fight, combat is resolved one-vs-one. When the number of attackers exceeds CAP, the excess attackers are not engaged. The rationale is that a smaller strike is harder to detect, so the limit reflects detection rather than physical capability.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Two Fighters of opposite sides may both be On Patrol in the same zone. They fight as soon as they are present together; if not decisive, they sit looking at one another and may fight again later. If a strike enters, the non-strike player may use his interceptor to attack the strike as per standard intercept rules.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-1-4",
+    "section": "7.1.4",
+    "title": "Fighters vs Air Strike",
+    "summary": "Resolution of Fighter attacks against Air Strike units (unescorted).",
+    "text": "Interception and CAP is resolved against air Strike units using the following process:\n\nOne Fighter unit may roll its printed air to air dice for each enemy Strike unit in the zone, but a given Fighter unit may only roll its printed air to air dice once.\n\nAdd the fighter's Tactical Value to each die rolled. Add +1 DRM if the Soviets have the 'Air to Air Missile' Technology marker.\n\nFor CAP, the defending TF must use its own fighters first, if able, and if its own fighters are no worse than other fighters which could be chosen (based on highest relevant values - air to air and tactical).\n\nModifiers are applied as below - apply them per unit rolling. (minimum one die per unit).\n\nFighter vs Air Strike Modifiers:\n- Intercepting Unit: -1 dice\n- CAP 'Spent': -2 dice\n- Strike detected by Interceptors: +1 dice\n- Damaged carrier OR Base Light damage: -1 dice\n- Soviet 'Air-to-Air Missile Technology' marker: +1 DRM\n- Base Heavy damage: = 1 Die\n\nEach total equal to or higher than an attacking Strike unit's Defense value causes a step loss. The rolling player may allocate all rolled dice to targets, and then the player being shot at can make saving throws based on the detection status of the Task Force/base from which the CAP originated.\n\nDetection Status and Air Strike Saves:\n- Good Detection on shooting carrier CAP or CAP from any airfield: Attackers gain 6+ save (vs. CAP only)\n- Poor Detection on shooting carrier but only vs. Task Forces not being attacked: Attackers gain 8+ save (vs. CAP only)\n\nExample: Two Fighter units on CAP may roll their dice because there are two attacking Strike units. Each gains +1 die if any Strike unit was detected by an interceptor on the way to (or within) the target zone. One is from a Task Force with a 'Poor' detection on it which is not being attacked - any hits it causes can be ignored on a saving throw of 8 or more. The other is from the target Task Force, which has a Good Detection marker on it - any hits it caused can be saved on a roll of 6 or higher.",
+    "crossRefs": ["7.1.4.1", "7.1.4.2", "7.1.4.3", "7.1.4.4"],
+    "legacyRef": "17.7"
+  },
+  {
+    "id": "bwn-7-1-4-1",
+    "section": "7.1.4.1",
+    "title": "Killing Air Strike before Weapon Delivery",
+    "summary": "Natural 9-10 rolls kill strike steps before they release their weapons.",
+    "text": "A natural ten causes a CAP to shoot down an enemy Strike step before the Strike unit launches its missiles - they are not included in the attack.\n\nA natural 9 or 10 causes a CAP to shoot down an enemy Strike step using bombs before the Strike unit drops the bombs - they are not included in the attack.\n\nInterceptors always cause step losses before strike units attack.\n\nNote: Because fighters may kill attacking steps before they fire their missiles and drop their bombs, it's a good idea to use the 'Missiles' marker to record the number of missiles launched or the 'Steps Bombing' marker to record the same before any CAP dice are rolled.",
+    "crossRefs": [],
+    "legacyRef": "17.7.1"
+  },
+  {
+    "id": "bwn-7-1-4-2",
+    "section": "7.1.4.2",
+    "title": "F-14 Anti-missile capability",
+    "summary": "F-14 natural 1s and 2s shoot down incoming air-launched anti-ship missiles.",
+    "text": "Each natural one or two rolled by an F-14 fighter shoots down that number of missiles launched by air Strike units when attacking a Task Force.\n\nDesign note: F-14 Phoenix missiles had an anti-missile capability for use against Soviet missile-carrying bombers.",
+    "crossRefs": [],
+    "legacyRef": "17.7.2",
+    "clarifications": [
+      { "source": "qa", "text": "When all F-14 steps are lost, the CV runs out of F-14s and there is no other way to retrieve them than by cards. The CV still has CAG strike capability.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-1-4-3",
+    "section": "7.1.4.3",
+    "title": "Interception Detection & Warning",
+    "summary": "Interceptors that engage cause the strike to be considered detected (+1 die for following fighters).",
+    "text": "Interceptors which successfully kill any step of enemy aircraft, fail to kill by one pip or fight other fighter aircraft cause the air strike (or en-route Interception mission) to be considered detected for the remainder of the resolution - therefore all further fighters which engage the strike gain +1 dice.\n\nIf an air strike has been intercepted, after all fighters have made their rolls in that Sea Zone the owner may voluntarily abort the strike - return it to base 'Spent'.",
+    "crossRefs": [],
+    "legacyRef": "17.7.3"
+  },
+  {
+    "id": "bwn-7-1-4-4",
+    "section": "7.1.4.4",
+    "title": "Vs Escorted Strike",
+    "summary": "Escorted strikes use Fighter vs Fighter combat with damage allocated to escorts first.",
+    "text": "Resolve exactly as for Fighter vs Fighter combat, but the non-striking player may roll with a number of fighters equal to the number of enemy Strike or Fighter units.\n\nAll damage must be allocated to Fighter units first except that a N10 rolled by any defending fighter may be allocated to a Strike unit.\n\nIf all escorting FTR are destroyed, hits can then be applied to STK.\n\nA N9 may also be allocated to a Strike unit if the strike unit is bombing.\n\nAny Strike Air Unit taking a step loss in combat with fighters on both sides do not receive a saving throw for detection status and all kills take place before weapons are launched.",
+    "crossRefs": [],
+    "legacyRef": "17.7.4",
+    "clarifications": [
+      { "source": "qa", "text": "Escort fighters cannot come from a different base than the strike aircraft they are escorting - they would count as separate flights. You cannot 'On Patrol' a fighter to escort a strike from another base either.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Escorts do not return to base after fighting CAP en route - they continue to the target and can fight again.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-2",
+    "section": "7.2",
+    "title": "ASW",
+    "summary": "Anti-Submarine Warfare procedures usable by subs, MP, and Task Forces.",
+    "text": "Usable by : Submarine and Maritime Patrol units, Task Forces choosing not to move and perform ASW.\n\nPurpose: Destroy enemy submarines, detect Task Forces, roll on the NATO Boomer Hunt table.",
+    "crossRefs": ["7.2.1", "7.2.2"],
+    "legacyRef": "17.8"
+  },
+  {
+    "id": "bwn-7-2-1",
+    "section": "7.2.1",
+    "title": "ASW procedure",
+    "summary": "Step-by-step ASW resolution with natural roll outcomes and modifier tables.",
+    "text": "1. Roll the unit's Anti-Submarine Warfare dice and apply modifiers.\n   If a Task Force is resolving the activity, its component will determine the number of dice to roll. [ 7.2.2 ]\n2. Add the Tactical Value of the rolling unit to each die. Each roll equal or above the Defense value of an enemy submarine in the same zone causes a step loss.\n3. The defending player (the player not rolling) may allocate any one die which is not a 10 to any unit which could be destroyed with that die roll - thus a '9' could be allocated to a much noisier '8' boat, but an '8' could not be allocated to a '9' boat.\n   If the attacking unit is a Maritime Patrol unit or a Task Force, (N) submarines may only be killed by natural 10s.\n   Note: Non-magnetic submarines are difficult for air units (and helicopters from ships) to detect.\n4. The attacking player then allocates all remaining rolls as desired.\n5. Natural '10' rolls allow one of three possible outcomes - the rolling player may pick one outcome for each ten rolled.\n   - Detect a Task Force in the same zone.\n   - Destroy a step of any submarine selected by the attacker\n   - The Soviet player may hunt NATO SSBNs [ 9.2 ].\n6. A double which is not a 10 allows a currently rolling rocket torpedo equipped submarine to cause a step loss to any target submarine in the same zone. All Soviet submarines are rocket torpedo equipped. NATO submarines do not have these weapons.\n7. One or more natural 1's rolled when a NATO submarine is attacking, and that submarine is in the Bastion causes a step loss to the currently rolling Submarine unit.\n8. Any 'save' submarine receives a 6 or higher save against any hit caused to it for any reason. Roll one die and ignore the hit if the result is 6 or higher.\n\nDesign note: Submarines can only detect Task Forces during an ASW attack and at no other time. Also, they require a natural ten to do so - submarines are not very good at detecting Task Forces.\n\nAnti-Submarine Warfare Natural Rolls:\n- N1: A rolling NATO submarine in the Bastion takes a step loss (one maximum)\n- Soviet double < 10: Rocket Torpedoes - cause one step loss to any unit selected by the rolling player in the same zone. Ignore if in the Arctic.\n- N10 Option #1: Detect an enemy Task Force. Place a Poor Detection marker or improve a Poor detection to a Good detection on any enemy Task Force in the same Sea Zone. After spending one '10' the submarine may ignore all other dice (except for ones if NATO rolling in the Bastion) and may immediately attack the Task Force using missiles [ 7.4 ] or submarine attack on TF [ 7.3 ]\n- N10 Option #2: Destroy a step of any submarine selected by the attacker.\n- N10 Option #3: If a Soviet nuclear submarine is rolling and not in the Baltic, Barents, Norwegian (North 5-6 and 7-8), or Black Sea: Take the 'USSR SSBN Hunting' marker or discard one already held and Roll on the NATO Boomer Hunt Table [ 9.2 ]\n\nAnti-Submarine Warfare Die Modifiers:\n- Hydrophones: +1 die\n- Bad Weather and non-MP unit detecting: -1 die\n- Bad Weather and MP unit detecting: -2 dice\n- Under Arctic Ice: -1 die\n- When under Arctic Ice all submarines gain a 6+ save or increase a 6+ save to 4+. Rocket torpedoes do not function under the Arctic ice.\n\nAnti-Submarine Warfare DRMs:\n- Attackers Tactical Value (X): +X\n- Soviet Torpedo Technology and a nuclear (non-diesel) submarine is attacking: Tactical=1",
+    "crossRefs": ["7.2.2", "7.3", "7.4", "9.2"],
+    "legacyRef": "17.8",
+    "clarifications": [
+      { "source": "qa", "text": "The only way a submarine can attack an undetected TF is via a natural 10 roll during an ASW attack - generally on 1-3 dice depending on the unit.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Submarines do not have to move to attack. If a NATO sub and a Soviet sub are in the same Sea Zone, they can attack each other without moving. If they don't move, an On Patrol submarine cannot react.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "A NATO sub with a 'save' ability CAN apply its save against a Soviet Shkval (rocket torpedo) hit - 'causing a step loss' wording is consistent across the rules.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-2-2",
+    "section": "7.2.2",
+    "title": "ASW by Task Forces",
+    "summary": "Task Forces may forgo movement to conduct ASW using a component-based dice table.",
+    "text": "A Task Force may roll dice using [ 7.2.2 ] Anti-Submarine Warfare based on its component ships instead of moving - calculate the TF ASW value and roll the dice listed with the Tactical Value. Ignore the fast modifier on the ASW total table.\n\n- If any ship has rocket torpedoes, then the TF may use that rule (through the rolling of doubles).\n- (N) submarines can only be killed on a natural 10.\n\nTask Force ASW:\n- Submarine: Anti-Submarine value x 3\n- Each Carrier: +2; 0 in Bad Weather\n- Each MP aircraft on Patrol: Anti-Submarine value; 1 in Bad Weather\n- Each Ship: Anti-Submarine value\n\nTask Force ASW Total:\n- ASW Total 0: 0 dice\n- ASW Total 1-2: 2 dice\n- ASW Total 3-5: 2 dice, +1 Tactical\n- ASW Total 6-8: 3 dice\n- ASW Total 9-12: 3 dice, +1 Tactical\n- ASW Total 13-17: 4 dice\n- ASW Total 18+: 4 dice, +1 Tactical\n\nMove up one row in Bad Weather. Move Up one row if the Task Force is Fast.",
+    "crossRefs": ["7.2.1", "7.2.2.1"],
+    "legacyRef": "17.9"
+  },
+  {
+    "id": "bwn-7-2-2-1",
+    "section": "7.2.2.1",
+    "title": "TF Penalty for ASW Operations",
+    "summary": "A TF performing ASW automatically gains a Poor Detection (possibly Good if rolling double N1/N2).",
+    "text": "A Task Force which performs ASW is automatically marked with a 'Poor' Detection. In addition, if the Task Force rolls any two N1 or N2 results whilst rolling, instead upgrade to a 'Good' detection.\n\nDesign note: Both the Soviets and NATO experimented with surface ships hunting for submarines. The main problem with this is that submarines in general have better detection capabilities than ships and that to hunt effectively a Task Force would have to disperse making it an easier target to attack.",
+    "crossRefs": [],
+    "legacyRef": "17.9.1"
+  },
+  {
+    "id": "bwn-7-3",
+    "section": "7.3",
+    "title": "Submarine Torpedo Attacks on TF",
+    "summary": "Submarine torpedo attack procedure against detected Task Forces.",
+    "text": "Usable by : Submarines\n\nPurpose : Attack detected enemy Task Forces (with torpedoes)",
+    "crossRefs": ["7.3.1", "7.3.2", "7.3.3"],
+    "legacyRef": "17.11"
+  },
+  {
+    "id": "bwn-7-3-1",
+    "section": "7.3.1",
+    "title": "Torpedo Attacks on TF procedure",
+    "summary": "Complete 10-step submarine torpedo attack procedure with TF defensive ASW interleaved.",
+    "text": "1. The submarine player announces the target Task Force, which must be detected and then determines the number of dice the submarine will roll using the Anti-Surface value as the base value and then applying modifiers, to a minimum of one die.\n\nSubmarine vs Task Force Die Modifiers:\n- Good Detection on Target TF: +1 die\n- Bad Weather: -1 die\n- Target TF is Fast: -1 die; -2 if diesel submarine\n\n2. The submarine player rolls the dice, adding the submarines Tactical Value to each and determines whether any hits have been scored. A submarine with (T) super heavy torpedoes may treat a 6 as a 7-9 and a 10+ as an N10 result, alter the dice now if this applies.\n\nSubmarine vs Task Force Attack:\n- 1-5: Miss\n- 6: Hit\n- (T) 7-9: Hit on PM / Amph / Convoy\n- 10+: 2 hits on Amph / Convoy (once only)\n- (T) treat as 9\n- N10: Hit vs any or treat as 10+\n\n3. If there are no hits, the combat ends now - the submarine failed to contact its target. Otherwise, leave the dice to one side for the moment and proceed to step 4.\n\n4. Any dice which roll a value high enough to cause a step loss to an escorting submarine within the TF may be expended now to do so. The escort submarine receives saves as normal.\n   Note that this happens before TF ASW is calculated.\n   Then, If the submarine rolled a double (a pair) it may conduct an SSM (missile) attack if so armed - all US and UK nuclear submarines have these weapons as do Soviet nuclear submarines if Torpedo Technology is in effect.\n   - Cause a step loss as though rolling a 'Hit' result if the double is a 1-6\n   - Cause a step loss as though rolling a 'Hit on PM / Amph / Convoy' result if the double is a 7-10\n   The loss is allocated by the attacking player and takes effect immediately. Then discard the two dice used.\n\n5. Calculate the TF ASW total using the following values :\n\nTask Force ASW:\n- Submarine: Anti-Submarine value x 3\n- Each Carrier: +2; 0 in Bad Weather\n- Each MP aircraft on Patrol: Anti-Submarine value; 1 in Bad Weather\n- Each Ship: Anti-Submarine value\n\n6. Look-up the ASW total to determine the number of dice to be rolled by the Task Force owner and the value to be added to each die rolled (the Tactical Value)\n\nTask Force ASW Total:\n- 0: 0 dice\n- 1-2: 2 dice\n- 3-5: 2 dice, +1 Tactical\n- 6-8: 3 dice\n- 9-12: 3 dice, +1 Tactical\n- 13-17: 4 dice\n- 18+: 4 dice, +1 Tactical\n\nMove up one row in Bad Weather. Move Up one row if the Task Force is Fast.\n\n7. If the Task Force rolled a double (a pair) and any ship within the Task Force is rocket torpedo (R) armed and it is not Bad Weather, it may alter one of the dice to an 8 and discard the other die.\n\n8. For each die, check to see if the roll plus Tactical Value is enough to cause a step loss on the attacking submarine (equal to or above its Defense Value) - if so, apply a step loss for each.\n   (N) submarines suffer a step loss on a natural 10 only\n   Note: Any die generated from step 7 does not benefit from a Tactical Value.\n\n9. For each roll of 8 or higher, the Task Force owner may select and remove one of the already rolled attacking submarines dice from those rolled in step 2, thus preventing the hit from taking place.\n\n10. Evaluate the remaining submarine attack dice.\n\nEach 'Hit' cause a hit to a non-Prairie Masker (P) equipped non-Capital Surface Unit which is not an Amphib or Convoy, selected by the attacking submarine. (i.e.: regular ships without PM).\n\nEach 'PM / Amph / Convoy Hit' cause a hit to any unit which is not a capital ship unless only capital ships remain within the Task Force. The attacking submarine may select the first of these hits scored, after which the Task Force owner may select the remainder unless the attacker chooses to apply all remaining hits to Convoys or Amphibious units.\n\nA natural '10' result can cause a hit on any potential target, selected by the attacking submarine - this is how you sink capital ships.",
+    "crossRefs": ["7.3.2"],
+    "legacyRef": "17.11",
+    "clarifications": [
+      { "source": "qa", "text": "A submarine's natural 10 torpedo hit (not from doubles-generated missile attack) CAN be cancelled by a successful ASW roll of 8+ from the TF.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "An 8+ roll from TF ASW can be used both to remove a torpedo hit AND to hit the submarine - the option is in addition to causing hits, not in place of them.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "If all surface ships in a TF are eliminated and only an escort sub remains, remove the TF marker and put the sub out in the zone the TF previously occupied.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-3-2",
+    "section": "7.3.2",
+    "title": "Effects of Hits",
+    "summary": "Hits cause one step loss; Amphibs/Convoys take one hit each; capital ships use 5.1.5.1.",
+    "text": "Hits to ship units cause one step loss each.\n\n- Amphibious units and Convoys take one hit per hit scored.\n- Capital ship units follow the process in [ 5.1.5.1 ] per hit scored.",
+    "crossRefs": ["5.1.5.1"],
+    "legacyRef": "17.11.1"
+  },
+  {
+    "id": "bwn-7-3-3",
+    "section": "7.3.3",
+    "title": "Illustrious UK carrier unit",
+    "summary": "Illustrious-class carriers (Prairie Masker fitted) get a special 8+ save against torpedoes.",
+    "text": "These British small carriers (\"through-deck cruisers\") were fitted with Prairie Masker and receive a special save of 8+ against any torpedo hit. A successful roll ignores the hit entirely and causes the NATO player to have to sing 'Rule Britannia' for the save to count!",
+    "crossRefs": [],
+    "legacyRef": "17.11.2"
+  },
+  {
+    "id": "bwn-7-4",
+    "section": "7.4",
+    "title": "Missile Attacks on TF",
+    "summary": "Missile attack procedures against detected Task Forces, by sub/ship/air.",
+    "text": "Usable by: Missile-armed air, submarines and ships.\n\nPurpose: Attack detected enemy Task Forces (with missiles from a distance)",
+    "crossRefs": ["7.4.1", "7.4.2"],
+    "legacyRef": "17.12"
+  },
+  {
+    "id": "bwn-7-4-1",
+    "section": "7.4.1",
+    "title": "Launching Missiles",
+    "summary": "Pointer to launch sub-rules for submarine, surface ship, and air launches.",
+    "text": "Use the appropriate rule based on the attacking unit:\n\n- 7.4.1.1 for submarine launched missiles\n- 7.4.1.2 for surface ship launched missiles\n- 7.4.1.3 for air launched missiles\n\nthen move on to the 'Resolving Missile Attacks' section [ 7.4.2 ].",
+    "crossRefs": ["7.4.1.1", "7.4.1.2", "7.4.1.3", "7.4.2"],
+    "legacyRef": "17.12"
+  },
+  {
+    "id": "bwn-7-4-1-1",
+    "section": "7.4.1.1",
+    "title": "Submarine launched",
+    "summary": "Submarine missile launch resolved by a single best die with range table.",
+    "text": "The attacking submarine(s) must be in the same zone as the target Task Force.\n\nRoll one die, applying modifiers and use the best die rolled to determine the result.\n\nSubmarine Launched Missile Modifiers:\n- Good Detection on Target TF: +1 die\n- Diesel attacker and target TF is Fast: -2 DRM\n- Missile Coordination per unit after 1st: -2 DRM\n\nMissile Attack Type:\n- 1-3: No attack\n- 4-7: Long Range\n- 8-9: Short Range\n- 10+: Short Range and Torpedo attack\n\nNo attack : No attack, mark 'Spent'. But no ammunition expended.\n\nLong Range : Resolve a missile attack with the total number of missiles.\n\nShort Range : Resolve a short-range missile attack with the total number of missiles.\n\nShort Range and Torpedo attack : Resolve a short-range missile attack and then resolve an attack as per 7.3 'Submarine attacks on Task Forces' immediately thereafter if desired by the attacker.\n\nCoordinated Missile Attacks : Submarines in the same zone attacking the same target may coordinate their attack [ 5.2.4 ]. For each additional submarine attacking, apply the coordination modifier. If an attack is made, resolve all the missiles together as a single attack.",
+    "crossRefs": ["5.2.4", "7.3"],
+    "legacyRef": "17.13",
+    "clarifications": [
+      { "source": "qa", "text": "'Short Range' and 'Long Range' refer only to the SAM Hit DRM modifier - there is no separate Short Range table. Short range gives the attacker a +2 against defending SAMs (unless attacking with yellow missiles).", "citation": "QA v2.0" },
+      { "source": "qa", "text": "For 3 Echo II coordinating against a Good-detected TF: roll one die (base) plus one die (good detection) = 2 dice. Apply modifiers (-4 for 3 subs coordinating). You need a modified value on either die of 4 to get a long-range shot.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-4-1-2",
+    "section": "7.4.1.2",
+    "title": "Surface Ship launched",
+    "summary": "Surface ship missile firing rules, including F-14 anti-missile screening.",
+    "text": "Soviet Surface Units with black or yellow missiles represent long-ranged anti-ship missiles such as the 'Shipwreck' (yellow) and 'Sandbox' (black). They may be fired at a 'Good' detected Task Force in the same zone as a Soviet Task Force. No roll is needed.\n\nA 'Poor' detected target may be attacked if the Soviet TF is fast on a roll of 6+.\n\nIf the roll is failed, the OPS for the action are still expended.\n\nIf the target Task Force of a Soviet yellow or black missile attack by surface ships has any F-14 fighters within it, roll one die if the Soviet TF is 'Poor' detected or two if 'Good' detected. Any rolls of 1 or 2 kill that many missiles prior to SAM resolution, selected by the NATO player.\n\nWhite, red and NATO blue missiles may only be used through the play of cards except for in the Baltic Sea. (where ranges are likely to be much shorter than elsewhere). In the Baltic Sea, a Surface Unit may fire white and/or red missiles at a 'Good' detected Task Force in the same zone. Only a single unit may fire from each attacking Task Force.\n\nSeparate Task Forces may not coordinate their fire at all with any type of attack. Nor is any type of coordination possible between air, ship or submarines.\n\nDesign note: I consider it too early for any real coordinated activity to take place. In this period data-linked command and control systems and computing power required were not yet up to the task.",
+    "crossRefs": [],
+    "legacyRef": "17.14",
+    "clarifications": [
+      { "source": "qa", "text": "NATO blue surface-launched missiles such as Exocet and Harpoon are short-ranged (~30-80 nmi), only ~2-4cm on the map. With airborne early warning, sneaking to launch range is hard - hence they require cards to fire.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-4-1-3",
+    "section": "7.4.1.3",
+    "title": "Air launched",
+    "summary": "Air-launched missiles fire after interception/CAP with automatic coordination among firers.",
+    "text": "Once all air transit and Interception / CAP attacks have been resolved, remaining missiles are launched at the Task Force. No roll is needed, and all firing units coordinate automatically.\n\nNote: Both sides possess air-launched missiles. The Soviets have very long-ranged cruise missiles and NATO has short-ranged sea skimming missiles such as 'Harpoon' and 'Exocet'.",
+    "crossRefs": [],
+    "legacyRef": "17.15"
+  },
+  {
+    "id": "bwn-7-4-2",
+    "section": "7.4.2",
+    "title": "Resolving Missile Attack",
+    "summary": "Resolve incoming missile attacks via SAM defense then anti-ship hits.",
+    "text": "Once the number of incoming missiles is known, place the 'Missiles' marker on the Missiles Track, using the correct color(s) to track the incoming missiles. A Task Force may fire more SAMs than there are incoming missiles but this is limited based on the number of incoming missiles (due to ammo conservation and the math involved in large scale anti-missile defense).",
+    "crossRefs": ["7.4.2.1", "7.4.2.2", "7.4.2.3", "7.4.2.4"],
+    "legacyRef": "17.16"
+  },
+  {
+    "id": "bwn-7-4-2-1",
+    "section": "7.4.2.1",
+    "title": "SAM resolution",
+    "summary": "SAM defense resolution, including SAM cap, hit table, and DRM table.",
+    "text": "1. Count the # of SAM points your defending force has and use the following table to determine how many can be used if there are more SAMs available than incoming missiles.\n\nMissiles Fired - SAMs Usable:\n- 1-5: # missiles + 1\n- 6-10: # missiles + 2\n- 11-15: # missiles + 3\n- 15-20: # missiles + 4\n- 21-25: # missiles + 5\n- And so on, as needed\n\n2. Roll one die per SAM fired, applying the modifiers and totaling the hits scored. Any missiles not shot down make it through the missile defenses - proceed to Missile Resolution [ 7.4.2.2 ].\n\nWhere there are different types of missiles, the TF owner can choose SAM targets as desired.\n\nSAM Hit DRMs:\n- Shooting at NATO missile: -1\n- Shooting at Soviet red or yellow missile: -2\n- Shooting at Soviet white submarine launched missile (slow, high) (SS-N-3 Shaddock): +2\n- Bad Weather: -1\n- Submarine short range missile launch and not yellow missile: -2\n- Soviet SAM Technology marker: +1\n\nSAM Hit Roll:\n- 1-2: Miss\n- 3-8: 1 Hit\n- 9-10: 2 Hits",
+    "crossRefs": ["7.4.2.2"],
+    "legacyRef": "17.16",
+    "clarifications": [
+      { "source": "qa", "text": "A Task Force in port cannot fire SAMs (it's in port for the most part) but its carriers can still fly CAP. TFs in port can only suffer collateral damage from facility attacks - they cannot be detected or attacked directly.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-4-2-2",
+    "section": "7.4.2.2",
+    "title": "Anti-Ship Missile resolution",
+    "summary": "Roll one die per 2 missiles to resolve hits, then allocate per attacker rules.",
+    "text": "If any anti-ship missiles are left after SAM resolution, resolve this step to decide whether any ships are hit. Roll one die per 2 remaining missiles, and one die for a remaining single missile, which cannot hit more than once and misses on a 1-2.\n\nIncoming Missile Resolution (Rolling one die per 2 missiles remaining, and a single die for an odd remaining missile. Apply DRMs):\n- 2 Missiles, DR 1-7: 1 Hit\n- 2 Missiles, DR 8-10: 2 Hits\n- 1 Missile, DR 1-2: Miss\n- 1 Missile, DR 3-10: 1 Hit\n\nDRMs:\n- Good Detection: +1\n- Bad Weather: -1\n\nOnce the number of hits is known allocate the hits according to the following:\n\n- Roll two dice, and if either die shows a 9 or 10, the first hit is allocated by the attacker. Otherwise:\n- NATO attacking allocates every 2nd hit (2,4,6,8,10...)\n- Soviets attacking allocate every 3rd hit (3,6,9,12...)\n- Soviets may resolve as NATO (allocating every 2nd hit) if they have the 'Missile Technology' marker.",
+    "crossRefs": [],
+    "legacyRef": "17.17"
+  },
+  {
+    "id": "bwn-7-4-2-3",
+    "section": "7.4.2.3",
+    "title": "Effect of Hits",
+    "summary": "Each hit represents ~6 weapons; non-capital ships take a step, Amphibs/Convoys take 2 hits each.",
+    "text": "Each hit represents about six weapons finding targets, somewhat more than a torpedo hit.\n\n- Non-Capital ship units which are hit take a step loss.\n- Amphibious units and Convoys take two hits per hit scored.\n- Capital ship units follow the process in [ 5.1.5.1 ] per hit scored.\n  - Determine the effect of all hits on capital ships after allocating all hits.",
+    "crossRefs": ["5.1.5.1"],
+    "legacyRef": "17.17"
+  },
+  {
+    "id": "bwn-7-4-2-4",
+    "section": "7.4.2.4",
+    "title": "Shipwreck (SS-N-19) and Sunburn (SS-N-22)",
+    "summary": "Soviet yellow Shipwreck and red Sunburn missiles get SAM defense bonuses.",
+    "text": "Several Soviet Surface Units have 'Shipwreck' (yellow) missiles and 'Sunburn' (red) missiles. NATO must apply the modifier for shooting them down with SAMs.\n\nWhen different missile types attack the same Task Force, you'll need to keep track of each type individually. They all attack together at the same time and the NATO player can choose which missile type to target with SAMs for each roll of the die, before the die is rolled. Some additional Missiles counters are provided for the Missile Track to help with this book-keeping.\n\nDesign note: These weapons were the first Soviet sea skimming missiles. Due to this, and other new capabilities (built in jammers and 'swarm' attack features) these missiles benefit from a large modifier when engaged by NATO SAMs. It's just a shame there are so few of them!",
+    "crossRefs": [],
+    "legacyRef": "17.18"
+  },
+  {
+    "id": "bwn-7-5",
+    "section": "7.5",
+    "title": "Attacks on Land Targets",
+    "summary": "Land targets attacked by bombs or cruise missiles with weapon-type restrictions per side.",
+    "text": "Land targets can be attacked by cruise missiles and bombs. Both sides have dedicated land attack cruise missiles which have a green background and can only be used against land targets.\n\nMost Soviet missiles can be used as cruise missiles against land targets. Only Soviet white and red ship-launched missiles are not usable in this role. Otherwise, Soviet missiles can be used at range 0 (within the same zone) against land targets. Note that Soviet white submarine launched missiles can be used against facilities, as they represent a longer-ranged weapon.\n\nNATO strike aircraft not equipped with green background cruise missiles must use bombs to attack land targets. They cannot use blue missiles as these are anti-ship only.\n\nDesign note: 'Bombs' also represents 'Walleye's and 'Mavericks', but the range is such that they don't get any bonus beyond the effectiveness bombs already grant.\n\nAny Strike unit with missiles must use them when attacking unless attacking troops [ 7.5.5 ].\n\nTo summarize:\n- All units with green-background missiles have land attack cruise missiles.\n- All NATO units without green-background missile must use bombs.\n- All Soviet units may use their missiles as cruise missiles except ships with white and red missiles.",
+    "crossRefs": ["7.5.1", "7.5.2", "7.5.3", "7.5.4", "7.5.5"],
+    "legacyRef": "17.19",
+    "clarifications": [
+      { "source": "qa", "text": "Soviets have to use their missiles when attacking - they cannot use bombs against, e.g., German airfields. They must use missiles instead. The Soviets can use bombs if they attack troops, though this may not actually be possible per the rules.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Soviet Backfires have black missiles. They must use missiles, not bombs - cannot choose between them. The 'must use missiles unless attacking troops' rule applies to both sides.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Optional rule 30.3 'Bombs Away!' allowing bombs against ships does NOT extend to using SEAD rules on ships - SEAD is only for ground targets.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-5-1",
+    "section": "7.5.1",
+    "title": "Aircraft Bombing Missions",
+    "summary": "After transit/CAP, each strike step receives one bombing die for SEAD, SAM, and bombing.",
+    "text": "Once all air transit and CAP attacks have been resolved, air Strike units can resolve their attack. Each step of an air Strike unit receives one bombing die.",
+    "crossRefs": ["7.5.1.1", "7.5.1.2", "7.5.1.3"],
+    "legacyRef": "17.20",
+    "clarifications": [
+      { "source": "qa", "text": "Bombing example: flying a strike to one location, if the target is a land base you may allocate dice between multiple targets in the same location. E.g., flying to North 9-10 and attacking both Soviet ports and airfields at Kola simultaneously.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-5-1-1",
+    "section": "7.5.1.1",
+    "title": "SEAD (SAM Suppression)",
+    "summary": "Bombing dice may be allocated to suppress/destroy enemy SAM sites; two US CAGs get a bonus die.",
+    "text": "Striking air may allocate one or more available bombing dice to suppress or destroy enemy SAM sites. Two US CAGs together also receive a bonus SEAD die whether at one or two step strength.\n\nDesign note: It is assumed the Prowlers stay out of the way in relative safety and perform defensive jamming and antiradiation attacks.\n\nAllocate the dice to roll for SEAD and then roll all dice together.\n\n- Mark permanent damage with Hit markers.\n- Each hit reduces both values on a SAM counter by one.\n\nSAM Suppression (SEAD):\n- 1-2: Miss\n- 3-5: -1 to SAM value for this attack only\n- 6-8: -1 to SAM value (place a hit)\n- 9-10: -2 to SAM value (place two hits)",
+    "crossRefs": [],
+    "legacyRef": "17.20"
+  },
+  {
+    "id": "bwn-7-5-1-2",
+    "section": "7.5.1.2",
+    "title": "SAM Attacks",
+    "summary": "Remaining SAM dice at the target may strip bombing dice and cause strike step losses.",
+    "text": "Once SAM suppression has been resolved the player owning the target facility may roll with remaining SAM dice indicated on the counter. (The leftmost number vs. strike aircraft).\n\nEach 6+ removes one bombing die and a roll of equal or higher than an air Strike units' Defense value causes a step loss as well as removing the die of the just shot down step. Apply +1 DRM if the Soviet has the SAM Technology marker.",
+    "crossRefs": [],
+    "legacyRef": "17.20"
+  },
+  {
+    "id": "bwn-7-5-1-3",
+    "section": "7.5.1.3",
+    "title": "Bombing",
+    "summary": "Roll remaining bombing dice with modifiers; produces hits plus collateral damage.",
+    "text": "Roll the remaining bombing dice and add modifiers.\n\nIf splitting between targets in the same zone, split before rolling any.\n\nExample: A US CAG attacking the Kola Peninsula may allocate one die to attack the airfields and another die to attack the ports.\n\nBombing Result:\n- Roll 1-3: Miss\n- Roll 4-8: 1 hit + 1 collateral\n- Roll 9-10: 2 hits + 2 collateral\n\nBombing Modifiers:\n- Bad Weather: -1\n- Some range unspent (carrying more bombs): +1",
+    "crossRefs": [],
+    "legacyRef": "17.20"
+  },
+  {
+    "id": "bwn-7-5-2",
+    "section": "7.5.2",
+    "title": "Cruise Missile Attacks",
+    "summary": "Land-attack cruise missile rules per launching type (NATO, Soviet Yankee/Tu-95, others).",
+    "text": "Cruise missile rules for various platforms and their range/usage characteristics.",
+    "crossRefs": ["7.5.2.1", "7.5.2.2", "7.5.2.3", "7.5.2.4"],
+    "legacyRef": "17.21",
+    "clarifications": [
+      { "source": "qa", "text": "Cruise missiles don't have to run the gauntlet of interceptors and CAP - they can only be affected by SAMs. Their carrying platform could be shot down though before launching.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-5-2-1",
+    "section": "7.5.2.1",
+    "title": "NATO Cruise Missiles - Green background",
+    "summary": "TLAM can fire ONE Sea Zone away from target's zone; not available before 1985.",
+    "text": "Unlike other missiles that must be launched from a Sea Zone adjacent to the target Land Area, TLAMs can be fired ONE Sea Zone away from the target's Sea Zone.\n\nExample: The Soviet Baltic Sea facilities could be attacked by TLAM from the North Sea, North 3-4.\n\nThe green background number is the number of cruise missile dice available.\n\nImportant! Tomahawk is first available in 1985 and are not usable at all if the scenario takes place in 1983, despite the counter showing their presence.\n\nDesign note: At this point they are all nuclear warheads and/or anti-shipping variants which are already represented via card events.",
+    "crossRefs": [],
+    "legacyRef": "17.21"
+  },
+  {
+    "id": "bwn-7-5-2-2",
+    "section": "7.5.2.2",
+    "title": "Soviet Yankee Notch and card-based Tu-95 (AS-15) Green Background Missiles",
+    "summary": "AS-15 can fire TWO Sea Zones from the target's zone.",
+    "text": "Unlike other missiles that must be launched from a Sea Zone adjacent to the target Land Area, AS-15 can be fired TWO Sea Zones away from the target's Sea Zone.\n\nExample: Norfolk NS in the USA could be attacked from Mid-4 or Mid 8-9.\n\nThe green background number is the number of cruise missile dice available.",
+    "crossRefs": [],
+    "legacyRef": "17.21"
+  },
+  {
+    "id": "bwn-7-5-2-3",
+    "section": "7.5.2.3",
+    "title": "Other Soviet Missiles",
+    "summary": "All Soviet ship-black/yellow, non-green sub, and air missiles can attack land; convert via table.",
+    "text": "All Soviet ship-launched black and yellow missiles, all non-green submarine missiles and all Air Unit missiles can also be used to attack land targets. These must be carried to the target zone.\n\nCount the total missile points being fired and convert on the following table:\n\nSoviet Missiles vs Land Targets:\n- Missile Points 1-3: 2-low\n- Missile Points 4-7: 1 die\n- Missile Points 8-12: 2 dice\n- Missile Points 13 or more: 3 dice\n\nNo coordination is possible between submarines, air and ship units - each type of attacker computes and rolls separately.\n\nMultiple units of the same type in the same zone automatically attack together.\n\nNote: \"2-low\" - Means roll two dice and use the lower roll.",
+    "crossRefs": [],
+    "legacyRef": "17.21"
+  },
+  {
+    "id": "bwn-7-5-2-4",
+    "section": "7.5.2.4",
+    "title": "Cruise Missile SEAD (SAM Suppression)",
+    "summary": "Cruise missile dice may be allocated to SEAD; SAMs vs Cruise Missiles uses separate table.",
+    "text": "Cruise missile dice may be allocated to suppress or destroy enemy SAM sites. Allocate the dice to roll first and then roll all dice together using the process at [ 7.5.1 ].\n\nSAMs vs Cruise Missiles:\n\nRoll the number of dice indicated on the SAM counter (bottom number) modified for damage taken.\n\n- An 8+ shoots down one point of enemy cruise missiles.\n- A 6-7 degrades a point of cruise missiles, applying -2 to its roll when attacking.\n\nApply +1 DRM if the Soviet has the SAM Technology marker.\n\nCruise Missile Strikes:\n- Roll the remaining strike dice.\n  - If splitting between targets in the same zone, split before rolling any.\n- Apply all cruise missile attack modifiers.\n\nCruise Missile Result:\n- Roll 1-3: Miss\n- Roll 4-6: 1 hit\n- Roll 7-9: 1 hit + collateral\n- Roll 10: 2 hits + collateral\n\nCruise Missile Attack Modifiers:\n- Bad Weather: -1\n- Cruise Missiles attacking Troops markers: -1",
+    "crossRefs": ["7.5.1"],
+    "legacyRef": "17.21"
+  },
+  {
+    "id": "bwn-7-5-3",
+    "section": "7.5.3",
+    "title": "Collateral Damage",
+    "summary": "Collateral hits cause step losses to units at/flying from the targeted facility.",
+    "text": "Collateral damage causes step losses to units at or flying from the airbase or port under attack. The bombing or Cruise Missile Results Chart give the # of collateral step losses which must be applied.\n\nTotal all collateral step losses caused before applying any Even losses are allocated by the defender. Odd losses by the attacker.\n\nExample: Keflavik on Iceland is hit by missiles and takes 2 collateral damage. Two step losses will be allocated among units flying from Keflavik, even if they are currently flying an Interception in a different zone and even if they just fought in air to air combat (some of the squadron is on the ground).",
+    "crossRefs": ["7.5.3.1"],
+    "legacyRef": "17.22",
+    "clarifications": [
+      { "source": "qa", "text": "Capital Ships in port are fair game for collateral damage and resolve hits using the capital damage process - it is dangerous to be in port getting shot at.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "USSR cannot bomb their own captured Iceland troops (or vice versa from NATO). NATO cannot harm Soviet invading troops sitting on captured Iceland - only Soviet troops advancing on the invasion tracks are targetable.", "citation": "QA v2.0" }
+    ]
+  },
+  {
+    "id": "bwn-7-5-3-1",
+    "section": "7.5.3.1",
+    "title": "Soviet Air Complexes",
+    "summary": "At Kola/Baltic/Black Sea, NATO may target Bear/Badger/Backfire or fighters separately; one hit can take out a RORSAT.",
+    "text": "At Kola, Baltic and Black Sea air bases NATO may force air collateral damage to be applied to Bear, Badger and Backfire aircraft (of any types) or to choose to target fighters (they are separate airfields). NATO may also choose to target both types of airfield by allocating collateral hits to both targets.\n\nAdditionally, one collateral hit may be allocated (by either player) to remove a RORSAT temporarily from the game, returning three turns from the current turn (RORSAT is selected by the US player on a die roll of 6+, otherwise by the Soviet player).\n\nDesign note: This represents targeting of communications facilities.",
+    "crossRefs": [],
+    "legacyRef": "17.22.1"
+  },
+  {
+    "id": "bwn-7-5-4",
+    "section": "7.5.4",
+    "title": "The Kola Peninsula",
+    "summary": "Each hit on Kola facilities grants the Soviet player one First Strike Point.",
+    "text": "For each hit scored against the Kola Peninsula facilities, the Soviet player receives one First Strike Point.\n\nDesign note: As one of the most important military bases to the Soviets, an attack against Kola would be likely to escalate the situation quickly and perhaps uncontrollably.",
+    "crossRefs": [],
+    "legacyRef": "17.23"
+  },
+  {
+    "id": "bwn-7-5-5",
+    "section": "7.5.5",
+    "title": "Striking Soviet Troops Markers",
+    "summary": "NATO may bomb advancing Soviet troops with escort fighters facing abstract Soviet FTR/SAM response.",
+    "text": "NATO may attack Soviet troop formations to slow the Soviet advance. The main target are the troops printed on the map near the Yugoslavian border which affects the Europe South War Track, but Soviet troops in Norway and Denmark can also be attacked to affect the relevant Invasion Track.\n\nWhen flying to Norway, if the current Invasion Track position is the Bodo box or above (between the Bodo box and the start box) then Air Units must fly to the Barents Sea North 9-10 to strike the adjacent Land Area (Northern Norway) otherwise to North 5-6 to strike troops in Southern Norway.\n\n(The Invasion Track has a N and S designation as a reminder).\n\nIf there is a Soviet airbase in the attacked location, fighters there fly CAP against the strike as well as the defending fighter rule below.\n\nWhen striking, the NATO player may take escorting fighters, with the following system representing Soviet fighters and SAMs (there are no counters).\n\n- The NATO player rolls attack dice with escorting fighters, adding the units Tactical Value and aiming for a target number of 8 or higher.\n- Cross reference the result on the table below, which shows how many attacks the Soviet player can roll against each Strike unit.\n\nFor each Soviet attack, roll a single die :\n- On a 6+ one step of bombers does not attack, and on a roll equal to or higher than a Strike unit's Defense value, also lose a step of strike aircraft.\n- On a natural 10, the Soviet player may instead choose to cause a step loss to a Fighter unit.\n\nApply +1 DRM if the Soviet has the 'Air to Air Missile Technology' marker.\n\nStriking Soviet Troops:\n- Hits 0-1: 2 dice vs each striking unit\n- Hits 2-3: 1 dice vs each striking unit\n- Hits 4+: 1 single die\n\nCruise missiles can be used against these targets (represents attacking HQ's, depots, bridges etc.) - apply the modifier for attacking troops within the cruise missile attack process.\n\nExample: A US Task Force launches a strike against the troops in Yugoslavia with 2 x CAG and 1 x F-14. The F-14 rolls 4 dice, adding +2 Tactical Value to each. 3 dice score 8 or higher. This results in one die versus each striking unit. The Soviet player rolls 1 die against each CAG. A 6 causes one CAG step to not be able to attack and 9 shoots down one CAG step as well as preventing their attack. - two steps remain to complete their bombing mission.",
+    "crossRefs": [],
+    "legacyRef": "17.24",
+    "clarifications": [
+      { "source": "qa", "text": "To strike Soviet troops in Denmark, NATO strike aircraft can fly from either the Baltic Sea or the North Sea - both are possible.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Bodo Soviet airbase is useful for protecting Soviet troops from NATO bombing - fighters there fly CAP against any strike attacking troops in that location.", "citation": "QA v2.0" },
+      { "source": "qa", "text": "Norway resistance still applies to landings near the capital - apply the -2 mod for friendly troops in landing location (MTBs, coastal troops, etc., are still in play).", "citation": "QA v2.0" }
+    ]
+  }
+]

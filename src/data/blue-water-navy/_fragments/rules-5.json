@@ -1,0 +1,572 @@
+[
+  {
+    "id": "bwn-8-1",
+    "section": "8.1",
+    "title": "Amphibious Landing Units & NATO Troops Delivery",
+    "summary": "Both sides have Amphibious units that deliver troops within a Task Force in an Amphibious Landing Sea Zone.",
+    "text": "Both sides have Amphibious units which represent landing ships loaded with troops and equipment. These must be within a Task Force to make an Amphibious Landing.\n\nWhen they are in an appropriate Sea Zone, they may conduct an Amphibious Landing.",
+    "crossRefs": ["8.1.1", "8.1.2", "8.1.3", "8.1.4"],
+    "legacyRef": "18.0"
+  },
+  {
+    "id": "bwn-8-1-1",
+    "section": "8.1.1",
+    "title": "Amphibious Landing Process",
+    "summary": "Step-by-step procedure for resolving a Soviet Amphibious Landing including dice, capability cancels, and troop placement.",
+    "text": "Instead of moving, a 'Landing' marker may be placed on a Task Force in a zone with an Amphibious Landing symbol. It does not move from the zone but may instead perform an Amphibious Landing on its next chance to move. Roll a free Task Force Detection roll [ 5.1.2.1 ] against each TF marking itself as 'landing'.\n\nIn Bad Weather, first place a 'Moved' marker and then on the next chance to move you may choose to move normally or place a 'Landing' marker.\n\nAmphibious Landings can be resolved by any force which is marked 'landing' when the force is eligible to move again and the force occupies an eligible Amphibious Landing zone on the map.\n\nAny submarines in port at the location being invaded may move to sea immediately and may roll to attack the force using [ 7.3 ] Submarine vs Task Forces attacks. For each submarine rolling to attack, expend one Operations Point of the owning player. Mark each 'Spent'.\n\nFollowing this, complete the Amphibious Landing steps:\n- Determine the number of dice to roll by cross referencing the landing location and current turn.\n\nLocation / Turn 1-2 / Turn 3-4 / Turn 5+\n- Norway: 4 dice / 3 dice / 2 dice\n- Roll one less die if landing at Bodo/Narvik\n- Denmark: 6 dice / 4 dice / 3 dice\n- -2 dice if Soviet troops ashore in landing location\n- -1 die if the landing location is lightly or heavily damaged\n\n- Roll all the dice and the resolve starting at all '1s', then all '2s' and so on.\n- Each die causes an effect which can be cancelled if the Soviet player has the relevant capabilities within the Task Force. No capability can be counted more than once.\n\nDie Roll / Effect\n- 1-3: Fast Attack Craft. Cancel by expending three white or red missiles (red only vs Denmark). For each not cancelled, change the die to a 6 and resolve later.\n- 4-5: Ships. Cancel by expending two black or yellow missiles. For each not cancelled, change the die to a 6 and resolve later.\n- 6-8: Missile/Air strike. Cancel by counting a total of four SAMs which cannot be counted again. Cancel one for free if TF is not marked with a Good Detection marker.\n- 9: Mines. Cancel by taking a step loss on any ship.\n- 10: Land Forts and Artillery. Cancel one if Sverdlov is present.\n\n- Any remaining dice cause one Hit marker on any Amphib, selected by the NATO player.\n- Once completed, determine the number of troops to land by cross referencing the current hits on each Amphib unit and place the troops onto the Invasion Track at the landing location.\n\nHits / Troops\n- 1-2: 2\n- 3-4: 1\n- 5+: 0\n\n- Resolve the capture of airfields and then remove the Amphib unit(s) from the map.",
+    "crossRefs": ["5.1.2.1", "7.3"],
+    "legacyRef": "18.0",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Amphibs after a landing in Bodo just come off the map. They've done the job; they don't need to sail back or be teleported.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "When a Soviet TF expends missiles to cancel amphibious landing effects, it does place a 'fired' marker on the TF.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-8-1-2",
+    "section": "8.1.2",
+    "title": "NATO Troop Delivery",
+    "summary": "NATO delivers troops to ports rather than conducting opposed landings, so the dice procedure is not used.",
+    "text": "NATO delivers troops to ports and so does not use this process.\n\nInstead, apply port damage and mines 5.1.4 and then 8.1.4, below.",
+    "crossRefs": ["5.1.4", "8.1.4"],
+    "legacyRef": "18.1"
+  },
+  {
+    "id": "bwn-8-1-3",
+    "section": "8.1.3",
+    "title": "Soviet Overland Troops to Norway",
+    "summary": "Soviet reinforcement troops bound for Norway arrive directly on the Norwegian Invasion Track.",
+    "text": "The Soviet player receives troops as reinforcements which go to Norway – they are placed in the currently occupied box on the Norwegian Invasion Track when they arrive.",
+    "crossRefs": [],
+    "legacyRef": "18.2"
+  },
+  {
+    "id": "bwn-8-1-4",
+    "section": "8.1.4",
+    "title": "Troop Placement",
+    "summary": "How delivered troops are placed on the Invasion Track, including special rules for Oslo and Iceland and one-for-one removal of enemy troops.",
+    "text": "If NATO delivers troops at Oslo, land only one troop unless Soviets are in the Orland box.\n\nDesign note: These troops are far from the front and will take some time to get into contact with the enemy.\n\nOtherwise, reference the Troops Landing Table and place the correct number of troops.\n\nIf there are enemy troops present, first remove them on a one for one basis and then place remaining troops on the track. Note that Iceland has a special rule [ 8.4.4 ].\n\nExample: There is one NATO troop on the Norwegian Invasion Track. The Soviets invade Bodo and manage to land with 2 hits. This results in the placement of two troops. The first removes itself and the NATO troop. The second one is placed on the Invasion Track at Bodo and then the capturing facilities process is followed to determine Bodo's status.",
+    "crossRefs": ["8.4.4"],
+    "legacyRef": "18.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "There cannot be both NATO and Soviet troops on the track – each NATO troop must be removed by a Soviet troop (which is also removed) before checking for advances. NATO troops have no location; they only cancel Soviet troops.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "If Soviet troops on the Invasion Track get removed mid-track, mark the last position. If you land more troops later you pick up where you left off.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "When the Soviets land further forward via amphib, troops already on the Invasion Track move forward to the same space as the new amphib position. A landing in effect outflanks the NATO defensive position.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Troops must be landed in Denmark (none start there). When they land they are placed on the At Start box.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-8-2",
+    "section": "8.2",
+    "title": "War & Invasion Tracks",
+    "summary": "Overview of the Europe North/South War Tracks, the Danish Invasion Track, and the Norwegian Invasion Track that show the Soviet land offensive.",
+    "text": "The game map has several tracks which show the status of the Soviet offensive into Western Europe. Overlaying Germany are the Europe North and South War Tracks and the Danish Invasion Track with the Norwegian Invasion Track for Norway.\n\nAt the end of each turn, check each track to see whether the fronts advance.",
+    "crossRefs": ["8.2.1", "8.2.2", "8.2.3", "8.2.4"],
+    "legacyRef": "20.0"
+  },
+  {
+    "id": "bwn-8-2-1",
+    "section": "8.2.1",
+    "title": "Invasion Tracks (Norway and Denmark)",
+    "summary": "How troop counts on the Invasion Tracks advance the front and how NATO strikes can stall an advance.",
+    "text": "Compare the number of Soviet Troops on the track to the 'Troops Needed' value. If the number of Troops is equal or more, advance the track one box. If the number of Troops is double or more, advance one box and then make the check again in the new box to see if the marker advances another box.\n\nNATO may strike Soviet troops to stall an advance for the current turn.\n\nOne advance is cancelled for every three hits present.\n\nRemove up to three Hit markers at the end of every turn.",
+    "crossRefs": [],
+    "legacyRef": "20.0",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "To strike Soviet troops in Denmark a NATO strike plane may fly from either the Baltic Sea or the North Sea.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Hits placed on a War Track that don't reach the threshold of 3 are removed at the end of the turn – they do not accumulate across turns.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "You can land troops in Northern Norway even though the Norway Track is in the South, and you must still resolve Norway resistance with the appropriate friendly-troops modifier.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-8-2-2",
+    "section": "8.2.2",
+    "title": "Occupation of Kiel/Schleswig",
+    "summary": "Special Soviet option to forgo a Western move and instead capture Kiel/Schleswig, adding troops to the Denmark Invasion Track.",
+    "text": "If the Soviet player occupies the Europe North War Track in the 'Hamburg, Munich' box or further west, they may forgo one box of Western movement and instead occupy 'Kiel/Schleswig'.\n\nThis has the effect of capturing the facility [ 8.3 ] and places two additional Troop markers onto the Denmark Invasion Track.\n\nAlso move the Invasion marker into the space the arrow points to – the fourth box along, unless it has already passed this space.",
+    "crossRefs": ["8.3"],
+    "legacyRef": "20.0"
+  },
+  {
+    "id": "bwn-8-2-3",
+    "section": "8.2.3",
+    "title": "War Tracks",
+    "summary": "How the Europe North and South War Tracks advance and how NATO supplies and hits can cancel an advance.",
+    "text": "The Europe North and South War Tracks move one box West each turn.\n\nAn advance is cancelled if the NATO player removes one 'Supplies' or two 'Partial Supplies' markers from the War Track.\n\nThis is never mandatory - the supplies remain until NATO chooses to use them.\n\nIf there are three Hit markers on the Europe South War Track, this cancels an advance.\n\nThen remove up to three Hit markers at the end of every turn.",
+    "crossRefs": [],
+    "legacyRef": "20.0"
+  },
+  {
+    "id": "bwn-8-2-4",
+    "section": "8.2.4",
+    "title": "Track Icons",
+    "summary": "Reference of icons appearing on the War and Invasion Tracks: Interceptors, Submarine Loss, Mine Clearing, Captured Facilities, Hammer and Sickle victory icons, and NATO nuke trigger.",
+    "text": "Interceptors: Are shown on the Danish Invasion Track and the Europe South War Track. Each shows the number of interceptor's active over Denmark and Turkey respectively for purposes of Interception [ 7.1.1.1 ].\n\nSubmarine Loss: Represents the loss of ports and related facilities. When a Front marker occupies a box with one or more symbols, NATO must remove Submarine steps if it is possible to do so at the end of the turn. Norwegian losses must be Norwegian. German must be German. Danish may be Danish or German. All selections are made by the NATO player.\n\nMine Clearing: Allows the Soviet player to attempt to reduce the current Mining level of the Danish Strait at the end of the turn by rolling the indicated value on one die [ 8.4.2.1 ]\n\nCaptured Facilities: These are always represented by a port icon. Whenever a Soviet army occupies one of these boxes, a NATO facility has been captured [ 8.3 ].\n\nHammer and Sickles: This shows when the game is won. To win the Soviet player must be able to count four hammer and sickle symbols on War Tracks overrun by Soviet armies.\n\nNukes - Entering the Ruhr: NATO will use nuclear weapons if the Ruhr box is entered and the Soviet player holds less than two First Strike Points or less than four First Strike Points if chemical weapons have been used. If nukes are used, place the War marker one box East of the Ruhr, then remove all supplies from the War Track. NATO's first use of nuclear weapons prevents the Soviet player from triggering the use of battlefield nuclear weapons for the rest of the game.\n\nIf the Soviets have already used battlefield nuclear weapons then this NATO effect is ignored (only the first use player gains an advantage) however, if the Soviets enter any Hammer and Sickle space via the use of battlefield nuclear weapons, reduce its worth to one Hammer and Sickle – this can be marked with the Nuclear Weapons markers as a reminder.",
+    "crossRefs": ["7.1.1.1", "8.3", "8.4.2.1"],
+    "legacyRef": "20.0"
+  },
+  {
+    "id": "bwn-8-3",
+    "section": "8.3",
+    "title": "Capturing Facilities",
+    "summary": "Rules for capturing NATO facilities (Iceland, Bodo, Orland, Kiel/Schleswig, Antwerp/Amsterdam, La Spezia, Toulon/Istres) by advance or amphibious landing.",
+    "text": "There are several facilities which can be captured during the game: Iceland, Bodo, Orland, Kiel/Schleswig, Antwerp/Amsterdam, La Spezia, Toulon/Istres.\n\nThe majority of these are captured automatically if a Soviet Army or Troops marker moves into the relevant box on the War or Invasion Track. Place a 'Heavy' damage marker on the named facility if this happens and rebase any NATO units there to the nearest base measured in Sea Zones; selecting if there are multiple options.\n\nKeflavik, Bodo and Orland can be captured due to an Amphibious Landing - If an enemy Troop marker is placed at any of these sites, place a Soviet Airbase marker and roll for the condition of the airfield: roll one die per troop landed and reduce one level from 'Heavy' to 'Light' to 'undamaged' for each roll of an 8 or higher.\n\nPlace the appropriate number of hits on the facility so that it is damaged to the correct level. Then rebase any NATO aircraft there to the closest friendly airfield, all are spent.\n\nThe Soviet player may immediately place up to two Fighter units and two Strike units at the new base from the Kola Peninsula bases, Baltic bases or another captured airfield. Any Strike units moved are ''Spent''. A facility always retains at least the damage it had when captured. If the captured site is Orland/Trondheim, Bodo/Narvik is automatically captured as well but it is always marked 'Heavily' damaged with no roll allowed to reduce this.\n\nNote: The capture of La Spezia gives the Soviet player a port with a damage value of 2/4. It has no effect on the operation of Toulon/Istres.",
+    "crossRefs": [],
+    "legacyRef": "19.0",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "'A facility always retains at least the damage it had when captured' means that if the base was Heavily damaged when you landed, the capture roll cannot make it better – it will be Heavily damaged. It can be repaired thereafter.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Once Bodo is in Soviet hands (same zone as Kola), basing aircraft there can be useful: dispersal protection, basing for Badger strikes, and CAP protection of Soviet troops against NATO strikes.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-8-4",
+    "section": "8.4",
+    "title": "Nations",
+    "summary": "Section covering the special national rules for Turkey, Denmark, Norway, Iceland, Cuba, Syria, and Libya.",
+    "text": "Special rules covering nations relevant to the Blue Water Navy conflict.",
+    "crossRefs": ["8.4.1", "8.4.2", "8.4.3", "8.4.4", "8.4.5", "8.4.6", "8.4.7"],
+    "legacyRef": "21.0"
+  },
+  {
+    "id": "bwn-8-4-1",
+    "section": "8.4.1",
+    "title": "Turkey",
+    "summary": "Turkey provides a Mediterranean Convoy destination and intercepts Soviet aircraft; the Turkish Strait is closed for the game.",
+    "text": "Turkey has a Mediterranean Convoy destination port to which NATO may deliver supplies. It is also a barrier to Soviet aircraft—they may overfly Turkey but will be intercepted by the number of aircraft shown by symbols on the Europe South War Track. Use the Turkish F-4 Phantom printed on the map for all Interception resolution.\n\nThe Turkish Strait is closed for the duration of the game.\n\nDesign note: It is assumed it's blocked off either by the Turks themselves or Soviet bombing.",
+    "crossRefs": [],
+    "legacyRef": "21.1"
+  },
+  {
+    "id": "bwn-8-4-2",
+    "section": "8.4.2",
+    "title": "The Danish Strait",
+    "summary": "Mining rules for the Danish Strait and step-loss procedure when Soviet subs or Task Forces transit.",
+    "text": "The Danish Strait may be 'Lightly' mined or 'Heavily' mined depending on the scenario.\n\nIncrease the Mining level by one at the end of each turn if the Soviet player has not placed a Troops marker on the Danish Invasion Track via Amphibious Landing at some point during the game.\n\nAny Soviet submarine moving through must roll one die if 'Lightly' mined or two dice if 'Heavily mined, taking a step loss on rolls of 1 - 4. Roll one die less if the Submarine Unit is marked Small (S) or Non-Magnetic (N) to a minimum of 0 dice.\n- Soviet Task Forces roll two dice ('Light') or four dice ('Heavy'.)\n  - Odd hits must go to a Convoy or Amphib unit if present.\n  - Other hits are allocated freely by the player taking the damage.",
+    "crossRefs": ["8.4.2.1"],
+    "legacyRef": "21.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "The Danish Strait mine counter is for moving through the Strait, not for Soviet Task Forces actually landing troops in Denmark.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-8-4-2-1",
+    "section": "8.4.2.1",
+    "title": "Clearing the Strait",
+    "summary": "Soviet end-of-turn die roll to reduce mining level when troops occupy a Mine icon box; clearing the strait triggers mining of NATO ports.",
+    "text": "At the end of any turn when the Soviet troops marker on the Danish Invasion Track is in a box with a Mine symbol the Soviet player may roll the die to reduce the strait mining value by one level (Heavy to Light to Clear). The required roll is listed on the track.\n\nIf the Strait is cleared then French, British, Belgian and Dutch ports are immediately marked 'Heavily' mined.\n\nDesign note: Soviet fast attack craft surge into the English Channel.",
+    "crossRefs": [],
+    "legacyRef": "21.2.1"
+  },
+  {
+    "id": "bwn-8-4-3",
+    "section": "8.4.3",
+    "title": "Norway",
+    "summary": "Surrender of Norway when Oslo is taken; the Soviet player then chooses one of two end-of-turn bonuses.",
+    "text": "If the last box on the Norway Invasion Track is entered, Oslo is occupied and Norway surrenders.\n\nThereafter, at the end of each turn, including the turn of surrender, the Soviet player may choose one of the two following bonuses:\n\n1. Roll a single bombing die against the UK airfields, or against the Belgian/Dutch facilities\n\n2. Place a 'free' Troops marker into the Danish Invasion Track on a die roll of 7+",
+    "crossRefs": [],
+    "legacyRef": "21.3"
+  },
+  {
+    "id": "bwn-8-4-4",
+    "section": "8.4.4",
+    "title": "Iceland",
+    "summary": "Special rules for amphibious landings on Iceland, including no defenses, mutual one-for-one removal, and SOSUS effects.",
+    "text": "A Soviet Amphibious Landing on Iceland will capture Iceland unless garrisoned by NATO troops which have been delivered by a NATO Amphibious unit or by a pre-game optional event.\n\nCapturing Iceland disables SOSUS permanently in the East 9-10 and East-6 Sea Zones and provides a Soviet captured airfield.\n\nEither side landing on Iceland delivers troops normally as per an Amphibious invasion, but there are no invasion defenses.\n\nDelivered troops remove one another on a one for one basis.\n\nIf Sverdlov or N Jersey/Iowa is present, and the last friendly troop would be removed, retain one troop on a die roll of 4+ (Iowa) or 6+ (Sverdlov).\n\nA facility is captured only if a friendly Troop marker remains after the combat. If both sides are mutually destroyed by a landing, place 'Heavy' damage on Keflavik.",
+    "crossRefs": [],
+    "legacyRef": "21.4",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "If the USSR has captured Iceland with troops there, NATO cannot bomb those troops to harm them – NATO can land its own marines, but otherwise cannot harm the invading troops.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-8-4-5",
+    "section": "8.4.5",
+    "title": "Cuba",
+    "summary": "Cuba is an inactive Soviet ally providing limited basing; NATO can attack Cuba at 6 OPS to neutralize it, triggering a special procedure.",
+    "text": "Cuba begins as an inactive Soviet ally.\n\nThis allows limited Soviet basing on Cuba, and via card play, participation of the Soviet Lourdes intelligence station and Cuban intelligence apparatus which the NATO player cannot influence unless NATO chooses to attack Cuba. Additionally, Cuba has a minor port which can rearm Soviet submarines. No Soviet air Strike units may base in Cuba while inactive, but one MP unit may base there. The Lourdes facility begins each game on Cuba. (See 2.2.4.1 for the effect of destroying the facility).\n\nDesign note: The largest foreign Soviet intelligence-gathering facility in the world during the Cold War, located close to the US coast – the station was extremely important to Soviet intelligence gathering operations.\n\nThe US may choose to attack Cuba during the game by spending 6 OPS and resolving the following:\n\n1. The Soviet player deploys the Cuban submarine within one zone of Cuba on the roll of 8+ otherwise it begins in port. Deploy the Cuban Air Units on Cuba with the SAM marker.\n\n2. The US may resolve up to three OPS worth of Submarines or Task Force cruise missile attacks against Cuba for no OPS cost.\n\n3. Place the four US units marked 'Cuba' in Florida and fly an immediate Strike mission with them.\n\n4. Cuba is now active, the Soviet player may use Cuban forces as his own, as well as immediately deploying up to three air units available at any Soviet base to Cuba. All are marked 'Spent'.",
+    "crossRefs": ["2.2.4.1"],
+    "legacyRef": "21.5",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "While Cuba is inactive, no Soviet air Strike units may base in Cuba but one MP unit may base there and can act as usual. Soviet Strike planes transferred to Cuba via card cannot conduct their normal missions until Cuba is activated (or attacked by the US).",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-8-4-6",
+    "section": "8.4.6",
+    "title": "Syria",
+    "summary": "Syria is a Soviet ally with no forces of its own that functions as a Soviet base.",
+    "text": "Syria starts as a Soviet ally but has no forces of its own. It is a Soviet base.",
+    "crossRefs": [],
+    "legacyRef": "21.6"
+  },
+  {
+    "id": "bwn-8-4-7",
+    "section": "8.4.7",
+    "title": "Libya",
+    "summary": "Libya is neutral and only enters play via an Option marker.",
+    "text": "Libya is neutral and only enters play via an option [ 10.3 ].",
+    "crossRefs": ["10.3"],
+    "legacyRef": "21.7"
+  },
+  {
+    "id": "bwn-9-1",
+    "section": "9.1",
+    "title": "Soviet Boomers (SSBNs)",
+    "summary": "Soviet SSBNs have Payload values and operate in three on-station areas (Boomer Bastion, Arctic Ice, First Strike Zones); FSPs can be spent on multiple powerful effects.",
+    "text": "Design note: A 'Boomer' is a slang term for an SSBN submarine which carries nuclear missiles and is designed to provide an assured nuclear strike capability against the enemy.\n\nEach SSBN in the game has a Payload value on the counter which represents the throw weight of that unit in terms of warheads, TNT equivalent, and targeting capability.\n\nThe Soviet Boomers are regular game units which can operate anywhere on the map but have three specific areas where they are 'on-station' and can provide a game effect: The Boomer Bastion, under the Arctic Ice and on-station at First Strike Zones [ 2.3.3 – 2.3.5 ].\n\nFirst Strike Points can be 'Spent' when active on the following:\n\n- Anti-Satellite System - place one or two points in Tyuratam. While present, prevents NATO play of 'Whitecloud' and 'Snoopers Detect Raid'. Causes each NATO detection die roll against Soviet Task Forces to apply -1 per First Strike Point in the Tyuratam box.\n\n- Additionally, if there are two First Strike Points in the box, NATO must deduct 1 OPS from each card played. At the end of each turn roll one die and remove a First Strike Point on a roll of 6+.\n\n- Take a step from the strategic reserve – one point per step. If taking one step, reduce a unit in the reserve by a step and increase a unit on the map by a step.\n\n- Trigger the use of nuclear weapons at sea - three points [ 10.2 ].\n\n- Use battlefield nuclear weapons - five points (move an army two boxes, reducing victory locations to one Hammer and Sickle. Move Soviet stability one right. Prevents NATO use of nuclear weapons [ 8.2 ] ).\n\n- Prevent NATO use of battlefield nuclear weapons when entering the Ruhr space - two points or four if chemicals were previously used by the Soviet player.",
+    "crossRefs": ["2.3.3", "2.3.5", "8.2", "10.2"],
+    "legacyRef": "22.0",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "The reserve Tu-22M counters do not start on the map; they are placed using First Strike Points (one point per step taken from the strategic reserve).",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-9-1-1",
+    "section": "9.1.1",
+    "title": "First Strike Points (FSPs)",
+    "summary": "How FSPs are earned: through card play and at the end of First Strike turns based on on-station SSBN Payload value; 1989 Yankee values noted.",
+    "text": "Design note: First Strike Points represent the nuclear posturing of the two sides. If the Soviets can maintain a credible First Strike capability, the Politburo (Soviet leadership) will feel able to take aggressive actions such as using nuclear weapons or assassinating high value targets. In game terms, FSP's can be spent on powerful effects for the Soviet player.\n\nThe Soviet player earns First Strike Points through card play. In addition, at the end of a turn marked with a First Strike icon, if the relevant SSBN submarine type is in an appropriate First Strike area then count the total Payload value on-station. If the total is 6 or more, give the Soviet player a First Strike Point.\n\nIn 1989 a Yankee class is still worth two per step for the Soviet player, they are just worth less to NATO when killed. This is signified by the '-1 per step' marker placed during setup as a reminder.\n\nDesign note: By 1989 the Soviets knew the Yankee was heavily outclassed, but the Soviets rarely threw anything away that was still sea worthy, so patrols continued.",
+    "crossRefs": [],
+    "legacyRef": "22.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Soviet 'First Strike' event card: 'Play before spending any points' means it can be used on day two (but has to be before you spend any points) and cannot be played from hand using the +2 OPS cost (because then you would have spent points to do so).",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Number of FSPs collected by the FIRST STRIKE card is calculated by totaling SSBN payload on station + # SSBN steps under the arctic ice. 4-7 generates 1 FSP. 8+ generates 2 FSP.",
+        "citation": "Cards clarifications (Chapter 11)"
+      }
+    ]
+  },
+  {
+    "id": "bwn-9-1-2",
+    "section": "9.1.2",
+    "title": "Soviet Nuclear Strike Capability",
+    "summary": "Tracking killed SSBN Payload value to advance the Soviet Nuclear Strike Capability Track and trigger Stability rolls.",
+    "text": "Design note: If the US can eliminate Soviet second-strike assets the Soviets will begin to fear a nuclear exchange.\n\nKeep track of the SSBN Payload value killed on the Soviet Nuclear Strike Capability Track –use the SSBN Kills marker on the Missile Track or dead SSBNs and Hit markers to keep a talley.\n\nNote: Killing one step of SSBN earns the difference in value between its two-step and one-step side.\n\nExample: A two-step Typhoon has a Payload value of 8. If NATO kills one step, add 4 to the Payload value killed.\n\nWhen the Payload value killed falls within the requirements listed on the Soviet Nuclear Strike Capability Track, move a box up on the track and roll the indicated number of Soviet stability dice. These rolls can affect the Soviet Stability Track on the map which has a variety of negative consequences for the Soviet player including an immediate game-ending coup.",
+    "crossRefs": ["9.4"],
+    "legacyRef": "22.2"
+  },
+  {
+    "id": "bwn-9-2",
+    "section": "9.2",
+    "title": "NATO Boomers (SSBNs)",
+    "summary": "NATO Boomers are abstract (no counters); Soviet SSBN Hunting marker can be earned via spies or ASW '10' rolls, then spent to roll on the NATO Boomer Hunt Table.",
+    "text": "NATO Boomers are assumed to be dispersed over the world's oceans and are not represented by specific counters.\n\nDesign note: Unlike NATO the Soviets really didn't have the capability to hunt NATO SSBNs in any significant way. Additionally, the SSBNs were generally the best technology available and spent their time trying to hide and moving slowly. They would have been very difficult to detect and attack in any number.\n\nThe 'SSBN Hunting' marker represents the Soviet effort to hunt down NATO Boomers. It can be earned by the Soviet player through spy activity or through the roll of a '10' with an Anti-Submarine Warfare die [ 7.2 ]. Once in-hand it can be spent through the roll of another '10' when resolving Anti-Submarine Warfare. This then results in a roll on the NATO Boomer Hunt Table.\n\nDie Roll / NATO Boomer Hunt\n- 1-3: Counter-Attacked. The Soviet submarine takes a step loss\n- 4-7: Near Miss. The Soviet player gains one First Strike Point.\n- 8-10: Sunk! The Soviet player gains two First Strike Points or one First Strike Point and reduces the Soviet SSBN killed total by three points.\n\nAdd the Tactical Value of the resolving submarine to the die roll.",
+    "crossRefs": ["7.2", "9.3"],
+    "legacyRef": "23.0"
+  },
+  {
+    "id": "bwn-9-3",
+    "section": "9.3",
+    "title": "Soviet Spies",
+    "summary": "The Spies Track on the map represents Soviet infiltration; spies can be used for detection placement, SSBN Hunting marker, ASW re-rolls, or auto-successful First Strike evasion.",
+    "text": "The Soviet player has a 'Spies' Track' in the top left of the map which represents the thoroughness of Soviet infiltration of NATO agencies.\n- Place a Poor Detection marker on any NATO Task Force.\n- Take the SSBN Hunting marker.\n- Re-roll up to three ASW dice rolled. One re-roll per unit maximum.\n- Automatically succeed on all First Strike submarine evasion rolls in a single zone (even after rolling) [ 6.7 ].\n\nThey can be used whenever desired until there are none remaining.\n\nAfter each use, roll a die and reference the Soviet Spy Infiltration Track for the die roll range marked in the current box. If the die is within the indicated range, a spy has been caught - move the track down one box (to the left).",
+    "crossRefs": ["6.7"],
+    "legacyRef": "24.0"
+  },
+  {
+    "id": "bwn-9-4",
+    "section": "9.4",
+    "title": "Soviet Stability",
+    "summary": "The Soviet Stability Track represents Soviet bloc stability; sliding right applies negative effects including Politburo Intervention forcing the Nuclear Strike card.",
+    "text": "The Soviet Stability Track shows the stability of the Soviet bloc during the conflict. It can be altered via the play of certain card events and through the sinking of Soviet SSBN Payload value. When the Soviet Stability marker moves to the right, immediately apply the effect detailed.\n\nPolitburo Intervenes: Causes the Soviet player to take the 'Nuclear Strike' card from the deck (reshuffle after) and place it in-hand. From this point on it cannot be discarded nor played for its OPS value. It can only be played for the event and it must be the card held at the end of the turn.",
+    "crossRefs": [],
+    "legacyRef": "27.0",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "'Apply -1 to Soviet stability' on NATO card 18 is synonymous with 'stability one right' – move down the track one box towards coup.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-9-5",
+    "section": "9.5",
+    "title": "Missile Ammunition Tracking",
+    "summary": "Only units with an (L) designation track SAM ammunition; firing is optional and applies a marker for that unit.",
+    "text": "Only units with an (L) designation track SAM ammunition usage. They never have to fire, only if the owner wants them to. When they do, they receive the Ammunition marker for that unit as specified below.",
+    "crossRefs": ["9.5.1", "9.5.2", "9.5.3", "9.5.4"],
+    "legacyRef": "13.9"
+  },
+  {
+    "id": "bwn-9-5-1",
+    "section": "9.5.1",
+    "title": "Ticonderoga VLS (Vertical Launch System)",
+    "summary": "How Ticonderoga ammunition is tracked through three states (full, 2-4 Fired, Empty); reload only at a Major Port.",
+    "text": "- If it fires between 2 and 4 SAMs, mark it '2-4 Fired' - it now has a SAM value of 4.\n- If it repeats this, mark it Empty – it now has a SAM value of 0.\n- If it fires 5 or more in one salvo, mark it Empty.\n\nIt can be reloaded only in a Major Port.",
+    "crossRefs": [],
+    "legacyRef": "13.10"
+  },
+  {
+    "id": "bwn-9-5-2",
+    "section": "9.5.2",
+    "title": "Kirov and Kalinin – Soviet Named Capital Ships",
+    "summary": "Ammunition tracking for the Soviet named capital cruisers; reload only at a Major Port.",
+    "text": "If they fire 2 or more SAMs, mark '2+ Fired, One Volley Left'\n\nIf it repeats this, flip the ammo marker over– it now has a SAM value of 1 Kirov, 2 Kalinin.\n\nThey can be reloaded only in a Major Port.\n\nDesign note: These units have many point defense missiles, with a huge quantity of ammo.",
+    "crossRefs": [],
+    "legacyRef": "13.11"
+  },
+  {
+    "id": "bwn-9-5-3",
+    "section": "9.5.3",
+    "title": "Cruise Missile Ammunition",
+    "summary": "Cruise missile-armed units receive a 'Cruise Missiles Fired' marker after firing; all are fired at once (no partial use).",
+    "text": "All units with cruise missiles receive a 'Cruise Missiles Fired' marker when they have fired them.\n\nFor the Soviets, use this marker for green, yellow and black missiles, and white missiles from submarines (anything capable of also attacking land targets).",
+    "crossRefs": [],
+    "legacyRef": "13.12"
+  },
+  {
+    "id": "bwn-9-5-4",
+    "section": "9.5.4",
+    "title": "Anti-Ship Missile Ammunition",
+    "summary": "Anti-ship missile-armed units receive an 'Anti-Ship Missiles Fired' marker; all are fired at once.",
+    "text": "All units with anti-ship missiles receive an 'AntiShip Missiles Fired' marker when they have fired them. They cannot be partially used. When fired, they are all fired.\n\nFor the Soviets, use this marker for red and white missiles, except white missiles from submarines (which are short range and antiship only).\n\nDesign note: This system allows for an easy way to track ammunition without complicated bookkeeping.",
+    "crossRefs": [],
+    "legacyRef": "13.13"
+  },
+  {
+    "id": "bwn-10-1",
+    "section": "10.1",
+    "title": "Pre-Game Technical Theft",
+    "summary": "Optional Soviet pre-game purchase of Technology markers (SAMs, Anti-Ship Missiles, ECM, Torpedoes, Air to Air Missiles) by spending spies.",
+    "text": "Design note: In the Cold War the Soviet intelligence apparatus specialized in stealing NATO technical secrets and equipment. Soviet intelligence efforts were extensive and extremely successful, with the GRU (Army Intelligence) maintaining a shopping list of NATO secrets to steal next and having teams dedicated to copying and reverse-engineering all manner of stolen technical items.\n\nIn the game NATO generally has the edge as its units are better rated.\n\nThe Soviet player can choose to put in play some of the available Technology markers at the start of the game, each of which has the following effects:\n\n- SAMs (Cost 2 spies): Add +1 to all SAM to-hit rolls (land and sea based).\n- Anti-Ship Missiles (Cost 1 spy): Resolve Soviet missile hit selection as though NATO – allocating every 2nd hit instead of every 3rd hit.\n- ECM (Cost 2 spies): Soviet Bear-G and Tu-22M Backfires always receive an 8+ save to avoid a step loss when airborne. Ignored if they already receive a better save.\n- Torpedoes (Cost 2 spies): Apply +1 Tactical Value (in total) whenever a Soviet nuclear submarine attacks a NATO submarine. Soviets may use the Harpoon rule when attacking NATO Task Forces. Soviets develop a similar capability weapon - AS-20 Kayak. [17.11, step 4]\n- Air to Air Missiles (Cost 1 spy): Apply +1 when attacking with fighters, and when resolving 'Striking Soviet Troops' [ 7.5.5 ]\n\nNote that only Soviet units gain any bonus (Not Cuban, Libyan, Syrian, …).\n\nStealing Technology\n\nThe cost of each Technology marker, in spies removed from the Spies' Track, is given on each marker.",
+    "crossRefs": ["7.5.5"],
+    "legacyRef": "25.0"
+  },
+  {
+    "id": "bwn-10-2",
+    "section": "10.2",
+    "title": "Nuclear Weapons at Sea",
+    "summary": "Triggered by 3 FSPs; applies Soviet Shkval revenge, nuclear torpedoes, nuclear anti-ship missiles, and nuclear SAMs rules.",
+    "text": "These are triggered via the use of First Strike Points [ 9.1.1 ]\n\nWhen in use apply the following rules:\n\nNote: Using battlefield nuclear weapons does not trigger the use of nuclear weapons at sea. Also note that NATO receives no benefit for the use of nuclear weapons at sea, but there are cards which can punish the Soviet player for first use (see 'Nuclear Fear' NATO card).\n\nSoviet Shkval: (nuclear counter-fire super-cavitating torpedo)\n\nA Soviet nuclear submarine taking a step loss caused by a NATO submarine's N10 roll also causes a step loss to the attacking submarine.\n\nDesign note: A very fast nuclear torpedo designed as a revenge weapon for Soviet submarines.\n\nSoviet Nuclear Torpedoes\n\nAll Soviet submarines automatically use nuclear torpedoes when attacking a Task Force.\n- Any hit Capital ship with a damage modifier value is automatically destroyed. Capital ships without a modifier follow the rules in [ 5.1.5.1 ].\n- Non-Capital ship units follow the standard rules (they are dispersed).\n- Convoys and Amphibs take two hits on the first 7-9 result (hit on PM/Amph/Convoy) instead of the usual one hit. This applies per attack.\n\nSoviet Nuclear Anti-Ship Missiles\n\nAll Soviet missiles automatically use the following rule when attacking a Task Force:\n- For every three incoming missiles, the third one is nuclear armed, so if three missiles make it through the SAMs one is a nuke but if only two make it through, neither is a nuke. Resolve nukes first, then resolve non-nuclear missiles. Note: Nuclear weapons always hit something.\n- Roll a die, on an 8+ the Soviet player allocates it, otherwise the NATO player allocates it. Any hit kills the target ship entirely, except for a convoy or Amphib unit which takes three hits.\n\nDesign note: this represents ~4 high yield tactical nuclear weapons.\n\nSoviet Nuclear SAMs\n\nIf the Soviet SAM level of a target land facility is at least two on the counter, treat it as being worth +2 more than its current printed value against Air Units only (not against cruise missiles).",
+    "crossRefs": ["5.1.5.1", "9.1.1"],
+    "legacyRef": "26.0"
+  },
+  {
+    "id": "bwn-10-3",
+    "section": "10.3",
+    "title": "Option Markers",
+    "summary": "Alt-history Options drawn from a cup at game start; both players pick markers, with adjustments for FSPs or spies used.",
+    "text": "An option is an alt-history event or technology that could have happened but historically was never deployed.\n\nIf using this rule, follow this process before starting the game (You'll need an opaque container):\n- The US player draws two Option markers, selects one and returns the other to the cup. For each additional First Strike marker given to the Soviet player (up to two) the US player may draw two additional markers, keeping one more each time. All are revealed to the Soviet player.\n- The Soviet player draws two Option markers, selects one and returns the other to the cup. For each First Strike marker returned, or spy expended (two max) the Soviet player may draw 2 and keep 1 additional marker.\n\nOption Markers and Effects:\n\n- Cable Tapping: Once per turn count any Soviet airstrike as detected by interceptors or re-roll all dice rolled by one unit in Anti-Submarine Warfare with an additional +1 applied.\n- ASAT System: Twice per game select up to 3 RORSATs, roll a die for each, and remove each on a 6+ then give 1 FSP to the Soviet (each time).\n- Hydrophones: Add two Hydrophone markers to the map, each provides +1 Anti-Submarine Warfare dice within its Sea Zone. They must be placed in different zones.\n- Production (NATO): Select 8 points worth of optional units to add to the game:\n  - Patriot's cost buys both counters, deployed at any NATO base.\n  - UK Queen Elizabeth replaces Invincible/Illustrious and Air Units.\n  - Norwegian FAC flotilla adds 2 dice set to '1' during all Soviet Amphib landings in Norway. (Place in Norway)\n  - Canadian Hydrofoils see rules below.\n\nCanadian Hydrofoils move when Slow Ships move (moving one zone) and may spend one Operations Point to roll their ASW dice, marking themselves 'Spent'. They become Fresh at the end of each turn. They can take a step loss only by missile attack requiring one or more units in their zone to expend 3 missiles to cause a loss. They must stay within 1 zone of CFB Halifax at all times.\n\nThanks to Douglas Burrell for the suggestion. Further reading: 'RCN FHE-400 deep water hydrofoil' It was designed as an ocean-going anti-submarine platform but never entered active service.\n\n- Helicopters for Convoys: Each NATO Convoy with 3 hits or less counts as having an accompanying helicopter carrier for submarine vs. Task Force attacks.\n- Decoys for Convoys: Amphibs and Convoys gain an 8+ save against any hits caused by Soviet torpedo attacks. Nuclear torpedoes ignore this rule.\n- Reinforce Iceland: Iceland may receive any two of the options below:\n  - Additional F15 air unit.\n  - Patriot battery - A chance to shoot down attacking cruise missiles.\n  - Base Hardening - makes it harder to heavily damage the base.\n  - One Troop marker - Adds US troops to the defense of Iceland.\n- Sea Lance: US submarines are equipped with Sea Lance rocket torpedo (allows US use of the rocket torpedo rule by all US submarines).\n- Tomahawk: Add 4 points of conventional cruise missiles to the order of battle, two may be submarine launched from 1985. All must be added to US units only. A Submarine Unit can only have one cruise missile in total. A Surface Unit can have a maximum of two cruise missiles in total. In 1983 these are the only conventional cruise missiles NATO will have.\n- Greece and Yugoslavia active: Add the Greek Submarine Unit to the game beginning in either Med 5-6 or Med 7-8 at the NATO players option. Place the option marker on the Europe South War Track. At the start of Turns 1 and 2, roll three dice and place one hit on the Soviet troops in Yugoslavia for each roll of 7 or higher\n- C3 Centre: Once per turn upgrade a Poor detection to a Good detection at any time. Place the centre on the map in either of the Kola, Baltic or Black Sea Soviet facilities. It can be attacked and destroyed which removes it, and its rule, from the game.\n- SSBN Focus: Add two 'First Strike – half value' markers to the map up to two zones from either US zone. All SSBNs (Deltas and Yankees) in these zones count half value towards First Strike Points calculations. The Soviet player may deploy an additional 2 SSBNs and two escort nuclear submarines to these zones at the start of the game.\n- Cuba Active: Deploy all the Cuban forces at the start of the game; they are controlled by the Soviet player. Place the Major Port marker in Cuba. Ignore the usual Cuban deployments and deploy up to 4 submarines and any number of ships there. Up to six Air Units may be based in Cuba including fighters taken from any base. The NATO player receives the Cuba units at the start of the game.\n- Libya Active: Deploy all the Libyan forces at the start of the game; they are controlled by the Soviet player. Up to three Soviet Air Units may begin the game in Libya.\n- Arab-Israeli War: An Arab coalition invades Israel with Soviet cooperation. NATO must strike 'War Targets' in/near Israel with twelve strike hits total and/or deliver supplies with 'Med Convoys' with a 'Full Convoy' counting as six strike hits and a partial as four. The Convoy must deliver to a port in Sea Zone Med 7-8 (Israel). If this is not achieved before the end of Turn 6, Israel loses (+2 Hammer and Sickle). The Soviets may base one additional Air Unit in Syria.\n- Iceland Maskirovka: The Soviet player may place one Soviet Troops marker on Iceland if there are no NATO troops already there. Place all units from Iceland in Scotland and the Soviet player treats Iceland as a captured airbase. The Soviet player must roll for facility damage as though captured by two Troops (a bonus for surprise).\n- Tower Array and Quieting: Add the 6 markers provided to any nuclear submarines as desired. (This represents earlier acquisition of advanced propulsion and sensor technology)\n- Production (Soviet): Select eight points worth of optional units to add to the game:\n  - Imp SAM's cost buys all three markers replacing existing SAM counters.\n  - Akula and Oscar II cost +2 points each in 1983 and +1 point each in 1985\n- White Sea Bastion: Soviet SSBNs are protected in the White Sea by mine fields, corvettes etc. Soviet 'Second Strike' card event is not playable. The Bastion is in the White Sea, which is enterable for no additional movement point when entering the Barents Sea – place units into the Bastion box as normal. Bastion defenses now trigger on 1,2 and 3, and ALL Anti-Submarine Warfare rolls there are at +1 in addition to the Tactical Value. There are no Hydrophones, it's just a very small sea (comparatively).\n- Turkish Neutrality: Remove the Turkish units from the game and ignore Turkish Interception – Soviet Air Units can overfly the Black Sea to Med 7-8 without risk. Move the Europe South War Track one box left to Trieste. Ignore the 3rd hammer and sickle space on the Europe South War Track (Ankara) – this is earned by occupation of Lyon instead.",
+    "crossRefs": ["8.4.7"],
+    "legacyRef": "29.0"
+  },
+  {
+    "id": "bwn-10-4",
+    "section": "10.4",
+    "title": "Optional Rules",
+    "summary": "Introduction to the designer's optional rule list; '^' marks the rules the designer prefers to use.",
+    "text": "\"I always find it interesting to know which optional rules the designer plays with, so I have indicated this with an icon ^ next to the ones I like to use\"",
+    "crossRefs": ["10.4.1", "10.4.2", "10.4.3", "10.4.4", "10.4.5", "10.4.6", "10.4.7", "10.4.8", "10.4.9", "10.4.10", "10.4.11", "10.4.12", "10.4.13"],
+    "legacyRef": "30.0"
+  },
+  {
+    "id": "bwn-10-4-1",
+    "section": "10.4.1",
+    "title": "ASW Cooperation ^",
+    "summary": "Optional: MP aircraft can grant a friendly Fresh submarine 2 extra ASW dice at the cost of both being marked Spent.",
+    "text": "Favors neither.\n\nWhen a MP aircraft is activated and is present in a zone with a Fresh friendly submarine, the MP unit may allow the submarine to roll with two additional dice. Mark both units 'Spent'.",
+    "crossRefs": [],
+    "legacyRef": "30.1"
+  },
+  {
+    "id": "bwn-10-4-2",
+    "section": "10.4.2",
+    "title": "Harrier and Yak strikes ^",
+    "summary": "Optional: Harrier, Yak-38, and Kuznetsov CAG units may fly air Strike missions with bombs at range 0.",
+    "text": "Favors neither.\n\nHarriers, Yak-38's and Kuznetsov's Carrier Air Group unit can fly air Strike missions following the normal rules. They are armed only with bombs and have a range of 0 (they may attack targets in their zone).",
+    "crossRefs": [],
+    "legacyRef": "30.2"
+  },
+  {
+    "id": "bwn-10-4-3",
+    "section": "10.4.3",
+    "title": "Bombs Away! ^",
+    "summary": "Optional: Any air Strike unit may bomb enemy ships using the Air to Ground Bombing Table; SAM attacks scale with target TF SAMs.",
+    "text": "Favors NATO slightly.\n\nAll air Strike units can bomb enemy ships - to do so, use the Air to Ground Bombing Table [17.20].\n\nRoll one SAM attack (use the SAMs vs. bombing procedure) for every two points of SAMs the defending Task Force has in total.\n\nA US CAG may perform this type of attack as well as using its missiles - in which case roll one SAM attack per three SAMs the defending force has, resolved immediately after the missile attack. This represents the A-7 Corsairs bombing whilst A-6 Intruders attack with Harpoon.\n\nAll hits caused by the Strike units are allocated by the attacker and count as missile hits for damage caused (therefore causing two hits each to Convoys and Amphibs).",
+    "crossRefs": [],
+    "legacyRef": "30.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Using Bombs Away! to attack ships does NOT allow SEAD against ships – SEAD is for ground targets only.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-10-4-4",
+    "section": "10.4.4",
+    "title": "Bear-G may not have existed in quantity",
+    "summary": "Optional: Reduce Bear-G availability (1 step in 1983, 2 in 1985, 4 in 1989); Soviet receives OPS/card-draw compensation.",
+    "text": "Favors NATO moderately.\n\nThere is some uncertainty about when the Bear-G was in service from the sources I used. Therefore, in 1983 treat the Bear-G unit as one step (it starts flipped). Give the Soviets two steps total in 1985 and all four steps in 1989.\n\nThis reduces Soviet long-range strike capability by three missiles in 1983 and six missiles in 1985. As partial re-payment award the Soviet player two saved OPs at the start of the game or an additional two card draw whenever desired, or a mixture of one of each.",
+    "crossRefs": [],
+    "legacyRef": "30.4"
+  },
+  {
+    "id": "bwn-10-4-5",
+    "section": "10.4.5",
+    "title": "F-14 Phoenix Missile Defense ^",
+    "summary": "Optional: NATO F-14s can fire Phoenix missiles to shoot down incoming Soviet missiles instead of attacking bombers.",
+    "text": "Favors neither.\n\nThis option allows the NATO player to use F-14's to defend against Soviet missile attacks with Air Units by shooting down missiles instead of trying to attack the bombers. The launching bombers will not be damaged at all by the CAP F-14's.\n\nWhen under air attack and NATO F-14's are defending, the NATO player can declare a 'Phoenix Defense' and roll the # dice on the F-14's counter (one F-14 per attacking air Strike unit maximum). For each roll of 1 through 3 on each die, that many missiles are shot down prior to SAM fire.",
+    "crossRefs": [],
+    "legacyRef": "30.5"
+  },
+  {
+    "id": "bwn-10-4-6",
+    "section": "10.4.6",
+    "title": "Dummy Task Forces",
+    "summary": "Optional: A Task Force may be empty; if 'Good' detected it is removed (returns to display), but a 'Poor' detected empty TF remains.",
+    "text": "Favors NATO slightly.\n\nA Task Force may be completely empty. If such a Task Force is ever 'Good' detected it is removed from the map – the Task Force is returned to the Task Force display. A 'Poor' detected force remains where it is.\n\nDesign note: This represents intentional disinformation by NATO, fishing fleets, merchants transiting from one port to another, unimportant targets and so on.",
+    "crossRefs": [],
+    "legacyRef": "30.6"
+  },
+  {
+    "id": "bwn-10-4-7",
+    "section": "10.4.7",
+    "title": "Charlie II Class submarine (SS-N-9 'Siren' Missile) ^",
+    "summary": "Optional: Charlie II submarines treat any long-range missile result as 'No attack' (short range only).",
+    "text": "Very slightly favors NATO, but 'historical'.\n\nCharlie II class submarines can attack at short range only. When rolling for a missile attack, treat a long-range result as 'No attack'.\n\nDesign note: Not only was the Siren a slow, high-flying missile but it also had a range of only about 50 nautical miles. Expect success only against very lightly defended targets.",
+    "crossRefs": [],
+    "legacyRef": "30.7"
+  },
+  {
+    "id": "bwn-10-4-8",
+    "section": "10.4.8",
+    "title": "Fast Moving Submarines - noisy ^",
+    "summary": "Optional: Subs that move 3 zones become Noisy (one noise level worse); does not apply to Akula, Oscar, Alfa, Sierra.",
+    "text": "Favors NATO slightly.\n\nAny submarine which moves three zones during a movement action is marked with a 'Noise' marker and counts as one noise value worse (10 to 9, 9 to 8). If they have a save, they still retain it. They are unmarked when they become unSpent (at the end of the turn).\n\nThis doesn't apply to Akula, Oscar, Alfa and Sierra class Soviet submarines as they can dive extremely deep which would help to mask the noise generated.",
+    "crossRefs": [],
+    "legacyRef": "30.8"
+  },
+  {
+    "id": "bwn-10-4-9",
+    "section": "10.4.9",
+    "title": "Submarines operating alone ^",
+    "summary": "Optional: Subs cannot use Hydrophone rule to roll an extra die at the cost of becoming Spent; instead they roll a single die and remain unSpent.",
+    "text": "Favors Soviets slightly.\n\nSubmarines cannot use the Hydrophone rule to spend themselves and roll an extra die, instead always taking the option to roll a single dice and remain 'unSpent'.\n\nDesign note: This represents hunter-killers being difficult to contact and accustomed to operating alone.",
+    "crossRefs": [],
+    "legacyRef": "30.9"
+  },
+  {
+    "id": "bwn-10-4-10",
+    "section": "10.4.10",
+    "title": "Soviet Air to Air Refueling Capability",
+    "summary": "Optional: Apply SALT-style restrictions to Backfires – they cannot use Tanker rules.",
+    "text": "Favors NATO significantly, somewhat reduces the fun factor – but it was requested!\n\nThe SALT negotiations should have limited the number of heavy Soviet bombers. If you think the agreement was kept and the Backfires were eventually included in the heavy bomber designation stipulated by the talks, (and therefore had any refueling capability removed) you can use this rule. Soviet Tu-22 Backfires may not use the Tanker unit rules.",
+    "crossRefs": [],
+    "legacyRef": "30.10"
+  },
+  {
+    "id": "bwn-10-4-11",
+    "section": "10.4.11",
+    "title": "Soviet Planning",
+    "summary": "Optional: At game start the Soviet player may discard and redraw cards one at a time up to five times to mulligan the opening hand.",
+    "text": "Favors Soviets.\n\nIf you want to play with some of these optional rules but feel that they lean a little towards NATO or else feel that the Soviet player needs a little bit of help in any case, use this option.\n\nAt the start of the game, the Soviet player may, one at a time, discard a card from his hand and draw another. Continue up to five times or until the Soviet player is happy to proceed.",
+    "crossRefs": [],
+    "legacyRef": "30.11"
+  },
+  {
+    "id": "bwn-10-4-12",
+    "section": "10.4.12",
+    "title": "Fighter Sweeps ^",
+    "summary": "Optional: An air Strike may consist of only fighters; resolved like a regular strike (interception + CAP), costing 1 OPS regardless of fighter count.",
+    "text": "Favors neither\n\nAn air Strike may be launched without any Strike component and may consist of only fighters. It is resolved in the same way – interceptors must intercept it and CAP must fight. At the end of fighter combat, the attacking fighters return to base 'Spent'. To fly a fighter sweep costs a single Operations Point regardless of the number of fighter units flying.",
+    "crossRefs": [],
+    "legacyRef": "30.12"
+  },
+  {
+    "id": "bwn-10-4-13",
+    "section": "10.4.13",
+    "title": "Shipwreck! ^",
+    "summary": "Optional: When resolving Soviet red Missile hit selection roll an extra die to determine whether the attacker can allocate the first step loss.",
+    "text": "Favors Soviets slightly\n\nWhen resolving Soviet red Missile hit selection roll an extra die to determine if the attacker can allocate the first step loss.\n\nDesign note : Shipwreck apparently had advanced target detection and classification systems.",
+    "crossRefs": [],
+    "legacyRef": "30.13"
+  },
+  {
+    "id": "bwn-11",
+    "section": "11",
+    "title": "Cards Clarifications",
+    "summary": "Designer's clarifications for specific Soviet and NATO cards (KGB Assassinations, First Strike, Strike UK Early Warning, Distant Support).",
+    "text": "Card / Clarification\n\n- Soviet Card KGB ASSASSINATIONS: This card is used immediately when placed down on the table by the Soviet player.\n- Soviet Card FIRST STRIKE: The number of FSPs collected is calculated by totaling 'SSBN payload on station' + (# SSBN steps under the arctic ice); 4-7 generates 1 FSP. 8+ generates 2 FSP.\n- Soviet Card Strike UK Early Warning: The new targets go into the UK airfield box, and fly to that location to hit them (for adjacent purposes, etc).\n- NATO Card Distant Support: Treat the F14 as CAP.",
+    "crossRefs": ["9.1.1"],
+    "legacyRef": null,
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Distant Support reaction event: F-14 must be adjacent; the card's intent is that the F-14 becomes CAP over the target fleet (requires a clarification).",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "KGB Assassinations works alongside the rule that some operations event cards say 'during this card play' – 'during the day that this event is used' is the intended reading.",
+        "citation": "QA v2.0"
+      }
+    ]
+  }
+]

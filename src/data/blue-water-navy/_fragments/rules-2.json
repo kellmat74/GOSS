@@ -1,0 +1,409 @@
+[
+  {
+    "id": "bwn-3",
+    "section": "3",
+    "title": "Game Play",
+    "summary": "Top-level chapter covering setup, turn sequence, end-of-turn, weather, and victory.",
+    "text": "Game Play.",
+    "crossRefs": ["3.1", "3.2", "3.3", "3.4", "3.5"],
+    "legacyRef": "9"
+  },
+  {
+    "id": "bwn-3-1",
+    "section": "3.1",
+    "title": "Game Setup",
+    "summary": "Refer to the scenario book for full setup instructions.",
+    "text": "Game Setup : See the scenario book for full setup instructions.",
+    "crossRefs": [],
+    "legacyRef": "9"
+  },
+  {
+    "id": "bwn-3-2",
+    "section": "3.2",
+    "title": "Turn Sequence",
+    "summary": "The game lasts a maximum of twelve turns; each turn represents 2 days.",
+    "text": "The game lasts for a maximum of twelve turns, each turn representing 2 days.",
+    "crossRefs": ["3.2.1", "3.2.2", "3.2.3"],
+    "legacyRef": "9"
+  },
+  {
+    "id": "bwn-3-2-1",
+    "section": "3.2.1",
+    "title": "Convoy Placement Phase",
+    "summary": "NATO receives one Convoy (and possibly a Med Convoy) and places them in a US port.",
+    "text": "During each turn, NATO will receive one Convoy and may receive a Mediterranean Convoy. The NATO player may then select from any of the counter types available (except the Fast Convoy, which enters via event only). All Convoys are then placed on the map in a port in the United States.",
+    "crossRefs": [],
+    "legacyRef": "9.1.1"
+  },
+  {
+    "id": "bwn-3-2-2",
+    "section": "3.2.2",
+    "title": "Reinforcement Phase",
+    "summary": "Reinforcements arrive in owning-nation ports; Soviet RORSATs placed at Tyuratam.",
+    "text": "Depending on the set-up chosen, each side has several units that will become available during the game. These include Amphibious units for both sides, RORSATs for the Soviets, and Carrier Battle Groups for NATO.\n\nDuring the Reinforcement Phase the units arriving are placed on the map. All reinforcements arrive in any port belonging to the owning nation. Soviet RORSATs are placed in the Tyuratam box.",
+    "crossRefs": [],
+    "legacyRef": "9.1.2"
+  },
+  {
+    "id": "bwn-3-2-3",
+    "section": "3.2.3",
+    "title": "Operations Phase",
+    "summary": "Both players reveal OPS cards, then alternate spending OPS on actions until exhausted.",
+    "text": "a. The Soviet player selects a card to play for its Operations Points and records the number on the Operations Point Record Track with the Soviet marker.\n\nb. The NATO player selects a card to play for its Operations Points and records the number on the Operations Point Record Track with the NATO marker.\n\nc. The Soviet player plays the first Operations Point to perform an action or Passes 4.2 .\n\nd. The NATO player plays an Operations Point to perform an action or Passes 4.2 .\n\ne. Continue alternating through c. and d. until no Operations Points remain.\n\nLook for events on the Operations Point Record Track: Fast, Repair, Ships, and Next Day. These trigger when both players' Operations Points marker reaches or passes the box and takes effect immediately after the current action is resolved.\n\nSee Chapter 4 for detailed Operations Phase sequence and description.",
+    "crossRefs": ["4.2", "4"],
+    "legacyRef": "9.1.3"
+  },
+  {
+    "id": "bwn-3-3",
+    "section": "3.3",
+    "title": "End of Turn Phase",
+    "summary": "Sequence of cleanup, invasion resolution, first strike check, weather roll, and card draw.",
+    "text": "End of Turn Phase. See subsections 3.3.1 through 3.3.6 for the ordered sequence.",
+    "crossRefs": ["3.3.1", "3.3.2", "3.3.3", "3.3.4", "3.3.5", "3.3.6"],
+    "legacyRef": "9.1.4"
+  },
+  {
+    "id": "bwn-3-3-1",
+    "section": "3.3.1",
+    "title": "Turn Clean-Up",
+    "summary": "Return Interception fighters and On Patrol MP, remove Spent markers, optionally remove sub On Patrol markers.",
+    "text": "a. Fighters on Interception missions and 'On Patrol' MP units may return to base.\n   If a zone contains Fighter units of both sides, all Air Units return to base.\n\nb. Remove all 'Spent' markers (except for Air Units at a heavily damaged base).\n\nc. Choose to remove 'On Patrol' markers on Submarine Units, or to retain them. Submarines with 'On Patrol' markers can only react to enemy units.",
+    "crossRefs": [],
+    "legacyRef": "9.1.4"
+  },
+  {
+    "id": "bwn-3-3-2",
+    "section": "3.3.2",
+    "title": "Invasions",
+    "summary": "Resolve Invasion War Tracks, mining changes, Norway bonus, and remove subs if required.",
+    "text": "a. Resolve the Invasion War Tracks (Denmark and Norway).\n\nb. Increase the Danish Strait Mining level if no Soviet troops ever landed in Denmark.\n\nc. Roll to clear the Danish Strait of mines if the War marker is in a relevant box.\n\nd. Select a bonus if Norway has surrendered.\n\ne. Remove submarines if required by the Invasion Tracks.\n\nCalculate War Track changes for Convoys and Soviet advances, then remove submarines, capture facilities and resolve NATO nuclear weapon usage if required by the War Tracks.\n\nRemove 3 hits on the Europe South War Track and the Norway and Denmark Invasion Tracks.",
+    "crossRefs": [],
+    "legacyRef": "9.1.4"
+  },
+  {
+    "id": "bwn-3-3-3",
+    "section": "3.3.3",
+    "title": "First Strike",
+    "summary": "If turn shows First Strike icon, award 1 FSP if 6+ SSBN Payload sits in First Strike zones.",
+    "text": "If the current turn has a First Strike icon, award the Soviet player 1 First Strike Point if at least 6 SSBN Payload value are in First Strike zones (ignore the Arctic and the Bastion).",
+    "crossRefs": [],
+    "legacyRef": "9.1.4"
+  },
+  {
+    "id": "bwn-3-3-4",
+    "section": "3.3.4",
+    "title": "Weather",
+    "summary": "Remove Weather markers, then roll for weather in each Weather Zone (see 3.4).",
+    "text": "Remove all Weather markers and roll for weather 3.4 in each Weather Zone on the map.",
+    "crossRefs": ["3.4"],
+    "legacyRef": "9.1.4"
+  },
+  {
+    "id": "bwn-3-3-5",
+    "section": "3.3.5",
+    "title": "Event Cards",
+    "summary": "Hold up to two cards (NATO) / one (Soviet), discard the rest, then draw up to 5.",
+    "text": "Choose to hold up to two cards (NATO); one card (Soviet) and discard all other cards.\n\nThen, draw up to 5 cards in-hand. If you held cards, you'll draw less new cards.\n\nNote : Holding cards is not mandatory.",
+    "crossRefs": [],
+    "legacyRef": "9.1.4"
+  },
+  {
+    "id": "bwn-3-3-6",
+    "section": "3.3.6",
+    "title": "Next Turn",
+    "summary": "Advance turn marker (game ends turn 12); roll to remove an FSP from the ASAT System box on 6+.",
+    "text": "Move the Turn Marker – The game ends at the end of turn 12.\n\nRemove one First Strike Point from the ASAT System box on a die roll of 6+.",
+    "crossRefs": [],
+    "legacyRef": "9.1.4"
+  },
+  {
+    "id": "bwn-3-4",
+    "section": "3.4",
+    "title": "Determine Weather",
+    "summary": "End-of-turn process to roll for Bad Weather in each Weather Zone using map tables.",
+    "text": "To generate weather, resolve the following process at the end of each turn (and the beginning of Turn 1 as per the scenario setup instructions). First remove all Bad Weather markers from the map. Then, roll one die for weather in each Weather Zone (West, Mid, East, North, Med) and use the appropriate table printed on the map. If the result is a number, roll that many dice and place Bad Weather in all Sea Zones with the matching number within that Weather Zone - some areas have more than one zone with the same number (eg: Barents Sea and the Bastion are both 9-10).\n\nA Sea Zone can only have a Bad Weather effect once a turn. If a rolled zone already has a Bad Weather marker, ignore the dice which rolled the same number – that die roll generates no further weather effect. Land bordering or within a zone with Bad Weather also has Bad Weather. Some land is affected by multiple Sea Zones.\n\nExample: The North Weather Zone is rolled for and the result is an 8 which is '2' – two dice are rolled – 7 and 8. The first Bad Weather marker is placed into North 7-8 to account for the 7. The 8 is ignored because it's a duplicate result.",
+    "crossRefs": [],
+    "legacyRef": "10",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "If a TF is in weather and the SHIPS event triggers, the TF should still process SHIPS even though it cannot move due to weather; on-patrol MP/sub reactions still follow the standard movement rules (on-patrol only triggers when you actually move into or through the area).",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-3-5",
+    "section": "3.5",
+    "title": "Determining Victory",
+    "summary": "Soviets need 4 Hammer-and-Sickle icons on overrun War/Invasion Track locations to win the campaign.",
+    "text": "The scenarios each specify their own Victory Conditions, but for the campaign game:\n\nThe Soviets must be able to count four 'Hammer and Sickle' icons on locations overrun by their forces on the War and Invasion Tracks.\n\nExample: At the end of the game, the Soviet player has troops in the Oslo box of the Norway Invasion Track (1 hammer and sickle); and has an army in the 'Ruhr Cities' box of the Europe North War Track (2 hammer and sickles) – no other occupied boxes contain hammer and sickles. The Soviet player has lost.\n\nSoviet forces automatically advance on the War Tracks each turn (Germany, Italy, Turkey, etc.)– this is slowed or stopped entirely by the NATO player delivering Convoys without too many hits – a Convoy with up to two hits prevents an advance and a Convoy with up to 4 hits counts as a 'partial Convoy', two of which combine to prevent one advance (one partial Convoy alone does nothing). NATO may strike Soviet forces to slow the advance on the Europe South War Track (Italy, Turkey) by attacking the Soviet Troops icon located in Yugoslavia / Greece 7.5.5 .\n\nThe Invasion Tracks (Norway and Denmark) may advance depending on the delivery of troops by Amphibious units. Both sides have these units and delivered troops cancel each other out. For the Soviet player to advance, at the end of the turn there must be Soviet Troops markers on the track equal to the Troops value of the box they are advancing into. NATO may halt an advance on either Invasion Track by striking the advancing Soviet troops 7.5.5 .\n\nIn addition to the 'Hammer and Sickle' at the end of each Invasion Track (representing the surrender of Denmark or Norway) each track also provides additional benefits to the Soviet player – the Norwegian bases can be occupied to provide forward airfields and the Danish Strait can be de-mined, allowing Soviet fast attack units to flood out into the English Channel 8.4.2.1 .\n\nNote: Moving into a Victory Point space using battlefield nuclear weapons 9.1.1 reduces the value to 1 hammer and sickle. It does not further reduce a space already worth only 1 hammer and sickle.",
+    "crossRefs": ["7.5.5", "8.4.2.1", "9.1.1"],
+    "legacyRef": "7",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Hits placed on a War Track that don't reach a strength of 3+ are removed at end of turn rather than accumulating. Not enough was done to have any effect.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-3-5-1",
+    "section": "3.5.1",
+    "title": "NATO Losses",
+    "summary": "Track NATO loss points; reaching 6 awards Soviets 1 H&S. Carrier damage and convoy massacres add points.",
+    "text": "The NATO losses marker starts the game off-board. Use the Turn Track as a convenient place to record NATO loss points earned.\n\nDuring the game if the NATO losses marker ever reaches 6 points, the Soviet player scores 1 Hammer and Sickle (of the 4 needed to win the game).\n\n•   Every third Convoy Massacre earns the Soviet player one NATO loss point.\n\n•   1 point is earned for damaging a US carrier, or 2 points if the US carrier sinks.\n     o   If a US carrier is north of the SOSUS line at the time of its damage or sinking, this is worth one additional point.\n\n     Damaging a carrier twice or more has no further effect – it must be sunk to earn the additional point.\n\nDesign note: This represents US fear of losing the carriers and the international response to such a thing happening. The bonus for operating north of the SOSUS line is because in so doing the US clearly exposes its main offensive arm and is poking the bear. A congressional hearing awaits the commander who loses his carriers in the Norwegian Sea.",
+    "crossRefs": [],
+    "legacyRef": "28"
+  },
+  {
+    "id": "bwn-4",
+    "section": "4",
+    "title": "Operations Phase – detailed",
+    "summary": "Detailed sequence and actions for the Operations Phase.",
+    "text": "Operations Phase – detailed. See subsections 4.1 and 4.2.",
+    "crossRefs": ["4.1", "4.2"],
+    "legacyRef": "16"
+  },
+  {
+    "id": "bwn-4-1",
+    "section": "4.1",
+    "title": "Managing OPS Points (card, spending, …)",
+    "summary": "Each player plays two OPS cards per turn; other cards are Reaction Events costing no OPS.",
+    "text": "When a card is played for Operations Points it generates the number of Operations Points referred to as 'OPS' indicated in the top left corner.\n\nThis will occur twice per turn for each player. All other cards played will be Reaction Events, using the bottom event on the card and costing no Operations Points to play - discard the card after resolving the event. (see 4.2.2.5 for an additional way to play the top Operations Event on a card in your hand).\n\nThe Soviet player selects a card to play for Operations Points and records the number on the Operations Point Record Track with the Soviet marker.\n\nThe NATO player selects a card to play for Operations Points and records the number on the Operations Point Record Track with the NATO marker.\n\nThis means the NATO player can see what the Soviet player plays before deciding on a card play.",
+    "crossRefs": ["4.2.2.5"],
+    "legacyRef": "16",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Some Operations event cards say 'during this card play'. This is poor wording – it is intended to mean 'during the day that this event is used'. E.g. SOSUS Sabotage can be played on Day One but triggered on Day Two, in which case it lasts all of Day Two.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "NATO card 55 ('the Soviet hand is reduced for the rest of the turn') is a legitimate exception to the 'a player will always have three cards' baseline.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-4-2",
+    "section": "4.2",
+    "title": "Actions",
+    "summary": "Players alternate one action per OPS; may also use 'use when active' options at no cost.",
+    "text": "The Soviet player plays the first Operations Point to perform one action, which is selected from the Actions Chart 4.2 .\n\nAny action may be selected including those from the 'use when active – not an action' portion of the chart (Note: These actions may be used in addition and do not cost Operations Points).\n\nOnce the Soviet player chooses and completes an action, play passes to the NATO player.\n\nThe NATO player then plays an Operations Point to perform an action and follows the same steps as the Soviet player.\n\nContinue alternating between players performing one action each until no Operations Points remain. A player may also Pass when they have less Operations Points than their opponent. They do nothing, and the other player plays another action, play then continues normally.",
+    "crossRefs": [],
+    "legacyRef": "16.1"
+  },
+  {
+    "id": "bwn-4-2-1",
+    "section": "4.2.1",
+    "title": "Events",
+    "summary": "OPS Record Track triggers Fast, Repair, Ships, and Next Day events at threshold boxes.",
+    "text": "Look for events on the Operations Points Record Track: Fast, Repair, Ships, and Next Day. These trigger once both player's Operations Points markers reaches or passes the box and takes effect immediately after the current action is resolved.\nThey are described below:",
+    "crossRefs": ["4.2.1.1", "4.2.1.2", "4.2.1.3", "4.2.1.4"],
+    "legacyRef": "9.1.3"
+  },
+  {
+    "id": "bwn-4-2-1-1",
+    "section": "4.2.1.1",
+    "title": "Event : FAST – IGNORE on Day Two",
+    "summary": "Fast Task Forces may move one Sea Zone (no ASW); ignored on Day Two.",
+    "text": "If it is not Day Two: Fast Task Forces may move one Sea Zone (they may not perform ASW). If it is Day Two, ignore this event. Resolve as per the Ships event, ignoring steps 2 and 4, and applying only to Fast TFs and zones they occupy.",
+    "crossRefs": ["4.2.1.3"],
+    "legacyRef": "9.1.3"
+  },
+  {
+    "id": "bwn-4-2-1-2",
+    "section": "4.2.1.2",
+    "title": "Event : REPAIR",
+    "summary": "Remove one hit from each damaged facility, then recheck damage status.",
+    "text": "Remove one hit from each damaged facility on the map and then check to see if the facility is now lightly damaged or no longer damaged 2.3.8.5 .",
+    "crossRefs": ["2.3.8.5"],
+    "legacyRef": "9.1.3"
+  },
+  {
+    "id": "bwn-4-2-1-3",
+    "section": "4.2.1.3",
+    "title": "Event : SHIPS",
+    "summary": "Both sides move Task Forces, degrade detections, RORSAT detection, remove Spent markers, resolve fighter combat and intrinsic searches.",
+    "text": "1. Move Task Forces.\n   Both sides move all Task Forces according to the movement rules 5.1.3 . The Soviet player moves all Task Forces first, followed by NATO within each detection category.\n\n   Task Forces may prepare for an Amphibious Landing by marking themselves with the 'Amphibious Landing' marker. For each that does, roll a free Task Force Detection roll 6.1 . Task Forces already marked with an 'Amphibious Landing' marker may resolve their landing, and then remove the marker. If they do so they may not move.\n\n   If a Task Force moves into or from a zone with a friendly nuclear submarine which is not Spent or On Patrol, the submarine may join the Task Force so long as it is the only submarine with the Task Force.\n\n   Instead of moving a Task Force, it may conduct Anti-Submarine Warfare in its current zone 7.2.2 .\n\n   Units marked as 'On Patrol' may react to enemy Task Force movement [ 5.2.3 , 5.3.4.1 , 5.3.4.2 ].\n\n   Air Units marked 'On Patrol' may move with a Task Force that just moved so long as they have the range to operate there (i.e. they must remain within range of their base).\n\n2. Degrade existing Task Force detections that were not placed in step 1 (if they have an Amphibious Landing marker, do not degrade the Detection level). All Good detections are reduced to Poor detections and all Poor detections are removed.\n   See 6.1.1.3 for the effect of downgrading Task Force Detection levels.\n\n3. Roll for Task Force Detection with each RORSAT on the map which shares a Sea Zone with one or more enemy Task Force(s).\n\n4. Remove 'Spent' markers from all non-MP Air Units (except for Air Units at a base with Heavy damage).\n\n5. Resolve Fighter vs Fighter combat due to the movement of Task Forces 7.1.3 .\n\n6. Resolve Interception and CAP response to intrinsic detection units and then resolve their searches.",
+    "crossRefs": ["5.1.3", "6.1", "7.2.2", "5.2.3", "5.3.4.1", "5.3.4.2", "6.1.1.3", "7.1.3"],
+    "legacyRef": "9.1.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "If your carrier enters a new sea zone and enemy MP are on patrol, the on-patrol MP may activate. On-patrol only triggers when you move into or through the zone.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "RORSATs do not get a free detection when moved into a zone containing enemy TFs, and they do not get detection attempts on the same timing as on-patrol MPs. RORSATs detect only when ships move (this is free once they're up).",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-4-2-1-4",
+    "section": "4.2.1.4",
+    "title": "Event : NEXT DAY – IGNORE on Day Two",
+    "summary": "Both players play their second OPS card; unspent OPS carry forward; advance Day marker to Day Two.",
+    "text": "Both players play their second (and last) card of the turn for its Operations Points, exactly as per 3.2.3 , adding the number of Operations Points still unspent to the total available to you.\n\nAdvance the Day marker to 'Day Two' then continue play.",
+    "crossRefs": ["3.2.3"],
+    "legacyRef": "9.1.3"
+  },
+  {
+    "id": "bwn-4-2-2",
+    "section": "4.2.2",
+    "title": "Use when Active – not an action",
+    "summary": "Free options usable during your action turn that do not count as an action or cost OPS.",
+    "text": "These can be used when it is your turn to play an action but do not count as an action or cost Operations Points to use.",
+    "crossRefs": ["4.2.2.1", "4.2.2.2", "4.2.2.3", "4.2.2.4", "4.2.2.5"],
+    "legacyRef": "16.6"
+  },
+  {
+    "id": "bwn-4-2-2-1",
+    "section": "4.2.2.1",
+    "title": "Use a First Strike Point to buy an effect (Soviet player only)",
+    "summary": "Soviet player may spend First Strike Points on several different effect options.",
+    "text": "The Soviet player may spend First Strike Points on several different options. See 9.1.1 .",
+    "crossRefs": ["9.1.1"],
+    "legacyRef": "16.6.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "The Soviet First Strike event card 'Play before spending any points' can be used on Day Two (so long as it is before you spend any points) and cannot be played from hand via the +2 OPS rule, because doing so means you have already spent points. It must be played before you spend any OPS from this card, but it does not have to be the first card of the turn.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-4-2-2-2",
+    "section": "4.2.2.2",
+    "title": "Use a Soviet spy (Soviet player only)",
+    "summary": "Soviet player may spend a spy on several options; may reduce Soviet Spy Infiltration Track.",
+    "text": "The Soviet player may use Soviet spies on several different options. See 9.3 .\n\nThe use of a spy may reduce the Soviet Spy Infiltration Track, representing the discovery of the spy network.",
+    "crossRefs": ["9.3"],
+    "legacyRef": "16.6.2"
+  },
+  {
+    "id": "bwn-4-2-2-3",
+    "section": "4.2.2.3",
+    "title": "Play an event on either of your cards",
+    "summary": "Use one event per OPS card during the turn for its OPS cost; mark with a Used marker.",
+    "text": "During the turn each player will use two cards to generate Operations Points. Each card has one event which can be used for the cost in Operations Points printed on the right hand side of the card. Each card can be used only once unless specified on the event text. Either card event can be used whenever allowed – they do not 'expire' until the end of the turn. When used, place a ''Used'' marker on the card.",
+    "crossRefs": [],
+    "legacyRef": "16.6.3"
+  },
+  {
+    "id": "bwn-4-2-2-4",
+    "section": "4.2.2.4",
+    "title": "Return an 'On Patrol' Air Unit to base",
+    "summary": "Return Fresh On Patrol Air Units to base per the On Patrol rules.",
+    "text": "Return 'Fresh' 'On Patrol' Air Units per 5.3.4.1 and 5.3.4.2 .",
+    "crossRefs": ["5.3.4.1", "5.3.4.2"],
+    "legacyRef": "16.6.4"
+  },
+  {
+    "id": "bwn-4-2-2-5",
+    "section": "4.2.2.5",
+    "title": "Play a card in your hand's top (non-Reaction) event, paying two additional OPS",
+    "summary": "Spend +2 OPS on top of the event cost to play a hidden top event from your hand.",
+    "text": "You may play the top (non-Reaction) event of a card in your hard, paying an additional two points, plus the cost of the event itself. Place the card in the discard pile or remove it from play if the event instructs you to do so.\n\nDesign note: This allows you to keep events hidden in your hand to use at a time of your choosing.",
+    "crossRefs": [],
+    "legacyRef": "16.6.5"
+  },
+  {
+    "id": "bwn-4-2-3",
+    "section": "4.2.3",
+    "title": "Use at any time – not an action",
+    "summary": "Free options usable while either player is resolving an action.",
+    "text": "These can be used when you or your opponent are resolving an action.",
+    "crossRefs": ["4.2.3.1", "4.2.3.2", "4.2.3.3", "4.2.3.4", "4.2.3.5", "4.2.3.6"],
+    "legacyRef": "16.7"
+  },
+  {
+    "id": "bwn-4-2-3-1",
+    "section": "4.2.3.1",
+    "title": "Play a Reaction Event when it applies",
+    "summary": "Play a hand card as a reaction when its trigger applies; resolve and discard.",
+    "text": "Play a card in your hand as a reaction to something occurring. The card will specify when it is playable. Resolve it and discard it. If you drop below three cards in your hand, draw up to three cards.",
+    "crossRefs": [],
+    "legacyRef": "16.7.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Reaction card 'Submarine Pairing': any step loss allows the play of this card.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Reaction event 'Distant Support': the attacking strike must be adjacent. The card text does not state it explicitly, but the intent is that the committed F-14 becomes CAP over the target fleet (this requires a clarification).",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "NATO Counter Attack reaction: the convoy is not 'spent' by the use of the reaction – it is removed because it arrived at a convoy port (you receive the supplies as normal) and then you play the card and get the effect as well.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-4-2-3-2",
+    "section": "4.2.3.2",
+    "title": "On Patrol units may roll to attack enemy units moving through their zone",
+    "summary": "On Patrol subs/MP/fighters may react per the On Patrol rules.",
+    "text": "(as per 5.2.3 , 5.3.4.1 , 5.3.4.2 )",
+    "crossRefs": ["5.2.3", "5.3.4.1", "5.3.4.2"],
+    "legacyRef": "16.7.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "An on-patrol submarine cannot react against another sub that attacks but does not move. There is no requirement to move during a 'move and attack' action; without movement, an on-patrol unit has no trigger.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "On-patrol MP units go Spent after an attack or detection roll triggered by a moving sub or TF; on-patrol Fighters that intercept remain on patrol.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-4-2-3-3",
+    "section": "4.2.3.3",
+    "title": "CAP may roll to attack Air Units attacking their base",
+    "summary": "Resolve CAP interception per 7.1.1.2; all fighters are always on CAP, even when Spent.",
+    "text": "See 7.1.1.2 for resolution of a CAP Interception.\n\nNote: All fighters are always performing a CAP mission and protecting their base, even when 'Spent' (except for 'On Patrol' interceptors, who are flying an Interception mission).",
+    "crossRefs": ["7.1.1.2"],
+    "legacyRef": "16.7.3"
+  },
+  {
+    "id": "bwn-4-2-3-4",
+    "section": "4.2.3.4",
+    "title": "Hydrophone detection when enemy submarines move across a Hydrophone Barrier",
+    "summary": "Detect enemy submarines crossing a Hydrophone Barrier per 2.3.6.",
+    "text": "See 2.3.6 for detecting enemy submarines with hydrophones.",
+    "crossRefs": ["2.3.6"],
+    "legacyRef": "16.7.4"
+  },
+  {
+    "id": "bwn-4-2-3-5",
+    "section": "4.2.3.5",
+    "title": "Use a Soviet spy (Soviet player only) for SSBN evasion",
+    "summary": "Soviet may spend a spy during NATO actions for SSBN evasion; may reduce the Spy Infiltration Track.",
+    "text": "The Soviet player may use Soviet spies for SSBN evasion during the NATO action. See 9.3 The use of a spy may reduce the Soviet Spy Infiltration Track, representing the discovery of the spy network.",
+    "crossRefs": ["9.3"],
+    "legacyRef": "16.7.5"
+  },
+  {
+    "id": "bwn-4-2-3-6",
+    "section": "4.2.3.6",
+    "title": "Draw a card if you have less than three cards in your hand",
+    "summary": "Maintain a minimum hand size of three by drawing when below the threshold.",
+    "text": "Draw a card if you have less than three cards in your hand.",
+    "crossRefs": [],
+    "legacyRef": "16.7"
+  }
+]

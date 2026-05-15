@@ -1,0 +1,583 @@
+[
+  {
+    "id": "bwn-1",
+    "section": "1",
+    "title": "Introduction",
+    "summary": "Welcome and overview of Blue Water Navy, a hypothetical 1980s NATO-Soviet war at sea.",
+    "text": "Welcome to Blue Water Navy!\n\nThe rules are individually not particularly complex and simply working through each section once or twice as you perform the relevant activity should be enough to get you playing. Once you are up and running, the game is designed to be playable directly from the quick play sheets with only occasional reference to relevant sections of the rule book.\n\nThe main complexity in the game really is the number of options the game presents you with – where do you attack? And with what forces? What about the cards? How about nuclear weapons? – the game has a great deal of options available, but in a single play through you will not get to see them all. The best advice is to have a plan each turn for what you want to achieve.\n\nIt is also easy to get 'tunnel vision' and concentrate on killing a particular target to the detriment of your overall plan – know when you've lost a fight and move on to somewhere you can win instead.\n\nModern combat is extremely deadly – do not be surprised to be taking off a large number of units every turn. An air strike can and will go wrong from time to time with awful casualties. If it's flying and fighting it might not come back, so be prepared to lose your toys when they fight.\n\nAlways remember the game is about the convoys – if they get through, NATO wins the war.\n\nBlue Water Navy simulates a hypothetical 1980's war between NATO and the Soviet Union. The game takes place principally at sea and in the air, with ground operations represented in an abstract fashion. In the event of such a conflict, NATO convoys would form up in the United States and head to Europe and the Mediterranean carrying supplies and reinforcements. Their arrival would be of the utmost importance to the continued survival of NATO. The Soviets would attempt to interdict these convoys with their submarine fleet and their long-range bombers armed with stand-off anti-ship missiles while being supported by the Soviet surface fleet, simultaneously the Soviets would seek to conduct amphibious operations against the NATO flanks (Norway and Denmark).",
+    "crossRefs": [],
+    "legacyRef": "1"
+  },
+  {
+    "id": "bwn-2",
+    "section": "2",
+    "title": "Game Components",
+    "summary": "Top-level chapter covering sides, combat units, map, cards and dice.",
+    "text": "This chapter introduces the game's components: the two sides, combat unit types (surface, submarine, air), the game map, cards and dice.",
+    "crossRefs": ["2.1", "2.2", "2.3", "2.4", "2.5"],
+    "legacyRef": "2"
+  },
+  {
+    "id": "bwn-2-1",
+    "section": "2.1",
+    "title": "The Sides",
+    "summary": "Players control either NATO or Soviet forces; counter background colour shows side.",
+    "text": "Players assume control of either the NATO forces or the Soviet forces. The background colour of each counter indicates side (NATO or Soviet), whilst the flag shows nationality.",
+    "crossRefs": [],
+    "legacyRef": "1.1"
+  },
+  {
+    "id": "bwn-2-2",
+    "section": "2.2",
+    "title": "Combat Units",
+    "summary": "Combat units are classified as Air, Submarine or Surface units.",
+    "text": "Combat Units for both sides are classified as either Air Units, Submarines Units, or Surface Units.",
+    "crossRefs": ["2.2.1", "2.2.2", "2.2.3"],
+    "legacyRef": "2"
+  },
+  {
+    "id": "bwn-2-2-1",
+    "section": "2.2.1",
+    "title": "Surface Units",
+    "summary": "Warships, carriers and amphibs grouped into Task Forces; symbols indicate role and capabilities.",
+    "text": "Surface Units represent each side fleets of warships, Amphibious Landing Ships, aircraft carriers and helicopter carriers. Each unit represents either a single capital ship or a group of between 6-10 warships operating together. A unit with an Aircraft symbol close to its name is an aircraft carrier.\n\nNote: A unit with a helicopter symbol is a helicopter carrier and has no Air Unit - it contributes to ASW only. All carriers have some detection capability due to AEW aircraft.\n\nShips always operate in Task Forces 5.1.2 which are 'filled' by placing Surface Units into the relevant Task Force box on the map. The ships remain in the Task Force box and the Task Force marker moves on the map.\n\nNote: The Task Force boxes are private and cannot be inspected by the opposing player. Detection of a Task Force will reveal the ships within.\n\nUnit symbology (read from the counter):\n- Country – The nation the unit belongs to.\n- Aircraft Symbol – Marks an aircraft carrier.\n- Carrier Bar – Identifies which carrier the unit is based on (colour-coded).\n- SAMs – The total number of SAMs (surface to air missiles) a unit can fire to shoot down incoming enemy missiles.\n- Anti-Ship Missiles – The number of anti-ship missiles carried by the unit. The colour of the text shows the type of missile.\n- Land Attack Cruise Missiles – The number of dice the unit can use to attack land targets with cruise missiles.\n- Anti-Submarine – The unit's value when attacking submarine units, or when detecting submarines attacking their Task Force.\n- Defense value (with 6+ Save where shown) – The number required by an enemy attack die to cause a step loss to the unit.\n- Availability – Denotes availability of some units by year.\n\nAdditional ship characteristics:\n- Capital ships – All aircraft carriers and any ship with limited ammunition (L) or a damage code (B) or (H) is a capital ship, except for the US amphibs – which are amphibious units.\n- Damage Modifier (H/B) – This value is used when the unit is hit to determine damage sustained.\n- Guns (G) – This is a unit with large calibre guns.\n- Limited Ammunition (L) – A unit that has limited ammo.\n- Prairie/Masker (P) – Units receive a bonus against torpedo attacks – it is a type of acoustic masking system. Only NATO has this technology.\n- Rocket Torpedo (R) – A unit equipped with rocket torpedoes.\n- Slow Ship (S) – Units marked 'Slow' have a reduced movement allowance and are easier for submarines to attack.\n\nMissile types referenced on surface units include Anti-Ship (SUNBURN), Anti-Ship (SHIPWRECK), Short Range Anti-Ship, Long Range, and Land Attack Cruise missiles.",
+    "crossRefs": ["5.1.2", "2.2.5", "2.2.6", "2.2.7"],
+    "legacyRef": "2.3"
+  },
+  {
+    "id": "bwn-2-2-2",
+    "section": "2.2.2",
+    "title": "Submarines",
+    "summary": "Nuclear (SSN/SSGN/SSBN) or diesel (SSK) subs; counter shows defense, ASW/ASuW dice, missiles and special traits.",
+    "text": "Submarines are either Nuclear-Powered (SSN/SSGN/SSBN) or Diesel-Powered (SSK). Diesel-powered submarines are indicated by the (D) symbol.\n\nSome Soviet nuclear submarines are SSBNs (\"Submarine, Ballistic missile, Nuclear powered\", also known as \"Boomers\") which carry nuclear ballistic missiles. These are indicated by their Payload value (yellow number in a red triangle).\n\nA unit represents three submarines of that class except for diesel powered submarines with an Anti-Surface value of 4 which represents six submarines of that class.\n\nUnit symbology (read from the counter):\n- Country – The nation the unit belongs to.\n- Tactical – This number, if present, is added to each anti-submarine or anti-surface die roll. (when not present the unit adds nothing)\n- Defense – The number required by an enemy attack die to cause a step loss to the unit. If within a white circle, the unit has a special 6+ save against each step loss it takes due to superior speed, stealth or countermeasures.\n- Unit Name – Historical identification.\n- Diesel (D) – A diesel submarine, slower than a nuclear submarine.\n- Non-Magnetic (N) – Specially treated or constructed submarine hulls making detection from the air more difficult and preventing mines from detonating.\n- Small and Slow Submarine (S) – The submarine is small and gets a bonus against minefields but is slow and can only move OR attack.\n- Super Heavy Torpedoes (T) – Used by the Soviets to sink US aircraft carriers.\n- Availability – Denotes availability of some units by year.\n- Missile Type – The missile type and number of weapons carried.\n- Anti-Submarine/Anti-Surface – The number of dice used for antisubmarine warfare and anti-surface attacks.\n- Payload (SSBN only) – Yellow number in a red triangle indicates the SSBN's nuclear ballistic missile payload value.",
+    "crossRefs": ["2.2.5", "9.1"],
+    "legacyRef": "2.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "On detection of subs: task forces need to be detected but not submarines. If you roll the number you needed, you found it and killed it (unless it gets a save or plays a card). This was a simplification – many Soviet subs are killed on an 8, while the US SSNs need 10's. And many get a 6+ 'save' against any hit taken as well. Originally there were two rolls (detection then attack), but for ease of play it was rolled into one. Consider the sub counter as just the centre of reference – that submarine could be anywhere within 1000 miles of that point, because it can move two zones and attack.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Sub stealth is baked into their defense values rather than a separate detection step.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-2-3",
+    "section": "2.2.3",
+    "title": "Air Units",
+    "summary": "Air units are Maritime Patrol (MP), Strike (STK), Fighter (FTR); Soviets also have Tanker (TKR).",
+    "text": "Air Units are either Maritime Patrol (MP), Strike (STK) or Fighters (FTR). Additionally, the Soviet player has Tanker Aircraft (TKR).",
+    "crossRefs": ["2.2.3.1", "2.2.3.2", "2.2.3.3", "2.2.3.4"],
+    "legacyRef": "2.1"
+  },
+  {
+    "id": "bwn-2-2-3-1",
+    "section": "2.2.3.1",
+    "title": "Maritime Patrol (MP)",
+    "summary": "Long-endurance aircraft for ASW and Task Force detection; counter shows TF detection, anti-sub, defense, range.",
+    "text": "Maritime Patrol units are aircraft designed to operate for long durations over water conducting Anti-Submarine Warfare (ASW) and Anti-Surface Warfare (ASuW). They are one of the primary methods for detection of surface Task Forces. MP units represent approximately 15 aircraft.\n\nUnit symbology (read from the counter):\n- Country – The nation the unit belongs to.\n- Task Force Detection – The number of dice used for detecting Task Forces.\n- Anti-Submarine Value – The number of dice used for attacking submarines.\n- Defense – The number required by an enemy attack die to cause a step loss to the unit.\n- Unit Type – MP.\n- Unit Name – Historical identification.\n- Air Range – The unit's movement allowance in Sea Zones.",
+    "crossRefs": [],
+    "legacyRef": "2.1.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Do patrolling MPs become spent if they contribute their dice for defense against a sub attack on surface ships? No, they just keep on flying. MPs that are On Patrol go Spent if they make an attack (or detection roll) triggered by a moving sub or TF. If multiple MPs are in an area and a submarine attacks a TF, the MPs' ASW values stack.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Intrinsic Maritime Patrols suffering a step loss in Fighter vs MP combat are just prevented from detecting – don't worry about casualties.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-2-3-2",
+    "section": "2.2.3.2",
+    "title": "Strike Aircraft (STK)",
+    "summary": "Attack aircraft flying bomb or missile missions; carrier-based variants show a carrier ID bar.",
+    "text": "Strike units are aircraft designed to fly attack missions either with bombs or missiles. Strike units represent 24-30 aircraft plus any supporting aircraft (Recon, Electronic Warfare, Tanker etc.).\n\nUnit symbology (read from the counter):\n- Country – The nation the unit belongs to.\n- Unit Type – STK.\n- Defense – The number required by an enemy attack die to cause a step loss to the unit.\n- Unit Name – Historical identification.\n- Air Range – The unit's movement allowance in Sea Zones.\n- Extended Air Range – Shown for some units; the longer range available with tanker support.\n- Number of Missiles – The number of weapons carried and their type, indicated by the colour of the text and the background colour.\n- Number of Missiles (Extended Range) – Where shown, the missile count when operating at extended range.\n- SEAD Bonus – US Carrier Air Groups receive a bonus when attacking enemy SAM sites, which represents EA-6 Prowler aircraft.\n- Carrier ID Bar – The colour shows the carrier the unit is based on.",
+    "crossRefs": [],
+    "legacyRef": "2.1.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Soviet strike with black missiles: they have to use missiles and cannot, for example, use bombs against the German airfields. The Soviets can use bombs if they attack troops, though it is unclear if that is actually possible for the Soviets. Any Strike unit with missiles must use them when attacking unless attacking troops.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "When all the steps of F-14 are lost the CV runs out of F-14. If they are all shot down the CV is left without F-14 defense and cannot get more in the whole game except by reinforcement cards.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-2-3-3",
+    "section": "2.2.3.3",
+    "title": "Fighter Aircraft (FTR)",
+    "summary": "Air-to-air combat aircraft; counter shows range, air-to-air dice and tactical value.",
+    "text": "Fighter units are aircraft designed for air to air combat missions. Fighter units represent 24-30 aircraft plus any supporting aircraft (Recon, Electronic Warfare, Tanker etc.).\n\nUnit symbology (read from the counter):\n- Country – The nation the unit belongs to.\n- Unit Type – FTR.\n- Defense – The number required by an enemy attack die to cause a step loss to the unit.\n- Unit Name – Historical identification.\n- Air Range – The unit's movement allowance in Sea Zones.\n- Air to Air – The number of dice used for air to air combat.\n- Tactical – This number is added to each air to air die rolled.",
+    "crossRefs": ["7.1"],
+    "legacyRef": "2.1.3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "All FTR are on CAP all the time in effect – you don't need to spend actions/OPS. CAP is never spent by resolving combat. An on-patrol Fighter that intercepts remains on patrol.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "What are the Air to Air values of the Danish F16 and Turkish F4 printed on the map? Variable according to Invasion tracks (20.0).",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Carrier CAP is only spent if it flies an escort mission – in other words it's no longer really on CAP. Declining fighter vs fighter combat, or flying a combat mission (such as escorting a strike package) can spend it.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "On rebasing: air units return to base right after completing their mission. Fighters remain on patrol – they haven't completed their mission and will remain on patrol indefinitely. Planes cannot be intercepted when returning to base. Rebasing is only allowed through card play; landing at another airbase is not relevant – aircraft always return to the airbase of origin.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-2-3-4",
+    "section": "2.2.3.4",
+    "title": "Soviet Tanker Aircraft (TKR)",
+    "summary": "Soviet player begins with 2 tankers that extend Strike aircraft range.",
+    "text": "The Soviet player begins with 2 Tanker Aircraft added to their force to increase the range of Strike aircrafts.\n\nUnit symbology (read from the counter):\n- Country – The nation the unit belongs to.\n- Unit Type – TKR.\n- Defense – The number required by an enemy attack die to cause a step loss to the unit.\n- Unit Name – Historical identification.\n- Number of units and Tanker Range – This is the additional range a tanker can give. A tanker can add +1 range to 2 units or +2 range to one unit.\n\nFurther details on refueling can be found at 5.3.6.",
+    "crossRefs": ["5.3.6"],
+    "legacyRef": "2.1.4",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Tankers should only be able to fuel STK aircraft – most Soviet fighters lacked in-flight refueling capability. (Despite some text suggesting fighters too, designer ruling is STK only.)",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-2-4",
+    "section": "2.2.4",
+    "title": "Other Units",
+    "summary": "RORSAT, SAM sites, Convoys and Amphibious units; counters show specialized detection and defense values.",
+    "text": "Additional units used in play include: RORSAT (Soviet Reconnaissance Satellites), SAM sites and Convoys or Amphibious units.\n\nCounter information for these units includes:\n- Detection Dice vs TF\n- Number of Dice against Strike aircraft using bombs\n- Number of Dice vs Cruise Missiles\n\nNote: US Amphibs have the Helicopter symbol indicating a helicopter carrier. (I assume some of the marines' helicopters are on ASW Duty).",
+    "crossRefs": ["2.2.4.1", "2.2.4.2", "2.2.4.3", "2.2.4.4", "2.2.4.5"],
+    "legacyRef": "2.4"
+  },
+  {
+    "id": "bwn-2-2-4-1",
+    "section": "2.2.4.1",
+    "title": "RORSAT",
+    "summary": "Soviet reconnaissance satellites for TF detection; launched from Tyuratam for 2 OPS, destroyed on a '1'.",
+    "text": "The Soviet player has reconnaissance satellites (RORSAT) for the detection of Task Forces.\n\nAt the start of the game most are on the ground at Tyuratam but they can be launched for 2 OPS each. When launched a die roll of '1' results in an unsuccessful launch and the satellite is instead destroyed – place in the Destroyed box.\n\nFor two OPS the Soviet player may also take a RORSAT on the map and move it anywhere. Again, a die must be rolled and the RORSAT is destroyed on a '1'.\n\nRORSATs can only be newly stacked together in the same zone if there are at least four already in play (in space). For clarity, the fourth one launched can be stacked together with another. Once stacked together they roll more dice for detection (1 die per RORSAT present in the zone).\n\nRORSATs can be removed from play due to collateral damage caused to Soviet facilities 7.5.3. If the Lourdes Facility is destroyed 8.4.5, remove one RORSAT from the game permanently (selected by the US player on a die roll of 6+, otherwise by the Soviet player) and remove another temporarily returning three turns from the current turn (selected by the US player on a die roll of 6+, otherwise by the Soviet player).\n\nDesign note: The loss of data downlink and analysis capability would have hindered Soviet targeting.",
+    "crossRefs": ["7.5.3", "8.4.5"],
+    "legacyRef": "2.4",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "When you pay 2 Ops to move a RORSAT into a sea zone where there are already TFs present, you do NOT get a free detection attempt. RORSATs do not get attempts during the same timings as a MP unit on patrol. They can detect only when ships move (but this is free once they're up).",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-2-4-2",
+    "section": "2.2.4.2",
+    "title": "Continental United States",
+    "summary": "F-15 fighters printed on the map provide unlimited CAP for NATO in US zones.",
+    "text": "F-15 Fighter units are printed on the map in the US zones.\n\nThe NATO player may use an unlimited number of F-15's for CAP when defending in these zones.",
+    "crossRefs": [],
+    "legacyRef": "2.4"
+  },
+  {
+    "id": "bwn-2-2-4-3",
+    "section": "2.2.4.3",
+    "title": "CAPTOR Mines",
+    "summary": "Anti-submarine mines placed by card play; trigger ASW rolls against enemy subs passing through.",
+    "text": "These mines are effective only against submarines, they are placed through card play.\n\nWhen an enemy submarine moves into or through a Captor mined zone roll two dice (one die if the CAPTOR Mine counter is on its step loss side) using the Anti-Submarine Warfare process.\n\nBad Weather removes one die (to a minimum of 0) but there are no other possible modifiers. If a one is rolled, flip the Captor Mine counter or remove it if already on its step loss side (Soviets are mapping the field) and otherwise ignore those dice.\n\nA submarine which is part of a Task Force is ignored for the purpose of this rule.",
+    "crossRefs": ["7.2"],
+    "legacyRef": "2.4",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Mines are only added by cards.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-2-4-4",
+    "section": "2.2.4.4",
+    "title": "Port Mining",
+    "summary": "Ports mined via card play impose dice rolls on subs and TFs entering/leaving.",
+    "text": "Ports can be mined via card play.\n\nEach submarine entering or leaving a mined port must roll one die and take a step loss on the roll of '1-2'. Roll one die per Submarine unit for a 'Lightly Mined' port or two dice per unit for a 'Heavily Mined' port. Roll one less die if the submarine is small (S) or nonmagnetic (N) to a minimum of no dice.\n\nTask Forces roll two dice ('Light') or four dice ('Heavy') with each roll of '1-2' causing one hit. Odd hits must be applied to a Convoy or Amphib unit if present. Other hits are allocated freely to the Task Force by the player taking the damage.",
+    "crossRefs": [],
+    "legacyRef": "2.4",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "The mines marker is for moving through the Danish Strait – it is not taken into consideration of a Soviet Task Force landing troops in Denmark.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-2-4-5",
+    "section": "2.2.4.5",
+    "title": "Soviet Admiral Kuznetsov Aircraft Carrier",
+    "summary": "1989 scenario optional unit; pick 2 of 3 additional capital ships.",
+    "text": "The unit is included for the 1989 scenario as it is assumed that the USSR wasn't falling apart and managed to finish construction and commissioning.\n\nYou may select any two of the three additional capital ship units made available if playing in 1989.",
+    "crossRefs": [],
+    "legacyRef": "2.4"
+  },
+  {
+    "id": "bwn-2-2-5",
+    "section": "2.2.5",
+    "title": "Missile Types",
+    "summary": "Missiles are referenced by background colour: green = land attack cruise, yellow = Shipwreck, etc.",
+    "text": "Submarine Units and Surface Units are equipped with an array of missile weapons, shown here on the Missile Types Table.\n\nFor ease of play missiles are referred to using the color of the missile background, e.g. Green is a land attack cruise missile, while yellow is a Shipwreck missile.\n\nNATO Types:\n- 2 Land Attack Cruise missile\n- 2 Anti-Ship missile\n\nSoviet Types:\n- 2 Anti-Ship (SUNBURN) missile\n- 2 Anti-Ship (SHIPWRECK) missile\n- 2 Short Range Anti-Ship missile\n- 2 Long Range missile\n- 2 Land Attack Cruise missile",
+    "crossRefs": [],
+    "legacyRef": "2.7"
+  },
+  {
+    "id": "bwn-2-2-6",
+    "section": "2.2.6",
+    "title": "Unit Status (Fresh or Spent)",
+    "summary": "Units are Fresh until they take an action; mark Spent or On Patrol with appropriate markers.",
+    "text": "Each unit (counter) is considered 'Fresh' until it completes an action which makes it 'Spent' or 'On Patrol'. Use the relevant 'Spent' and 'On Patrol' markers to signify unit status.\n\nNote: The following are exceptions to this:\n- Task Forces are never marked 'Spent'.\n- Surface units are never marked 'Spent'.\n- Fighter units on CAP are never marked 'Spent' by flying CAP alone.\n\nA unit which is not marked 'Spent' or 'On Patrol' is 'Fresh' and is eligible to perform any legal action 4.2.\n\nWhile marked 'Spent' a unit can take no action but may be able to fly limited CAP if a Fighter unit.\n\nWhile marked 'On Patrol' a unit can react to enemy movement as per the On Patrol rules or remove its On Patrol marker during the turn if it is an Air Unit. Submarines can only remove their On Patrol marker at the end of the turn.",
+    "crossRefs": ["4.2"],
+    "legacyRef": "5",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "On scenario setup: subs that are at Sea at the start of campaigns and short scenarios are NOT automatically 'On Patrol'. Scenario 2 has a British Nimrod set up On Patrol, and the NATO player also gets the setup sequence.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-2-7",
+    "section": "2.2.7",
+    "title": "Step Combination",
+    "summary": "Stacking, step loss/damage, and combining single-step units into full-strength units.",
+    "text": "This section covers how units stack, take damage, and may be combined back to full strength.",
+    "crossRefs": ["2.2.7.1", "2.2.7.2", "2.2.7.3"],
+    "legacyRef": "2.6"
+  },
+  {
+    "id": "bwn-2-2-7-1",
+    "section": "2.2.7.1",
+    "title": "Stacking",
+    "summary": "No stacking restrictions; exception: a TF may only have one nuclear sub escort (not SSBN, not diesel).",
+    "text": "All units on a side may stack and operate together without penalty. There are no stacking restrictions and units of both sides can freely exist within the same Sea Zone which represents a large area.\n\nException: A Task Force may only have one Submarine Unit with it as an escort, and it must be a nuclear submarine (not an SSBN symbol), not a diesel (D).\n\nDesign note: Diesel submarines are too slow to escort surface ships, even slow ones.\n\nThere are no other stacking restrictions – any number of submarines, ships and or Air Units can simultaneously exist in the same location.",
+    "crossRefs": [],
+    "legacyRef": "2.8",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "When you create a new TF, you can put more than one convoy counter – as many as you like. If a submarine is part of a task force, it can remove itself by being activated normally; place it on the board in the same position as the task force it's leaving.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-2-7-2",
+    "section": "2.2.7.2",
+    "title": "Damage and Step Loss",
+    "summary": "Damage = Step Loss; flip two-step counters, remove single-step counters to Destroyed box.",
+    "text": "Damage dealt to units is called a Step Loss. Most units have two sides referred to as 'steps', when a unit takes a 'Step Loss' flip the counter to its weaker side. If already flipped, remove the counter to the Destroyed box. If there is no weaker side, the unit is destroyed by a single step loss.",
+    "crossRefs": [],
+    "legacyRef": "2.5"
+  },
+  {
+    "id": "bwn-2-2-7-3",
+    "section": "2.2.7.3",
+    "title": "Step Combination",
+    "summary": "Optionally combine two one-step units of identical type and status into one full-strength unit.",
+    "text": "You may (not must) freely combine two one-step units of the exact same type and activation status ('Fresh' or 'Spent') in the same location together to make a single full-strength unit at any time. Units combining in this way may activate normally.",
+    "crossRefs": [],
+    "legacyRef": "2.6"
+  },
+  {
+    "id": "bwn-2-3",
+    "section": "2.3",
+    "title": "Game Map",
+    "summary": "Map covers US to western USSR plus the Med; Sea Zones are ~500 nautical miles wide.",
+    "text": "The map covers the area from the United States to the western Soviet Union and includes the Mediterranean Sea. Sea Zones are approximately 500 nautical miles wide.",
+    "crossRefs": ["2.3.1", "2.3.2", "2.3.3", "2.3.4", "2.3.5", "2.3.6", "2.3.7", "2.3.8", "2.3.9", "2.3.10", "2.3.11"],
+    "legacyRef": "6.1"
+  },
+  {
+    "id": "bwn-2-3-1",
+    "section": "2.3.1",
+    "title": "Sea Zones",
+    "summary": "Sea Zones regulate movement and combat; movement is free except for Arctic, Bad Weather, Hydrophone Barriers.",
+    "text": "The map is divided into Sea Zones to regulate movement and combat. Units can move between Sea Zones without restriction with the following exceptions:\n\n- The Arctic zone is restricted to nuclear submarines only – no (D) submarines 2.3.3.\n- Bad Weather slows surface movement 5.1.3.1 and has many combat related effects.\n- NATO may react to Soviet units moving across a Hydrophone Barrier 2.3.6 and similarly Soviet units may react to NATO units entering the Bastion.",
+    "crossRefs": ["2.3.3", "5.1.3.1", "2.3.6"],
+    "legacyRef": "6.2"
+  },
+  {
+    "id": "bwn-2-3-2",
+    "section": "2.3.2",
+    "title": "Weather Zones",
+    "summary": "Five weather zones (West/Mid/East/Med/North) drive Bad Weather placement.",
+    "text": "All Sea Zones except for the Arctic 2.3.3 are grouped into one of five \"Weather Zones\", West, Mid, East, Med and North and identified by a Weather Zone box and number (e.g. West 6, North 3-4). These identifiers are used for scenario set-ups and other game functions such as determining the location of Bad Weather 3.4. Some Sea Zones share the same Weather Zone identifier (e.g. West 1, North 9-10). If Bad Weather is rolled for a shared zone identifier, place Bad Weather markers in both Sea Zones.",
+    "crossRefs": ["2.3.3", "3.4"],
+    "legacyRef": "6.3"
+  },
+  {
+    "id": "bwn-2-3-3",
+    "section": "2.3.3",
+    "title": "The Arctic",
+    "summary": "Under-ice zone; only nuclear subs may enter; immune to Bad Weather; underwater combat is degraded.",
+    "text": "This special \"under ice\" Sea Zone can only be entered by nuclear submarines (any submarine without a (D) symbol).\n\nThe number of movement points needed to enter or leave the Arctic is indicated by the arrows on the North side of the map.\nNote that only NATO submarines may enter or exit the Arctic via the Labrador Sea east of Canada (Sea Zone Mid 10) – see the note on the map.\n\nThe Arctic does not have a Weather Zone identifier and never suffers the effects of Bad Weather. But the constant shifting and grating together of ice makes underwater combat there difficult due to the noise generated by this process.\n\nDesign note: In addition to the protection provided to Soviet SSBNs by the Arctic, some Operation Events grant bonuses when SSBNs operate under the ice.",
+    "crossRefs": [],
+    "legacyRef": "6.4"
+  },
+  {
+    "id": "bwn-2-3-4",
+    "section": "2.3.4",
+    "title": "Soviet \"Boomer\" Bastion",
+    "summary": "Fortified zone protecting Soviet SSBNs; has CAESAR hydrophones, mines, corvettes and air patrols.",
+    "text": "This special Sea Zone represents the area north of the Barents Sea where the Soviets created a fortified area to protect their SSBNs. It contains a Hydrophone System (\"CAESAR\") to help detect NATO submarines. It is mined and has its own defenses - corvettes and air patrols.\n\nIt has the following game effects:\n\nMovement:\n- The Soviet \"Boomer\" Bastion can be entered or exited by all unit types at the movement point cost indicated by the arrows on the map.\n\nCombat:\n- Hydrophone Reaction applies [6.8] to any NATO submarine entering the Bastion.\n- NATO submarines rolling one or more natural '1' result(s) when performing Anti-Submarine Warfare take a single step loss. (Representing the Bastion's defenses)",
+    "crossRefs": ["2.3.6", "7.2"],
+    "legacyRef": "6.5"
+  },
+  {
+    "id": "bwn-2-3-5",
+    "section": "2.3.5",
+    "title": "First Strike Zones",
+    "summary": "Map zones where SSBNs (some only non-Yankee) count toward Soviet First Strike capability.",
+    "text": "Several 'First Strike' zones are marked on the map. Some are for any SSBN and some are only for non-Yankee class SSBN. A submarine only counts when required for a First Strike check if it is in a zone where it can be counted.\n\nExample: A Yankee SSBN in a non-Yankee zone would be ignored.\n\nDesign note: Historically, the USSR ran patrols in these regions which gave them a First Strike capability in that they could launch and hit the East coast of the USA in a few minutes of flight time. The downside is that they are close to the USA and are prime targets for destruction by NATO anti-submarine forces.",
+    "crossRefs": ["2.3.5.1", "9.1.1"],
+    "legacyRef": "6.6"
+  },
+  {
+    "id": "bwn-2-3-5-1",
+    "section": "2.3.5.1",
+    "title": "First Strike Evasion",
+    "summary": "Before NATO ASW dice in/adjacent to a First Strike Zone, Soviet may roll to evade SSBN with one escort.",
+    "text": "Before a NATO unit rolls Anti-Submarine Warfare dice in or adjacent to a First Strike Zone, the Soviet player may choose to roll a die for each SSBN within the zone.\n\nA 6+ is required if the SSBN is 'Fresh' and 8+ if it is 'Spent'. If successful it may be immediately moved to an adjacent Sea Zone, along with a single other non-SSBN, non-diesel (D) submarine (its escort) both units are then marked 'Spent' if they are not already.\n\nNATO must still search with the active unit even if there is no enemy unit left to find.\n\nAn unsuccessful evasion has no effect.\n\nDesign note: This rule accounts for the 'gods eye view' that players have of the map and makes SSBNs slippery. Remember: Always escort your First Strike submarines!",
+    "crossRefs": ["2.3.5", "7.2"],
+    "legacyRef": "6.7"
+  },
+  {
+    "id": "bwn-2-3-6",
+    "section": "2.3.6",
+    "title": "Hydrophone Barriers",
+    "summary": "SOSUS chokepoints (GIUK, English Channel, Gibraltar); enemy subs crossing trigger reaction options.",
+    "text": "During the Cold War, NATO deployed Hydrophone Sound Surveillance Systems (\"SOSUS\") at Atlantic Ocean chokepoints to track Soviet submarines. The table below shows their locations as well as their ASW assets:\n\n- GIUK Gap – Sea Zone Border: East 6, East 9-10, North 3-4 – Local ASW Asset: No\n- English Channel – Sea Zone Border: East 4 – Local ASW Asset: Yes 2 Dice helicopters unless Bad Weather\n- Strait of Gibraltar – Sea Zone Border: Med 1-2 – Local ASW Asset: Yes 2 Dice helicopters unless Bad Weather (see 2.3.6 #3)\n\nNote that Bad Weather applies if it is in the zone the submarine is moving INTO, not out of.\n\nWhen an enemy submarine crosses a Hydrophone Barrier shown on the map along a zone's border, one 'Fresh' or 'On-Patrol' friendly unit in the Sea zone being entered or exited via that border may interrupt the movement for each submarine moving across that border using one of the following options:\n\n1. Roll a single die on the Anti-Submarine Warfare Table 7.2 against the unit entering the zone, adding the Tactical Value of the Fresh friendly unit.\n\nNote: There is no negative effect on the friendly unit.\n\n2. Roll a normal Anti-Submarine Warfare attack 7.2 against the unit entering the zone as though the Fresh friendly unit was attacking it (and only it). Roll one additional die and then mark the friendly unit 'Spent'.\n\n3. The English Channel and Straits of Gibraltar have a permanent local ASW asset rolling two dice as though it were a Maritime Patrol unit (applying weather and (N) normally from the Anti-Submarine Warfare Table 7.2). This roll is used instead of one of the other two options listed above.\n\nIn Bad Weather, this is reduced to zero dice (Bad Weather applies if it is in the zone the submarine is moving INTO, not out of).\n\nExamples: A Soviet submarine moves from North 7-8 over the SOSUS line into and through East 6. The NATO player can activate a Fresh unit in East 6 and roll Anti-Submarine Warfare with +1 die. Alternatively, NATO can roll a single die against the Soviet submarine and does not mark the detecting friendly unit 'Spent'. In this way NATO can claim a free die against every Soviet submarine crossing the SOSUS line so long as Fresh units are available. If the Soviet submarine moved east across the SOSUS line heading back home, the submarine still crosses the Hydrophone Barrier and the same process would apply.",
+    "crossRefs": ["7.2"],
+    "legacyRef": "6.8",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Hydrophone Barriers need a FRESH friendly unit to use one of the options. Task forces can never use this rule, nor anything in a task force – escort subs are too busy escorting their friends.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-3-7",
+    "section": "2.3.7",
+    "title": "Land Area",
+    "summary": "Map regions containing ports and/or airfields; one of each max (or combined); adjacency by touching symbols.",
+    "text": "These are areas of the map that contain ports and/or airfields, referred to as \"Facilities\". The number of airfields or ports shown on the map is for interest only – for game purposes a Land Area has a maximum of one port and/or one airfield facility (or a combination of both, see 2.3.8.3).\n\nExample: The Kola Peninsula has many airfields shown but for game purposes it is treated as a single airfield facility and a single port adjacent to the North 9-10 Sea Zone.\n\nThe airfield and port symbols are used to show which Sea Zones the facility is adjacent to. Any symbol or airfield/port box touching a Sea Zone indicates adjacency. Exception: The Kola Ports are only adjacent to North 9-10.\n\nExample: The UK has two facilities. The airfield is adjacent to North 5-6 because Lossiemouth touches the Sea Zone, North 3-4 because Leuchars touches the Sea Zone, East 6 because of Stornoway, and East 4 because the facility box itself touches that Sea Zone.\n\nThe location of port symbols on the map defines port adjacency – Example: Keflavik NAS (Iceland) is adjacent to North 7-8 and 9-10. But its port is only adjacent to East 9-10 because the port symbol touches no other Sea Zone.\n\nUnits can move from a facility to any adjacent Sea Zone and vice-versa, although naval units are subject to movement rules for entering and leaving ports 5.1.3.6.\n\nExample: Units on the UK airfields can move to North 3-4, North 5-6, East 6 or East 4 because these Sea Zones are adjacent to the airfields.\n\nWhen a Sea Zone experiences Bad Weather, any Land Area adjacent to that Sea Zone experiences Bad Weather as well.\n\nExample: The UK airfields will experience Bad Weather if any of the 4 adjacent Sea Zones has Bad Weather.",
+    "crossRefs": ["2.3.8.3", "5.1.3.6"],
+    "legacyRef": "6.9"
+  },
+  {
+    "id": "bwn-2-3-8",
+    "section": "2.3.8",
+    "title": "Facilities",
+    "summary": "Three facility types: Ports, Airfields, Combined.",
+    "text": "There are three types of facilities – Ports, Airfields, and Combined Facilities.",
+    "crossRefs": ["2.3.8.1", "2.3.8.2", "2.3.8.3", "2.3.8.4", "2.3.8.5", "2.3.8.6"],
+    "legacyRef": "6.10"
+  },
+  {
+    "id": "bwn-2-3-8-1",
+    "section": "2.3.8.1",
+    "title": "Ports",
+    "summary": "Minor or Major; used to form TFs, receive convoys, repair capital ships, and rearm naval units.",
+    "text": "Ports represent significant naval shore facilities used to form Task Forces, receive NATO convoys, repair capital ships and rearm naval units. There are two types of ports - Major or Minor.\n\nThe capability of each type is noted below.\n\n- Minor Port: May rearm one friendly Submarine Unit per turn and may only rearm Surface Units of own nationality.\n- Major Port: May rearm any number of friendly Submarine Units and may rearm any number of friendly Surface Units. Also may repair capital ships which are damaged.",
+    "crossRefs": [],
+    "legacyRef": "6.10.1",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Repaired capital ship returns to major port where it entered.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Convoys do not have to be detached during the ships event to enter port at a cost of 1 OPS point if the remainder of the TF stays at sea – they just detach for free and enter port.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "On TFs in port: they cannot be attacked directly nor detected, but collateral hits on the port can kill them – they are sitting ducks. The TF cannot fire SAMs (it's in port) but it CAN use its CAP.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-3-8-2",
+    "section": "2.3.8.2",
+    "title": "Airfields",
+    "summary": "Airfields can host an unlimited number of ground-based aircraft.",
+    "text": "Airfields can accommodate and operate an unlimited number of ground-based aircraft.",
+    "crossRefs": [],
+    "legacyRef": "6.10.2"
+  },
+  {
+    "id": "bwn-2-3-8-3",
+    "section": "2.3.8.3",
+    "title": "Combined Facilities",
+    "summary": "Port and airfield in one facility with a single damage box; damage affects both.",
+    "text": "Ports and airfields combined into a single facility, they have a single Damage box and so if damaged, both the airfield and the port are damaged simultaneously to the same level of damage.\n\nExample: Esbjerg in Denmark is the same facility as Kiel and Schleswig which is a combined facility.",
+    "crossRefs": [],
+    "legacyRef": "6.10.3"
+  },
+  {
+    "id": "bwn-2-3-8-4",
+    "section": "2.3.8.4",
+    "title": "Facility Damage",
+    "summary": "Damage box shows hits required for Light/Heavy damage; effects on airfields and ports listed.",
+    "text": "Each facility type has a Damage box which shows the number of hits required to cause 'Light' and 'Heavy' damage. If a Land Area has separate ports and airfields, it will have separate Damage boxes, while a Land Area with a combined facility has a single Damage box that affects both facility capabilities equally.\n\nExample 1: The United Kingdom has an airfield facility in the North and a port facility in the South. Each facility has a Damage box (1/3 and 2/4 respectively) and is damaged independently.\n\nExample 2: NS Rota in Spain is a combined facility with a 1/2 Damage box.\n\nWhen a facility is damaged, place the number of hits scored by the attacking player on the facility (along with any pre-existing hits) to a maximum of 5. Then evaluate the damage level – if the number of hits is equal or higher than the first number, the facility is lightly damaged. If the number of hits is equal or higher than the second number, the facility is heavily damaged – place the correct Damage Level marker and then check the Damage Effect Table and apply the results.\n\nDamage is cumulative – apply both light and heavy damage results to a heavily damaged facility.\n\nDamage Effect Table:\n- Airfield Light: No Air Units may fly, return to base any of them 'Spent'. Also applies a CAP modifier [7.1.3 and 7.1.4].\n- Airfield Heavy: No Air Units may fly. All CAP is reduced to one die per unit. Do not remove 'Spent' markers on Air Units when ships move or at turn end – the airfield has lost the ability to refuel and maintain aircraft.\n- Port Light: Causes +1 hit to Convoys and Amphibs arriving or leaving for delay. +1 additional Operations Point to activate a Submarine Unit at this port (2 OPS). Mine clearance penalty of -2.\n- Port Heavy: Causes +2 hits to Convoys and Amphibs arriving or leaving (instead of +1). Forming a Task Force at this port requires +1 Operations Points.\n\nDesign note: This means that a facility which requires 3 hits to be 'Heavily' damaged, such as the UK airfields can have excess hits placed on it to keep it suppressed for longer, and that a large facility which is 'Lightly' damaged on two hits will recover faster.\n\nExample: The RAF airfield in Scotland is hit. They take one damage and so a Hit marker is placed. Since the Damage box shows 1/3, one hit is enough to inflict light damage, but it would require three hits to cause heavy damage. A Light Damage marker is placed.",
+    "crossRefs": ["7.1.3", "7.1.4"],
+    "legacyRef": "6.10.4",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Example of Play (page 53) and QRS return MP to base for Lightly damaged Airbase. The Damage Effect Table on page 12 says only Fighter Units return. Designer confirms: a lightly damaged airfield RTBs MP units as well. The runway is closed to all but emergency CAP effectively.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Collateral Damage causes step losses to units at or flying from the airbase or port under attack. Step losses can be applied to Capital Ships and follow the capital ship damage procedure – being in port getting shot at is dangerous.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-3-8-5",
+    "section": "2.3.8.5",
+    "title": "Facility Repair",
+    "summary": "Each turn damaged facilities lose 2 hits (1 per Operations card); Repair action can speed this up.",
+    "text": "Each turn the number of hits on each damaged facility will decrease by two (one per Operations card played), and the owning player can additionally take a Repair action to try and speed this up 5.4.1. When the number of hits is less than the 'Heavy damage' value, the facility goes from 'Heavy damage' to 'Light damage'. When the number of hits drops below that required to cause 'Light damage', the facility is no longer damaged.",
+    "crossRefs": ["5.4.1"],
+    "legacyRef": "6.10.5"
+  },
+  {
+    "id": "bwn-2-3-8-6",
+    "section": "2.3.8.6",
+    "title": "Facility Capture",
+    "summary": "Several NATO facilities can be captured by Soviets via Amphibious Landing or War Track advancement.",
+    "text": "Several NATO facilities can be captured by the Soviets during the game by Amphibious Landing or through advancement of the War Tracks 8.2.",
+    "crossRefs": ["8.2"],
+    "legacyRef": "6.10.6",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "'A facility always retains at least the damage it had when captured.' All bases can be repaired – this means if the facility is already heavily damaged when you land you can't make it better by landing, but you can repair it thereafter.",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-3-9",
+    "section": "2.3.9",
+    "title": "Map Overflight Arrows",
+    "summary": "Arrows show alternate routes; '+X' adds to cost, '=X' sets total cost.",
+    "text": "Several arrows show an alternate route a unit may take to reach a Sea Zone. The arrow explanation text will show either \"+X\" where X is the additional cost in movement to use the arrow or \"=X\" where X is the total movement cost to use the arrow.\n\nExample 1: An arrow starts in North 9-10 and then overflies the Arctic. For an additional 2 zones of movement, the unit can fly from North 9-10 to East 9-10. This may allow avoidance of NATO fighters. The total distance moved is 3 (one to the Barents Sea, plus two to follow the arrow).\n\nExample 2: From the Black Sea bases, Air Units may fly directly to the Baltic Sea for a total movement cost of 3 zones or to Med 7-8 for 1 zone (but overflying Turkey – [21.1]) or to Med 7-8 for a total movement cost of 4 zones by overflying Iran, Iraq and Syria – which is a safer but much longer route.",
+    "crossRefs": [],
+    "legacyRef": "6.11"
+  },
+  {
+    "id": "bwn-2-3-10",
+    "section": "2.3.10",
+    "title": "Measuring Range",
+    "summary": "Land Areas are one zone from adjacent Sea Zones for movement; attacks only need adjacency to a Sea Zone.",
+    "text": "For movement purposes a Land Area is one zone away from all adjacent Sea Zones, however when a facility is being attacked the attacking units only need to be able to reach an adjacent Sea Zone.\n\nExample: Flying from the Kola Peninsula bases to the Barents Sea is 1 zone of movement, but to attack the Kola bases, NATO need only be able to trace adjacent to them – flying to the Barents Sea is therefore good enough for attacking purposes.\n\nAn \"island\" Land Area (e.g. Puerto Rico) situated entirely within a Sea Zone is at range zero to its surrounding Sea Zone and range one to neighboring Sea Zones.",
+    "crossRefs": [],
+    "legacyRef": "6.12"
+  },
+  {
+    "id": "bwn-2-3-11",
+    "section": "2.3.11",
+    "title": "Game Tracks and Holding Boxes",
+    "summary": "Map has tracks for markers and holding boxes for Task Forces and destroyed units.",
+    "text": "The map has various tracks to hold game information markers, and several holding boxes for Task Forces and Destroyed Units. Task Force composition is indicated by placing Surface Units into the relevant Task Force box on the map. Task Force composition is private information to the owning player. If a Task Force is detected the contents will be placed on the map in accordance with the detection rules.",
+    "crossRefs": [],
+    "legacyRef": "6.13"
+  },
+  {
+    "id": "bwn-2-4",
+    "section": "2.4",
+    "title": "Cards",
+    "summary": "Each side has a deck driving the game; cards provide OPS and one or two events. Always hold three cards.",
+    "text": "Each side has a deck of cards which drive the game. Each card has a numeric value referred to as 'Operations Points' in the top left corner (also 'OPS') along with one or two events. The top event on a card can only be used if the card is played for Operations Points (or by 4.2.2.5), the bottom event can be played whenever the conditions specified are met. Two cards are played each turn for Operations Points by each player.\n\nOnce a card is played it is moved to your own discard pile which will be reshuffled if you need to draw new cards and have no remaining cards in the deck.\n\nA card with 'remove' specified within the event text is removed from the game after the event is played.\n\nThe top event on each card has a cost to play indicated by the right hand value of the card - this must be paid from the Operations Points granted by play of the card if the player wishes to activate that event.\n\nThe bottom event on each card is played in response to something happening and is known as a 'reaction'. Any number of reactions can be used as and when applicable, without any limitations on the number of cards expended and with no cost in ops points.\n\nA player should always have three cards.\n\nWhenever a player drops to only two cards, draw another card.",
+    "crossRefs": ["4.2.2.5"],
+    "legacyRef": "3",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "Some operations event cards contain 'during this card play'. This means 'during the day that this event is used' – for example you can play SOSUS Sabotage on day one but not trigger the event until day two; when you do, it lasts all of day two (but you lost the element of surprise).",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "'A player will always have three cards.' NATO card 55 can reduce the Soviet hand for the rest of the turn – this is an exception to the always-three-cards rule.",
+        "citation": "QA v2.0"
+      },
+      {
+        "source": "qa",
+        "text": "Soviet First Strike card: 'Play before spending any points' means before you spend any ops from any card; it can be played on day two if it is before spending any points, but cannot use the +2 cost-to-play-from-hand option (because that would require spending points).",
+        "citation": "QA v2.0"
+      }
+    ]
+  },
+  {
+    "id": "bwn-2-5",
+    "section": "2.5",
+    "title": "Dice",
+    "summary": "All dice are ten-sided. Any 'zeros' are read as 'tens'.",
+    "text": "All dice are ten-sided. Any 'zeros' are read as 'tens'.",
+    "crossRefs": ["2.5.1", "2.5.2"],
+    "legacyRef": "4"
+  },
+  {
+    "id": "bwn-2-5-1",
+    "section": "2.5.1",
+    "title": "Die Roll Modifiers (DRM)",
+    "summary": "DRMs are added to die rolls; can be positive or negative.",
+    "text": "Throughout play various events and actions will involve Die Roll Modifiers (DRM) that when combined with the initial die roll result, give you the final result. A DRM can be positive or negative.",
+    "crossRefs": [],
+    "legacyRef": "4.1"
+  },
+  {
+    "id": "bwn-2-5-2",
+    "section": "2.5.2",
+    "title": "Natural Rolls",
+    "summary": "Natural roll = result before DRMs; prefixed 'N' on combat tables and usually generates special results.",
+    "text": "A 'natural roll' is a die result before modifiers are applied. Thus, a natural '10' can only be achieved through the roll of a '10' regardless of DRMs. In this game, a natural roll usually generates a special result and is preceded with 'N' on the combat tables.",
+    "crossRefs": [],
+    "legacyRef": "4.2",
+    "clarifications": [
+      {
+        "source": "qa",
+        "text": "If a submarine rolls a N10 (torpedoes, not the doubles-generated missile attack) the hit can be cancelled by a successful ASW roll of 8+.",
+        "citation": "QA v2.0"
+      }
+    ]
+  }
+]
