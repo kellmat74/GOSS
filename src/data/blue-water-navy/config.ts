@@ -8,13 +8,16 @@ type TablesLoader = () => Promise<{ default: TablesFile }>;
 const tables = (load: () => Promise<unknown>): TablesLoader => load as TablesLoader;
 
 // QuickRef buttons for Blue Water Navy — all "table" kind (image play aids).
-// Mapping refined once PNGs are extracted from the play-aids PDF.
+// One button per page of the Compass Games Play Aids PDF.
 const bwnQuickRefButtons: QuickRefButtonDef[] = [
-  { id: "turn-summary",  label: "Turn",  icon: "🔄", title: "Turn Summary",       kind: "table", tableId: "turn-summary"  },
-  { id: "actions-chart", label: "Acts",  icon: "📋", title: "Actions Chart",      kind: "table", tableId: "actions-chart" },
-  { id: "combat-chart",  label: "Cbt",   icon: "⚔",  title: "Combat Tables",      kind: "table", tableId: "combat-chart"  },
-  { id: "asw-chart",     label: "ASW",   icon: "🐟", title: "ASW Charts",         kind: "table", tableId: "asw-chart"     },
-  { id: "weather",       label: "Wx",    icon: "🌧",  title: "Weather Effects",    kind: "table", tableId: "weather-chart" },
+  { id: "units",       label: "Units", icon: "🎖",  title: "How to Read Air & Naval Units",      kind: "table", tableId: "unit-id-guide"     },
+  { id: "turn",        label: "Turn",  icon: "🔄", title: "Action & Turn Sequence",             kind: "table", tableId: "turn-sequence"     },
+  { id: "subs",        label: "Subs",  icon: "🌊", title: "Attacks on & by Submarines (ASW)",   kind: "table", tableId: "sub-attacks"       },
+  { id: "task-force",  label: "TF",    icon: "🚢", title: "Task Force Detection, Missiles, Damage", kind: "table", tableId: "task-force-combat" },
+  { id: "fighters",    label: "Air",   icon: "✈",  title: "Fighters (CAP & Interception)",       kind: "table", tableId: "fighter-combat"    },
+  { id: "land",        label: "Land",  icon: "💥", title: "Attacking Land Targets",             kind: "table", tableId: "land-attacks"      },
+  { id: "convoys",     label: "Misc",  icon: "📦", title: "Convoys, Mines, War Tracks, Nukes",  kind: "table", tableId: "convoys-misc"      },
+  { id: "soviet",      label: "Sov",   icon: "☭",  title: "Soviet Specific Rules",              kind: "table", tableId: "soviet-specific"   },
 ];
 
 export const blueWaterNavyConfig: GameSystemConfig = {
