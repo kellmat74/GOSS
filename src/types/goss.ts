@@ -64,6 +64,13 @@ export interface GameTurn {
   timeOfDay: TimeOfDay;
 }
 
+/** A section-scoped clarification or designer note attached to a rule. */
+export interface ClarificationEntry {
+  source: "qa" | "errata" | "designer-note"; // "qa" = e.g. BWN designer Q&A
+  text: string;
+  citation?: string; // e.g. "QA v2.0, p. 5"
+}
+
 export interface RuleEntry {
   id: string;
   section: string;
@@ -73,6 +80,42 @@ export interface RuleEntry {
   crossRefs: string[];
   module?: string;    // undefined = base system rule, "war" = WaR-specific, etc.
   tableRef?: string;  // ID of an associated table in the game's tables.json
+  /** Pointer to the original rulebook's section number (e.g. for BWN: original 2020 section). Shown muted in modal header. */
+  legacyRef?: string;
+  /** Section-scoped designer Q&A / clarifications. Shown in modal under a "Designer Q&A" divider. */
+  clarifications?: ClarificationEntry[];
+}
+
+// ---------------------------------------------------------------------------
+// Card-driven games (Blue Water Navy and similar)
+// ---------------------------------------------------------------------------
+
+export type CardSide = "soviet" | "nato" | "neutral";
+
+export type CardType =
+  | "operations-event"
+  | "reaction-event"
+  | "use-when-active"
+  | "use-anytime";
+
+/** A single game card (event card, action card, etc.) */
+export interface GameCard {
+  id: string;             // e.g. "sov-3"
+  cardNumber: string;     // e.g. "3" or "3/53" (when duplicates exist)
+  side: CardSide;
+  title: string;          // e.g. "Stealthy Approach"
+  type: CardType;
+  text?: string;          // full card body text (empty until scanned in)
+  clarification?: string; // designer clarification, e.g. from a clarifications doc
+  cost?: number;          // OPS cost if applicable
+  ruleRefs?: string[];    // section IDs the card cross-references
+}
+
+/** A group of cards (e.g. Soviet Event Cards, NATO Event Cards). */
+export interface CardCategory {
+  id: string;             // e.g. "events-soviet"
+  label: string;          // e.g. "Soviet Event Cards"
+  cards: GameCard[];
 }
 
 // Scenario overlay fields added to SubPhase/Phase after merge

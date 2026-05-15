@@ -1,9 +1,14 @@
 import type { GameSystemConfig } from "../types/platform";
 import { gossConfig } from "./goss/config";
 import { nextWarConfig } from "./next-war/config";
+import { blueWaterNavyConfig } from "./blue-water-navy/config";
 
 /** All registered game systems. Add new games here. */
-const ALL_GAMES: GameSystemConfig[] = [gossConfig, nextWarConfig];
+const ALL_GAMES: GameSystemConfig[] = [
+  gossConfig,
+  nextWarConfig,
+  blueWaterNavyConfig,
+];
 
 /**
  * Check if draft mode is active.

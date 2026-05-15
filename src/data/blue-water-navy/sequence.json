@@ -1,0 +1,43 @@
+{
+  "phases": [
+    {
+      "id": "convoy-placement",
+      "name": "Convoy Placement",
+      "description": "NATO places convoys on the map. (Placeholder — full text pending rules extraction.)",
+      "ruleRef": "3.2.1",
+      "checklist": [],
+      "subPhases": []
+    },
+    {
+      "id": "reinforcement",
+      "name": "Reinforcement",
+      "description": "Both sides receive reinforcements per scenario. (Placeholder.)",
+      "ruleRef": "3.2.2",
+      "checklist": [],
+      "subPhases": []
+    },
+    {
+      "id": "operations",
+      "name": "Operations Phase",
+      "description": "Open-ended phase: each player spends OPS points from cards to take actions in any order. See the Actions tab for the full action catalog.",
+      "ruleRef": "4",
+      "checklist": [],
+      "subPhases": []
+    },
+    {
+      "id": "end-of-turn",
+      "name": "End of Turn",
+      "description": "Cleanup, invasions, first strike, weather, and event card resolution.",
+      "ruleRef": "3.3",
+      "checklist": [
+        "Turn Clean-Up (3.3.1)",
+        "Resolve invasions (3.3.2)",
+        "Check First Strike (3.3.3)",
+        "Determine Weather (3.4)",
+        "Resolve Event Cards (3.3.5)",
+        "Advance to next turn (3.3.6)"
+      ],
+      "subPhases": []
+    }
+  ]
+}

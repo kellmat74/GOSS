@@ -79,6 +79,8 @@ export interface ModuleConfig {
     advancedSequenceOverlay?: () => Promise<{ default: unknown }>;
     /** Advanced Game module-specific rules (appended to base advanced rules) */
     advancedRules?: () => Promise<{ default: unknown }>;
+    /** Card catalog for card-driven games (Blue Water Navy and similar) */
+    cards?: () => Promise<{ default: unknown }>;
   };
 }
 
@@ -114,6 +116,7 @@ export interface GameSystemConfig {
     ask: boolean;
     learn?: boolean;
     options?: boolean;   // optional rules panel
+    actions?: boolean;   // card-driven action catalog (e.g. Blue Water Navy)
   };
 
   /** Buttons shown in the right-edge quick-reference sidebar strip. */
