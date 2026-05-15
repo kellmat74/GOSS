@@ -1,7 +1,9 @@
 import type { TablesFile } from "./tables";
 import type { GlossaryConfig } from "../data/glossary";
+import type { SearchConfig } from "../utils/rulesSearch";
 export type { TablesFile } from "./tables";
 export type { GlossaryConfig } from "../data/glossary";
+export type { SearchConfig } from "../utils/rulesSearch";
 
 /** A single errata entry targeting a specific rule section. */
 export interface ErrataEntry {
@@ -126,6 +128,9 @@ export interface GameSystemConfig {
 
   /** Per-game glossary configuration — which sections to scan + per-game extras. */
   glossaryConfig?: GlossaryConfig;
+
+  /** Per-game search configuration — synonym expansion + module-name detection. */
+  searchConfig?: SearchConfig;
 
   /** If set, game supports multiple complexity levels (Standard/Advanced). */
   complexityLevels?: ComplexityLevel[];

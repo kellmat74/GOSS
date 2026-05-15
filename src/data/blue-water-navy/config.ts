@@ -4,6 +4,7 @@ import type {
   TablesFile,
 } from "../../types/platform";
 import { bwnGlossaryConfig } from "./glossary-config";
+import { bwnSearchConfig } from "./search-config";
 
 type TablesLoader = () => Promise<{ default: TablesFile }>;
 const tables = (load: () => Promise<unknown>): TablesLoader => load as TablesLoader;
@@ -39,6 +40,7 @@ export const blueWaterNavyConfig: GameSystemConfig = {
   },
   quickRefButtons: bwnQuickRefButtons,
   glossaryConfig: bwnGlossaryConfig,
+  searchConfig: bwnSearchConfig,
 
   modules: [
     {

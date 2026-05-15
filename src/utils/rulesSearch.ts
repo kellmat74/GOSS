@@ -6,6 +6,26 @@ export interface SearchResult {
   matchedFields: ("title" | "section" | "summary" | "text")[];
 }
 
+/**
+ * Per-game search behavior. Pass to `searchRules` / `searchSequence` to enable
+ * game-specific synonym expansion and module-name detection.
+ */
+export interface SearchConfig {
+  /**
+   * Token expansion. When a query token matches a key, the listed phrases are
+   * also added to the search tokens. Keep both keys and values lowercase.
+   * Example: `{ "zoc": ["movement halt", "adjacent enemy"] }`
+   */
+  synonyms?: Record<string, string[]>;
+  /**
+   * Substring aliases for game-module names. Map lowercased aliases to module
+   * IDs. Longer aliases checked first; short (<=3 char) aliases are matched
+   * with word boundaries to avoid false positives.
+   * Example: `[ ["battle of the bulge", "war"], ["bulge", "war"] ]`
+   */
+  moduleAliases?: [string, string][];
+}
+
 export interface SequenceSearchResult {
   name: string;
   ruleRef?: string;
@@ -30,33 +50,13 @@ const STOP_WORDS = new Set([
 ]);
 
 /**
- * Module alias map: game name strings → module IDs.
- * Checked as substring matches against the full query (case-insensitive).
- * Longer aliases are checked first to avoid partial matches.
- */
-const MODULE_ALIASES: [string, string][] = [
-  ["battle of the bulge", "war"],
-  ["wacht am rhein", "war"],
-  ["atlantic wall", "atlantic-wall"],
-  ["hurtgen forest", "hurtgen"],
-  ["hell's forest", "hurtgen"],
-  ["lucky forward", "lucky-forward"],
-  ["hurtgen", "hurtgen"],
-  ["bulge", "war"],
-  ["war", "war"],
-  ["hhf", "hurtgen"],
-  ["aw", "atlantic-wall"],
-  ["lf", "lucky-forward"],
-];
-
-/**
- * Detect if the query references a specific game module.
+ * Detect if the query references a specific game module, using per-game aliases.
  * Returns the module ID or null.
  */
-function detectModule(query: string): string | null {
+function detectModule(query: string, aliases: [string, string][] | undefined): string | null {
+  if (!aliases || aliases.length === 0) return null;
   const q = query.toLowerCase();
-  for (const [alias, moduleId] of MODULE_ALIASES) {
-    // Word-boundary check for short aliases to avoid false matches
+  for (const [alias, moduleId] of aliases) {
     if (alias.length <= 3) {
       const re = new RegExp(`\\b${alias}\\b`, "i");
       if (re.test(q)) return moduleId;
@@ -68,28 +68,6 @@ function detectModule(query: string): string | null {
 }
 
 /**
- * Synonym map: common wargaming terms → GOSS-specific terms.
- * When a query token matches a key, the associated terms are added
- * to the search tokens so rules using GOSS terminology are found.
- */
-const SYNONYMS: Record<string, string[]> = {
-  "zoc": ["movement halt", "adjacent enemy", "zone of control"],
-  "zocs": ["movement halt", "adjacent enemy", "zone of control"],
-  "zone": ["movement halt", "adjacent"],
-  "retreat": ["retreat", "withdraw", "displacement"],
-  "overrun": ["overrun", "exploitation"],
-  "cas": ["ground support", "gs mission"],
-  "interdiction": ["supply interdiction", "ground interdiction"],
-  "arty": ["artillery", "art"],
-  "ammo": ["ammunition", "ammo depletion", "ammo replenishment"],
-  "hq": ["headquarters", "command"],
-  "recon": ["reconnaissance"],
-  "mech": ["mechanized", "mech"],
-  "gens": ["general supply"],
-  "ohs": ["on hand supply"],
-};
-
-/**
  * Relevance-ranked search across all rule fields.
  * Uses OR logic with scoring — more matched tokens = higher score.
  * Stop words are filtered out to focus on meaningful terms.
@@ -97,29 +75,28 @@ const SYNONYMS: Record<string, string[]> = {
 export function searchRules(
   query: string,
   rules: RuleEntry[],
-  maxResults = 20
+  maxResults = 20,
+  config?: SearchConfig,
 ): SearchResult[] {
   const rawTokens = query
     .toLowerCase()
     .split(/\s+/)
     .filter((t) => t.length > 0 && !STOP_WORDS.has(t));
 
-  // Expand synonyms: add GOSS-specific terms for common wargame jargon
+  // Expand synonyms with per-game terminology (no-op if config not provided)
+  const synonyms = config?.synonyms;
   const tokens = [...rawTokens];
-  for (const token of rawTokens) {
-    const synonyms = SYNONYMS[token];
-    if (synonyms) {
-      for (const syn of synonyms) {
-        // Multi-word synonyms are kept as single search phrases
-        tokens.push(syn);
-      }
+  if (synonyms) {
+    for (const token of rawTokens) {
+      const syns = synonyms[token];
+      if (syns) for (const s of syns) tokens.push(s);
     }
   }
 
   if (tokens.length === 0) return [];
 
   // Detect if query references a specific game module
-  const detectedModule = detectModule(query);
+  const detectedModule = detectModule(query, config?.moduleAliases);
 
   const results: SearchResult[] = [];
 
@@ -191,18 +168,20 @@ export function searchRules(
 export function searchSequence(
   query: string,
   phases: Phase[],
-  maxResults = 10
+  maxResults = 10,
+  config?: SearchConfig,
 ): SequenceSearchResult[] {
   const rawTokens = query
     .toLowerCase()
     .split(/\s+/)
     .filter((t) => t.length > 0 && !STOP_WORDS.has(t));
 
+  const synonyms = config?.synonyms;
   const tokens = [...rawTokens];
-  for (const token of rawTokens) {
-    const synonyms = SYNONYMS[token];
-    if (synonyms) {
-      for (const syn of synonyms) tokens.push(syn);
+  if (synonyms) {
+    for (const token of rawTokens) {
+      const syns = synonyms[token];
+      if (syns) for (const s of syns) tokens.push(s);
     }
   }
 

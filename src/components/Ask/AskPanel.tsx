@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import type { RuleEntry, Phase } from "../../types/goss";
 
-import { searchRules, searchSequence } from "../../utils/rulesSearch";
+import { searchRules, searchSequence, type SearchConfig } from "../../utils/rulesSearch";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
 interface AskPanelProps {
@@ -10,6 +10,10 @@ interface AskPanelProps {
   workerUrl?: string;
   systemPromptPreamble?: string;
   exampleQuestions?: string[];
+  /** Game id used to scope chat history in localStorage so games don't share threads. */
+  gameId?: string;
+  /** Per-game search config (synonym expansion, module aliases) for retrieval. */
+  searchConfig?: SearchConfig;
 }
 
 interface ChatMessage {
@@ -106,20 +110,35 @@ function CopyButton({ text, isUser, question }: { text: string; isUser: boolean;
   );
 }
 
-const STORAGE_KEY = "goss-ask-history";
+const LEGACY_STORAGE_KEY = "goss-ask-history";
 
-function loadHistory(): ChatMessage[] {
+function storageKeyForGame(gameId?: string): string {
+  return gameId ? `wc-ask-history-${gameId}` : LEGACY_STORAGE_KEY;
+}
+
+function loadHistory(gameId?: string): ChatMessage[] {
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
+    const key = storageKeyForGame(gameId);
+    // One-time migration: if no per-game history exists but legacy key does,
+    // migrate it into the GOSS-scoped key (GOSS was the only game when the
+    // legacy key was used).
+    if (gameId === "goss" && !localStorage.getItem(key)) {
+      const legacy = localStorage.getItem(LEGACY_STORAGE_KEY);
+      if (legacy) {
+        localStorage.setItem(key, legacy);
+        localStorage.removeItem(LEGACY_STORAGE_KEY);
+      }
+    }
+    const stored = localStorage.getItem(key);
     return stored ? JSON.parse(stored) : [];
   } catch {
     return [];
   }
 }
 
-function saveHistory(messages: ChatMessage[]) {
+function saveHistory(messages: ChatMessage[], gameId?: string) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
+    localStorage.setItem(storageKeyForGame(gameId), JSON.stringify(messages));
   } catch { /* quota exceeded — silently fail */ }
 }
 
@@ -129,8 +148,15 @@ export function AskPanel({
   workerUrl = DEFAULT_WORKER_URL,
   systemPromptPreamble,
   exampleQuestions = DEFAULT_EXAMPLE_QUESTIONS,
+  gameId,
+  searchConfig,
 }: AskPanelProps) {
-  const [messages, setMessages] = useState<ChatMessage[]>(loadHistory);
+  const [messages, setMessages] = useState<ChatMessage[]>(() => loadHistory(gameId));
+
+  // Reload history when game changes
+  useEffect(() => {
+    setMessages(loadHistory(gameId));
+  }, [gameId]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -147,10 +173,10 @@ export function AskPanel({
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
-  // Persist messages to localStorage
+  // Persist messages to localStorage (scoped by gameId)
   useEffect(() => {
-    if (messages.length > 0) saveHistory(messages);
-  }, [messages]);
+    if (messages.length > 0) saveHistory(messages, gameId);
+  }, [messages, gameId]);
 
   // Auto-resize textarea
   const handleInput = useCallback((value: string) => {
@@ -178,13 +204,13 @@ export function AskPanel({
 
       try {
         // Top 10 get full text, next 15 get summaries only
-        const relevant = searchRules(messageText, rules).slice(0, 25);
+        const relevant = searchRules(messageText, rules, 25, searchConfig);
         const topRules = relevant.slice(0, 10).map((r) => r.rule);
         const summaryRules = relevant.slice(10).map((r) => r.rule);
 
         // Search sequence content & tips for additional context
         const seqResults = phases.length > 0
-          ? searchSequence(messageText, phases, 5)
+          ? searchSequence(messageText, phases, 5, searchConfig)
           : [];
 
         const response = await fetch(workerUrl, {
@@ -239,7 +265,7 @@ export function AskPanel({
         <div className="flex gap-2">
           {messages.length > 0 && (
             <button
-              onClick={() => { setMessages([]); localStorage.removeItem(STORAGE_KEY); }}
+              onClick={() => { setMessages([]); localStorage.removeItem(storageKeyForGame(gameId)); }}
               className="rounded px-2 py-1 text-xs text-stone-400 hover:text-stone-600 hover:bg-stone-100 dark:hover:text-stone-200 dark:hover:bg-stone-700 transition-colors"
             >
               Clear

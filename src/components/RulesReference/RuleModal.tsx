@@ -6,7 +6,7 @@ import { GlossaryHighlighter } from "../GlossaryHighlighter";
 import { parseRuleRefNodes } from "../../utils/parseRuleRefs";
 
 export function RuleModal() {
-  const { activeRule, history, closeRule, goBack, goNext, goPrev, openRule, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection } = useRules();
+  const { activeRule, history, closeRule, goBack, goNext, goPrev, openRule, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection, getModuleLabel } = useRules();
   const { openTable, tables } = useTables();
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -104,6 +104,7 @@ export function RuleModal() {
             getRuleBySection={getRuleBySection}
             openRule={openRule}
             getErrataForSection={getErrataForSection}
+            getModuleLabel={getModuleLabel}
           />
         </div>
 
@@ -148,12 +149,14 @@ function ModalBody({
   getRuleBySection,
   openRule,
   getErrataForSection,
+  getModuleLabel,
 }: {
   activeRule: import("../../types/goss").RuleEntry;
   getRulesForSection: (section: string) => import("../../types/goss").RuleEntry[];
   getRuleBySection: (section: string) => import("../../types/goss").RuleEntry | undefined;
   openRule: (sectionOrId: string) => void;
   getErrataForSection: (section: string) => import("../../context/RulesContext").ErrataForSection | null;
+  getModuleLabel: (moduleId: string) => string;
 }) {
   // Get all rules for this section (base + scenario overlays)
   const allForSection = getRulesForSection(activeRule.section);
@@ -240,7 +243,7 @@ function ModalBody({
         <div key={rule.id} className="mt-4">
           <div className="mb-3 flex items-center gap-2 border-t border-blue-200 pt-3 dark:border-blue-800">
             <span className="rounded bg-blue-500/20 px-1.5 py-0.5 text-xs font-semibold text-blue-700 dark:text-blue-400">
-              {rule.module === "war" ? "Wacht am Rhein" : rule.module === "hurtgen" ? "Hurtgen" : rule.module === "lucky-forward" ? "Lucky Forward" : rule.module === "atlantic-wall" ? "Atlantic Wall" : rule.module}
+              {rule.module ? getModuleLabel(rule.module) : ""}
             </span>
             {rule.title !== baseRule?.title && (
               <span className="text-xs text-stone-500">{rule.title}</span>

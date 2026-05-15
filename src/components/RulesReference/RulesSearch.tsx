@@ -115,6 +115,7 @@ function RuleRow({
   onOpen: (section: string) => void;
   hasErrata?: boolean;
 }) {
+  const { getModuleShortLabel } = useRules();
   return (
     <li className="rounded-lg border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-800">
       <button
@@ -126,7 +127,7 @@ function RuleRow({
         </span>
         {rule.module && (
           <span className="shrink-0 rounded bg-blue-500/20 px-1 py-0.5 text-[10px] font-medium text-blue-700 dark:text-blue-400">
-            {rule.module === "war" ? "WaR" : rule.module === "hurtgen" ? "HHF" : rule.module === "lucky-forward" ? "LF" : rule.module === "atlantic-wall" ? "AW" : rule.module}
+            {getModuleShortLabel(rule.module)}
           </span>
         )}
         <div className="min-w-0 flex-1">
@@ -165,6 +166,7 @@ function TreeRow({
   const isExpanded = expanded.has(node.rule.section);
   const indent = depth === 0 ? "" : depth === 1 ? "ml-4" : "ml-8";
   const hasErrata = sectionsWithErrata.has(node.rule.section.toLowerCase());
+  const { getModuleShortLabel } = useRules();
 
   return (
     <>
@@ -197,7 +199,7 @@ function TreeRow({
             </span>
             {node.rule.module && (
               <span className="shrink-0 rounded bg-blue-500/20 px-1 py-0.5 text-[10px] font-medium text-blue-700 dark:text-blue-400">
-                {node.rule.module === "war" ? "WaR" : node.rule.module === "hurtgen" ? "HHF" : node.rule.module === "lucky-forward" ? "LF" : node.rule.module === "atlantic-wall" ? "AW" : node.rule.module}
+                {getModuleShortLabel(node.rule.module)}
               </span>
             )}
             <div className="min-w-0 flex-1">

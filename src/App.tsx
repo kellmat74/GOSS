@@ -368,7 +368,7 @@ function App() {
   return (
     <GlossaryProvider rules={allRules} config={gameConfig?.glossaryConfig}>
     <TablesProvider tables={data?.tables ?? {}}>
-    <RulesProvider rules={allRules} baseErrata={data?.baseErrata} moduleErrata={data?.moduleErrata}>
+    <RulesProvider rules={allRules} baseErrata={data?.baseErrata} moduleErrata={data?.moduleErrata} modules={gameConfig?.modules}>
       <AppShell
         sidebar={sidebar}
         gameSelector={
@@ -429,6 +429,8 @@ function App() {
             workerUrl={gameConfig.askConfig.workerUrl}
             systemPromptPreamble={gameConfig.askConfig.systemPromptPreamble}
             exampleQuestions={gameConfig.askConfig.exampleQuestions}
+            gameId={gameConfig.id}
+            searchConfig={gameConfig.searchConfig}
           />
         )}
         {view === "options" && gameConfig?.features.options && (

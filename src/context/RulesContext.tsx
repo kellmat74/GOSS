@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useCallback, useMemo, type ReactNode } from "react";
 import type { RuleEntry } from "../types/goss";
-import type { ErrataFile, ErrataEntry } from "../types/platform";
+import type { ErrataFile, ErrataEntry, ModuleConfig } from "../types/platform";
 
 export interface ErrataForSection {
   asOf: string;
@@ -26,6 +26,10 @@ interface RulesContextValue {
   getErrataForSection: (section: string) => ErrataForSection | null;
   /** Set of section keys that have errata (lowercase) — for tree indicators */
   sectionsWithErrata: Set<string>;
+  /** Short label for a module id (e.g. "war" → "WaR"). Falls back to the id. */
+  getModuleShortLabel: (moduleId: string) => string;
+  /** Long label for a module id (e.g. "war" → "Wacht am Rhein"). Falls back to the id. */
+  getModuleLabel: (moduleId: string) => string;
 }
 
 const RulesContext = createContext<RulesContextValue | null>(null);
@@ -40,10 +44,12 @@ interface RulesProviderProps {
   rules: RuleEntry[];
   baseErrata?: ErrataFile | null;
   moduleErrata?: ErrataFile | null;
+  /** Module configs from the active game — drives moduleId → label lookups. */
+  modules?: ModuleConfig[];
   children: ReactNode;
 }
 
-export function RulesProvider({ rules, baseErrata, moduleErrata, children }: RulesProviderProps) {
+export function RulesProvider({ rules, baseErrata, moduleErrata, modules, children }: RulesProviderProps) {
   const [activeRule, setActiveRule] = useState<RuleEntry | null>(null);
   const [history, setHistory] = useState<RuleEntry[]>([]);
 
@@ -195,9 +201,27 @@ export function RulesProvider({ rules, baseErrata, moduleErrata, children }: Rul
     });
   }, []);
 
+  // Module label lookup (id → { short, long })
+  const moduleLabelMap = useMemo(() => {
+    const map = new Map<string, { short: string; long: string }>();
+    for (const m of modules ?? []) {
+      map.set(m.id, { short: m.shortLabel, long: m.label });
+    }
+    return map;
+  }, [modules]);
+
+  const getModuleShortLabel = useCallback(
+    (moduleId: string) => moduleLabelMap.get(moduleId)?.short ?? moduleId,
+    [moduleLabelMap],
+  );
+  const getModuleLabel = useCallback(
+    (moduleId: string) => moduleLabelMap.get(moduleId)?.long ?? moduleId,
+    [moduleLabelMap],
+  );
+
   const value = useMemo(
-    () => ({ rules, openRule, closeRule, goBack, goNext, goPrev, activeRule, history, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection, sectionsWithErrata }),
-    [rules, openRule, closeRule, goBack, goNext, goPrev, activeRule, history, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection, sectionsWithErrata]
+    () => ({ rules, openRule, closeRule, goBack, goNext, goPrev, activeRule, history, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection, sectionsWithErrata, getModuleShortLabel, getModuleLabel }),
+    [rules, openRule, closeRule, goBack, goNext, goPrev, activeRule, history, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection, sectionsWithErrata, getModuleShortLabel, getModuleLabel]
   );
 
   return <RulesContext.Provider value={value}>{children}</RulesContext.Provider>;
