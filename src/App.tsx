@@ -366,7 +366,7 @@ function App() {
   );
 
   return (
-    <GlossaryProvider>
+    <GlossaryProvider rules={allRules} config={gameConfig?.glossaryConfig}>
     <TablesProvider tables={data?.tables ?? {}}>
     <RulesProvider rules={allRules} baseErrata={data?.baseErrata} moduleErrata={data?.moduleErrata}>
       <AppShell

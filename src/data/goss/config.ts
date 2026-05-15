@@ -1,4 +1,5 @@
 import type { GameSystemConfig, ErrataFile, QuickRefButtonDef } from "../../types/platform";
+import { gossGlossaryConfig } from "./glossary-config";
 
 type ErrataLoader = () => Promise<{ default: ErrataFile }>;
 const errata = (load: () => Promise<unknown>): ErrataLoader =>
@@ -23,6 +24,7 @@ export const gossConfig: GameSystemConfig = {
     learn: true,
   },
   quickRefButtons: gossQuickRefButtons,
+  glossaryConfig: gossGlossaryConfig,
   modules: [
     {
       id: "war",

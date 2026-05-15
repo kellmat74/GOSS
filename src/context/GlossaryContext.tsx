@@ -1,9 +1,10 @@
-import { createContext, useContext, type ReactNode } from "react";
+import { createContext, useContext, useMemo, type ReactNode } from "react";
 import {
-  glossaryMap,
-  glossaryRegex,
+  buildGlossary,
   type GlossaryEntry,
+  type GlossaryConfig,
 } from "../data/glossary";
+import type { RuleEntry } from "../types/goss";
 
 interface GlossaryContextValue {
   getEntry: (term: string) => GlossaryEntry | undefined;
@@ -15,11 +16,20 @@ const GlossaryContext = createContext<GlossaryContextValue>({
   regex: /(?!)/g, // never matches
 });
 
-export function GlossaryProvider({ children }: { children: ReactNode }) {
-  const value: GlossaryContextValue = {
-    getEntry: (term: string) => glossaryMap.get(term),
-    regex: glossaryRegex,
-  };
+interface GlossaryProviderProps {
+  rules: RuleEntry[];
+  config?: GlossaryConfig;
+  children: ReactNode;
+}
+
+export function GlossaryProvider({ rules, config, children }: GlossaryProviderProps) {
+  const value = useMemo<GlossaryContextValue>(() => {
+    const { glossaryMap, glossaryRegex } = buildGlossary(rules, config);
+    return {
+      getEntry: (term: string) => glossaryMap.get(term),
+      regex: glossaryRegex,
+    };
+  }, [rules, config]);
 
   return (
     <GlossaryContext.Provider value={value}>

@@ -3,6 +3,7 @@ import type {
   QuickRefButtonDef,
   TablesFile,
 } from "../../types/platform";
+import { bwnGlossaryConfig } from "./glossary-config";
 
 type TablesLoader = () => Promise<{ default: TablesFile }>;
 const tables = (load: () => Promise<unknown>): TablesLoader => load as TablesLoader;
@@ -37,6 +38,7 @@ export const blueWaterNavyConfig: GameSystemConfig = {
     actions: true, // Card-driven game — Actions tab enabled
   },
   quickRefButtons: bwnQuickRefButtons,
+  glossaryConfig: bwnGlossaryConfig,
 
   modules: [
     {

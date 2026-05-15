@@ -1,5 +1,7 @@
 import type { TablesFile } from "./tables";
+import type { GlossaryConfig } from "../data/glossary";
 export type { TablesFile } from "./tables";
+export type { GlossaryConfig } from "../data/glossary";
 
 /** A single errata entry targeting a specific rule section. */
 export interface ErrataEntry {
@@ -121,6 +123,9 @@ export interface GameSystemConfig {
 
   /** Buttons shown in the right-edge quick-reference sidebar strip. */
   quickRefButtons?: QuickRefButtonDef[];
+
+  /** Per-game glossary configuration — which sections to scan + per-game extras. */
+  glossaryConfig?: GlossaryConfig;
 
   /** If set, game supports multiple complexity levels (Standard/Advanced). */
   complexityLevels?: ComplexityLevel[];
