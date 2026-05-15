@@ -301,6 +301,17 @@ function RuleText({ text, onRuleClick }: { text: string; onRuleClick: (ref: stri
 function RuleParagraph({ text, onRuleClick }: { text: string; onRuleClick: (ref: string) => void }) {
   const lines = text.split("\n");
 
+  // Markdown pipe table: every non-empty line is a pipe-row, with a separator row second.
+  const nonEmpty = lines.filter((l) => l.trim() !== "");
+  const isTable =
+    nonEmpty.length >= 2 &&
+    nonEmpty.every((l) => l.trim().startsWith("|")) &&
+    /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)+\|?\s*$/.test(nonEmpty[1]);
+
+  if (isTable) {
+    return <RuleTable rows={nonEmpty} onRuleClick={onRuleClick} />;
+  }
+
   // Pure list: every non-empty line starts with • or -
   const isList = lines.every(
     (l) => l.trim().startsWith("•") || l.trim().startsWith("-") || l.trim() === ""
@@ -414,5 +425,62 @@ function InlineText({ text, onRuleClick }: { text: string; onRuleClick: (ref: st
         })}
       </>
     </GlossaryHighlighter>
+  );
+}
+
+/** Parse a markdown pipe row into trimmed cell strings. */
+function parsePipeRow(line: string): string[] {
+  // Strip leading/trailing pipe + whitespace, then split on |
+  const trimmed = line.trim().replace(/^\|/, "").replace(/\|$/, "");
+  return trimmed.split("|").map((c) => c.trim());
+}
+
+/** Render a markdown pipe table as a styled HTML table. */
+function RuleTable({
+  rows,
+  onRuleClick,
+}: {
+  rows: string[];
+  onRuleClick: (ref: string) => void;
+}) {
+  if (rows.length < 2) return null;
+  const headerCells = parsePipeRow(rows[0]);
+  // rows[1] is the separator (---|---), skip it
+  const bodyRows = rows.slice(2).map(parsePipeRow);
+
+  return (
+    <div className="overflow-x-auto">
+      <table className="my-1 w-full border-collapse text-sm">
+        <thead>
+          <tr className="border-b border-stone-300 dark:border-stone-600">
+            {headerCells.map((cell, i) => (
+              <th
+                key={i}
+                className="px-2 py-1.5 text-left font-semibold text-stone-700 dark:text-stone-200"
+              >
+                <InlineText text={cell} onRuleClick={onRuleClick} />
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {bodyRows.map((cells, ri) => (
+            <tr
+              key={ri}
+              className="border-b border-stone-200 last:border-b-0 dark:border-stone-700"
+            >
+              {cells.map((cell, ci) => (
+                <td
+                  key={ci}
+                  className="px-2 py-1 align-top text-stone-600 dark:text-stone-300"
+                >
+                  <InlineText text={cell} onRuleClick={onRuleClick} />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
