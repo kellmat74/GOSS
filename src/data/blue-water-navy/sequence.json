@@ -3,41 +3,144 @@
     {
       "id": "convoy-placement",
       "name": "Convoy Placement",
-      "description": "NATO places convoys on the map. (Placeholder — full text pending rules extraction.)",
       "ruleRef": "3.2.1",
-      "checklist": [],
+      "player": "both",
+      "description": "NATO places convoys on the map.",
+      "content": "During each turn, NATO will receive one Convoy and may receive a Mediterranean Convoy. The NATO player may then select from any of the counter types available (except the Fast Convoy, which enters via event only). All Convoys are then placed on the map in a port in the United States.",
+      "notes": [],
+      "checklist": [
+        "Place one Convoy in a US port",
+        "Check for Mediterranean Convoy"
+      ],
       "subPhases": []
     },
     {
       "id": "reinforcement",
       "name": "Reinforcement",
-      "description": "Both sides receive reinforcements per scenario. (Placeholder.)",
       "ruleRef": "3.2.2",
-      "checklist": [],
+      "player": "both",
+      "description": "Both sides receive scheduled reinforcements.",
+      "content": "Depending on the set-up chosen, each side has several units that will become available during the game. These include Amphibious units for both sides, RORSATs for the Soviets, and Carrier Battle Groups for NATO.\n\nDuring the Reinforcement Phase the units arriving are placed on the map. All reinforcements arrive in any port belonging to the owning nation. Soviet RORSATs are placed in the Tyuratam box.",
+      "notes": [],
+      "checklist": [
+        "Place Soviet reinforcements in any Soviet port (RORSATs in Tyuratam)",
+        "Place NATO reinforcements in any NATO port"
+      ],
       "subPhases": []
     },
     {
       "id": "operations",
       "name": "Operations Phase",
-      "description": "Open-ended phase: each player spends OPS points from cards to take actions in any order. See the Actions tab for the full action catalog.",
-      "ruleRef": "4",
-      "checklist": [],
+      "ruleRef": "3.2.3",
+      "player": "both",
+      "description": "Open-ended phase: players spend OPS points from cards in any order. See the Actions tab for the full action catalog.",
+      "content": "a) The Soviet player selects a card to play for its Operations Points and records the number on the Operations Point Record Track with the Soviet marker.\n\nb) The NATO player selects a card to play for its Operations Points and records the number on the Operations Point Record Track with the NATO marker.\n\nc) The Soviet player plays the first Operations Point to perform an action or Passes (4.2).\n\nd) The NATO player plays an Operations Point to perform an action or Passes (4.2).\n\ne) Continue alternating through c. and d. until no Operations Points remain.\n\nLook for events on the Operations Point Record Track: **Fast**, **Repair**, **Ships**, and **Next Day**. These trigger when both players' Operations Points marker reaches or passes the box and takes effect immediately after the current action is resolved.\n\nSee **Chapter 4** for detailed Operations Phase sequence and description, and the **Actions tab** for the full action catalog with OPS costs.",
+      "notes": [],
+      "checklist": [
+        "Soviet selects card → records OPS on track",
+        "NATO selects card → records OPS on track",
+        "Alternate actions, Soviet first, until OPS exhausted",
+        "Resolve OPS Track events (Fast / Repair / Ships / Next Day) as triggered"
+      ],
       "subPhases": []
     },
     {
       "id": "end-of-turn",
       "name": "End of Turn",
-      "description": "Cleanup, invasions, first strike, weather, and event card resolution.",
       "ruleRef": "3.3",
-      "checklist": [
-        "Turn Clean-Up (3.3.1)",
-        "Resolve invasions (3.3.2)",
-        "Check First Strike (3.3.3)",
-        "Determine Weather (3.4)",
-        "Resolve Event Cards (3.3.5)",
-        "Advance to next turn (3.3.6)"
-      ],
-      "subPhases": []
+      "player": "both",
+      "description": "Cleanup, invasions, first strike, weather, event cards, then advance turn.",
+      "content": "Resolve subsections 3.3.1 through 3.3.6 in order.",
+      "notes": [],
+      "checklist": [],
+      "subPhases": [
+        {
+          "id": "eot-cleanup",
+          "name": "a) Turn Clean-Up",
+          "ruleRef": "3.3.1",
+          "player": "both",
+          "description": "Return interceptors / on-patrol MP to base; remove spent markers; choose to remove sub on-patrol markers.",
+          "content": "a) Fighters on Interception missions and 'On Patrol' MP units may return to base. **If a zone contains Fighter units of both sides, all Air Units return to base.**\n\nb) Remove all 'Spent' markers (except for Air Units at a heavily damaged base).\n\nc) Choose to remove 'On Patrol' markers on Submarine Units, or to retain them. Submarines with 'On Patrol' markers can only react to enemy units.",
+          "notes": [],
+          "checklist": [
+            "Return interceptors and on-patrol MP to base (or RTB all air if both sides' fighters share a zone)",
+            "Remove all 'Spent' markers (except at heavily damaged bases)",
+            "Choose to remove or retain submarine 'On Patrol' markers"
+          ]
+        },
+        {
+          "id": "eot-invasions",
+          "name": "b) Invasions",
+          "ruleRef": "3.3.2",
+          "player": "both",
+          "description": "Resolve Denmark / Norway tracks, then war-track adjustments and capture rolls.",
+          "content": "a) Resolve the Invasion War Tracks (Denmark and Norway).\n\nb) Increase the Danish Strait Mining level if no Soviet troops ever landed in Denmark.\n\nc) Roll to clear the Danish Strait of mines if the War marker is in a relevant box.\n\nd) Select a bonus if Norway has surrendered.\n\ne) Remove submarines if required by the Invasion Tracks.\n\nCalculate War Track changes for Convoys and Soviet advances, then remove submarines, capture facilities and resolve NATO nuclear weapon usage if required by the War Tracks.\n\nRemove **3 hits** on the Europe South War Track and on the Norway and Denmark Invasion Tracks.",
+          "notes": [],
+          "checklist": [
+            "Resolve Denmark and Norway Invasion Tracks (up to 2 advances)",
+            "Increase Danish Strait Mining if no Soviet troops landed in Denmark",
+            "Roll to clear Danish Strait mines (if applicable)",
+            "Apply Norwegian surrender bonus (if applicable)",
+            "Remove submarines required by Invasion Tracks",
+            "Resolve War Track Convoy/advance changes + captures + NATO nukes",
+            "Remove 3 hits from Europe South + Norway + Denmark tracks"
+          ]
+        },
+        {
+          "id": "eot-first-strike",
+          "name": "c) First Strike",
+          "ruleRef": "3.3.3",
+          "player": "both",
+          "description": "On a First Strike turn, award FSP if Soviet SSBN payload is staged in First Strike zones.",
+          "content": "If the current turn has a **First Strike icon**, award the Soviet player **1 First Strike Point** if at least **6 SSBN Payload value** are in First Strike zones (ignore the Arctic and the Bastion).",
+          "notes": [],
+          "checklist": [
+            "If First Strike turn AND Soviet SSBN payload ≥6 in FS zones (not Arctic / Bastion) → +1 FSP"
+          ]
+        },
+        {
+          "id": "eot-weather",
+          "name": "d) Weather",
+          "ruleRef": "3.3.4",
+          "player": "both",
+          "description": "Remove all Bad Weather markers and roll fresh weather per zone.",
+          "content": "Remove all Weather markers and roll for weather (3.4) in each Weather Zone on the map.\n\n### Procedure (§3.4)\n\nFirst remove all Bad Weather markers from the map. Then, roll one die for weather in each Weather Zone (West, Mid, East, North, Med) and use the appropriate table printed on the map. If the result is a number, roll that many dice and place Bad Weather in all Sea Zones with the matching number within that Weather Zone — some areas have more than one zone with the same number (e.g. Barents Sea and the Bastion are both 9–10).\n\nA Sea Zone can only have a Bad Weather effect once a turn. If a rolled zone already has a Bad Weather marker, **ignore the dice which rolled the same number** — that die roll generates no further weather effect. Land bordering or within a zone with Bad Weather also has Bad Weather. Some land is affected by multiple Sea Zones.\n\n*Example*: The North Weather Zone is rolled for and the result is an 8 which is '2' — two dice are rolled — 7 and 8. The first Bad Weather marker is placed into North 7-8 to account for the 7. The 8 is ignored because it's a duplicate result.",
+          "notes": [],
+          "checklist": [
+            "Remove all Bad Weather markers",
+            "Roll once per Weather Zone (West, Mid, East, North, Med)",
+            "For each numeric result, roll that many dice and place Bad Weather in matching Sea Zones",
+            "Ignore duplicate die results — each Sea Zone gets at most one Bad Weather per turn"
+          ]
+        },
+        {
+          "id": "eot-event-cards",
+          "name": "e) Event Cards",
+          "ruleRef": "3.3.5",
+          "player": "both",
+          "description": "Hold (NATO 2 / Soviet 1) or discard; then draw back up to 5.",
+          "content": "Choose to hold up to **two cards** (NATO) or **one card** (Soviet) and discard all other cards.\n\nThen, draw up to **5 cards** in-hand. If you held cards, you'll draw fewer new cards.\n\n*Note*: Holding cards is not mandatory.",
+          "notes": [],
+          "checklist": [
+            "NATO: choose up to 2 cards to hold; discard the rest",
+            "Soviet: choose up to 1 card to hold; discard the rest",
+            "Both: draw back up to 5 cards in hand"
+          ]
+        },
+        {
+          "id": "eot-next-turn",
+          "name": "f) Next Turn",
+          "ruleRef": "3.3.6",
+          "player": "both",
+          "description": "Advance the Turn Marker and roll for Soviet ASAT removal.",
+          "content": "**Move the Turn Marker** — the game ends at the end of turn 12.\n\nRemove **one First Strike Point** from the ASAT System box on a die roll of **6+**.",
+          "notes": [],
+          "checklist": [
+            "Advance Turn Marker (game ends after turn 12)",
+            "Roll 1d10: on 6+, remove one FSP from the ASAT System box"
+          ]
+        }
+      ]
     }
   ]
 }
