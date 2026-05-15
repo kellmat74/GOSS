@@ -1,1 +1,578 @@
-[]
+[
+  {
+    "id": "ship-actions",
+    "label": "Ship Actions",
+    "cards": [
+      {
+        "id": "act-ship-form-tf",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Form a new Task Force",
+        "type": "operations-event",
+        "cost": 2,
+        "text": "Form a new Task Force from ships in the same Sea Zone.",
+        "ruleRefs": ["5.1.2"]
+      },
+      {
+        "id": "act-ship-move",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Move ships in a Task Force",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "Move all ships in a TF together per the movement rules. Cost is 1 OPS per Task Force activation. Bad weather may halt surface movement.",
+        "ruleRefs": ["5.1.3"]
+      },
+      {
+        "id": "act-ship-fire-missiles",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Fire missiles with TF",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "Resolve missile attacks. Automatic vs facilities; may require a detection roll vs other TFs.",
+        "ruleRefs": ["7.4"]
+      },
+      {
+        "id": "act-ship-asw",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "ASW in current zone (instead of moving)",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "Instead of moving, a Task Force may conduct Anti-Submarine Warfare in its current zone.",
+        "ruleRefs": ["7.2.2"]
+      },
+      {
+        "id": "act-ship-amphib-land",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Prepare/resolve Amphibious Landing",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "Mark a TF with the 'Amphibious Landing' marker, then resolve the landing next time the TF is activated (TF cannot move on the landing resolution).",
+        "ruleRefs": ["8.1"]
+      }
+    ]
+  },
+  {
+    "id": "sub-actions",
+    "label": "Submarine Actions",
+    "cards": [
+      {
+        "id": "act-sub-move",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Submarine move",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "Diesels move 1 Sea Zone, Nuclear submarines move 2. A Soviet SSBN may take a non-diesel sub with it for no extra cost (must start together).",
+        "ruleRefs": ["5.2.2"]
+      },
+      {
+        "id": "act-sub-attack",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Submarine moves and attacks a TF",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "Move into the TF's zone, then perform a torpedo attack on the Task Force.",
+        "ruleRefs": ["7.3"]
+      },
+      {
+        "id": "act-sub-detect",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Submarine moves and detects",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "Move into a zone with an unspent enemy TF and attempt to detect it, improving the detection level.",
+        "ruleRefs": ["6.1"]
+      },
+      {
+        "id": "act-sub-on-patrol",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Submarine goes On Patrol",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "Place the submarine in On Patrol status so it can react to enemy units moving into or through its zone.",
+        "ruleRefs": ["5.2.3"]
+      },
+      {
+        "id": "act-sub-missile-3-zones",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Nuclear sub fires missiles from up to 3 zones",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "A nuclear sub may fire missiles from up to 3 zones away. 2-3 subs may coordinate to combine attacks on the same zone and perform a missile attack.",
+        "ruleRefs": ["5.2.4", "7.4"]
+      }
+    ]
+  },
+  {
+    "id": "air-actions",
+    "label": "Air Unit Actions",
+    "cards": [
+      {
+        "id": "act-air-mp-fly-attack",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Maritime Patrol flies and attacks or detects",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "If a detection is placed or upgraded, active player may attack the detected TF.",
+        "ruleRefs": ["5.3"]
+      },
+      {
+        "id": "act-air-mp-on-patrol",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "MP or fighter goes On Patrol",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "Place an air unit On Patrol to react to enemy movement.",
+        "ruleRefs": ["5.3.4"]
+      },
+      {
+        "id": "act-air-strike",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Air Strike",
+        "type": "operations-event",
+        "cost": 1,
+        "text": "Strike units fly an air strike. Fighters and tankers may fly for free and fighters may escort part-way.",
+        "ruleRefs": ["5.3.5", "7.5.1"]
+      }
+    ]
+  },
+  {
+    "id": "misc-actions",
+    "label": "Miscellaneous Actions",
+    "cards": [
+      {
+        "id": "act-misc-repair",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Repair a facility",
+        "type": "operations-event",
+        "cost": 2,
+        "text": "Remove the air-marker. Requires a 6+ if undamaged facility, otherwise 7+.",
+        "ruleRefs": ["5.4.1"]
+      },
+      {
+        "id": "act-misc-move-between-tfs",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Move ships between TFs",
+        "type": "operations-event",
+        "cost": 2,
+        "text": "De-mine a port. Roll if 1 if undamaged facility, otherwise 7+.",
+        "ruleRefs": []
+      },
+      {
+        "id": "act-misc-launch-rorsat",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Launch or move a RORSAT",
+        "type": "operations-event",
+        "cost": 2,
+        "text": "Destroyed on roll of a 1. Cannot stack until 4 aloft.",
+        "ruleRefs": ["5.4.3"]
+      },
+      {
+        "id": "act-misc-attack-cuba",
+        "cardNumber": "—",
+        "side": "nato",
+        "title": "NATO may attack Cuba",
+        "type": "operations-event",
+        "cost": 6,
+        "text": "See Special Rules.",
+        "ruleRefs": ["5.4.4", "8.4.5"]
+      },
+      {
+        "id": "act-misc-pass",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Pass",
+        "type": "operations-event",
+        "cost": 0,
+        "text": "If you have less than 3 cards in hand, draw a card.",
+        "ruleRefs": ["5.4.5"]
+      }
+    ]
+  },
+  {
+    "id": "events-soviet",
+    "label": "Soviet Event Cards",
+    "cards": [
+      {
+        "id": "sov-3-53",
+        "cardNumber": "3/53",
+        "side": "soviet",
+        "title": "Stealthy Approach",
+        "type": "reaction-event",
+        "clarification": "Play as soon as the attack is declared, not after ASW roll."
+      },
+      {
+        "id": "sov-4",
+        "cardNumber": "4",
+        "side": "soviet",
+        "title": "KGB Assassinations",
+        "type": "operations-event",
+        "clarification": "R#13. Used immediately when placed down. Reduce Soviet spies track by one, without rolling. NATO discards highest valued card (selecting if a tie). NATO misses this day's opportunity to play a card for OPS and instead receives 6 OPS. NATO may still play cards using all normal rules. Cannot be cancelled by NATO card #12 'Intelligence Agencies'."
+      },
+      {
+        "id": "sov-7",
+        "cardNumber": "7",
+        "side": "soviet",
+        "title": "Naval Aviation Deception Tactics",
+        "type": "operations-event",
+        "clarification": "Total cost to play the card is 2 plus cost of the strike. NATO CAP/Interceptors only shoot at missile-carrying regiment, ignoring the decoy regiment. If only the decoy survives, the strike cannot proceed."
+      },
+      {
+        "id": "sov-8-13-16-19-50",
+        "cardNumber": "8/13/16/19/50",
+        "side": "soviet",
+        "title": "Double Hull / Clusterguard",
+        "type": "reaction-event",
+        "clarification": "Cancels one step loss. First roll for save (if there is one)."
+      },
+      {
+        "id": "sov-9",
+        "cardNumber": "9",
+        "side": "soviet",
+        "title": "Fast Attack Escort",
+        "type": "reaction-event",
+        "clarification": "Always a minimum of 1 NATO die in defense of amphibious landing."
+      },
+      {
+        "id": "sov-10-50",
+        "cardNumber": "10/50",
+        "side": "soviet",
+        "title": "Surge",
+        "type": "operations-event",
+        "clarification": "As though you spent 4 OPS to activate submarines. Cost included in the card."
+      },
+      {
+        "id": "sov-15-19",
+        "cardNumber": "15/19",
+        "side": "soviet",
+        "title": "Spetsnaz Raid",
+        "type": "operations-event",
+        "clarification": "Inflict step loss to NATO air unit only."
+      },
+      {
+        "id": "sov-21",
+        "cardNumber": "21",
+        "side": "soviet",
+        "title": "SOSUS Sabotage",
+        "type": "operations-event",
+        "clarification": "'For this card play' means during the day this event is used. E.g. play SOSUS Sabotage on day one but only trigger it on day two — lasts all of day two, but element of surprise is lost."
+      },
+      {
+        "id": "sov-22-26-27-29",
+        "cardNumber": "22/26/27/29",
+        "side": "soviet",
+        "title": "First Strike",
+        "type": "operations-event",
+        "clarification": "CL#4. 'Play before spending any points' rephrased to 'play before spending any points from this card'. Can be used on day two but must be before any points are spent. Cannot use the +2 cost to play it (would require spending OPS). Max 2 FSP achievable via this event."
+      },
+      {
+        "id": "sov-23-30",
+        "cardNumber": "23/30",
+        "side": "soviet",
+        "title": "Attack while Forming Up",
+        "type": "reaction-event",
+        "clarification": "Also applies when a TF adds ships from an adjacent port. Note: when adding ships from a port to a TF already at sea, the TF loses its next chance to move (use a spare 'formed TF' marker as indicator). No modifier for TF detection status."
+      },
+      {
+        "id": "sov-25-34",
+        "cardNumber": "25/34",
+        "side": "soviet",
+        "title": "Submarine Pairing",
+        "type": "reaction-event",
+        "clarification": "Kill equals step loss."
+      },
+      {
+        "id": "sov-28",
+        "cardNumber": "28",
+        "side": "soviet",
+        "title": "Chemical Strikes",
+        "type": "operations-event",
+        "clarification": "Move one box in ALL theatres (including Norway, Denmark, Northern, Southern) where Soviets have an Army marker."
+      },
+      {
+        "id": "sov-33",
+        "cardNumber": "33",
+        "side": "soviet",
+        "title": "Strike Supply Ports",
+        "type": "operations-event",
+        "clarification": "Three hits on each port."
+      },
+      {
+        "id": "sov-35-51",
+        "cardNumber": "35/51",
+        "side": "soviet",
+        "title": "ASM Attack",
+        "type": "reaction-event",
+        "clarification": "Cannot be combined with any other missile attack."
+      },
+      {
+        "id": "sov-39",
+        "cardNumber": "39",
+        "side": "soviet",
+        "title": "Paratroops",
+        "type": "operations-event",
+        "clarification": "Keflavik always heavily damaged (no roll for damage reduction). For amphibious landings: 2 troops -> roll 2 dice; miss both -> heavy damage + 2 hits; succeed one -> light damage + 1 hit; succeed both -> capture intact. Crete/Malta: use a Soviet airbase counter (intact, no damage). Paratroop drop cannot be intercepted. Soviet airbase in Malta is located in Med 5-6 and immediately operational."
+      },
+      {
+        "id": "sov-40",
+        "cardNumber": "40",
+        "side": "soviet",
+        "title": "Cubans Special Ops",
+        "type": "operations-event",
+        "clarification": "If Cuba is active: Puerto Rico is bombed and the card removed from the deck. If Cuba is inactive (default): a fresh unit in Puerto Rico is spent. Cost is 0 in both cases."
+      },
+      {
+        "id": "sov-42",
+        "cardNumber": "42",
+        "side": "soviet",
+        "title": "Strategic Strike",
+        "type": "operations-event",
+        "clarification": "Must trace from somewhere, but with unlimited range. AS15s only shot down by SAM. In 85+, choose between black anti-ship missiles (range 0) and green land missiles (range 2). Tu95MS Bear is two-step: 3 black missiles on back / 1 green missile on back."
+      },
+      {
+        "id": "sov-44-49",
+        "cardNumber": "44/49",
+        "side": "soviet",
+        "title": "Determined Attack",
+        "type": "reaction-event",
+        "clarification": "Attacking submarine still receives hits — they do not remove rolled dice. Only natural 8-10 ignored, not a 7 with a tactical modifier."
+      },
+      {
+        "id": "sov-46",
+        "cardNumber": "46",
+        "side": "soviet",
+        "title": "Strike UK Early Warning",
+        "type": "operations-event",
+        "clarification": "CL#10. New targets go into the UK airfield box and fly to that location to hit them (for adjacency purposes). Can't split two hits from one die. No collateral damage. Does not cause airfield damage per se."
+      },
+      {
+        "id": "sov-53",
+        "cardNumber": "53",
+        "side": "soviet",
+        "title": "Category 'C' Division",
+        "type": "operations-event",
+        "clarification": "Only moving one of the European war tracks (Northern or Southern) requires the 6+."
+      },
+      {
+        "id": "sov-54",
+        "cardNumber": "54",
+        "side": "soviet",
+        "title": "Strike US Targets",
+        "type": "operations-event",
+        "clarification": "Specifies the location of Cape Canaveral target in Florida and Early Warning Radars target in Washington. Once played, place counters at those locations. Targets can then be attacked the same way you'd attack a facility. Use range rules as usual. Remain in game till destroyed. Card only gives the targets, does not provide a free strike."
+      }
+    ]
+  },
+  {
+    "id": "events-nato",
+    "label": "NATO Event Cards",
+    "cards": [
+      {
+        "id": "nato-1-34",
+        "cardNumber": "1/34",
+        "side": "nato",
+        "title": "Minesweepers",
+        "type": "operations-event",
+        "clarification": "Degrade Soviet port mines."
+      },
+      {
+        "id": "nato-3-25",
+        "cardNumber": "3/25",
+        "side": "nato",
+        "title": "Distant Support",
+        "type": "reaction-event",
+        "clarification": "CL#12. Treat the F-14 as CAP. The US Carrier must be adjacent to the air strike."
+      },
+      {
+        "id": "nato-4",
+        "cardNumber": "4",
+        "side": "nato",
+        "title": "Norway Resists",
+        "type": "operations-event",
+        "clarification": "Hits are removed as usual from the Invasion track."
+      },
+      {
+        "id": "nato-8-13",
+        "cardNumber": "8/13",
+        "side": "nato",
+        "title": "Replacement Air Wings",
+        "type": "operations-event",
+        "clarification": "Fully restore (even destroyed and removed from play) two different entire Air Wings/Groups (could be up to four air units total). Return to carrier if possible, otherwise to a local airfield."
+      },
+      {
+        "id": "nato-10-18",
+        "cardNumber": "10/18",
+        "side": "nato",
+        "title": "Nuclear Fear",
+        "type": "operations-event",
+        "clarification": "Move Soviet Stability one box towards coup."
+      },
+      {
+        "id": "nato-12",
+        "cardNumber": "12",
+        "side": "nato",
+        "title": "Intelligence Agencies",
+        "type": "reaction-event",
+        "clarification": "Cannot cancel Soviet card #4 'KGB Assassinations'."
+      },
+      {
+        "id": "nato-16",
+        "cardNumber": "16",
+        "side": "nato",
+        "title": "SURTASS",
+        "type": "operations-event",
+        "clarification": "Can be air unit or submarine, patrolling or unspent — but not any spent unit."
+      },
+      {
+        "id": "nato-16-40",
+        "cardNumber": "16/40",
+        "side": "nato",
+        "title": "Nixie",
+        "type": "reaction-event",
+        "clarification": "Protects against nuclear torpedos but, as written, not against heavyweight torpedoes."
+      },
+      {
+        "id": "nato-17",
+        "cardNumber": "17",
+        "side": "nato",
+        "title": "Carriers Support Germany",
+        "type": "operations-event",
+        "clarification": "Lasts until next day, not a one-time attack. Use the procedure in 17.24 Striking Soviet Troop Markers."
+      },
+      {
+        "id": "nato-21-22",
+        "cardNumber": "21/22",
+        "side": "nato",
+        "title": "Tomahawk Anti-ship Missile",
+        "type": "operations-event",
+        "clarification": "Treat as standard regular long-range attack without modification. However, modify for NATO weapons."
+      },
+      {
+        "id": "nato-21-50",
+        "cardNumber": "21/50",
+        "side": "nato",
+        "title": "Air Patrols",
+        "type": "reaction-event",
+        "clarification": "Only applies to interceptors, not CAP."
+      },
+      {
+        "id": "nato-23",
+        "cardNumber": "23",
+        "side": "nato",
+        "title": "Special Forces",
+        "type": "operations-event",
+        "clarification": "This attack is not modified for bad weather — straight roll."
+      },
+      {
+        "id": "nato-27-49",
+        "cardNumber": "27/49",
+        "side": "nato",
+        "title": "Fighters to Norway/Denmark",
+        "type": "operations-event",
+        "clarification": "'Grounded' here means F-14s on the turn track as a consequence of their carrier being repaired."
+      },
+      {
+        "id": "nato-31-53",
+        "cardNumber": "31/53",
+        "side": "nato",
+        "title": "Friendly Fire",
+        "type": "reaction-event",
+        "clarification": "Saved hits do not count as 'no hit'."
+      },
+      {
+        "id": "nato-37",
+        "cardNumber": "37",
+        "side": "nato",
+        "title": "RAF Strike",
+        "type": "operations-event",
+        "clarification": "Bombing only, no missiles. Tornado has two steps. A Buccaneer 'actual' unit has to join in the strike."
+      },
+      {
+        "id": "nato-37-47",
+        "cardNumber": "37/47",
+        "side": "nato",
+        "title": "NATO Counter Attack",
+        "type": "reaction-event",
+        "clarification": "Convoy is removed because it arrived at a convoy port — supplies are received as normal. Then the card effect is implemented. Per normal rules, convoy is then placed in the Convoy Holding Box."
+      },
+      {
+        "id": "nato-38-42",
+        "cardNumber": "38/42",
+        "side": "nato",
+        "title": "NATO Flexibility",
+        "type": "operations-event",
+        "clarification": "Cannot be used to repair a damaged allied facility — only for units."
+      },
+      {
+        "id": "nato-40",
+        "cardNumber": "40",
+        "side": "nato",
+        "title": "Perfectly Timed Strike",
+        "type": "operations-event",
+        "clarification": "SEAD hits do not count."
+      },
+      {
+        "id": "nato-44",
+        "cardNumber": "44",
+        "side": "nato",
+        "title": "Orion Harpoons",
+        "type": "reaction-event",
+        "clarification": "Required presence of MP triggers CAP interception per 17.2: 'An Air Unit is present within a Sea Zone with carrier-based FTR prior to completing whatever mission it was sent to perform'."
+      },
+      {
+        "id": "nato-46",
+        "cardNumber": "46",
+        "side": "nato",
+        "title": "German Tornado",
+        "type": "operations-event",
+        "clarification": "Partial convoy goes on the Northern war track."
+      },
+      {
+        "id": "nato-50",
+        "cardNumber": "50",
+        "side": "nato",
+        "title": "Turkish Air Strike",
+        "type": "operations-event",
+        "clarification": "CL#6. Turkish airstrike card does not have the range to reach Sevastopol. Design decision rather than capability."
+      },
+      {
+        "id": "nato-52",
+        "cardNumber": "52",
+        "side": "nato",
+        "title": "Italian Air Strike",
+        "type": "operations-event",
+        "clarification": "Can be used to attack the Southern War Track."
+      },
+      {
+        "id": "nato-54",
+        "cardNumber": "54",
+        "side": "nato",
+        "title": "Strike Strategic Targets (Kola)",
+        "type": "operations-event",
+        "clarification": "No FSP granted to Soviet per 17.23 as it normally would. Can be attacked by any method available — generally an air strike or cruise missiles."
+      },
+      {
+        "id": "nato-55",
+        "cardNumber": "55",
+        "side": "nato",
+        "title": "Strike Strategic Targets (Sevastopol)",
+        "type": "operations-event",
+        "clarification": "Effect of hitting C# Nodes is an exception to the rule 'a player will always have three cards'. Can be attacked by any method available — generally an air strike or cruise missiles."
+      }
+    ]
+  }
+]
