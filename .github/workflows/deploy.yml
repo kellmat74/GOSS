@@ -29,6 +29,9 @@ jobs:
       - run: npm run build:single
         env:
           VITE_FEEDBACK_URL: ${{ vars.VITE_FEEDBACK_URL }}
+      # Single offline HTML, all games + inlined play-aid images
+      - run: cp dist-single/index.html dist/battle-captain.html
+      # Backwards-compat alias for the old per-game download link
       - run: cp dist-single/index.html dist/GOSS-Assistant.html
       - uses: actions/upload-pages-artifact@v3
         with:

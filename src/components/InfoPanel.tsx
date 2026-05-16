@@ -1,7 +1,8 @@
 import { useState } from "react";
 import type { GameSystemConfig } from "../types/platform";
 
-const APP_LIVE_URL = "https://kellmat74.github.io/GOSS/";
+const APP_LIVE_URL = "https://rules.battle-captain.com";
+const OFFLINE_DOWNLOAD_NAME = "battle-captain.html";
 const FEEDBACK_URL = import.meta.env.VITE_FEEDBACK_URL || "";
 
 type FeedbackType = "bug" | "suggestion" | "question";
@@ -120,10 +121,7 @@ interface InfoPanelProps {
 export function InfoPanel({ gameConfig }: InfoPanelProps) {
   const gameName = gameConfig?.name ?? "Wargame Companion";
   const gameSubtitle = gameConfig?.subtitle ?? "";
-  const downloadName = gameConfig
-    ? `${gameConfig.shortName}-Assistant.html`
-    : "Wargame-Companion.html";
-  const downloadUrl = `${import.meta.env.BASE_URL}${downloadName}`;
+  const downloadUrl = `${import.meta.env.BASE_URL}${OFFLINE_DOWNLOAD_NAME}`;
 
   return (
     <div className="mx-auto max-w-2xl space-y-8 py-4">
@@ -131,12 +129,13 @@ export function InfoPanel({ gameConfig }: InfoPanelProps) {
       <section>
         <h2 className="mb-3 text-lg font-bold">Offline Export</h2>
         <p className="mb-3 text-sm leading-relaxed text-stone-500 dark:text-stone-400">
-          Download this app as a single HTML file you can open directly in any browser —
-          no internet connection or server required. All features work offline except the
-          AI-powered <strong>Ask</strong> tab, which requires an internet connection.
+          Download the entire Battle Captain app — <strong>all games included</strong> (GOSS, Next War, Blue Water Navy) — as a single
+          self-contained HTML file (~35 MB). Open it directly in any browser; no internet connection
+          or server required. Play-aid images and rule content all work offline.
         </p>
         <p className="mb-4 text-sm leading-relaxed text-stone-500 dark:text-stone-400">
-          To use the Ask feature, visit the hosted version at{" "}
+          The only feature that needs internet is the AI-powered <strong>Ask</strong> tab. For
+          that, use the hosted version at{" "}
           <a
             href={APP_LIVE_URL}
             target="_blank"
@@ -145,10 +144,11 @@ export function InfoPanel({ gameConfig }: InfoPanelProps) {
           >
             {APP_LIVE_URL}
           </a>
+          .
         </p>
         <a
           href={downloadUrl}
-          download={downloadName}
+          download={OFFLINE_DOWNLOAD_NAME}
           className="inline-block rounded-lg bg-accent-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-700"
         >
           Save as HTML

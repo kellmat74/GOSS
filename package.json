@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:single": "tsc -b && vite build --config vite.singlefile.config.ts --outDir dist-single",
+    "build:single": "tsc -b && vite build --config vite.singlefile.config.ts --outDir dist-single && node scripts/inline-offline-assets.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
