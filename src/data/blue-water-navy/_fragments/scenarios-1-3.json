@@ -1,0 +1,231 @@
+{
+  "shared": {
+    "fivePointOpsTrack": "Scenarios 1-5 are all in 1983 by default. Scenarios 1-5 use the Operations Points record track shown below, which is smaller than the one in the main game.\n\nIt works in exactly the same way, with events triggering once both sides' OPS markers reach or pass the relevant box, resolved after the action which moved the OPS marker.\n\nThe only differences are:\n1. There is no 'Next Day' event - when both players have expended all of their available Operations Points, it's the end of the turn.\n2. Some turns start with both sides' OPS markers already below one or more event boxes, in which case apply the event(s) right away at the start of the turn before either side spends an OPS.\n\nFor example: in scenario #1, NATO starts on 5 and the Soviets start on 7 OPS. Since both sides' markers start below the 'Fast' and 'Repair' event boxes, those events happen before either side does anything. In this case, there are no Fast Task Forces to move and there is no facility damage to repair, so the Soviet player can go ahead and start the turn having resolved the events.\n\nSmall Scenario Ops Track:\n1 | 2 | 3 Ships | 4 Repair | 5\n6 Ships | 7 | 8 | 9 Repair | 10 Fast",
+    "oftenOverlookedRules": [
+      "#1 All Soviet submarines have rocket-torpedoes, and so score a hit on a non-tens double when performing Anti-Submarine Warfare.",
+      "#2 An MP air unit which loses a search die due to enemy fighters will lose 2 if its mission was Anti-Submarine Warfare.",
+      "#3 Soviet units with cruise missiles must use them to attack with unless attacking troops in which case they may choose to use bombs instead.",
+      "#4 Small submarines (s) can move OR attack, not both.",
+      "#5 All non-MP Air Units become unspent when the ships event happens.",
+      "#6 All events take place immediately after the triggering action is completed and fully resolved."
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "boomer-bastion",
+      "number": 1,
+      "title": "The Boomer Bastion",
+      "year": 1983,
+      "briefing": "It is day one of WW3. Several NATO assets have been held back from other combat duties with the specific purpose of attacking the Soviet boomers at home in their bastion. Additionally, the SOSUS line must be manned to protect a passing convoy.",
+      "victoryConditions": "NATO win the game by sinking an SSBN payload value of 8. The Soviet player may reduce the current Payload value back by one for each Soviet submarine step that makes it over the SOSUS line (remove it from the game). The minimum resulting total is zero (it cannot be negative). NATO may add one Payload point each by damaging or sinking the Kiev.",
+      "opsPerDay": { "nato": 5, "soviet": 7 },
+      "turns": null,
+      "specialRules": "The Bastion cannot have Bad Weather (ignore any such results) but otherwise generate weather for East and North. The game lasts for three turns. No cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events - ignore the rest of the card.",
+      "firstStrike": null,
+      "setup": {
+        "nato": [
+          { "unit": "Boston", "type": "Sub", "location": "North 5-6", "notes": null },
+          { "unit": "Los Angeles", "type": "Sub", "location": "North 5-6", "notes": null },
+          { "unit": "Nimrod", "type": "Air", "location": "UK Airbase", "notes": null },
+          { "unit": "Nimrod", "type": "Air", "location": "North 3-4", "notes": null },
+          { "unit": "Los Angeles", "type": "Sub", "location": "East 6", "notes": null },
+          { "unit": "Swiftsure", "type": "Sub", "location": "North 7-8", "notes": null },
+          { "unit": "P3 Orion (Keflavik)", "type": "Air", "location": "East 9-10", "notes": null },
+          { "unit": "Sturgeon", "type": "Sub", "location": "Arctic", "notes": null }
+        ],
+        "soviet": [
+          { "unit": "Typhoon", "type": "Sub", "location": "Bastion", "notes": null },
+          { "unit": "Delta I/II", "type": "Sub", "location": "Bastion", "notes": null },
+          { "unit": "Delta I/II", "type": "Sub", "location": "Bastion", "notes": null },
+          { "unit": "Delta I/II", "type": "Sub", "location": "Bastion", "notes": null },
+          { "unit": "Delta III", "type": "Sub", "location": "Bastion", "notes": null },
+          { "unit": "Delta IV", "type": "Sub", "location": "Bastion", "notes": null },
+          { "unit": "Victor III", "type": "Sub", "location": "Bastion", "notes": null },
+          { "unit": "Victor III", "type": "Sub", "location": "Bastion", "notes": null },
+          { "unit": "Tu95 Bear T", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Tu95 Bear T", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Il38 May", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Alfa", "type": "Sub", "location": "North 7-8", "notes": null },
+          { "unit": "Any Alfa unit", "type": "Sub", "location": "North 5-6", "notes": null },
+          { "unit": "Foxtrot", "type": "Sub", "location": "Kola Port", "notes": null },
+          { "unit": "Ship (1 step)", "type": "Ship", "location": "Kola Port", "notes": null },
+          { "unit": "Kiev (Yak-38 Forger)", "type": "Air", "location": "Kola Port", "notes": null },
+          { "unit": "Sovremenny", "type": "Ship", "location": "Kola Port", "notes": null },
+          { "unit": "Kresta ASW", "type": "Ship", "location": "Kola Port", "notes": null }
+        ]
+      },
+      "notes": [
+        "Marginal handwriting on page 2 (partially legible): 'Boomers cannot return to port; must stay at sea.'"
+      ]
+    },
+    {
+      "id": "yankee-hunting",
+      "number": "1a",
+      "title": "Yankee Hunting",
+      "year": 1983,
+      "briefing": "Setup as Scenario #1 and add the following units.",
+      "victoryConditions": "One Yankee step must be killed for NATO to win the game.",
+      "opsPerDay": { "nato": 5, "soviet": 7 },
+      "turns": null,
+      "specialRules": "Scenario Alterations:\nOne Yankee step must be killed for NATO to win the game.\nNATO may add a Payload value point at the end of each turn if any Yankee is more than 1 zone from a First Strike zone.\nThe Soviet units starting the game over the SOSUS line cannot reduce the current Payload value sunk by crossing over the SOSUS line - the scenario special rule is ignored for them.\nNATO OPS increase to 7. Generate weather for Mid and West zones as well (everything except the Mediterranean).",
+      "firstStrike": null,
+      "setup": {
+        "nato": [
+          { "unit": "Los Angeles", "type": "Sub", "location": "Norfolk US or Mid 6-7", "notes": null },
+          { "unit": "Sturgeon", "type": "Sub", "location": "Norfolk US or Mid 6-7", "notes": null },
+          { "unit": "P3 Orion (Bermuda)", "type": "Air", "location": "Bermuda", "notes": null },
+          { "unit": "P3 Orion (Roosevelt Roads)", "type": "Air", "location": "Roosevelt Roads", "notes": null }
+        ],
+        "soviet": [
+          { "unit": "Yankee (SSBN)", "type": "Sub", "location": "Any First Strike zone West 2-3, 4-5 or 7-8", "notes": null },
+          { "unit": "Yankee", "type": "Sub", "location": "Any First Strike zone West 2-3, 4-5 or 7-8", "notes": null },
+          { "unit": "Yankee", "type": "Sub", "location": "Any First Strike zone West 2-3, 4-5 or 7-8", "notes": null },
+          { "unit": "Yankee", "type": "Sub", "location": "Any First Strike zone West 2-3, 4-5 or 7-8", "notes": null }
+        ]
+      },
+      "notes": [
+        "This is a sub-scenario (1a) appended to Scenario #1, adding the Yankee SSBN hunt layer."
+      ]
+    },
+    {
+      "id": "ace-mobile-and-first-convoys",
+      "number": 2,
+      "title": "Ace Mobile & First Convoys",
+      "year": 1983,
+      "briefing": "D+2. While the fight rages underwater in the North, NATO sorties convoys to sea heading for the French ports. Meanwhile ACE Mobile - NATO's rapid reaction force, sets off from the UK to Trondheim. The Soviets have earmarked two regiments of naval aviation and 18 submarines to interdict these forces.",
+      "victoryConditions": "The Soviet player wins if both the Convoy and the Amphib take three hits, otherwise NATO wins so long as the Amphib makes it to Trondheim and the Convoy to a French port.",
+      "opsPerDay": { "nato": 6, "soviet": 8 },
+      "turns": 4,
+      "specialRules": "Prior to beginning play NATO may move any two Air Units and put them On Patrol. The British may deploy their Surface Units in up to 2 different Task Forces as desired, beginning in British ports but formed up so there is no further OPS cost to sail them. Play continues for a maximum of 4 turns. The Soviet player has one spy available, after every use remove it from the game on a roll of 1-4. When a Convoy/Amphib reaches port remove the entire Task Force from the scenario. No cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events - ignore the rest of the card. UK Air Units cannot enter the North 9-10 zone in this scenario.",
+      "firstStrike": null,
+      "setup": {
+        "nato": [
+          { "unit": "HMS-1", "type": "Ship", "location": "Mid 5 in a Task Force", "notes": null },
+          { "unit": "SAM Convoy", "type": "SAM Convoy", "location": "Mid 5 in a Task Force", "notes": null },
+          { "unit": "UK ASW-1", "type": "Ship", "location": "UK Port", "notes": null },
+          { "unit": "UK ASW", "type": "Ship", "location": "UK Port", "notes": null },
+          { "unit": "Ship", "type": "Ship", "location": "UK Port", "notes": null },
+          { "unit": "F4 (Pre Strike)", "type": "Air", "location": "UK Port", "notes": null },
+          { "unit": "Anzio class", "type": "Amphib", "location": "UK Port", "notes": null },
+          { "unit": "F4 Phantom", "type": "Air", "location": "UK Airbase", "notes": null },
+          { "unit": "F4 Phantom", "type": "Air", "location": "UK Airbase", "notes": null },
+          { "unit": "F4 Phantom (MRP)", "type": "Air", "location": "UK Airbase", "notes": null },
+          { "unit": "Nimrod", "type": "Air", "location": "UK Airbase", "notes": null },
+          { "unit": "Nimrod", "type": "Air", "location": "North 3-4", "notes": null },
+          { "unit": "Swiftsure", "type": "Sub", "location": "North 3-4", "notes": null },
+          { "unit": "Atlantique", "type": "Air", "location": "France Airbase North", "notes": null },
+          { "unit": "Atlantique", "type": "Air", "location": "Amsterdam", "notes": null }
+        ],
+        "soviet": [
+          { "unit": "Victor I", "type": "Sub", "location": "North 9-10", "notes": null },
+          { "unit": "Victor II", "type": "Sub", "location": "North 9-10", "notes": null },
+          { "unit": "Tu16 Badger", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Tu22 Backfire", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Tu95 Bear D", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Tu95 Bear D", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Foxtrot", "type": "Sub", "location": "Mid 5", "notes": null },
+          { "unit": "Foxtrot", "type": "Sub", "location": "East 3", "notes": null },
+          { "unit": "SPIES", "type": "Marker", "location": "Spy Track", "notes": null }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "ace-mobile-extended",
+      "number": "2a",
+      "title": "Ace Mobile & First Convoys - Extended Scenario",
+      "year": 1983,
+      "briefing": "Setup as Scenario #2 and add the following units.",
+      "victoryConditions": "The Soviets must hit all three targets (Convoys & Amphib) for three hits apiece or six hits on any two to win the game. Soviets receive 9 OPS per turn.",
+      "opsPerDay": { "nato": 6, "soviet": 9 },
+      "turns": 4,
+      "specialRules": "Scenario Alterations: The Soviets must hit all three targets (Convoys & Amphib) for three hits apiece or six hits on any two to win the game. Soviets receive 9 OPS per turn.",
+      "firstStrike": null,
+      "setup": {
+        "nato": [
+          { "unit": "Ship", "type": "Ship", "location": "Mid 6-7 in a Task Force", "notes": null },
+          { "unit": "Ship", "type": "Ship", "location": "Mid 6-7 in a Task Force", "notes": null },
+          { "unit": "Air", "type": "Air", "location": "Mid 6-7 in a Task Force", "notes": null },
+          { "unit": "Air", "type": "Air", "location": "Mid 6-7 in a Task Force", "notes": null },
+          { "unit": "Ship", "type": "Ship", "location": "Mid 6-7 in a Task Force", "notes": null },
+          { "unit": "SAM Convoy", "type": "SAM Convoy", "location": "Add to TF Mid 5", "notes": null },
+          { "unit": "Sub", "type": "Sub", "location": "Add to TF Mid 5", "notes": null },
+          { "unit": "P3 Orion (French)", "type": "Air", "location": "Lajes", "notes": null }
+        ],
+        "soviet": [
+          { "unit": "Soviet Sub", "type": "Sub", "location": "North 9-10", "notes": null },
+          { "unit": "Soviet Air", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Soviet Tanker", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Soviet Sub", "type": "Sub", "location": "East 7-8", "notes": null },
+          { "unit": "Satellite", "type": "Satellite", "location": "East 3", "notes": null }
+        ]
+      },
+      "notes": [
+        "Photo caption on page: 'French aircraft carrier Foch'."
+      ]
+    },
+    {
+      "id": "kirovs-and-carriers",
+      "number": 3,
+      "title": "Kirov's & Carriers",
+      "year": 1983,
+      "briefing": "It is day five of WW3. Both Icelandic and English airbases have been subjected to repeated attack by Badger bombers and are inoperable. Communications intercepts have detected a Soviet amphibious force forming in Severomorsk. Satellite recon confirms the force is no longer in port as of 8 hours ago. Intelligence expects a landing in the area of Trondheim, Norway. Two carrier groups are in the area and are the only force standing between the Bad Banner Fleet and Oslo.",
+      "victoryConditions": "NATO wins the game by preventing any Troops markers being placed through an Amphibious Landing at Trondheim. The Soviet player wins if any troops have landed.",
+      "opsPerDay": { "nato": 9, "soviet": 10 },
+      "turns": 4,
+      "specialRules": "Use the Small Scenario OPS Track for this game. NATO 9 OPS, Soviet 10 OPS.\n\nPrior to beginning game roll one die for each of Keflavik and the Scottish airbases; place heavy damage on an 8,9 or 10 otherwise place light damage. Place the number of die rolled to cause that level of damage (e.g. place 3 dice on UK Airbase if heavily damaged or 1 hit if lightly damaged) The Soviets may deploy their Surface Units in up to 3 different Task Forces as desired and may use nuclear submarines in North 9-10 as part of a Task Force.\n\nPlay continues for a maximum of 4 turns.\n\nNo cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events - ignore the rest of the card.",
+      "firstStrike": null,
+      "setup": {
+        "nato": [
+          { "unit": "F4 Phantom", "type": "Air", "location": "France Airbase North", "notes": null },
+          { "unit": "F4 Phantom", "type": "Air", "location": "France Airbase North", "notes": null },
+          { "unit": "Atlantique", "type": "Air", "location": "France Airbase North", "notes": null },
+          { "unit": "P3 Orion (Keflavik)", "type": "Air", "location": "Keflavik", "notes": null },
+          { "unit": "F4 Phantom (Iceland)", "type": "Air", "location": "Keflavik", "notes": null },
+          { "unit": "P3 Orion (Orland)", "type": "Air", "location": "Orland", "notes": null },
+          { "unit": "Skipjack", "type": "Sub", "location": "Trondheim", "notes": null },
+          { "unit": "Skipjack", "type": "Sub", "location": "Narvik", "notes": null },
+          { "unit": "Skipjack", "type": "Sub", "location": "North 5-6", "notes": null },
+          { "unit": "Nimrod", "type": "Air", "location": "UK Airbase", "notes": null },
+          { "unit": "Nimrod", "type": "Air", "location": "UK Airbase", "notes": null },
+          { "unit": "Los Angeles", "type": "Sub", "location": "East 6", "notes": null },
+          { "unit": "Los Angeles", "type": "Sub", "location": "East 9-10", "notes": null },
+          { "unit": "Any US carrier of player's choice", "type": "Ship", "location": "East 6 in a Task Force", "notes": null },
+          { "unit": "Any US CAG of player's choice", "type": "Air", "location": "East 6 in a Task Force", "notes": null },
+          { "unit": "Any US F-14 of player's choice", "type": "Air", "location": "East 6 in a Task Force", "notes": null },
+          { "unit": "Sturgeon", "type": "Sub", "location": "East 6 in a Task Force", "notes": null },
+          { "unit": "Any carrier of player's choice", "type": "Ship", "location": "East 5 in a Task Force", "notes": null },
+          { "unit": "Any US CAG of player's choice", "type": "Air", "location": "East 5 in a Task Force", "notes": null },
+          { "unit": "Any US F-14 of player's choice", "type": "Air", "location": "East 5 in a Task Force", "notes": null },
+          { "unit": "Sturgeon", "type": "Sub", "location": "East 5 in a Task Force", "notes": null }
+        ],
+        "soviet": [
+          { "unit": "Soviet Sub", "type": "Sub", "location": "East 6", "notes": null },
+          { "unit": "Soviet Sub", "type": "Sub", "location": "North 5-6", "notes": null },
+          { "unit": "Soviet Sub", "type": "Sub", "location": "North 5-6", "notes": null },
+          { "unit": "Soviet Sub", "type": "Sub", "location": "North 7-8", "notes": null },
+          { "unit": "Soviet Sub", "type": "Sub", "location": "North 7-8", "notes": null },
+          { "unit": "Soviet Sub", "type": "Sub", "location": "North 9-10", "notes": null },
+          { "unit": "Soviet Sub", "type": "Sub", "location": "North 9-10", "notes": null },
+          { "unit": "Soviet Sub", "type": "Sub", "location": "North 9-10", "notes": null },
+          { "unit": "Satellite", "type": "Satellite", "location": "Tyumen", "notes": null },
+          { "unit": "Satellite", "type": "Satellite", "location": "Tyumen", "notes": null },
+          { "unit": "Tu16 Badger", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Tu22 Backfire", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Tu95 Bear D", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Il38 May", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Kirov", "type": "Ship", "location": "North 9-10 in a Task Force See Special Rules", "notes": null },
+          { "unit": "Kiev (Yak-38 Forger)", "type": "Air", "location": "North 9-10 in a Task Force", "notes": null },
+          { "unit": "Sovremenny", "type": "Ship", "location": "North 9-10 in a Task Force", "notes": null },
+          { "unit": "Kresta ASW", "type": "Ship", "location": "North 9-10 in a Task Force", "notes": null },
+          { "unit": "Soviet Ship", "type": "Ship", "location": "North 9-10 in a Task Force", "notes": null },
+          { "unit": "Soviet Amphib", "type": "Amphib", "location": "North 9-10 in a Task Force", "notes": null }
+        ]
+      },
+      "notes": [
+        "Scenario Alterations: The days before. Start with the Soviet ships all in port, and the US carrier Task Forces both 2 zones West of their parallel at start positions. This allows the fight to develop, rather than being a knife fight in a phone booth.",
+        "Photo caption on page 8: 'Norwegian P-3 Orion'."
+      ]
+    }
+  ]
+}

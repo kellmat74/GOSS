@@ -150,6 +150,65 @@ export interface PhysicalCard {
   reaction: CardEvent;
 }
 
+// ---------------------------------------------------------------------------
+// Scenario content (rich per-scenario data, BWN-style)
+// ---------------------------------------------------------------------------
+
+export type ScenarioSide = "nato" | "soviet";
+
+export interface ScenarioSetupUnit {
+  unit: string;       // e.g. "Memphis", "Kiev"
+  type: string;       // e.g. "Sub (SSN)", "Carrier", "Air (FTR)"
+  location: string;   // e.g. "North 5-6", "UK Airbase"
+  notes?: string | null;
+}
+
+export interface ScenarioReinforcement {
+  turn: number;
+  side: ScenarioSide;
+  unit: string;
+  type: string;
+  location: string;
+  notes?: string | null;
+}
+
+export interface ScenarioYearVariant {
+  year: number;
+  notes: string;
+}
+
+/** Rich content for one scenario in a scenario book. */
+export interface ScenarioContent {
+  id: string;                     // kebab-case slug, e.g. "boomer-bastion"
+  number: number;                 // 1, 2, 3 ...
+  title: string;                  // "The Boomer Bastion"
+  year?: number | string;         // 1983, or "1983 / 1985 / 1989" for campaign
+  briefing: string;               // narrative intro
+  victoryConditions: string;
+  opsPerDay?: { nato: number; soviet: number };
+  turns?: number;
+  specialRules?: string;
+  firstStrike?: number | null;
+  setup: {
+    nato: ScenarioSetupUnit[];
+    soviet: ScenarioSetupUnit[];
+  };
+  reinforcements?: ScenarioReinforcement[];
+  yearVariants?: ScenarioYearVariant[];
+  notes?: string[];
+}
+
+/** Top-level structure of a scenario book. */
+export interface ScenarioBook {
+  /** Shared notes that apply across multiple scenarios (e.g. small-scenario OPS track rules). */
+  shared?: {
+    fivePointOpsTrack?: string;
+    oftenOverlookedRules?: string[];
+    [key: string]: unknown;
+  };
+  scenarios: ScenarioContent[];
+}
+
 // Scenario overlay fields added to SubPhase/Phase after merge
 export interface ScenarioAnnotation {
   gate?: string;           // callout banner text (e.g., "HHF: ENA always available")

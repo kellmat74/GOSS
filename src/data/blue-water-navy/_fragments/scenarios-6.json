@@ -1,0 +1,46 @@
+{
+  "scenarios": [
+    {
+      "id": "campaign-game",
+      "number": 6,
+      "title": "The Campaign Game",
+      "year": "1983 / 1985 / 1987 / 1989",
+      "briefing": "This is the full game, with three possible starting years: 1983, 1985 and 1989 and three possible start types - strategic surprise, tactical surprise and extended build-up. The 'standard' game is the tactical surprise scenario which postulates an approximate 1 month of warning time for NATO to prepare for the impending Soviet attack. For your first campaign game, try 1983 - tactical scenario, no 'options' in play.",
+      "victoryConditions": "Victory is determined by the start type chosen (Strategic Surprise, Tactical Surprise, or Build-up). See the special rules for each start type.",
+      "opsPerDay": { "nato": null, "soviet": null },
+      "turns": null,
+      "specialRules": "Strategic Surprise Scenario Special Rules\n\nAll Convoys begin with two hits during setup and Turns 1 and 2. During Turns 3 through 5 this is reduced to one hit. From Turn 6, Convoys form normally with no hits.\n\nThis represents the lack of pre-war time to properly form-up NATO shipping, meaning that convoys have less ships for the first two weeks of the war.\n\nTactical Surprise Scenario Special Rules\n\nThere are no special rules in play here.\n\nExtended Build-up Scenario Special Rules\n\nThe Soviet player takes 2 First Strike Points at the start of the game NATO places two Convoys on Turns 1, 3, 5, 7 and 9 (all odd Convoy turns) - note that if NATO is unlucky with weather it is possible there are not enough Convoys to place. If this happens, the missing Convoys are received as soon as they are available.\n\nNATO has a huge number of convoy ships available, having formed up the merchant navies of Europe to support the war effort. The Soviets are more prepared to use reserves or nuclear weapons, and have significant force at-sea.\n\nSetup the game based on the scenario and your selected and then follow this checklist to start the game\n\nBoth players draw 5 cards each and inspect them.\n\nNATO Player\n\n1) Breakdown choice: NATO may place 1 US Sturgeon and or 1 US Los Angeles sub into the Destroyed box to take the two matching breakdown counters, placed where either sub(s) were or with any at-sea Task Force lacking a submarine counter.\n\nSimilarly NATO may place these surface ships US 4-6 in the Destroyed box, take the US 13-17 in-port hits replace each removed unit with one or two replacement ships. Any not placed may begin in the USA.\n\n2) Any 2 / 2 / 4 (strategic / tactical / build up) ship units may be moved to any other NATO base(s) or Task Forces at sea.\n\n3) One NATO Task Force may be formed up and placed within 2 Sea Zones of its origin port forces from that port. (UK and FR ports count as the same origin port for this purpose).\n\n4) 1 / 3 / 7 (strategic / tactical / build up) Submarine Units can be placed anywhere on the map.\n\n5) 3 / 3 / 5 (strategic / tactical / build up) Air Units can be placed within their range 'On Patrol' - either MP air or fighters\n\n6) The at-sea carriers beginning the game in TF Hammer may be relocated to new or existing Task Forces anywhere except the Mediterranean, and not North of the GIUK Gap.\n\n7) Optional: Draw 2 'options' markers from a cup and select one to keep. Repeat for each First Strike Point given to the Soviet player (maximum of 2 picks).\n\nSoviet Player\n\n1) The Soviet player may purchase Soviet Technology markers. Reduce the Spies Track by the number on each marker put into play.\n\n2) The Soviet player may take one Tu-22 from the destroyed box (if present) by removing 2 Tu-16 Badgers or the Tu-95 Bear-G. Place it on the Kola, Baltic, Black Sea or Syrian bases. (Trading assets with the Far East)\n\n3) Move up to three strike Air Units to any Soviet bases. (except for Cuba)\n\n4) Move up to three Surface Units to any Soviet bases. (except for Cuba)\n\n5) 4 / 6 / 14 (strategic / tactical / build up) subs can be placed anywhere on the map, and an additional 2 / 2 / 4 (strategic / tactical / build up) may be played within two Sea Zones of a Soviet base. (except for Cuba)\n\n6) 1 / 1 / 2 (strategic / tactical / build up) Soviet Task Force(s) may be created from any units originating in a single Soviet port (per TF) and placed on the map anywhere marked with a Poor detection. If placed within one zone of a NATO TF, instead mark with a Good detection.\n\n7) Roll weather for all zones. If weather is placed in a zone with a Task Force, place a 'Moved' marker on it (the Task Force has been within the Bad Weather for some time and will have soon).\n\n8) Battletales: Roll detection on all NATO Task Forces at sea with one die. The Soviet player may choose any one Task Force (two in the build-up scenario) and use two dice instead.\n\n9) Begin the game starting with the Convoy Placement Phase.\n\n10) Optional: Draw 2 'options' markers from a cup and select one to keep. Repeat for each First Strike Point discarded or spy expended (maximum of 2 given).\n\nNote: Any markers not mentioned are put in easy reach and if a numeric marker starts at 0 (there is no zero box)",
+      "firstStrike": null,
+      "setup": {
+        "nato": [
+          { "unit": "See chosen start type", "type": "Reference", "location": "1983 Strategic Surprise Scenario NATO (page 16-17) OR 1983 Tactical Surprise Scenario NATO (page 18-20) OR 1983 Build-up Scenario NATO (page 21-23)", "notes": "For 1985 add the 1985 additions from the chosen scenario's page. For 1989 add the 1989 additions plus the 1985 additions." }
+        ],
+        "soviet": [
+          { "unit": "See chosen start type", "type": "Reference", "location": "1983 Strategic Surprise Scenario SOVIET (page 24-25) OR 1983 Tactical Surprise Scenario SOVIET (page 26-28) OR 1983 Build-up Scenario SOVIET (page 29-31)", "notes": "For 1985 add the 1985 additions from the chosen scenario's page. For 1989 add the 1989 additions plus the 1985 additions." }
+        ]
+      },
+      "reinforcements": [],
+      "yearVariants": [
+        {
+          "year": 1983,
+          "notes": "Use the base scenario setup (Strategic Surprise, Tactical Surprise, or Build-up) as printed for 1983."
+        },
+        {
+          "year": 1985,
+          "notes": "1985 additions - add the following to the map (per chosen start type):\n\nNATO (1985 additions): US-3, US-11, Los Angeles, UK AEW-3, Tornado, Aspide, Sturgeon (Ship/Sub/Air units at NS Norfolk USA, UK Port, NS Rota; one 'Replaces 83 unit').\n\nSOVIET (1985 additions): additional Air, Ship, and Sub units at Kola Bases (one Tu-16 Badger is removed from the Baltic Bases and replaced through 'force modernization')."
+        },
+        {
+          "year": 1989,
+          "notes": "1989 additions - add the following to the map also add the 1985 additions, above.\n\nNATO (1989 additions): Thresher (in USA1) replaced with a US Sturgeon from the USA. Ethan Allen (on Turn 2) replaced with a US Sturgeon from the USA. Additional units include Ticonderoga VLS, Los Angeles, NS UK SSN-X, Konig, Tornado, Alpha; units at NS Norfolk USA, Brest, 'Replaces 83 unit'.\n\nSOVIET (1989 additions): Only two of the capital ships are in play; Soviet selects. Additional Ship, Air, Sub units at Kola Bases. 'Replaces 83 unit'. Bastion / Kola Bases assignments. Tu-22 Backfire (On Nuclear Capability Chart). The Destroyed box Tu-22 Backfire is placed in the Baltic Bases. Remove one Tu-16 Badger from the Baltic Bases replaced through force modernization."
+        }
+      ],
+      "notes": [
+        "The book mentions 1983, 1985 and 1989 as supported start years (and the scenario title page references 1987 as a possibility); 1985 and 1989 add explicit unit modifications to each base scenario's map.",
+        "There are three possible start types: Strategic Surprise, Tactical Surprise (the 'standard'), and Extended Build-up.",
+        "Recommendation in the rules: 'For your first campaign game, try 1983 - tactical scenario, no options in play.'",
+        "The setup for each start type spans multiple pages: 1983 Strategic Surprise NATO (pp.16-17), 1983 Tactical Surprise NATO (pp.18-20), 1983 Build-up NATO (pp.21-23); 1983 Strategic Surprise SOVIET (pp.24-25), 1983 Tactical Surprise SOVIET (pp.26-28), 1983 Build-up SOVIET (pp.29-31).",
+        "Each scenario's 1985 and 1989 'additions' sections appear immediately following the base 1983 setup for that start type."
+      ]
+    }
+  ]
+}

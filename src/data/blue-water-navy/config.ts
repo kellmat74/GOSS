@@ -37,8 +37,9 @@ export const blueWaterNavyConfig: GameSystemConfig = {
     ask: false,    // Deferred
     learn: false,  // Deferred (AI Coach content authoring is a separate sprint)
     options: false,
-    actions: true, // Card-driven game — Actions tab enabled
-    cards: true,   // Event Cards browser tab
+    actions: true,   // Card-driven game — Actions tab enabled
+    cards: true,     // Event Cards browser tab
+    scenarios: true, // Scenarios tab with rich per-scenario content
   },
   quickRefButtons: bwnQuickRefButtons,
   glossaryConfig: bwnGlossaryConfig,
@@ -49,13 +50,24 @@ export const blueWaterNavyConfig: GameSystemConfig = {
       id: "atlantic",
       label: "Atlantic",
       shortLabel: "BWN-A",
-      scenarios: [{ id: "all", label: "All Scenarios" }],
+      scenarios: [
+        { id: "all",                       label: "All Scenarios" },
+        { id: "boomer-bastion",            label: "1: The Boomer Bastion" },
+        { id: "yankee-hunting",            label: "1a: Yankee Hunting" },
+        { id: "ace-mobile-and-first-convoys", label: "2: Ace Mobile & First Convoys" },
+        { id: "ace-mobile-extended",       label: "2a: Ace Mobile — Extended" },
+        { id: "kirovs-and-carriers",       label: "3: Kirov's & Carriers" },
+        { id: "attack-on-kola",            label: "4: Attack on the Kola Peninsula" },
+        { id: "baltic-bust-up",            label: "5: Baltic Bust-Up" },
+        { id: "campaign-game",             label: "6: Campaign Game" },
+      ],
       data: {
         // BWN has a single rulebook — rules load from baseData.rules below.
-        // Module data only holds module-specific extras (actions, cards, future scenario overlays).
+        // Module data only holds module-specific extras (actions, cards, scenario book).
         rules: () => Promise.resolve({ default: [] }),
         actions: () => import("./actions.json"),
         cards: () => import("./cards.json"),
+        scenarioBook: () => import("./scenario-book.json"),
       },
     },
     // Future: Pacific module added when Compass releases the game.

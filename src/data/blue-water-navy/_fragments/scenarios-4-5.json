@@ -1,0 +1,120 @@
+{
+  "scenarios": [
+    {
+      "id": "attack-on-kola",
+      "number": 4,
+      "title": "Attack on the Kola Peninsula",
+      "year": 1983,
+      "briefing": "It is day two of WWIII. The United States Navy has decided to strike the Soviet Kola Peninsula bases in order to halt the threat from Soviet naval aviation. Four aircraft carriers are currently 1500 nautical miles from their targets and steaming at high speed to the Northeast. The Soviets have two full divisions of strike aircraft, two divisions of fighters and the most formidable air defense system on the planet.",
+      "victoryConditions": "NATO wins the game by heavily damaging both the Kola Peninsula airbase and port facilities, otherwise the Soviets win. Casualties on either side are irrelevant.",
+      "opsPerDay": { "nato": 10, "soviet": 10 },
+      "turns": null,
+      "specialRules": "Play continues for a maximum of 5 turns. Set up the Soviets first and then NATO. There are no NATO onsite missiles in the scenario as it takes place in 1983. No cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events - ignore the rest of the card.",
+      "firstStrike": null,
+      "setup": {
+        "nato": [
+          { "unit": "F-14 Phantom", "type": "Air", "location": "In 1-4 Task Forces, in any East Sea Zone", "notes": null },
+          { "unit": "F-14 Phantom", "type": "Air", "location": "In 1-4 Task Forces, in any East Sea Zone", "notes": null },
+          { "unit": "F-14 Phantom", "type": "Air", "location": "UK Airbase", "notes": null },
+          { "unit": "F-14 Phantom", "type": "Air", "location": "In 1-4 Task Forces, in any East Sea Zone", "notes": null },
+          { "unit": "Any 4 US carriers of players choice", "type": "Ship", "location": "In 1-4 Task Forces, in any East Sea Zone", "notes": null },
+          { "unit": "Any 4 US CAG of players choice", "type": "Ship", "location": "In 1-4 Task Forces, in any East Sea Zone", "notes": null },
+          { "unit": "Any 4 US F-14 of players choice", "type": "Ship", "location": "In 1-4 Task Forces, in any East Sea Zone", "notes": null },
+          { "unit": "Los Angeles", "type": "Sub", "location": "In any Task Force (one per TF) or any East or North Seas Zone (s)", "notes": null },
+          { "unit": "Los Angeles", "type": "Sub", "location": "In any Task Force (one per TF) or any East or North Seas Zone (s)", "notes": null },
+          { "unit": "Los Angeles", "type": "Sub", "location": "In any Task Force (one per TF) or any East or North Seas Zone (s)", "notes": null },
+          { "unit": "Sturgeon", "type": "Sub", "location": "In any Task Force (one per TF) or any East or North Seas Zone (s)", "notes": null },
+          { "unit": "Sturgeon", "type": "Sub", "location": "In any Task Force (one per TF) or any East or North Seas Zone (s)", "notes": null }
+        ],
+        "soviet": [
+          { "unit": "Tu-95 Bear", "type": "Air", "location": null, "notes": null },
+          { "unit": "Tu-95 Bear", "type": "Air", "location": null, "notes": null },
+          { "unit": "Tu-95 Bear", "type": "Air", "location": null, "notes": null },
+          { "unit": "Tu-16 Badger", "type": "Air", "location": null, "notes": null },
+          { "unit": "Tu-16 Badger", "type": "Air", "location": null, "notes": null },
+          { "unit": "Tu-22 Backfire", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Tu-22 Backfire", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "Tu-22 Backfire", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "MiG-31 Foxhound", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "MiG-31 Foxhound", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "MiG-25 Foxbat", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "MiG-25 Foxbat", "type": "Air", "location": "Kola Airbase", "notes": null },
+          { "unit": "SAM", "type": "Air", "location": "Kola", "notes": null },
+          { "unit": "RORSAT", "type": "Satellite", "location": "North 5-6", "notes": null },
+          { "unit": "RORSAT", "type": "Satellite", "location": "North 7-8", "notes": null },
+          { "unit": "Victor", "type": "Sub", "location": "North 7-8", "notes": null },
+          { "unit": "Victor", "type": "Sub", "location": "North 5-6", "notes": null },
+          { "unit": "Akula", "type": "Sub", "location": "East 9-10", "notes": null },
+          { "unit": "Akula", "type": "Sub", "location": "East 5", "notes": null },
+          { "unit": "Charlie", "type": "Sub", "location": null, "notes": null },
+          { "unit": "Charlie", "type": "Sub", "location": null, "notes": null },
+          { "unit": "Kirov", "type": "Ship", "location": null, "notes": null },
+          { "unit": "Slava", "type": "Ship", "location": null, "notes": null },
+          { "unit": "Moskva", "type": "Air", "location": "Kola in port", "notes": null },
+          { "unit": "Kresta", "type": "Ship", "location": null, "notes": null },
+          { "unit": "Kashin", "type": "Ship", "location": null, "notes": null },
+          { "unit": "Kynda", "type": "Ship", "location": null, "notes": null }
+        ]
+      },
+      "reinforcements": [],
+      "notes": [
+        "Scenario Alterations:",
+        "#1 Use Nuclear Weapons - Try the scenario with nuclear weapons at sea in effect. This forces Soviet naval air power as the Americans have no corresponding weapon to use against them and nuclear bombardment of Kola itself would all but guarantee a response against a significant American or British strategic target. To balance the increased firepower, allow the US player to take any two of the following cards: SAM Trap, Special Forces, Fighter Recovery, Economic Control, Radar Decoys!",
+        "#2 Cruise Missiles - Play the scenario in 1985 allowing the US to use cruise missiles) and adding US-6 to the US forces. The Soviet player may place an additional RORSAT in any zone of the map.",
+        "#3 All the Toys - Add 2 Ticonderoga VLS to the US forces, and add a Sear-G at Kola to the Soviet setup, the Victor-III (I) and the Akula anywhere in a North Sea Zone (s)placed last after everything else is on the map)."
+      ]
+    },
+    {
+      "id": "baltic-bust-up",
+      "number": 5,
+      "title": "Baltic Bust-Up",
+      "year": 1983,
+      "briefing": "It is day one of WWI3. The Politburo has instructed Soviet commanders to take Denmark as a priority. Badger regiments have been allocated to destroy the German airbases, and submarines will secure the Baltic Sea. Meanwhile, NATO forces are ready and waiting to defend their Danish allies.",
+      "victoryConditions": "The Soviets win the game by landing 2 Troops markers in Denmark, otherwise NATO wins. Casualties on either side are irrelevant.",
+      "opsPerDay": { "nato": 6, "soviet": 6 },
+      "turns": 4,
+      "specialRules": "Play continues for a maximum of 4 turns. Instead of the usual weather process roll a single die each turn - the Baltic experiences Bad Weather on a '10' and must have clear weather the following turn (do not roll, it's automatically clear the turn after). Remember to resolve the amphibious invasion landing procedure each time the Soviet player tries to land. No cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events - ignore the rest of the card.",
+      "firstStrike": null,
+      "setup": {
+        "nato": [
+          { "unit": "F-4 Phantom", "type": "Sub", "location": null, "notes": null },
+          { "unit": "F-4 Phantom", "type": "Sub", "location": "Baltic Sea", "notes": null }
+        ],
+        "soviet": [
+          { "unit": "Tu-16 Badger", "type": "Air", "location": "Schleswig", "notes": null },
+          { "unit": "Tu-16 Badger", "type": "Air", "location": "Schleswig", "notes": null },
+          { "unit": "Tornado", "type": "Air", "location": "Schleswig", "notes": null },
+          { "unit": "Alligator", "type": "Ship", "location": "Task Force in port at Kiel", "notes": null },
+          { "unit": "Foxtrot", "type": "Sub", "location": "North Sea", "notes": null },
+          { "unit": "Foxtrot", "type": "Sub", "location": "North Sea", "notes": null },
+          { "unit": "Tornado", "type": "Air", "location": "Amsterdam", "notes": null },
+          { "unit": "SAM", "type": "Marker", "location": null, "notes": null },
+          { "unit": "MiG-23 Flogger", "type": "Air", "location": null, "notes": null },
+          { "unit": "MiG-23 Flogger", "type": "Air", "location": null, "notes": null },
+          { "unit": "MiG-23 Flogger", "type": "Air", "location": null, "notes": null },
+          { "unit": "Tu-16 Badger", "type": "Air", "location": "Baltic Airbase", "notes": null },
+          { "unit": "MiG-23 Flogger", "type": "Air", "location": null, "notes": null },
+          { "unit": "MiG-23 Flogger", "type": "Air", "location": null, "notes": null },
+          { "unit": "MiG-23 Flogger", "type": "Air", "location": null, "notes": null },
+          { "unit": "Su-7 Fitter", "type": "Air", "location": null, "notes": null },
+          { "unit": "Kilo", "type": "Sub", "location": "in the Baltic at Sea", "notes": null },
+          { "unit": "Kilo", "type": "Sub", "location": "in the Baltic at Sea", "notes": null },
+          { "unit": "Foxtrot", "type": "Air", "location": "in the Baltic at Sea", "notes": null },
+          { "unit": "Foxtrot", "type": "Air", "location": "in the Baltic at Sea", "notes": null },
+          { "unit": "Tango", "type": "Sub", "location": "in the Baltic at Sea", "notes": null },
+          { "unit": "Tango", "type": "Sub", "location": "in the Baltic at Sea", "notes": null },
+          { "unit": "Krivak", "type": "Ship", "location": "At the Baltic ports in port", "notes": null },
+          { "unit": "Krivak", "type": "Ship", "location": "At the Baltic ports in port", "notes": null },
+          { "unit": "Sovremenny", "type": "Air", "location": "At the Baltic ports in port", "notes": null },
+          { "unit": "Nanuchka", "type": "Ship", "location": "At the Baltic ports in port", "notes": null },
+          { "unit": "Nanuchka", "type": "Ship", "location": "At the Baltic ports in port", "notes": null },
+          { "unit": "Nanuchka", "type": "Ship", "location": "At the Baltic ports in port", "notes": null },
+          { "unit": "Ropucha", "type": "Amphib", "location": "At the Baltic ports in port", "notes": null },
+          { "unit": "Ropucha", "type": "Amphib", "location": "At the Baltic ports in port", "notes": null }
+        ]
+      },
+      "reinforcements": [],
+      "notes": []
+    }
+  ]
+}
