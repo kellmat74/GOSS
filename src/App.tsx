@@ -23,11 +23,12 @@ import { mergeLearn } from "./utils/mergeLearn";
 import { getVisibleGames, getGameById } from "./data/registry";
 import type { Phase, RuleEntry, SequenceOverlay, CardCategory } from "./types/goss";
 import { ActionsPanel } from "./components/Actions/ActionsPanel";
+import { CardsPanel } from "./components/Cards/CardsPanel";
 import type { LearnData, LearnOverlay } from "./types/learn";
 import type { GameSystemConfig, ComplexityLevel } from "./types/platform";
 import type { TableDef } from "./types/tables";
 
-type View = "sop" | "flowchart" | "rules" | "ask" | "learn" | "options" | "info" | "actions";
+type View = "sop" | "flowchart" | "rules" | "ask" | "learn" | "options" | "info" | "actions" | "cards";
 
 const THEME_KEY = "wc-theme";
 const GAME_SYSTEM_KEY = "wc-game-system";
@@ -154,6 +155,7 @@ interface GameData {
   baseErrata: import("./types/platform").ErrataFile | null;
   moduleErrata: import("./types/platform").ErrataFile | null;
   tables: Record<string, TableDef>;
+  actions: CardCategory[];
   cards: CardCategory[];
 }
 
@@ -213,7 +215,9 @@ function useGameData(
       // Tables
       gameConfig.baseData.tables ? gameConfig.baseData.tables() : Promise.resolve(null),
       moduleConfig?.data.tables ? moduleConfig.data.tables() : Promise.resolve(null),
-      // Cards (card-driven games like BWN)
+      // Actions catalog (unit-action categories, separate from Event Cards)
+      moduleConfig?.data.actions ? moduleConfig.data.actions() : Promise.resolve(null),
+      // Cards catalog (Event Cards, card-driven games like BWN)
       moduleConfig?.data.cards ? moduleConfig.data.cards() : Promise.resolve(null),
     ]).then((results) => {
       if (cancelled) return;
@@ -222,7 +226,7 @@ function useGameData(
         modRulesRaw, modAdvRulesRaw, overlayRaw, learnOverlayRaw,
         baseErrataRaw, moduleErrataRaw,
         baseTablesRaw, moduleTablesRaw,
-        cardsRaw,
+        actionsRaw, cardsRaw,
       ] = results;
 
       const baseRules: RuleEntry[] = [
@@ -251,9 +255,10 @@ function useGameData(
         ...((moduleTablesRaw as any)?.default ?? {}),
       };
 
+      const actions: CardCategory[] = ((actionsRaw as any)?.default ?? []) as CardCategory[];
       const cards: CardCategory[] = ((cardsRaw as any)?.default ?? []) as CardCategory[];
 
-      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata, tables, cards });
+      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata, tables, actions, cards });
       setLoading(false);
     }).catch((err) => {
       if (!cancelled) {
@@ -323,6 +328,7 @@ function App() {
     if (gameConfig?.features.ask) t.push({ key: "ask", label: "Ask" });
     if (gameConfig?.features.options) t.push({ key: "options", label: "Options" });
     if (gameConfig?.features.actions) t.push({ key: "actions", label: "Actions" });
+    if (gameConfig?.features.cards) t.push({ key: "cards", label: "Cards" });
     t.push({ key: "info", label: "Info" });
     return t;
   }, [gameConfig]);
@@ -443,7 +449,10 @@ function App() {
           />
         )}
         {view === "actions" && gameConfig?.features.actions && (
-          <ActionsPanel cards={data?.cards ?? []} />
+          <ActionsPanel cards={data?.actions ?? []} />
+        )}
+        {view === "cards" && gameConfig?.features.cards && (
+          <CardsPanel cards={data?.cards ?? []} />
         )}
         {view === "info" && <InfoPanel gameConfig={gameConfig} />}
       </AppShell>

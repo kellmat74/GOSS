@@ -1,0 +1,407 @@
+[
+  {
+    "file": "UCard-Jan18- (29).png",
+    "cardNumber": "29",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "First Strike",
+      "cost": 9,
+      "text": "Play before spending any points. If 4 points of SSBNs are in First Strike zones, collect 1 FSP. If 8+ are in First Strike zones, collect 2. Each non-Yankee step in the Arctic adds +1 to the total. Only one of this event playable per turn."
+    },
+    "reactionEvent": {
+      "title": "None",
+      "cost": 0,
+      "text": ""
+    }
+  },
+  {
+    "file": "UCard-Jan18- (30).png",
+    "cardNumber": "30",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Politburo Approval",
+      "cost": 12,
+      "text": "If a NATO SSBN is attacked at some point in this turn with a result of near miss or sunk increase stability by one."
+    },
+    "reactionEvent": {
+      "title": "Attack while Forming Up",
+      "cost": 0,
+      "text": "If a NATO TF leaves port in a sea zone with a fresh friendly submarine, attack with the submarine on the Submarine vs. Task Force Table and re-roll up to two dice. Mark the submarine spent."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (31).png",
+    "cardNumber": "31",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "GIUK Gap Infiltration",
+      "cost": 9,
+      "text": "Any three submarines during this card play may ignore the SOSUS line. Mark each use with a spent marker on this card."
+    },
+    "reactionEvent": {
+      "title": "Port Watch",
+      "cost": 0,
+      "text": "Play if a NATO TF leaves port in a sea zone with a Soviet submarine. Roll two dice on the 'Detection of Task Forces Table' applying results to this TF only. Roll one die if the submarine is spent. Any detection gained does not degrade this ship movement. Mark the submarine spent."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (32).png",
+    "cardNumber": "32",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Cubans distract CIA/NSA",
+      "cost": 9,
+      "text": "If the Loudres facility is not destroyed, force the NATO Player to reveal two random cards. Select one to discard."
+    },
+    "reactionEvent": {
+      "title": "Air Force Neutralized",
+      "cost": 2,
+      "text": "Play when air units are intercepted over Denmark or Turkey. Ignore this interception."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (33).png",
+    "cardNumber": "33",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Strike Supply Ports",
+      "cost": 12,
+      "text": "Play this card to place three hits on the French, Belgian and Dutch ports. *Soviet bombing and missile strikes against key NATO ports.*"
+    },
+    "reactionEvent": {
+      "title": "Speech for the Politburo",
+      "cost": 4,
+      "text": "Play when earning a First Strike Point. Roll two dice and earn another on each 7+. If you roll doubles, earn none at all."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (34).png",
+    "cardNumber": "34",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Backfire Rest & Refit",
+      "cost": 9,
+      "text": "Remove spent markers on any three aircraft units."
+    },
+    "reactionEvent": {
+      "title": "Submarine Pairing",
+      "cost": 0,
+      "text": "Use when the enemy kills a nuclear submarine with a submarine; mark a friendly diesel submarine in the same zone spent and cause a step loss on an enemy submarine."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (35).png",
+    "cardNumber": "35",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Arctic Transit",
+      "cost": 9,
+      "text": "Two Soviet submarines in the Arctic may be placed in the Labrador Sea (west of Greenland). If a NATO submarine is in the Arctic, it may resolve anti-submarine warfare immediately and mark as spent."
+    },
+    "reactionEvent": {
+      "title": "ASM Attack",
+      "cost": 2,
+      "text": "Play to attack a good detected TF in the same zone as a friendly TF. Select one friendly ship to attack any enemy TF with anti-ship missiles, then mark 'Anti-Ship Missiles Fired'."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (36).png",
+    "cardNumber": "36",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "North Sea Oil Sabotage",
+      "cost": 12,
+      "text": "If there are four steps of fresh Soviet submarines in the North Sea, place spent markers on them. NATO loses 2 ops and rolls three dice, taking a British submarine step loss on each roll of 1 or 2. NATO selects all losses suffered. —REMOVE FROM PLAY—"
+    },
+    "reactionEvent": {
+      "title": "None",
+      "cost": 0,
+      "text": ""
+    }
+  },
+  {
+    "file": "UCard-Jan18- (37).png",
+    "cardNumber": "37",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Centralized Control",
+      "cost": 6,
+      "text": "If the Kola Peninsula ports are undamaged, this card has a value of 15. *The Soviet system emphasised central control and reporting to land-based commanders.*"
+    },
+    "reactionEvent": {
+      "title": "Expert Skipper",
+      "cost": 0,
+      "text": "When a Soviet submarine is attacking a NATO TF, after rolling the attack dice add +3 in total to any combination of dice rolled."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (38).png",
+    "cardNumber": "38",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Cuban Sabotage",
+      "cost": 9,
+      "text": "Play **only** if Cuba is active. Cause two hits on a convoy in the US. *Cuban agents and special ops sabotage merchant shipping.*"
+    },
+    "reactionEvent": {
+      "title": "Friendly Fire",
+      "cost": 2,
+      "text": "Play when an enemy submarine or maritime patrol aircraft performs anti-submarine warfare and scores no hits. Cause a hit to an enemy submarine in the same zone."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (39).png",
+    "cardNumber": "39",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Paratroops",
+      "cost": 15,
+      "text": "Use this card to place one troop on Iceland if Keflavik is heavily damaged OR place a Soviet airfield in either the Eastern Med (Crete) or the Central Med (Malta) and base up to two strike and two fighter air units there from Syria and/or the Black Sea bases. —REMOVE FROM PLAY—"
+    },
+    "reactionEvent": {
+      "title": "None",
+      "cost": 6,
+      "text": ""
+    }
+  },
+  {
+    "file": "UCard-Jan18- (40).png",
+    "cardNumber": "40",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Cuban Special Ops",
+      "cost": 12,
+      "text": "If Cuba is active, roll one die on the Air-to-Ground Bombing Table against Roosevelt Roads NAS (Puerto Rico). Remove from deck only if played for its first possible event OR cost 0. Mark one unit at Roosevelt Roads as spent."
+    },
+    "reactionEvent": {
+      "title": "Expert Skipper",
+      "cost": 0,
+      "text": "When a Soviet submarine is attacking a NATO TF, after rolling the attack dice add +3 in total to any combination of dice rolled."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (41).png",
+    "cardNumber": "41",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "MiG-29 Fulcrum",
+      "cost": 9,
+      "text": "Deploy the MiG-29 to any base except Cuba. —REMOVE FROM PLAY—"
+    },
+    "reactionEvent": {
+      "title": "Tigerfish",
+      "cost": 2,
+      "text": "When a British submarine rolls an attack die, ignore any one die rolled. In 1985 the roll can not be a 10. Not playable in 1989. *The British Tigerfish torpedo was a poor weapon, famously not used in the Falkland's 'Belgrano' warshots.*"
+    }
+  },
+  {
+    "file": "UCard-Jan18- (42).png",
+    "cardNumber": "42",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Strategic Strike",
+      "cost": 15,
+      "text": "Cost 6 (4 in 1983). Soviet strategic asset (TU-95) may attack any target on the map. In 1983 use black missiles. From 1985 use stand-off (green) cruise missiles (AS-15) with a range of 2 zones and two dice. [TU-95MS Bear: 9 attack / 6 defense in 1983; 9 attack / 2 defense in 1985+]"
+    },
+    "reactionEvent": {
+      "title": "None",
+      "cost": 6,
+      "text": ""
+    }
+  },
+  {
+    "file": "UCard-Jan18- (43).png",
+    "cardNumber": "43",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Second Strike",
+      "cost": 12,
+      "text": "Not playable on turns 1-5. If NATO is at 0 - 6 or 7-11 on the Soviet nuclear strike capability track, take 2 FSP. If NATO is at 12-17 take one FSP. Only one of this event is playable per turn. *Preservation of the Soviet SSBN force.*"
+    },
+    "reactionEvent": {
+      "title": "None",
+      "cost": 4,
+      "text": ""
+    }
+  },
+  {
+    "file": "UCard-Jan18- (44).png",
+    "cardNumber": "44",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Norwegian Strikes",
+      "cost": 9,
+      "text": "Choose a Norwegian facility and roll one die on the Air-to-Ground Bombing Table. *Extensive bombing by Soviet airforce.*"
+    },
+    "reactionEvent": {
+      "title": "Determined Attack",
+      "cost": 0,
+      "text": "Play when a Soviet submarine attacks a NATO task force immediately after rolling the attack dice. Ignore NATO natural 8-10 when resolving - they do not remove dice from the attack."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (45).png",
+    "cardNumber": "45",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "RORSAT Replacement",
+      "cost": 12,
+      "text": "Add one RORSAT step to any zone on the map. (From Tyuratam)."
+    },
+    "reactionEvent": {
+      "title": "Escort out of Position",
+      "cost": 3,
+      "text": "Play when attacking a NATO task force with submarines. Ignore any one enemy die rolled or re-roll up to two friendly attack dice."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (46).png",
+    "cardNumber": "46",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Strike UK Early Warning",
+      "cost": 12,
+      "text": "Place 2 target markers in the UK: RAF Fylingdales and RAF Menwith Hill. Each may be attacked and destroyed for the effect specified below: For each destroyed, the Soviet Player may claim one FSP. —REMOVE FROM PLAY—"
+    },
+    "reactionEvent": {
+      "title": "None",
+      "cost": 0,
+      "text": ""
+    }
+  },
+  {
+    "file": "UCard-Jan18- (47).png",
+    "cardNumber": "47",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Nuclear Strike",
+      "cost": 9,
+      "text": "Playable if battlefield nuclear weapons have been used. Roll a die and apply: +2 if NATO used battlefield nuclear weapons; -1 if the Soviets used chemical weapons; +1 if Soviets have 2+ FSPs.\n\n1-4, Strategic Exchange: Both sides destroyed. Strategic loss for Soviets.\n5+, Demonstration Strikes: Both sides show restraint. Soviets add 1 H&S.\nTHIS CARD ENDS THE GAME"
+    },
+    "reactionEvent": {
+      "title": "None",
+      "cost": 0,
+      "text": ""
+    }
+  },
+  {
+    "file": "UCard-Jan18- (48).png",
+    "cardNumber": "48",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Air Defence Replacements",
+      "cost": 12,
+      "text": "Replace up to four steps of destroyed MiG-21or MiG-23 fighters in any Soviet base(s). —REMOVE FROM PLAY—"
+    },
+    "reactionEvent": {
+      "title": "MR-600 Top Sail",
+      "cost": 4,
+      "text": "When a NATO submarine attacks a friendly TF with a capital ship (except the Sverdlov), roll an additional 2 TF defense dice after seeing the initial roll."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (49).png",
+    "cardNumber": "49",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Repairs",
+      "cost": 9,
+      "text": "Remove one hit from any Soviet facility."
+    },
+    "reactionEvent": {
+      "title": "Determined Attack",
+      "cost": 0,
+      "text": "Play when a Soviet submarine attacks a NATO task force immediately after rolling the attack dice. Ignore NATO natural 8-10 when resolving - they do not remove dice from the attack."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (50).png",
+    "cardNumber": "50",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Surge",
+      "cost": 9,
+      "text": "Activate up to four Soviet submarines starting their turn in undamaged Soviet ports."
+    },
+    "reactionEvent": {
+      "title": "Double Hull/Clusterguard",
+      "cost": 0,
+      "text": "Cancel one successful attack against a Soviet nuclear submarine."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (51).png",
+    "cardNumber": "51",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Well-Planned Air Attack",
+      "cost": 9,
+      "text": "Cost 1 plus the cost of the attack. Choose any air attack. All step losses caused to Soviet air units receive a 6+ save. If the target is good detected, ignore any one step loss suffered."
+    },
+    "reactionEvent": {
+      "title": "ASM Attack",
+      "cost": 1,
+      "text": "Play to attack a good detected TF in the same zone as a friendly TF. Select one friendly ship to attack any enemy TF with anti-ship missiles, then mark 'Anti-Ship Missiles Fired'."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (52).png",
+    "cardNumber": "52",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Redeploy",
+      "cost": 12,
+      "text": "Move two Soviet aircraft units to any other Soviet base. Only **Bears** and **Backfires** to Cuba. Not to or from a heavily damaged base."
+    },
+    "reactionEvent": {
+      "title": "Tigerfish",
+      "cost": 2,
+      "text": "When a British submarine rolls an attack die, ignore any one die rolled. In 1985 the roll can not be a 10. Not playable in 1989. *The British Tigerfish torpedo was a poor weapon, famously not used in the Falkland's 'Belgrano' warshots.*"
+    }
+  },
+  {
+    "file": "UCard-Jan18- (53).png",
+    "cardNumber": "53",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Category 'C' Divisions",
+      "cost": 9,
+      "text": "Place one troop on the Norway or Denmark Front Track, or advance either European war marker one box on a die roll of 6+. Then make a Soviet Stability die roll. *Committing the last of the Soviet reserve units to offensive operations.* —REMOVE FROM PLAY—"
+    },
+    "reactionEvent": {
+      "title": "Stealthy Approach",
+      "cost": 0,
+      "text": "Play when a Soviet submarine is attacking a NATO TF. Ignore one TF defense die rolled."
+    }
+  },
+  {
+    "file": "UCard-Jan18- (54).png",
+    "cardNumber": "54",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Strike US Targets",
+      "cost": 12,
+      "text": "Place two target markers in the US as detailed. Each may be attacked and destroyed with effect specified below: Cape Canaveral (Florida): 2 hits Claim 1 FSP and prevent play of NATO cards 'Space Tracking' and 'Space Shuttle' for the rest of the game. Early Warning Radars (Washington): 1 hit Claim one FSP. —REMOVE FROM PLAY—"
+    },
+    "reactionEvent": {
+      "title": "None",
+      "cost": 0,
+      "text": ""
+    }
+  },
+  {
+    "file": "UCard-Jan18- (55).png",
+    "cardNumber": "55",
+    "side": "soviet",
+    "operationsEvent": {
+      "title": "Second Strike",
+      "cost": 12,
+      "text": "Not playable on turns 1-5. If NATO is at 0 - 6 or 7-11 on the Soviet nuclear strike capability track, take 2 FSP. If NATO is at 12-17, take one FSP. Only one of this event is playable per turn. *Preservation of the Soviet SSBN force.*"
+    },
+    "reactionEvent": {
+      "title": "None",
+      "cost": 4,
+      "text": ""
+    }
+  }
+]

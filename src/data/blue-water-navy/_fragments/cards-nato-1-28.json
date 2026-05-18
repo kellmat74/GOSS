@@ -1,0 +1,427 @@
+[
+  {
+    "file": "NCard-Jan18- (1).png",
+    "cardNumber": "1",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Minesweepers",
+      "cost": 9,
+      "text": "Degrade any mine counter."
+    },
+    "reactionEvent": {
+      "title": "Special Forces",
+      "cost": 0,
+      "text": "Use to treat any Soviet airstrike by land based air as 'Detected by Interceptor' for CAP/Interception purposes (+1 die)."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (2).png",
+    "cardNumber": "2",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Fast Convoy",
+      "cost": 15,
+      "text": "Place a Fast convoy in the US if available. -REMOVE FROM PLAY-"
+    },
+    "reactionEvent": {
+      "title": "Top Gun/Moving Mud",
+      "cost": 4,
+      "text": "Play when a US Carrier launches an air strike. Change any two dice during the strike process to ones or to tens. (NATO chooses which dice and which result)."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (3).png",
+    "cardNumber": "3",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Repairs",
+      "cost": 9,
+      "text": "Remove one hit from any facility."
+    },
+    "reactionEvent": {
+      "title": "Distant Support",
+      "cost": 0,
+      "text": "A US Carrier may commit its F-14 air unit to an air attack within one zone if any of the attacking strike is detected by an interceptor. Mark it spent afterwards."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (4).png",
+    "cardNumber": "4",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Norway Resists",
+      "cost": 12,
+      "text": "No Soviet advance is made on the Norway Invasion Track at the end of this turn regardless of troops present."
+    },
+    "reactionEvent": {
+      "title": "ASM Coordinated Attack",
+      "cost": 2,
+      "text": "Play to attack a good detected enemy TF in the same zone as a friendly TF. Select two friendly ships and attack the enemy TF with anti-ship missiles from both, then mark them with 'Anti-Ship Missiles Fired'."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (5).png",
+    "cardNumber": "5",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Naval Yard Expertise",
+      "cost": 9,
+      "text": "Move any capital ship that is being repaired two turns closer to the current turn. If it moves to the current turn, receive it immediately."
+    },
+    "reactionEvent": {
+      "title": "Radar Decoys",
+      "cost": 2,
+      "text": "Use to ignore any successes rolled by RORSATs in one sea zone. *Floating decoys which appear on Radar to be aircraft carrier sized contacts.*"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (6).png",
+    "cardNumber": "6",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Whitecloud",
+      "cost": 4,
+      "text": "Play in addition to the normal card and add 4 ops or 2 if Soviet ASAT system is active. *The US Naval Ocean Surveillance satellite system – designed to locate the Soviet surface fleet.*",
+      "notes": "Cost shown as +4 (additive)"
+    },
+    "reactionEvent": {
+      "title": "Whitecloud",
+      "cost": 0,
+      "text": "Playable at any time. Place a good detection on any one Soviet TF. Not playable if Soviet ASAT system is active."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (7).png",
+    "cardNumber": "7",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Deep Water SOSUS",
+      "cost": 9,
+      "text": "Until 'next day', all NATO anti-submarine warfare in a single nominated sea zone within the East, Med or West weather zones receive +1 dice--mark this card. *Submarine noise, detected over long distances by special arrays deployed on the ocean floor.*"
+    },
+    "reactionEvent": {
+      "title": "Special Forces",
+      "cost": 2,
+      "text": "Use to treat any Soviet airstrike by land based air as 'Detected by Interceptor' for CAP/Interception purposes. (+1 die)."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (8).png",
+    "cardNumber": "8",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Replacement Air Wings",
+      "cost": 12,
+      "text": "Fully restore any two carrier air wings to full strength. -REMOVE FROM PLAY-"
+    },
+    "reactionEvent": {
+      "title": "Emissions Control",
+      "cost": 4,
+      "text": "Ignore any detection successes rolled by one Soviet maritime patrol aircraft against TFs. *Measures to reduce the signature of a task force and confuse the enemy.*"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (9).png",
+    "cardNumber": "9",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "First Strike",
+      "cost": 9,
+      "text": "If there are less than 4 payload of Soviet SSBN in the First Strike zones, the Soviet Player must discard 1 FSP. Only one per turn is playable."
+    },
+    "reactionEvent": {
+      "title": "Acoustic Simulators",
+      "cost": 0,
+      "text": "Play when the Soviet player uses a 10 rolled by a submarine to detect a task force. Ignore the roll. *NATO decoys which sounds like a carrier or convoy force to an attacking submarine.*"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (10).png",
+    "cardNumber": "10",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Nuclear Fear",
+      "cost": 12,
+      "text": "If NATO is at 12-17 or higher on the 'Soviet Nuclear Strike Capability Track', and the Soviets have used nuclear weapons, apply -1 to Soviet stability. Only one of these cards may be used per turn. -REMOVE FROM PLAY-"
+    },
+    "reactionEvent": {
+      "title": "Boomer Hunting",
+      "cost": 2,
+      "text": "Play when a Soviet SSBN is killed. The Soviet Player is forced to discard 1 FSP. *The Politburo disapproves.*"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (11).png",
+    "cardNumber": "11",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Whitecloud",
+      "cost": 4,
+      "text": "Play in addition to the normal card and add 4 ops or 2 if Soviet ASAT system is active. *The US Naval Ocean Surveillance satellite system – designed to locate the Soviet surface fleet.*",
+      "notes": "Cost shown as +4 (additive)"
+    },
+    "reactionEvent": {
+      "title": "Whitecloud",
+      "cost": 0,
+      "text": "Playable at any time. Place a good detection on any one Soviet TF. Not playable if Soviet ASAT system is active."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (12).png",
+    "cardNumber": "12",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "CAPTOR Mines",
+      "cost": 12,
+      "text": "Place one CAPTOR minefield in any sea zone. Requires a 6+ to place in the Barents or Baltic Sea. *Mines with built-in SONAR that launch a torpedo at detected targets.*"
+    },
+    "reactionEvent": {
+      "title": "Intelligence Agencies",
+      "cost": 4,
+      "text": "Cancel one use of Soviet spies but the Soviet Player must still roll to reduce the 'Spies Track'."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (13).png",
+    "cardNumber": "13",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Replacement Air Wings",
+      "cost": 12,
+      "text": "Fully restore any two carrier air wings to full strength. -REMOVE FROM PLAY-"
+    },
+    "reactionEvent": {
+      "title": "Phalanx & Sea Sparrow",
+      "cost": 4,
+      "text": "Play when a US aircraft carrier is hit by a missile. Ignore the hit on a die roll of 4 or higher. *US point defense guns and missiles defend the carrier.*"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (14).png",
+    "cardNumber": "14",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "UNREP",
+      "cost": 9,
+      "text": "Play to remove spent markers on up to four carrier air units. (strike or fighters)."
+    },
+    "reactionEvent": {
+      "title": "Roaming Fighters",
+      "cost": 0,
+      "text": "Play when a Soviet air strike is in any zone west of Iceland or the United Kingdom. Use this unit for interception and ignore negative modifiers."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (15).png",
+    "cardNumber": "15",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "False Contact",
+      "cost": 9,
+      "text": "Select one Soviet submarine and mark it spent."
+    },
+    "reactionEvent": {
+      "title": "SAM Trap",
+      "cost": 0,
+      "text": "Select one ship in a TF under Soviet air attack. Roll one attack die with it against enemy strike units for every 2 SAM points it has as though it was a fighter on CAP. This ship does not contribute further to the combat resolution. *Remember saves vs. CAP kills.*"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (16).png",
+    "cardNumber": "16",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "SURTASS",
+      "cost": 12,
+      "text": "In a sea zone south of the GIUK Gap, roll four anti-submarine warfare dice. Then, if you wish, select a unit in the zone to perform these attacks and apply its tactical value to the rolls. Mark the unit spent. *SURveillance Towed Array Sensor System – a towed SONAR system deployed on surface ships.*"
+    },
+    "reactionEvent": {
+      "title": "Nixie",
+      "cost": 2,
+      "text": "Play when a NATO capital ship is hit by a torpedo. Ignore the hit unless the shooting submarine has heavyweight torpedoes.",
+      "notes": "Card shows a small 'T' icon after 'torpedoes' indicating heavyweight torpedo type"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (17).png",
+    "cardNumber": "17",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Carriers Support Germany",
+      "cost": 15,
+      "text": "Until 'next day', US carriers may launch attacks into Germany targeting Soviet armies (Fly strikes to the North Sea zone). If escorted, ignore the first two hits scored by NATO when determining the SAM attacks to resolve. Every 5 hits scored places a partial convoy marker."
+    },
+    "reactionEvent": {
+      "title": "Planning & Preparation",
+      "cost": 0,
+      "text": "Play to form any two NATO TFs at no cost."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (18).png",
+    "cardNumber": "18",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Nuclear Fear",
+      "cost": 12,
+      "text": "If NATO is at 12-17 or higher on the 'Soviet Nuclear Strike Capability Track', and the Soviets have used nuclear weapons, apply -1 to Soviet stability. Only one of these cards may be used per turn. -REMOVE FROM PLAY-"
+    },
+    "reactionEvent": {
+      "title": "Boomer Hunting",
+      "cost": 2,
+      "text": "Play when a Soviet SSBN is killed. The Soviet Player is forced to discard 1 FSP. *The Politburo disapproves.*"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (19).png",
+    "cardNumber": "19",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Space Shuttle",
+      "cost": 9,
+      "text": "Roll a die. On a roll of 5+, remove a RORSAT step of your choice."
+    },
+    "reactionEvent": {
+      "title": "Acoustic Simulators",
+      "cost": 2,
+      "text": "Play when the Soviet player uses a 10 rolled by a submarine to detect a task force. Ignore the roll. *NATO decoys that sounds like a carrier or convoy force to an attacking submarine.*"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (20).png",
+    "cardNumber": "20",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Fast Convoy",
+      "cost": 15,
+      "text": "Place a Fast convoy in the US if available. -REMOVE FROM PLAY-"
+    },
+    "reactionEvent": {
+      "title": "Orders from Moscow",
+      "cost": 4,
+      "text": "Play if a NATO convoy is detected. The Soviet Player must attack it as his next action with naval aviation strike aircraft if any are available and in range (including by tanking). At least four steps must attack if they are available. If unwilling to do so, the Soviet may instead lose 2 ops and 1 'First Strike' marker."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (21).png",
+    "cardNumber": "21",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Tomahawk Anti-ship Missile",
+      "cost": 9,
+      "text": "Up to 3 US submarines in the same zone may attack a detected enemy task force in their zone with 1 point of NATO missiles per submarine. They may coordinate without die roll. LA VLS or I fire with 2 points each but mark empty. Do NOT mark them spent. Any one of the submarines may move one zone before performing this attack."
+    },
+    "reactionEvent": {
+      "title": "Air Patrols",
+      "cost": 2,
+      "text": "Use this card when a Soviet air strike is being intercepted. Roll one additional die."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (22).png",
+    "cardNumber": "22",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Tomahawk Anti-ship Missile",
+      "cost": 9,
+      "text": "Up to 3 US submarines in the same zone may attack a detected enemy task force in their zone with 1 point of NATO missiles per submarine. They may coordinate without die roll. LA VLS or I fire with 2 points each but mark empty. Do NOT mark them spent. Any one of the submarines may move one zone before performing this attack."
+    },
+    "reactionEvent": {
+      "title": "Diesels Snorkeling",
+      "cost": 2,
+      "text": "Play when conducting anti-submarine warfare in a sea zone with an enemy diesel submarine. Cause one step loss to any diesel submarine of your choice."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (23).png",
+    "cardNumber": "23",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Special Forces",
+      "cost": 12,
+      "text": "Choose any target facility and roll one die on the 'Air-to-Ground Bombing Table'. -REMOVE FROM PLAY-"
+    },
+    "reactionEvent": {
+      "title": "Emissions Control",
+      "cost": 3,
+      "text": "Ignore any detection successes rolled by one Soviet maritime patrol aircraft against TFs. *Measures to reduce the signature of a task force and confuse the enemy.*"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (24).png",
+    "cardNumber": "24",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Submarine UNREP",
+      "cost": 9,
+      "text": "Remove 'spent' and 'no ammo' markers from any three submarines South of the GIUK Gap. Not Baltic, Black Sea or Med 7-8. A submarine in bad weather cannot be chosen. (*Cost 1 if no ammo markers removed)."
+    },
+    "reactionEvent": {
+      "title": "GIUK Gap Patrol",
+      "cost": 3,
+      "text": "Play when a Soviet unit enters an active hydrophone zone in the GIUK Gap. Move any NATO submarine up to one zone and remove a spent marker from it. If now in a hydrophone zone, it may interrupt per 6.8.",
+      "notes": "Reaction cost shown as 3* (asterisk denotes conditional cost mentioned in Ops text)"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (25).png",
+    "cardNumber": "25",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Submarine UNREP",
+      "cost": 9,
+      "text": "Remove 'spent' and 'no ammo' markers from any three submarines South of the GIUK Gap. Not Baltic, Black Sea or Med 7-8. A submarine in bad weather cannot be chosen. (*Cost 1 if no ammo markers removed)."
+    },
+    "reactionEvent": {
+      "title": "Distant Support",
+      "cost": 3,
+      "text": "A US Carrier may commit its F-14 air unit to an air attack within one zone if any of the attacking strike is detected by an interceptor. Mark it spent afterwards.",
+      "notes": "Reaction cost shown as 3* (asterisk denotes conditional cost mentioned in Ops text)"
+    }
+  },
+  {
+    "file": "NCard-Jan18- (26).png",
+    "cardNumber": "26",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Eagles",
+      "cost": 12,
+      "text": "Add one available F-15 to any NATO airbase. -REMOVE FROM PLAY-"
+    },
+    "reactionEvent": {
+      "title": "ASM-135 ASAT",
+      "cost": 4,
+      "text": "Play immediately before the Soviet Player rolls for a RORSAT to detect a surface TF. Place the RORSAT in the 'Destroyed Box' on a roll of 3+ on one die."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (27).png",
+    "cardNumber": "27",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "Fighters to Norway/Denmark",
+      "cost": 9,
+      "text": "Place two steps of fighters (any from UK, grounded F-14s, or 'Eagles') in any Norwegian or Danish airbase."
+    },
+    "reactionEvent": {
+      "title": "Roaming Fighters",
+      "cost": 2,
+      "text": "Play when a Soviet air strike is in any zone west of Iceland or the United Kingdom. Use this unit for interception and ignore negative modifiers."
+    }
+  },
+  {
+    "file": "NCard-Jan18- (28).png",
+    "cardNumber": "28",
+    "side": "nato",
+    "operationsEvent": {
+      "title": "CAPTOR Mines",
+      "cost": 12,
+      "text": "Place one CAPTOR minefield in any sea zone. Requires a 6+ to place in the Barents or Baltic Sea. *Mines with built-in SONAR which launch a torpedo at detected targets.*"
+    },
+    "reactionEvent": {
+      "title": "GIUK Gap Patrol",
+      "cost": 4,
+      "text": "Play when a Soviet unit enters an active hydrophone zone in the GIUK Gap. Move any NATO submarine up to one zone and remove a spent marker from it. If now in a hydrophone zone, it may interrupt per 6.8."
+    }
+  }
+]

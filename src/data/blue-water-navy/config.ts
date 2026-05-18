@@ -38,6 +38,7 @@ export const blueWaterNavyConfig: GameSystemConfig = {
     learn: false,  // Deferred (AI Coach content authoring is a separate sprint)
     options: false,
     actions: true, // Card-driven game — Actions tab enabled
+    cards: true,   // Event Cards browser tab
   },
   quickRefButtons: bwnQuickRefButtons,
   glossaryConfig: bwnGlossaryConfig,
@@ -51,8 +52,9 @@ export const blueWaterNavyConfig: GameSystemConfig = {
       scenarios: [{ id: "all", label: "All Scenarios" }],
       data: {
         // BWN has a single rulebook — rules load from baseData.rules below.
-        // Module data only holds module-specific extras (cards, future scenario overlays).
+        // Module data only holds module-specific extras (actions, cards, future scenario overlays).
         rules: () => Promise.resolve({ default: [] }),
+        actions: () => import("./actions.json"),
         cards: () => import("./cards.json"),
       },
     },

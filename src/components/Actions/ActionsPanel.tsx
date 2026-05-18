@@ -5,6 +5,9 @@ import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
 interface ActionsPanelProps {
   cards: CardCategory[];
+  title?: string;
+  subtitle?: string;
+  emptyMessage?: string;
 }
 
 const TYPE_LABEL: Record<string, string> = {
@@ -20,7 +23,12 @@ const SIDE_BADGE: Record<string, { label: string; cls: string }> = {
   neutral: { label: "", cls: "" },
 };
 
-export function ActionsPanel({ cards }: ActionsPanelProps) {
+export function ActionsPanel({
+  cards,
+  title = "Actions",
+  subtitle = "Operations Phase actions and event cards. Click any item for details.",
+  emptyMessage = "No actions catalog for this game.",
+}: ActionsPanelProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
 
@@ -54,7 +62,7 @@ export function ActionsPanel({ cards }: ActionsPanelProps) {
   if (cards.length === 0) {
     return (
       <div className="mx-auto max-w-2xl py-12 text-center text-stone-500">
-        <p>No actions catalog for this game.</p>
+        <p>{emptyMessage}</p>
       </div>
     );
   }
@@ -64,17 +72,15 @@ export function ActionsPanel({ cards }: ActionsPanelProps) {
       {/* Left: category list + cards */}
       <div className="flex w-full flex-col md:w-1/2 lg:w-2/5">
         <div className="mb-2 flex items-center justify-between">
-          <h2 className="text-2xl font-bold">Actions</h2>
+          <h2 className="text-2xl font-bold">{title}</h2>
         </div>
-        <p className="mb-3 text-sm text-stone-500">
-          Operations Phase actions and event cards. Click any item for details.
-        </p>
+        <p className="mb-3 text-sm text-stone-500">{subtitle}</p>
         <div className="mb-3 shrink-0">
           <input
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search actions, card titles or numbers..."
+            placeholder={`Search ${title.toLowerCase()}...`}
             className="w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 dark:border-stone-600 dark:bg-stone-800"
           />
         </div>

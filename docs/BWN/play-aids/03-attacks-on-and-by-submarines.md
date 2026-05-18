@@ -8,7 +8,6 @@
 
 ## Anti-Submarine Warfare
 
-> §17.8
 
 **Roll** anti-submarine warfare dice (minimum = 0 die). Resolve in order of lowest die to highest die.
 
