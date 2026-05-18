@@ -6,13 +6,6 @@
     "type": "image",
     "src": "assets/bwn/play-aid-1.png"
   },
-  "turn-sequence": {
-    "id": "turn-sequence",
-    "title": "Action & Turn Sequence",
-    "scope": "series",
-    "type": "image",
-    "src": "assets/bwn/play-aid-2.png"
-  },
   "sub-attacks": {
     "id": "sub-attacks",
     "title": "Attacks on & by Submarines",

@@ -1,7 +1,7 @@
 # BWN Play Aid Transcriptions
 
-Markdown transcriptions of the 8 play aid pages from Compass Games' Blue Water Navy.
-Source PNGs at `public/assets/bwn/play-aid-{1..8}.png`. Source PDF at
+Markdown transcriptions of the play aid pages from Compass Games' Blue Water Navy.
+Source PNGs at `public/assets/bwn/play-aid-*.png`. Source PDF at
 `docs/BWN/Blue Water Navy Play Aids.pdf`.
 
 These files are **human-editable working drafts** for review. They will be:
@@ -9,12 +9,21 @@ These files are **human-editable working drafts** for review. They will be:
 2. Parsed into smaller per-action chunks for the workflow tools
 3. Wired into the Actions tab and contextual help (e.g. when a player picks "Sub action", surface the relevant sub-attack procedure)
 
+## What's NOT in this folder
+
+- **Page 1 (Unit ID guide)** — not transcribed; the image (`play-aid-1.png`)
+  is surfaced directly via the QuickRefBar "Units" button. Counter anatomy
+  doesn't transcribe well to text.
+- **Turn Sequence portion of page 2** — was originally included but the
+  authoritative turn sequence lives in `sequence.json` (sourced from rules
+  §3.2–§3.5). The action-catalog portion of page 2 is preserved in `02-…md`
+  for future decomposition into Actions tab workflows.
+
 ## File index
 
 | # | File | Topic |
 |---|---|---|
-| 1 | [01-unit-id.md](./01-unit-id.md) | Air & Naval unit counter anatomy, countries, missile colors |
-| 2 | [02-actions-and-turn-sequence.md](./02-actions-and-turn-sequence.md) | Actions catalog, Use-When-Active / Use-Anytime, full Turn Sequence |
+| 2 | [02-actions-and-turn-sequence.md](./02-actions-and-turn-sequence.md) | Action catalog (Subs/Air/Ships/Misc), Use-When-Active, Use-Anytime |
 | 3 | [03-attacks-on-and-by-submarines.md](./03-attacks-on-and-by-submarines.md) | ASW, ASW by TFs, sub-launched missiles, sub torpedo attack on TF |
 | 4 | [04-task-force-combat.md](./04-task-force-combat.md) | TF detection, missile attacks vs TF, SAM resolution, capital ship damage, hit selection |
 | 5 | [05-fighters-cap-interception.md](./05-fighters-cap-interception.md) | Interception rules, CAP, fighter combat vs MP / strike / fighter, escorted strikes |

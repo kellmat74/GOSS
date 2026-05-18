@@ -10,10 +10,11 @@ type TablesLoader = () => Promise<{ default: TablesFile }>;
 const tables = (load: () => Promise<unknown>): TablesLoader => load as TablesLoader;
 
 // QuickRef buttons for Blue Water Navy — all "table" kind (image play aids).
-// One button per page of the Compass Games Play Aids PDF.
+// Note: the Action & Turn Sequence play-aid page (formerly the "Turn" button)
+// is no longer surfaced as an image — its content is being decomposed into
+// the SoP tab (turn sequence) and the Actions tab (per-action workflows).
 const bwnQuickRefButtons: QuickRefButtonDef[] = [
   { id: "units",       label: "Units", icon: "🎖",  title: "How to Read Air & Naval Units",      kind: "table", tableId: "unit-id-guide"     },
-  { id: "turn",        label: "Turn",  icon: "🔄", title: "Action & Turn Sequence",             kind: "table", tableId: "turn-sequence"     },
   { id: "subs",        label: "Subs",  icon: "🌊", title: "Attacks on & by Submarines (ASW)",   kind: "table", tableId: "sub-attacks"       },
   { id: "task-force",  label: "TF",    icon: "🚢", title: "Task Force Detection, Missiles, Damage", kind: "table", tableId: "task-force-combat" },
   { id: "fighters",    label: "Air",   icon: "✈",  title: "Fighters (CAP & Interception)",       kind: "table", tableId: "fighter-combat"    },
