@@ -18,25 +18,34 @@ const SIDE_BADGE: Record<CardSide, { label: string; cls: string }> = {
   neutral: { label: "", cls: "" },
 };
 
+type SideFilter = "all" | "soviet" | "nato";
+
 export function CardsPanel({ cards }: CardsPanelProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
+  const [sideFilter, setSideFilter] = useState<SideFilter>("all");
 
   const filtered = useMemo(() => {
-    if (!query.trim()) return cards;
-    const q = query.toLowerCase();
-    return cards.filter((c) => {
-      return (
-        c.cardNumber.toLowerCase().includes(q) ||
-        c.ops.title.toLowerCase().includes(q) ||
-        c.ops.text.toLowerCase().includes(q) ||
-        (c.ops.clarification ?? "").toLowerCase().includes(q) ||
-        c.reaction.title.toLowerCase().includes(q) ||
-        c.reaction.text.toLowerCase().includes(q) ||
-        (c.reaction.clarification ?? "").toLowerCase().includes(q)
-      );
-    });
-  }, [cards, query]);
+    let out = cards;
+    if (sideFilter !== "all") {
+      out = out.filter((c) => c.side === sideFilter);
+    }
+    if (query.trim()) {
+      const q = query.toLowerCase();
+      out = out.filter((c) => {
+        return (
+          c.cardNumber.toLowerCase().includes(q) ||
+          c.ops.title.toLowerCase().includes(q) ||
+          c.ops.text.toLowerCase().includes(q) ||
+          (c.ops.clarification ?? "").toLowerCase().includes(q) ||
+          c.reaction.title.toLowerCase().includes(q) ||
+          c.reaction.text.toLowerCase().includes(q) ||
+          (c.reaction.clarification ?? "").toLowerCase().includes(q)
+        );
+      });
+    }
+    return out;
+  }, [cards, query, sideFilter]);
 
   const grouped = useMemo(() => {
     const soviet = filtered.filter((c) => c.side === "soviet");
@@ -70,14 +79,15 @@ export function CardsPanel({ cards }: CardsPanelProps) {
         <p className="mb-3 text-sm text-stone-500">
           Each physical card carries two events: an Operations Event (top) and a Reaction Event (bottom). Click a card to see both events with full text.
         </p>
-        <div className="mb-3 shrink-0">
+        <div className="mb-3 flex shrink-0 gap-2">
           <input
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search by card #, title, or event text..."
-            className="w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 dark:border-stone-600 dark:bg-stone-800"
+            className="flex-1 rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 dark:border-stone-600 dark:bg-stone-800"
           />
+          <SideToggle value={sideFilter} onChange={setSideFilter} />
         </div>
         <div className="flex-1 overflow-y-auto pr-2">
           {grouped.map((g) => (
@@ -143,6 +153,42 @@ export function CardsPanel({ cards }: CardsPanelProps) {
           </div>
         )}
       </div>
+    </div>
+  );
+}
+
+function SideToggle({
+  value,
+  onChange,
+}: {
+  value: SideFilter;
+  onChange: (v: SideFilter) => void;
+}) {
+  const opts: { key: SideFilter; label: string; activeCls: string }[] = [
+    { key: "all", label: "All", activeCls: "bg-stone-600 text-white" },
+    { key: "soviet", label: "SOV", activeCls: "bg-red-700 text-white" },
+    { key: "nato", label: "NATO", activeCls: "bg-blue-700 text-white" },
+  ];
+  return (
+    <div
+      role="tablist"
+      className="inline-flex shrink-0 rounded-lg border border-stone-300 bg-white dark:border-stone-600 dark:bg-stone-800"
+    >
+      {opts.map((o) => (
+        <button
+          key={o.key}
+          role="tab"
+          aria-selected={value === o.key}
+          onClick={() => onChange(o.key)}
+          className={`px-3 py-2 text-xs font-bold first:rounded-l-lg last:rounded-r-lg ${
+            value === o.key
+              ? o.activeCls
+              : "text-stone-500 hover:bg-stone-100 dark:text-stone-400 dark:hover:bg-stone-700"
+          }`}
+        >
+          {o.label}
+        </button>
+      ))}
     </div>
   );
 }
