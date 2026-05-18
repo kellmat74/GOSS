@@ -21,7 +21,7 @@ import { mergeRules } from "./utils/mergeRules";
 import { mergeSequence } from "./utils/mergeSequence";
 import { mergeLearn } from "./utils/mergeLearn";
 import { getVisibleGames, getGameById } from "./data/registry";
-import type { Phase, RuleEntry, SequenceOverlay, CardCategory } from "./types/goss";
+import type { Phase, RuleEntry, SequenceOverlay, CardCategory, PhysicalCard } from "./types/goss";
 import { ActionsPanel } from "./components/Actions/ActionsPanel";
 import { CardsPanel } from "./components/Cards/CardsPanel";
 import type { LearnData, LearnOverlay } from "./types/learn";
@@ -156,7 +156,7 @@ interface GameData {
   moduleErrata: import("./types/platform").ErrataFile | null;
   tables: Record<string, TableDef>;
   actions: CardCategory[];
-  cards: CardCategory[];
+  cards: PhysicalCard[];
 }
 
 const EMPTY_LEARN: LearnData = { chapters: [] };
@@ -256,7 +256,7 @@ function useGameData(
       };
 
       const actions: CardCategory[] = ((actionsRaw as any)?.default ?? []) as CardCategory[];
-      const cards: CardCategory[] = ((cardsRaw as any)?.default ?? []) as CardCategory[];
+      const cards: PhysicalCard[] = ((cardsRaw as any)?.default ?? []) as PhysicalCard[];
 
       setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata, tables, actions, cards });
       setLoading(false);

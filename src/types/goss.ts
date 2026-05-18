@@ -118,6 +118,38 @@ export interface CardCategory {
   cards: GameCard[];
 }
 
+/**
+ * One half of a physical card. Cards have two: Operations Event (top) and
+ * Reaction Event (bottom). Each carries its own title, cost, and body text.
+ */
+export interface CardEvent {
+  title: string;
+  type: CardType;
+  cost?: number;
+  text: string;
+  /** Total number of physical cards in the deck that print this exact event in this slot. */
+  frequency: number;
+  /** Designer clarification (e.g. from a Q&A doc), if any. */
+  clarification?: string;
+  /** Section IDs this event references. */
+  ruleRefs?: string[];
+  /** OCR / transcription notes for this event. */
+  notes?: string;
+}
+
+/**
+ * A physical card in the deck. Each game card has two events; both are
+ * always present in the data (a card with a blank slot is rendered with an
+ * empty title, e.g. "None").
+ */
+export interface PhysicalCard {
+  id: string;             // e.g. "soviet-1"
+  cardNumber: string;     // "1" through "55"
+  side: CardSide;
+  ops: CardEvent;
+  reaction: CardEvent;
+}
+
 // Scenario overlay fields added to SubPhase/Phase after merge
 export interface ScenarioAnnotation {
   gate?: string;           // callout banner text (e.g., "HHF: ENA always available")
