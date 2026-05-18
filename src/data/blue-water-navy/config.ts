@@ -51,15 +51,13 @@ export const blueWaterNavyConfig: GameSystemConfig = {
       label: "Atlantic",
       shortLabel: "BWN-A",
       scenarios: [
-        { id: "all",                       label: "All Scenarios" },
-        { id: "boomer-bastion",            label: "1: The Boomer Bastion" },
-        { id: "yankee-hunting",            label: "1a: Yankee Hunting" },
+        { id: "all",                          label: "All Scenarios" },
+        { id: "boomer-bastion",               label: "1: The Boomer Bastion" },
         { id: "ace-mobile-and-first-convoys", label: "2: Ace Mobile & First Convoys" },
-        { id: "ace-mobile-extended",       label: "2a: Ace Mobile — Extended" },
-        { id: "kirovs-and-carriers",       label: "3: Kirov's & Carriers" },
-        { id: "attack-on-kola",            label: "4: Attack on the Kola Peninsula" },
-        { id: "baltic-bust-up",            label: "5: Baltic Bust-Up" },
-        { id: "campaign-game",             label: "6: Campaign Game" },
+        { id: "kirovs-and-carriers",          label: "3: Kirov's & Carriers" },
+        { id: "attack-on-kola",               label: "4: Attack on the Kola Peninsula" },
+        { id: "baltic-bust-up",               label: "5: Baltic Bust-Up" },
+        { id: "campaign-game",                label: "6: Campaign Game" },
       ],
       data: {
         // BWN has a single rulebook — rules load from baseData.rules below.

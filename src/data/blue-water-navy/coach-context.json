@@ -1,0 +1,12 @@
+{
+  "_description": "Auxiliary teaching/coaching content for BWN that doesn't belong in the structured Rules or Scenarios data. Intended to feed the AI Coach (Learn / Ask) system prompt when it lands.",
+  "_source": "Excerpted from the BWN Scenario Book and assorted designer notes.",
+  "oftenOverlookedRules": [
+    "All Soviet submarines have rocket-torpedoes, and so score a hit on a non-Anti-Submarine Warfare unit when destroyed in Anti-Submarine Warfare.",
+    "An MP air unit which loses a search die due to enemy fighters or its mission is Anti-Submarine Warfare must still take the search die loss.",
+    "Soviet units with cruise missiles must use them to attack with unless attacking troops in which case they may choose to use bombs instead.",
+    "Small submarines (s) can move OR attack, not both.",
+    "All non-MP Air Units become unspent when the ships event happens.",
+    "All events take place immediately after the triggering action is completed and fully resolved."
+  ]
+}

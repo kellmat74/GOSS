@@ -156,56 +156,69 @@ export interface PhysicalCard {
 
 export type ScenarioSide = "nato" | "soviet";
 
-export interface ScenarioSetupUnit {
-  unit: string;       // e.g. "Memphis", "Kiev"
-  type: string;       // e.g. "Sub (SSN)", "Carrier", "Air (FTR)"
-  location: string;   // e.g. "North 5-6", "UK Airbase"
-  notes?: string | null;
+/** A sub-scenario or rule alteration (e.g. "Yankee Hunting" on top of Boomer Bastion). */
+export interface ScenarioAlteration {
+  id: string;                   // kebab-case slug
+  title: string;                // display title, e.g. "Scenario 1a: Yankee Hunting"
+  description: string;          // verbatim text of the alteration
 }
 
-export interface ScenarioReinforcement {
-  turn: number;
-  side: ScenarioSide;
-  unit: string;
-  type: string;
-  location: string;
-  notes?: string | null;
+/** A start-type variant for a scenario (Campaign Game: Strategic / Tactical / Extended Build-up). */
+export interface ScenarioStartType {
+  id: string;                   // "strategic-surprise" | "tactical-surprise" | "extended-buildup"
+  label: string;
+  description: string;
+  specialRules?: string;
 }
 
+/** A row in the start-type scaling table — shows how a value differs across start types. */
+export interface ScenarioStartTypeScaling {
+  label: string;
+  strategic?: string;
+  tactical?: string;
+  extended?: string;
+}
+
+/** An era / year variant — what changes when the campaign is played in a different year. */
 export interface ScenarioYearVariant {
   year: number;
   notes: string;
 }
 
-/** Rich content for one scenario in a scenario book. */
+/**
+ * Rich content for one scenario in a scenario book.
+ *
+ * Note: Unit setup tables and reinforcement schedules are intentionally
+ * NOT modeled here — that level of detail belongs in the physical scenario
+ * book the player owns. The app surfaces rules-relevant context (briefing,
+ * victory conditions, special rules, alterations, start-type variants).
+ */
 export interface ScenarioContent {
-  id: string;                     // kebab-case slug, e.g. "boomer-bastion"
+  id: string;                     // kebab-case slug
   number: number;                 // 1, 2, 3 ...
-  title: string;                  // "The Boomer Bastion"
-  year?: number | string;         // 1983, or "1983 / 1985 / 1989" for campaign
-  briefing: string;               // narrative intro
+  title: string;
+  year?: number | string;
+  briefing: string;
   victoryConditions: string;
   opsPerDay?: { nato: number; soviet: number };
   turns?: number;
   specialRules?: string;
   firstStrike?: number | null;
-  setup: {
-    nato: ScenarioSetupUnit[];
-    soviet: ScenarioSetupUnit[];
-  };
-  reinforcements?: ScenarioReinforcement[];
+  /** Inline note about which OPS Track (1-5 small or full 1-10) the scenario uses. */
+  opsTrackNote?: string;
+  /** Sub-scenarios / variants stacked on top of this scenario. */
+  alterations?: ScenarioAlteration[];
+  /** Start-type variants (Campaign Game: Strategic / Tactical / Extended Build-up). */
+  startTypes?: ScenarioStartType[];
+  /** Scaled-value comparison table across start types. */
+  startTypeScaling?: ScenarioStartTypeScaling[];
+  /** Era variants (Campaign Game: 1983 / 1985 / 1989). */
   yearVariants?: ScenarioYearVariant[];
   notes?: string[];
 }
 
 /** Top-level structure of a scenario book. */
 export interface ScenarioBook {
-  /** Shared notes that apply across multiple scenarios (e.g. small-scenario OPS track rules). */
-  shared?: {
-    fivePointOpsTrack?: string;
-    oftenOverlookedRules?: string[];
-    [key: string]: unknown;
-  };
   scenarios: ScenarioContent[];
 }
 
