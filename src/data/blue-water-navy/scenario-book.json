@@ -160,7 +160,7 @@
         { "year": 1985, "notes": "Adds NATO cruise-missile capability. Both sides receive 1985 unit additions and one or two unit replacements (force modernization)." },
         { "year": 1989, "notes": "Adds further unit modernizations on both sides (Ticonderoga VLS, additional SSNs for NATO; Tu-22 Backfire and Kuznetsov for the Soviets). Apply BOTH the 1985 additions AND the 1989 additions on top of the 1983 base." }
       ],
-      "specialRules": "Common setup procedure (10-step NATO then 10-step Soviet pre-game choices) appears at the front of the campaign rules. Both players draw 5 cards each. Choose Start Type before anything else; all other scaled values follow from that choice. Begin the game starting with the Convoy Placement Phase.",
+      "specialRules": "**Choose Start Type before anything else** — all scaled values in the procedure below follow from that choice. Both players draw 5 cards each, then walk the pre-game setup procedure: 7 NATO steps followed by 10 Soviet steps (see the Start Types section below for the full step-by-step table). Begin the game starting with the Convoy Placement Phase.",
       "notes": []
     }
   ]
