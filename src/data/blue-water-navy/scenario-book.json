@@ -112,7 +112,7 @@
       "title": "Campaign Game",
       "year": "1983 / 1985 / 1989",
       "briefing": "The full war at sea. The campaign is built around a chosen **Start Type** (Strategic Surprise, Tactical Surprise, or Extended Build-up) and a chosen **Era** (1983, 1985, or 1989). The Era determines which units are on the board; the Start Type determines how the war begins — how prepared each side is, how many forces are pre-positioned, and what special rules apply.\n\n*Recommended for first play: 1983 + Tactical Surprise, no options.*",
-      "victoryConditions": "Standard campaign victory conditions apply (see §3.5). NATO must keep convoys flowing and protect strategic locations; Soviet must accumulate Hammer & Sickle markers via track advances, captures, and NATO losses.",
+      "victoryConditions": "Standard campaign victory conditions apply per (3.5): the Soviets must accumulate **four Hammer & Sickle markers** on locations overrun by their forces on the War and Invasion Tracks. NATO must slow or stop these advances by keeping convoys flowing, striking Soviet troop markers (7.5.5), and defending the Invasion Tracks (Norway and Denmark). See also (3.5.1) for NATO Losses tracking.",
       "turns": 12,
       "firstStrike": null,
       "startTypes": [
@@ -136,13 +136,13 @@
         }
       ],
       "startTypeScaling": [
-        { "label": "NATO ship units relocated pre-game",      "strategic": "2", "tactical": "2",  "extended": "4"  },
-        { "label": "NATO submarines placed anywhere",         "strategic": "1", "tactical": "3",  "extended": "7"  },
-        { "label": "NATO Air Units placed On Patrol",         "strategic": "3", "tactical": "3",  "extended": "5"  },
-        { "label": "Soviet subs placed anywhere",             "strategic": "4", "tactical": "6",  "extended": "14" },
-        { "label": "Soviet subs within 2 zones of a base",    "strategic": "2", "tactical": "2",  "extended": "4"  },
-        { "label": "Soviet Task Forces created pre-game",     "strategic": "1", "tactical": "1",  "extended": "2"  },
-        { "label": "Battletales: extra-dice TF detection",    "strategic": "1 TF", "tactical": "1 TF", "extended": "2 TFs" }
+        { "step": "NATO #2", "label": "Ship units relocated to other NATO bases or at-sea TFs", "strategic": "2", "tactical": "2",  "extended": "4"  },
+        { "step": "NATO #4", "label": "Submarine Units placed anywhere on the map",             "strategic": "1", "tactical": "3",  "extended": "7"  },
+        { "step": "NATO #5", "label": "Air Units placed On Patrol within range",                "strategic": "3", "tactical": "3",  "extended": "5"  },
+        { "step": "Soviet #5a", "label": "Subs placed anywhere on the map",                     "strategic": "4", "tactical": "6",  "extended": "14" },
+        { "step": "Soviet #5b", "label": "Additional subs within 2 zones of a Soviet base",     "strategic": "2", "tactical": "2",  "extended": "4"  },
+        { "step": "Soviet #6", "label": "Soviet Task Forces created pre-game from a single port", "strategic": "1", "tactical": "1",  "extended": "2"  },
+        { "step": "Soviet #8", "label": "Battletales: TFs that get two detection dice (vs one)", "strategic": "1", "tactical": "1",  "extended": "2"  }
       ],
       "yearVariants": [
         { "year": 1983, "notes": "Base era. Use the printed setup for the chosen Start Type as published." },

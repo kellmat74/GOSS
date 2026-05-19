@@ -173,6 +173,8 @@ export interface ScenarioStartType {
 
 /** A row in the start-type scaling table — shows how a value differs across start types. */
 export interface ScenarioStartTypeScaling {
+  /** Setup procedure step reference, e.g. "NATO #2", "Soviet #5a". */
+  step?: string;
   label: string;
   strategic?: string;
   tactical?: string;

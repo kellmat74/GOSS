@@ -241,8 +241,11 @@ function StartTypeBlock({
           <table className="w-full text-xs">
             <thead>
               <tr className="border-b border-stone-300 bg-stone-100 dark:border-stone-600 dark:bg-stone-900/40">
+                <th className="whitespace-nowrap px-2 py-1.5 text-left font-semibold text-stone-600 dark:text-stone-300">
+                  Setup step
+                </th>
                 <th className="px-2 py-1.5 text-left font-semibold text-stone-600 dark:text-stone-300">
-                  Value scaled by start type
+                  Scaled value
                 </th>
                 <th className="px-2 py-1.5 text-center font-semibold text-stone-600 dark:text-stone-300">
                   Strategic
@@ -256,23 +259,42 @@ function StartTypeBlock({
               </tr>
             </thead>
             <tbody>
-              {(scaling ?? []).map((row, i) => (
-                <tr
-                  key={i}
-                  className="border-b border-stone-200 last:border-b-0 dark:border-stone-700"
-                >
-                  <td className="px-2 py-1 text-stone-700 dark:text-stone-300">{row.label}</td>
-                  <td className="px-2 py-1 text-center font-mono text-stone-600 dark:text-stone-400">
-                    {row.strategic ?? "—"}
-                  </td>
-                  <td className="px-2 py-1 text-center font-mono text-stone-600 dark:text-stone-400">
-                    {row.tactical ?? "—"}
-                  </td>
-                  <td className="px-2 py-1 text-center font-mono text-stone-600 dark:text-stone-400">
-                    {row.extended ?? "—"}
-                  </td>
-                </tr>
-              ))}
+              {(scaling ?? []).map((row, i) => {
+                const isNato = row.step?.startsWith("NATO");
+                const isSoviet = row.step?.startsWith("Soviet");
+                return (
+                  <tr
+                    key={i}
+                    className="border-b border-stone-200 last:border-b-0 dark:border-stone-700"
+                  >
+                    <td className="whitespace-nowrap px-2 py-1">
+                      {row.step && (
+                        <span
+                          className={`rounded px-1.5 py-0.5 text-[10px] font-bold ${
+                            isNato
+                              ? "bg-blue-700 text-white"
+                              : isSoviet
+                                ? "bg-red-700 text-white"
+                                : "bg-stone-500 text-white"
+                          }`}
+                        >
+                          {row.step}
+                        </span>
+                      )}
+                    </td>
+                    <td className="px-2 py-1 text-stone-700 dark:text-stone-300">{row.label}</td>
+                    <td className="px-2 py-1 text-center font-mono text-stone-600 dark:text-stone-400">
+                      {row.strategic ?? "—"}
+                    </td>
+                    <td className="px-2 py-1 text-center font-mono text-stone-600 dark:text-stone-400">
+                      {row.tactical ?? "—"}
+                    </td>
+                    <td className="px-2 py-1 text-center font-mono text-stone-600 dark:text-stone-400">
+                      {row.extended ?? "—"}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
