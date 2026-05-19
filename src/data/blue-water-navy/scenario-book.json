@@ -136,13 +136,24 @@
         }
       ],
       "startTypeScaling": [
-        { "step": "NATO #2", "label": "Ship units relocated to other NATO bases or at-sea TFs", "strategic": "2", "tactical": "2",  "extended": "4"  },
-        { "step": "NATO #4", "label": "Submarine Units placed anywhere on the map",             "strategic": "1", "tactical": "3",  "extended": "7"  },
-        { "step": "NATO #5", "label": "Air Units placed On Patrol within range",                "strategic": "3", "tactical": "3",  "extended": "5"  },
-        { "step": "Soviet #5a", "label": "Subs placed anywhere on the map",                     "strategic": "4", "tactical": "6",  "extended": "14" },
-        { "step": "Soviet #5b", "label": "Additional subs within 2 zones of a Soviet base",     "strategic": "2", "tactical": "2",  "extended": "4"  },
-        { "step": "Soviet #6", "label": "Soviet Task Forces created pre-game from a single port", "strategic": "1", "tactical": "1",  "extended": "2"  },
-        { "step": "Soviet #8", "label": "Battletales: TFs that get two detection dice (vs one)", "strategic": "1", "tactical": "1",  "extended": "2"  }
+        { "step": "NATO #1",    "label": "Breakdown choice — NATO may place 1 US Sturgeon and/or 1 US Los Angeles sub into the Destroyed box to take the matching breakdown counters, placed where the sub(s) were or with any at-sea Task Force lacking a submarine. Similarly NATO may place US 4-6 surface ships into the Destroyed box (replace each removed unit with one or two replacement ships). Any not placed may begin in the USA." },
+        { "step": "NATO #2",    "label": "Ship units relocated to other NATO bases or at-sea TFs",        "strategic": "2", "tactical": "2",  "extended": "4"  },
+        { "step": "NATO #3",    "label": "One NATO Task Force may be formed up and placed within 2 Sea Zones of its origin port, including forces from that port. UK and FR ports count as the same origin port for this purpose." },
+        { "step": "NATO #4",    "label": "Submarine Units placed anywhere on the map",                    "strategic": "1", "tactical": "3",  "extended": "7"  },
+        { "step": "NATO #5",    "label": "Air Units placed On Patrol within range (MP or fighters)",       "strategic": "3", "tactical": "3",  "extended": "5"  },
+        { "step": "NATO #6",    "label": "The at-sea carriers beginning in TF Hammer may be relocated to new or existing Task Forces anywhere except the Mediterranean and not north of the GIUK Gap." },
+        { "step": "NATO #7",    "label": "Optional: Draw 2 'options' markers from a cup and select one to keep. Repeat for each First Strike Point given to the Soviet player (maximum 2 picks)." },
+        { "step": "Soviet #1",  "label": "The Soviet player may purchase Soviet Technology markers. Reduce the Spies Track by the number on each marker put into play." },
+        { "step": "Soviet #2",  "label": "The Soviet player may take one Tu-22 from the destroyed box (if present) by removing 2 Tu-16 Badgers or the Tu-95 Bear-G. Place it at Kola, Baltic, Black Sea, or Syrian bases (trading assets with the Far East)." },
+        { "step": "Soviet #3",  "label": "Move up to three strike Air Units to any Soviet bases (except Cuba)." },
+        { "step": "Soviet #4",  "label": "Move up to three Surface Units to any Soviet bases (except Cuba)." },
+        { "step": "Soviet #5a", "label": "Subs placed anywhere on the map",                                "strategic": "4", "tactical": "6",  "extended": "14" },
+        { "step": "Soviet #5b", "label": "Additional subs within 2 zones of a Soviet base (except Cuba)",  "strategic": "2", "tactical": "2",  "extended": "4"  },
+        { "step": "Soviet #6",  "label": "Soviet Task Forces created pre-game from units of a single Soviet port; placed on the map anywhere marked with a Poor detection (Good if within 1 zone of a NATO TF)", "strategic": "1", "tactical": "1",  "extended": "2"  },
+        { "step": "Soviet #7",  "label": "Roll weather for all zones. If weather is placed in a zone with a Task Force, place a 'Moved' marker on it (the Task Force has been within the Bad Weather for some time)." },
+        { "step": "Soviet #8",  "label": "Battletales: roll detection on all NATO Task Forces at sea (1 die each). Soviet may select one TF (two for Extended Build-up) and use two dice instead", "strategic": "1 TF", "tactical": "1 TF", "extended": "2 TFs" },
+        { "step": "Soviet #9",  "label": "Begin the game starting with the Convoy Placement Phase." },
+        { "step": "Soviet #10", "label": "Optional: Draw 2 'options' markers from a cup and select one to keep. Repeat for each First Strike Point discarded or spy expended (maximum 2 picks)." }
       ],
       "yearVariants": [
         { "year": 1983, "notes": "Base era. Use the printed setup for the chosen Start Type as published." },

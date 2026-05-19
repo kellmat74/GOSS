@@ -245,7 +245,7 @@ function StartTypeBlock({
                   Setup step
                 </th>
                 <th className="px-2 py-1.5 text-left font-semibold text-stone-600 dark:text-stone-300">
-                  Scaled value
+                  Action
                 </th>
                 <th className="px-2 py-1.5 text-center font-semibold text-stone-600 dark:text-stone-300">
                   Strategic
@@ -262,12 +262,14 @@ function StartTypeBlock({
               {(scaling ?? []).map((row, i) => {
                 const isNato = row.step?.startsWith("NATO");
                 const isSoviet = row.step?.startsWith("Soviet");
+                const hasScaling =
+                  row.strategic != null || row.tactical != null || row.extended != null;
                 return (
                   <tr
                     key={i}
-                    className="border-b border-stone-200 last:border-b-0 dark:border-stone-700"
+                    className="border-b border-stone-200 align-top last:border-b-0 dark:border-stone-700"
                   >
-                    <td className="whitespace-nowrap px-2 py-1">
+                    <td className="whitespace-nowrap px-2 py-1.5">
                       {row.step && (
                         <span
                           className={`rounded px-1.5 py-0.5 text-[10px] font-bold ${
@@ -282,16 +284,27 @@ function StartTypeBlock({
                         </span>
                       )}
                     </td>
-                    <td className="px-2 py-1 text-stone-700 dark:text-stone-300">{row.label}</td>
-                    <td className="px-2 py-1 text-center font-mono text-stone-600 dark:text-stone-400">
-                      {row.strategic ?? "—"}
-                    </td>
-                    <td className="px-2 py-1 text-center font-mono text-stone-600 dark:text-stone-400">
-                      {row.tactical ?? "—"}
-                    </td>
-                    <td className="px-2 py-1 text-center font-mono text-stone-600 dark:text-stone-400">
-                      {row.extended ?? "—"}
-                    </td>
+                    <td className="px-2 py-1.5 text-stone-700 dark:text-stone-300">{row.label}</td>
+                    {hasScaling ? (
+                      <>
+                        <td className="px-2 py-1.5 text-center font-mono font-semibold text-stone-700 dark:text-stone-200">
+                          {row.strategic ?? "—"}
+                        </td>
+                        <td className="px-2 py-1.5 text-center font-mono font-semibold text-stone-700 dark:text-stone-200">
+                          {row.tactical ?? "—"}
+                        </td>
+                        <td className="px-2 py-1.5 text-center font-mono font-semibold text-stone-700 dark:text-stone-200">
+                          {row.extended ?? "—"}
+                        </td>
+                      </>
+                    ) : (
+                      <td
+                        colSpan={3}
+                        className="px-2 py-1.5 text-center text-[10px] uppercase tracking-wide text-stone-400 dark:text-stone-500"
+                      >
+                        applies to all start types
+                      </td>
+                    )}
                   </tr>
                 );
               })}
