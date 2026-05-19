@@ -53,19 +53,21 @@ export function GameSelector({
         </select>
       )}
 
-      {/* Module selector */}
-      <select
-        value={moduleId ?? ""}
-        onChange={(e) => onModuleChange(e.target.value || null)}
-        className={selectClass}
-      >
-        <option value="">{activeGame?.shortName ?? "Base"}</option>
-        {modules.map((m) => (
-          <option key={m.id} value={m.id}>
-            {m.label}
-          </option>
-        ))}
-      </select>
+      {/* Module selector — only show if the game has more than one module */}
+      {modules.length > 1 && (
+        <select
+          value={moduleId ?? ""}
+          onChange={(e) => onModuleChange(e.target.value || null)}
+          className={selectClass}
+        >
+          <option value="">{activeGame?.shortName ?? "Base"}</option>
+          {modules.map((m) => (
+            <option key={m.id} value={m.id}>
+              {m.label}
+            </option>
+          ))}
+        </select>
+      )}
 
       {/* Complexity selector — only show if game has multiple levels */}
       {hasComplexity && (

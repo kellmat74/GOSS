@@ -50,15 +50,9 @@ export const blueWaterNavyConfig: GameSystemConfig = {
       id: "atlantic",
       label: "Atlantic",
       shortLabel: "BWN-A",
-      scenarios: [
-        { id: "all",                          label: "All Scenarios" },
-        { id: "boomer-bastion",               label: "1: The Boomer Bastion" },
-        { id: "ace-mobile-and-first-convoys", label: "2: Ace Mobile & First Convoys" },
-        { id: "kirovs-and-carriers",          label: "3: Kirov's & Carriers" },
-        { id: "attack-on-kola",               label: "4: Attack on the Kola Peninsula" },
-        { id: "baltic-bust-up",               label: "5: Baltic Bust-Up" },
-        { id: "campaign-game",                label: "6: Campaign Game" },
-      ],
+      // Scenarios are rules-content (no rule/SoP overlays); browsed in the
+      // Scenarios tab. The GameSelector dropdown auto-hides when length <= 1.
+      scenarios: [{ id: "all", label: "All Scenarios" }],
       data: {
         // BWN has a single rulebook — rules load from baseData.rules below.
         // Module data only holds module-specific extras (actions, cards, scenario book).

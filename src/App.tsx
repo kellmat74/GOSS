@@ -108,6 +108,17 @@ function useGameSelection() {
 
   useEffect(() => { localStorage.setItem(GAME_SYSTEM_KEY, gameSystemId); }, [gameSystemId]);
   useEffect(() => { moduleId ? localStorage.setItem(MODULE_KEY, moduleId) : localStorage.removeItem(MODULE_KEY); }, [moduleId]);
+
+  // Auto-select the sole module when the game has only one — its dropdown is
+  // hidden in that case, so without this the user couldn't pick it and the
+  // module-scoped tabs (Cards/Actions/Scenarios) would render empty.
+  useEffect(() => {
+    if (!gameConfig) return;
+    if (gameConfig.modules.length === 1) {
+      const only = gameConfig.modules[0].id;
+      if (moduleId !== only) setModuleId(only);
+    }
+  }, [gameConfig, moduleId]);
   useEffect(() => { scenario ? localStorage.setItem(SCENARIO_KEY, scenario) : localStorage.removeItem(SCENARIO_KEY); }, [scenario]);
   useEffect(() => { localStorage.setItem(COMPLEXITY_KEY, complexity); }, [complexity]);
 
