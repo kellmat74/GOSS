@@ -19,9 +19,7 @@
           "description": "Setup as Scenario #1 and add the following units.\n\nScenario Alterations:\n- One Yankee step must be killed for NATO to win the game.\n- NATO may add a Payload value point at the end of each turn if any Yankee is more than 1 zone from a First Strike zone.\n- The Soviet units starting the game over the SOSUS line cannot reduce the current Payload value sunk by crossing over the SOSUS line - the scenario special rule is ignored for them.\n- NATO OPS increase to 7. Generate weather for Mid and West zones as well (everything except the Mediterranean)."
         }
       ],
-      "notes": [
-        "**Needs review (uncorroborated handwritten note):** Marginal handwriting on page 2 of the scenario book reads 'Boomers cannot return to port; must stay at sea.' This restriction is not found in the 2020 errata rulebook, v1.17 rulebook, or designer Q&A. Matt to confirm whether this is a house rule, scenario-specific intent, or a misread."
-      ]
+      "notes": []
     },
     {
       "id": "ace-mobile-and-first-convoys",
