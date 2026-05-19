@@ -112,7 +112,7 @@
       "title": "Campaign Game",
       "year": "1983 / 1985 / 1989",
       "briefing": "This is the full game, with three possible starting years: 1983, 1985 and 1989 and three possible start types - strategic surprise, tactical surprise and extended build-up. The 'standard' game is the tactical surprise scenario which postulates an approximate 1 month of warning time for NATO to prepare for the impending Soviet attack. For your first campaign game, try 1983 - tactical scenario, no 'options' in play.",
-      "victoryConditions": "Victory is determined by the start type chosen (Strategic Surprise, Tactical Surprise, or Build-up). See the special rules for each start type.",
+      "victoryConditions": "Victory is determined by the start type chosen (Strategic Surprise, Tactical Surprise, or Build-up). See the special rules for each start type.\n\nSee also (3.5) for Determining Victory and (3.5.1) for NATO Losses tracking.",
       "turns": 12,
       "firstStrike": null,
       "specialRules": "Setup the game based on the scenario and your selected and then follow this checklist to start the game.\n\nBoth players draw 5 cards each and inspect them.\n\nNote: Any markers not mentioned are put in easy reach and if a numeric marker starts at 0 (there is no zero box).",
@@ -152,11 +152,6 @@
         { "step": "Soviet #8",  "label": "Battletales: Roll detection on all NATO Task Forces at sea with one die. The Soviet player may choose any one Task Force (two in the build-up scenario) and use two dice instead", "strategic": "1 TF", "tactical": "1 TF", "extended": "2 TFs" },
         { "step": "Soviet #9",  "label": "Begin the game starting with the Convoy Placement Phase." },
         { "step": "Soviet #10", "label": "Optional: Draw 2 'options' markers from a cup and select one to keep. Repeat for each First Strike Point discarded or spy expended (maximum of 2 given)." }
-      ],
-      "yearVariants": [
-        { "year": 1983, "notes": "Use the base scenario setup (Strategic Surprise, Tactical Surprise, or Build-up) as printed for 1983." },
-        { "year": 1985, "notes": "1985 additions: add the following to the map (per chosen start type). NATO (1985 additions): US-3, US-11, Los Angeles, UK AEW-3, Tornado, Aspide, Sturgeon (Ship/Sub/Air units at NS Norfolk USA, UK Port, NS Rota; one 'Replaces 83 unit'). SOVIET (1985 additions): additional Air, Ship, and Sub units at Kola Bases (one Tu-16 Badger is removed from the Baltic Bases and replaced through 'force modernization')." },
-        { "year": 1989, "notes": "1989 additions: add the following to the map; also add the 1985 additions, above. NATO (1989 additions): Thresher (in USA1) replaced with a US Sturgeon from the USA. Ethan Allen (on Turn 2) replaced with a US Sturgeon from the USA. Additional units include Ticonderoga VLS, Los Angeles, NS UK SSN-X, Konig, Tornado, Alpha; units at NS Norfolk USA, Brest, 'Replaces 83 unit'. SOVIET (1989 additions): Only two of the capital ships are in play; Soviet selects. Additional Ship, Air, Sub units at Kola Bases. 'Replaces 83 unit'. Bastion / Kola Bases assignments. Tu-22 Backfire (On Nuclear Capability Chart). The Destroyed box Tu-22 Backfire is placed in the Baltic Bases. Remove one Tu-16 Badger from the Baltic Bases replaced through force modernization." }
       ],
       "notes": []
     }
