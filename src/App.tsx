@@ -173,6 +173,7 @@ interface GameData {
   actions: CardCategory[];
   cards: PhysicalCard[];
   scenarioBook: ScenarioBook | null;
+  coachContext: unknown | null;
 }
 
 const EMPTY_LEARN: LearnData = { chapters: [] };
@@ -237,6 +238,8 @@ function useGameData(
       moduleConfig?.data.cards ? moduleConfig.data.cards() : Promise.resolve(null),
       // Scenario book (rich per-scenario content)
       moduleConfig?.data.scenarioBook ? moduleConfig.data.scenarioBook() : Promise.resolve(null),
+      // Coach context (auxiliary teaching content injected into Ask system prompt)
+      moduleConfig?.data.coachContext ? moduleConfig.data.coachContext() : Promise.resolve(null),
     ]).then((results) => {
       if (cancelled) return;
       const [
@@ -244,7 +247,7 @@ function useGameData(
         modRulesRaw, modAdvRulesRaw, overlayRaw, learnOverlayRaw,
         baseErrataRaw, moduleErrataRaw,
         baseTablesRaw, moduleTablesRaw,
-        actionsRaw, cardsRaw, scenarioBookRaw,
+        actionsRaw, cardsRaw, scenarioBookRaw, coachContextRaw,
       ] = results;
 
       const baseRules: RuleEntry[] = [
@@ -276,8 +279,9 @@ function useGameData(
       const actions: CardCategory[] = ((actionsRaw as any)?.default ?? []) as CardCategory[];
       const cards: PhysicalCard[] = ((cardsRaw as any)?.default ?? []) as PhysicalCard[];
       const scenarioBook: ScenarioBook | null = ((scenarioBookRaw as any)?.default ?? null) as ScenarioBook | null;
+      const coachContext: unknown | null = (coachContextRaw as any)?.default ?? null;
 
-      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata, tables, actions, cards, scenarioBook });
+      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata, tables, actions, cards, scenarioBook, coachContext });
       setLoading(false);
     }).catch((err) => {
       if (!cancelled) {
@@ -457,6 +461,8 @@ function App() {
             exampleQuestions={gameConfig.askConfig.exampleQuestions}
             gameId={gameConfig.id}
             searchConfig={gameConfig.searchConfig}
+            learnChapters={learnChapters}
+            coachContext={data?.coachContext}
           />
         )}
         {view === "options" && gameConfig?.features.options && (

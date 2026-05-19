@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import type { RuleEntry, Phase } from "../../types/goss";
 
-import { searchRules, searchSequence, type SearchConfig } from "../../utils/rulesSearch";
+import { searchRules, searchSequence, searchLearn, type SearchConfig, type LearnSearchResult } from "../../utils/rulesSearch";
+import type { LearnChapter } from "../../types/learn";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
 interface AskPanelProps {
@@ -14,6 +15,10 @@ interface AskPanelProps {
   gameId?: string;
   /** Per-game search config (synonym expansion, module aliases) for retrieval. */
   searchConfig?: SearchConfig;
+  /** Learn chapters — hand-authored teaching content used as AI Coach context. */
+  learnChapters?: LearnChapter[];
+  /** Auxiliary "coach context" JSON (e.g. Often Overlooked Rules) injected wholesale. */
+  coachContext?: unknown;
 }
 
 interface ChatMessage {
@@ -43,7 +48,9 @@ function buildSystemPrompt(
   topRules: RuleEntry[],
   summaryRules: RuleEntry[],
   sequenceItems: SequenceContext[] = [],
-  preamble?: string
+  learnItems: LearnSearchResult[] = [],
+  coachContext?: unknown,
+  preamble?: string,
 ): string {
   const fullText = topRules
     .map((r) => `[${r.section}] ${r.title}: ${r.text}`)
@@ -65,10 +72,33 @@ function buildSystemPrompt(
     sequenceSection = `\n\n## Relevant procedures & tips from the Sequence of Play:\n\n${seqText}`;
   }
 
+  let learnSection = "";
+  if (learnItems.length > 0) {
+    const learnText = learnItems
+      .map((l) => {
+        const refs = l.ruleRefs.length > 0 ? ` (refs: ${l.ruleRefs.join(", ")})` : "";
+        return `### ${l.chapterTitle} — ${l.decisionTitle}${refs}\nWhen: ${l.when}\n\n${l.body}`;
+      })
+      .join("\n\n");
+    learnSection = `\n\n## Pedagogical context from the AI Coach (Learn) — use this to teach the "why", not just recite rules:\n\n${learnText}`;
+  }
+
+  let coachSection = "";
+  if (coachContext && typeof coachContext === "object") {
+    // Strip metadata keys starting with underscore for compactness
+    const filtered: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(coachContext as Record<string, unknown>)) {
+      if (!k.startsWith("_")) filtered[k] = v;
+    }
+    if (Object.keys(filtered).length > 0) {
+      coachSection = `\n\n## Coach context (auxiliary teaching notes, always injected):\n\n${JSON.stringify(filtered, null, 2)}`;
+    }
+  }
+
   const defaultPreamble = "You are a rules expert for a complex tabletop wargame system.";
   return `${preamble ?? defaultPreamble} Answer questions about the rules accurately, citing specific rule sections in parenthesized format like (3.2.1) so they render as clickable links.
 
-Be concise but thorough. If a question is ambiguous, explain the relevant rules and note the ambiguity. Always cite the specific rule section numbers. When relevant, include practical gameplay tips from the procedures section.
+Be concise but thorough. If a question is ambiguous, explain the relevant rules and note the ambiguity. Always cite the specific rule section numbers. When the pedagogical context below is relevant, use it to explain the "why" behind the rules — not just recite them.
 
 ## Most relevant rules (full text):
 
@@ -76,7 +106,7 @@ ${fullText}
 
 ## Additional related rules (summaries):
 
-${summaries}${sequenceSection}`;
+${summaries}${sequenceSection}${learnSection}${coachSection}`;
 }
 
 function CopyButton({ text, isUser, question }: { text: string; isUser: boolean; question?: string }) {
@@ -150,6 +180,8 @@ export function AskPanel({
   exampleQuestions = DEFAULT_EXAMPLE_QUESTIONS,
   gameId,
   searchConfig,
+  learnChapters = [],
+  coachContext,
 }: AskPanelProps) {
   const [messages, setMessages] = useState<ChatMessage[]>(() => loadHistory(gameId));
 
@@ -213,11 +245,23 @@ export function AskPanel({
           ? searchSequence(messageText, phases, 5, searchConfig)
           : [];
 
+        // Search Learn chapters/decisions for pedagogical context
+        const learnResults = learnChapters.length > 0
+          ? searchLearn(messageText, learnChapters, 5, searchConfig)
+          : [];
+
         const response = await fetch(workerUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            system: buildSystemPrompt(topRules, summaryRules, seqResults, systemPromptPreamble),
+            system: buildSystemPrompt(
+              topRules,
+              summaryRules,
+              seqResults,
+              learnResults,
+              coachContext,
+              systemPromptPreamble,
+            ),
             messages: newMessages.map((m) => ({
               role: m.role,
               content: m.content,

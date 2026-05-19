@@ -34,8 +34,8 @@ export const blueWaterNavyConfig: GameSystemConfig = {
     flowchart: false,
     oob: false,
     quickRef: true,
-    ask: false,    // Deferred
-    learn: false,  // Deferred (AI Coach content authoring is a separate sprint)
+    ask: true,     // Enabled v4.7.9 — uses rules + cards + scenarios + coachContext
+    learn: false,  // Deferred (Learn-mode chapter authoring is a separate sprint)
     options: false,
     actions: true,   // Card-driven game — Actions tab enabled
     cards: true,     // Event Cards browser tab
@@ -55,11 +55,12 @@ export const blueWaterNavyConfig: GameSystemConfig = {
       scenarios: [{ id: "all", label: "All Scenarios" }],
       data: {
         // BWN has a single rulebook — rules load from baseData.rules below.
-        // Module data only holds module-specific extras (actions, cards, scenario book).
+        // Module data only holds module-specific extras (actions, cards, scenario book, coach context).
         rules: () => Promise.resolve({ default: [] }),
         actions: () => import("./actions.json"),
         cards: () => import("./cards.json"),
         scenarioBook: () => import("./scenario-book.json"),
+        coachContext: () => import("./coach-context.json"),
       },
     },
     // Future: Pacific module added when Compass releases the game.
@@ -74,13 +75,15 @@ export const blueWaterNavyConfig: GameSystemConfig = {
   askConfig: {
     workerUrl: "https://goss-ask-proxy.kellmat74.workers.dev",
     systemPromptPreamble:
-      "You are a rules expert for Blue Water Navy, a card-driven naval wargame by Compass Games set in a hypothetical 1980s NATO vs Soviet North Atlantic conflict.",
+      "You are a rules expert for Blue Water Navy, a card-driven naval wargame by Compass Games (designer Stuart Tonge, 2019) set in a hypothetical 1980s NATO vs Soviet North Atlantic conflict. The canonical rule numbering uses Christophe Bonnet's Revised Rules v1.17 (e.g. 5.1.3.2); the muted '(orig §X.Y)' shown in rule modals is the corresponding section in the original 2020 errata edition. Cite rules in parenthesized form like (7.2.1) so refs auto-link.",
     exampleQuestions: [
       "How do I detect a task force?",
       "What's the ASW procedure?",
-      "How do missile attacks work?",
+      "How do missile attacks vs Task Forces work?",
       "Can a submarine escort a task force?",
-      "How does bad weather affect movement?",
+      "How does bad weather affect ASW?",
+      "When does CAP fly?",
+      "Explain the Operations Phase",
     ],
   },
 };

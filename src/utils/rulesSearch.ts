@@ -1,9 +1,20 @@
 import type { RuleEntry, Phase, SubPhase } from "../types/goss";
+import type { LearnChapter, LearnDecision } from "../types/learn";
 
 export interface SearchResult {
   rule: RuleEntry;
   score: number;
   matchedFields: ("title" | "section" | "summary" | "text")[];
+}
+
+export interface LearnSearchResult {
+  chapterTitle: string;
+  chapterIntro: string;
+  decisionTitle: string;
+  when: string;
+  body: string;          // flattened text of all prose / callout / ask / rule blocks
+  ruleRefs: string[];
+  score: number;
 }
 
 /**
@@ -231,6 +242,106 @@ export function searchSequence(
     if (matchedTokens > 0) {
       score *= matchedTokens / tokens.length;
       results.push({ ...item, score });
+    }
+  }
+
+  results.sort((a, b) => b.score - a.score);
+  return results.slice(0, maxResults);
+}
+
+/**
+ * Flatten all the prose-bearing blocks of a Learn decision into a single
+ * searchable string. Excludes diagram block names since they don't carry
+ * substantive content for retrieval.
+ */
+function flattenDecisionBlocks(decision: LearnDecision): string {
+  const parts: string[] = [];
+  const collect = (blocks: typeof decision.blocks | undefined) => {
+    if (!blocks) return;
+    for (const b of blocks) {
+      if (b.kind === "prose" || b.kind === "callout") parts.push(b.text);
+      else if (b.kind === "rule") parts.push(b.text);
+      else if (b.kind === "ask") parts.push(b.items.join(" "));
+    }
+  };
+  collect(decision.blocks);
+  collect(decision.appendedBlocks);
+  return parts.join("\n");
+}
+
+/**
+ * Relevance-ranked search across Learn chapters/decisions. Returns the top
+ * matching decisions with their chapter context, body text, and rule refs —
+ * intended as auxiliary context for the AI Coach (Ask tab).
+ */
+export function searchLearn(
+  query: string,
+  chapters: LearnChapter[],
+  maxResults = 5,
+  config?: SearchConfig,
+): LearnSearchResult[] {
+  const rawTokens = query
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((t) => t.length > 0 && !STOP_WORDS.has(t));
+
+  const synonyms = config?.synonyms;
+  const tokens = [...rawTokens];
+  if (synonyms) {
+    for (const token of rawTokens) {
+      const syns = synonyms[token];
+      if (syns) for (const s of syns) tokens.push(s);
+    }
+  }
+
+  if (tokens.length === 0) return [];
+
+  const results: LearnSearchResult[] = [];
+
+  for (const chapter of chapters) {
+    const chapterTitleLower = chapter.title.toLowerCase();
+    const chapterIntroLower = (chapter.intro ?? "").toLowerCase();
+    for (const decision of chapter.decisions ?? []) {
+      const titleLower = decision.title.toLowerCase();
+      const whenLower = (decision.when ?? "").toLowerCase();
+      const body = flattenDecisionBlocks(decision);
+      const bodyLower = body.toLowerCase();
+
+      let score = 0;
+      let matchedTokens = 0;
+
+      for (const token of tokens) {
+        const inDecisionTitle = titleLower.includes(token);
+        const inWhen = whenLower.includes(token);
+        const inBody = bodyLower.includes(token);
+        const inChapterTitle = chapterTitleLower.includes(token);
+        const inChapterIntro = chapterIntroLower.includes(token);
+
+        if (
+          !inDecisionTitle && !inWhen && !inBody &&
+          !inChapterTitle && !inChapterIntro
+        ) continue;
+
+        matchedTokens++;
+        if (inDecisionTitle) score += 10;
+        if (inChapterTitle) score += 6;
+        if (inWhen) score += 4;
+        if (inChapterIntro) score += 2;
+        if (inBody) score += 1;
+      }
+
+      if (matchedTokens > 0) {
+        score *= matchedTokens / tokens.length;
+        results.push({
+          chapterTitle: chapter.title,
+          chapterIntro: chapter.intro ?? "",
+          decisionTitle: decision.title,
+          when: decision.when ?? "",
+          body,
+          ruleRefs: decision.ruleRefs ?? [],
+          score,
+        });
+      }
     }
   }
 

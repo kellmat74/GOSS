@@ -89,6 +89,8 @@ export interface ModuleConfig {
     cards?: () => Promise<{ default: unknown }>;
     /** Rich scenario-book content (briefing, setup, victory, etc.) */
     scenarioBook?: () => Promise<{ default: unknown }>;
+    /** Auxiliary coaching context fed wholesale into the Ask system prompt (e.g. "often overlooked" rules, designer notes). */
+    coachContext?: () => Promise<{ default: unknown }>;
   };
 }
 
