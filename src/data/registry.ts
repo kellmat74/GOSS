@@ -23,10 +23,29 @@ export function isDraftMode(): boolean {
   return new URLSearchParams(window.location.search).get("draft") === "true";
 }
 
-/** Visible game systems (filters out drafts unless draft mode is active) */
+/**
+ * If the URL contains `?game=<id>`, return that game id (when it matches a
+ * registered game). Lets users deep-link to a specific game — including a
+ * draft game — without having to also pass `?draft=true`.
+ */
+export function getRequestedGameId(): string | null {
+  if (typeof window === "undefined") return null;
+  const id = new URLSearchParams(window.location.search).get("game");
+  if (!id) return null;
+  return ALL_GAMES.some((g) => g.id === id) ? id : null;
+}
+
+/**
+ * Visible game systems. Filters out drafts unless either:
+ *   1. `?draft=true` is set (all drafts visible), OR
+ *   2. `?game=<id>` deep-links to that draft (just that one becomes visible).
+ */
 export function getVisibleGames(): GameSystemConfig[] {
   const draft = isDraftMode();
-  return ALL_GAMES.filter((g) => !g.draft || draft);
+  const requested = getRequestedGameId();
+  return ALL_GAMES.filter(
+    (g) => !g.draft || draft || g.id === requested,
+  );
 }
 
 /** Look up a game system by ID */

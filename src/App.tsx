@@ -20,7 +20,7 @@ import { useOptionalRules } from "./hooks/useOptionalRules";
 import { mergeRules } from "./utils/mergeRules";
 import { mergeSequence } from "./utils/mergeSequence";
 import { mergeLearn } from "./utils/mergeLearn";
-import { getVisibleGames, getGameById } from "./data/registry";
+import { getVisibleGames, getGameById, getRequestedGameId } from "./data/registry";
 import type { Phase, RuleEntry, SequenceOverlay, CardCategory, PhysicalCard, ScenarioBook } from "./types/goss";
 import { ActionsPanel } from "./components/Actions/ActionsPanel";
 import { CardsPanel } from "./components/Cards/CardsPanel";
@@ -76,6 +76,9 @@ function useGameSelection() {
   const visibleGames = useMemo(() => getVisibleGames(), []);
 
   const [gameSystemId, setGameSystemId] = useState<string>(() => {
+    // URL deep-link wins over localStorage and default
+    const requested = getRequestedGameId();
+    if (requested) return requested;
     try {
       const oldModule = localStorage.getItem("goss-game-module");
       if (oldModule) { localStorage.setItem(MODULE_KEY, oldModule); localStorage.removeItem("goss-game-module"); }
