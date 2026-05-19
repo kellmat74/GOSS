@@ -167,7 +167,8 @@ export interface ScenarioAlteration {
 export interface ScenarioStartType {
   id: string;                   // "strategic-surprise" | "tactical-surprise" | "extended-buildup"
   label: string;
-  description: string;
+  /** Optional narrative description (omit when only the verbatim specialRules is available). */
+  description?: string;
   specialRules?: string;
 }
 

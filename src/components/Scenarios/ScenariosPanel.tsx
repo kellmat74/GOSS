@@ -224,13 +224,13 @@ function StartTypeBlock({
           <h4 className="mb-1 text-sm font-bold text-stone-800 dark:text-stone-200">
             {st.label}
           </h4>
-          <ProseBlock text={st.description} />
+          {st.description && <ProseBlock text={st.description} />}
           {st.specialRules && (
-            <div className="mt-2 rounded bg-stone-100 p-2 text-xs dark:bg-stone-900/40">
+            <div className={`${st.description ? "mt-2 " : ""}rounded bg-stone-100 p-2 text-xs dark:bg-stone-900/40`}>
               <div className="mb-1 font-semibold uppercase tracking-wide text-stone-500">
                 Special rules
               </div>
-              <RuleInlineText text={st.specialRules} />
+              <ProseBlock text={st.specialRules} />
             </div>
           )}
         </div>

@@ -6,17 +6,17 @@
       "title": "The Boomer Bastion",
       "year": 1983,
       "briefing": "It is day one of WW3. Several NATO assets have been held back from other combat duties with the specific purpose of attacking the Soviet boomers at home in their bastion. Additionally, the SOSUS line must be manned to protect a passing convoy.",
-      "victoryConditions": "NATO wins the game by sinking an SSBN payload value of 9. The Soviet player may reduce the current Payload value back by one for each Soviet submarine step that makes it over the SOSUS line (remove it from the game). The minimum resting total is zero (it cannot be negative). NATO may add one Payload value point work by damaging or sinking the Kiev.",
+      "victoryConditions": "NATO win the game by sinking an SSBN payload value of 8. The Soviet player may reduce the current Payload value back by one for each Soviet submarine step that makes it over the SOSUS line (remove it from the game). The minimum resulting total is zero (it cannot be negative). NATO may add one Payload point each by damaging or sinking the Kiev.",
       "opsPerDay": { "nato": 5, "soviet": 7 },
       "turns": 3,
-      "specialRules": "The Bastion cannot have Bad Weather (ignore any such results) but otherwise generate weather for East and North. No cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events — ignore the rest of the card.",
+      "specialRules": "The Bastion cannot have Bad Weather (ignore any such results) but otherwise generate weather for East and North. The game lasts for three turns. No cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events - ignore the rest of the card.",
       "firstStrike": null,
-      "opsTrackNote": "Uses the small-scenario 1-5 OPS Track (records cycle through boxes 1-5 instead of the full 1-10 track).",
+      "opsTrackNote": "Use the Small Scenario OPS Track.",
       "alterations": [
         {
           "id": "yankee-hunting",
           "title": "Scenario 1a: Yankee Hunting",
-          "description": "Setup as Scenario #1, then layer the Yankee SSBN hunt on top:\n\n- One Yankee step must be killed for NATO to win the game.\n- NATO may add a Payload value point at the end of each turn if any Yankee is more than 1 zone from a First Strike zone.\n- The Soviet units starting the game over the SOSUS line cannot reduce the current Payload value sunk by crossing over the SOSUS line — the scenario special rule is ignored for them.\n- NATO OPS increase to 7.\n- Generate weather for Mid and West zones as well (everything except the Mediterranean)."
+          "description": "Setup as Scenario #1 and add the following units.\n\nScenario Alterations:\n- One Yankee step must be killed for NATO to win the game.\n- NATO may add a Payload value point at the end of each turn if any Yankee is more than 1 zone from a First Strike zone.\n- The Soviet units starting the game over the SOSUS line cannot reduce the current Payload value sunk by crossing over the SOSUS line - the scenario special rule is ignored for them.\n- NATO OPS increase to 7. Generate weather for Mid and West zones as well (everything except the Mediterranean)."
         }
       ],
       "notes": [
@@ -28,18 +28,18 @@
       "number": 2,
       "title": "Ace Mobile & First Convoys",
       "year": 1983,
-      "briefing": "D+2. While the fight rages underwater in the North, NATO sorties convoys to sea heading for the French ports. Meanwhile ACE Mobile — NATO's rapid reaction force — sets off from the UK to Trondheim. The Soviets have earmarked two regiments of naval aviation and 18 submarines to interdict these forces.",
-      "victoryConditions": "When a Convoy/Amphib reaches port remove the entire Task Force from the scenario. The Soviets must interdict; NATO must deliver.",
+      "briefing": "D+2. While the fight rages underwater in the North, NATO sorties convoys to sea heading for the French ports. Meanwhile ACE Mobile - NATO's rapid reaction force, sets off from the UK to Trondheim. The Soviets have earmarked two regiments of naval aviation and 18 submarines to interdict these forces.",
+      "victoryConditions": "The Soviet player wins if both the Convoy and the Amphib take three hits, otherwise NATO wins so long as the Amphib makes it to Trondheim and the Convoy to a French port.",
       "opsPerDay": { "nato": 6, "soviet": 8 },
       "turns": 4,
-      "specialRules": "Prior to beginning play NATO may move any two Air Units and put them On Patrol. The British may deploy their Surface Units in up to 2 different Task Forces as desired, beginning in British ports but formed up so there is no further OPS cost to sail them. The Soviet player has one spy available; after every use remove it from the game on a roll of 1-4. UK Air Units cannot enter the North 9-10 zone in this scenario. No cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events — ignore the rest of the card.",
+      "specialRules": "Prior to beginning play NATO may move any two Air Units and put them On Patrol. The British may deploy their Surface Units in up to 2 different Task Forces as desired, beginning in British ports but formed up so there is no further OPS cost to sail them. Play continues for a maximum of 4 turns. The Soviet player has one spy available, after every use remove it from the game on a roll of 1-4. When a Convoy/Amphib reaches port remove the entire Task Force from the scenario. No cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events - ignore the rest of the card. UK Air Units cannot enter the North 9-10 zone in this scenario.",
       "firstStrike": null,
-      "opsTrackNote": "Uses the small-scenario 1-5 OPS Track.",
+      "opsTrackNote": "Use the Small Scenario OPS Track.",
       "alterations": [
         {
           "id": "extended",
           "title": "Scenario 2a: Extended",
-          "description": "Setup as Scenario #2 with these changes:\n\n- The Soviets must hit all three targets (Convoys & Amphib) for three hits apiece, OR six hits on any two, to win the game.\n- Soviet OPS increase to 9 per turn."
+          "description": "Setup as Scenario #2 and add the following units.\n\nScenario Alterations: The Soviets must hit all three targets (Convoys & Amphib) for three hits apiece or six hits on any two to win the game. Soviets receive 9 OPS per turn."
         }
       ]
     },
@@ -48,13 +48,13 @@
       "number": 3,
       "title": "Kirov's & Carriers",
       "year": 1983,
-      "briefing": "The NATO carrier battle groups clash with the bulk of the Soviet surface fleet in the Norwegian Sea, with both sides racing to seize the initiative around Trondheim.",
-      "victoryConditions": "NATO must execute the Amphibious Landing at Trondheim while protecting the US carrier groups. Soviet wins by sinking carrier value before the landing succeeds.",
-      "opsPerDay": { "nato": 6, "soviet": 6 },
+      "briefing": "It is day five of WW3. Both Icelandic and English airbases have been subjected to repeated attack by Badger bombers and are inoperable. Communications intercepts have detected a Soviet amphibious force forming in Severomorsk. Satellite recon confirms the force is no longer in port as of 8 hours ago. Intelligence expects a landing in the area of Trondheim, Norway. Two carrier groups are in the area and are the only force standing between the Bad Banner Fleet and Oslo.",
+      "victoryConditions": "NATO wins the game by preventing any Troops markers being placed through an Amphibious Landing at Trondheim. The Soviet player wins if any troops have landed.",
+      "opsPerDay": { "nato": 9, "soviet": 10 },
       "turns": 4,
-      "specialRules": "Amphibious Landing at Trondheim is the NATO objective. Soviet surface fleet operates at full strength from Kola and Baltic bases.",
+      "specialRules": "Use the Small Scenario OPS Track for this game. NATO 9 OPS, Soviet 10 OPS.\n\nPrior to beginning game roll one die for each of Keflavik and the Scottish airbases; place heavy damage on an 8,9 or 10 otherwise place light damage. Place the number of die rolled to cause that level of damage (e.g. place 3 dice on UK Airbase if heavily damaged or 1 hit if lightly damaged) The Soviets may deploy their Surface Units in up to 3 different Task Forces as desired and may use nuclear submarines in North 9-10 as part of a Task Force.\n\nPlay continues for a maximum of 4 turns.\n\nNo cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events - ignore the rest of the card.",
       "firstStrike": null,
-      "opsTrackNote": "Uses the small-scenario 1-5 OPS Track.",
+      "opsTrackNote": "Use the Small Scenario OPS Track.",
       "alterations": [
         {
           "id": "days-before",
@@ -68,13 +68,13 @@
       "number": 4,
       "title": "Attack on the Kola Peninsula",
       "year": 1983,
-      "briefing": "NATO strikes directly at the Soviet Northern Fleet's home base in the Kola Peninsula. Carrier-based strikes face the full weight of Soviet land-based naval aviation and SAM defenses.",
-      "victoryConditions": "NATO wins by inflicting sufficient hits on Kola facilities and Soviet capital ships. Soviet wins by sinking NATO carriers / breaking the strike before objectives are met.",
+      "briefing": "It is day two of WWIII. The United States Navy has decided to strike the Soviet Kola Peninsula bases in order to halt the threat from Soviet naval aviation. Four aircraft carriers are currently 1500 nautical miles from their targets and steaming at high speed to the Northeast. The Soviets have two full divisions of strike aircraft, two divisions of fighters and the most formidable air defense system on the planet.",
+      "victoryConditions": "NATO wins the game by heavily damaging both the Kola Peninsula airbase and port facilities, otherwise the Soviets win. Casualties on either side are irrelevant.",
       "opsPerDay": { "nato": 10, "soviet": 10 },
       "turns": 5,
-      "specialRules": "The scenario lasts a maximum of 5 turns. Soviet naval air operates at full strength from Kola bases.",
+      "specialRules": "Play continues for a maximum of 5 turns. Set up the Soviets first and then NATO. There are no NATO onsite missiles in the scenario as it takes place in 1983. No cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events - ignore the rest of the card.",
       "firstStrike": null,
-      "opsTrackNote": "Uses the small-scenario 1-5 OPS Track.",
+      "opsTrackNote": "Use the Small Scenario OPS Track.",
       "alterations": [
         {
           "id": "use-nuclear-weapons",
@@ -84,12 +84,12 @@
         {
           "id": "cruise-missiles",
           "title": "#2 Cruise Missiles",
-          "description": "Play the scenario in 1985, allowing the US to use cruise missiles and adding US-6 to the US forces. The Soviet player may place an additional RORSAT in any zone of the map."
+          "description": "Play the scenario in 1985 allowing the US to use cruise missiles and adding US-6 to the US forces. The Soviet player may place an additional RORSAT in any zone of the map."
         },
         {
           "id": "all-the-toys",
           "title": "#3 All the Toys",
-          "description": "Add 2 Ticonderoga VLS to the US forces, and add a Bear-G at Kola to the Soviet setup. The Victor-III (I) and the Akula may be placed anywhere in a North Sea Zone (placed last, after everything else is on the map)."
+          "description": "Add 2 Ticonderoga VLS to the US forces, and add a Bear-G at Kola to the Soviet setup, the Victor-III (I) and the Akula anywhere in a North Sea Zone (placed last, after everything else is on the map)."
         }
       ]
     },
@@ -98,69 +98,66 @@
       "number": 5,
       "title": "Baltic Bust-Up",
       "year": 1983,
-      "briefing": "The Soviet Baltic Fleet attempts to break out into the North Sea. NATO must contain Soviet fast attack units before they spill out of the Skagerrak.",
-      "victoryConditions": "NATO wins by preventing Soviet breakout. Soviet wins by getting fast attack units past the Danish Strait and inflicting losses on NATO shipping in the North Sea.",
+      "briefing": "It is day one of WWI3. The Politburo has instructed Soviet commanders to take Denmark as a priority. Badger regiments have been allocated to destroy the German airbases, and submarines will secure the Baltic Sea. Meanwhile, NATO forces are ready and waiting to defend their Danish allies.",
+      "victoryConditions": "The Soviets win the game by landing 2 Troops markers in Denmark, otherwise NATO wins. Casualties on either side are irrelevant.",
       "opsPerDay": { "nato": 6, "soviet": 6 },
       "turns": 4,
-      "specialRules": "Baltic-specific rules apply (see §7.4 and §8.4.2). The Danish Strait mining level and Norwegian status follow scenario start conditions.",
+      "specialRules": "Play continues for a maximum of 4 turns. Instead of the usual weather process roll a single die each turn - the Baltic experiences Bad Weather on a '10' and must have clear weather the following turn (do not roll, it's automatically clear the turn after). Remember to resolve the amphibious invasion landing procedure each time the Soviet player tries to land. No cards are used in this scenario. Optionally, both players can draw five cards at the start of the game and use only Reaction Events - ignore the rest of the card.",
       "firstStrike": null,
-      "opsTrackNote": "Uses the small-scenario 1-5 OPS Track."
+      "opsTrackNote": "Use the Small Scenario OPS Track."
     },
     {
       "id": "campaign-game",
       "number": 6,
       "title": "Campaign Game",
       "year": "1983 / 1985 / 1989",
-      "briefing": "The full war at sea. The campaign is built around a chosen **Start Type** (Strategic Surprise, Tactical Surprise, or Extended Build-up) and a chosen **Era** (1983, 1985, or 1989). The Era determines which units are on the board; the Start Type determines how the war begins — how prepared each side is, how many forces are pre-positioned, and what special rules apply.\n\n*Recommended for first play: 1983 + Tactical Surprise, no options.*",
-      "victoryConditions": "Standard campaign victory conditions apply per (3.5): the Soviets must accumulate **four Hammer & Sickle markers** on locations overrun by their forces on the War and Invasion Tracks. NATO must slow or stop these advances by keeping convoys flowing, striking Soviet troop markers (7.5.5), and defending the Invasion Tracks (Norway and Denmark). See also (3.5.1) for NATO Losses tracking.",
+      "briefing": "This is the full game, with three possible starting years: 1983, 1985 and 1989 and three possible start types - strategic surprise, tactical surprise and extended build-up. The 'standard' game is the tactical surprise scenario which postulates an approximate 1 month of warning time for NATO to prepare for the impending Soviet attack. For your first campaign game, try 1983 - tactical scenario, no 'options' in play.",
+      "victoryConditions": "Victory is determined by the start type chosen (Strategic Surprise, Tactical Surprise, or Build-up). See the special rules for each start type.",
       "turns": 12,
       "firstStrike": null,
+      "specialRules": "Setup the game based on the scenario and your selected and then follow this checklist to start the game.\n\nBoth players draw 5 cards each and inspect them.\n\nNote: Any markers not mentioned are put in easy reach and if a numeric marker starts at 0 (there is no zero box).",
       "startTypes": [
         {
           "id": "strategic-surprise",
           "label": "Strategic Surprise",
-          "description": "Pre-war NATO is caught flat-footed. Convoys are forming up under-strength and the bulk of NATO's pre-positioning hasn't happened. Smaller pre-game force placements; harsher convoy penalties early.",
-          "specialRules": "All Convoys begin with two hits during setup and Turns 1 and 2. During Turns 3 through 5 this is reduced to one hit. From Turn 6, Convoys form normally with no hits. *Represents the lack of pre-war time to properly form-up NATO shipping; convoys have fewer ships for the first two weeks of the war.*"
+          "specialRules": "All Convoys begin with two hits during setup and Turns 1 and 2. During Turns 3 through 5 this is reduced to one hit. From Turn 6, Convoys form normally with no hits.\n\nThis represents the lack of pre-war time to properly form-up NATO shipping, meaning that convoys have less ships for the first two weeks of the war."
         },
         {
           "id": "tactical-surprise",
-          "label": "Tactical Surprise (Standard)",
-          "description": "The 'standard' campaign baseline. NATO has had some warning and has begun mobilization, but is not at war footing. Designer-recommended for first plays.",
-          "specialRules": "No special rules. This is the baseline against which the other two start types are scaled."
+          "label": "Tactical Surprise",
+          "specialRules": "There are no special rules in play here."
         },
         {
           "id": "extended-buildup",
           "label": "Extended Build-up",
-          "description": "Both sides have had weeks of warning and have fully mobilized. NATO has formed up the merchant navies of Europe; the Soviets are more prepared to use reserves or nuclear weapons. Largest pre-game force placements; Soviet First Strike Points start on the board.",
-          "specialRules": "The Soviet player takes 2 First Strike Points at the start of the game. NATO places two Convoys on Turns 1, 3, 5, 7 and 9 (all odd Convoy turns). If NATO is unlucky with weather and there are not enough Convoys to place, missing Convoys are received as soon as they are available. *NATO has a huge number of convoy ships available; the Soviets have significant force at-sea.*"
+          "specialRules": "The Soviet player takes 2 First Strike Points at the start of the game. NATO places two Convoys on Turns 1, 3, 5, 7 and 9 (all odd Convoy turns) - note that if NATO is unlucky with weather it is possible there are not enough Convoys to place. If this happens, the missing Convoys are received as soon as they are available.\n\nNATO has a huge number of convoy ships available, having formed up the merchant navies of Europe to support the war effort. The Soviets are more prepared to use reserves or nuclear weapons, and have significant force at-sea."
         }
       ],
       "startTypeScaling": [
-        { "step": "NATO #1",    "label": "Breakdown choice — NATO may place 1 US Sturgeon and/or 1 US Los Angeles sub into the Destroyed box to take the matching breakdown counters, placed where the sub(s) were or with any at-sea Task Force lacking a submarine. Similarly NATO may place US 4-6 surface ships into the Destroyed box (replace each removed unit with one or two replacement ships). Any not placed may begin in the USA." },
-        { "step": "NATO #2",    "label": "Ship units relocated to other NATO bases or at-sea TFs",        "strategic": "2", "tactical": "2",  "extended": "4"  },
-        { "step": "NATO #3",    "label": "One NATO Task Force may be formed up and placed within 2 Sea Zones of its origin port, including forces from that port. UK and FR ports count as the same origin port for this purpose." },
-        { "step": "NATO #4",    "label": "Submarine Units placed anywhere on the map",                    "strategic": "1", "tactical": "3",  "extended": "7"  },
-        { "step": "NATO #5",    "label": "Air Units placed On Patrol within range (MP or fighters)",       "strategic": "3", "tactical": "3",  "extended": "5"  },
-        { "step": "NATO #6",    "label": "The at-sea carriers beginning in TF Hammer may be relocated to new or existing Task Forces anywhere except the Mediterranean and not north of the GIUK Gap." },
-        { "step": "NATO #7",    "label": "Optional: Draw 2 'options' markers from a cup and select one to keep. Repeat for each First Strike Point given to the Soviet player (maximum 2 picks)." },
+        { "step": "NATO #1",    "label": "Breakdown choice - NATO may place 1 US Sturgeon and or 1 US Los Angeles sub into the Destroyed box to take the two matching breakdown counters, placed where either sub(s) were or with any at-sea Task Force lacking a submarine counter. Similarly NATO may place these surface ships US 4-6 in the Destroyed box, take the US 13-17 in-port hits replace each removed unit with one or two replacement ships. Any not placed may begin in the USA." },
+        { "step": "NATO #2",    "label": "ship units may be moved to any other NATO base(s) or Task Forces at sea",        "strategic": "2", "tactical": "2",  "extended": "4"  },
+        { "step": "NATO #3",    "label": "One NATO Task Force may be formed up and placed within 2 Sea Zones of its origin port forces from that port. (UK and FR ports count as the same origin port for this purpose)." },
+        { "step": "NATO #4",    "label": "Submarine Units can be placed anywhere on the map",                              "strategic": "1", "tactical": "3",  "extended": "7"  },
+        { "step": "NATO #5",    "label": "Air Units can be placed within their range 'On Patrol' - either MP air or fighters", "strategic": "3", "tactical": "3",  "extended": "5"  },
+        { "step": "NATO #6",    "label": "The at-sea carriers beginning the game in TF Hammer may be relocated to new or existing Task Forces anywhere except the Mediterranean, and not North of the GIUK Gap." },
+        { "step": "NATO #7",    "label": "Optional: Draw 2 'options' markers from a cup and select one to keep. Repeat for each First Strike Point given to the Soviet player (maximum of 2 picks)." },
         { "step": "Soviet #1",  "label": "The Soviet player may purchase Soviet Technology markers. Reduce the Spies Track by the number on each marker put into play." },
-        { "step": "Soviet #2",  "label": "The Soviet player may take one Tu-22 from the destroyed box (if present) by removing 2 Tu-16 Badgers or the Tu-95 Bear-G. Place it at Kola, Baltic, Black Sea, or Syrian bases (trading assets with the Far East)." },
-        { "step": "Soviet #3",  "label": "Move up to three strike Air Units to any Soviet bases (except Cuba)." },
-        { "step": "Soviet #4",  "label": "Move up to three Surface Units to any Soviet bases (except Cuba)." },
-        { "step": "Soviet #5a", "label": "Subs placed anywhere on the map",                                "strategic": "4", "tactical": "6",  "extended": "14" },
-        { "step": "Soviet #5b", "label": "Additional subs within 2 zones of a Soviet base (except Cuba)",  "strategic": "2", "tactical": "2",  "extended": "4"  },
-        { "step": "Soviet #6",  "label": "Soviet Task Forces created pre-game from units of a single Soviet port; placed on the map anywhere marked with a Poor detection (Good if within 1 zone of a NATO TF)", "strategic": "1", "tactical": "1",  "extended": "2"  },
-        { "step": "Soviet #7",  "label": "Roll weather for all zones. If weather is placed in a zone with a Task Force, place a 'Moved' marker on it (the Task Force has been within the Bad Weather for some time)." },
-        { "step": "Soviet #8",  "label": "Battletales: roll detection on all NATO Task Forces at sea (1 die each). Soviet may select one TF (two for Extended Build-up) and use two dice instead", "strategic": "1 TF", "tactical": "1 TF", "extended": "2 TFs" },
+        { "step": "Soviet #2",  "label": "The Soviet player may take one Tu-22 from the destroyed box (if present) by removing 2 Tu-16 Badgers or the Tu-95 Bear-G. Place it on the Kola, Baltic, Black Sea or Syrian bases. (Trading assets with the Far East)" },
+        { "step": "Soviet #3",  "label": "Move up to three strike Air Units to any Soviet bases. (except for Cuba)" },
+        { "step": "Soviet #4",  "label": "Move up to three Surface Units to any Soviet bases. (except for Cuba)" },
+        { "step": "Soviet #5a", "label": "subs can be placed anywhere on the map",                                          "strategic": "4", "tactical": "6",  "extended": "14" },
+        { "step": "Soviet #5b", "label": "additional subs may be placed within two Sea Zones of a Soviet base (except for Cuba)", "strategic": "2", "tactical": "2",  "extended": "4"  },
+        { "step": "Soviet #6",  "label": "Soviet Task Force(s) may be created from any units originating in a single Soviet port (per TF) and placed on the map anywhere marked with a Poor detection. If placed within one zone of a NATO TF, instead mark with a Good detection.", "strategic": "1", "tactical": "1",  "extended": "2"  },
+        { "step": "Soviet #7",  "label": "Roll weather for all zones. If weather is placed in a zone with a Task Force, place a 'Moved' marker on it (the Task Force has been within the Bad Weather for some time and will have soon)." },
+        { "step": "Soviet #8",  "label": "Battletales: Roll detection on all NATO Task Forces at sea with one die. The Soviet player may choose any one Task Force (two in the build-up scenario) and use two dice instead", "strategic": "1 TF", "tactical": "1 TF", "extended": "2 TFs" },
         { "step": "Soviet #9",  "label": "Begin the game starting with the Convoy Placement Phase." },
-        { "step": "Soviet #10", "label": "Optional: Draw 2 'options' markers from a cup and select one to keep. Repeat for each First Strike Point discarded or spy expended (maximum 2 picks)." }
+        { "step": "Soviet #10", "label": "Optional: Draw 2 'options' markers from a cup and select one to keep. Repeat for each First Strike Point discarded or spy expended (maximum of 2 given)." }
       ],
       "yearVariants": [
-        { "year": 1983, "notes": "Base era. Use the printed setup for the chosen Start Type as published." },
-        { "year": 1985, "notes": "Adds NATO cruise-missile capability. Both sides receive 1985 unit additions and one or two unit replacements (force modernization)." },
-        { "year": 1989, "notes": "Adds further unit modernizations on both sides (Ticonderoga VLS, additional SSNs for NATO; Tu-22 Backfire and Kuznetsov for the Soviets). Apply BOTH the 1985 additions AND the 1989 additions on top of the 1983 base." }
+        { "year": 1983, "notes": "Use the base scenario setup (Strategic Surprise, Tactical Surprise, or Build-up) as printed for 1983." },
+        { "year": 1985, "notes": "1985 additions: add the following to the map (per chosen start type). NATO (1985 additions): US-3, US-11, Los Angeles, UK AEW-3, Tornado, Aspide, Sturgeon (Ship/Sub/Air units at NS Norfolk USA, UK Port, NS Rota; one 'Replaces 83 unit'). SOVIET (1985 additions): additional Air, Ship, and Sub units at Kola Bases (one Tu-16 Badger is removed from the Baltic Bases and replaced through 'force modernization')." },
+        { "year": 1989, "notes": "1989 additions: add the following to the map; also add the 1985 additions, above. NATO (1989 additions): Thresher (in USA1) replaced with a US Sturgeon from the USA. Ethan Allen (on Turn 2) replaced with a US Sturgeon from the USA. Additional units include Ticonderoga VLS, Los Angeles, NS UK SSN-X, Konig, Tornado, Alpha; units at NS Norfolk USA, Brest, 'Replaces 83 unit'. SOVIET (1989 additions): Only two of the capital ships are in play; Soviet selects. Additional Ship, Air, Sub units at Kola Bases. 'Replaces 83 unit'. Bastion / Kola Bases assignments. Tu-22 Backfire (On Nuclear Capability Chart). The Destroyed box Tu-22 Backfire is placed in the Baltic Bases. Remove one Tu-16 Badger from the Baltic Bases replaced through force modernization." }
       ],
-      "specialRules": "**Choose Start Type before anything else** — all scaled values in the procedure below follow from that choice. Both players draw 5 cards each, then walk the pre-game setup procedure: 7 NATO steps followed by 10 Soviet steps (see the Start Types section below for the full step-by-step table). Begin the game starting with the Convoy Placement Phase.",
       "notes": []
     }
   ]
