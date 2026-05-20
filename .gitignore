@@ -14,6 +14,12 @@ dist-single
 *.local
 .env
 
+# BGG forum scrape outputs — full posts not committed to public history.
+# The committed *.placeholder.json provides a build-shape stub; the real data
+# is regenerated locally via scripts/scrape-bgg-bwn.mjs + curate-bgg-forum.mjs.
+src/data/blue-water-navy/_fragments/bgg-bwn-raw.json
+src/data/blue-water-navy/forum-knowledge.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
