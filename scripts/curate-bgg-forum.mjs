@@ -32,7 +32,10 @@ const DATA_DIR = join(ROOT, "src", "data", "blue-water-navy");
 const INPUT = join(DATA_DIR, "_fragments", "bgg-bwn-raw.json");
 const OUTPUT = join(DATA_DIR, "forum-knowledge.json");
 
-const DESIGNER_USERS = new Set(["stuuk"]); // Stuart Tonge
+const DESIGNER_USERS = new Set([
+  "stuuk",      // Stuart Tonge — designer
+  "chezhinkle", // Mathew Hinkle — credited "Designer" on BGG (developer/co-design)
+]);
 
 const TIER3_MIN_THUMBS = 3;
 
