@@ -17,6 +17,25 @@ export interface LearnSearchResult {
   score: number;
 }
 
+/** Shape of one curated BGG forum post (matches what the curator emits). */
+export interface ForumPostEntry {
+  author: string;
+  isDesigner: boolean;
+  createdAt?: string | null;
+  body: string;
+  thumbs?: number;
+  threadTitle?: string;
+  threadId?: string;
+  threadUrl?: string;
+  postUrl?: string | null;
+  forumName?: string;
+  tier?: number;
+}
+
+export interface ForumSearchResult extends ForumPostEntry {
+  score: number;
+}
+
 /**
  * Per-game search behavior. Pass to `searchRules` / `searchSequence` to enable
  * game-specific synonym expansion and module-name detection.
@@ -343,6 +362,66 @@ export function searchLearn(
         });
       }
     }
+  }
+
+  results.sort((a, b) => b.score - a.score);
+  return results.slice(0, maxResults);
+}
+
+/**
+ * Relevance-ranked search across curated forum posts (Tier 1+2+3 combined).
+ * Designed for AI Coach: returns the most relevant designer / endorsed posts
+ * for a specific user question. Tier 1 (designer) posts get a baseline score
+ * bonus so they're preferred over tier-equal community posts.
+ */
+export function searchForum(
+  query: string,
+  posts: ForumPostEntry[],
+  maxResults = 20,
+  config?: SearchConfig,
+): ForumSearchResult[] {
+  if (!posts || posts.length === 0) return [];
+
+  const rawTokens = query
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((t) => t.length > 0 && !STOP_WORDS.has(t));
+
+  const synonyms = config?.synonyms;
+  const tokens = [...rawTokens];
+  if (synonyms) {
+    for (const token of rawTokens) {
+      const syns = synonyms[token];
+      if (syns) for (const s of syns) tokens.push(s);
+    }
+  }
+
+  if (tokens.length === 0) return [];
+
+  const results: ForumSearchResult[] = [];
+  for (const p of posts) {
+    const bodyLower = (p.body ?? "").toLowerCase();
+    const titleLower = (p.threadTitle ?? "").toLowerCase();
+    let score = 0;
+    let matched = 0;
+    for (const token of tokens) {
+      const inTitle = titleLower.includes(token);
+      const inBody = bodyLower.includes(token);
+      if (!inTitle && !inBody) continue;
+      matched++;
+      if (inTitle) score += 6;
+      if (inBody) score += 1;
+    }
+    if (matched === 0) continue;
+
+    // Tier bonus: designer posts > endorsed > community
+    const tier = p.tier ?? (p.isDesigner ? 1 : 4);
+    const tierBonus = tier === 1 ? 8 : tier === 2 ? 3 : 1;
+
+    // Coverage scaling — posts matching more query tokens rank higher
+    score = (score + tierBonus) * (matched / tokens.length);
+
+    results.push({ ...p, score });
   }
 
   results.sort((a, b) => b.score - a.score);

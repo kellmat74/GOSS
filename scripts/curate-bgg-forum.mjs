@@ -37,7 +37,27 @@ const DESIGNER_USERS = new Set([
   "chezhinkle", // Mathew Hinkle — credited "Designer" on BGG (developer/co-design)
 ]);
 
-const TIER3_MIN_THUMBS = 3;
+// Note: BGG's thumbs/recommends count was not reliably scrapeable from the
+// rendered DOM (all posts came back as thumbs=0). Tier classification falls
+// back to engagement signals we DID capture: post position in a designer-
+// engaged thread, post body length, and presence in long threads.
+const MIN_SUBSTANTIVE_BODY_LEN = 60;
+const TIER3_MIN_THREAD_POSTS = 5;
+const TIER3_MIN_BODY_LEN = 120;
+
+// Drop posts that are pure social/moderation (low substance even from
+// designers — e.g. "thanks for the game!", "enjoy!", etc.)
+const SOCIAL_PATTERNS = [
+  /^thanks?[\s,.!]/i,
+  /^cheers[\s,.!]/i,
+  /^enjoy/i,
+  /^you'?re welcome/i,
+  /no fighting in the war room/i,
+];
+function isSocialNoise(body) {
+  if (body.length < 50 && SOCIAL_PATTERNS.some((re) => re.test(body))) return true;
+  return false;
+}
 
 if (!existsSync(INPUT)) {
   console.error(`Raw scrape not found at ${INPUT}`);
@@ -87,21 +107,38 @@ for (const forum of raw.forums ?? []) {
         forumName: forum.name,
       };
 
+      // Drop social/moderation noise even from designers
+      if (isSocialNoise(p.body ?? "")) {
+        droppedPosts++;
+        return;
+      }
+
+      // Drop very short bodies regardless of author (likely "yes", "ok", etc.)
+      if ((p.body ?? "").length < MIN_SUBSTANTIVE_BODY_LEN) {
+        droppedPosts++;
+        return;
+      }
+
       if (isDesignerPost) {
         tier1.push({ ...base, tier: 1 });
         return;
       }
 
-      // Tier 2: thread has a designer reply, this post predates the LAST one
-      // (so the designer "saw" it). Tighter: this post predates the last
-      // designer post AND has at least 1 thumb (some endorsement signal).
-      if (designerInThread && i < lastDesignerIndex && (p.thumbs ?? 0) >= 1) {
+      // Tier 2: thread has a designer reply AND this post predates the LAST
+      // designer post (the designer saw it and didn't contradict it).
+      // Falls back from the old "thumbs >= 1" requirement since thumbs
+      // weren't reliably scrapeable.
+      if (designerInThread && i < lastDesignerIndex) {
         tier2.push({ ...base, tier: 2 });
         return;
       }
 
-      // Tier 3: well-thumbed community post in an active thread.
-      if ((p.thumbs ?? 0) >= TIER3_MIN_THUMBS && posts.length >= 3) {
+      // Tier 3: substantive post in an active thread without designer
+      // engagement. Heuristic: long body + multi-reply thread.
+      if (
+        posts.length >= TIER3_MIN_THREAD_POSTS &&
+        (p.body ?? "").length >= TIER3_MIN_BODY_LEN
+      ) {
         tier3.push({ ...base, tier: 3 });
         return;
       }

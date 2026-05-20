@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import type { RuleEntry, Phase } from "../../types/goss";
 
-import { searchRules, searchSequence, searchLearn, type SearchConfig, type LearnSearchResult } from "../../utils/rulesSearch";
+import { searchRules, searchSequence, searchLearn, searchForum, type SearchConfig, type LearnSearchResult, type ForumPostEntry, type ForumSearchResult } from "../../utils/rulesSearch";
 import type { LearnChapter } from "../../types/learn";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
@@ -46,31 +46,13 @@ interface SequenceContext {
   notes: string[];
 }
 
-interface ForumPost {
-  author: string;
-  isDesigner?: boolean;
-  createdAt?: string | null;
-  body: string;
-  thumbs?: number;
-  threadTitle?: string;
-  threadUrl?: string;
-  postUrl?: string | null;
-  tier?: number;
-}
-interface ForumContextShape {
-  tier1?: ForumPost[];
-  tier2?: ForumPost[];
-  tier3?: ForumPost[];
-  designerAllowlist?: string[];
-}
-
 function buildSystemPrompt(
   topRules: RuleEntry[],
   summaryRules: RuleEntry[],
   sequenceItems: SequenceContext[] = [],
   learnItems: LearnSearchResult[] = [],
   coachContext?: unknown,
-  forumContext?: unknown,
+  forumHits: ForumSearchResult[] = [],
   preamble?: string,
 ): string {
   const fullText = topRules
@@ -117,34 +99,18 @@ function buildSystemPrompt(
   }
 
   let forumSection = "";
-  if (forumContext && typeof forumContext === "object") {
-    const fc = forumContext as ForumContextShape;
-    const tier1 = (fc.tier1 ?? []).slice(0, 30);
-    const tier2 = (fc.tier2 ?? []).slice(0, 15);
-    const fmt = (p: ForumPost, tierLabel: string) => {
-      const date = p.createdAt ? ` ${p.createdAt}` : "";
+  if (forumHits.length > 0) {
+    const fmt = (p: ForumSearchResult) => {
+      const date = p.createdAt ? ` (${(p.createdAt ?? "").slice(0, 10)})` : "";
       const url = p.postUrl ?? p.threadUrl ?? "";
+      const tierLabel =
+        p.tier === 1 ? "DESIGNER" : p.tier === 2 ? "ENDORSED" : "COMMUNITY";
       const thread = p.threadTitle ? ` — "${p.threadTitle}"` : "";
-      return `### [${tierLabel}] ${p.author}${date}${thread}\nURL: ${url}\n\n${p.body}`;
+      return `### [${tierLabel}] @${p.author}${date}${thread}\nURL: ${url}\n${p.body}`;
     };
-    const parts: string[] = [];
-    if (tier1.length > 0) {
-      parts.push(
-        `### TIER 1 — DESIGNER POSTS (canonical, take as authoritative):\n\n` +
-          tier1.map((p) => fmt(p, "Tier 1 / Designer")).join("\n\n---\n\n"),
-      );
-    }
-    if (tier2.length > 0) {
-      parts.push(
-        `### TIER 2 — DESIGNER-ENGAGED COMMUNITY POSTS (designer saw and did not contradict):\n\n` +
-          tier2.map((p) => fmt(p, "Tier 2 / Endorsed")).join("\n\n---\n\n"),
-      );
-    }
-    if (parts.length > 0) {
-      forumSection =
-        `\n\n## BGG forum knowledge (cite the URL when quoting):\n\n` +
-        parts.join("\n\n---\n\n");
-    }
+    forumSection =
+      `\n\n## Relevant BGG forum posts (rank-ordered by relevance to the question; cite the URL when quoting):\n\n` +
+      forumHits.map(fmt).join("\n\n---\n\n");
   }
 
   const defaultPreamble = "You are a rules expert for a complex tabletop wargame system.";
@@ -303,6 +269,19 @@ export function AskPanel({
           ? searchLearn(messageText, learnChapters, 5, searchConfig)
           : [];
 
+        // Search curated forum corpus (Tier 1 designer + Tier 2 endorsed + Tier 3 community)
+        // for posts relevant to THIS question
+        const forumPosts = forumContext && typeof forumContext === "object"
+          ? [
+              ...(((forumContext as { tier1?: ForumPostEntry[] }).tier1) ?? []),
+              ...(((forumContext as { tier2?: ForumPostEntry[] }).tier2) ?? []),
+              ...(((forumContext as { tier3?: ForumPostEntry[] }).tier3) ?? []),
+            ]
+          : [];
+        const forumHits = forumPosts.length > 0
+          ? searchForum(messageText, forumPosts, 12, searchConfig)
+          : [];
+
         const response = await fetch(workerUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -313,7 +292,7 @@ export function AskPanel({
               seqResults,
               learnResults,
               coachContext,
-              forumContext,
+              forumHits,
               systemPromptPreamble,
             ),
             messages: newMessages.map((m) => ({
