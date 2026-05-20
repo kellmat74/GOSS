@@ -55,12 +55,17 @@ export const blueWaterNavyConfig: GameSystemConfig = {
       scenarios: [{ id: "all", label: "All Scenarios" }],
       data: {
         // BWN has a single rulebook — rules load from baseData.rules below.
-        // Module data only holds module-specific extras (actions, cards, scenario book, coach context).
+        // Module data only holds module-specific extras (actions, cards, scenario book, coach + forum context).
         rules: () => Promise.resolve({ default: [] }),
         actions: () => import("./actions.json"),
         cards: () => import("./cards.json"),
         scenarioBook: () => import("./scenario-book.json"),
         coachContext: () => import("./coach-context.json"),
+        // Forum-knowledge.json is gitignored (full BGG post text not mirrored
+        // in public repo). The ensure-forum-knowledge prebuild hook copies a
+        // committed placeholder over if the local file is missing — so the
+        // build always works even without a fresh scrape.
+        forumContext: () => import("./forum-knowledge.json"),
       },
     },
     // Future: Pacific module added when Compass releases the game.

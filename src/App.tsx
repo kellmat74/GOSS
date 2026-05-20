@@ -174,6 +174,7 @@ interface GameData {
   cards: PhysicalCard[];
   scenarioBook: ScenarioBook | null;
   coachContext: unknown | null;
+  forumContext: unknown | null;
 }
 
 const EMPTY_LEARN: LearnData = { chapters: [] };
@@ -240,6 +241,8 @@ function useGameData(
       moduleConfig?.data.scenarioBook ? moduleConfig.data.scenarioBook() : Promise.resolve(null),
       // Coach context (auxiliary teaching content injected into Ask system prompt)
       moduleConfig?.data.coachContext ? moduleConfig.data.coachContext() : Promise.resolve(null),
+      // Forum context (curated BGG forum knowledge — Tier 1+2 designer/endorsed posts)
+      moduleConfig?.data.forumContext ? moduleConfig.data.forumContext() : Promise.resolve(null),
     ]).then((results) => {
       if (cancelled) return;
       const [
@@ -247,7 +250,7 @@ function useGameData(
         modRulesRaw, modAdvRulesRaw, overlayRaw, learnOverlayRaw,
         baseErrataRaw, moduleErrataRaw,
         baseTablesRaw, moduleTablesRaw,
-        actionsRaw, cardsRaw, scenarioBookRaw, coachContextRaw,
+        actionsRaw, cardsRaw, scenarioBookRaw, coachContextRaw, forumContextRaw,
       ] = results;
 
       const baseRules: RuleEntry[] = [
@@ -280,8 +283,9 @@ function useGameData(
       const cards: PhysicalCard[] = ((cardsRaw as any)?.default ?? []) as PhysicalCard[];
       const scenarioBook: ScenarioBook | null = ((scenarioBookRaw as any)?.default ?? null) as ScenarioBook | null;
       const coachContext: unknown | null = (coachContextRaw as any)?.default ?? null;
+      const forumContext: unknown | null = (forumContextRaw as any)?.default ?? null;
 
-      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata, tables, actions, cards, scenarioBook, coachContext });
+      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata, tables, actions, cards, scenarioBook, coachContext, forumContext });
       setLoading(false);
     }).catch((err) => {
       if (!cancelled) {
@@ -463,6 +467,7 @@ function App() {
             searchConfig={gameConfig.searchConfig}
             learnChapters={learnChapters}
             coachContext={data?.coachContext}
+            forumContext={data?.forumContext}
           />
         )}
         {view === "options" && gameConfig?.features.options && (

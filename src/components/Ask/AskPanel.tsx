@@ -19,6 +19,8 @@ interface AskPanelProps {
   learnChapters?: LearnChapter[];
   /** Auxiliary "coach context" JSON (e.g. Often Overlooked Rules) injected wholesale. */
   coachContext?: unknown;
+  /** Curated forum knowledge (Tier 1+2 designer/endorsed posts) — injected wholesale with provenance. */
+  forumContext?: unknown;
 }
 
 interface ChatMessage {
@@ -44,12 +46,31 @@ interface SequenceContext {
   notes: string[];
 }
 
+interface ForumPost {
+  author: string;
+  isDesigner?: boolean;
+  createdAt?: string | null;
+  body: string;
+  thumbs?: number;
+  threadTitle?: string;
+  threadUrl?: string;
+  postUrl?: string | null;
+  tier?: number;
+}
+interface ForumContextShape {
+  tier1?: ForumPost[];
+  tier2?: ForumPost[];
+  tier3?: ForumPost[];
+  designerAllowlist?: string[];
+}
+
 function buildSystemPrompt(
   topRules: RuleEntry[],
   summaryRules: RuleEntry[],
   sequenceItems: SequenceContext[] = [],
   learnItems: LearnSearchResult[] = [],
   coachContext?: unknown,
+  forumContext?: unknown,
   preamble?: string,
 ): string {
   const fullText = topRules
@@ -95,6 +116,37 @@ function buildSystemPrompt(
     }
   }
 
+  let forumSection = "";
+  if (forumContext && typeof forumContext === "object") {
+    const fc = forumContext as ForumContextShape;
+    const tier1 = (fc.tier1 ?? []).slice(0, 30);
+    const tier2 = (fc.tier2 ?? []).slice(0, 15);
+    const fmt = (p: ForumPost, tierLabel: string) => {
+      const date = p.createdAt ? ` ${p.createdAt}` : "";
+      const url = p.postUrl ?? p.threadUrl ?? "";
+      const thread = p.threadTitle ? ` — "${p.threadTitle}"` : "";
+      return `### [${tierLabel}] ${p.author}${date}${thread}\nURL: ${url}\n\n${p.body}`;
+    };
+    const parts: string[] = [];
+    if (tier1.length > 0) {
+      parts.push(
+        `### TIER 1 — DESIGNER POSTS (canonical, take as authoritative):\n\n` +
+          tier1.map((p) => fmt(p, "Tier 1 / Designer")).join("\n\n---\n\n"),
+      );
+    }
+    if (tier2.length > 0) {
+      parts.push(
+        `### TIER 2 — DESIGNER-ENGAGED COMMUNITY POSTS (designer saw and did not contradict):\n\n` +
+          tier2.map((p) => fmt(p, "Tier 2 / Endorsed")).join("\n\n---\n\n"),
+      );
+    }
+    if (parts.length > 0) {
+      forumSection =
+        `\n\n## BGG forum knowledge (cite the URL when quoting):\n\n` +
+        parts.join("\n\n---\n\n");
+    }
+  }
+
   const defaultPreamble = "You are a rules expert for a complex tabletop wargame system.";
   return `${preamble ?? defaultPreamble} Answer questions about the rules accurately, citing specific rule sections in parenthesized format like (3.2.1) so they render as clickable links.
 
@@ -106,7 +158,7 @@ ${fullText}
 
 ## Additional related rules (summaries):
 
-${summaries}${sequenceSection}${learnSection}${coachSection}`;
+${summaries}${sequenceSection}${learnSection}${coachSection}${forumSection}`;
 }
 
 function CopyButton({ text, isUser, question }: { text: string; isUser: boolean; question?: string }) {
@@ -182,6 +234,7 @@ export function AskPanel({
   searchConfig,
   learnChapters = [],
   coachContext,
+  forumContext,
 }: AskPanelProps) {
   const [messages, setMessages] = useState<ChatMessage[]>(() => loadHistory(gameId));
 
@@ -260,6 +313,7 @@ export function AskPanel({
               seqResults,
               learnResults,
               coachContext,
+              forumContext,
               systemPromptPreamble,
             ),
             messages: newMessages.map((m) => ({

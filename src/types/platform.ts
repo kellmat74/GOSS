@@ -91,6 +91,8 @@ export interface ModuleConfig {
     scenarioBook?: () => Promise<{ default: unknown }>;
     /** Auxiliary coaching context fed wholesale into the Ask system prompt (e.g. "often overlooked" rules, designer notes). */
     coachContext?: () => Promise<{ default: unknown }>;
+    /** Curated forum knowledge (Tier 1+2 designer / endorsed posts) for Ask context. */
+    forumContext?: () => Promise<{ default: unknown }>;
   };
 }
 
