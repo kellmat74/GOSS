@@ -14,11 +14,10 @@ dist-single
 *.local
 .env
 
-# BGG forum scrape outputs — full posts not committed to public history.
-# The committed *.placeholder.json provides a build-shape stub; the real data
-# is regenerated locally via scripts/scrape-bgg-bwn.mjs + curate-bgg-forum.mjs.
+# BGG raw scrape output (per-thread raw bodies + metadata, ~3.6 MB) — only
+# the curated derivative `forum-knowledge.json` is committed for deployment.
+# Refresh locally via `npm run refresh:bgg`.
 src/data/blue-water-navy/_fragments/bgg-bwn-raw.json
-src/data/blue-water-navy/forum-knowledge.json
 
 # Editor directories and files
 .vscode/*
