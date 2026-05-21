@@ -20,7 +20,7 @@ import { useOptionalRules } from "./hooks/useOptionalRules";
 import { mergeRules } from "./utils/mergeRules";
 import { mergeSequence } from "./utils/mergeSequence";
 import { mergeLearn } from "./utils/mergeLearn";
-import { getVisibleGames, getGameById, getRequestedGameId } from "./data/registry";
+import { getVisibleGames, getRequestedGameId } from "./data/registry";
 import type { Phase, RuleEntry, SequenceOverlay, CardCategory, PhysicalCard, ScenarioBook } from "./types/goss";
 import { ActionsPanel } from "./components/Actions/ActionsPanel";
 import { CardsPanel } from "./components/Cards/CardsPanel";
@@ -104,10 +104,25 @@ function useGameSelection() {
     return "standard";
   });
 
+  // gameConfig must come from visibleGames (not getGameById against ALL_GAMES)
+  // so the UI never shows content for a game that isn't in the dropdown.
+  // Otherwise stale localStorage from a previous ?draft=true session can
+  // strand a user on a draft game with no way to switch back.
   const gameConfig = useMemo(
-    () => getGameById(gameSystemId) ?? visibleGames[0],
+    () => visibleGames.find((g) => g.id === gameSystemId) ?? visibleGames[0],
     [gameSystemId, visibleGames],
   );
+
+  // If the persisted gameSystemId points at a game that's no longer visible
+  // (draft mode toggled off, etc.), reset to the active visible game.
+  useEffect(() => {
+    if (visibleGames.length === 0) return;
+    if (!visibleGames.some((g) => g.id === gameSystemId)) {
+      setGameSystemId(visibleGames[0].id);
+      setModuleId(null);
+      setScenario(null);
+    }
+  }, [gameSystemId, visibleGames]);
 
   useEffect(() => { localStorage.setItem(GAME_SYSTEM_KEY, gameSystemId); }, [gameSystemId]);
   useEffect(() => { moduleId ? localStorage.setItem(MODULE_KEY, moduleId) : localStorage.removeItem(MODULE_KEY); }, [moduleId]);
