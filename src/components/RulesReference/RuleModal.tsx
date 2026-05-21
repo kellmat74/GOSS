@@ -191,29 +191,10 @@ function ModalBody({
       )}
 
       {/* Designer Q&A clarifications — section-scoped notes from a Q&A doc */}
-      {(baseRule?.clarifications ?? activeRule.clarifications ?? []).length > 0 && (
-        <div className="mt-4 border-t-2 border-teal-400 pt-3 dark:border-teal-700">
-          <div className="mb-2 flex items-center gap-2">
-            <span className="rounded bg-teal-500 px-1.5 py-0.5 text-xs font-bold text-white">
-              DESIGNER Q&amp;A
-            </span>
-          </div>
-          <div className="space-y-2">
-            {(baseRule?.clarifications ?? activeRule.clarifications ?? []).map((c, i) => (
-              <div key={i} className="rounded-md bg-teal-50 p-3 dark:bg-teal-900/20">
-                <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300">
-                  <InlineText text={c.text} onRuleClick={openRule} />
-                </p>
-                {c.citation && (
-                  <p className="mt-1 text-xs text-stone-500 dark:text-stone-400">
-                    — {c.citation}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      <DesignerQABlock
+        clarifications={baseRule?.clarifications ?? activeRule.clarifications ?? []}
+        onRuleClick={openRule}
+      />
 
       {/* Errata callout — amber, between base rule and scenario overlays */}
       {errata && (
@@ -287,6 +268,52 @@ function ModalBody({
         </div>
       )}
     </>
+  );
+}
+
+/** Designer Q&A — collapsible block of section-scoped clarifications from the
+ *  designer Q&A PDF. Renders nothing if there are no clarifications. */
+function DesignerQABlock({
+  clarifications,
+  onRuleClick,
+}: {
+  clarifications: { text: string; citation?: string }[];
+  onRuleClick: (ref: string) => void;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  if (clarifications.length === 0) return null;
+  return (
+    <div className="mt-4 border-t-2 border-teal-400 pt-3 dark:border-teal-700">
+      <button
+        type="button"
+        onClick={() => setExpanded((e) => !e)}
+        className="mb-2 flex w-full items-center gap-2 text-left"
+      >
+        <span className="rounded bg-teal-500 px-1.5 py-0.5 text-xs font-bold text-white">
+          DESIGNER Q&amp;A
+        </span>
+        <span className="text-xs text-stone-500 dark:text-stone-400">
+          {clarifications.length} clarification{clarifications.length === 1 ? "" : "s"}
+        </span>
+        <span className="ml-auto text-xs text-stone-400">{expanded ? "▾" : "▸"}</span>
+      </button>
+      {expanded && (
+        <div className="space-y-2">
+          {clarifications.map((c, i) => (
+            <div key={i} className="rounded-md bg-teal-50 p-3 dark:bg-teal-900/20">
+              <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300">
+                <InlineText text={c.text} onRuleClick={onRuleClick} />
+              </p>
+              {c.citation && (
+                <p className="mt-1 text-xs text-stone-500 dark:text-stone-400">
+                  — {c.citation}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 
