@@ -73,6 +73,67 @@ const tier3 = [];
 let totalPosts = 0;
 let droppedPosts = 0;
 
+// Load BWN rules.json to build an allowlist for ref validation. Posts on BGG
+// from 2019-2025 cite the ORIGINAL 2020 errata numbering, not the v1.17
+// renumbered scheme. Each rule entry carries both: `section` (v1.17) and
+// `legacyRef` (2020). We map any encountered ref BACK to its v1.17 section so
+// the Hive Mind section in the rules tab works correctly.
+const BWN_RULES_PATH = join(DATA_DIR, "rules.json");
+const realSections = new Set();   // v1.17 section IDs
+const legacyToV117 = new Map();   // 2020 ref -> v1.17 section
+if (existsSync(BWN_RULES_PATH)) {
+  try {
+    const rules = JSON.parse(readFileSync(BWN_RULES_PATH, "utf8"));
+    for (const r of rules) {
+      if (r.section) realSections.add(String(r.section));
+      if (r.legacyRef && r.section) {
+        // Multiple v1.17 sections can share a legacyRef; keep first
+        if (!legacyToV117.has(String(r.legacyRef))) {
+          legacyToV117.set(String(r.legacyRef), String(r.section));
+        }
+      }
+    }
+    console.log(
+      `Loaded ${realSections.size} v1.17 sections + ${legacyToV117.size} legacyRef mappings for ref validation`,
+    );
+  } catch (err) {
+    console.warn(`Could not load rules.json for ref validation: ${err.message}`);
+  }
+}
+
+// Resolve any encountered ref to its v1.17 canonical section.
+// Order: exact v1.17 match → legacyRef remap → drop.
+function canonicalizeRef(ref) {
+  if (realSections.has(ref)) return ref;
+  if (legacyToV117.has(ref)) return legacyToV117.get(ref);
+  return null;
+}
+
+// Extract rule-section references from text. We match a wide net of candidates
+// then drop anything that doesn't correspond to a real BWN rule section.
+// Patterns covered:
+//   (5.1.3) (3.5)         — parenthesized refs
+//   §5.1.3                — section-symbol refs
+//   rule 5.1.3            — verbose form
+//   "17.11 Step 9..."     — bare ref at start of title or after whitespace
+function extractRuleRefs(text) {
+  if (!text) return [];
+  const set = new Set();
+  // Wide candidate match — any X.Y or X.Y.Z or X.Y.Z.W token
+  const wide = /(?:^|[\s(§\[])(\d{1,2}(?:\.\d{1,2}){1,3})(?=[\s)\].,:;!?]|$)/g;
+  let m;
+  while ((m = wide.exec(text)) !== null) {
+    const canonical = canonicalizeRef(m[1]);
+    if (canonical) set.add(canonical);
+  }
+  const verbose = /\b(?:rule|section)\s+(\d{1,2}(?:\.\d{1,2}){0,3})\b/gi;
+  while ((m = verbose.exec(text)) !== null) {
+    const canonical = canonicalizeRef(m[1]);
+    if (canonical) set.add(canonical);
+  }
+  return [...set].sort();
+}
+
 for (const forum of raw.forums ?? []) {
   for (const thread of forum.threads ?? []) {
     const posts = thread.posts ?? [];
@@ -94,6 +155,11 @@ for (const forum of raw.forums ?? []) {
       const isDesignerPost =
         DESIGNER_USERS.has((p.author ?? "").toLowerCase()) || p.isDesigner;
 
+      // Combine thread-title refs (apply to all posts in thread) with body refs
+      const threadRefs = extractRuleRefs(thread.title ?? "");
+      const bodyRefs = extractRuleRefs(p.body ?? "");
+      const ruleRefs = [...new Set([...threadRefs, ...bodyRefs])].sort();
+
       const base = {
         author: p.author,
         isDesigner: isDesignerPost,
@@ -105,6 +171,7 @@ for (const forum of raw.forums ?? []) {
         threadUrl: thread.url,
         postUrl: p.url ?? thread.url,
         forumName: forum.name,
+        ruleRefs,
       };
 
       // Drop social/moderation noise even from designers
@@ -154,6 +221,29 @@ tier1.sort(byDateDesc);
 tier2.sort(byDateDesc);
 tier3.sort(byDateDesc);
 
+// Build per-rule lightweight index for the Rules tab "Hive Mind" section.
+// Only Tier 1 (designer-canonical) posts get indexed — Tier 2/3 are Ask-only.
+// Each entry stores just enough to render a list row + link: author, date,
+// short snippet, post URL, thread title.
+const ruleMentions = {}; // ruleRef -> [ { author, createdAt, snippet, postUrl, threadTitle, threadUrl } ]
+for (const p of tier1) {
+  for (const ref of p.ruleRefs ?? []) {
+    if (!ruleMentions[ref]) ruleMentions[ref] = [];
+    ruleMentions[ref].push({
+      author: p.author,
+      createdAt: p.createdAt,
+      snippet: (p.body ?? "").slice(0, 240).replace(/\s+/g, " "),
+      postUrl: p.postUrl,
+      threadTitle: p.threadTitle,
+      threadUrl: p.threadUrl,
+    });
+  }
+}
+// Sort each rule's mentions: newest first
+for (const arr of Object.values(ruleMentions)) {
+  arr.sort((a, b) => (b.createdAt ?? "").localeCompare(a.createdAt ?? ""));
+}
+
 const out = {
   generated: new Date().toISOString(),
   source: {
@@ -169,7 +259,9 @@ const out = {
     tier1Count: tier1.length,
     tier2Count: tier2.length,
     tier3Count: tier3.length,
+    rulesWithMentions: Object.keys(ruleMentions).length,
   },
+  ruleMentions,
   tier1,
   tier2,
   tier3,

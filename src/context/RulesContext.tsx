@@ -30,6 +30,18 @@ interface RulesContextValue {
   getModuleShortLabel: (moduleId: string) => string;
   /** Long label for a module id (e.g. "war" → "Wacht am Rhein"). Falls back to the id. */
   getModuleLabel: (moduleId: string) => string;
+  /** Get BGG forum "hive mind" mentions for a given rule section, or null if none. */
+  getForumMentions: (section: string) => ForumMention[] | null;
+}
+
+/** One designer-canonical (Tier 1) BGG post that references a specific rule. */
+export interface ForumMention {
+  author: string;
+  createdAt: string | null;
+  snippet: string;
+  postUrl: string | null;
+  threadTitle: string;
+  threadUrl: string;
 }
 
 const RulesContext = createContext<RulesContextValue | null>(null);
@@ -46,10 +58,12 @@ interface RulesProviderProps {
   moduleErrata?: ErrataFile | null;
   /** Module configs from the active game — drives moduleId → label lookups. */
   modules?: ModuleConfig[];
+  /** Curated BGG forum knowledge with per-rule mentions index (from forum-knowledge.json) */
+  forumContext?: unknown;
   children: ReactNode;
 }
 
-export function RulesProvider({ rules, baseErrata, moduleErrata, modules, children }: RulesProviderProps) {
+export function RulesProvider({ rules, baseErrata, moduleErrata, modules, forumContext, children }: RulesProviderProps) {
   const [activeRule, setActiveRule] = useState<RuleEntry | null>(null);
   const [history, setHistory] = useState<RuleEntry[]>([]);
 
@@ -219,9 +233,36 @@ export function RulesProvider({ rules, baseErrata, moduleErrata, modules, childr
     [moduleLabelMap],
   );
 
+  // BGG forum hive-mind mentions: per-rule lookup. Populated from
+  // forum-knowledge.json's `ruleMentions` field (built by curate-bgg-forum.mjs).
+  const ruleMentionsMap = useMemo(() => {
+    if (!forumContext || typeof forumContext !== "object") return new Map<string, ForumMention[]>();
+    const raw = (forumContext as { ruleMentions?: Record<string, ForumMention[]> }).ruleMentions ?? {};
+    const map = new Map<string, ForumMention[]>();
+    for (const [section, mentions] of Object.entries(raw)) {
+      if (Array.isArray(mentions) && mentions.length > 0) map.set(section, mentions);
+    }
+    return map;
+  }, [forumContext]);
+
+  const getForumMentions = useCallback(
+    (section: string): ForumMention[] | null => {
+      const key = section.toLowerCase().trim();
+      // Try exact, then with/without trailing .0 like getRuleBySection does
+      return (
+        ruleMentionsMap.get(section) ??
+        ruleMentionsMap.get(key) ??
+        ruleMentionsMap.get(section.replace(/\.0$/, "")) ??
+        ruleMentionsMap.get(section + ".0") ??
+        null
+      );
+    },
+    [ruleMentionsMap],
+  );
+
   const value = useMemo(
-    () => ({ rules, openRule, closeRule, goBack, goNext, goPrev, activeRule, history, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection, sectionsWithErrata, getModuleShortLabel, getModuleLabel }),
-    [rules, openRule, closeRule, goBack, goNext, goPrev, activeRule, history, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection, sectionsWithErrata, getModuleShortLabel, getModuleLabel]
+    () => ({ rules, openRule, closeRule, goBack, goNext, goPrev, activeRule, history, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection, sectionsWithErrata, getModuleShortLabel, getModuleLabel, getForumMentions }),
+    [rules, openRule, closeRule, goBack, goNext, goPrev, activeRule, history, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection, sectionsWithErrata, getModuleShortLabel, getModuleLabel, getForumMentions]
   );
 
   return <RulesContext.Provider value={value}>{children}</RulesContext.Provider>;

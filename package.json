@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node scripts/ensure-forum-knowledge.mjs && vite",
     "build": "node scripts/ensure-forum-knowledge.mjs && tsc -b && vite build",
-    "build:single": "node scripts/ensure-forum-knowledge.mjs && tsc -b && vite build --config vite.singlefile.config.ts --outDir dist-single && node scripts/inline-offline-assets.mjs",
+    "build:single": "node scripts/strip-forum-for-singlefile.mjs -- node scripts/build-single-inner.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "scrape:bgg": "node scripts/scrape-bgg-bwn.mjs",

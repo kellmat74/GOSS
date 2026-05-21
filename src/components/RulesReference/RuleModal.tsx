@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef, useCallback, useState } from "react";
 import { createPortal } from "react-dom";
 import { useRules } from "../../context/RulesContext";
 import { useTables } from "../../context/TablesContext";
@@ -6,7 +6,7 @@ import { GlossaryHighlighter } from "../GlossaryHighlighter";
 import { parseRuleRefNodes } from "../../utils/parseRuleRefs";
 
 export function RuleModal() {
-  const { activeRule, history, closeRule, goBack, goNext, goPrev, openRule, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection, getModuleLabel } = useRules();
+  const { activeRule, history, closeRule, goBack, goNext, goPrev, openRule, getRuleBySection, getRulesForSection, hasNext, hasPrev, getErrataForSection, getModuleLabel, getForumMentions } = useRules();
   const { openTable, tables } = useTables();
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -105,6 +105,7 @@ export function RuleModal() {
             openRule={openRule}
             getErrataForSection={getErrataForSection}
             getModuleLabel={getModuleLabel}
+            getForumMentions={getForumMentions}
           />
         </div>
 
@@ -142,7 +143,7 @@ function formatErrataDate(iso: string): string {
   return d.toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
 }
 
-/** Combined view: base rule + errata + scenario overlays + cross-refs */
+/** Combined view: base rule + errata + scenario overlays + hive mind + cross-refs */
 function ModalBody({
   activeRule,
   getRulesForSection,
@@ -150,6 +151,7 @@ function ModalBody({
   openRule,
   getErrataForSection,
   getModuleLabel,
+  getForumMentions,
 }: {
   activeRule: import("../../types/goss").RuleEntry;
   getRulesForSection: (section: string) => import("../../types/goss").RuleEntry[];
@@ -157,6 +159,7 @@ function ModalBody({
   openRule: (sectionOrId: string) => void;
   getErrataForSection: (section: string) => import("../../context/RulesContext").ErrataForSection | null;
   getModuleLabel: (moduleId: string) => string;
+  getForumMentions: (section: string) => import("../../context/RulesContext").ForumMention[] | null;
 }) {
   // Get all rules for this section (base + scenario overlays)
   const allForSection = getRulesForSection(activeRule.section);
@@ -255,6 +258,9 @@ function ModalBody({
 
       {/* If no base rule (scenario-only section), nothing extra to show */}
 
+      {/* BGG Hive Mind — Tier 1 designer-canonical posts referencing this rule */}
+      <HiveMindBlock section={activeRule.section} getForumMentions={getForumMentions} />
+
       {/* Cross-references */}
       {allRefs.size > 0 && (
         <div className="mt-6 border-t border-stone-200 pt-4 dark:border-stone-700">
@@ -281,6 +287,75 @@ function ModalBody({
         </div>
       )}
     </>
+  );
+}
+
+/** "BGG Hive Mind" — collapsible list of designer-canonical forum posts that
+ *  reference this rule section. Renders nothing if there are no mentions. */
+function HiveMindBlock({
+  section,
+  getForumMentions,
+}: {
+  section: string;
+  getForumMentions: (section: string) => import("../../context/RulesContext").ForumMention[] | null;
+}) {
+  const mentions = getForumMentions(section);
+  const [expanded, setExpanded] = useState(false);
+  if (!mentions || mentions.length === 0) return null;
+
+  return (
+    <div className="mt-6 border-t-2 border-purple-400 pt-3 dark:border-purple-700">
+      <button
+        type="button"
+        onClick={() => setExpanded((e) => !e)}
+        className="mb-2 flex w-full items-center gap-2 text-left"
+      >
+        <span className="rounded bg-purple-500 px-1.5 py-0.5 text-xs font-bold text-white">
+          BGG HIVE MIND
+        </span>
+        <span className="text-xs text-stone-500 dark:text-stone-400">
+          {mentions.length} designer post{mentions.length === 1 ? "" : "s"} on BGG reference this rule
+        </span>
+        <span className="ml-auto text-xs text-stone-400">{expanded ? "▾" : "▸"}</span>
+      </button>
+      {expanded && (
+        <div className="space-y-2">
+          {mentions.map((m, i) => {
+            const date = m.createdAt ? m.createdAt.slice(0, 10) : "";
+            const linkUrl = m.postUrl ?? m.threadUrl;
+            return (
+              <div key={i} className="rounded-md bg-purple-50 p-3 text-sm dark:bg-purple-900/20">
+                <div className="mb-1 flex flex-wrap items-baseline gap-2 text-xs">
+                  <span className="font-semibold text-purple-700 dark:text-purple-300">
+                    @{m.author}
+                  </span>
+                  {date && <span className="text-stone-500">{date}</span>}
+                  {m.threadTitle && (
+                    <span className="italic text-stone-500 dark:text-stone-400">
+                      — "{m.threadTitle}"
+                    </span>
+                  )}
+                </div>
+                <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300">
+                  {m.snippet}
+                  {m.snippet.length >= 240 && "…"}
+                </p>
+                {linkUrl && (
+                  <a
+                    href={linkUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1.5 inline-block text-xs text-purple-700 underline hover:text-purple-500 dark:text-purple-400 dark:hover:text-purple-300"
+                  >
+                    Read full post on BGG ↗
+                  </a>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
   );
 }
 

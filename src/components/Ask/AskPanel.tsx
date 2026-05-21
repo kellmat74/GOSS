@@ -445,12 +445,46 @@ export function AskPanel({
   );
 }
 
-/** Render a line of text with bold + rule refs */
+/** Render a line of text with bold + rule refs + clickable URLs. */
 function MarkdownLine({ text }: { text: string }) {
-  // Strip bold markers for RuleInlineText, then we handle bold separately
-  // Actually, render bold inline with rule refs by pre-processing bold
+  // Strip bold markers; we don't currently style them
   const stripped = text.replace(/\*\*/g, "");
-  return <RuleInlineText text={stripped} />;
+  // Detect URLs (http/https) and render them as <a>. Other segments pass
+  // through the rule-ref / glossary inline renderer.
+  const urlRe = /https?:\/\/[^\s)\]]+[^\s)\].,;:!?]/g;
+  const parts: React.ReactNode[] = [];
+  let lastIdx = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = urlRe.exec(stripped))) {
+    if (match.index > lastIdx) {
+      parts.push(
+        <RuleInlineText key={`t${key++}`} text={stripped.slice(lastIdx, match.index)} />,
+      );
+    }
+    const url = match[0];
+    const isBgg = url.includes("boardgamegeek.com");
+    parts.push(
+      <a
+        key={`u${key++}`}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`underline ${
+          isBgg
+            ? "text-purple-600 hover:text-purple-500 dark:text-purple-400"
+            : "text-accent-700 hover:text-accent-500 dark:text-accent-400"
+        }`}
+      >
+        {isBgg ? "BGG ↗" : url}
+      </a>,
+    );
+    lastIdx = urlRe.lastIndex;
+  }
+  if (lastIdx < stripped.length) {
+    parts.push(<RuleInlineText key={`t${key++}`} text={stripped.slice(lastIdx)} />);
+  }
+  return parts.length > 0 ? <>{parts}</> : <RuleInlineText text={stripped} />;
 }
 
 /** Render assistant message with clickable rule refs */
