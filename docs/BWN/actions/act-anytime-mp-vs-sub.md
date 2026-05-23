@@ -23,13 +23,11 @@ An enemy submarine moves into or through a Sea Zone where you have an MP On Patr
 ## Procedure
 
 1. An enemy submarine moves into or through the MP's patrol zone. Declare the MP is reacting (5.3.4.1).
-2. Resolve a standard ASW attack: roll the MP's ASW dice, add Tactical Value, apply DRMs (Bad Weather -2 for MP, Arctic ice -1, Hydrophones +1) (7.2.1).
-   {{PA-BLOCK: ??? — ASW dice and DRMs}}
-3. Each die ≥ the target submarine's Defense value causes a step loss. (N) submarines are only killed on a natural 10 when the attacker is an MP (7.2.1).
-   {{PA-BLOCK: ??? — ASW natural rolls + DRM table}}
-4. Apply N10 effects (option to detect a TF in zone, destroy any sub step, etc.) (7.2.1).
-5. The defender applies non-N10 hits first, then the attacker allocates the rest. Apply sub 'save' rolls.
-6. Flip the MP's On Patrol marker to Spent and return it to base (5.3.4.1).
+2. Resolve a standard ASW attack: roll the MP's ASW dice, add Tactical Value, apply DRMs (Bad Weather -2 for MP, Arctic ice -1, Hydrophones +1). Each die ≥ the target submarine's Defense value causes a step loss. (N) submarines are only killed on a natural 10 when an MP is rolling (7.2.1).
+   {{PA-BLOCK: pa3:anti-submarine-warfare — Anti-Submarine Warfare (die roll table + DRMs)}}
+3. Apply N10 effects (option to detect a TF in zone, destroy any sub step, etc.).
+4. The defender applies non-N10 hits first, then the attacker allocates the rest. Apply sub 'save' rolls.
+5. Flip the MP's On Patrol marker to Spent and return it to base (5.3.4.1).
 
 ## See also
 

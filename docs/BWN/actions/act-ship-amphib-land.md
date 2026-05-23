@@ -23,16 +23,16 @@ A Task Force carrying Amphibious units sits in a zone with an Amphibious Landing
 
 1. **Place the Landing marker.** During movement, instead of moving, place a 'Landing' marker on a TF in a zone with an Amphibious Landing symbol (5.1.3.2).
 2. Roll a free Task Force Detection roll against each TF marking itself 'Landing' (5.1.2.1, 8.1.1).
+   {{PA-BLOCK: pa4:detection-of-tfs — Detection of TFs (Poor / Good states)}}
 3. In Bad Weather, place a 'Moved' marker first; on the next chance to move you may choose to move normally or place the Landing marker (8.1.1).
 4. **Next chance to move: resolve the landing.** Any submarines in port at the invaded location may sortie immediately and roll torpedo attacks vs the TF (7.3). Each rolling submarine costs the owning player 1 OPS and is marked Spent (8.1.1).
-5. Determine the dice count by cross-referencing landing location and current turn (4 dice in Norway turn 1-2 down to 2 dice turn 5+; 6 dice in Denmark turn 1-2 down to 3 dice turn 5+; modifiers for Bodo/Narvik, Soviet troops ashore, or damaged location).
-   {{PA-BLOCK: ??? — Amphibious Landing dice by location and turn}}
-6. Roll all dice and resolve starting with 1s, then 2s, etc. Each die maps to a threat (FACs / Ships / Missile-Air strike / Mines / Land Forts) that can be cancelled by spending missiles, taking step losses, or SAM points (8.1.1).
-   {{PA-BLOCK: ??? — Amphibious Landing die effects table}}
-7. Remaining dice cause Hit markers on Amphibs, allocated by the NATO player (in NATO-attacked landings; or the Soviet target's defender in Soviet landings).
-8. Determine troops landed by cross-referencing each Amphib's hit count: 1-2 hits = 2 troops, 3-4 = 1, 5+ = 0. Place troops on the Invasion Track at the landing location (8.1.1, 8.1.4).
-   {{PA-BLOCK: ??? — Troops landed by Amphib hits table}}
-9. Resolve airfield captures, then remove the Amphib unit(s) from the map.
+5. Determine dice and resolve the invasion sequence: cross-reference landing location × current turn for dice count, apply DRMs (Soviet troops ashore, damaged base), roll, and resolve threats starting with the lowest result (FACs → Ships → Missile/Air → Mines → Guns). Each threat can be cancelled by expending missiles, SAMs, or a step loss (8.1.1).
+   {{PA-BLOCK: pa8:amphibious-invasions — Amphibious Invasions}}
+6. Determine troops landed by cross-referencing each Amphib's hit count (1-2 hits = 2 troops, 3-4 = 1, 5+ = 0). Place troops on the Invasion Track at the landing location (8.1.1, 8.1.4).
+   {{PA-BLOCK: pa8:landing-troops — Landing Troops}}
+7. Resolve airfield captures: roll one die per troop landed against the facility (needing 8+ to reduce damage by a level) (8.1.4, 8.4.4).
+   {{PA-BLOCK: pa8:capturing-facilities — Capturing Facilities}}
+8. Remove the Amphib unit(s) from the map.
 
 ## See also
 

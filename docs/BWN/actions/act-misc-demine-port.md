@@ -21,7 +21,8 @@ A friendly port has been mined and you need to clear it to allow ship traffic. S
 2. Roll a die. Required result depends on facility damage:
    - **Undamaged facility**: 5+ succeeds.
    - **Damaged facility**: 7+ succeeds.
-   {{PA-BLOCK: ??? — De-mine port roll table}}
+   {{PA-BLOCK: pa2:miscellaneous — Miscellaneous (de-mine roll thresholds)}}
+   {{PA-BLOCK: pa7:port-mines — Port Mines (what the minefield does)}}
 3. On success, reduce the minefield by one level. Remove the Mine marker entirely if the port reaches Unmined.
 4. On failure, the action is wasted but may be retried on a future activation.
 

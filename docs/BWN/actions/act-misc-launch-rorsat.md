@@ -23,7 +23,7 @@ The Soviet player wants to extend or reposition satellite coverage. RORSATs are 
    - Launch a RORSAT from Tyuratam into a Sea Zone, or
    - Move a RORSAT already on the map to a different zone.
 2. Roll a die. On a result of 1, the action fails catastrophically — the satellite is destroyed and placed in the Destroyed box (2.2.4.1).
-   {{PA-BLOCK: ??? — RORSAT launch/move table}}
+   {{PA-BLOCK: pa2:miscellaneous — Miscellaneous (RORSAT cost, destroy-on-1, stack-at-4 rules)}}
 3. On any other result, place the RORSAT in the target zone.
 4. **Stacking**: RORSATs can be newly stacked together only if there are at least four already in play. Once 4+ are aloft, any further launches/moves may stack. Stacked RORSATs roll more detection dice (1 die per RORSAT present).
 5. Note: RORSATs may also be lost as collateral damage to Soviet facilities (7.5.3). If Lourdes is destroyed (8.4.5), one RORSAT is permanently removed and another temporarily removed.

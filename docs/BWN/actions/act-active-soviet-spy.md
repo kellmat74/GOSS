@@ -25,7 +25,7 @@ The Soviet player has spies remaining on the Soviet Spies Track and chooses to s
    - Take the SSBN Hunting marker.
    - Re-roll up to three ASW dice rolled (one re-roll per unit maximum).
    - Automatically succeed on all First Strike submarine evasion rolls in a single zone.
-   {{PA-BLOCK: ??? — Soviet Spy effects}}
+   {{PA-BLOCK: pa8:soviet-spies — Soviet Spies (effects menu)}}
 3. Apply the chosen effect immediately.
 4. **Infiltration check**: roll a die and reference the current box on the Soviet Spy Infiltration Track. If the die falls within the box's indicated range, a spy has been caught — move the track down one box (to the left). This may reduce future spy availability.
 

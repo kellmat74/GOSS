@@ -20,6 +20,7 @@ Your hand is below three cards — typically because you played a Reaction event
 ## Procedure
 
 1. Verify your hand size is fewer than three cards (4.2.3.6).
+   {{PA-BLOCK: pa2:use-at-any-time — Use At Any Time (not an action)}}
 2. Draw one card from the deck.
 3. Repeat as needed until your hand reaches three cards (unless the action is interrupted).
 

@@ -23,18 +23,18 @@ When a Task Force wants to attack a detected enemy TF with its ship-launched ant
 ## Procedure
 
 1. Spend 1 OPS and declare the attacking TF and the target TF, which must be in the same Sea Zone (7.4.1.2).
-2. Resolve based on detection level:
-   - **Good detection**: no roll required, missiles are launched automatically.
-   - **Poor detection**: roll a die; missiles are launched only on a successful result.
-   {{PA-BLOCK: ??? — Surface ship missile launch table}}
-3. Count the total missile points being fired by missile color and add them to the Missiles Track using the correct colors (7.4.2).
-   {{PA-BLOCK: ??? — Missiles Track / incoming missile types}}
-4. The defender resolves SAM defense — count SAM points in the TF, look up the SAM usage limit based on incoming missile count, then roll to shoot down incoming missiles (7.4.2.1).
-   {{PA-BLOCK: ??? — SAM resolution table}}
-5. Resolve remaining missiles: roll one die per 2 missiles, plus one for a remaining single. Each die that is not a 1-2 scores a hit (7.4.2.2).
-   {{PA-BLOCK: ??? — Incoming missile resolution table}}
-6. Apply hit effects: non-capital ships take one step loss per hit; Amphibs and Convoys take two hits per hit scored; capital ships roll on the damage table (7.4.2.3).
-   {{PA-BLOCK: ??? — Capital ship damage table}}
+2. Resolve launch eligibility by missile color and detection level (7.4.1.2):
+   - Soviet yellow/black: fire vs NATO Good-detected TF in same zone, or vs Poor-detected if the Soviet TF is Fast (or 6+).
+   - Soviet white/red: card play only (Baltic exception applies).
+   {{PA-BLOCK: pa4:missile-attacks-on-tfs — Missile Attacks on TFs}}
+3. Defender resolves SAMs — count SAM points, apply the SAM-shots-allowed limit based on incoming missile count, then roll one die per SAM with DRMs (missile color, weather, etc.) (7.4.2.1).
+   {{PA-BLOCK: pa4:sam-resolution — SAM Resolution}}
+4. Resolve any remaining missiles: roll one die per 2 missiles, plus one for a remaining single (7.4.2.2).
+   {{PA-BLOCK: pa4:incoming-missile-resolution — Incoming Missile Resolution}}
+5. Allocate hits using the hit-selection sequence (N9/N10 first by attacker, then alternating per side's allocation cadence) (7.4.2).
+   {{PA-BLOCK: pa4:missile-hit-selection — Missile Hit Selection}}
+6. Apply hit effects: non-capital ships take one step loss per hit; Amphibs and Convoys take two hits per hit; capital ships roll on the damage table (7.4.2.3).
+   {{PA-BLOCK: pa4:capital-ship-damage — Capital Ship Damage}}
 7. Mark expended ammunition: ships with (L) cruise/anti-ship missiles get a 'Cruise Missiles Fired' or 'AntiShip Missiles Fired' marker (9.5.3, 9.5.4).
 
 ## See also

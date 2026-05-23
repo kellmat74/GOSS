@@ -21,16 +21,16 @@ A Task Force that wants to hunt a known submarine in its zone — instead of mov
 
 ## Procedure
 
-1. Spend 1 OPS and declare the TF is conducting ASW in its current zone (7.2.2).
-2. Mark the TF with a Poor Detection marker immediately (7.2.2.1).
-3. Calculate the TF's ASW total from its component ships: each ship adds its Anti-Submarine value; each carrier adds +2 (0 in Bad Weather); each MP On Patrol in zone adds its ASW value; any escorting submarine contributes its ASW value ×3 (7.3.1 table also applies here for the TF total).
-   {{PA-BLOCK: ??? — Task Force ASW total table}}
-4. Look up the ASW total to determine number of dice + Tactical Value. Move up one row in Bad Weather; move up one row if the TF is Fast (note: ignore the Fast modifier on the ASW total table for this action, per 7.2.2).
-   {{PA-BLOCK: ??? — ASW dice and DRMs}}
-5. Roll the dice and apply Tactical Value to each. Each die ≥ enemy sub's Defense value causes a step loss. Apply N10 effects and special results (rocket torpedoes, Bastion penalties, etc.) per the ASW procedure (7.2.1).
-   {{PA-BLOCK: ??? — ASW natural rolls + DRM table}}
+1. Spend 1 OPS and declare the TF is conducting ASW in its current zone (7.2.2). Mark the TF with a Poor Detection marker immediately (7.2.2.1).
+2. Per-ship ASW values: tally each ship's Anti-Submarine value, +2 per carrier (0 in Bad Weather), +ASW per On-Patrol MP in zone, and ASW ×3 for any escorting submarine.
+   {{PA-BLOCK: pa3:task-force-asw — Task Force ASW (per-unit values)}}
+3. Compute the ASW total and look up dice + Tactical Value. Move up one row in Bad Weather (Fast modifier is **ignored** for the ASW-instead-of-moving action per 7.2.2).
+   {{PA-BLOCK: pa3:task-force-asw-defense — Task Force ASW Defense (total + dice table)}}
+4. Apply the TF-search rules: rocket torpedoes kill on doubles <10; Non-Magnetic subs killed on N10 only; if you roll any two N1-2 results, upgrade your TF to Good detection (instead of Poor) (7.2.2.1).
+   {{PA-BLOCK: pa3:anti-submarine-warfare-by-task-forces — Anti-Submarine Warfare by Task Forces}}
+5. Resolve hits per the standard ASW procedure (Tactical Value to each die, kill threshold = sub Defense value, N1 Bastion / N10 / save sub effects) (7.2.1).
+   {{PA-BLOCK: pa3:anti-submarine-warfare — Anti-Submarine Warfare (die roll table + DRMs)}}
 6. The defender allocates non-N10 hits, then the attacker allocates remaining. Apply 'save' rolls for submarines that have them (6+ save).
-7. If the TF rolled any two N1 or N2 results during the attack, upgrade its Poor Detection to Good Detection (7.2.2.1).
 
 ## See also
 

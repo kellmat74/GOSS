@@ -19,6 +19,7 @@ You want to fire a (non-Reaction) event from a card sitting in your hand — one
 ## Procedure
 
 1. On your action, declare you are playing the top (non-Reaction) event from a card in your hand (4.2.2.5).
+   {{PA-BLOCK: pa2:use-when-active — Use When Active (not an action)}}
 2. Pay the event's printed OPS cost **plus** 2 additional OPS.
 3. Resolve the event per the card text.
 4. Place the card in the discard pile, or remove it from play if the event instructs you to.

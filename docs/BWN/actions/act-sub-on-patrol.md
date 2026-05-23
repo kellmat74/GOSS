@@ -23,7 +23,8 @@ A submarine moves to a zone where the opponent is likely to send units later in 
 1. Spend 1 OPS and select one Fresh submarine.
 2. Move the sub to a zone within its movement allowance instead of attacking (5.2.3). Resolve any Hydrophone Barrier crossings (2.3.6).
 3. Place the 'On Patrol' marker on the submarine.
-4. For the remainder of the turn, this On Patrol sub can be triggered as a Use-At-Any-Time reaction to:
+4. For the remainder of the turn, this On Patrol sub can be triggered as a Use-At-Any-Time reaction:
+   {{PA-BLOCK: pa2:use-at-any-time — Use At Any Time (reactions available to On-Patrol units)}}
    - Interrupt a moving enemy submarine and roll ASW against it. See [On-Patrol MP attacks a crossing submarine](./act-anytime-mp-vs-sub.md) — same trigger, sub version.
    - Roll a torpedo attack against a moving TF entering the zone. See [On-Patrol Submarine ASW vs moving TF](./act-anytime-sub-asw-vs-tf.md).
 5. Only one On Patrol unit per zone may react against a given moving unit (5.2.3).

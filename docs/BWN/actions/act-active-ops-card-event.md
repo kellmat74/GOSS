@@ -20,6 +20,7 @@ Each turn each player will play two cards for OPS (4.2.2.3). Each card has one e
 ## Procedure
 
 1. On your action, declare you are playing one of your two OPS cards' (non-Reaction) events (4.2.2.3).
+   {{PA-BLOCK: pa2:use-when-active — Use When Active (not an action)}}
 2. Pay the event's printed OPS cost from your remaining OPS pool.
 3. Resolve the event per the card's text.
 4. Each card can be used only once per turn unless the event text specifies otherwise.

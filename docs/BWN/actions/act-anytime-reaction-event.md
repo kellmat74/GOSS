@@ -21,6 +21,7 @@ The opponent (or you) is resolving an action and a card in your hand has a React
 ## Procedure
 
 1. Trigger condition occurs during an action being resolved (4.2.3.1).
+   {{PA-BLOCK: pa2:use-at-any-time — Use At Any Time (not an action)}}
 2. Declare you are playing the card's Reaction event (the bottom event on a card).
 3. Resolve the event per the card text. Reactions usually trigger immediately and modify or interrupt the current action.
 4. Discard the card. If your hand drops below three cards, draw back up to three (4.2.3.6).

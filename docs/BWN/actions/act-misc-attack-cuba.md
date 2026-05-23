@@ -24,9 +24,13 @@ Cuba begins as an inactive Soviet ally — it shelters the Lourdes intelligence 
 2. The Soviet player deploys the Cuban submarine: on a roll of 8+, deploy within one zone of Cuba; otherwise it begins in port. Deploy Cuban Air Units on Cuba with the SAM marker (8.4.5).
 3. NATO may resolve up to 3 OPS worth of submarine or Task Force cruise missile attacks against Cuba — these are **free** (no additional OPS cost).
 4. Place the four US units marked 'Cuba' in Florida and fly an immediate Strike mission with them against Cuba.
-   {{PA-BLOCK: ??? — Air unit transit + interception sequence}}
-   {{PA-BLOCK: ??? — Bombing results table}}
+   {{PA-BLOCK: pa5:air-units-transit-to-a-zone — Air Units · Transit to a Zone}}
+   {{PA-BLOCK: pa6:air-units-bombing-land-targets — Air Units Bombing Land Targets}}
+   {{PA-BLOCK: pa6:sam-suppression-sead-bombing — SAM Suppression (SEAD) · vs Bombing}}
+   {{PA-BLOCK: pa6:sam-attack-bombing — SAM Attack · vs Bombing}}
+   {{PA-BLOCK: pa6:bombing-air-to-ground — Bombing (air-to-ground)}}
 5. Resolve damage to the Lourdes Facility per 2.2.4.1 (loss of Lourdes triggers RORSAT consequences).
+   {{PA-BLOCK: pa6:collateral-damage — Collateral Damage}}
 6. Cuba is now active. The Soviet player may use Cuban forces as his own, and may immediately deploy up to three air units from any Soviet base to Cuba (all marked 'Spent').
 
 ## See also

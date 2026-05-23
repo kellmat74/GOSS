@@ -27,7 +27,7 @@ Repositioning a single fresh submarine. Submarine actions all cost 1 OPS unless 
    - Diesel (D): 1 zone only, no Fast move (5.2.2).
    - Small slow Diesel (S): 1 zone only.
    - Nuclear-powered: 2 zones, or 3 zones via a Fast move (5.2.1).
-   {{PA-BLOCK: ??? — Submarine movement allowance table}}
+   {{PA-BLOCK: pa2:submarines — Submarines (action menu + movement allowances)}}
 3. A moving Soviet SSBN may take one non-diesel submarine with it for no extra cost. Both are marked 'Spent'. See [Soviet SSBN takes a nuclear sub along](./act-sub-ssbn-escort.md) (5.2.2, 2.2.7.1).
 4. If the submarine crosses a Hydrophone Barrier, the opposing player may resolve a Hydrophone reaction (2.3.6). See [Hydrophone Barrier reaction](./act-anytime-hydrophone.md).
 5. After movement, mark the submarine 'Spent'.

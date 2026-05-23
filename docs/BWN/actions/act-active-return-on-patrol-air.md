@@ -22,6 +22,7 @@ When it's your turn to play an action, you may rebase a Fresh On-Patrol Air Unit
 ## Procedure
 
 1. On your action, declare you are returning an On-Patrol Air Unit (4.2.2.4).
+   {{PA-BLOCK: pa2:use-when-active — Use When Active (not an action)}}
 2. The unit must currently be Fresh (not already Spent). Remove its 'On Patrol' marker and place it back at its base 'Fresh' (5.3.4.1, 5.3.4.2).
 3. The unit is now available to take a normal action on a future activation.
 

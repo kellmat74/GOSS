@@ -22,7 +22,7 @@ The Soviet player has accumulated First Strike Points from card play or end-of-t
 1. On your action, declare you are spending one or more First Strike Points (4.2.2.1).
 2. Reduce the First Strike Points marker on the track by the appropriate amount.
 3. Apply the chosen FSP effect per 9.1.1.
-   {{PA-BLOCK: ??? — First Strike Points spending options}}
+   {{PA-BLOCK: pa8:first-strike-points — First Strike Points (spending options)}}
 4. Play continues — this is not an action, so the next action belongs to you (or your opponent under the standard alternation).
 
 ## See also

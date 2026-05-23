@@ -21,7 +21,7 @@ A facility (port, airbase, etc.) has taken damage. Spending 2 OPS removes one Hi
 1. Spend 2 OPS and select one damaged facility.
 2. Remove one Hit marker from the facility.
 3. If removing this Hit would change the damage status, roll a die. Result of 5+ confirms the status change. On 1-4, the action is wasted (the Hit is still removed but the status does not improve).
-   {{PA-BLOCK: ??? — Facility damage status table}}
+   {{PA-BLOCK: pa6:facility-damage — Facility Damage · Effects cumulative}}
 4. See (2.3.8.4) for the effects of facility damage on hosted units.
 
 ## See also

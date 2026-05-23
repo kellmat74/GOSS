@@ -107,9 +107,10 @@ function buildHTML() {
     .filter((f) => f.endsWith(".md") && f !== "README.md")
     .sort();
 
-  // Action files — group by category in a useful reading order
+  // Action files — group by category in a useful reading order.
+  // Skip CHANGES-*.md (changelog files are read in editor, not printed).
   const allActionFiles = readdirSync(ACTIONS_DIR)
-    .filter((f) => f.endsWith(".md"))
+    .filter((f) => f.endsWith(".md") && !f.startsWith("CHANGES-"))
     .sort();
   const groupByCategory = (files) => {
     const groups = { ship: [], sub: [], air: [], misc: [] };

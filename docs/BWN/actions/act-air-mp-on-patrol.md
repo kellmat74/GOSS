@@ -25,7 +25,9 @@ Putting an MP or land-based Fighter into a zone where it will react later in the
 1. Spend 1 OPS and select one Fresh MP or Fighter unit.
 2. Move the unit to a Sea Zone within its range (5.3.4).
 3. Enemy fighters in the zone may intercept and resolve CAP before the unit arrives on station (5.3.4.1, 5.3.3).
+   {{PA-BLOCK: pa5:air-units-intercepted-when — Air Units Intercepted when:}}
 4. Place the 'On Patrol' marker on the unit. It is now armed to react for the rest of the turn:
+   {{PA-BLOCK: pa2:use-at-any-time — Use At Any Time (reactions available to On-Patrol units)}}
    - **MP On Patrol** (5.3.4.1) can interrupt enemy submarines crossing the zone (roll ASW), or roll to detect a moving Task Force passing through. After reacting, the MP flips to Spent and returns to base.
    - **Fighter On Patrol** (Interception, 5.3.4.2) attacks any Air Units entering its zone without spending the unit.
 5. MP On Patrol also gives an additional defensive bonus to friendly TFs in the same zone (built into the combat tables) (5.3.4.1).

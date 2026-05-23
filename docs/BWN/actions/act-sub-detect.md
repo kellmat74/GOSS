@@ -24,7 +24,7 @@ A submarine moves into a zone with an Undetected (or Poor-detected) enemy TF and
 1. Spend 1 OPS and select one Fresh submarine.
 2. Move into the target zone using the sub's movement allowance (5.2.2). Resolve Hydrophone Barrier reactions if any (2.3.6).
 3. Attempt detection on the enemy TF in the zone. Subs detect TFs only during an ASW attack via a natural 10 (see 7.2.1's N10 option 1). For a pure detection action, resolve per the detection procedure for the sub type.
-   {{PA-BLOCK: ??? — Task Force detection states and procedure}}
+   {{PA-BLOCK: pa4:detection-of-tfs — Detection of TFs (by MP, RORSAT, Tattletale)}}
 4. If detection succeeds, place a Poor Detection marker, or upgrade an existing Poor to Good (6.1.1).
 5. Mark the submarine 'Spent'.
 

@@ -21,6 +21,8 @@ During a NATO action that would resolve First Strike submarine evasion against a
 
 1. During NATO's First Strike submarine evasion resolution, declare you are spending a Soviet spy (4.2.3.5).
 2. Apply the 9.3 effect: automatically succeed on all First Strike submarine evasion rolls in a single zone (even if you have already rolled and failed).
+   {{PA-BLOCK: pa8:soviet-spies — Soviet Spies (effects menu)}}
+   {{PA-BLOCK: pa8:soviet-first-strike-submarines — Soviet First Strike Submarines (the evasion this saves)}}
 3. **Infiltration check**: roll a die against the current box on the Soviet Spy Infiltration Track. If the die falls within the box's range, a spy has been caught — move the track down one box (left) (9.3).
 
 ## See also

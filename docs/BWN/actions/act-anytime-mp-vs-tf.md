@@ -24,7 +24,7 @@ An enemy Task Force moves into or through the Sea Zone where you have an MP On P
 
 1. An enemy TF moves into or through the MP's patrol zone. Declare the MP is reacting for detection (5.3.4.1).
 2. Resolve a TF detection roll per the procedure for MP detection in 6.1.
-   {{PA-BLOCK: ??? — Task Force detection states and procedure}}
+   {{PA-BLOCK: pa4:detection-of-tfs — Detection of TFs (by MP, RORSAT, Tattletale)}}
 3. On success, apply a Poor Detection marker, or upgrade an existing Poor to Good (6.1.1).
 4. Flip the MP's On Patrol marker to Spent and return it to base (5.3.4.1).
 

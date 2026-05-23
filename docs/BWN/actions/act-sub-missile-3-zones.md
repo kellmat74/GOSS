@@ -23,22 +23,17 @@ A nuclear submarine launches a missile attack against a TF (7.4) or a land facil
 ## Procedure
 
 1. Spend 1 OPS and select one Fresh nuclear submarine in the target's Sea Zone.
-2. Roll one die and apply modifiers (+1 die for Good Detection on the target TF; -2 DRM if diesel attacker and target TF is Fast; -2 DRM per additional sub for coordinated attacks per 5.2.4).
-   {{PA-BLOCK: ??? — Submarine launched missile modifiers}}
-3. Look up the result on the missile attack type table:
-   - 1-3: No attack — sub marked Spent, no ammo expended.
-   - 4-7: Long Range — resolve missile attack with full count.
-   - 8-9: Short Range — resolve a short-range missile attack.
-   - 10+: Short Range + Torpedo — also resolve a 7.3 torpedo attack immediately afterwards if desired.
-   {{PA-BLOCK: ??? — Sub launched missile attack types}}
-4. Count missile points being fired, place the Missiles marker on the Missiles Track using the correct color(s) (7.4.2).
-   {{PA-BLOCK: ??? — Missiles Track / incoming missile types}}
-5. Defender resolves SAMs (7.4.2.1).
-   {{PA-BLOCK: ??? — SAM resolution table}}
-6. Resolve remaining missile dice (7.4.2.2).
-   {{PA-BLOCK: ??? — Incoming missile resolution table}}
-7. Apply hit effects: non-capital ships one step per hit; Amphibs/Convoys two hits per hit; capital ships roll on the damage table (7.4.2.3).
-   {{PA-BLOCK: ??? — Capital ship damage table}}
+2. Roll 1 die (2 dice if Good Detection — use best). Apply DRMs (-2 if diesel attacker vs Fast TF; -2 per additional coordinating sub per 5.2.4). Look up result for No Attack / Long Range / Short Range / Short Range + Torpedo.
+   {{PA-BLOCK: pa3:submarine-launched-missiles-vs-task-force — Submarine Launched Missiles vs. Task Force}}
+3. Defender resolves SAMs against the incoming missiles (7.4.2.1).
+   {{PA-BLOCK: pa4:sam-resolution — SAM Resolution}}
+4. Resolve any remaining missiles (roll one die per 2 missiles, plus one for a remaining single) (7.4.2.2).
+   {{PA-BLOCK: pa4:incoming-missile-resolution — Incoming Missile Resolution}}
+5. Allocate hits using the hit-selection sequence (N9/N10 first by attacker, then alternating per side's cadence).
+   {{PA-BLOCK: pa4:missile-hit-selection — Missile Hit Selection}}
+6. Apply hit effects: non-capital ships one step per hit; Amphibs/Convoys two hits per hit; capital ships roll on the damage table (7.4.2.3).
+   {{PA-BLOCK: pa4:capital-ship-damage — Capital Ship Damage}}
+7. On a 10+ result, also resolve a 7.3 torpedo attack from the same submarine immediately afterwards.
 8. Mark the sub 'Spent' and apply 'Cruise Missiles Fired' marker if applicable (9.5.3).
 
 ## See also
