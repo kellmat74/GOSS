@@ -368,15 +368,16 @@ function App() {
 
   // Build tabs from game features
   const tabs = useMemo(() => {
+    // Tab order: SoP → Actions → Rules → Cards → Scenarios → (Ask) → (AI Coach) → (Options) → (Flowchart) → Info
     const t = [{ key: "sop", label: "SoP" }];
-    if (gameConfig?.features.learn) t.push({ key: "learn", label: "AI Coach" });
-    if (gameConfig?.features.flowchart) t.push({ key: "flowchart", label: "Flowchart" });
-    t.push({ key: "rules", label: "Rules" });
-    if (gameConfig?.features.ask) t.push({ key: "ask", label: "Ask" });
-    if (gameConfig?.features.options) t.push({ key: "options", label: "Options" });
     if (gameConfig?.features.actions) t.push({ key: "actions", label: "Actions" });
+    t.push({ key: "rules", label: "Rules" });
     if (gameConfig?.features.cards) t.push({ key: "cards", label: "Cards" });
     if (gameConfig?.features.scenarios) t.push({ key: "scenarios", label: "Scenarios" });
+    if (gameConfig?.features.ask) t.push({ key: "ask", label: "Ask" });
+    if (gameConfig?.features.learn) t.push({ key: "learn", label: "AI Coach" });
+    if (gameConfig?.features.options) t.push({ key: "options", label: "Options" });
+    if (gameConfig?.features.flowchart) t.push({ key: "flowchart", label: "Flowchart" });
     t.push({ key: "info", label: "Info" });
     return t;
   }, [gameConfig]);
