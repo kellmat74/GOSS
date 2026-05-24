@@ -41,4 +41,12 @@ Every Fighter unit at home base is always performing a CAP (Combat Air Patrol) m
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+CAP is the free standing defense over every base and TF. Fighters at home base are always performing CAP, even when their counter shows Spent (4.2.3.3, 5.3.3.2). The design models air defense as a baseline, the fighter doesn't have to take an action to defend its own ship or airbase, and CAP is never spent by resolving combat (the unit's eligibility to roll the next time a strike arrives is unchanged).
+
+CAP fires when an enemy strike attacks a location it protects. Land-based fighters protect their own land base only, they do NOT protect TFs at sea. Carrier-based fighters defend every TF in the carrier's Sea Zone (the carrier doesn't have to be the target) AND every land facility adjacent to that zone (5.3.3.2). The "adjacent land facility" reach is what makes a carrier in East 4 a defensive anchor for the UK home islands.
+
+The biggest mistake is missing the eligibility filter. If a strike merely passes through a Sea Zone containing a carrier without attacking anything in it, no CAP reaction triggers (5.3.3.2 clarification, interception is a different ruleset, 5.3.3.1). If a strike attacks a TF in zone, ALL eligible CAP defenses are simultaneous and resolved as one CAP defense. Spent CAP rolls at -2 dice; light base damage -1 die; heavy base damage drops to 1 die only (7.1.4). Carrier-based CAP defending a TF that is NOT the target uses Poor detection saves (8+, 7.1.4). Strike steps killed by natural 10 are killed before missile launch; natural 9 kills are also pre-launch if the strike is bombing only (7.1.4.1). F-14 anti-missile shoots down incoming on natural 1s and 2s (7.1.4.2).
+
+This pairs with [On-Patrol Fighter intercepts](./act-anytime-fighter-vs-air.md), interception in transit zones layered with CAP at the target stacks two waves of fighter fire on the same strike, and the +1 "Detected by Interceptors" die carries forward (7.1.4.3). Counter: heavy bomb-strike damage to the CAP's base reduces it to 1 die per unit (2.3.8.4), so striking the airfield first weakens defenses for the follow-up.
+
+Example: a Soviet Backfire strike attacks a NATO carrier in East 4. Two F-14 units are CAP, one on the target carrier (Good detection, 6+ saves apply against its kills), one on a nearby NATO TF in the same zone with a Poor detection (8+ saves apply since it's not at the strike location). Both roll printed dice per Backfire step. The first F-14 rolls natural 10, Backfire step lost before missiles launch. The second F-14 rolls natural 1, shoots down 1 incoming missile.

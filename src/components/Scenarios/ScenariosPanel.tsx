@@ -113,6 +113,15 @@ function ScenarioDetail({ scenario: s }: { scenario: ScenarioContent }) {
         <ProseBlock text={s.victoryConditions} />
       </Section>
 
+      {s.coachNotes && (
+        <div className="mb-4 rounded-md border-l-4 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-900/20">
+          <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
+            Coach
+          </div>
+          <ProseBlock text={s.coachNotes} />
+        </div>
+      )}
+
       {s.specialRules && (
         <Section title="Special Rules">
           <ProseBlock text={s.specialRules} />

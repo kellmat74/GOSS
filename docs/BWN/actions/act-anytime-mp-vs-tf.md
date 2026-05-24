@@ -37,4 +37,12 @@ An enemy Task Force moves into or through the Sea Zone where you have an MP On P
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+An On-Patrol MP that catches an enemy TF moving through its zone can trade itself for detection on that TF, instead of an ASW roll (5.3.4.1, 6.1). The design models long-range maritime aviation visually identifying a contact, fixing position, and burning its endurance to do so. After the roll the MP flips to Spent and returns home.
+
+Take it when the enemy TF was previously undetected (place a Poor marker) or when it carries a Poor that you want upgraded to Good (6.1.1) so you can immediately follow up with a missile strike or air strike. NATO Convoys do not benefit from this directly, but a Soviet TF heading toward your convoy lane absolutely does, putting a Bear D or P-3 in the predicted intercept zone is the cheapest detection upgrade in the game. Detection level matters: Good detection enables missile attacks and unlocks the better save modifiers (7.4, 7.1.4).
+
+The choice between this and the ASW reaction is the gotcha. An MP On Patrol can interrupt for ASW OR for TF detection, not both, and it goes Spent either way (5.3.4.1). If a sub and a TF both move through the zone the MP can react only to one. Carrier CAP defends every TF in the same Sea Zone (5.3.3.2), so flying into a carrier zone gets the MP shot at first; if a carrier is in the target zone the F-14 or Sea Harrier CAP rolls before any detection happens. Bad Weather penalties apply to detection like they do to ASW.
+
+This pairs naturally with the free follow-on chain: a detection upgrade allows the active player one further action that attacks the newly detected TF (5.3.1), but that chain only fires from a flying MP attack (5.3.1 free follow-on), not from a reactive on-patrol detection. Counter: route TFs around On-Patrol MPs, or move under cover of Bad Weather to halve effective dice.
+
+Example: a Soviet Slava-led TF moves East 4 → East 6 → North 3-4, currently undetected. NATO has a Nimrod on Patrol in East 6. Nimrod reacts for detection, rolls and pins a Poor Detection on the Soviet TF in East 6. Nimrod flips to Spent and returns to UK. On NATO's next action, a Sea Harrier-equipped TF in East 4 can fire missiles against the now-detected Slava group.

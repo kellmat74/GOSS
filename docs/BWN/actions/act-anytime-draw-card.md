@@ -32,4 +32,12 @@ Your hand is below three cards — typically because you played a Reaction event
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Drawing back to three cards is bookkeeping after a hand-card play (4.2.3.6). The intent is to keep both players holding a meaningful hand of cards through every turn so the reaction layer and the +2 OPS hand-card layer stay active. There is no choice involved, if you drop below three, draw back to three at any time.
+
+Do it immediately after a Reaction or +2 OPS hand-card play, before the next action resolution. Keep an eye on the deck: if you've been forced to play cards rapidly through aggressive reaction use, you can blow through your draws and end up at a low deck count. Late-game card scarcity is real in BWN, the deck shuffles depend on scenario rules and aren't infinite refills. Draw back up promptly so you have the reaction cushion ready for the opponent's next action.
+
+The only gotcha is interruption. If a sequence of events is being resolved (chains of reactions, ongoing attacks), wait until the resolution closes before drawing. You don't draw mid-attack; you draw between resolutions. Otherwise this is a single-step administrative action.
+
+Pair this with [Reaction event play](./act-anytime-reaction-event.md) and [hand-card +2 OPS](./act-active-hand-card-event.md), both reduce hand size and trigger this draw. There is no opponent counter; this isn't an action and isn't intercepted.
+
+Example: NATO plays a Reaction event ("Submarine Pairing") from a 3-card hand. Card discards, hand drops to 2. NATO declares draw, takes 1 card from the deck, hand returns to 3. Play resumes.

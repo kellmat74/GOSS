@@ -46,4 +46,12 @@ An enemy Air Unit (Strike, escorted Strike, MP, or fighter) enters or passes thr
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Interception is the standing reaction that makes On-Patrol Fighters terrifying. Any enemy air mission that enters or transits the patrol zone gets attacked, and the fighter is not marked Spent (5.3.3.1, 5.3.4.2). The design models a CAP barrier at sea: the patrolling fighter has the gas to keep fighting, and successive waves all run the same gauntlet.
+
+This trigger fires automatically whenever an enemy path crosses your patrol zone, both en-route to a target and at the target itself (5.3.2). You don't choose to intercept; you must. The right call is forward, keep On-Patrol fighters at the chokepoints the opponent must use: Kola exit zones, Denmark/Turkey overflight zones (where the War Track Symbols add interception dice anyway), or the Sea Zones over carrier groups. Send your better fighter (higher air-to-air, higher Tactical Value) to the zone the enemy strike package must transit.
+
+The most common confusion is the CAP-vs-Interception distinction (5.3.3.1 vs 5.3.3.2). CAP defends a location and is keyed to the target type (TF in zone, adjacent land facility for carrier CAP, own land base for land fighters). Interception is keyed to transit: an On-Patrol fighter in any zone the strike crosses gets a free swing. Both can hit the same strike. Apply mission modifiers carefully: Intercepting fighter -1 die, Detected by Interceptors +1 die (this is what gets stacked forward, 7.1.4.3), CAP Spent -2 dice, base damage stacks (-1 light, =1 die heavy). Natural 10 kills before missile launch; natural 9 also kills if the strike is bombing only (7.1.4.1). F-14 natural 1s and 2s shoot down enemy missiles (7.1.4.2). Soviet +1 DRM if they hold the Air-to-Air Missile Tech marker (10.1).
+
+This pairs with [On Patrol](./act-air-mp-on-patrol.md), without patrol there is no interceptor reaction. Counter: route around the patrol zone if possible, or send a heavily escorted strike to force the interceptor into Fighters-vs-Fighters and accept losses (7.1.3, 7.1.4.4). Tankers can sometimes detour a strike past an interception zone (5.3.6).
+
+Example: a Soviet escorted strike (2 Backfires + 1 Foxhound) flies Kola → North 5-6 → East 4. A NATO Tornado is On Patrol in North 5-6. Interception fires: 1 fighter rolls (vs escort first, then strike), -1 die for Intercepting, kills the Foxhound step on a natural 10. Foxhound returns to base Spent, the Backfires continue toward East 4 marked "Detected by Interceptors", the carrier CAP at East 4 now rolls at +1 die.

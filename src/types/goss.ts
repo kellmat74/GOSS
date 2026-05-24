@@ -6,6 +6,8 @@ export interface SubPhase {
   player: Player;
   description: string;
   content?: string;
+  /** AI Coach paragraph: design intent, when to use, gotchas, synergies, example beat. Optional. */
+  coachContent?: string;
   notes: string[];
   checklist: string[];
   subPhases?: SubPhase[];
@@ -27,6 +29,8 @@ export interface Phase {
   player: Player;
   description: string;
   content?: string;
+  /** AI Coach paragraph: design intent, when to use, gotchas, synergies, example beat. Optional. */
+  coachContent?: string;
   notes: string[];
   subPhases: SubPhase[];
   tableRefs?: string[];  // IDs of associated tables in the game's tables.json
@@ -203,6 +207,8 @@ export interface PhysicalCard {
   side: CardSide;
   ops: CardEvent;
   reaction: CardEvent;
+  /** AI Coach note (~60-100 words) on when to play the event vs spend for OPS, reaction timing, and one pairing. Optional. */
+  coachNotes?: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -273,6 +279,8 @@ export interface ScenarioContent {
   /** Era variants (Campaign Game: 1983 / 1985 / 1989). */
   yearVariants?: ScenarioYearVariant[];
   notes?: string[];
+  /** AI Coach paragraph (~400 words): strategic shape, NATO/Soviet priorities, decision points, pitfalls. Optional. */
+  coachNotes?: string;
 }
 
 /** Top-level structure of a scenario book. */

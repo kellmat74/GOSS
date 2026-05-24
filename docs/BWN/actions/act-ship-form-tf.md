@@ -34,4 +34,12 @@ Surface ships can never move outside a Task Force, so getting ships from port to
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Surface ships exist only inside Task Forces in BWN, so this action models the operational reality that warships put to sea as named groups (the Eisenhower Battle Group, the Kirov Surface Action Group) rather than as individual hulls. Spending 2 OPS to form one is the cost of doctrine: it represents staff work, sortie orders, and the logistics tail that gets a force from harbor to operating area (5.1.2).
+
+Take this action when a port has loaded ships that need to leave (NATO reinforcement turns, Soviet sortie windows), or when an existing TF needs to break apart so a damaged carrier can limp home while escorts stay forward. Forming a TF at sea is also the move that lets you split a Convoy off from its escort group, or peel a single capital ship out of a hot zone for repair.
+
+The most common error is forgetting that every TF must contain at least one Surface Unit (5.1.2). You cannot form a TF of just an Amphibious unit and a Convoy, nor a TF of a lone nuclear escort sub. Detection inheritance is the second trap: a new TF formed at sea picks up the originating TF's detection status (5.1.1.2), so splitting a Good-detected force into two does not buy you anonymity. The Slow marker also propagates instantly. One slow Convoy or (S) Amphib drags the whole new TF down to Fast-equivalent half-speed.
+
+Pair Form a TF with [Move ships between Task Forces](./act-misc-move-between-tfs.md) when you need surgical shuffling. The opponent counters by holding a Good detection on the source port (RORSAT, MP overflight, spies) so the new TF inherits it on formation.
+
+A Soviet player in Turn 1 spends 2 OPS at Murmansk to form a Northern Fleet TF around Kirov with two Sovremennys and a Kresta. The TF emerges Undetected because Murmansk has no NATO detection on it yet, ready to push into North 7-8 next SHIPS event.

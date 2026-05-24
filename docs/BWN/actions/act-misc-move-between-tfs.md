@@ -33,4 +33,12 @@ Two Task Forces are in the same Sea Zone and you want to shuffle units between t
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Two TFs in the same Sea Zone can shuffle ships between them for 1 OPS, modeling underway transfers of escorts, breaking off damaged ships, or restructuring a force without the full 2 OPS overhead of creating a brand-new TF (5.1.1.2). The 1 OPS price reflects the lower friction: ships in the same zone are already steaming in formation, so the staff work is minimal compared to forming a TF from scratch (5.1.2).
+
+Take this action when a damaged capital ship needs to break off to a sister TF heading home, when a fast strike group wants to drop its slow Convoy with another TF for escort duty, or when you need to consolidate ASW assets into a single hunter group while keeping a separate fast missile-shooter group nearby. It is also the right move when a TF has multiple Amphibs and you want to land them in shifts.
+
+The trap is detection propagation. A unit moved from a Good-detected TF carries that status with it: the destination TF upgrades to Good (or Poor, if that is the source status), unless its existing status was higher (5.1.1.2). New players try to launder a Good detection by shifting the Good-detected ship into a fresh TF, but the detection moves with the unit. Second gotcha: every remaining TF must still contain at least one Surface Unit (5.1.2), so you cannot empty a TF down to just an escort sub or a Convoy. Third: the Slow status updates on the swap. A swap that introduces an (S) Amphib or Convoy turns the destination Fast TF Slow immediately, with downstream effects on next turn's ASW defense rolls.
+
+Pair with [Form a new Task Force](./act-ship-form-tf.md) when the goal is genuinely separating forces (e.g., damaged carrier retiring). [Move ships in a Task Force](./act-ship-move.md) does the actual repositioning later.
+
+A NATO carrier TF in Mid 5-6 takes two missile hits and the carrier is Damaged. The NATO player spends 1 OPS to move the damaged carrier plus one escort frigate into a nearby Convoy escort TF heading west, freeing the strike TF to push north without dragging a hobbled carrier.

@@ -41,4 +41,12 @@ A Task Force that wants to hunt a known submarine in its zone — instead of mov
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+A TF that stops moving to actively hunt a submarine is the game's expression of dedicated ASW search operations: sonar pings, MAD runs, distributed sonobuoy patterns. The 1 OPS cost and the automatic Poor Detection (7.2.2.1) capture the doctrinal reality that hunting subs makes the hunter loud and locatable. You traded mobility and concealment for the chance to kill the threat below you.
+
+Take this action when you know (or strongly suspect via Hydrophone reactions, MP detections, or card events) a hostile submarine is in your zone and the cost of letting it live exceeds the cost of being self-marked Poor. Carriers benefit you here because each adds +2 ASW (0 in Bad Weather), and any escorting sub triples its own ASW value. This is the move when a NATO carrier TF wants to clear a Soviet diesel out of GIUK chokepoints before sending Convoys through.
+
+The Fast TF modifier is **ignored** for this action's ASW dice (7.2.2), unlike the defensive ASW roll against a sub attack (7.3.1) where Fast still moves you up a row. New players move up a row out of habit and get free dice they should not have. Second gotcha: rolling any two N1-2 results upgrades your TF from Poor to **Good** detection (7.2.2.1) instead of just Poor, a real penalty if you are NATO holding the Soviets at arm's length. Third: rocket torpedoes kill on doubles less than 10, but only outside Bad Weather (7.2.2.1). Fourth: Non-Magnetic (N) subs only die on a natural 10.
+
+This action pairs with [On-Patrol MP attacks a crossing submarine](./act-anytime-mp-vs-sub.md) layered on top (the MP's ASW value adds to the TF total) and with [Hydrophone Barrier reaction](./act-anytime-hydrophone.md) earlier in the turn to soften the target. Counter: the Soviet sub goes On Patrol or moves out of the zone before the TF acts.
+
+A NATO carrier TF in Mid 5-6 detects a Soviet Victor III via MP overflight. Carrier (+2), two ASW frigates (3+3), and one On-Patrol P-3C MP (2) totals 10 ASW. That gives 3 dice + 1 Tactical. The roll hits twice but rolls a double 2, auto-upgrading the TF to Good detection: the price of the kill.

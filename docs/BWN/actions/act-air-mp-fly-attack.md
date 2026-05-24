@@ -47,4 +47,12 @@ A Maritime Patrol unit flies a one-shot mission into a Sea Zone within its range
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Maritime Patrol is the one-shot version of BWN's air search-and-strike loop. Send the MP to the zone, take one swing (ASW or detection), and the unit goes home Spent. The design captures that long-range maritime aviation finds its target, attacks once, and recovers, there is no loiter, no second pass (5.3, 5.3.1).
+
+Take this when you have a known sub to attack but no shipboard ASW in the zone, or when you need detection on a TF that has slipped your other sensors. The free follow-on after a successful detection upgrade is the headline reason to fly an MP (5.3.1): if you place or improve a detection marker, the active player may immediately take any other action that ends in an attack on that TF, paid for by its own OPS. That chain is how NATO converts a tentative contact into a missile strike before the carrier moves again.
+
+The trap is forgetting the en-route interception sequence (5.3.2). Check the path TO the target for On-Patrol fighters and en-route carrier CAP, then resolve any interception in the target zone itself, then CAP from the defender, all before the MP rolls its mission dice. A Bear D flying into a US carrier zone gets attacked by F-14s before it ever rolls detection (7.1.2). Bad Weather costs the MP 2 ASW dice (7.2.1), not 1. And (N) subs are only killed by an MP on a natural 10.
+
+Pair this with On-Patrol assets already in zone for the free die during the action chain. Carrier CAP defends every TF in its Sea Zone and every land facility adjacent to that zone (5.3.3.2), so flying MP through a known carrier sea zone is a step-loss factory. The Soviet Bear-F variant and NATO P-3 are the workhorses here. Counter: a fighter On Patrol in the MP's transit zone forces a Fighters vs MP roll at printed dice minus 2 (7.1.2).
+
+Example: a Soviet Bear D flies from Kola into East 4 hunting a NATO TF with a Poor detection. It transits East 6, where a UK Tornado on Patrol intercepts, fails to kill but pings detection. Bear arrives, no carrier CAP, and rolls TF detection at the printed dice minus 1 (Detected by Interceptors flips against it in the next zone, not this roll). On success the Soviet upgrades to Good and immediately follows on with a Backfire strike from the Kola airbase.

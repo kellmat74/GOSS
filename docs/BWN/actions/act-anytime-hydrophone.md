@@ -38,4 +38,12 @@ An enemy submarine crosses a Hydrophone Barrier shown on the map: the GIUK Gap (
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Hydrophone Barriers are SOSUS in game form: the GIUK Gap (East 6 / East 9-10 / North 3-4 borders), the English Channel (East 4 border), and the Strait of Gibraltar (Med 1-2 border) (2.3.6). When an enemy sub crosses one, NATO gets a free reaction, but only with a Fresh or On-Patrol friendly unit in the entered or exited zone. The design models cold-war passive acoustic detection at chokepoints, layered on top of NATO's active ASW posture.
+
+Take this every single time a Soviet sub crosses a barrier. The Option 1 single-die-no-Spent is the headline play, each Fresh unit in the zone gets a free single die at the sub, with the unit's full Tactical Value applied (2.3.6). Use Option 2 (full ASW attack with +1 die, then Spent) only when you're committed to killing this sub THIS reaction, usually for a known high-value target like an Akula or Typhoon. Use Option 3 (the permanent helo asset in English Channel or Gibraltar only, 2 dice rolling as MP) when no good Fresh unit is in zone but you need a swing.
+
+The gotchas pile up here. Task Forces can NEVER use Hydrophone reactions, nor can anything inside a TF, escort subs are too busy escorting (2.3.6 clarification). The unit must be Fresh (or On-Patrol with the MP-vs-sub reaction stacking from 5.3.4.1), Spent units in zone don't react. Bad Weather applies if it's in the zone the sub is moving INTO, not out of. The English Channel and Gibraltar local helo assets reduce to ZERO dice in Bad Weather (not -2). Every different Fresh unit in zone gets its own Option 1 free die, so a sub crossing the GIUK gap with three NATO Fresh units in East 6 takes three free Option 1 rolls. And the +1 die DRM is the "Hydrophones" line on the standard ASW DRM table (7.2.1).
+
+This pairs with [MP On Patrol](./act-air-mp-on-patrol.md) keeping a Fresh asset in the barrier zones, and with [On-Patrol MP attacks a crossing submarine](./act-anytime-mp-vs-sub.md) (which can stack with the +1-die DRM). Counter: route Soviet subs around the barriers if possible, use (N) subs to make MP-based detection rolls need natural 10s, or strike the NATO base whose units guard the barrier to ground them.
+
+Example: a Soviet Victor III moves from North 7-8 across the SOSUS line into and through East 6. NATO has a Fresh Tornado at UK base flying CAP and a Fresh Nimrod also On Patrol in East 6. NATO declares Option 1 with the Nimrod: rolls 1 die at the Victor + Nimrod TV +1 Hydrophone DRM, natural 9 = hit, Victor takes a step loss. Nimrod NOT Spent. NATO can still declare Option 2 with the Tornado for another full ASW attack at +1 die, but probably saves it for the next sub crossing.

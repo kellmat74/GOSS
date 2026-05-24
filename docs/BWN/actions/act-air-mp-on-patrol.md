@@ -42,4 +42,12 @@ Putting an MP or land-based Fighter into a zone where it will react later in the
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+On Patrol turns one action into a standing reaction. You pay 1 OPS once and the unit stays armed in a zone for the rest of the turn, ready to interrupt any sub or TF that walks through it. The design models air units holding station at high cost (an MP that reacts is consumed) versus fighters orbiting an interception lane (free re-rolls all turn) (5.3.4, 5.3.4.1, 5.3.4.2).
+
+Take this when you can predict an opponent's sea lane: GIUK chokepoints, Med 4-5, North 7-8 for boomer bastion work, Norwegian Sea for Soviet sub egress. For NATO, an MP on Patrol in East 6 covers the GIUK Hydrophone Barrier and adds a defensive bonus to any TF in that zone against submarine attack (5.3.4.1, the bonus is built into the TF combat table). For Soviet, a Bear-F on Patrol over its own Bastion is a defensive multiplier on every NATO sub that crosses.
+
+The most common confusion is the MP-vs-Fighter asymmetry on reaction. MP on Patrol fires once and goes Spent; a Fighter on Patrol attacks every enemy air mission entering its zone all turn without spending the unit (5.3.4.1, 5.3.4.2). Carrier-based units cannot go On Patrol at all, they must protect their carrier (5.3.4.2). And the unit must arrive Fresh: enemy fighters may intercept and CAP it on transit before the On Patrol marker is placed.
+
+This pairs directly with the Hydrophone Barriers (2.3.6), an On Patrol unit in the entered or exited zone can take a +1-die ASW reaction, or a free single die without going Spent. Counter: the opponent routes around the patrol zone, or sends a strike against the MP's base to ground the squadron. Air to Air Tech (Soviet +1 DRM, 7.1.2) makes Soviet fighter interception of NATO MPs noticeably more dangerous.
+
+Example: a NATO Nimrod goes On Patrol in North 3-4 for 1 OPS. Mid-turn, a Soviet Victor III boat moves North 3-4 to East 6. The Nimrod can interrupt for a full ASW attack (and then Spent), or hold for the Hydrophone +1-die at the East 6 border, or stay quiet and lend the TF its defensive bonus all turn, the flexibility is the whole point of the On Patrol marker.

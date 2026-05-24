@@ -35,4 +35,12 @@ When it's your turn to play an action, you may rebase a Fresh On-Patrol Air Unit
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Returning an On-Patrol unit to base is the free recall option. It does not count as an action and costs no OPS (4.2.2.4). The design intent is to let you redeploy a unit whose mission has lapsed, the threat it was watching for did not materialize, or you need it for something else, without paying twice for the round trip.
+
+Take this when the zone the unit was guarding no longer matters: the enemy moved, the convoy passed, you misread the threat axis. It is most useful for Fighters On Patrol that are still Fresh (an MP that has already reacted is already Spent and at base, there is nothing to return). Pulling a Fresh fighter home lets you re-task it next turn into a different patrol zone, into a strike escort, or simply leave it as CAP, where it defends the home base every turn for free (5.3.3.2, 4.2.3.3).
+
+The trap is using this on a unit that should stay on station. Fighters on Patrol attack every enemy air mission entering the zone for free (5.3.4.2), losing that standing threat is a real cost if the enemy was about to fly through. And the unit must currently be Fresh; if a Fighter on Patrol has already fought and is somehow Spent (rare, declining fighter-vs-fighter combat or having flown an escort) you cannot rebase it for free. Also remember On Patrol Fighters are not Spent by intercepting (5.3.4.2 design note), so the unit you want to pull home is almost always still Fresh.
+
+This pairs with strikes you are planning next turn, pull the patrol unit home this turn, then fly it as escort or CAG next turn. Counter: there is no opponent counter to this action, it is a free unilateral rebase. But the opportunity cost of giving up a patrol slot is real.
+
+Example: NATO put an F-15 on Patrol in North 3-4 turn 4 to cover a convoy. By turn 5 the convoy has reached port and the Soviet bomber threat from Kola has shifted east. On NATO's action the player declares Return On Patrol Air Unit, drops the F-15 back at its UK base Fresh and at zero OPS cost, then spends 1 OPS to fly it back out as Patrol in East 6 to cover the next convoy leg.

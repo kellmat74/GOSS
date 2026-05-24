@@ -37,4 +37,12 @@ A submarine moves into a zone with an Undetected (or Poor-detected) enemy TF and
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Submarines can use their sonar suites to find and refine the picture on enemy surface forces, modeling the role boats actually played as scouts and shadowers in the Cold War (5.2.1, 6.1, 6.1.1). The dedicated detection action exists because the game wants you to be able to invest a sub's turn in setup work without having to also fire torpedoes, which is critical for the kill chain where one boat finds and a second boat (or a TF, or a missile salvo) finishes.
+
+Take this action when you have a sub in (or able to reach) a zone with an Undetected or Poor-detected enemy TF and your follow-up plan needs Good detection: surface missile launches against a Poor target need Fast or 6+ ASuW (7.4.1.2), and Good detection adds +1 die to torpedo and missile attacks (7.3.1, 7.4.1.1). It is also the right call when you want to keep tabs on a force without committing to combat that would mark you Spent attacking and leave the zone uncovered.
+
+The key constraint is that submarines do not have a clean dedicated detection roll in the same way MPs and RORSATs do (6.1). Subs primarily detect TFs during an ASW attack via an N10 result (option 1 of 7.2.1's N10), so a pure detection action against a TF leans on the sub's available detection procedure for its type, not a generic roll. Read the rule carefully before spending OPS expecting a guaranteed Poor placement. Second: the sub becomes Spent after the action even if no upgrade happened, so a failed detect still costs you the turn. Third: like every move-based sub action, Hydrophone Barriers reactions trigger on the way in (2.3.6).
+
+Pair with [Submarine moves then attacks](./act-sub-attack.md) by a second sub or with [Fire missiles with a Task Force](./act-ship-fire-missiles.md) in the same zone, exploiting the Good detection you just placed. [Maritime Patrol flies and attacks or detects](./act-air-mp-fly-attack.md) is a parallel detector with different strengths (air can detect from adjacent zones, sub can only detect in zone).
+
+A Soviet Victor III spends 1 OPS into Mid 5-6 where a Poor-detected NATO Convoy TF sits. The detect attempt succeeds and upgrades to Good. Next action, a Charlie II 1 OPS away launches missiles into the now-Good target, getting 2 dice on its launch roll instead of 1.

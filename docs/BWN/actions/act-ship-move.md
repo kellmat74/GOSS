@@ -39,4 +39,12 @@ Ships only move as a Task Force group, and only when the SHIPS event triggers on
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+BWN deliberately keeps surface movement infrequent and synchronized. Ships do not move on demand the way subs and aircraft do, they only move when the SHIPS event fires on the OPS Track (4.2.1.3). This is the system's way of representing the long signal lag and reaction time of fleet maneuvering compared to the rapid tempo of submarine and air operations.
+
+The trigger is bookkeeping, not a choice. When either player's OPS marker reaches or passes the SHIPS box, the event fires immediately after the current action, and both sides move every TF (5.1.3). The strategic decision is upstream: by managing your OPS expenditure rate, you control when SHIPS fires relative to weather, card play, and the opponent's detection state. A Soviet player burning OPS fast to force an early SHIPS event before NATO gets MPs aloft is a classic opening.
+
+The detection-order rule is the rookie killer (5.1.3). Good-detected TFs move first, then Poor, then Undetected, and within each tier Soviet moves before NATO. That means if NATO has Good detection on a Soviet TF, the Soviets must move it before NATO chooses where to vector its own forces. Bad Weather zones block movement (TF gets a Moved marker but stays put per 5.1.3.1), and forgetting this strands intercepts. Note also that the TF counter goes on the new zone's border adjacent to the previous zone (5.1.3.8), giving the opponent partial track info even on Undetected forces.
+
+This action interlocks with [Form a new Task Force](./act-ship-form-tf.md), [Move ships between Task Forces](./act-misc-move-between-tfs.md), and the Amphibious Landing prep (5.1.3.2). The opponent counters with On-Patrol subs, MPs, and Hydrophone Barrier reactions on crossings.
+
+NATO holds Good detection on a Soviet TF in North 7-8 thanks to a US carrier's MP sweep. SHIPS fires. The Soviet TF must declare its move first (Good-detected, Soviet-before-NATO), revealing intent, and NATO then routes its own TF to intercept or evade.

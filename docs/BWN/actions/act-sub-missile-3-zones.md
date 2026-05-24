@@ -45,4 +45,12 @@ A nuclear submarine launches a missile attack against a TF (7.4) or a land facil
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Submarine-launched cruise and anti-ship missiles model the SLCM and SSM weapons that put Soviet SSGNs and some NATO SSNs in the strike role. The single-zone range rule (7.4.1.1) reflects the design choice that BWN treats missile reach as movement-equivalent: the sub must close to the target's Sea Zone to fire, rather than ranging from adjacent. The launch-roll-then-resolve sequence captures the real uncertainty of an undersea cruise launch: target solution quality drives outcome.
+
+Take this action when a nuclear sub sits in the target TF's zone and you want a missile strike rather than a torpedo run, or when the sub is positioned to attack a land facility (7.5). The launch roll is the key choice: 1 die normally, 2 dice if Good Detection (use best). That asymmetry means upgrading the target to Good before launch is huge, going from a 70% chance of any attack to a 91% chance with two dice taking the best result.
+
+The DRM stack is where new players lose damage. -2 if a diesel sub is shooting a Fast TF (matters for older Soviet diesel SSGs); -2 per additional coordinating sub from 5.2.4 (so a 2-sub coordination is -2, a 3-sub coordination is -4 on the launch roll). Charlie II missiles have a designer note allowing "no attack" on what would normally be a Long Range result, modeling the older Charlie's narrower target solution: optional rule, check your version. Second gotcha: a 10+ result triggers a torpedo attack from the same submarine afterwards (7.3) on top of the missile damage. This is a meaningful upside on Short Range + Torpedo and one of the best things that can happen to a sub player. Third: the Cruise Missiles Fired marker (9.5.3) lasts the turn, so plan to return to port for reload.
+
+The sibling action is [Multi-submarine missile coordination](./act-sub-missile-coordination.md) when two or three subs pool a strike. [Fire missiles with a Task Force](./act-ship-fire-missiles.md) covers the surface-launched parallel. Defender uses SAMs, F-14s, and CAP.
+
+A Soviet Oscar II in Good-detected position vs a NATO carrier TF in Mid 7-8 spends 1 OPS. Two dice, take the best: rolls 4 and 9, takes the 9 for Short Range. The Oscar's full payload of 24 Shipwrecks goes in, NATO's SAMs take a -2 DRM (red/yellow incoming), 8 hits land on the screen and the carrier rolls a damage check.

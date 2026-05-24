@@ -42,4 +42,12 @@ Repositioning a single fresh submarine. Submarine actions all cost 1 OPS unless 
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Submarines are the heart of BWN combat, and the bare move action is the building block of every sub campaign. A 1 OPS reposition models a submarine running quiet from one operating area to another, with movement allowances calibrated to capture the real difference between nuclear and diesel propulsion: nuclear runs at sustained speed for days, diesels crawl while submerged (5.2, 5.2.1, 5.2.2).
+
+Take a bare move action when the sub needs to get somewhere but neither attack nor patrol fits the current zone. Common cases: a Soviet diesel sortieing from the Baltic to Mid 7-8 over multiple turns; a NATO SSN moving from Holy Loch into the GIUK gap to set up next turn's On Patrol; an SSBN repositioning into a First Strike zone. Save the Fast move (3 zones for nuclear) for when you genuinely need the reach because Fast moves are typically more detectable downstream via reaction events.
+
+The most common mistake is forgetting Hydrophone Barriers (2.3.6). Crossing one triggers a possible reaction roll by the opponent. NATO's CAESAR-style chains in the GIUK gap and Soviet SOSUS-equivalent arrays in the Bastion catch unwary subs. Second: diesel (D) subs only move 1 zone and cannot Fast-move (5.2.2), so plotting a multi-turn diesel sortie requires patience. Third: small-and-slow (S) subs are even more restricted, and their MOVE-OR-ATTACK rule means a sortie burns one of those choices. Fourth: a moving Soviet SSBN may take one non-diesel attack sub along for no extra cost (5.2.2, 2.2.7.1), which is almost always worth doing because of the SSBN evasion escort rule (2.3.5.1).
+
+Pairs with [Submarine moves and detects](./act-sub-detect.md) (use detect when the destination has an enemy you want to upgrade), [Submarine moves and goes On Patrol](./act-sub-on-patrol.md) (use Patrol when the destination is a chokepoint), and [Soviet SSBN takes a nuclear sub along](./act-sub-ssbn-escort.md). Opponents counter with on-patrol MPs at barrier crossings.
+
+A NATO Los Angeles-class spends 1 OPS to move from Holy Loch into North 5-6, crossing the Iceland-Faroes Hydrophone Barrier. The Soviet player rolls the barrier reaction, gets a 3, and places a Poor detection on the sub: future Soviet attacks against it will get +1 die.

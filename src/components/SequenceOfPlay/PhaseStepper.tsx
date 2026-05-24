@@ -204,6 +204,16 @@ export function PhaseStepper({
         </div>
       )}
 
+      {/* AI Coach — design intent, when to use, gotchas, synergies, example beat */}
+      {active.coachContent && (
+        <div className="mb-4 rounded-md border-l-4 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-900/20">
+          <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
+            Coach
+          </div>
+          <SoPMarkdown content={active.coachContent} onTabSwitch={onTabSwitch} />
+        </div>
+      )}
+
       {/* Scenario appended content */}
       {active.appendedContent && (
         <div className="mb-4">

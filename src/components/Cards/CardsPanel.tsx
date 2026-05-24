@@ -217,6 +217,18 @@ function PhysicalCardDetail({ card }: { card: PhysicalCard }) {
 
       {/* Reaction Event */}
       <CardEventBlock event={card.reaction} />
+
+      {/* AI Coach note — when to play for event vs OPS, reaction timing, pairings */}
+      {card.coachNotes && (
+        <div className="mt-4 rounded-md border-l-4 border-emerald-500 bg-emerald-50 p-3 dark:bg-emerald-900/20">
+          <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
+            Coach
+          </div>
+          <div className="text-sm leading-relaxed text-stone-700 dark:text-stone-300">
+            <CardText text={card.coachNotes} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

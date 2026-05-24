@@ -42,4 +42,12 @@ A Task Force carrying Amphibious units sits in a zone with an Amphibious Landing
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Amphibious landings model the largest naval operation possible: putting troops on a hostile shore. BWN treats this with a two-beat sequence (mark Landing this turn, resolve next move chance) to capture the real-world reality that an amphibious assault is a vulnerable, telegraphed operation. The Soviets use it to grab Norway, Denmark, or Iceland; NATO normally delivers through friendly ports (5.1.3.5), with the Iceland recapture as the major exception (8.4.4).
+
+Take this action when your Amphib-carrying TF reaches a zone with the Amphibious Landing symbol and you can afford to sit through one turn of detection and counterattack. The window matters: Bad Weather forces a Moved marker first (8.1.1), so weather rolls in the target zone delay the assault by an entire turn. Time Landings around favorable weather and a low NATO ASW posture, ideally after softening the defenses with prior strikes.
+
+The biggest gotcha is the free Detection roll on placing the Landing marker (5.1.2.1, 8.1.1). The TF declares itself for the world to see, and a Poor or Good detection here invites every On-Patrol sub, MP, and reaction card the defender has. Second: submarines already in the invasion port may sortie immediately and roll torpedo attacks (8.1.1), each costing the owner 1 OPS and marking the sub Spent. Soviets often forget that landing in a port-bearing zone means the NATO SSNs there get a free attack window. Third: troop conversion is hit-count-driven (1-2 hits = 2 troops, 3-4 = 1, 5+ = 0 per 8.1.4), so an Amphib taking three hits delivers half its troops, not zero.
+
+Pair with prior Air Strikes against the landing zone's airfield (8.1.4, 8.4.4 for Iceland), card events that suppress detection, and on-patrol Soviet subs covering the approach. The defender pre-positions hydrophones, on-patrol MPs, and base SAMs.
+
+Soviet Turn 2: a TF with two Ivan Rogov Amphibs marks Landing in Norway invasion zone. NATO rolls detection, gets a Poor, then a UK SSN already in Bergen sorties (-1 OPS to NATO) and rolls a torpedo attack, scoring two hits on one Amphib. Next move, the landing resolves and delivers half-strength troops onto the Invasion Track.

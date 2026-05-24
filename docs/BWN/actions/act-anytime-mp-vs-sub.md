@@ -38,4 +38,12 @@ An enemy submarine moves into or through a Sea Zone where you have an MP On Patr
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+An On-Patrol MP that catches an enemy sub in transit is BWN's most efficient ASW play in OPS terms, you paid 1 OPS to deploy the patrol, and now you get a full ASW attack for free against a moving submarine (5.3.4.1, 7.2). The design captures airborne ASW catching boats moving submerged through known chokepoints, without using the action turn that would otherwise be spent flying.
+
+Take it almost reflexively when a target sub moves through your patrol zone, the alternative is letting it pass. The exception is when the sub is already inside a Hydrophone Barrier that you'd rather react with (free single die, no Spent), or when burning the MP now leaves a higher-value TF detection undone later this turn. Once the MP reacts, it flips to Spent and returns to base; it cannot also detect a TF the same turn (5.3.4.1).
+
+The DRM stack matters. Bad Weather costs MP -2 dice (not -1 like non-MP), Arctic ice -1 die, Hydrophones +1 die. (N) submarines are only killed by an MP on a natural 10, non-magnetic boats are hard for air to detect (7.2.1). Natural 10s give the rolling player one of three outcomes: detect a TF in the same zone, kill any sub step, or (Soviet nuclear sub only) trigger an SSBN Hunt roll. The defender allocates non-N10 hits first (worst-to-best), the attacker then allocates the rest. Save submarines roll 6+ saves on every hit. NATO subs in the Bastion taking a natural 1 themselves cause a step loss (one max), but only NATO subs not MPs are exposed to that.
+
+This pairs with [Hydrophone Barrier reaction](./act-anytime-hydrophone.md) (the +1-die DRM line in the ASW table is the Hydrophone interruption row). Counter: route subs around the patrol zone, or send a strike to bomb the MP's base before the sub move (heavy damage grounds patrol units). Soviet (N) subs (Sierra, Akula) significantly reduce MP threat.
+
+Example: a Soviet Akula moves from East 6 to East 4. NATO has a US P-3 On Patrol in East 4 with Tactical Value 2 and 3 ASW dice printed. P-3 reacts, rolls 3 dice + 2 TV, but Akula is (N) so only a natural 10 hits. P-3 rolls 7, 9, 4, no kill (no natural 10). The P-3 still flips to Spent and returns home.

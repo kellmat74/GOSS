@@ -46,4 +46,12 @@ When a Task Force wants to attack a detected enemy TF with its ship-launched ant
 
 ## Why and what to watch for
 
-<!-- COACH-PASS -->
+Surface-launched anti-ship missiles model the Soviet doctrine of long-range, mass-saturation strikes from cruisers and destroyers. The Cold War threat that kept US carrier captains awake was a Kirov-led surface action group ripple-firing yellow Shipwrecks and black Sandboxes. This action is the in-game expression of that doctrine, and the OPS-cost-1 trigger reflects that surface missile launches are routine combat events for the Soviet side, not card-driven specials (5.1.1.3, 7.4).
+
+Take this action when you have a Good-detected NATO TF in the same Sea Zone as a Soviet TF carrying yellow or black missiles (7.4.1.2). Poor detection works too, but only if the firing TF is Fast (or has 6+ ASuW). Save the action for when you can stack hits: more missiles in one launch means a worse SAM ratio for the defender because SAM shots scale slower than incoming missile count (7.4.2.1).
+
+The most-missed rule is that white, red, and NATO blue ship-launched missiles are card-only (5.1.1.3), except for the Baltic exception where one ship may fire with NATO blue or Soviet white/red. Players reach for a Soviet white missile and reflexively spend 1 OPS, but those launches require the matching Soviet-1 / Townsend card. Second: hit allocation. N9 and N10 hits go first by attacker (the launching player), then NATO allocates every 2nd hit and Soviets every 3rd (7.4.2). New Soviet players forget that the slower allocation cadence is a real disadvantage unless Missile Technology is unlocked. Third: ammunition. The Cruise Missiles Fired / AntiShip Missiles Fired markers (9.5.3, 9.5.4) are permanent for the turn, so plan reload via port returns.
+
+Pair with [Multi-submarine missile coordination](./act-sub-missile-coordination.md) or [Nuclear submarine missile attack](./act-sub-missile-3-zones.md) for a layered strike. NATO defends with F-14s, SAM-heavy TFs, and CAP.
+
+A Soviet TF with Kirov and three Sovremennys sits in North 7-8 with a Good-detected NATO carrier TF. 1 OPS launches 12 yellow Shipwrecks. NATO gets 13 SAM shots, knocks down 6, the remaining 6 roll 3 dice and score 4 hits, two go to the carrier as N9 attacker-allocated capital ship damage rolls.
