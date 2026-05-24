@@ -130,8 +130,8 @@ export function InfoPanel({ gameConfig }: InfoPanelProps) {
         <h2 className="mb-3 text-lg font-bold">Offline Export</h2>
         <p className="mb-3 text-sm leading-relaxed text-stone-500 dark:text-stone-400">
           Download the entire Battle Captain app — <strong>all games included</strong> (GOSS, Next War, Blue Water Navy) — as a single
-          self-contained HTML file (~35 MB). Open it directly in any browser; no internet connection
-          or server required. Play-aid images and rule content all work offline.
+          self-contained HTML file (~9 MB). Open it directly in any browser; no internet connection
+          or server required. Play-aid content and rules all work offline.
         </p>
         <p className="mb-4 text-sm leading-relaxed text-stone-500 dark:text-stone-400">
           The only feature that needs internet is the AI-powered <strong>Ask</strong> tab. For
@@ -173,6 +173,14 @@ export function InfoPanel({ gameConfig }: InfoPanelProps) {
           providing a step-by-step sequence of play, searchable rules reference,
           and AI-powered rules Q&amp;A. This is an unofficial fan-made tool.
         </p>
+        {gameConfig?.id === "blue-water-navy" && (
+          <p className="mt-3 text-sm leading-relaxed text-stone-500 dark:text-stone-400">
+            <strong>Rules numbering:</strong> this app uses Christophe Bonnet's
+            Revised Rules v1.17 (e.g. §5.3.3.2). The original 2020 rulebook section
+            is shown in muted text next to each rule for cross-reference (e.g.{" "}
+            <em>(orig §17.11)</em>).
+          </p>
+        )}
       </section>
 
       {/* Disclaimer */}
