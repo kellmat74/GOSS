@@ -498,7 +498,7 @@ function PlayAidInline({
   label: string;
   block: import("../../types/goss").PlayAidBlock | undefined;
 }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   if (!block) {
     // Unresolved ref — render as a warning chip
