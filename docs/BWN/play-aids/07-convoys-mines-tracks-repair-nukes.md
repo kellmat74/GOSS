@@ -27,14 +27,14 @@ Cause a hit on each 1-2 rolled. Odd hits to Convoy/Amph.
 | **Light** | 2 dice |
 | **Heavy** | 4 dice |
 
-### Port Damage
+## Port Damage
 
 | Damage | Effect |
 |---|---|
 | **Light Damage** | +1 hit each Convoy |
 | **Heavy Damage** | +2 hits each Convoy |
 
-### Delivery to these ports can increase a Convoys worth:
+## Alternate Convoy Ports
 
 | Delivery to: | Effects |
 |---|---|
@@ -52,7 +52,7 @@ Cause a hit on each 1-2 rolled. Odd hits to Convoy/Amph.
 
 ---
 
-## Europe South & Norway/Denmark War Tracks
+## War Tracks
 
 - 3 hits on troops prevents one advance on the War Track this turn.
 - Remove 3 hits (only) at the end of each turn.
@@ -71,7 +71,7 @@ When a submarine moves into or through the zone, roll dice on counter as an ASW 
 ## Port Mines
 
 Submarine enter/leave: 1 die light, 2 dice heavy
-- Hit on 1-2. -1 die if ◆ or ◆;  minimum = 0 dice
+- Hit on 1-2. -1 die if Slow or Non-magnetic;  minimum = 0 dice
 - TF enter/leave: 2 dice light, 4 dice heavy
 - Hit on 1-2. Odd hits to Convoy/Amph, others by TF owner
 
@@ -116,12 +116,12 @@ If the Soviet SAM level of a target is at least two, treat it as being worth +2 
 
 ---
 
-## SAM Ammo ★
+## SAM Ammo for Limited Ammunition
 
-- **Tico VLS** Fire 2–4 SAMS, mark `2–4` fired SAM value now 4.
-- If fired 5+ mark no ammo.
+- **Tico VLS** Fire 2–4 SAMS, mark "2–4 fired" SAM value now 4.
+	- If fired 5+ mark no ammo.
 - **Kirov/Kalinin** has 2 volleys total. 1 volley is 2+ shots.
-- When out Kirov is SAM 1, Kalinin SAM 2.
+	- When out Kirov is SAM 1, Kalinin SAM 2.
 
 ---
 
