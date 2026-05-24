@@ -317,6 +317,7 @@ function RichActionContent({
           <RuleAwareHtml
             className="prose-action text-sm leading-relaxed"
             html={c.whenItComesUpHtml}
+            onNavigateAction={onNavigate}
           />
         </section>
       )}
@@ -329,7 +330,7 @@ function RichActionContent({
           <ol className="space-y-3 list-decimal pl-6">
             {c.procedure.map((step, i) => (
               <li key={i} className="text-sm leading-relaxed">
-                <RuleAwareHtml className="prose-action" html={step.html} />
+                <RuleAwareHtml className="prose-action" html={step.html} onNavigateAction={onNavigate} />
                 {step.blocks.map((ref, j) => {
                   const block = playAidBlocks[ref.slug];
                   return (
@@ -385,6 +386,7 @@ function RichActionContent({
           <RuleAwareHtml
             className="prose-action text-sm leading-relaxed"
             html={c.whyAndWatchForHtml ?? ""}
+            onNavigateAction={onNavigate}
           />
         </section>
       )}

@@ -18,7 +18,16 @@ import type { GlossaryEntry } from "../../data/glossary";
  * Used by ActionsPanel (procedure steps, play-aid blocks, intro/outro
  * prose) and by TableModal (compiled play-aid pages).
  */
-export function RuleAwareHtml({ html, className }: { html: string; className?: string }) {
+export function RuleAwareHtml({
+  html,
+  className,
+  onNavigateAction,
+}: {
+  html: string;
+  className?: string;
+  /** Called when an embedded markdown link to ./act-<id>.md is clicked. ActionsPanel wires this to its setSelectedId. */
+  onNavigateAction?: (actionId: string) => void;
+}) {
   const { openRule } = useRules();
   const { getEntry, regex: glossaryRegex } = useGlossary();
   const ref = useRef<HTMLDivElement>(null);
@@ -30,10 +39,19 @@ export function RuleAwareHtml({ html, className }: { html: string; className?: s
   >(null);
 
   const processed = useMemo(() => {
+    // 0) Convert embedded action-file links (from action markdown bodies)
+    //    like <a href="./act-sub-attack.md">label</a> into clickable buttons
+    //    that navigate to the action page within the same panel. Without this,
+    //    clicking the link would try to load a .md file from the server.
+    let result = html.replace(
+      /<a href="\.\/(act-[a-z0-9-]+)\.md">([^<]*)<\/a>/g,
+      '<button type="button" class="action-link-inline" data-action="$1">$2</button>'
+    );
+
     // 1) Wrap (X.Y.Z) and (5.2.1, 7.3) into clickable rule-ref buttons.
     const SECTION_RE = /\d+\.\d+(?:\.\d+(?:\.\d+)?)?(?:[a-z])?/g;
     const GROUP_RE = /\((\d[^)]{0,200})\)/g;
-    let result = html.replace(GROUP_RE, (_full, inner) => {
+    result = result.replace(GROUP_RE, (_full, inner) => {
       const wrapped = inner.replace(
         SECTION_RE,
         (refStr: string) =>
@@ -61,22 +79,31 @@ export function RuleAwareHtml({ html, className }: { html: string; className?: s
     return parts.join("");
   }, [html, glossaryRegex, getEntry]);
 
-  // Rule-ref click delegation
+  // Rule-ref + action-link click delegation
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const handler = (e: MouseEvent) => {
       const t = e.target as HTMLElement;
-      if (t && t.classList.contains("rule-ref-inline")) {
+      if (!t) return;
+      if (t.classList.contains("rule-ref-inline")) {
         e.preventDefault();
         e.stopPropagation();
         const r = t.getAttribute("data-rule");
         if (r) openRule(r);
+        return;
+      }
+      if (t.classList.contains("action-link-inline")) {
+        e.preventDefault();
+        e.stopPropagation();
+        const a = t.getAttribute("data-action");
+        if (a && onNavigateAction) onNavigateAction(a);
+        return;
       }
     };
     el.addEventListener("click", handler);
     return () => el.removeEventListener("click", handler);
-  }, [openRule, processed]);
+  }, [openRule, onNavigateAction, processed]);
 
   // Glossary tooltip event delegation: hover (desktop) + tap (touch)
   useEffect(() => {

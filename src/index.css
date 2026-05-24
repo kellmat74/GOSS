@@ -98,6 +98,21 @@
 }
 .dark .prose-action .glossary-term-inline { border-bottom-color: #78716c; }
 
+/* Embedded action-file links rewritten from markdown ./act-XXX.md by RuleAwareHtml. */
+.prose-action button.action-link-inline {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--accent-700);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.prose-action button.action-link-inline:hover { color: var(--accent-500); }
+.dark .prose-action button.action-link-inline { color: var(--accent-400); }
+.dark .prose-action button.action-link-inline:hover { color: var(--accent-300); }
+
 /* Dark theme: amber accents */
 .dark {
   --accent-50: #fffbeb;
