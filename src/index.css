@@ -91,6 +91,13 @@
 .dark .prose-action button.rule-ref-inline { background: #44403c; color: var(--accent-400); }
 .dark .prose-action button.rule-ref-inline:hover { background: #57534e; color: var(--accent-300); }
 
+/* Glossary-term highlights inside .prose-action HTML (dotted underline, cursor: help). */
+.prose-action .glossary-term-inline {
+  border-bottom: 1px dotted #a8a29e;
+  cursor: help;
+}
+.dark .prose-action .glossary-term-inline { border-bottom-color: #78716c; }
+
 /* Dark theme: amber accents */
 .dark {
   --accent-50: #fffbeb;
