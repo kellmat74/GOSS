@@ -161,6 +161,106 @@ function deriveType(usage) {
   return "operations-event";
 }
 
+/**
+ * Re-bucket each action by id into the user-facing 7 categories:
+ * ship / sub / air / facility / nuke / hand / other.
+ * Falls back to the markdown frontmatter category if the id is unknown.
+ */
+const CATEGORY_BY_ID = {
+  // Ship
+  "act-ship-form-tf": "ship",
+  "act-ship-move": "ship",
+  "act-ship-fire-missiles": "ship",
+  "act-ship-asw": "ship",
+  "act-ship-amphib-land": "ship",
+  "act-misc-move-between-tfs": "ship",
+  // Sub
+  "act-sub-move": "sub",
+  "act-sub-attack": "sub",
+  "act-sub-attack-then-move": "sub",
+  "act-sub-detect": "sub",
+  "act-sub-on-patrol": "sub",
+  "act-sub-missile-3-zones": "sub",
+  "act-sub-missile-coordination": "sub",
+  "act-sub-ssbn-escort": "sub",
+  "act-anytime-sub-asw-vs-tf": "sub",
+  // Air
+  "act-air-mp-fly-attack": "air",
+  "act-air-mp-on-patrol": "air",
+  "act-air-strike": "air",
+  "act-active-return-on-patrol-air": "air",
+  "act-anytime-fighter-vs-air": "air",
+  "act-anytime-mp-vs-sub": "air",
+  "act-anytime-mp-vs-tf": "air",
+  "act-anytime-cap": "air",
+  // Facility
+  "act-misc-repair": "facility",
+  "act-misc-demine-port": "facility",
+  "act-misc-launch-rorsat": "facility",
+  // Nuke
+  "act-active-fsp": "nuke",
+  "act-anytime-spy-fs-evasion": "nuke",
+  // Hand
+  "act-active-ops-card-event": "hand",
+  "act-active-hand-card-event": "hand",
+  "act-anytime-reaction-event": "hand",
+  "act-anytime-draw-card": "hand",
+  // Other
+  "act-misc-attack-cuba": "other",
+  "act-misc-pass": "other",
+  "act-active-soviet-spy": "other",
+  "act-anytime-hydrophone": "other",
+};
+
+/**
+ * Verb classification for sub-grouping inside each category.
+ * Verbs: setup, move, attack, detect, patrol-react, special.
+ */
+const VERB_BY_ID = {
+  "act-ship-form-tf": "setup",
+  "act-ship-move": "move",
+  "act-ship-fire-missiles": "attack",
+  "act-ship-asw": "attack",
+  "act-ship-amphib-land": "special",
+  "act-misc-move-between-tfs": "move",
+
+  "act-sub-move": "move",
+  "act-sub-attack": "attack",
+  "act-sub-attack-then-move": "attack",
+  "act-sub-detect": "detect",
+  "act-sub-on-patrol": "patrol-react",
+  "act-sub-missile-3-zones": "attack",
+  "act-sub-missile-coordination": "attack",
+  "act-sub-ssbn-escort": "move",
+  "act-anytime-sub-asw-vs-tf": "patrol-react",
+
+  "act-air-mp-fly-attack": "attack",
+  "act-air-mp-on-patrol": "patrol-react",
+  "act-air-strike": "attack",
+  "act-active-return-on-patrol-air": "setup",
+  "act-anytime-fighter-vs-air": "patrol-react",
+  "act-anytime-mp-vs-sub": "patrol-react",
+  "act-anytime-mp-vs-tf": "patrol-react",
+  "act-anytime-cap": "patrol-react",
+
+  "act-misc-repair": "special",
+  "act-misc-demine-port": "special",
+  "act-misc-launch-rorsat": "setup",
+
+  "act-active-fsp": "special",
+  "act-anytime-spy-fs-evasion": "patrol-react",
+
+  "act-active-ops-card-event": "special",
+  "act-active-hand-card-event": "special",
+  "act-anytime-reaction-event": "patrol-react",
+  "act-anytime-draw-card": "special",
+
+  "act-misc-attack-cuba": "attack",
+  "act-misc-pass": "special",
+  "act-active-soviet-spy": "special",
+  "act-anytime-hydrophone": "patrol-react",
+};
+
 function processAction(filename) {
   const md = readFileSync(join(ACTIONS_DIR, filename), "utf-8");
   const { frontmatter, body } = splitFrontmatter(md);
@@ -172,8 +272,9 @@ function processAction(filename) {
   const whenItComesUp = sections["When does this come up?"] || "";
   const whyAndWatchFor = sections["Why and what to watch for"] || "";
 
+  const id = frontmatter.id;
   const card = {
-    id: frontmatter.id,
+    id,
     cardNumber: "—",
     side: frontmatter.side || "neutral",
     title: frontmatter.title,
@@ -182,7 +283,8 @@ function processAction(filename) {
     text: whenItComesUp.replace(/\n+/g, " ").slice(0, 240), // short blurb for list view
     cost: frontmatter.cost && frontmatter.cost !== "null" ? parseInt(frontmatter.cost, 10) : undefined,
     ruleRefs: frontmatter.ruleRefs || [],
-    category: frontmatter.category,
+    category: CATEGORY_BY_ID[id] || "other",
+    verb: VERB_BY_ID[id] || "special",
     content: {
       whenItComesUp,
       whenItComesUpHtml: marked.parse(whenItComesUp),
@@ -206,12 +308,15 @@ function main() {
 
   const cards = files.map(processAction);
 
-  // Group by category, preserving the existing CardCategory shape.
+  // Group by the new user-facing 7-bucket category.
   const categoryMeta = {
-    "ship-actions": "Ship Actions",
-    "sub-actions": "Submarine Actions",
-    "air-actions": "Air Unit Actions",
-    "misc-actions": "Miscellaneous Actions",
+    ship: "Ship",
+    sub: "Submarine",
+    air: "Air",
+    facility: "Facility",
+    nuke: "Nuke",
+    hand: "Hand",
+    other: "Other",
   };
 
   const groups = {};
@@ -219,7 +324,7 @@ function main() {
     groups[cat] = { id: cat, label: categoryMeta[cat], cards: [] };
   }
   for (const c of cards) {
-    const cat = c.category || "misc-actions";
+    const cat = c.category || "other";
     if (!groups[cat]) {
       groups[cat] = { id: cat, label: cat, cards: [] };
     }
@@ -227,7 +332,10 @@ function main() {
     groups[cat].cards.push(c);
   }
 
-  const out = Object.values(groups).filter((g) => g.cards.length > 0);
+  // Preserve the category order from categoryMeta (don't auto-sort).
+  const out = Object.keys(categoryMeta)
+    .map((k) => groups[k])
+    .filter((g) => g.cards.length > 0);
   writeFileSync(OUTPUT_PATH, JSON.stringify(out, null, 2) + "\n");
   console.log(`Wrote ${cards.length} actions across ${out.length} categories to ${OUTPUT_PATH}`);
 }

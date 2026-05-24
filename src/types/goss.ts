@@ -147,6 +147,8 @@ export interface GameCard {
   ruleRefs?: string[];    // section IDs the card cross-references
   /** Action menu placement: "action" (costs OPS), "active" (free when active), "anytime" (reaction). BWN-specific. */
   usage?: "action" | "active" | "anytime";
+  /** Sub-grouping verb inside a category (BWN actions): setup / move / attack / detect / patrol-react / special. */
+  verb?: "setup" | "move" | "attack" | "detect" | "patrol-react" | "special";
   /** Rich per-action content from BWN merge pipeline. */
   content?: ActionContent;
 }

@@ -9,7 +9,6 @@ interface ActionsPanelProps {
   /** Map of pa<N>:<slug> → play-aid block (pre-rendered HTML). BWN-only; empty for other games. */
   playAidBlocks?: PlayAidBlocksMap;
   title?: string;
-  subtitle?: string;
   emptyMessage?: string;
 }
 
@@ -32,19 +31,44 @@ const SIDE_BADGE: Record<string, { label: string; cls: string }> = {
   neutral: { label: "", cls: "" },
 };
 
+/** Sub-grouping order + display labels for the verb axis. */
+const VERB_ORDER = ["setup", "move", "attack", "detect", "patrol-react", "special"] as const;
+const VERB_LABEL: Record<string, string> = {
+  setup: "Setup",
+  move: "Move",
+  attack: "Attack",
+  detect: "Detect",
+  "patrol-react": "Patrol / React",
+  special: "Special",
+};
+
 export function ActionsPanel({
   cards,
   playAidBlocks = {},
   title = "Actions",
-  subtitle = "Operations Phase actions. Click any item to see procedure and play-aid tables inline.",
   emptyMessage = "No actions catalog for this game.",
 }: ActionsPanelProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [activeCategoryId, setActiveCategoryId] = useState<string>(
+    () => cards[0]?.id ?? ""
+  );
   const [query, setQuery] = useState("");
 
+  // Reset active category when the cards source changes (game switch).
+  useMemo(() => {
+    if (cards.length > 0 && !cards.find((c) => c.id === activeCategoryId)) {
+      setActiveCategoryId(cards[0].id);
+    }
+  }, [cards, activeCategoryId]);
+
+  const q = query.trim().toLowerCase();
+  const activeCategory = cards.find((c) => c.id === activeCategoryId) ?? cards[0];
+
+  /** Cross-category search matches; when query is empty, show only active category. */
   const filtered = useMemo<CardCategory[]>(() => {
-    if (!query.trim()) return cards;
-    const q = query.toLowerCase();
+    if (!q) {
+      return activeCategory ? [activeCategory] : [];
+    }
     return cards
       .map((cat) => ({
         ...cat,
@@ -58,7 +82,24 @@ export function ActionsPanel({
         ),
       }))
       .filter((cat) => cat.cards.length > 0);
-  }, [cards, query]);
+  }, [cards, q, activeCategory]);
+
+  /** Per-category counts shown on the category tabs. */
+  const categoryCounts = useMemo(() => {
+    const m: Record<string, number> = {};
+    for (const cat of cards) m[cat.id] = cat.cards.length;
+    return m;
+  }, [cards]);
+
+  /** Group an array of cards by verb in the canonical verb order. */
+  const groupByVerb = (cs: GameCard[]) => {
+    const groups: { verb: string; cards: GameCard[] }[] = [];
+    for (const v of VERB_ORDER) {
+      const subset = cs.filter((c) => (c.verb ?? "special") === v);
+      if (subset.length > 0) groups.push({ verb: v, cards: subset });
+    }
+    return groups;
+  };
 
   const selectedCard: GameCard | null = useMemo(() => {
     if (!selectedId) return null;
@@ -77,82 +118,113 @@ export function ActionsPanel({
     );
   }
 
+  const renderRow = (c: GameCard) => {
+    const isSel = c.id === selectedId;
+    const sideBadge = SIDE_BADGE[c.side];
+    const usageBadge = c.usage ? USAGE_BADGE[c.usage] : null;
+    return (
+      <li key={c.id}>
+        <button
+          onClick={() => setSelectedId(c.id)}
+          className={`flex w-full items-center gap-2 rounded px-2 py-1 text-left text-sm transition-colors ${
+            isSel
+              ? "bg-accent-500/15 text-stone-900 dark:text-stone-100"
+              : "hover:bg-stone-100 dark:hover:bg-stone-700/60"
+          }`}
+        >
+          <span className="flex-1 truncate">{c.title}</span>
+          {usageBadge && c.usage !== "action" && (
+            <span className={`shrink-0 rounded px-1.5 py-0.5 text-[9px] font-bold tracking-wide ${usageBadge.cls}`}>
+              {usageBadge.label}
+            </span>
+          )}
+          {sideBadge.label && (
+            <span className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] font-bold ${sideBadge.cls}`}>
+              {sideBadge.label}
+            </span>
+          )}
+          {typeof c.cost === "number" && (
+            <span className="shrink-0 rounded bg-stone-200 px-1.5 py-0.5 text-[10px] font-semibold text-stone-700 dark:bg-stone-700 dark:text-stone-300">
+              {c.cost} OPS
+            </span>
+          )}
+        </button>
+      </li>
+    );
+  };
+
   return (
     <div className="flex h-full gap-4" style={{ height: "calc(100vh - 8rem)" }}>
-      {/* Left: category list + cards */}
-      <div className="flex w-full flex-col md:w-1/2 lg:w-2/5">
-        <div className="mb-2 flex items-center justify-between">
-          <h2 className="text-2xl font-bold">{title}</h2>
-        </div>
-        <p className="mb-3 text-sm text-stone-500">{subtitle}</p>
-        <div className="mb-3 shrink-0">
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder={`Search ${title.toLowerCase()}...`}
-            className="w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 dark:border-stone-600 dark:bg-stone-800"
-          />
-        </div>
-        <div className="flex-1 overflow-y-auto pr-2">
-          {filtered.map((cat) => (
-            <div key={cat.id} className="mb-4">
-              <div className="sticky top-0 z-[1] bg-white py-1 text-xs font-semibold uppercase tracking-wider text-stone-500 dark:bg-stone-900">
-                {cat.label} <span className="text-stone-400">({cat.cards.length})</span>
+      {/* Left: category tabs + filtered actions */}
+      <div className="flex w-full md:w-1/2 lg:w-2/5">
+        {/* Category tabs (vertical) */}
+        <nav className="flex w-28 shrink-0 flex-col border-r border-stone-200 pr-2 dark:border-stone-700">
+          <h2 className="mb-2 text-base font-bold">{title}</h2>
+          {cards.map((cat) => {
+            const isActive = cat.id === activeCategoryId && !q;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => {
+                  setActiveCategoryId(cat.id);
+                  setQuery("");
+                }}
+                className={`mb-0.5 flex items-center justify-between rounded px-2 py-1.5 text-left text-sm transition-colors ${
+                  isActive
+                    ? "bg-accent-500 text-white"
+                    : "hover:bg-stone-100 dark:hover:bg-stone-700/60"
+                }`}
+              >
+                <span className="font-medium">{cat.label}</span>
+                <span
+                  className={`shrink-0 rounded px-1.5 py-0 text-[10px] font-bold ${
+                    isActive
+                      ? "bg-white/25 text-white"
+                      : "bg-stone-200 text-stone-600 dark:bg-stone-700 dark:text-stone-300"
+                  }`}
+                >
+                  {categoryCounts[cat.id] ?? 0}
+                </span>
+              </button>
+            );
+          })}
+        </nav>
+
+        {/* Actions list for the active (or search-matched) category */}
+        <div className="flex flex-1 flex-col pl-3">
+          <div className="mb-2 shrink-0">
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search all actions..."
+              className="w-full rounded-lg border border-stone-300 bg-white px-3 py-1.5 text-sm focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 dark:border-stone-600 dark:bg-stone-800"
+            />
+          </div>
+          <div className="flex-1 overflow-y-auto">
+            {filtered.map((cat) => (
+              <div key={cat.id} className="mb-3">
+                {q && (
+                  <div className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-stone-400">
+                    {cat.label}
+                  </div>
+                )}
+                {groupByVerb(cat.cards).map((g) => (
+                  <div key={g.verb} className="mb-2">
+                    <div className="mb-1 border-b border-stone-200 pb-0.5 text-[10px] font-semibold uppercase tracking-wider text-stone-500 dark:border-stone-700 dark:text-stone-400">
+                      {VERB_LABEL[g.verb]} <span className="text-stone-400">({g.cards.length})</span>
+                    </div>
+                    <ul className="space-y-0.5">{g.cards.map(renderRow)}</ul>
+                  </div>
+                ))}
               </div>
-              <ul className="mt-1 space-y-1">
-                {cat.cards.map((c) => {
-                  const isSel = c.id === selectedId;
-                  const sideBadge = SIDE_BADGE[c.side];
-                  const usageBadge = c.usage ? USAGE_BADGE[c.usage] : null;
-                  return (
-                    <li key={c.id}>
-                      <button
-                        onClick={() => setSelectedId(c.id)}
-                        className={`w-full rounded-md border px-3 py-2 text-left text-sm transition-colors ${
-                          isSel
-                            ? "border-accent-500 bg-accent-500/10 text-stone-900 dark:text-stone-100"
-                            : "border-stone-200 bg-white hover:border-accent-400 hover:bg-stone-50 dark:border-stone-700 dark:bg-stone-800 dark:hover:bg-stone-700/60"
-                        }`}
-                      >
-                        <div className="flex items-center gap-2">
-                          {c.cardNumber !== "—" && (
-                            <span className="font-mono text-xs text-stone-400">#{c.cardNumber}</span>
-                          )}
-                          <span className="flex-1 font-medium">{c.title}</span>
-                          {usageBadge && c.usage !== "action" && (
-                            <span className={`rounded px-1.5 py-0.5 text-[9px] font-bold tracking-wide ${usageBadge.cls}`}>
-                              {usageBadge.label}
-                            </span>
-                          )}
-                          {sideBadge.label && (
-                            <span className={`rounded px-1.5 py-0.5 text-[10px] font-bold ${sideBadge.cls}`}>
-                              {sideBadge.label}
-                            </span>
-                          )}
-                          {typeof c.cost === "number" && (
-                            <span className="rounded bg-stone-200 px-1.5 py-0.5 text-[10px] font-semibold text-stone-700 dark:bg-stone-700 dark:text-stone-300">
-                              {c.cost} OPS
-                            </span>
-                          )}
-                        </div>
-                        {(c.text || c.clarification) && (
-                          <div className="mt-0.5 line-clamp-2 text-xs text-stone-500 dark:text-stone-400">
-                            {c.text || c.clarification}
-                          </div>
-                        )}
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
-          {filtered.length === 0 && (
-            <div className="py-8 text-center text-sm text-stone-500">
-              No matches for "{query}".
-            </div>
-          )}
+            ))}
+            {filtered.length === 0 && (
+              <div className="py-8 text-center text-sm text-stone-500">
+                No matches for "{query}".
+              </div>
+            )}
+          </div>
         </div>
       </div>
 

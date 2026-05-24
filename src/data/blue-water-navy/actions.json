@@ -1,8 +1,77 @@
 [
   {
-    "id": "ship-actions",
-    "label": "Ship Actions",
+    "id": "ship",
+    "label": "Ship",
     "cards": [
+      {
+        "id": "act-misc-move-between-tfs",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Move ships between Task Forces",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "Two Task Forces are in the same Sea Zone and you want to shuffle units between them — typically to consolidate damaged ships, peel off escorts, or break apart a force without spending the 2 OPS to form a brand new TF (5.1.1.2).",
+        "cost": 1,
+        "ruleRefs": [
+          "5.1.1.2"
+        ],
+        "verb": "move",
+        "content": {
+          "whenItComesUp": "Two Task Forces are in the same Sea Zone and you want to shuffle units between them — typically to consolidate damaged ships, peel off escorts, or break apart a force without spending the 2 OPS to form a brand new TF (5.1.1.2).",
+          "whenItComesUpHtml": "<p>Two Task Forces are in the same Sea Zone and you want to shuffle units between them — typically to consolidate damaged ships, peel off escorts, or break apart a force without spending the 2 OPS to form a brand new TF (5.1.1.2).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS. Select source and destination Task Forces — they must be in the same Sea Zone (5.1.1.2).",
+              "html": "<p>Spend 1 OPS. Select source and destination Task Forces — they must be in the same Sea Zone (5.1.1.2).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Move any units from the source TF to the destination TF (or to multiple destination TFs) as desired.",
+              "html": "<p>Move any units from the source TF to the destination TF (or to multiple destination TFs) as desired.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "**Detection propagation**: a unit moved from a detected force grants the detection status of the originating TF to the destination TF — unless the destination already has a higher status.",
+              "html": "<p><strong>Detection propagation</strong>: a unit moved from a detected force grants the detection status of the originating TF to the destination TF — unless the destination already has a higher status.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:detection-of-tfs",
+                  "label": "Detection of TFs (Poor / Good states)"
+                }
+              ]
+            },
+            {
+              "text": "Each remaining TF must still contain at least one Surface Unit (5.1.2). Empty TF markers return to the Task Force display.",
+              "html": "<p>Each remaining TF must still contain at least one Surface Unit (5.1.2). Empty TF markers return to the Task Force display.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "The TFs may become Slow or Fast depending on whether (S) slow units are present after the swap.",
+              "html": "<p>The TFs may become Slow or Fast depending on whether (S) slow units are present after the swap.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-ship-form-tf",
+                "title": "Form a new Task Force"
+              },
+              {
+                "id": "act-ship-move",
+                "title": "Move ships in a Task Force"
+              }
+            ],
+            "ruleRefs": [
+              "5.1.1.2",
+              "5.1.2",
+              "5.1.2.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
       {
         "id": "act-ship-amphib-land",
         "cardNumber": "—",
@@ -18,6 +87,7 @@
           "8.1.1",
           "8.1.4"
         ],
+        "verb": "special",
         "content": {
           "whenItComesUp": "A Task Force carrying Amphibious units sits in a zone with an Amphibious Landing symbol on the map. To get the troops ashore, the TF skips a movement beat to mark itself 'Landing', then resolves the landing on its next chance to move (5.1.3.2, 8.1.1). NATO does not use this for normal troop delivery — NATO delivers into friendly ports (5.1.3.5, 8.1.2) — except for Soviet-occupied Iceland (8.4.4).",
           "whenItComesUpHtml": "<p>A Task Force carrying Amphibious units sits in a zone with an Amphibious Landing symbol on the map. To get the troops ashore, the TF skips a movement beat to mark itself &#39;Landing&#39;, then resolves the landing on its next chance to move (5.1.3.2, 8.1.1). NATO does not use this for normal troop delivery — NATO delivers into friendly ports (5.1.3.5, 8.1.2) — except for Soviet-occupied Iceland (8.4.4).</p>\n",
@@ -123,6 +193,7 @@
           "7.2.2",
           "7.2.2.1"
         ],
+        "verb": "attack",
         "content": {
           "whenItComesUp": "A Task Force that wants to hunt a known submarine in its zone — instead of moving this beat — spends 1 OPS to roll ASW dice from its component ships (7.2.2). Doing so is loud: the TF is auto-marked with at least a Poor Detection and may even upgrade itself to Good Detection (7.2.2.1).",
           "whenItComesUpHtml": "<p>A Task Force that wants to hunt a known submarine in its zone — instead of moving this beat — spends 1 OPS to roll ASW dice from its component ships (7.2.2). Doing so is loud: the TF is auto-marked with at least a Poor Detection and may even upgrade itself to Good Detection (7.2.2.1).</p>\n",
@@ -219,6 +290,7 @@
           "7.4.1.2",
           "7.4.2"
         ],
+        "verb": "attack",
         "content": {
           "whenItComesUp": "When a Task Force wants to attack a detected enemy TF with its ship-launched anti-ship missiles. White, red, and NATO blue ship-launched missiles do not use this action — those go only via card play (5.1.1.3). This is the action for the Soviet black 'Sandbox' and yellow 'Shipwreck' weapons firing.",
           "whenItComesUpHtml": "<p>When a Task Force wants to attack a detected enemy TF with its ship-launched anti-ship missiles. White, red, and NATO blue ship-launched missiles do not use this action — those go only via card play (5.1.1.3). This is the action for the Soviet black &#39;Sandbox&#39; and yellow &#39;Shipwreck&#39; weapons firing.</p>\n",
@@ -324,6 +396,7 @@
           "5.1.1.1",
           "5.1.2"
         ],
+        "verb": "setup",
         "content": {
           "whenItComesUp": "Surface ships can never move outside a Task Force, so getting ships from port to sea (or reorganizing forces already at sea) requires forming a TF (5.1.2). Both sides spend this action when they want to deploy a new group from a port, or break apart an existing force at sea into separate operational groups.",
           "whenItComesUpHtml": "<p>Surface ships can never move outside a Task Force, so getting ships from port to sea (or reorganizing forces already at sea) requires forming a TF (5.1.2). Both sides spend this action when they want to deploy a new group from a port, or break apart an existing force at sea into separate operational groups.</p>\n",
@@ -395,6 +468,7 @@
           "5.1.3.1",
           "5.1.3.6"
         ],
+        "verb": "move",
         "content": {
           "whenItComesUp": "Ships only move as a Task Force group, and only when the SHIPS event triggers on the Operations Points Record Track (4.2.1.3). When the SHIPS event fires, both sides move every Task Force per the movement rules (5.1.3) — this is the main repositioning beat of the turn.",
           "whenItComesUpHtml": "<p>Ships only move as a Task Force group, and only when the SHIPS event triggers on the Operations Points Record Track (4.2.1.3). When the SHIPS event fires, both sides move every Task Force per the movement rules (5.1.3) — this is the main repositioning beat of the turn.</p>\n",
@@ -465,8 +539,8 @@
     ]
   },
   {
-    "id": "sub-actions",
-    "label": "Submarine Actions",
+    "id": "sub",
+    "label": "Submarine",
     "cards": [
       {
         "id": "act-anytime-sub-asw-vs-tf",
@@ -482,6 +556,7 @@
           "7.2",
           "7.3"
         ],
+        "verb": "patrol-react",
         "content": {
           "whenItComesUp": "An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving TF (5.2.3). The attack uses the standard 7.3 sub-vs-TF torpedo procedure.",
           "whenItComesUpHtml": "<p>An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving TF (5.2.3). The attack uses the standard 7.3 sub-vs-TF torpedo procedure.</p>\n",
@@ -596,6 +671,7 @@
           "7.3",
           "7.3.1"
         ],
+        "verb": "attack",
         "content": {
           "whenItComesUp": "A submarine already in the same zone as a detected enemy TF launches its torpedo attack first, then relocates. Same OPS cost as the move-then-attack variant; the order is the only difference (5.2.1).",
           "whenItComesUpHtml": "<p>A submarine already in the same zone as a detected enemy TF launches its torpedo attack first, then relocates. Same OPS cost as the move-then-attack variant; the order is the only difference (5.2.1).</p>\n",
@@ -676,6 +752,7 @@
           "7.3.1",
           "7.3.2"
         ],
+        "verb": "attack",
         "content": {
           "whenItComesUp": "A submarine moves into a Sea Zone containing a detected enemy TF and resolves a torpedo attack against it (5.2.1, 7.3). The target TF must already be detected — Poor or Good — since submarine torpedo attacks need a known TF to engage.",
           "whenItComesUpHtml": "<p>A submarine moves into a Sea Zone containing a detected enemy TF and resolves a torpedo attack against it (5.2.1, 7.3). The target TF must already be detected — Poor or Good — since submarine torpedo attacks need a known TF to engage.</p>\n",
@@ -821,6 +898,7 @@
           "6.1",
           "6.1.1"
         ],
+        "verb": "detect",
         "content": {
           "whenItComesUp": "A submarine moves into a zone with an Undetected (or Poor-detected) enemy TF and uses its sensors to upgrade the detection state — typically as a setup for a follow-up attack by the same submarine (via the move-then-attack action) or another unit that needs a Good detection (5.2.1).",
           "whenItComesUpHtml": "<p>A submarine moves into a zone with an Undetected (or Poor-detected) enemy TF and uses its sensors to upgrade the detection state — typically as a setup for a follow-up attack by the same submarine (via the move-then-attack action) or another unit that needs a Good detection (5.2.1).</p>\n",
@@ -897,6 +975,7 @@
           "7.4.1.1",
           "7.4.2"
         ],
+        "verb": "attack",
         "content": {
           "whenItComesUp": "A nuclear submarine launches a missile attack against a TF (7.4) or a land facility (7.5) in its current zone. Per 7.4.1.1, submarine-launched missile attacks require the attacker to be in the same zone as the target — range is expressed by movement, not by the missile's reach.",
           "whenItComesUpHtml": "<p>A nuclear submarine launches a missile attack against a TF (7.4) or a land facility (7.5) in its current zone. Per 7.4.1.1, submarine-launched missile attacks require the attacker to be in the same zone as the target — range is expressed by movement, not by the missile&#39;s reach.</p>\n",
@@ -1008,6 +1087,7 @@
           "7.4",
           "7.4.1.1"
         ],
+        "verb": "attack",
         "content": {
           "whenItComesUp": "Two or three submarines pool a coordinated missile attack against a single Task Force or facility. All subs must move to the same zone and resolve as one attack. Costs 1 OPS per participating submarine (so 2 or 3 total) (5.2.4).",
           "whenItComesUpHtml": "<p>Two or three submarines pool a coordinated missile attack against a single Task Force or facility. All subs must move to the same zone and resolve as one attack. Costs 1 OPS per participating submarine (so 2 or 3 total) (5.2.4).</p>\n",
@@ -1114,6 +1194,7 @@
           "5.2.1",
           "5.2.2"
         ],
+        "verb": "move",
         "content": {
           "whenItComesUp": "Repositioning a single fresh submarine. Submarine actions all cost 1 OPS unless specified and use a single submarine that must be fresh (5.2). A submarine that takes an action is marked 'Spent' (or 'On Patrol' if it took the patrol action) for the rest of the turn.",
           "whenItComesUpHtml": "<p>Repositioning a single fresh submarine. Submarine actions all cost 1 OPS unless specified and use a single submarine that must be fresh (5.2). A submarine that takes an action is marked &#39;Spent&#39; (or &#39;On Patrol&#39; if it took the patrol action) for the rest of the turn.</p>\n",
@@ -1193,6 +1274,7 @@
           "5.2.1",
           "5.2.3"
         ],
+        "verb": "patrol-react",
         "content": {
           "whenItComesUp": "A submarine moves to a zone where the opponent is likely to send units later in the turn, then sets up to react. Going On Patrol arms the sub to interrupt enemy movement through its zone for the remainder of the turn (5.2.3).",
           "whenItComesUpHtml": "<p>A submarine moves to a zone where the opponent is likely to send units later in the turn, then sets up to react. Going On Patrol arms the sub to interrupt enemy movement through its zone for the remainder of the turn (5.2.3).</p>\n",
@@ -1266,6 +1348,7 @@
           "2.2.7.1",
           "5.2.2"
         ],
+        "verb": "move",
         "content": {
           "whenItComesUp": "A Soviet SSBN ('Boomer') wants to relocate with protection. Per the stacking exception in 2.2.7.1, a Task Force may only have one escorting submarine and it must be a nuclear attack sub (not diesel, not an SSBN). The SSBN movement rule (5.2.2) extends this to subs travelling together: a moving Soviet SSBN may take one non-diesel submarine with it for no extra OPS cost.",
           "whenItComesUpHtml": "<p>A Soviet SSBN (&#39;Boomer&#39;) wants to relocate with protection. Per the stacking exception in 2.2.7.1, a Task Force may only have one escorting submarine and it must be a nuclear attack sub (not diesel, not an SSBN). The SSBN movement rule (5.2.2) extends this to subs travelling together: a moving Soviet SSBN may take one non-diesel submarine with it for no extra OPS cost.</p>\n",
@@ -1321,8 +1404,8 @@
     ]
   },
   {
-    "id": "air-actions",
-    "label": "Air Unit Actions",
+    "id": "air",
+    "label": "Air",
     "cards": [
       {
         "id": "act-active-return-on-patrol-air",
@@ -1337,6 +1420,7 @@
           "5.3.4.1",
           "5.3.4.2"
         ],
+        "verb": "setup",
         "content": {
           "whenItComesUp": "When it's your turn to play an action, you may rebase a Fresh On-Patrol Air Unit without spending OPS. This is a \"use when active\" option — it does not count as an action and costs nothing (4.2.2). Useful for pulling an On-Patrol unit back to base so it can be used in an action next time it's your turn.",
           "whenItComesUpHtml": "<p>When it&#39;s your turn to play an action, you may rebase a Fresh On-Patrol Air Unit without spending OPS. This is a &quot;use when active&quot; option — it does not count as an action and costs nothing (4.2.2). Useful for pulling an On-Patrol unit back to base so it can be used in an action next time it&#39;s your turn.</p>\n",
@@ -1403,6 +1487,7 @@
           "6.1",
           "7.2"
         ],
+        "verb": "attack",
         "content": {
           "whenItComesUp": "A Maritime Patrol unit flies a one-shot mission into a Sea Zone within its range — either to hunt a known submarine (ASW) or to attempt detection of an enemy Task Force (5.3, 5.3.1). The MP must be Fresh and the action costs 1 OPS per flying unit (escorting fighters and tankers fly free, see [Air Strike](./act-air-strike.md)).",
           "whenItComesUpHtml": "<p>A Maritime Patrol unit flies a one-shot mission into a Sea Zone within its range — either to hunt a known submarine (ASW) or to attempt detection of an enemy Task Force (5.3, 5.3.1). The MP must be Fresh and the action costs 1 OPS per flying unit (escorting fighters and tankers fly free, see <a href=\"./act-air-strike.md\">Air Strike</a>).</p>\n",
@@ -1509,6 +1594,7 @@
           "5.3.4.1",
           "5.3.4.2"
         ],
+        "verb": "patrol-react",
         "content": {
           "whenItComesUp": "Putting an MP or land-based Fighter into a zone where it will react later in the turn. Carrier-based Air Units cannot perform this mission type — they must protect their carrier (5.3.4.2). Only MP or Fighter units may go On Patrol (5.3.4).",
           "whenItComesUpHtml": "<p>Putting an MP or land-based Fighter into a zone where it will react later in the turn. Carrier-based Air Units cannot perform this mission type — they must protect their carrier (5.3.4.2). Only MP or Fighter units may go On Patrol (5.3.4).</p>\n",
@@ -1594,6 +1680,7 @@
           "7.4.1.3",
           "7.5.1"
         ],
+        "verb": "attack",
         "content": {
           "whenItComesUp": "One or more Strike units fly to a target TF or facility and attack with missiles, bombs, or both. Fighters fly as escort and Tankers extend range — both fly free of OPS cost when part of an air strike (5.3, 5.3.5, 5.3.6).",
           "whenItComesUpHtml": "<p>One or more Strike units fly to a target TF or facility and attack with missiles, bombs, or both. Fighters fly as escort and Tankers extend range — both fly free of OPS cost when part of an air strike (5.3, 5.3.5, 5.3.6).</p>\n",
@@ -1779,6 +1866,7 @@
           "7.1.1.2",
           "7.1.4"
         ],
+        "verb": "patrol-react",
         "content": {
           "whenItComesUp": "Every Fighter unit at home base is always performing a CAP (Combat Air Patrol) mission, even when 'Spent' — except for On-Patrol interceptors elsewhere (4.2.3.3). When an enemy strike arrives in a zone protected by CAP, the defending fighter rolls air-to-air dice without spending OPS.",
           "whenItComesUpHtml": "<p>Every Fighter unit at home base is always performing a CAP (Combat Air Patrol) mission, even when &#39;Spent&#39; — except for On-Patrol interceptors elsewhere (4.2.3.3). When an enemy strike arrives in a zone protected by CAP, the defending fighter rolls air-to-air dice without spending OPS.</p>\n",
@@ -1867,6 +1955,7 @@
           "5.3.4.2",
           "7.1.4"
         ],
+        "verb": "patrol-react",
         "content": {
           "whenItComesUp": "An enemy Air Unit (Strike, escorted Strike, MP, or fighter) enters or passes through a zone where you have a Fighter unit On Patrol. The on-patrol fighter rolls air-to-air dice to attack without being marked Spent (5.3.3.1, 5.3.4.2). This trigger fires automatically whenever the enemy's path crosses your patrol zone (5.3.2 transit sequencing).",
           "whenItComesUpHtml": "<p>An enemy Air Unit (Strike, escorted Strike, MP, or fighter) enters or passes through a zone where you have a Fighter unit On Patrol. The on-patrol fighter rolls air-to-air dice to attack without being marked Spent (5.3.3.1, 5.3.4.2). This trigger fires automatically whenever the enemy&#39;s path crosses your patrol zone (5.3.2 transit sequencing).</p>\n",
@@ -1960,6 +2049,7 @@
           "7.2",
           "7.2.1"
         ],
+        "verb": "patrol-react",
         "content": {
           "whenItComesUp": "An enemy submarine moves into or through a Sea Zone where you have an MP On Patrol. The MP can interrupt the move and roll a full ASW attack against the submarine (5.3.4.1). After reacting, the MP flips to Spent and returns to base.",
           "whenItComesUpHtml": "<p>An enemy submarine moves into or through a Sea Zone where you have an MP On Patrol. The MP can interrupt the move and roll a full ASW attack against the submarine (5.3.4.1). After reacting, the MP flips to Spent and returns to base.</p>\n",
@@ -2035,6 +2125,7 @@
           "5.3",
           "6.1"
         ],
+        "verb": "patrol-react",
         "content": {
           "whenItComesUp": "An enemy Task Force moves into or through the Sea Zone where you have an MP On Patrol. Instead of an ASW attack, the MP rolls to detect or upgrade detection on the moving TF (5.3.4.1). Same cost: free, but the MP is consumed on use.",
           "whenItComesUpHtml": "<p>An enemy Task Force moves into or through the Sea Zone where you have an MP On Patrol. Instead of an ASW attack, the MP rolls to detect or upgrade detection on the moving TF (5.3.4.1). Same cost: free, but the MP is consumed on use.</p>\n",
@@ -2094,8 +2185,208 @@
     ]
   },
   {
-    "id": "misc-actions",
-    "label": "Miscellaneous Actions",
+    "id": "facility",
+    "label": "Facility",
+    "cards": [
+      {
+        "id": "act-misc-demine-port",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "De-Mine a Port",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "A friendly port has been mined and you need to clear it to allow ship traffic. Spending 2 OPS attempts to step the minefield down one level. Heavy mining → Light mining → Unmined (5.4.2).",
+        "cost": 2,
+        "ruleRefs": [
+          "5.4.2"
+        ],
+        "verb": "special",
+        "content": {
+          "whenItComesUp": "A friendly port has been mined and you need to clear it to allow ship traffic. Spending 2 OPS attempts to step the minefield down one level. Heavy mining → Light mining → Unmined (5.4.2).",
+          "whenItComesUpHtml": "<p>A friendly port has been mined and you need to clear it to allow ship traffic. Spending 2 OPS attempts to step the minefield down one level. Heavy mining → Light mining → Unmined (5.4.2).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 2 OPS and select one mined friendly port.",
+              "html": "<p>Spend 2 OPS and select one mined friendly port.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Roll a die. Required result depends on facility damage:\n   - **Undamaged facility**: 5+ succeeds.\n   - **Damaged facility**: 7+ succeeds.",
+              "html": "<p>Roll a die. Required result depends on facility damage:</p>\n<ul>\n<li><strong>Undamaged facility</strong>: 5+ succeeds.</li>\n<li><strong>Damaged facility</strong>: 7+ succeeds.</li>\n</ul>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:miscellaneous",
+                  "label": "Miscellaneous (de-mine roll thresholds)"
+                },
+                {
+                  "slug": "pa7:port-mines",
+                  "label": "Port Mines (what the minefield does)"
+                }
+              ]
+            },
+            {
+              "text": "On success, reduce the minefield by one level. Remove the Mine marker entirely if the port reaches Unmined.",
+              "html": "<p>On success, reduce the minefield by one level. Remove the Mine marker entirely if the port reaches Unmined.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "On failure, the action is wasted but may be retried on a future activation.",
+              "html": "<p>On failure, the action is wasted but may be retried on a future activation.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-misc-repair",
+                "title": "Repair a facility"
+              }
+            ],
+            "ruleRefs": [
+              "5.4.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-misc-launch-rorsat",
+        "cardNumber": "—",
+        "side": "soviet",
+        "title": "Launch or move a RORSAT",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "The Soviet player wants to extend or reposition satellite coverage. RORSATs are Soviet reconnaissance satellites used to detect NATO Task Forces. They start on the ground at Tyuratam and can be launched into space (5.4.3, 2.2.4.1).",
+        "cost": 2,
+        "ruleRefs": [
+          "5.4.3",
+          "2.2.4.1"
+        ],
+        "verb": "setup",
+        "content": {
+          "whenItComesUp": "The Soviet player wants to extend or reposition satellite coverage. RORSATs are Soviet reconnaissance satellites used to detect NATO Task Forces. They start on the ground at Tyuratam and can be launched into space (5.4.3, 2.2.4.1).",
+          "whenItComesUpHtml": "<p>The Soviet player wants to extend or reposition satellite coverage. RORSATs are Soviet reconnaissance satellites used to detect NATO Task Forces. They start on the ground at Tyuratam and can be launched into space (5.4.3, 2.2.4.1).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 2 OPS (Soviet only). Choose to either:\n   - Launch a RORSAT from Tyuratam into a Sea Zone, or\n   - Move a RORSAT already on the map to a different zone.",
+              "html": "<p>Spend 2 OPS (Soviet only). Choose to either:</p>\n<ul>\n<li>Launch a RORSAT from Tyuratam into a Sea Zone, or</li>\n<li>Move a RORSAT already on the map to a different zone.</li>\n</ul>\n",
+              "blocks": []
+            },
+            {
+              "text": "Roll a die. On a result of 1, the action fails catastrophically — the satellite is destroyed and placed in the Destroyed box (2.2.4.1).",
+              "html": "<p>Roll a die. On a result of 1, the action fails catastrophically — the satellite is destroyed and placed in the Destroyed box (2.2.4.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:miscellaneous",
+                  "label": "Miscellaneous (RORSAT cost, destroy-on-1, stack-at-4 rules)"
+                }
+              ]
+            },
+            {
+              "text": "On any other result, place the RORSAT in the target zone.",
+              "html": "<p>On any other result, place the RORSAT in the target zone.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "**Stacking**: RORSATs can be newly stacked together only if there are at least four already in play. Once 4+ are aloft, any further launches/moves may stack. Stacked RORSATs roll more detection dice (1 die per RORSAT present).",
+              "html": "<p><strong>Stacking</strong>: RORSATs can be newly stacked together only if there are at least four already in play. Once 4+ are aloft, any further launches/moves may stack. Stacked RORSATs roll more detection dice (1 die per RORSAT present).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Note: RORSATs may also be lost as collateral damage to Soviet facilities (7.5.3). If Lourdes is destroyed (8.4.5), one RORSAT is permanently removed and another temporarily removed.",
+              "html": "<p>Note: RORSATs may also be lost as collateral damage to Soviet facilities (7.5.3). If Lourdes is destroyed (8.4.5), one RORSAT is permanently removed and another temporarily removed.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-air-mp-fly-attack",
+                "title": "Maritime Patrol flies and attacks or detects"
+              },
+              {
+                "id": "act-sub-detect",
+                "title": "Submarine moves and detects"
+              }
+            ],
+            "ruleRefs": [
+              "5.4.3",
+              "2.2.4.1",
+              "7.5.3",
+              "8.4.5"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-misc-repair",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Repair a facility",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "A facility (port, airbase, etc.) has taken damage. Spending 2 OPS removes one Hit; if the removal would change the damage status (Heavy → Light, Light → Undamaged), a die roll is required (5.4.1).",
+        "cost": 2,
+        "ruleRefs": [
+          "5.4.1",
+          "2.3.8.4"
+        ],
+        "verb": "special",
+        "content": {
+          "whenItComesUp": "A facility (port, airbase, etc.) has taken damage. Spending 2 OPS removes one Hit; if the removal would change the damage status (Heavy → Light, Light → Undamaged), a die roll is required (5.4.1).",
+          "whenItComesUpHtml": "<p>A facility (port, airbase, etc.) has taken damage. Spending 2 OPS removes one Hit; if the removal would change the damage status (Heavy → Light, Light → Undamaged), a die roll is required (5.4.1).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 2 OPS and select one damaged facility.",
+              "html": "<p>Spend 2 OPS and select one damaged facility.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Remove one Hit marker from the facility.",
+              "html": "<p>Remove one Hit marker from the facility.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "If removing this Hit would change the damage status, roll a die. Result of 5+ confirms the status change. On 1-4, the action is wasted (the Hit is still removed but the status does not improve).",
+              "html": "<p>If removing this Hit would change the damage status, roll a die. Result of 5+ confirms the status change. On 1-4, the action is wasted (the Hit is still removed but the status does not improve).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa6:facility-damage",
+                  "label": "Facility Damage · Effects cumulative"
+                }
+              ]
+            },
+            {
+              "text": "See (2.3.8.4) for the effects of facility damage on hosted units.",
+              "html": "<p>See (2.3.8.4) for the effects of facility damage on hosted units.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-misc-demine-port",
+                "title": "De-Mine a Port"
+              }
+            ],
+            "ruleRefs": [
+              "5.4.1",
+              "2.3.8.4",
+              "2.3.8.5"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "nuke",
+    "label": "Nuke",
     "cards": [
       {
         "id": "act-active-fsp",
@@ -2109,6 +2400,7 @@
           "4.2.2.1",
           "9.1.1"
         ],
+        "verb": "special",
         "content": {
           "whenItComesUp": "The Soviet player has accumulated First Strike Points from card play or end-of-turn SSBN payload checks (9.1.1) and chooses to spend one for a powerful in-game effect. FSPs are spent during the Soviet player's own action — does not count as an action and costs no OPS (4.2.2.1).",
           "whenItComesUpHtml": "<p>The Soviet player has accumulated First Strike Points from card play or end-of-turn SSBN payload checks (9.1.1) and chooses to spend one for a powerful in-game effect. FSPs are spent during the Soviet player&#39;s own action — does not count as an action and costs no OPS (4.2.2.1).</p>\n",
@@ -2161,6 +2453,75 @@
         }
       },
       {
+        "id": "act-anytime-spy-fs-evasion",
+        "cardNumber": "—",
+        "side": "soviet",
+        "title": "Soviet Spy for SSBN evasion",
+        "type": "use-anytime",
+        "usage": "anytime",
+        "text": "During a NATO action that would resolve First Strike submarine evasion against a Soviet SSBN, the Soviet player may spend a spy to automatically succeed at all evasion rolls in a single zone (even after rolling). This is a reactive use of t",
+        "ruleRefs": [
+          "4.2.3.5",
+          "9.3"
+        ],
+        "verb": "patrol-react",
+        "content": {
+          "whenItComesUp": "During a NATO action that would resolve First Strike submarine evasion against a Soviet SSBN, the Soviet player may spend a spy to automatically succeed at all evasion rolls in a single zone (even after rolling). This is a reactive use of the spy menu (4.2.3.5, 9.3).",
+          "whenItComesUpHtml": "<p>During a NATO action that would resolve First Strike submarine evasion against a Soviet SSBN, the Soviet player may spend a spy to automatically succeed at all evasion rolls in a single zone (even after rolling). This is a reactive use of the spy menu (4.2.3.5, 9.3).</p>\n",
+          "procedure": [
+            {
+              "text": "During NATO's First Strike submarine evasion resolution, declare you are spending a Soviet spy (4.2.3.5).",
+              "html": "<p>During NATO&#39;s First Strike submarine evasion resolution, declare you are spending a Soviet spy (4.2.3.5).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Apply the 9.3 effect: automatically succeed on all First Strike submarine evasion rolls in a single zone (even if you have already rolled and failed).",
+              "html": "<p>Apply the 9.3 effect: automatically succeed on all First Strike submarine evasion rolls in a single zone (even if you have already rolled and failed).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa8:soviet-spies",
+                  "label": "Soviet Spies (effects menu)"
+                },
+                {
+                  "slug": "pa8:soviet-first-strike-submarines",
+                  "label": "Soviet First Strike Submarines (the evasion this saves)"
+                }
+              ]
+            },
+            {
+              "text": "**Infiltration check**: roll a die against the current box on the Soviet Spy Infiltration Track. If the die falls within the box's range, a spy has been caught — move the track down one box (left) (9.3).",
+              "html": "<p><strong>Infiltration check</strong>: roll a die against the current box on the Soviet Spy Infiltration Track. If the die falls within the box&#39;s range, a spy has been caught — move the track down one box (left) (9.3).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-active-soviet-spy",
+                "title": "Use a Soviet Spy"
+              },
+              {
+                "id": "act-active-fsp",
+                "title": "Spend a First Strike Point"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.5",
+              "9.3",
+              "9.1.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "hand",
+    "label": "Hand",
+    "cards": [
+      {
         "id": "act-active-hand-card-event",
         "cardNumber": "—",
         "side": "neutral",
@@ -2171,6 +2532,7 @@
         "ruleRefs": [
           "4.2.2.5"
         ],
+        "verb": "special",
         "content": {
           "whenItComesUp": "You want to fire a (non-Reaction) event from a card sitting in your hand — one you have NOT spent on OPS this turn. This is allowed at a premium: pay 2 OPS surcharge on top of the event's printed cost (4.2.2.5).",
           "whenItComesUpHtml": "<p>You want to fire a (non-Reaction) event from a card sitting in your hand — one you have NOT spent on OPS this turn. This is allowed at a premium: pay 2 OPS surcharge on top of the event&#39;s printed cost (4.2.2.5).</p>\n",
@@ -2238,6 +2600,7 @@
           "4.2.2.3",
           "4.2"
         ],
+        "verb": "special",
         "content": {
           "whenItComesUp": "Each turn each player will play two cards for OPS (4.2.2.3). Each card has one event printed on it — playable for the event's printed OPS cost. The cards you used for OPS this turn become available as event cards on your action. Either card's event may be played when active (and does not count as an action by itself, though it does cost OPS).",
           "whenItComesUpHtml": "<p>Each turn each player will play two cards for OPS (4.2.2.3). Each card has one event printed on it — playable for the event&#39;s printed OPS cost. The cards you used for OPS this turn become available as event cards on your action. Either card&#39;s event may be played when active (and does not count as an action by itself, though it does cost OPS).</p>\n",
@@ -2290,6 +2653,137 @@
         }
       },
       {
+        "id": "act-anytime-draw-card",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Draw a card (hand < 3)",
+        "type": "use-anytime",
+        "usage": "anytime",
+        "text": "Your hand is below three cards — typically because you played a Reaction event or a hand-card event and discarded. This is the at-any-time hand top-up (4.2.3.6).",
+        "ruleRefs": [
+          "4.2.3.6",
+          "4.2"
+        ],
+        "verb": "special",
+        "content": {
+          "whenItComesUp": "Your hand is below three cards — typically because you played a Reaction event or a hand-card event and discarded. This is the at-any-time hand top-up (4.2.3.6).",
+          "whenItComesUpHtml": "<p>Your hand is below three cards — typically because you played a Reaction event or a hand-card event and discarded. This is the at-any-time hand top-up (4.2.3.6).</p>\n",
+          "procedure": [
+            {
+              "text": "Verify your hand size is fewer than three cards (4.2.3.6).",
+              "html": "<p>Verify your hand size is fewer than three cards (4.2.3.6).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:use-at-any-time",
+                  "label": "Use At Any Time (not an action)"
+                }
+              ]
+            },
+            {
+              "text": "Draw one card from the deck.",
+              "html": "<p>Draw one card from the deck.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Repeat as needed until your hand reaches three cards (unless the action is interrupted).",
+              "html": "<p>Repeat as needed until your hand reaches three cards (unless the action is interrupted).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-anytime-reaction-event",
+                "title": "Play a Reaction event from hand"
+              },
+              {
+                "id": "act-misc-pass",
+                "title": "Pass"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.6",
+              "4.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-anytime-reaction-event",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Play a Reaction event from hand",
+        "type": "use-anytime",
+        "usage": "anytime",
+        "text": "The opponent (or you) is resolving an action and a card in your hand has a Reaction event whose trigger condition has been met. The card itself specifies when it is playable. Reactions are free to play (the card text may impose other costs)",
+        "ruleRefs": [
+          "4.2.3.1",
+          "4.2"
+        ],
+        "verb": "patrol-react",
+        "content": {
+          "whenItComesUp": "The opponent (or you) is resolving an action and a card in your hand has a Reaction event whose trigger condition has been met. The card itself specifies when it is playable. Reactions are free to play (the card text may impose other costs).",
+          "whenItComesUpHtml": "<p>The opponent (or you) is resolving an action and a card in your hand has a Reaction event whose trigger condition has been met. The card itself specifies when it is playable. Reactions are free to play (the card text may impose other costs).</p>\n",
+          "procedure": [
+            {
+              "text": "Trigger condition occurs during an action being resolved (4.2.3.1).",
+              "html": "<p>Trigger condition occurs during an action being resolved (4.2.3.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:use-at-any-time",
+                  "label": "Use At Any Time (not an action)"
+                }
+              ]
+            },
+            {
+              "text": "Declare you are playing the card's Reaction event (the bottom event on a card).",
+              "html": "<p>Declare you are playing the card&#39;s Reaction event (the bottom event on a card).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve the event per the card text. Reactions usually trigger immediately and modify or interrupt the current action.",
+              "html": "<p>Resolve the event per the card text. Reactions usually trigger immediately and modify or interrupt the current action.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Discard the card. If your hand drops below three cards, draw back up to three (4.2.3.6).",
+              "html": "<p>Discard the card. If your hand drops below three cards, draw back up to three (4.2.3.6).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-active-ops-card-event",
+                "title": "Play an event on one of your OPS cards"
+              },
+              {
+                "id": "act-active-hand-card-event",
+                "title": "Play a hand card's event for +2 OPS"
+              },
+              {
+                "id": "act-anytime-draw-card",
+                "title": "Draw a card (hand < 3)"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.1",
+              "4.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "other",
+    "label": "Other",
+    "cards": [
+      {
         "id": "act-active-soviet-spy",
         "cardNumber": "—",
         "side": "soviet",
@@ -2301,6 +2795,7 @@
           "4.2.2.2",
           "9.3"
         ],
+        "verb": "special",
         "content": {
           "whenItComesUp": "The Soviet player has spies remaining on the Soviet Spies Track and chooses to spend one. Spies provide a menu of effects (place a Poor Detection on a NATO TF, take the SSBN Hunting marker, re-roll up to 3 ASW dice, or auto-succeed on First Strike sub evasion in a zone) (9.3).",
           "whenItComesUpHtml": "<p>The Soviet player has spies remaining on the Soviet Spies Track and chooses to spend one. Spies provide a menu of effects (place a Poor Detection on a NATO TF, take the SSBN Hunting marker, re-roll up to 3 ASW dice, or auto-succeed on First Strike sub evasion in a zone) (9.3).</p>\n",
@@ -2352,63 +2847,6 @@
         }
       },
       {
-        "id": "act-anytime-draw-card",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Draw a card (hand < 3)",
-        "type": "use-anytime",
-        "usage": "anytime",
-        "text": "Your hand is below three cards — typically because you played a Reaction event or a hand-card event and discarded. This is the at-any-time hand top-up (4.2.3.6).",
-        "ruleRefs": [
-          "4.2.3.6",
-          "4.2"
-        ],
-        "content": {
-          "whenItComesUp": "Your hand is below three cards — typically because you played a Reaction event or a hand-card event and discarded. This is the at-any-time hand top-up (4.2.3.6).",
-          "whenItComesUpHtml": "<p>Your hand is below three cards — typically because you played a Reaction event or a hand-card event and discarded. This is the at-any-time hand top-up (4.2.3.6).</p>\n",
-          "procedure": [
-            {
-              "text": "Verify your hand size is fewer than three cards (4.2.3.6).",
-              "html": "<p>Verify your hand size is fewer than three cards (4.2.3.6).</p>\n",
-              "blocks": [
-                {
-                  "slug": "pa2:use-at-any-time",
-                  "label": "Use At Any Time (not an action)"
-                }
-              ]
-            },
-            {
-              "text": "Draw one card from the deck.",
-              "html": "<p>Draw one card from the deck.</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "Repeat as needed until your hand reaches three cards (unless the action is interrupted).",
-              "html": "<p>Repeat as needed until your hand reaches three cards (unless the action is interrupted).</p>\n",
-              "blocks": []
-            }
-          ],
-          "seeAlso": {
-            "actions": [
-              {
-                "id": "act-anytime-reaction-event",
-                "title": "Play a Reaction event from hand"
-              },
-              {
-                "id": "act-misc-pass",
-                "title": "Pass"
-              }
-            ],
-            "ruleRefs": [
-              "4.2.3.6",
-              "4.2"
-            ]
-          },
-          "whyAndWatchFor": "",
-          "whyAndWatchForHtml": ""
-        }
-      },
-      {
         "id": "act-anytime-hydrophone",
         "cardNumber": "—",
         "side": "nato",
@@ -2421,6 +2859,7 @@
           "2.3.6",
           "7.2"
         ],
+        "verb": "patrol-react",
         "content": {
           "whenItComesUp": "An enemy submarine crosses a Hydrophone Barrier shown on the map: the GIUK Gap (East 6, East 9-10, North 3-4), the English Channel (East 4), or the Strait of Gibraltar (Med 1-2). NATO can react with whatever Fresh or On-Patrol unit happens to be sitting in the entered or exited zone (2.3.6). This is the SOSUS feature in game terms.",
           "whenItComesUpHtml": "<p>An enemy submarine crosses a Hydrophone Barrier shown on the map: the GIUK Gap (East 6, East 9-10, North 3-4), the English Channel (East 4), or the Strait of Gibraltar (Med 1-2). NATO can react with whatever Fresh or On-Patrol unit happens to be sitting in the entered or exited zone (2.3.6). This is the SOSUS feature in game terms.</p>\n",
@@ -2479,134 +2918,6 @@
         }
       },
       {
-        "id": "act-anytime-reaction-event",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Play a Reaction event from hand",
-        "type": "use-anytime",
-        "usage": "anytime",
-        "text": "The opponent (or you) is resolving an action and a card in your hand has a Reaction event whose trigger condition has been met. The card itself specifies when it is playable. Reactions are free to play (the card text may impose other costs)",
-        "ruleRefs": [
-          "4.2.3.1",
-          "4.2"
-        ],
-        "content": {
-          "whenItComesUp": "The opponent (or you) is resolving an action and a card in your hand has a Reaction event whose trigger condition has been met. The card itself specifies when it is playable. Reactions are free to play (the card text may impose other costs).",
-          "whenItComesUpHtml": "<p>The opponent (or you) is resolving an action and a card in your hand has a Reaction event whose trigger condition has been met. The card itself specifies when it is playable. Reactions are free to play (the card text may impose other costs).</p>\n",
-          "procedure": [
-            {
-              "text": "Trigger condition occurs during an action being resolved (4.2.3.1).",
-              "html": "<p>Trigger condition occurs during an action being resolved (4.2.3.1).</p>\n",
-              "blocks": [
-                {
-                  "slug": "pa2:use-at-any-time",
-                  "label": "Use At Any Time (not an action)"
-                }
-              ]
-            },
-            {
-              "text": "Declare you are playing the card's Reaction event (the bottom event on a card).",
-              "html": "<p>Declare you are playing the card&#39;s Reaction event (the bottom event on a card).</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "Resolve the event per the card text. Reactions usually trigger immediately and modify or interrupt the current action.",
-              "html": "<p>Resolve the event per the card text. Reactions usually trigger immediately and modify or interrupt the current action.</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "Discard the card. If your hand drops below three cards, draw back up to three (4.2.3.6).",
-              "html": "<p>Discard the card. If your hand drops below three cards, draw back up to three (4.2.3.6).</p>\n",
-              "blocks": []
-            }
-          ],
-          "seeAlso": {
-            "actions": [
-              {
-                "id": "act-active-ops-card-event",
-                "title": "Play an event on one of your OPS cards"
-              },
-              {
-                "id": "act-active-hand-card-event",
-                "title": "Play a hand card's event for +2 OPS"
-              },
-              {
-                "id": "act-anytime-draw-card",
-                "title": "Draw a card (hand < 3)"
-              }
-            ],
-            "ruleRefs": [
-              "4.2.3.1",
-              "4.2"
-            ]
-          },
-          "whyAndWatchFor": "",
-          "whyAndWatchForHtml": ""
-        }
-      },
-      {
-        "id": "act-anytime-spy-fs-evasion",
-        "cardNumber": "—",
-        "side": "soviet",
-        "title": "Soviet Spy for SSBN evasion",
-        "type": "use-anytime",
-        "usage": "anytime",
-        "text": "During a NATO action that would resolve First Strike submarine evasion against a Soviet SSBN, the Soviet player may spend a spy to automatically succeed at all evasion rolls in a single zone (even after rolling). This is a reactive use of t",
-        "ruleRefs": [
-          "4.2.3.5",
-          "9.3"
-        ],
-        "content": {
-          "whenItComesUp": "During a NATO action that would resolve First Strike submarine evasion against a Soviet SSBN, the Soviet player may spend a spy to automatically succeed at all evasion rolls in a single zone (even after rolling). This is a reactive use of the spy menu (4.2.3.5, 9.3).",
-          "whenItComesUpHtml": "<p>During a NATO action that would resolve First Strike submarine evasion against a Soviet SSBN, the Soviet player may spend a spy to automatically succeed at all evasion rolls in a single zone (even after rolling). This is a reactive use of the spy menu (4.2.3.5, 9.3).</p>\n",
-          "procedure": [
-            {
-              "text": "During NATO's First Strike submarine evasion resolution, declare you are spending a Soviet spy (4.2.3.5).",
-              "html": "<p>During NATO&#39;s First Strike submarine evasion resolution, declare you are spending a Soviet spy (4.2.3.5).</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "Apply the 9.3 effect: automatically succeed on all First Strike submarine evasion rolls in a single zone (even if you have already rolled and failed).",
-              "html": "<p>Apply the 9.3 effect: automatically succeed on all First Strike submarine evasion rolls in a single zone (even if you have already rolled and failed).</p>\n",
-              "blocks": [
-                {
-                  "slug": "pa8:soviet-spies",
-                  "label": "Soviet Spies (effects menu)"
-                },
-                {
-                  "slug": "pa8:soviet-first-strike-submarines",
-                  "label": "Soviet First Strike Submarines (the evasion this saves)"
-                }
-              ]
-            },
-            {
-              "text": "**Infiltration check**: roll a die against the current box on the Soviet Spy Infiltration Track. If the die falls within the box's range, a spy has been caught — move the track down one box (left) (9.3).",
-              "html": "<p><strong>Infiltration check</strong>: roll a die against the current box on the Soviet Spy Infiltration Track. If the die falls within the box&#39;s range, a spy has been caught — move the track down one box (left) (9.3).</p>\n",
-              "blocks": []
-            }
-          ],
-          "seeAlso": {
-            "actions": [
-              {
-                "id": "act-active-soviet-spy",
-                "title": "Use a Soviet Spy"
-              },
-              {
-                "id": "act-active-fsp",
-                "title": "Spend a First Strike Point"
-              }
-            ],
-            "ruleRefs": [
-              "4.2.3.5",
-              "9.3",
-              "9.1.1"
-            ]
-          },
-          "whyAndWatchFor": "",
-          "whyAndWatchForHtml": ""
-        }
-      },
-      {
         "id": "act-misc-attack-cuba",
         "cardNumber": "—",
         "side": "nato",
@@ -2620,6 +2931,7 @@
           "8.4.5",
           "2.2.4.1"
         ],
+        "verb": "attack",
         "content": {
           "whenItComesUp": "Cuba begins as an inactive Soviet ally — it shelters the Lourdes intelligence station, allows limited Soviet basing, and supports Cuban air units and a submarine. The NATO player may pay 6 OPS to attack and activate Cuba (5.4.4, 8.4.5). After the attack, Cuban Soviet forces become available to the Soviet player.",
           "whenItComesUpHtml": "<p>Cuba begins as an inactive Soviet ally — it shelters the Lourdes intelligence station, allows limited Soviet basing, and supports Cuban air units and a submarine. The NATO player may pay 6 OPS to attack and activate Cuba (5.4.4, 8.4.5). After the attack, Cuban Soviet forces become available to the Soviet player.</p>\n",
@@ -2703,205 +3015,6 @@
         }
       },
       {
-        "id": "act-misc-demine-port",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "De-Mine a Port",
-        "type": "operations-event",
-        "usage": "action",
-        "text": "A friendly port has been mined and you need to clear it to allow ship traffic. Spending 2 OPS attempts to step the minefield down one level. Heavy mining → Light mining → Unmined (5.4.2).",
-        "cost": 2,
-        "ruleRefs": [
-          "5.4.2"
-        ],
-        "content": {
-          "whenItComesUp": "A friendly port has been mined and you need to clear it to allow ship traffic. Spending 2 OPS attempts to step the minefield down one level. Heavy mining → Light mining → Unmined (5.4.2).",
-          "whenItComesUpHtml": "<p>A friendly port has been mined and you need to clear it to allow ship traffic. Spending 2 OPS attempts to step the minefield down one level. Heavy mining → Light mining → Unmined (5.4.2).</p>\n",
-          "procedure": [
-            {
-              "text": "Spend 2 OPS and select one mined friendly port.",
-              "html": "<p>Spend 2 OPS and select one mined friendly port.</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "Roll a die. Required result depends on facility damage:\n   - **Undamaged facility**: 5+ succeeds.\n   - **Damaged facility**: 7+ succeeds.",
-              "html": "<p>Roll a die. Required result depends on facility damage:</p>\n<ul>\n<li><strong>Undamaged facility</strong>: 5+ succeeds.</li>\n<li><strong>Damaged facility</strong>: 7+ succeeds.</li>\n</ul>\n",
-              "blocks": [
-                {
-                  "slug": "pa2:miscellaneous",
-                  "label": "Miscellaneous (de-mine roll thresholds)"
-                },
-                {
-                  "slug": "pa7:port-mines",
-                  "label": "Port Mines (what the minefield does)"
-                }
-              ]
-            },
-            {
-              "text": "On success, reduce the minefield by one level. Remove the Mine marker entirely if the port reaches Unmined.",
-              "html": "<p>On success, reduce the minefield by one level. Remove the Mine marker entirely if the port reaches Unmined.</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "On failure, the action is wasted but may be retried on a future activation.",
-              "html": "<p>On failure, the action is wasted but may be retried on a future activation.</p>\n",
-              "blocks": []
-            }
-          ],
-          "seeAlso": {
-            "actions": [
-              {
-                "id": "act-misc-repair",
-                "title": "Repair a facility"
-              }
-            ],
-            "ruleRefs": [
-              "5.4.2"
-            ]
-          },
-          "whyAndWatchFor": "",
-          "whyAndWatchForHtml": ""
-        }
-      },
-      {
-        "id": "act-misc-launch-rorsat",
-        "cardNumber": "—",
-        "side": "soviet",
-        "title": "Launch or move a RORSAT",
-        "type": "operations-event",
-        "usage": "action",
-        "text": "The Soviet player wants to extend or reposition satellite coverage. RORSATs are Soviet reconnaissance satellites used to detect NATO Task Forces. They start on the ground at Tyuratam and can be launched into space (5.4.3, 2.2.4.1).",
-        "cost": 2,
-        "ruleRefs": [
-          "5.4.3",
-          "2.2.4.1"
-        ],
-        "content": {
-          "whenItComesUp": "The Soviet player wants to extend or reposition satellite coverage. RORSATs are Soviet reconnaissance satellites used to detect NATO Task Forces. They start on the ground at Tyuratam and can be launched into space (5.4.3, 2.2.4.1).",
-          "whenItComesUpHtml": "<p>The Soviet player wants to extend or reposition satellite coverage. RORSATs are Soviet reconnaissance satellites used to detect NATO Task Forces. They start on the ground at Tyuratam and can be launched into space (5.4.3, 2.2.4.1).</p>\n",
-          "procedure": [
-            {
-              "text": "Spend 2 OPS (Soviet only). Choose to either:\n   - Launch a RORSAT from Tyuratam into a Sea Zone, or\n   - Move a RORSAT already on the map to a different zone.",
-              "html": "<p>Spend 2 OPS (Soviet only). Choose to either:</p>\n<ul>\n<li>Launch a RORSAT from Tyuratam into a Sea Zone, or</li>\n<li>Move a RORSAT already on the map to a different zone.</li>\n</ul>\n",
-              "blocks": []
-            },
-            {
-              "text": "Roll a die. On a result of 1, the action fails catastrophically — the satellite is destroyed and placed in the Destroyed box (2.2.4.1).",
-              "html": "<p>Roll a die. On a result of 1, the action fails catastrophically — the satellite is destroyed and placed in the Destroyed box (2.2.4.1).</p>\n",
-              "blocks": [
-                {
-                  "slug": "pa2:miscellaneous",
-                  "label": "Miscellaneous (RORSAT cost, destroy-on-1, stack-at-4 rules)"
-                }
-              ]
-            },
-            {
-              "text": "On any other result, place the RORSAT in the target zone.",
-              "html": "<p>On any other result, place the RORSAT in the target zone.</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "**Stacking**: RORSATs can be newly stacked together only if there are at least four already in play. Once 4+ are aloft, any further launches/moves may stack. Stacked RORSATs roll more detection dice (1 die per RORSAT present).",
-              "html": "<p><strong>Stacking</strong>: RORSATs can be newly stacked together only if there are at least four already in play. Once 4+ are aloft, any further launches/moves may stack. Stacked RORSATs roll more detection dice (1 die per RORSAT present).</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "Note: RORSATs may also be lost as collateral damage to Soviet facilities (7.5.3). If Lourdes is destroyed (8.4.5), one RORSAT is permanently removed and another temporarily removed.",
-              "html": "<p>Note: RORSATs may also be lost as collateral damage to Soviet facilities (7.5.3). If Lourdes is destroyed (8.4.5), one RORSAT is permanently removed and another temporarily removed.</p>\n",
-              "blocks": []
-            }
-          ],
-          "seeAlso": {
-            "actions": [
-              {
-                "id": "act-air-mp-fly-attack",
-                "title": "Maritime Patrol flies and attacks or detects"
-              },
-              {
-                "id": "act-sub-detect",
-                "title": "Submarine moves and detects"
-              }
-            ],
-            "ruleRefs": [
-              "5.4.3",
-              "2.2.4.1",
-              "7.5.3",
-              "8.4.5"
-            ]
-          },
-          "whyAndWatchFor": "",
-          "whyAndWatchForHtml": ""
-        }
-      },
-      {
-        "id": "act-misc-move-between-tfs",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Move ships between Task Forces",
-        "type": "operations-event",
-        "usage": "action",
-        "text": "Two Task Forces are in the same Sea Zone and you want to shuffle units between them — typically to consolidate damaged ships, peel off escorts, or break apart a force without spending the 2 OPS to form a brand new TF (5.1.1.2).",
-        "cost": 1,
-        "ruleRefs": [
-          "5.1.1.2"
-        ],
-        "content": {
-          "whenItComesUp": "Two Task Forces are in the same Sea Zone and you want to shuffle units between them — typically to consolidate damaged ships, peel off escorts, or break apart a force without spending the 2 OPS to form a brand new TF (5.1.1.2).",
-          "whenItComesUpHtml": "<p>Two Task Forces are in the same Sea Zone and you want to shuffle units between them — typically to consolidate damaged ships, peel off escorts, or break apart a force without spending the 2 OPS to form a brand new TF (5.1.1.2).</p>\n",
-          "procedure": [
-            {
-              "text": "Spend 1 OPS. Select source and destination Task Forces — they must be in the same Sea Zone (5.1.1.2).",
-              "html": "<p>Spend 1 OPS. Select source and destination Task Forces — they must be in the same Sea Zone (5.1.1.2).</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "Move any units from the source TF to the destination TF (or to multiple destination TFs) as desired.",
-              "html": "<p>Move any units from the source TF to the destination TF (or to multiple destination TFs) as desired.</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "**Detection propagation**: a unit moved from a detected force grants the detection status of the originating TF to the destination TF — unless the destination already has a higher status.",
-              "html": "<p><strong>Detection propagation</strong>: a unit moved from a detected force grants the detection status of the originating TF to the destination TF — unless the destination already has a higher status.</p>\n",
-              "blocks": [
-                {
-                  "slug": "pa4:detection-of-tfs",
-                  "label": "Detection of TFs (Poor / Good states)"
-                }
-              ]
-            },
-            {
-              "text": "Each remaining TF must still contain at least one Surface Unit (5.1.2). Empty TF markers return to the Task Force display.",
-              "html": "<p>Each remaining TF must still contain at least one Surface Unit (5.1.2). Empty TF markers return to the Task Force display.</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "The TFs may become Slow or Fast depending on whether (S) slow units are present after the swap.",
-              "html": "<p>The TFs may become Slow or Fast depending on whether (S) slow units are present after the swap.</p>\n",
-              "blocks": []
-            }
-          ],
-          "seeAlso": {
-            "actions": [
-              {
-                "id": "act-ship-form-tf",
-                "title": "Form a new Task Force"
-              },
-              {
-                "id": "act-ship-move",
-                "title": "Move ships in a Task Force"
-              }
-            ],
-            "ruleRefs": [
-              "5.1.1.2",
-              "5.1.2",
-              "5.1.2.1"
-            ]
-          },
-          "whyAndWatchFor": "",
-          "whyAndWatchForHtml": ""
-        }
-      },
-      {
         "id": "act-misc-pass",
         "cardNumber": "—",
         "side": "neutral",
@@ -2914,6 +3027,7 @@
           "5.4.5",
           "4.2"
         ],
+        "verb": "special",
         "content": {
           "whenItComesUp": "You have fewer Operations Points than your opponent and would rather wait for them to commit. Passing burns the action slot at zero cost so the opponent must play next, after which you get another chance to act (5.4.5).",
           "whenItComesUpHtml": "<p>You have fewer Operations Points than your opponent and would rather wait for them to commit. Passing burns the action slot at zero cost so the opponent must play next, after which you get another chance to act (5.4.5).</p>\n",
@@ -2949,66 +3063,6 @@
             "ruleRefs": [
               "5.4.5",
               "4.2"
-            ]
-          },
-          "whyAndWatchFor": "",
-          "whyAndWatchForHtml": ""
-        }
-      },
-      {
-        "id": "act-misc-repair",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Repair a facility",
-        "type": "operations-event",
-        "usage": "action",
-        "text": "A facility (port, airbase, etc.) has taken damage. Spending 2 OPS removes one Hit; if the removal would change the damage status (Heavy → Light, Light → Undamaged), a die roll is required (5.4.1).",
-        "cost": 2,
-        "ruleRefs": [
-          "5.4.1",
-          "2.3.8.4"
-        ],
-        "content": {
-          "whenItComesUp": "A facility (port, airbase, etc.) has taken damage. Spending 2 OPS removes one Hit; if the removal would change the damage status (Heavy → Light, Light → Undamaged), a die roll is required (5.4.1).",
-          "whenItComesUpHtml": "<p>A facility (port, airbase, etc.) has taken damage. Spending 2 OPS removes one Hit; if the removal would change the damage status (Heavy → Light, Light → Undamaged), a die roll is required (5.4.1).</p>\n",
-          "procedure": [
-            {
-              "text": "Spend 2 OPS and select one damaged facility.",
-              "html": "<p>Spend 2 OPS and select one damaged facility.</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "Remove one Hit marker from the facility.",
-              "html": "<p>Remove one Hit marker from the facility.</p>\n",
-              "blocks": []
-            },
-            {
-              "text": "If removing this Hit would change the damage status, roll a die. Result of 5+ confirms the status change. On 1-4, the action is wasted (the Hit is still removed but the status does not improve).",
-              "html": "<p>If removing this Hit would change the damage status, roll a die. Result of 5+ confirms the status change. On 1-4, the action is wasted (the Hit is still removed but the status does not improve).</p>\n",
-              "blocks": [
-                {
-                  "slug": "pa6:facility-damage",
-                  "label": "Facility Damage · Effects cumulative"
-                }
-              ]
-            },
-            {
-              "text": "See (2.3.8.4) for the effects of facility damage on hosted units.",
-              "html": "<p>See (2.3.8.4) for the effects of facility damage on hosted units.</p>\n",
-              "blocks": []
-            }
-          ],
-          "seeAlso": {
-            "actions": [
-              {
-                "id": "act-misc-demine-port",
-                "title": "De-Mine a Port"
-              }
-            ],
-            "ruleRefs": [
-              "5.4.1",
-              "2.3.8.4",
-              "2.3.8.5"
             ]
           },
           "whyAndWatchFor": "",
