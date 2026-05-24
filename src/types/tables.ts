@@ -50,5 +50,28 @@ export interface TableImageDef {
   notes?: string[];
 }
 
-export type TableDef = TableLookupDef | TableMatrixDef | TableImageDef;
+/**
+ * A compiled view of all H2 sections in a single play-aid markdown file
+ * (BWN-specific). Content is referenced from play-aid-blocks.json by
+ * `paNumber` — no duplication. The TableModal looks up every block with
+ * that paNumber and concatenates them in the order they appear in the
+ * source file (insertion order in the JSON, which the merge script
+ * preserves).
+ */
+export interface TablePlayAidPageDef {
+  id: string;
+  title: string;
+  ruleRef?: string;
+  scope: "series" | "module";
+  type: "playaid-page";
+  /** Play-aid page number, e.g. 3 = "03-attacks-on-and-by-submarines.md" */
+  paNumber: number;
+  notes?: string[];
+}
+
+export type TableDef =
+  | TableLookupDef
+  | TableMatrixDef
+  | TableImageDef
+  | TablePlayAidPageDef;
 export type TablesFile = Record<string, TableDef>;

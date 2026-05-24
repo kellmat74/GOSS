@@ -421,7 +421,7 @@ function App() {
 
   return (
     <GlossaryProvider rules={allRules} config={gameConfig?.glossaryConfig}>
-    <TablesProvider tables={data?.tables ?? {}}>
+    <TablesProvider tables={data?.tables ?? {}} playAidBlocks={data?.playAidBlocks ?? {}}>
     <RulesProvider rules={allRules} baseErrata={data?.baseErrata} moduleErrata={data?.moduleErrata} modules={gameConfig?.modules} forumContext={data?.forumContext}>
       <AppShell
         sidebar={sidebar}

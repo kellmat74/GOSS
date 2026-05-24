@@ -20,7 +20,7 @@ const bwnQuickRefButtons: QuickRefButtonDef[] = [
   { id: "fighters",    label: "Air",   icon: "✈",  title: "Fighters (CAP & Interception)",       kind: "table", tableId: "fighter-combat"    },
   { id: "land",        label: "Land",  icon: "💥", title: "Attacking Land Targets",             kind: "table", tableId: "land-attacks"      },
   { id: "convoys",     label: "Misc",  icon: "📦", title: "Convoys, Mines, War Tracks, Nukes",  kind: "table", tableId: "convoys-misc"      },
-  { id: "soviet",      label: "Sov",   icon: "☭",  title: "Soviet Specific Rules",              kind: "table", tableId: "soviet-specific"   },
+  { id: "soviet",      label: "USSR",  icon: "☭",  title: "USSR Specific Rules",                kind: "table", tableId: "soviet-specific"   },
 ];
 
 export const blueWaterNavyConfig: GameSystemConfig = {

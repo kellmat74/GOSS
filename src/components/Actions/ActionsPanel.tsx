@@ -1,8 +1,8 @@
-import { useState, useMemo, useEffect, useRef } from "react";
+import { useState, useMemo } from "react";
 import type { CardCategory, GameCard, PlayAidBlocksMap } from "../../types/goss";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
-import { useRules } from "../../context/RulesContext";
+import { RuleAwareHtml } from "./RuleAwareHtml";
 
 interface ActionsPanelProps {
   cards: CardCategory[];
@@ -432,59 +432,6 @@ function SimpleActionContent({ card }: { card: GameCard }) {
         </div>
       )}
     </>
-  );
-}
-
-/**
- * Renders pre-rendered HTML (from marked) but wires up clickable rule refs.
- * Walks the HTML string at render time, wrapping any `(X.Y.Z)` (and variants
- * including a trailing letter) in a styled button. Uses delegated click on
- * the container to dispatch to `openRule`.
- */
-function RuleAwareHtml({ html, className }: { html: string; className?: string }) {
-  const { openRule } = useRules();
-  const ref = useRef<HTMLDivElement>(null);
-
-  const processed = useMemo(() => {
-    // Mirrors src/utils/parseRuleRefs.tsx: find a parenthesized group that
-    // STARTS with a digit, then wrap each individual section ref inside it
-    // separately so comma-separated lists like (5.2.1, 7.3) yield two
-    // independent clickable links.
-    const SECTION_RE = /\d+\.\d+(?:\.\d+(?:\.\d+)?)?(?:[a-z])?/g;
-    const GROUP_RE = /\((\d[^)]{0,200})\)/g;
-
-    return html.replace(GROUP_RE, (_full, inner) => {
-      const wrapped = inner.replace(
-        SECTION_RE,
-        (ref: string) =>
-          `<button type="button" class="rule-ref-inline" data-rule="${ref}">${ref}</button>`
-      );
-      return `(${wrapped})`;
-    });
-  }, [html]);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const handler = (e: MouseEvent) => {
-      const t = e.target as HTMLElement;
-      if (t && t.classList.contains("rule-ref-inline")) {
-        e.preventDefault();
-        e.stopPropagation();
-        const r = t.getAttribute("data-rule");
-        if (r) openRule(r);
-      }
-    };
-    el.addEventListener("click", handler);
-    return () => el.removeEventListener("click", handler);
-  }, [openRule, processed]);
-
-  return (
-    <div
-      ref={ref}
-      className={className}
-      dangerouslySetInnerHTML={{ __html: processed }}
-    />
   );
 }
 

@@ -11,45 +11,45 @@
     "title": "Attacks on & by Submarines",
     "ruleRef": "7.2",
     "scope": "series",
-    "type": "image",
-    "src": "assets/bwn/play-aid-3.png"
+    "type": "playaid-page",
+    "paNumber": 3
   },
   "task-force-combat": {
     "id": "task-force-combat",
     "title": "Task Force Detection, Missile Attacks, Damage",
     "ruleRef": "6.1",
     "scope": "series",
-    "type": "image",
-    "src": "assets/bwn/play-aid-4.png"
+    "type": "playaid-page",
+    "paNumber": 4
   },
   "fighter-combat": {
     "id": "fighter-combat",
     "title": "Fighters (CAP & Interception)",
     "ruleRef": "7.1",
     "scope": "series",
-    "type": "image",
-    "src": "assets/bwn/play-aid-5.png"
+    "type": "playaid-page",
+    "paNumber": 5
   },
   "land-attacks": {
     "id": "land-attacks",
     "title": "Attacking Land Targets",
     "ruleRef": "7.5",
     "scope": "series",
-    "type": "image",
-    "src": "assets/bwn/play-aid-6.png"
+    "type": "playaid-page",
+    "paNumber": 6
   },
   "convoys-misc": {
     "id": "convoys-misc",
     "title": "Convoys, War Tracks, Mines, Repairing Ships, Nuclear Weapons",
     "scope": "series",
-    "type": "image",
-    "src": "assets/bwn/play-aid-7.png"
+    "type": "playaid-page",
+    "paNumber": 7
   },
   "soviet-specific": {
     "id": "soviet-specific",
-    "title": "Soviet Specific Rules — Spies, Invasions, First Strike, Technology",
+    "title": "USSR Specific Rules — Spies, Invasions, First Strike, Technology",
     "scope": "series",
-    "type": "image",
-    "src": "assets/bwn/play-aid-8.png"
+    "type": "playaid-page",
+    "paNumber": 8
   }
 }

@@ -1,9 +1,17 @@
 import { createPortal } from "react-dom";
 import { useTables } from "../../context/TablesContext";
-import type { TableLookupDef, TableMatrixDef, TableImageDef, TableDRMGroup } from "../../types/tables";
+import type {
+  TableLookupDef,
+  TableMatrixDef,
+  TableImageDef,
+  TablePlayAidPageDef,
+  TableDRMGroup,
+} from "../../types/tables";
+import type { PlayAidBlocksMap } from "../../types/goss";
+import { RuleAwareHtml } from "../Actions/RuleAwareHtml";
 
 export function TableModal() {
-  const { activeTable, closeTable } = useTables();
+  const { activeTable, closeTable, playAidBlocks } = useTables();
   if (!activeTable) return null;
 
   return createPortal(
@@ -40,6 +48,9 @@ export function TableModal() {
           {activeTable.type === "lookup" && <LookupTable table={activeTable} />}
           {activeTable.type === "matrix" && <MatrixTable table={activeTable} />}
           {activeTable.type === "image" && <ImageTable table={activeTable} />}
+          {activeTable.type === "playaid-page" && (
+            <PlayAidPageTable table={activeTable} playAidBlocks={playAidBlocks} />
+          )}
         </div>
       </div>
     </div>,
@@ -235,6 +246,51 @@ function ImageTable({ table }: { table: TableImageDef }) {
         alt={table.title}
         className="w-full rounded border border-stone-200 dark:border-stone-700"
       />
+      <NotesSection notes={table.notes} />
+    </div>
+  );
+}
+
+/**
+ * Compiled-page view of a BWN play-aid file. Looks up every block in
+ * play-aid-blocks.json with the matching paNumber and renders them in
+ * document order. Single source of truth: edit the markdown, run
+ * `npm run merge:bwn`, and this view updates automatically.
+ */
+function PlayAidPageTable({
+  table,
+  playAidBlocks,
+}: {
+  table: TablePlayAidPageDef;
+  playAidBlocks: PlayAidBlocksMap;
+}) {
+  const blocks = Object.entries(playAidBlocks)
+    .filter(([, b]) => b.paNumber === table.paNumber)
+    .map(([slug, b]) => ({ slug, ...b }));
+
+  if (blocks.length === 0) {
+    return (
+      <div className="text-sm text-stone-500">
+        No play-aid blocks found for PA-{table.paNumber}.
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-5" style={{ minWidth: "min(720px, 88vw)" }}>
+      {blocks.map((b) => (
+        <section key={b.slug}>
+          <div className="mb-2 flex items-center gap-2 border-b border-stone-200 pb-1 dark:border-stone-700">
+            <span className="rounded bg-amber-200 px-1.5 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wide text-amber-900 dark:bg-amber-900/40 dark:text-amber-200">
+              PA{b.paNumber}
+            </span>
+            <h3 className="text-base font-semibold text-stone-800 dark:text-stone-100">
+              {b.title}
+            </h3>
+          </div>
+          <RuleAwareHtml className="prose-action text-sm leading-relaxed" html={b.html} />
+        </section>
+      ))}
       <NotesSection notes={table.notes} />
     </div>
   );
