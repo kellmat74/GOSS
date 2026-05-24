@@ -6,7 +6,7 @@
 
 ---
 
-## Air Units-Transit to a Zone
+## Air Units-Transit to a Zone (5.3.2)
 
 1. Check the round TO (but not Back from) the target for interceptions and resolve each in turn.
 2. Resolve any interception in the target zone.
@@ -14,7 +14,7 @@
 
 ---
 
-## Air Units Intercepted when:
+## Air Units Intercepted when: (5.3.3.1)
 
 - Entering a zone with a fighter unit on patrol.
 - **Leaving** a zone with an enemy carrier.
@@ -22,7 +22,7 @@
 
 ---
 
-## CAP may roll to attack when:
+## CAP may roll to attack when: (5.3.3.2)
 
 - A strike attacks a location being protected.
 - Carrier based fighters defend **every** Task Force in the Sea Zone and **every** land facility adjacent to the zone (the carrier does not have to be a target). Land based fighters protect land bases in **their** land area (but not Task Forces out at sea).
@@ -30,7 +30,7 @@
 
 ---
 
-## Fighter Combat vs Maritime Patrol (MP)
+## Fighter Combat vs Maritime Patrol (MP) (7.1.2)
 
 Includes vs Intrinsic carrier MP
 
@@ -53,7 +53,7 @@ Intrinsic MPs are always helos except for US carriers.
 
 ---
 
-## Escorted Air Strikes
+## Escorted Air Strikes (7.1.4.4)
 
 - The defending player may roll with one defending fighter for each strike aircraft **or** each escorting fighter.
 - All damages must be allocated to escorting fighters first except for N10 results.
@@ -61,7 +61,7 @@ Intrinsic MPs are always helos except for US carriers.
 
 ---
 
-## Fighters vs. Strike Aircraft (CAP & Intercept)
+## Fighters vs. Strike Aircraft (CAP & Intercept) (7.1.4)
 
 Roll all fighter dice with one fighter for each strike unit. CAP must come from target TF unless better fighters available. # of dice to roll is modified per unit rolling: (min = 1 die) DR + Tactical Value = kills allowed.
 
@@ -83,11 +83,11 @@ Air to Air Technology - Soviet +1 DRM
 | N9 | As per **N10** if strike bombing |
 | N1–2 with F-14 rolling | Kill this number of missiles |
 
-## Interceptors
+## Interceptors (7.1.4.3)
 
 Killing or failing to kill by one pip causes the strike to count as 'detected by interceptors' from then on. An intercepted strike may abort after all fighters in the Sea Zone roll.
 
-## Saves Against CAP Kills
+## Saves Against CAP Kills (7.1.4)
 
 All kills by CAP (not by interceptors) may be saved based on the detection status of the base from which the fighter flew.
 
@@ -99,7 +99,7 @@ All kills by CAP (not by interceptors) may be saved based on the detection statu
 
 ---
 
-## Fighters vs. Fighters (and escorted strikes)
+## Fighters vs. Fighters (and escorted strikes) (7.1.3)
 
 Roll all fighter dice for both sides (max 1 v 1) (minimum 1 die)
 DR + tactical value = kills allowed

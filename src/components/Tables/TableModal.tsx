@@ -9,6 +9,7 @@ import type {
 } from "../../types/tables";
 import type { PlayAidBlocksMap } from "../../types/goss";
 import { RuleAwareHtml } from "../Actions/RuleAwareHtml";
+import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 
 export function TableModal() {
   const { activeTable, closeTable, playAidBlocks } = useTables();
@@ -280,13 +281,20 @@ function PlayAidPageTable({
     <div className="space-y-5" style={{ minWidth: "min(720px, 88vw)" }}>
       {blocks.map((b) => (
         <section key={b.slug}>
-          <div className="mb-2 flex items-center gap-2 border-b border-stone-200 pb-1 dark:border-stone-700">
+          <div className="mb-2 flex flex-wrap items-center gap-2 border-b border-stone-200 pb-1 dark:border-stone-700">
             <span className="rounded bg-amber-200 px-1.5 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wide text-amber-900 dark:bg-amber-900/40 dark:text-amber-200">
               PA{b.paNumber}
             </span>
             <h3 className="text-base font-semibold text-stone-800 dark:text-stone-100">
               {b.title}
             </h3>
+            {b.ruleRefs && b.ruleRefs.length > 0 && (
+              <div className="ml-auto flex flex-wrap gap-1">
+                {b.ruleRefs.map((ref) => (
+                  <RuleRefBadge key={ref} ruleRef={ref} />
+                ))}
+              </div>
+            )}
           </div>
           <RuleAwareHtml className="prose-action text-sm leading-relaxed" html={b.html} />
         </section>

@@ -6,7 +6,7 @@
 
 ---
 
-## Convoys
+## Convoys (5.1.4)
 
 | Hits | Result |
 |---|---|
@@ -18,7 +18,7 @@
 
 ---
 
-## Mines
+## Mines (2.2.4.4)
 
 Cause a hit on each 1-2 rolled. Odd hits to Convoy/Amph.
 
@@ -27,14 +27,14 @@ Cause a hit on each 1-2 rolled. Odd hits to Convoy/Amph.
 | **Light** | 2 dice |
 | **Heavy** | 4 dice |
 
-## Port Damage
+## Port Damage (2.3.8.4)
 
 | Damage | Effect |
 |---|---|
 | **Light Damage** | +1 hit each Convoy |
 | **Heavy Damage** | +2 hits each Convoy |
 
-## Alternate Convoy Ports
+## Alternate Convoy Ports (5.1.4)
 
 | Delivery to: | Effects |
 |---|---|
@@ -44,7 +44,7 @@ Cause a hit on each 1-2 rolled. Odd hits to Convoy/Amph.
 
 ---
 
-## Convoy Massacres
+## Convoy Massacres (5.1.4.1)
 
 - **One marker**: No effect
 - **Two markers**: +2 Soviet OPS
@@ -52,14 +52,14 @@ Cause a hit on each 1-2 rolled. Odd hits to Convoy/Amph.
 
 ---
 
-## War Tracks
+## War Tracks (8.2.3)
 
 - 3 hits on troops prevents one advance on the War Track this turn.
 - Remove 3 hits (only) at the end of each turn.
 
 ---
 
-## CAPTOR Mines
+## CAPTOR Mines (2.2.4.3)
 
 When a submarine moves into or through the zone, roll dice on counter as an ASW attack.
 
@@ -68,7 +68,7 @@ When a submarine moves into or through the zone, roll dice on counter as an ASW 
 
 ---
 
-## Port Mines
+## Port Mines (2.2.4.4)
 
 Submarine enter/leave: 1 die light, 2 dice heavy
 - Hit on 1-2. -1 die if Slow or Non-magnetic;  minimum = 0 dice
@@ -79,7 +79,7 @@ Submarine enter/leave: 1 die light, 2 dice heavy
 
 ---
 
-## Nuclear Weapons at Sea
+## Nuclear Weapons at Sea (10.2)
 
 ### USSR submarines
 
@@ -105,7 +105,7 @@ If the Soviet SAM level of a target is at least two, treat it as being worth +2 
 
 ---
 
-## NATO Losses
+## NATO Losses (3.5.1)
 
 6 Loss Points gives the Soviet player one Hammer & Sickle:
 
@@ -116,7 +116,7 @@ If the Soviet SAM level of a target is at least two, treat it as being worth +2 
 
 ---
 
-## SAM Ammo for Limited Ammunition
+## SAM Ammo for Limited Ammunition (9.5)
 
 - **Tico VLS** Fire 2–4 SAMS, mark "2–4 fired" SAM value now 4.
 	- If fired 5+ mark no ammo.
@@ -125,7 +125,7 @@ If the Soviet SAM level of a target is at least two, treat it as being worth +2 
 
 ---
 
-## Repairing Capital Ships
+## Repairing Capital Ships (5.1.5.4)
 
 Roll when the ship arrives at a friendly major port and place on the Turn Track the indicated number of turns from the current turn.
 

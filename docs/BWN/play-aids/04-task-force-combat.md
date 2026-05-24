@@ -6,7 +6,7 @@
 
 ---
 
-## Detection of TFs (by MP, RORSAT, Tattletale)
+## Detection of TFs (by MP, RORSAT, Tattletale) (6.1)
 
 Roll number of TF detection dice. Resolve in order of lowest die to highest die.
 
@@ -31,7 +31,7 @@ Roll number of TF detection dice. Resolve in order of lowest die to highest die.
 
 ---
 
-## Missile Attacks on TFs vs. Task Forces
+## Missile Attacks on TFs vs. Task Forces (7.4)
 
 ### Soviet Task Force Missile Attack
 
@@ -46,7 +46,7 @@ Anti-ship missiles by card event only. *Except in Baltic Sea* — may fire vs Go
 
 ---
 
-## Capital Ship Damage
+## Capital Ship Damage (5.1.5.1)
 
 Roll the number of dice indicated, and compare to the table.
 
@@ -75,7 +75,7 @@ Damage Dice to roll based on Weapon Used §14.1:
 
 ---
 
-## SAM Resolution
+## SAM Resolution (7.4.2.1)
 
 A TF may fire with more SAMs than incoming missiles depending on the number of incoming missiles as follows:
 
@@ -109,7 +109,7 @@ TF owner rolls 1 die per SAM point, applying all DRMs.
 
 ---
 
-## Incoming Missile Resolution
+## Incoming Missile Resolution (7.4.2.2)
 
 Roll one die per 2 missiles remaining, and a single die for an odd remaining missile. Apply DRMs.
 
@@ -134,7 +134,7 @@ Roll one die per 2 missiles remaining, and a single die for an odd remaining mis
 
 ---
 
-## Missile Hit Selection
+## Missile Hit Selection (7.4.2)
 
 Roll two dice: Any N9 / N10 **first** hit allocated by attacker.
 

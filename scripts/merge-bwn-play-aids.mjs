@@ -45,6 +45,20 @@ function slugify(h2) {
   return s;
 }
 
+/**
+ * Extract trailing rule-ref paren from an H2 title and return
+ * { displayTitle, ruleRefs }. Only strips a paren if the entire content
+ * is a digit-dot section ref list, e.g. "(7.2)" or "(5.2.1, 7.3)" — leaves
+ * non-numeric parens like "(SEAD)" alone.
+ */
+function extractRuleRefs(h2) {
+  const TRAILING = /\s*\((\d+(?:\.\d+){1,3}(?:[a-z])?(?:\s*,\s*\d+(?:\.\d+){1,3}(?:[a-z])?)*)\)\s*$/;
+  const m = h2.match(TRAILING);
+  if (!m) return { displayTitle: h2.trim(), ruleRefs: [] };
+  const refs = m[1].split(/\s*,\s*/).map((r) => r.trim()).filter(Boolean);
+  return { displayTitle: h2.replace(TRAILING, "").trim(), ruleRefs: refs };
+}
+
 function processFile(filename) {
   const md = readFileSync(join(PLAY_AIDS_DIR, filename), "utf-8");
   const paMatch = filename.match(/^0(\d)-/);
@@ -83,7 +97,8 @@ function processFile(filename) {
       .replace(/^---\s*$/gm, "") // strip horizontal rules separating sections
       .trim();
 
-    blocks.push({ key, paNumber, title, body });
+    const { displayTitle, ruleRefs } = extractRuleRefs(title);
+    blocks.push({ key, paNumber, title: displayTitle, body, ruleRefs });
   }
   return blocks;
 }
@@ -104,6 +119,7 @@ function main() {
       out[b.key] = {
         paNumber: b.paNumber,
         title: b.title,
+        ruleRefs: b.ruleRefs,
         body: b.body,
         html: marked.parse(b.body),
         sourceFile: f,

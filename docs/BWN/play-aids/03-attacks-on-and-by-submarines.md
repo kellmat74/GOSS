@@ -6,7 +6,7 @@
 
 ---
 
-## Anti-Submarine Warfare
+## Anti-Submarine Warfare (7.2)
 
 
 **Roll** anti-submarine warfare dice (minimum = 0 die). Resolve in order of lowest die to highest die.
@@ -32,7 +32,7 @@ Select any submarine targets with the D value equal or lower. Defender selects f
 
 ---
 
-## Anti-Submarine Warfare by Task Forces
+## Anti-Submarine Warfare by Task Forces (7.2.2)
 
 A Task Force may search for submarines instead of moving.
 
@@ -46,7 +46,7 @@ Use the TF ASW values and dice totals from the submarine vs. Task Force section 
 
 ---
 
-## Effects of hits by Submarines
+## Effects of hits by Submarines (7.3.2)
 
 | Outcome | Effect |
 |---|---|
@@ -54,7 +54,7 @@ Use the TF ASW values and dice totals from the submarine vs. Task Force section 
 | **Capital Ship** | See Capital Ship Damage Procedure |
 | **Other unit** | Cause a step loss |
 
-## Hit Results
+## Hit Results (7.3.2)
 
 - **Hit**: Non-capital ship without Prairie Masker — step loss, chosen by attacker.
 - **Amph / Convoy / Prairie Masker**: Non-capital ship step loss or hit on Amph/Convoy. Attacker selects first hit & others to Convoys or allows defender to allocate after the first.
@@ -63,7 +63,7 @@ Use the TF ASW values and dice totals from the submarine vs. Task Force section 
 
 ---
 
-## Submarine Launched Missiles vs. Task Force
+## Submarine Launched Missiles vs. Task Force (7.4.1.1)
 
 Roll 1 die, 2 if 'Good detection' & use the best roll.
 
@@ -79,7 +79,7 @@ Roll 1 die, 2 if 'Good detection' & use the best roll.
 
 ---
 
-## Submarine vs. Task Force
+## Submarine vs. Task Force (7.3)
 
 Roll anti-surface dice (Minimum = 1). DR + Tactical value = results on sub vs TF table.
 
@@ -89,7 +89,7 @@ Roll anti-surface dice (Minimum = 1). DR + Tactical value = results on sub vs TF
 | **Bad Weather** | -1 die |
 | **Target TF is Fast** | -1 die; -2 dice if diesel sub attacking |
 
-## Submarine Attack Results
+## Submarine Attack Results (7.3.1)
 
 | Die Roll | Result |
 |---|---|
@@ -108,7 +108,7 @@ Set dice to the side for possible defender cancellation.
 - If US or UK nuclear subs, (Torpedo tech — Soviets can also use) a double 1-6 may immediately resolve as hit.
 - A double 7-10 may immediately resolve as PM/Amph/Can.
 
-## Task Force ASW
+## Task Force ASW (7.3.1)
 
 | Unit | Value |
 |---|---|
@@ -117,7 +117,7 @@ Set dice to the side for possible defender cancellation.
 | 'On Patrol' MP | ASW; 1 in Bad Weather |
 | Ship | ASW |
 
-## Task Force ASW Defense
+## Task Force ASW Defense (7.3.1)
 
 Calculate ASW total and then roll the ASW dice.
 

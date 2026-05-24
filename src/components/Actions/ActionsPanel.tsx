@@ -458,19 +458,33 @@ function PlayAidInline({
 
   return (
     <div className="mt-2 ml-1 overflow-hidden rounded-md border border-amber-300 bg-amber-50 dark:border-amber-700 dark:bg-amber-950/30">
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        className="flex w-full items-center justify-between gap-2 bg-amber-100 px-3 py-1.5 text-left text-xs font-semibold text-amber-900 hover:bg-amber-200 dark:bg-amber-900/40 dark:text-amber-200 dark:hover:bg-amber-900/60"
-      >
-        <span className="flex items-center gap-2">
+      <div className="flex w-full items-center gap-2 bg-amber-100 px-3 py-1.5 dark:bg-amber-900/40">
+        <button
+          type="button"
+          onClick={() => setOpen((o) => !o)}
+          className="flex flex-1 items-center gap-2 text-left text-xs font-semibold text-amber-900 hover:underline dark:text-amber-200"
+        >
           <span className="rounded bg-amber-300 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-amber-900 dark:bg-amber-700 dark:text-amber-100">
             PA{block.paNumber}
           </span>
           <span>{block.title}</span>
-        </span>
-        <span className="text-amber-700 dark:text-amber-400">{open ? "−" : "+"}</span>
-      </button>
+        </button>
+        {block.ruleRefs && block.ruleRefs.length > 0 && (
+          <div className="flex flex-wrap gap-1">
+            {block.ruleRefs.map((ref) => (
+              <RuleRefBadge key={ref} ruleRef={ref} />
+            ))}
+          </div>
+        )}
+        <button
+          type="button"
+          onClick={() => setOpen((o) => !o)}
+          className="text-amber-700 dark:text-amber-400"
+          aria-label={open ? "collapse" : "expand"}
+        >
+          {open ? "−" : "+"}
+        </button>
+      </div>
       {open && (
         <RuleAwareHtml
           className="prose-action px-3 py-2 text-sm leading-relaxed text-stone-800 dark:text-stone-200"

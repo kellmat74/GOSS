@@ -157,6 +157,8 @@ export interface GameCard {
 export interface PlayAidBlock {
   paNumber: number;
   title: string;
+  /** Rule section refs extracted from trailing parens in the H2 title (e.g. "## ASW (7.2)" → ["7.2"]). */
+  ruleRefs: string[];
   body: string;        // markdown source
   html: string;        // pre-rendered HTML
   sourceFile: string;

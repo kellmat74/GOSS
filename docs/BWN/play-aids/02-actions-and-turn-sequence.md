@@ -7,11 +7,11 @@
 
 ---
 
-## Actions (overview)
+## Actions (overview) (4.2)
 
 Each unit action costs **one OPS** unless stated otherwise.
 
-## OPS Track Events
+## OPS Track Events (4.2.1)
 
 Trigger after both players' OPS markers move to/past the relevant box on the Operations Points Record Track.
 
@@ -42,7 +42,7 @@ Both play 2nd card (Soviet first) then continue the game.
 
 ---
 
-## Submarines
+## Submarines (5.2)
 
 - Diesels move 1, Nuclear moves 2
 - A soviet SSBN may take a nuclear sub with it, both spent.
@@ -56,7 +56,7 @@ Both play 2nd card (Soviet first) then continue the game.
 
 ---
 
-## Air Units
+## Air Units (5.3)
 
 - 1 Maritime Patrol fly and attack or detect TF
   - If a detection is placed or upgraded, active player may then play one further action to attack a detected TF.
@@ -65,7 +65,7 @@ Both play 2nd card (Soviet first) then continue the game.
 
 ---
 
-## Ships
+## Ships (5.1)
 
 - Form a new TF: **Cost 2**
 - Move ships between TFs in the same zone: **Cost 1**
@@ -75,7 +75,7 @@ Automatic vs. facilities, may require a roll vs. other TFs.
 
 ---
 
-## Miscellaneous
+## Miscellaneous (5.4)
 
 - Repair a facility, remove a hit marker: **Cost 2**
   - Requires a 5+ roll if the damage level will change.
@@ -88,7 +88,7 @@ Automatic vs. facilities, may require a roll vs. other TFs.
 
 ---
 
-## Use When Active (not an action)
+## Use When Active (not an action) (4.2.2)
 
 - Use a First Strike Point to buy an effect.
 - Use a Soviet Spy.
@@ -98,7 +98,7 @@ Automatic vs. facilities, may require a roll vs. other TFs.
 
 ---
 
-## Use At Any Time (not an action)
+## Use At Any Time (not an action) (4.2.3)
 
 - Play a Reaction event from a card in your hand.
 - On patrol units may attack enemy units moving through their zone:

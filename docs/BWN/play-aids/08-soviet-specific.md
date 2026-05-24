@@ -5,7 +5,7 @@
 
 ---
 
-## NATO Boomer Hunting
+## NATO Boomer Hunting (9.2)
 
 The USSR player may claim the 'SSBN Hunting' marker:
 - Via spy action
@@ -25,7 +25,7 @@ Add the Tactical Value of the attacking submarine.
 
 ---
 
-## Soviet Spies
+## Soviet Spies (9.3)
 
 - Place a Poor detection on any Task Force.
 - Take the SSBN Hunting marker.
@@ -34,7 +34,7 @@ Add the Tactical Value of the attacking submarine.
 
 ---
 
-## First Strike Points
+## First Strike Points (9.1.1)
 
 - Anti-Satellite: place 1–2 in ASAT system boxes. While present, prevents NATO play of 'Whitecloud' and 'Snoopers detect raid' and applies DRM to NATO detection. Also, if two FSPs are present, removes one OPS from each NATO card. Remove one at the end of the turn on a 6+.
 - Take a step from the strategic reserve - 1 point/step.
@@ -44,13 +44,13 @@ Add the Tactical Value of the attacking submarine.
 
 ---
 
-## Soviet First Strike Submarines
+## Soviet First Strike Submarines (2.3.5.1)
 
 Any SSBN in or adjacent to a First Strike zone may roll to evade when an Anti-Submarine Warfare attack is declared. On a 6+ (8+ if spent) move the submarine and one non-diesel escort to an adjacent zone. The attacker is spent regardless of targets. The SSBN & escort are spent.
 
 ---
 
-## Amphibious Invasions
+## Amphibious Invasions (8.1.1)
 
 Number of dice available to NATO (minimum = 1)
 
@@ -76,7 +76,7 @@ Roll all dice and resolve starting with the lowest value.
 | 9 | **Mines**: Cancel by taking a step loss on any ship. |
 | 10 | **Guns**: Cancel one if Sverdlov is present. |
 
-## Landing Troops
+## Landing Troops (8.1.4)
 
 NATO landing in Oslo land only one troop unless Soviets are in the Orland box.
 
@@ -87,14 +87,14 @@ NATO landing in Oslo land only one troop unless Soviets are in the Orland box.
 
 Soviet landing at least 1 Troop in Bodo/Orland may place War marker in that box & roll for facility capture. Soviets landing in Orland - Bodo is also captured (heavy damage).
 
-## Capturing Facilities
+## Capturing Facilities (8.3)
 
 Heavily damaged by default.
 Roll 1 dice per troop landed. Roll of 8+ to reduce damage by one level, place hit markers to match the facility damage box. May rebase 2 fighters & 2 strike. Mark strike units spent.
 
 ---
 
-## Soviet Technology
+## Soviet Technology (10.1)
 
 - **SAMs**: +1 DRM all SAM rolls - land and sea.
 - **ASMs**: Resolve missile hit selection as NATO, allocating every 2nd hit instead of every 3rd hit.
