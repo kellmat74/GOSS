@@ -18,6 +18,7 @@ interface PhaseStepperProps {
   onClearChecklist: () => void;
   onAdvanceTurn: () => void;
   onGoToPhase: (phaseIndex: number, subPhaseIndex?: number, segmentIndex?: number) => void;
+  onTabSwitch?: (tab: string) => void;
 }
 
 export function PhaseStepper({
@@ -32,6 +33,7 @@ export function PhaseStepper({
   onClearChecklist,
   onAdvanceTurn,
   onGoToPhase,
+  onTabSwitch,
 }: PhaseStepperProps) {
   if (!phase) {
     return (
@@ -198,7 +200,7 @@ export function PhaseStepper({
       {/* Content — verbatim PAC markdown */}
       {active.content && (
         <div className="mb-4 rounded-lg border border-stone-200 bg-stone-50 p-4 dark:border-stone-700 dark:bg-stone-800/50">
-          <SoPMarkdown content={active.content} />
+          <SoPMarkdown content={active.content} onTabSwitch={onTabSwitch} />
         </div>
       )}
 
@@ -215,7 +217,7 @@ export function PhaseStepper({
               Scenario Rules
             </span>
           </div>
-          <SoPMarkdown content={active.appendedContent} />
+          <SoPMarkdown content={active.appendedContent} onTabSwitch={onTabSwitch} />
         </div>
       )}
 

@@ -1,7 +1,54 @@
+import type { ReactNode } from "react";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
 interface SoPMarkdownProps {
   content: string;
+  onTabSwitch?: (tab: string) => void;
+}
+
+/**
+ * Inline renderer that handles BOTH rule refs (via RuleInlineText) AND
+ * tab-link markdown like [Actions tab](tab:actions). The tab link becomes
+ * a button that calls onTabSwitch.
+ */
+function InlineSegment({
+  text,
+  onTabSwitch,
+}: {
+  text: string;
+  onTabSwitch?: (tab: string) => void;
+}) {
+  const TAB_LINK = /\[([^\]]+)\]\(tab:([a-z-]+)\)/g;
+  const parts: ReactNode[] = [];
+  let lastIdx = 0;
+  let m: RegExpExecArray | null;
+  let k = 0;
+  while ((m = TAB_LINK.exec(text)) !== null) {
+    if (m.index > lastIdx) {
+      parts.push(<RuleInlineText key={`r${k}`} text={text.slice(lastIdx, m.index)} />);
+    }
+    const label = m[1];
+    const tab = m[2];
+    parts.push(
+      <button
+        key={`t${k}`}
+        type="button"
+        onClick={() => onTabSwitch?.(tab)}
+        className="font-semibold text-accent-700 underline-offset-2 hover:underline dark:text-accent-300"
+      >
+        {label} →
+      </button>
+    );
+    lastIdx = m.index + m[0].length;
+    k++;
+  }
+  if (parts.length === 0) {
+    return <RuleInlineText text={text} />;
+  }
+  if (lastIdx < text.length) {
+    parts.push(<RuleInlineText key={`r${k}`} text={text.slice(lastIdx)} />);
+  }
+  return <>{parts}</>;
 }
 
 /**
@@ -12,9 +59,10 @@ interface SoPMarkdownProps {
  * - Bullet lists (- item)
  * - Markdown tables
  * - (X.Y.Z) clickable rule references
+ * - [label](tab:xxx) — clickable tab-switch link
  * - Blank-line paragraph separation
  */
-export function SoPMarkdown({ content }: SoPMarkdownProps) {
+export function SoPMarkdown({ content, onTabSwitch }: SoPMarkdownProps) {
   const lines = content.split("\n");
   const elements: React.ReactNode[] = [];
   let i = 0;
@@ -33,7 +81,7 @@ export function SoPMarkdown({ content }: SoPMarkdownProps) {
     if (trimmed.startsWith("### ")) {
       elements.push(
         <h4 key={i} className="mt-4 mb-1.5 text-sm font-bold uppercase tracking-wide text-stone-500 dark:text-stone-400">
-          <RuleInlineText text={trimmed.slice(4)} />
+          <InlineSegment text={trimmed.slice(4)} onTabSwitch={onTabSwitch} />
         </h4>
       );
       i++;
@@ -42,7 +90,7 @@ export function SoPMarkdown({ content }: SoPMarkdownProps) {
     if (trimmed.startsWith("## ")) {
       elements.push(
         <h3 key={i} className="mt-4 mb-2 text-base font-bold text-stone-700 dark:text-stone-200">
-          <RuleInlineText text={trimmed.slice(3)} />
+          <InlineSegment text={trimmed.slice(3)} onTabSwitch={onTabSwitch} />
         </h3>
       );
       i++;
@@ -72,7 +120,7 @@ export function SoPMarkdown({ content }: SoPMarkdownProps) {
           {items.map((item, j) => (
             <li key={j} className="flex gap-2 text-sm text-stone-600 dark:text-stone-300">
               <span className="mt-0.5 text-stone-400">&bull;</span>
-              <span><RuleInlineText text={item} /></span>
+              <span><InlineSegment text={item} onTabSwitch={onTabSwitch} /></span>
             </li>
           ))}
         </ul>
@@ -99,7 +147,7 @@ export function SoPMarkdown({ content }: SoPMarkdownProps) {
             return (
               <li key={j} className="flex gap-2 text-sm text-stone-600 dark:text-stone-300">
                 <span className="min-w-[1.5rem] font-mono text-xs text-stone-400">{label})</span>
-                <span><RuleInlineText text={text} /></span>
+                <span><InlineSegment text={text} onTabSwitch={onTabSwitch} /></span>
               </li>
             );
           })}
@@ -111,7 +159,7 @@ export function SoPMarkdown({ content }: SoPMarkdownProps) {
     // Regular paragraph
     elements.push(
       <p key={i} className="my-1.5 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
-        <RuleInlineText text={trimmed} />
+        <InlineSegment text={trimmed} onTabSwitch={onTabSwitch} />
       </p>
     );
     i++;

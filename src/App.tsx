@@ -459,6 +459,7 @@ function App() {
             onClearChecklist={clearChecklist}
             onAdvanceTurn={resetProgress}
             onGoToPhase={goToPhase}
+            onTabSwitch={(tab) => setView(tab as View)}
           />
         )}
         {view === "flowchart" && gameConfig?.features.flowchart && <SoPFlowchart />}
