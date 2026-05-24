@@ -17,7 +17,7 @@ export function TableModal() {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[110] flex items-center justify-center bg-black/60 p-4 animate-in fade-in duration-150"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4 animate-in fade-in duration-150"
       onClick={(e) => { if (e.target === e.currentTarget) closeTable(); }}
     >
       <div className="relative flex max-h-[85vh] w-fit min-w-[320px] max-w-[92vw] flex-col rounded-xl border border-stone-200 bg-white text-stone-900 shadow-2xl dark:border-stone-700 dark:bg-stone-900 dark:text-stone-100">
