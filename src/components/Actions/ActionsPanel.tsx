@@ -158,7 +158,7 @@ export function ActionsPanel({
       {/* Right: detail panel */}
       <div className="hidden flex-1 overflow-y-auto rounded-lg border border-stone-200 bg-stone-50 p-5 dark:border-stone-700 dark:bg-stone-800/50 md:block">
         {selectedCard ? (
-          <CardDetail card={selectedCard} playAidBlocks={playAidBlocks} />
+          <CardDetail card={selectedCard} playAidBlocks={playAidBlocks} onNavigate={setSelectedId} />
         ) : (
           <div className="flex h-full items-center justify-center text-sm text-stone-400">
             Select an action to see details.
@@ -169,7 +169,15 @@ export function ActionsPanel({
   );
 }
 
-function CardDetail({ card, playAidBlocks }: { card: GameCard; playAidBlocks: PlayAidBlocksMap }) {
+function CardDetail({
+  card,
+  playAidBlocks,
+  onNavigate,
+}: {
+  card: GameCard;
+  playAidBlocks: PlayAidBlocksMap;
+  onNavigate: (id: string) => void;
+}) {
   const sideBadge = SIDE_BADGE[card.side];
   const usageBadge = card.usage ? USAGE_BADGE[card.usage] : null;
   const hasRichContent = !!card.content?.procedure?.length;
@@ -207,7 +215,7 @@ function CardDetail({ card, playAidBlocks }: { card: GameCard; playAidBlocks: Pl
       <h3 className="mb-3 text-xl font-bold">{card.title}</h3>
 
       {hasRichContent ? (
-        <RichActionContent card={card} playAidBlocks={playAidBlocks} />
+        <RichActionContent card={card} playAidBlocks={playAidBlocks} onNavigate={onNavigate} />
       ) : (
         <SimpleActionContent card={card} />
       )}
@@ -216,7 +224,15 @@ function CardDetail({ card, playAidBlocks }: { card: GameCard; playAidBlocks: Pl
 }
 
 /** Render the rich content from BWN merge pipeline. */
-function RichActionContent({ card, playAidBlocks }: { card: GameCard; playAidBlocks: PlayAidBlocksMap }) {
+function RichActionContent({
+  card,
+  playAidBlocks,
+  onNavigate,
+}: {
+  card: GameCard;
+  playAidBlocks: PlayAidBlocksMap;
+  onNavigate: (id: string) => void;
+}) {
   const c = card.content!;
   return (
     <div>
@@ -266,8 +282,14 @@ function RichActionContent({ card, playAidBlocks }: { card: GameCard; playAidBlo
           {c.seeAlso.actions.length > 0 && (
             <ul className="mb-2 space-y-1 text-sm">
               {c.seeAlso.actions.map((a) => (
-                <li key={a.id} className="text-accent-700 dark:text-accent-300">
-                  → {a.title}
+                <li key={a.id}>
+                  <button
+                    type="button"
+                    onClick={() => onNavigate(a.id)}
+                    className="text-left text-accent-700 underline-offset-2 hover:underline dark:text-accent-300"
+                  >
+                    → {a.title}
+                  </button>
                 </li>
               ))}
             </ul>
