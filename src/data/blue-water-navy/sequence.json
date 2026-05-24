@@ -42,7 +42,68 @@
         "Alternate actions, Soviet first, until OPS exhausted",
         "Resolve OPS Track events (Fast / Repair / Ships / Next Day) as triggered"
       ],
-      "subPhases": []
+      "subPhases": [
+        {
+          "id": "ops-event-fast",
+          "name": "OPS Event — Fast (ignored Day 2)",
+          "ruleRef": "4.2.1.1",
+          "player": "both",
+          "description": "Fast Task Forces get a free movement beat. Skipped entirely on Day 2.",
+          "content": "**Skip this event entirely if it is Day Two.**\n\nOn Day One: every Fast Task Force may move one Sea Zone. Fast TFs may **not** perform ASW during this event — they only move.\n\nResolve as per the Ships event below, but **ignore steps 2 and 4**, and apply only to Fast TFs and the zones they occupy.",
+          "notes": [],
+          "checklist": [
+            "If Day 2: ignore this event entirely",
+            "Otherwise: each Fast TF may move one Sea Zone (no ASW)",
+            "Run Ships event sequence skipping step 2 (detection degrade) and step 4 (spent removal)",
+            "Apply only to Fast TFs and zones they occupy"
+          ]
+        },
+        {
+          "id": "ops-event-repair",
+          "name": "OPS Event — Repair",
+          "ruleRef": "4.2.1.2",
+          "player": "both",
+          "description": "Remove one hit from every damaged facility on the map.",
+          "content": "Remove one hit from each damaged facility on the map. Then check whether the facility's damage status has changed — Heavy → Light → Undamaged per the Facility Repair rule (2.3.8.5).\n\nThis is a freebie: no OPS spent, no roll required.",
+          "notes": [],
+          "checklist": [
+            "Remove one hit from every damaged facility on the map",
+            "Re-evaluate each facility's damage status (Heavy → Light → Undamaged) per 2.3.8.5"
+          ]
+        },
+        {
+          "id": "ops-event-ships",
+          "name": "OPS Event — Ships",
+          "ruleRef": "4.2.1.3",
+          "player": "both",
+          "description": "The big movement beat. TF movement, detection degrade, RORSATs, spent removal, F-v-F combat, intrinsic detection.",
+          "content": "Run the six sub-steps in order:\n\n**1. Move Task Forces.** Both sides move all TFs per 5.1.3. Soviet moves first within each detection category. TFs may instead mark themselves 'Amphibious Landing' (free detection roll), or resolve a landing already marked (cannot move that beat). A friendly nuclear sub may join a moving TF crossing its zone (one sub per TF max). A TF may **conduct ASW instead of moving** in its current zone (7.2.2). On-Patrol units may react to TF movement (5.2.3, 5.3.4.1, 5.3.4.2). On-Patrol Air Units may move with a moving TF if range permits.\n\n**2. Degrade detections.** TFs that did NOT move in step 1 have their detection downgraded — Good → Poor, Poor → Undetected. Skip this for TFs with an Amphibious Landing marker.\n\n**3. RORSAT searches.** Each RORSAT on the map sharing a Sea Zone with enemy TFs rolls for detection.\n\n**4. Remove Spent markers.** Lift Spent from all non-MP Air Units (except those at a Heavy-damaged base).\n\n**5. Fighter vs Fighter combat.** Resolve any F-v-F combat triggered by TF movement (7.1.3).\n\n**6. Intrinsic detection units.** Resolve Interception and CAP response, then their searches.",
+          "notes": [],
+          "checklist": [
+            "1. Move TFs (Soviet first, by detection level); resolve amphib landings; nuc subs may join; ASW as substitute",
+            "2. Degrade detections on TFs that didn't move (skip 'Landing' marked)",
+            "3. RORSATs roll detection vs enemy TFs sharing their zone",
+            "4. Remove Spent from non-MP Air Units (except heavy-damaged bases)",
+            "5. Resolve Fighter vs Fighter combat from TF movement",
+            "6. Intrinsic detection — Interception + CAP + searches"
+          ]
+        },
+        {
+          "id": "ops-event-next-day",
+          "name": "OPS Event — Next Day (ignored Day 2)",
+          "ruleRef": "4.2.1.4",
+          "player": "both",
+          "description": "Both players play their second OPS card and advance to Day 2. Skipped on Day 2 itself.",
+          "content": "**Skip this event if it is already Day Two.**\n\nBoth players play their second (and last) OPS card of the turn exactly as per 3.2.3 — add the number of Operations Points still unspent to the new total available to you.\n\nThen advance the Day marker to **Day Two** and continue play.",
+          "notes": [],
+          "checklist": [
+            "If already Day 2: skip this event entirely",
+            "Otherwise: Soviet plays 2nd card for OPS, then NATO plays 2nd card",
+            "Add any unspent OPS from Day 1 to the new total",
+            "Advance the Day marker to Day Two and continue play"
+          ]
+        }
+      ]
     },
     {
       "id": "end-of-turn",
