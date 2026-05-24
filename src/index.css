@@ -29,6 +29,47 @@
   --accent-900: #151809;
 }
 
+/* Inline play-aid HTML rendered inside the Actions tab. */
+.prose-action h3 { font-size: 0.95rem; font-weight: 600; margin: 0.75rem 0 0.25rem; }
+.prose-action h4 { font-size: 0.85rem; font-weight: 600; margin: 0.5rem 0 0.25rem; }
+.prose-action h5,
+.prose-action h6 { font-size: 0.8rem; font-weight: 600; margin: 0.5rem 0 0.25rem; color: #57534e; }
+.dark .prose-action h5,
+.dark .prose-action h6 { color: #a8a29e; }
+.prose-action p { margin: 0.35rem 0; }
+.prose-action ul,
+.prose-action ol { margin: 0.35rem 0 0.35rem 1.25rem; }
+.prose-action ul { list-style: disc; }
+.prose-action ol { list-style: decimal; }
+.prose-action li { margin: 0.15rem 0; }
+.prose-action strong { font-weight: 600; }
+.prose-action em { font-style: italic; }
+.prose-action code { background: #f5f5f4; padding: 0.05rem 0.25rem; border-radius: 0.2rem; font-size: 0.85em; }
+.dark .prose-action code { background: #44403c; }
+.prose-action blockquote { margin: 0.35rem 0; padding-left: 0.75rem; border-left: 3px solid #d6d3d1; color: #57534e; font-style: italic; }
+.dark .prose-action blockquote { border-color: #57534e; color: #a8a29e; }
+.prose-action table {
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+  width: 100%;
+  font-size: 0.85rem;
+}
+.prose-action th,
+.prose-action td {
+  border: 1px solid #d6d3d1;
+  padding: 0.25rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+.dark .prose-action th,
+.dark .prose-action td { border-color: #57534e; }
+.prose-action th { background: #f5f5f4; font-weight: 600; }
+.dark .prose-action th { background: #44403c; }
+.prose-action a { color: #4b5320; text-decoration: underline; }
+.dark .prose-action a { color: #fcd34d; }
+.prose-action hr { border: none; border-top: 1px solid #d6d3d1; margin: 0.5rem 0; }
+.dark .prose-action hr { border-color: #57534e; }
+
 /* Dark theme: amber accents */
 .dark {
   --accent-50: #fffbeb;

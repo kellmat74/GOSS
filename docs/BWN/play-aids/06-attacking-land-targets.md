@@ -8,11 +8,9 @@
 
 ## Air Units Bombing Land Targets
 
-> §17.20
+1 die per step, US CAGS get 1 free SEAD die per 2 CAGs.
 
-1 die per strip, US CAGS get 1 free SEAD die per 2 CAGs.
-
-### SAM Suppression (SEAD)
+## SAM Suppression (SEAD) — vs Bombing
 
 Allocate dice to SEAD. These dice do not bomb.
 
@@ -23,7 +21,7 @@ Allocate dice to SEAD. These dice do not bomb.
 | 6–8 | -1 SAM value, place 1 hit |
 | 9–10 | -2 SAM value, place 2 hits |
 
-### SAM Attack
+## SAM Attack — vs Bombing
 
 Roll a die per remaining SAM before the attackers bomb:
 
@@ -34,7 +32,7 @@ Roll a die per remaining SAM before the attackers bomb:
 
 SAM Technology - Soviet +1 DRM
 
-### Bombing (air-to-ground)
+## Bombing (air-to-ground)
 
 | Die Roll | Result |
 |---|---|
@@ -44,21 +42,21 @@ SAM Technology - Soviet +1 DRM
 
 | DRM | Effect |
 |---|---|
-| +1 | If zone route to the target not used |
+| +1 | If some range to the target not used |
 | -1 | Bad Weather |
 
 Place the number of hits scored on each facility. Maximum of 5.
 
-### Collateral Damage
+## Collateral Damage
 
 - 'Kills' cause damage to units stationed at the facility.
 - Even kills are allocated by defender, odd by attacker.
-- **Soviet Kola, Baltic, Black Sea**: NATO score fighter casualties or Bear, Badger, Backfire (Soviet selects type).
-- Either side may cause one RORSAT loss (6+ Soviet selects) returning 3 turns from the current turn.
+- **Soviet Kola, Baltic, Black Sea**: NATO may force fighter casualties or Bear, Badger, Backfire (Soviet selects type).
+- Either side may cause one RORSAT loss additionally (6+ Soviet selects) returning 3 turns from the current turn.
 
-### The Kola Peninsula
+## The Kola Peninsula
 
-For each hit caused to the Kola Peninsula, the Soviet player receives one First Strike Point.
+For each hit caused to the Kola Peninsula, the Soviet player takes one First Strike Point.
 
 ---
 
@@ -66,16 +64,14 @@ For each hit caused to the Kola Peninsula, the Soviet player receives one First 
 
 | Type | Damage Effects |
 |---|---|
-| **Airbase (Light)** | No air may fly, return to base on patrol emergencies & MP units and mark spent. Also applies a CAP modifier. |
-| **Airbase (Heavy)** | No air may fly. All CAP is reduced to one die per unit. Do not remove spent markers on air units when ships move or at turn end. |
+| **Airbase (Light)** | No air may fly, return to base on patrol interceptors & MP units and mark spent. Also applies a CAP modifier. |
+| **Airbase (Heavy)** | All CAP is reduced to one die per unit. Do not remove spent markers on air units when ships move or at turn end. |
 | **Port (Light)** | +1 hit to Convoys/Amphs arriving for delay. Subs moving from this port cost 2 OPS each. Applies -2 mine clearance penalty. |
-| **Port (Heavy)** | +2 hits to Convoys/Amphs arriving for delay (+1 of 1).<br>+1 OPS to form a TF at this port. |
+| **Port (Heavy)** | +2 hits to Convoys/Amphs arriving for delay (instead of +1).<br>+1 OPS to form a TF at this port. |
 
 ---
 
 ## Cruise Missile Attacks Vs. Land Targets
-
-> §17.22
 
 Soviet missiles (ship black & yellow, all submarine, all air).
 
@@ -90,11 +86,11 @@ Soviet missiles (ship black & yellow, all submarine, all air).
 
 May fly 2 zones to the target, roll # dice on counter(s).
 
-### NATO Background background missiles
+### NATO Green background missiles
 
 May fly 1 zone to the target, roll # dice on counter(s).
 
-### SAM Suppression
+## SAM Suppression (SEAD) — vs Cruise Missiles
 
 Allocate dice to SEAD. These dice do not attack.
 
@@ -105,7 +101,7 @@ Allocate dice to SEAD. These dice do not attack.
 | 6–8 | -1 SAM value, place 1 hit |
 | 9–10 | -2 SAM value, place 2 hits |
 
-### SAM Attack
+## SAM Attack — vs Cruise Missiles
 
 Roll a die per remaining SAM before cruise missile attack:
 
@@ -117,16 +113,16 @@ Roll a die per remaining SAM before cruise missile attack:
 
 SAM Technology - Soviet +1 DRM
 
-### Cruise Missile Attack
+## Cruise Missile Attack
 
-Roll a die per missile or set of missiles:
+Roll a die per remaining cruise missle point:
 
 | Die Roll | Result | DRM | Cause |
 |---|---|---|---|
-| 1–3 | — | — | — |
-| 4–6 | 1 hit | -1 | Attacking Troops |
-| 7–9 | 1 hit, 1 kill | -1 | Bad Weather |
-| 10 | 2 hits, 2 kills | — | — |
+| 1–3 | Miss | -1 | Attacking Troops |
+| 4–6 | 1 hit | -1 | Bad Weather |
+| 7–9 | 1 hit, 1 kill |  |  |
+| 10 | 2 hits, 2 kills | | |
 
 Place the number of hits scored on each facility. Maximum of 5.
 
@@ -134,9 +130,7 @@ Place the number of hits scored on each facility. Maximum of 5.
 
 ## Striking Soviet Troops (Europe South War Track, Norway, Denmark)
 
-> §17.24
-
-Roll an air-to-air or air-to-attacks: DR + Tactical Value needing 8+ the number of hits gives the # Soviet attacks:
+Roll escort fighter air-to-attacks: DR + Tactical Value needing 8+. The number of hits gives the # Soviet attacks:
 
 | Hits | Result |
 |---|---|
@@ -148,7 +142,7 @@ Resolve each Soviet attack as follows:
 
 | Die | Result |
 |---|---|
-| 6+ | Ignores 1 bombing |
+| 6+ | Ignores 1 bombing die |
 | =>D | 1 attacking step loss **and** ignore that die |
 | N10 | Soviet may choose to kill 1 step of fighters |
 
@@ -160,5 +154,5 @@ Air-to-Air Technology - Soviet +1 DRM
 
 | Port Type | Capability |
 |---|---|
-| **Minor Port** | May rearm one submarine per turn<br>May only rearm surface units of that nation |
-| **Major Port** | May rearm any number of submarines and surface units<br>May rearm surface units |
+| **Minor Port** | May rearm one submarine unit per turn<br>May only rearm surface units of that nation |
+| **Major Port** | May rearm any number of submarine units<br>May rearm surface units |

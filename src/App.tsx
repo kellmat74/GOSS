@@ -187,6 +187,7 @@ interface GameData {
   tables: Record<string, TableDef>;
   actions: CardCategory[];
   cards: PhysicalCard[];
+  playAidBlocks: import("./types/goss").PlayAidBlocksMap;
   scenarioBook: ScenarioBook | null;
   coachContext: unknown | null;
   forumContext: unknown | null;
@@ -258,6 +259,8 @@ function useGameData(
       moduleConfig?.data.coachContext ? moduleConfig.data.coachContext() : Promise.resolve(null),
       // Forum context (curated BGG forum knowledge — Tier 1+2 designer/endorsed posts)
       moduleConfig?.data.forumContext ? moduleConfig.data.forumContext() : Promise.resolve(null),
+      // Play-aid blocks (BWN per-H2 markdown chunks, pre-rendered HTML)
+      moduleConfig?.data.playAidBlocks ? moduleConfig.data.playAidBlocks() : Promise.resolve(null),
     ]).then((results) => {
       if (cancelled) return;
       const [
@@ -266,6 +269,7 @@ function useGameData(
         baseErrataRaw, moduleErrataRaw,
         baseTablesRaw, moduleTablesRaw,
         actionsRaw, cardsRaw, scenarioBookRaw, coachContextRaw, forumContextRaw,
+        playAidBlocksRaw,
       ] = results;
 
       const baseRules: RuleEntry[] = [
@@ -296,11 +300,12 @@ function useGameData(
 
       const actions: CardCategory[] = ((actionsRaw as any)?.default ?? []) as CardCategory[];
       const cards: PhysicalCard[] = ((cardsRaw as any)?.default ?? []) as PhysicalCard[];
+      const playAidBlocks = ((playAidBlocksRaw as any)?.default ?? {}) as import("./types/goss").PlayAidBlocksMap;
       const scenarioBook: ScenarioBook | null = ((scenarioBookRaw as any)?.default ?? null) as ScenarioBook | null;
       const coachContext: unknown | null = (coachContextRaw as any)?.default ?? null;
       const forumContext: unknown | null = (forumContextRaw as any)?.default ?? null;
 
-      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata, tables, actions, cards, scenarioBook, coachContext, forumContext });
+      setData({ baseRules, basePhases, baseLearn, moduleRules, moduleOverlay, moduleLearnOverlay, baseErrata, moduleErrata, tables, actions, cards, playAidBlocks, scenarioBook, coachContext, forumContext });
       setLoading(false);
     }).catch((err) => {
       if (!cancelled) {
@@ -495,7 +500,7 @@ function App() {
           />
         )}
         {view === "actions" && gameConfig?.features.actions && (
-          <ActionsPanel cards={data?.actions ?? []} />
+          <ActionsPanel cards={data?.actions ?? []} playAidBlocks={data?.playAidBlocks ?? {}} />
         )}
         {view === "cards" && gameConfig?.features.cards && (
           <CardsPanel cards={data?.cards ?? []} />

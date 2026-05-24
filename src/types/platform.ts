@@ -87,6 +87,8 @@ export interface ModuleConfig {
     actions?: () => Promise<{ default: unknown }>;
     /** Event Cards catalog — separate from unit actions */
     cards?: () => Promise<{ default: unknown }>;
+    /** Play-aid block map (BWN): each H2 in docs/BWN/play-aids/*.md merged to pa<N>:<slug> entries with pre-rendered HTML. Inlined into Action procedure steps via blockRef. */
+    playAidBlocks?: () => Promise<{ default: unknown }>;
     /** Rich scenario-book content (briefing, setup, victory, etc.) */
     scenarioBook?: () => Promise<{ default: unknown }>;
     /** Auxiliary coaching context fed wholesale into the Ask system prompt (e.g. "often overlooked" rules, designer notes). */

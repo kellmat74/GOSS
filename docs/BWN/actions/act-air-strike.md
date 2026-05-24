@@ -48,9 +48,9 @@ One or more Strike units fly to a target TF or facility and attack with missiles
    {{PA-BLOCK: pa4:capital-ship-damage — Capital Ship Damage}}
 8. **vs land target**: each remaining Strike step gets one bombing die (US CAGs also get 1 free SEAD die per 2 CAGs). Allocate to SEAD vs bombing, resolve SAM suppression, then SAM attack, then bombing.
    {{PA-BLOCK: pa6:air-units-bombing-land-targets — Air Units Bombing Land Targets}}
-   {{PA-BLOCK: pa6:sam-suppression-sead-bombing — SAM Suppression (SEAD) · vs Bombing}}
-   {{PA-BLOCK: pa6:sam-attack-bombing — SAM Attack · vs Bombing}}
-   {{PA-BLOCK: pa6:bombing-air-to-ground — Bombing (air-to-ground)}}
+   {{PA-BLOCK: pa6:sam-suppression-vs-bombing — SAM Suppression (SEAD) · vs Bombing}}
+   {{PA-BLOCK: pa6:sam-attack-vs-bombing — SAM Attack · vs Bombing}}
+   {{PA-BLOCK: pa6:bombing — Bombing (air-to-ground)}}
 9. Apply collateral step losses, facility damage cumulative effects, and Kola First Strike Points if applicable (7.5.3, 7.5.4).
    {{PA-BLOCK: pa6:collateral-damage — Collateral Damage}}
    {{PA-BLOCK: pa6:facility-damage — Facility Damage · Effects cumulative}}

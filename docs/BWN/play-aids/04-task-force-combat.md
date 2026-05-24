@@ -8,13 +8,13 @@
 
 ## Detection of TFs (by MP, RORSAT, Tattletale)
 
-Roll number of TF dice. Resolve in order of lowest die to highest die.
+Roll number of TF detection dice. Resolve in order of lowest die to highest die.
 
 | Modifier | Effect |
 |---|---|
 | US CV detecting | 2 dice each |
 | Other CV detecting | 1 die each |
-| ≥2 enemy TF in the zone | +1 die per TF over 2 |
+| >2 enemy TF in the zone | +1 die per TF over 2 |
 | Soviet anti-submarine usage | -1 DRM per FSP |
 
 | Die Roll | TF Detection |
@@ -26,7 +26,7 @@ Roll number of TF dice. Resolve in order of lowest die to highest die.
 
 ### Detection Results
 
-- **Poor Detection**: Reveal Ship, Convoys, 1 FTR of each type
+- **Poor Detection**: Reveal Amph, Convoys, 1 FTR of each type
 - **Good Detection**: Reveal entire group
 
 ---
@@ -36,7 +36,7 @@ Roll number of TF dice. Resolve in order of lowest die to highest die.
 ### Soviet Task Force Missile Attack
 
 - May fire yellow & black vs NATO Good detection TF in same zone, or vs Poor detection TF if Soviet TF is fast (or 6+).
-- If the target TF has F-14's, roll 1 die if the attacking Soviet TF is poor or 2 dice if good detection & remove that number of missiles on 1's & 2's.
+- If the target TF has F-14's, roll 1 die if the attacking Soviet TF is poor or 2 dice if good detected & remove that number of missiles on 1's & 2's.
 - White & red missiles by card only. *Except in Baltic Sea* — may fire vs Good detection TF in same zone. 1 ship only.
 - Missiles of different colors can be attacked at the NATO players option but declare before the dice are rolled.
 
@@ -48,22 +48,30 @@ Anti-ship missiles by card event only. *Except in Baltic Sea* — may fire vs Go
 
 ## Capital Ship Damage
 
-Roll one die per missile indicated, and compare to the table.
+Roll the number of dice indicated, and compare to the table.
 
 Damage Dice to roll based on Weapon Used §14.1:
 
 | No. of Dice | Weapon |
 |---|---|
-| 2 | NATO missile, Soviet white missile from a ship<br>Soviet red missile, Townsend missile (card). |
+| 1 | NATO missile, Soviet white missile from a ship<br>Soviet red missile, Townsend missile (card). |
 | 2 | Soviet yellow, black or submarine white missile<br>Soviet or NATO torpedo. |
-| 1 | Soviet torpedo from ◆ submarine. |
+| 3 | Soviet torpedo from Super Heavy Torp submarine. |
 | +1 die | Already damaged |
 | +1 die | Each additional hit taken at the same time. |
 
 | Target | Damaged | Sunk |
 |---|---|---|
-| **◆ Big** | All dice 1–7 | Any 8–10 |
-| **◆ Huge** | All dice 1–9 | Any 10 |
+| **Big Target** | All dice 1–7 | Any 8–10 |
+| **Huge Target** | All dice 1–9 | Any 10 |
+
+### Damaged Carriers (CVs)
+
+- Half of all air must roll & take a step loss on a 6+.
+- Do not count as a carrier for sub vs Task Force attacks.
+- No intrinsic detection capability.
+- Only CAP may fly, with a modifier.
+- May immediately break off & form their own TF with escorts from previous force, allowing them to retire.
 
 ---
 
@@ -86,9 +94,9 @@ TF owner rolls 1 die per SAM point, applying all DRMs.
 
 | DR | Effect |
 |---|---|
-| 1–7 | Miss |
-| 8–9 | 1 Hit |
-| 10 | 2 Hits |
+| 1–2 | Miss |
+| 3-8 | 1 Hit |
+| 9-10 | 2 Hits |
 
 ### DRMs
 
@@ -97,13 +105,11 @@ TF owner rolls 1 die per SAM point, applying all DRMs.
 - Bad Weather: -1
 - Shooting at a non-yellow sub short range attack: -2
 - White submarine-launched missiles: +2
-- SAM Technology — Soviets may rotate (Soviet rolling): +1
+- SAM Technology — Soviets SAMs rolling: +1
 
 ---
 
 ## Incoming Missile Resolution
-
-> §17.11 / §17.13
 
 Roll one die per 2 missiles remaining, and a single die for an odd remaining missile. Apply DRMs.
 
@@ -111,43 +117,35 @@ Roll one die per 2 missiles remaining, and a single die for an odd remaining mis
 
 | DR | Effect |
 |---|---|
-| 1–7 | Hit |
+| 1–7 | 1 Hit |
 | 8–10 | 2 Hits |
 
 #### 1 Missile
 
 | DR | Effect |
 |---|---|
-| 1–7 | Miss |
-| 8–10 | Hit |
+| 1–2 | Miss |
+| 3–10 | 1 Hit |
 
 #### DRMs
 
-- Bad Weather: +1
+- Good Detection: +1
 - Bad Weather: -1
 
 ---
 
 ## Missile Hit Selection
 
-Roll a die: Any N9 / N10 **first** allocated by attacker.
+Roll two dice: Any N9 / N10 **first** hit allocated by attacker.
 
-*(Optional: Soviet yellow missiles attacking the first 4 dice)*
+*(Optional: Soviet yellow missiles roll three dice)*
 
 - NATO attacker allocates every 2nd hit (2–4–6–8–10–12)
 - Soviet attacker allocates every 3rd hit (3–6–9–12–15)
-- Missile Technology — Soviets may resolve in 4ths
+- Missile Technology — Soviets may resolve as NATO
 
 *N = natural roll*
 
-### Effect All Hits Caused
+### Effect of Hits Caused
 
 Each hit causes one step loss; causes 2 hits to convoys/amph or causes a damage roll against capital ships.
-
-### Damaged Carriers (CVs)
-
-- Half of all air must roll & take a step loss on a 6+.
-- Do not count as a carrier for sub vs Task Force calculations.
-- No intrinsic detection capability.
-- Only CAP may fly, with a modifier.
-- May immediately break off & form their own TF with escorts from previous force, allowing them to retire.

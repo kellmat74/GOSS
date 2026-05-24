@@ -7,7 +7,7 @@
 
 ## NATO Boomer Hunting
 
-The USSR player may start the 'SSBN Hunting' marker:
+The USSR player may claim the 'SSBN Hunting' marker:
 - Via spy action
 - By using a nuclear submarine **N10** ASW roll
 
@@ -16,8 +16,6 @@ The USSR player may spend the 'SSBN Hunting' marker:
 
 Roll on the following table with 1 die.
 Add the Tactical Value of the attacking submarine.
-
-> §6.7
 
 | Die Roll | Result |
 |---|---|
@@ -38,7 +36,7 @@ Add the Tactical Value of the attacking submarine.
 
 ## First Strike Points
 
-- Anti-Satellite: place 1–2 in ASAT system boxes. While present, prevents NATO play of 'Whiteheart' and 'Snoopers detect raid' and applies DRM to NATO detection. Also, if two FSPs are present, removes one OPS from each NATO card. Remove one at the end of the turn on a 6+.
+- Anti-Satellite: place 1–2 in ASAT system boxes. While present, prevents NATO play of 'Whitecloud' and 'Snoopers detect raid' and applies DRM to NATO detection. Also, if two FSPs are present, removes one OPS from each NATO card. Remove one at the end of the turn on a 6+.
 - Take a step from the strategic reserve - 1 point/step.
 - Trigger the use of nuclear weapons at sea - 3 points.
 - Use battlefield nuclear weapons - 5 points (move a Front 2 boxes, reducing victory locations to 1 H&S. More Soviet stability 1 right. Prevents NATO use of nuclear weapons).
@@ -60,12 +58,12 @@ Number of dice available to NATO (minimum = 1)
 |---|---|---|---|
 | Norway | 4 | 3 | 2 |
 | | -1 die if invading Bodo | | |
-| Denmark | 6 | 4 | 2 |
+| Denmark | 6 | 4 | 3 |
 
 | DRMs | Effect |
 |---|---|
 | -2 dice | If Soviet troops ashore in this location |
-| -1 dice | If base of landing site is damaged |
+| -1 dice | If base at landing site is damaged |
 
 Each die causes a hit to an amph but can be cancelled if the Soviet player has the relevant capabilities within the Task Force. No capability can be counted more than once.
 Roll all dice and resolve starting with the lowest value.
@@ -78,7 +76,7 @@ Roll all dice and resolve starting with the lowest value.
 | 9 | **Mines**: Cancel by taking a step loss on any ship. |
 | 10 | **Guns**: Cancel one if Sverdlov is present. |
 
-### Landing Troops
+## Landing Troops
 
 NATO landing in Oslo land only one troop unless Soviets are in the Orland box.
 
@@ -89,10 +87,10 @@ NATO landing in Oslo land only one troop unless Soviets are in the Orland box.
 
 Soviet landing at least 1 Troop in Bodo/Orland may place War marker in that box & roll for facility capture. Soviets landing in Orland - Bodo is also captured (heavy damage).
 
-### Capturing Facilities
+## Capturing Facilities
 
 Heavily damaged by default.
-Roll 1 dice per troop landed. Roll of 8+ to reduce damage by one level, place hit markers to match the facility damage box. May release 2 fighters & 2 SAMs from box. Mark strike units spent.
+Roll 1 dice per troop landed. Roll of 8+ to reduce damage by one level, place hit markers to match the facility damage box. May rebase 2 fighters & 2 strike. Mark strike units spent.
 
 ---
 
@@ -101,5 +99,5 @@ Roll 1 dice per troop landed. Roll of 8+ to reduce damage by one level, place hi
 - **SAMs**: +1 DRM all SAM rolls - land and sea.
 - **ASMs**: Resolve missile hit selection as NATO, allocating every 2nd hit instead of every 3rd hit.
 - **Torpedoes**: All Soviet non-diesel submarines +1 tactical vs submarines, & Soviets may use Harpoon(sk).
-  - **ECM**: Backfire & Bear-G receive 8+ save when destruction vs. any step loss. Ignore if a better save already applies.
+  - **ECM**: Backfire & Bear-G receive 8+ save when airborne vs. any step loss. Ignore if a better save already applies.
 - **Air-to-Air missiles**: +1 DRM on all air to air.

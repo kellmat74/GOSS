@@ -11,7 +11,9 @@
 
 Each unit action costs **one OPS** unless stated otherwise.
 
-### OPS Track Events — Trigger after both players move to/past
+## OPS Track Events
+
+Trigger after both players' OPS markers move to/past the relevant box on the Operations Points Record Track.
 
 #### Fast
 
@@ -21,7 +23,7 @@ Fast Task Forces may move (not perform ASW) one Sea Zone. Ignore in day two. Res
 
 1. All TFs may move one Sea Zone, resolve ASW, mark 'landing' or land if already marked 'landing'.
    - Roll 1 detection against any marked 'landing'.
-   - Perform movement in order of detection status.
+   - Perform movement in order of detection status (Full/Partial/None, Soviet First).
    - NATO may dissolve TFs. Submarines may join a TF if not spent or 'on-patrol'.
    - 'On Patrol' units may react to enemy movement. 'On Patrol' air may move with a moving TF (check range).
 2. Degrade detection not placed in step 1 *(Fast Ignore)*
@@ -44,7 +46,7 @@ Both play 2nd card (Soviet first) then continue the game.
 
 - Diesels move 1, Nuclear moves 2
 - A soviet SSBN may take a nuclear sub with it, both spent.
-- Slow subs may move or attack or go 'on patrol'. If moving, move 2.
+- Slow subs may move **or** attack **or** go 'on patrol'. If moving, move 2.
   - 1 sub move and attack
   - 1 sub attack and then move
   - 1 sub move and go 'on patrol'
@@ -66,7 +68,7 @@ Both play 2nd card (Soviet first) then continue the game.
 ## Ships
 
 - Form a new TF: **Cost 2**
-- Move ships in TFs in the same zone: **Cost 1**
+- Move ships between TFs in the same zone: **Cost 1**
 - Fire missiles with a TF: **Cost 1**
 
 Automatic vs. facilities, may require a roll vs. other TFs.

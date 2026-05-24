@@ -98,6 +98,42 @@ export type CardType =
   | "use-when-active"
   | "use-anytime";
 
+/** Reference to a play-aid block inlined inside a procedure step. */
+export interface ProcedureBlockRef {
+  /** e.g. "pa3:submarine-vs-task-force" */
+  slug: string;
+  /** Human-readable label captured in the action markdown placeholder. */
+  label: string;
+}
+
+/** One step in an Action's procedure list. */
+export interface ProcedureStep {
+  /** Step text (markdown source, kept for search). */
+  text: string;
+  /** Pre-rendered HTML of the step text (placeholders stripped). */
+  html: string;
+  /** Play-aid blocks referenced by this step. */
+  blocks: ProcedureBlockRef[];
+}
+
+/** See-Also content parsed from the action markdown. */
+export interface ActionSeeAlso {
+  /** Cross-linked sibling actions. */
+  actions: { id: string; title: string }[];
+  /** Rule section refs that complement the action. */
+  ruleRefs: string[];
+}
+
+/** Rich per-action content (BWN merge output). Optional — legacy games may omit. */
+export interface ActionContent {
+  whenItComesUp?: string;
+  whenItComesUpHtml?: string;
+  procedure?: ProcedureStep[];
+  seeAlso?: ActionSeeAlso;
+  whyAndWatchFor?: string;
+  whyAndWatchForHtml?: string;
+}
+
 /** A single game card (event card, action card, etc.) */
 export interface GameCard {
   id: string;             // e.g. "sov-3"
@@ -109,7 +145,22 @@ export interface GameCard {
   clarification?: string; // designer clarification, e.g. from a clarifications doc
   cost?: number;          // OPS cost if applicable
   ruleRefs?: string[];    // section IDs the card cross-references
+  /** Action menu placement: "action" (costs OPS), "active" (free when active), "anytime" (reaction). BWN-specific. */
+  usage?: "action" | "active" | "anytime";
+  /** Rich per-action content from BWN merge pipeline. */
+  content?: ActionContent;
 }
+
+/** Map of pa<N>:<slug> → play-aid block content (pre-rendered HTML). */
+export interface PlayAidBlock {
+  paNumber: number;
+  title: string;
+  body: string;        // markdown source
+  html: string;        // pre-rendered HTML
+  sourceFile: string;
+}
+
+export type PlayAidBlocksMap = Record<string, PlayAidBlock>;
 
 /** A group of cards (e.g. Soviet Event Cards, NATO Event Cards). */
 export interface CardCategory {

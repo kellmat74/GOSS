@@ -26,7 +26,7 @@ When a Task Force wants to attack a detected enemy TF with its ship-launched ant
 2. Resolve launch eligibility by missile color and detection level (7.4.1.2):
    - Soviet yellow/black: fire vs NATO Good-detected TF in same zone, or vs Poor-detected if the Soviet TF is Fast (or 6+).
    - Soviet white/red: card play only (Baltic exception applies).
-   {{PA-BLOCK: pa4:missile-attacks-on-tfs — Missile Attacks on TFs}}
+   {{PA-BLOCK: pa4:missile-attacks-on-tfs-vs-task-forces — Missile Attacks on TFs}}
 3. Defender resolves SAMs — count SAM points, apply the SAM-shots-allowed limit based on incoming missile count, then roll one die per SAM with DRMs (missile color, weather, etc.) (7.4.2.1).
    {{PA-BLOCK: pa4:sam-resolution — SAM Resolution}}
 4. Resolve any remaining missiles: roll one die per 2 missiles, plus one for a remaining single (7.4.2.2).

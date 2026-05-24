@@ -4,44 +4,110 @@
     "label": "Ship Actions",
     "cards": [
       {
-        "id": "act-ship-form-tf",
+        "id": "act-ship-amphib-land",
         "cardNumber": "—",
         "side": "neutral",
-        "title": "Form a new Task Force",
+        "title": "Prepare and resolve an Amphibious Landing",
         "type": "operations-event",
-        "cost": 2,
-        "text": "Create a Task Force in a port (or at sea where an existing TF is present) by placing ship counters and up to one nuclear submarine into a free Task Force marker box.",
-        "ruleRefs": [
-          "5.1.1.1",
-          "5.1.2"
-        ]
-      },
-      {
-        "id": "act-ship-move",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Move ships in a Task Force",
-        "type": "operations-event",
+        "usage": "action",
+        "text": "A Task Force carrying Amphibious units sits in a zone with an Amphibious Landing symbol on the map. To get the troops ashore, the TF skips a movement beat to mark itself 'Landing', then resolves the landing on its next chance to move (5.1.3",
         "cost": 1,
-        "text": "Move all ships in a TF together per the movement rules. Triggered by the SHIPS event from the Operations Points Record Track. Bad weather may halt surface movement.",
         "ruleRefs": [
-          "5.1.3",
-          "4.2.1.3"
-        ]
-      },
-      {
-        "id": "act-ship-fire-missiles",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Fire missiles with a Task Force",
-        "type": "operations-event",
-        "cost": 1,
-        "text": "A Task Force attacks an eligible target with its ship-launched missiles. Black/yellow Soviet missiles need a Good detected TF target in the same zone; Poor detected targets may be attacked with a die roll.",
-        "ruleRefs": [
-          "5.1.1.3",
-          "7.4",
-          "7.4.1.2"
-        ]
+          "5.1.3.2",
+          "8.1",
+          "8.1.1",
+          "8.1.4"
+        ],
+        "content": {
+          "whenItComesUp": "A Task Force carrying Amphibious units sits in a zone with an Amphibious Landing symbol on the map. To get the troops ashore, the TF skips a movement beat to mark itself 'Landing', then resolves the landing on its next chance to move (5.1.3.2, 8.1.1). NATO does not use this for normal troop delivery — NATO delivers into friendly ports (5.1.3.5, 8.1.2) — except for Soviet-occupied Iceland (8.4.4).",
+          "whenItComesUpHtml": "<p>A Task Force carrying Amphibious units sits in a zone with an Amphibious Landing symbol on the map. To get the troops ashore, the TF skips a movement beat to mark itself &#39;Landing&#39;, then resolves the landing on its next chance to move (5.1.3.2, 8.1.1). NATO does not use this for normal troop delivery — NATO delivers into friendly ports (5.1.3.5, 8.1.2) — except for Soviet-occupied Iceland (8.4.4).</p>\n",
+          "procedure": [
+            {
+              "text": "**Place the Landing marker.** During movement, instead of moving, place a 'Landing' marker on a TF in a zone with an Amphibious Landing symbol (5.1.3.2).",
+              "html": "<p><strong>Place the Landing marker.</strong> During movement, instead of moving, place a &#39;Landing&#39; marker on a TF in a zone with an Amphibious Landing symbol (5.1.3.2).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Roll a free Task Force Detection roll against each TF marking itself 'Landing' (5.1.2.1, 8.1.1).",
+              "html": "<p>Roll a free Task Force Detection roll against each TF marking itself &#39;Landing&#39; (5.1.2.1, 8.1.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:detection-of-tfs",
+                  "label": "Detection of TFs (Poor / Good states)"
+                }
+              ]
+            },
+            {
+              "text": "In Bad Weather, place a 'Moved' marker first; on the next chance to move you may choose to move normally or place the Landing marker (8.1.1).",
+              "html": "<p>In Bad Weather, place a &#39;Moved&#39; marker first; on the next chance to move you may choose to move normally or place the Landing marker (8.1.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "**Next chance to move: resolve the landing.** Any submarines in port at the invaded location may sortie immediately and roll torpedo attacks vs the TF (7.3). Each rolling submarine costs the owning player 1 OPS and is marked Spent (8.1.1).",
+              "html": "<p><strong>Next chance to move: resolve the landing.</strong> Any submarines in port at the invaded location may sortie immediately and roll torpedo attacks vs the TF (7.3). Each rolling submarine costs the owning player 1 OPS and is marked Spent (8.1.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Determine dice and resolve the invasion sequence: cross-reference landing location × current turn for dice count, apply DRMs (Soviet troops ashore, damaged base), roll, and resolve threats starting with the lowest result (FACs → Ships → Missile/Air → Mines → Guns). Each threat can be cancelled by expending missiles, SAMs, or a step loss (8.1.1).",
+              "html": "<p>Determine dice and resolve the invasion sequence: cross-reference landing location × current turn for dice count, apply DRMs (Soviet troops ashore, damaged base), roll, and resolve threats starting with the lowest result (FACs → Ships → Missile/Air → Mines → Guns). Each threat can be cancelled by expending missiles, SAMs, or a step loss (8.1.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa8:amphibious-invasions",
+                  "label": "Amphibious Invasions"
+                }
+              ]
+            },
+            {
+              "text": "Determine troops landed by cross-referencing each Amphib's hit count (1-2 hits = 2 troops, 3-4 = 1, 5+ = 0). Place troops on the Invasion Track at the landing location (8.1.1, 8.1.4).",
+              "html": "<p>Determine troops landed by cross-referencing each Amphib&#39;s hit count (1-2 hits = 2 troops, 3-4 = 1, 5+ = 0). Place troops on the Invasion Track at the landing location (8.1.1, 8.1.4).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa8:landing-troops",
+                  "label": "Landing Troops"
+                }
+              ]
+            },
+            {
+              "text": "Resolve airfield captures: roll one die per troop landed against the facility (needing 8+ to reduce damage by a level) (8.1.4, 8.4.4).",
+              "html": "<p>Resolve airfield captures: roll one die per troop landed against the facility (needing 8+ to reduce damage by a level) (8.1.4, 8.4.4).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa8:capturing-facilities",
+                  "label": "Capturing Facilities"
+                }
+              ]
+            },
+            {
+              "text": "Remove the Amphib unit(s) from the map.",
+              "html": "<p>Remove the Amphib unit(s) from the map.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-ship-move",
+                "title": "Move ships in a Task Force"
+              },
+              {
+                "id": "act-ship-form-tf",
+                "title": "Form a new Task Force"
+              }
+            ],
+            "ruleRefs": [
+              "5.1.3.2",
+              "5.1.3.3",
+              "5.1.3.4",
+              "5.1.3.5",
+              "8.1",
+              "8.1.1",
+              "8.1.3",
+              "8.1.4"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-ship-asw",
@@ -49,26 +115,352 @@
         "side": "neutral",
         "title": "ASW in current zone (instead of moving)",
         "type": "operations-event",
+        "usage": "action",
+        "text": "A Task Force that wants to hunt a known submarine in its zone — instead of moving this beat — spends 1 OPS to roll ASW dice from its component ships (7.2.2). Doing so is loud: the TF is auto-marked with at least a Poor Detection and may eve",
         "cost": 1,
-        "text": "Instead of moving, a Task Force conducts Anti-Submarine Warfare in its current zone. The TF is automatically marked with Poor Detection (and may be upgraded to Good if it rolls two N1/N2 results).",
         "ruleRefs": [
+          "7.2",
           "7.2.2",
           "7.2.2.1"
-        ]
+        ],
+        "content": {
+          "whenItComesUp": "A Task Force that wants to hunt a known submarine in its zone — instead of moving this beat — spends 1 OPS to roll ASW dice from its component ships (7.2.2). Doing so is loud: the TF is auto-marked with at least a Poor Detection and may even upgrade itself to Good Detection (7.2.2.1).",
+          "whenItComesUpHtml": "<p>A Task Force that wants to hunt a known submarine in its zone — instead of moving this beat — spends 1 OPS to roll ASW dice from its component ships (7.2.2). Doing so is loud: the TF is auto-marked with at least a Poor Detection and may even upgrade itself to Good Detection (7.2.2.1).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS and declare the TF is conducting ASW in its current zone (7.2.2). Mark the TF with a Poor Detection marker immediately (7.2.2.1).",
+              "html": "<p>Spend 1 OPS and declare the TF is conducting ASW in its current zone (7.2.2). Mark the TF with a Poor Detection marker immediately (7.2.2.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Per-ship ASW values: tally each ship's Anti-Submarine value, +2 per carrier (0 in Bad Weather), +ASW per On-Patrol MP in zone, and ASW ×3 for any escorting submarine.",
+              "html": "<p>Per-ship ASW values: tally each ship&#39;s Anti-Submarine value, +2 per carrier (0 in Bad Weather), +ASW per On-Patrol MP in zone, and ASW ×3 for any escorting submarine.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:task-force-asw",
+                  "label": "Task Force ASW (per-unit values)"
+                }
+              ]
+            },
+            {
+              "text": "Compute the ASW total and look up dice + Tactical Value. Move up one row in Bad Weather (Fast modifier is **ignored** for the ASW-instead-of-moving action per 7.2.2).",
+              "html": "<p>Compute the ASW total and look up dice + Tactical Value. Move up one row in Bad Weather (Fast modifier is <strong>ignored</strong> for the ASW-instead-of-moving action per 7.2.2).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:task-force-asw-defense",
+                  "label": "Task Force ASW Defense (total + dice table)"
+                }
+              ]
+            },
+            {
+              "text": "Apply the TF-search rules: rocket torpedoes kill on doubles <10; Non-Magnetic subs killed on N10 only; if you roll any two N1-2 results, upgrade your TF to Good detection (instead of Poor) (7.2.2.1).",
+              "html": "<p>Apply the TF-search rules: rocket torpedoes kill on doubles &lt;10; Non-Magnetic subs killed on N10 only; if you roll any two N1-2 results, upgrade your TF to Good detection (instead of Poor) (7.2.2.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:anti-submarine-warfare-by-task-forces",
+                  "label": "Anti-Submarine Warfare by Task Forces"
+                }
+              ]
+            },
+            {
+              "text": "Resolve hits per the standard ASW procedure (Tactical Value to each die, kill threshold = sub Defense value, N1 Bastion / N10 / save sub effects) (7.2.1).",
+              "html": "<p>Resolve hits per the standard ASW procedure (Tactical Value to each die, kill threshold = sub Defense value, N1 Bastion / N10 / save sub effects) (7.2.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:anti-submarine-warfare",
+                  "label": "Anti-Submarine Warfare (die roll table + DRMs)"
+                }
+              ]
+            },
+            {
+              "text": "The defender allocates non-N10 hits, then the attacker allocates remaining. Apply 'save' rolls for submarines that have them (6+ save).",
+              "html": "<p>The defender allocates non-N10 hits, then the attacker allocates remaining. Apply &#39;save&#39; rolls for submarines that have them (6+ save).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-anytime-sub-asw-vs-tf",
+                "title": "On-Patrol Submarine ASW vs moving TF"
+              },
+              {
+                "id": "act-anytime-mp-vs-sub",
+                "title": "On-Patrol MP attacks a crossing submarine"
+              },
+              {
+                "id": "act-anytime-hydrophone",
+                "title": "Hydrophone Barrier reaction"
+              }
+            ],
+            "ruleRefs": [
+              "7.2",
+              "7.2.1",
+              "7.2.2",
+              "7.2.2.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
-        "id": "act-ship-amphib-land",
+        "id": "act-ship-fire-missiles",
         "cardNumber": "—",
         "side": "neutral",
-        "title": "Prepare and resolve an Amphibious Landing",
+        "title": "Fire missiles with a Task Force",
         "type": "operations-event",
+        "usage": "action",
+        "text": "When a Task Force wants to attack a detected enemy TF with its ship-launched anti-ship missiles. White, red, and NATO blue ship-launched missiles do not use this action — those go only via card play (5.1.1.3). This is the action for the Sov",
         "cost": 1,
-        "text": "Place a 'Landing' marker on a Task Force in a zone with an Amphibious Landing symbol. On its next chance to move, the TF resolves the landing instead of moving.",
         "ruleRefs": [
-          "5.1.3.2",
-          "8.1",
-          "8.1.1"
-        ]
+          "5.1.1.3",
+          "7.4",
+          "7.4.1.2",
+          "7.4.2"
+        ],
+        "content": {
+          "whenItComesUp": "When a Task Force wants to attack a detected enemy TF with its ship-launched anti-ship missiles. White, red, and NATO blue ship-launched missiles do not use this action — those go only via card play (5.1.1.3). This is the action for the Soviet black 'Sandbox' and yellow 'Shipwreck' weapons firing.",
+          "whenItComesUpHtml": "<p>When a Task Force wants to attack a detected enemy TF with its ship-launched anti-ship missiles. White, red, and NATO blue ship-launched missiles do not use this action — those go only via card play (5.1.1.3). This is the action for the Soviet black &#39;Sandbox&#39; and yellow &#39;Shipwreck&#39; weapons firing.</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS and declare the attacking TF and the target TF, which must be in the same Sea Zone (7.4.1.2).",
+              "html": "<p>Spend 1 OPS and declare the attacking TF and the target TF, which must be in the same Sea Zone (7.4.1.2).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve launch eligibility by missile color and detection level (7.4.1.2):\n   - Soviet yellow/black: fire vs NATO Good-detected TF in same zone, or vs Poor-detected if the Soviet TF is Fast (or 6+).\n   - Soviet white/red: card play only (Baltic exception applies).",
+              "html": "<p>Resolve launch eligibility by missile color and detection level (7.4.1.2):</p>\n<ul>\n<li>Soviet yellow/black: fire vs NATO Good-detected TF in same zone, or vs Poor-detected if the Soviet TF is Fast (or 6+).</li>\n<li>Soviet white/red: card play only (Baltic exception applies).</li>\n</ul>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:missile-attacks-on-tfs-vs-task-forces",
+                  "label": "Missile Attacks on TFs"
+                }
+              ]
+            },
+            {
+              "text": "Defender resolves SAMs — count SAM points, apply the SAM-shots-allowed limit based on incoming missile count, then roll one die per SAM with DRMs (missile color, weather, etc.) (7.4.2.1).",
+              "html": "<p>Defender resolves SAMs — count SAM points, apply the SAM-shots-allowed limit based on incoming missile count, then roll one die per SAM with DRMs (missile color, weather, etc.) (7.4.2.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:sam-resolution",
+                  "label": "SAM Resolution"
+                }
+              ]
+            },
+            {
+              "text": "Resolve any remaining missiles: roll one die per 2 missiles, plus one for a remaining single (7.4.2.2).",
+              "html": "<p>Resolve any remaining missiles: roll one die per 2 missiles, plus one for a remaining single (7.4.2.2).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:incoming-missile-resolution",
+                  "label": "Incoming Missile Resolution"
+                }
+              ]
+            },
+            {
+              "text": "Allocate hits using the hit-selection sequence (N9/N10 first by attacker, then alternating per side's allocation cadence) (7.4.2).",
+              "html": "<p>Allocate hits using the hit-selection sequence (N9/N10 first by attacker, then alternating per side&#39;s allocation cadence) (7.4.2).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:missile-hit-selection",
+                  "label": "Missile Hit Selection"
+                }
+              ]
+            },
+            {
+              "text": "Apply hit effects: non-capital ships take one step loss per hit; Amphibs and Convoys take two hits per hit; capital ships roll on the damage table (7.4.2.3).",
+              "html": "<p>Apply hit effects: non-capital ships take one step loss per hit; Amphibs and Convoys take two hits per hit; capital ships roll on the damage table (7.4.2.3).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:capital-ship-damage",
+                  "label": "Capital Ship Damage"
+                }
+              ]
+            },
+            {
+              "text": "Mark expended ammunition: ships with (L) cruise/anti-ship missiles get a 'Cruise Missiles Fired' or 'AntiShip Missiles Fired' marker (9.5.3, 9.5.4).",
+              "html": "<p>Mark expended ammunition: ships with (L) cruise/anti-ship missiles get a &#39;Cruise Missiles Fired&#39; or &#39;AntiShip Missiles Fired&#39; marker (9.5.3, 9.5.4).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-sub-missile-3-zones",
+                "title": "Nuclear submarine missile attack"
+              },
+              {
+                "id": "act-sub-missile-coordination",
+                "title": "Multi-submarine missile coordination"
+              },
+              {
+                "id": "act-air-strike",
+                "title": "Air Strike"
+              }
+            ],
+            "ruleRefs": [
+              "5.1.1.3",
+              "7.4",
+              "7.4.1.2",
+              "7.4.2",
+              "7.4.2.4"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-ship-form-tf",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Form a new Task Force",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "Surface ships can never move outside a Task Force, so getting ships from port to sea (or reorganizing forces already at sea) requires forming a TF (5.1.2). Both sides spend this action when they want to deploy a new group from a port, or br",
+        "cost": 2,
+        "ruleRefs": [
+          "5.1.1.1",
+          "5.1.2"
+        ],
+        "content": {
+          "whenItComesUp": "Surface ships can never move outside a Task Force, so getting ships from port to sea (or reorganizing forces already at sea) requires forming a TF (5.1.2). Both sides spend this action when they want to deploy a new group from a port, or break apart an existing force at sea into separate operational groups.",
+          "whenItComesUpHtml": "<p>Surface ships can never move outside a Task Force, so getting ships from port to sea (or reorganizing forces already at sea) requires forming a TF (5.1.2). Both sides spend this action when they want to deploy a new group from a port, or break apart an existing force at sea into separate operational groups.</p>\n",
+          "procedure": [
+            {
+              "text": "Choose a port or a Sea Zone that already contains a friendly Task Force (5.1.1.1).",
+              "html": "<p>Choose a port or a Sea Zone that already contains a friendly Task Force (5.1.1.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Take an available Task Force marker from the Task Force display and place it on the map. The British and northern French ports may be counted as the same port for this purpose.",
+              "html": "<p>Take an available Task Force marker from the Task Force display and place it on the map. The British and northern French ports may be counted as the same port for this purpose.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Place ship counters from the port (or the existing TF) into the new TF's holding box, along with up to one non-SSBN nuclear submarine. Each TF must contain at least one Surface Unit (5.1.2).",
+              "html": "<p>Place ship counters from the port (or the existing TF) into the new TF&#39;s holding box, along with up to one non-SSBN nuclear submarine. Each TF must contain at least one Surface Unit (5.1.2).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Attach any Convoy and Amphibious units desired. If any unit has the (S) slow marker, the TF is Slow; otherwise it is Fast.",
+              "html": "<p>Attach any Convoy and Amphibious units desired. If any unit has the (S) slow marker, the TF is Slow; otherwise it is Fast.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "New TFs formed at sea inherit the detection status of the originating TF unless the new TF would have a higher status (5.1.1.2).",
+              "html": "<p>New TFs formed at sea inherit the detection status of the originating TF unless the new TF would have a higher status (5.1.1.2).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:detection-of-tfs",
+                  "label": "Detection of TFs (Poor / Good states)"
+                }
+              ]
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-misc-move-between-tfs",
+                "title": "Move ships between Task Forces"
+              },
+              {
+                "id": "act-ship-move",
+                "title": "Move ships in a Task Force"
+              }
+            ],
+            "ruleRefs": [
+              "5.1.1.1",
+              "5.1.2",
+              "5.1.2.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-ship-move",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Move ships in a Task Force",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "Ships only move as a Task Force group, and only when the SHIPS event triggers on the Operations Points Record Track (4.2.1.3). When the SHIPS event fires, both sides move every Task Force per the movement rules (5.1.3) — this is the main re",
+        "cost": 1,
+        "ruleRefs": [
+          "5.1.3",
+          "4.2.1.3",
+          "5.1.3.1",
+          "5.1.3.6"
+        ],
+        "content": {
+          "whenItComesUp": "Ships only move as a Task Force group, and only when the SHIPS event triggers on the Operations Points Record Track (4.2.1.3). When the SHIPS event fires, both sides move every Task Force per the movement rules (5.1.3) — this is the main repositioning beat of the turn.",
+          "whenItComesUpHtml": "<p>Ships only move as a Task Force group, and only when the SHIPS event triggers on the Operations Points Record Track (4.2.1.3). When the SHIPS event fires, both sides move every Task Force per the movement rules (5.1.3) — this is the main repositioning beat of the turn.</p>\n",
+          "procedure": [
+            {
+              "text": "Wait for the SHIPS event to be triggered on the OPS track (4.2.1.3). Both players' OPS markers reaching or passing the SHIPS box fires the event immediately after the current action.",
+              "html": "<p>Wait for the SHIPS event to be triggered on the OPS track (4.2.1.3). Both players&#39; OPS markers reaching or passing the SHIPS box fires the event immediately after the current action.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve movement in detection order: all Good Detected TFs first, then Poor Detected, then Undetected. Within each category, Soviet moves all TFs before NATO (5.1.3).",
+              "html": "<p>Resolve movement in detection order: all Good Detected TFs first, then Poor Detected, then Undetected. Within each category, Soviet moves all TFs before NATO (5.1.3).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:ops-track-events",
+                  "label": "OPS Track Events (Ships event movement sequence)"
+                }
+              ]
+            },
+            {
+              "text": "For each TF, move up to one Sea Zone in any direction. TFs starting in Bad Weather zones place a 'Moved' marker instead and skip movement this beat (5.1.3.1).",
+              "html": "<p>For each TF, move up to one Sea Zone in any direction. TFs starting in Bad Weather zones place a &#39;Moved&#39; marker instead and skip movement this beat (5.1.3.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "When entering or leaving a port, some or all units may move into the adjacent port instead. Bad Weather is ignored when leaving a port (5.1.3.6).",
+              "html": "<p>When entering or leaving a port, some or all units may move into the adjacent port instead. Bad Weather is ignored when leaving a port (5.1.3.6).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Place the TF counter on the new zone border close to its previous zone, so the opponent can tell where it came from (5.1.3.8).",
+              "html": "<p>Place the TF counter on the new zone border close to its previous zone, so the opponent can tell where it came from (5.1.3.8).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "If a TF is marked 'Landing', resolve the Amphibious Landing instead of moving (8.1.1). See the Amphibious Landing action.",
+              "html": "<p>If a TF is marked &#39;Landing&#39;, resolve the Amphibious Landing instead of moving (8.1.1). See the Amphibious Landing action.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-ship-form-tf",
+                "title": "Form a new Task Force"
+              },
+              {
+                "id": "act-misc-move-between-tfs",
+                "title": "Move ships between Task Forces"
+              },
+              {
+                "id": "act-ship-amphib-land",
+                "title": "Prepare and resolve an Amphibious Landing"
+              }
+            ],
+            "ruleRefs": [
+              "5.1.3",
+              "4.2.1.3",
+              "5.1.3.1",
+              "5.1.3.6",
+              "5.1.3.7"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       }
     ]
   },
@@ -77,31 +469,118 @@
     "label": "Submarine Actions",
     "cards": [
       {
-        "id": "act-sub-move",
+        "id": "act-anytime-sub-asw-vs-tf",
         "cardNumber": "—",
         "side": "neutral",
-        "title": "Submarine move",
-        "type": "operations-event",
-        "cost": 1,
-        "text": "A submarine moves. Diesel submarines move 1 zone; nuclear submarines move 2 (or 3 on a Fast move). A moving Soviet SSBN may take one non-diesel submarine with it for no extra cost.",
+        "title": "On-Patrol Submarine ASW vs moving TF",
+        "type": "use-anytime",
+        "usage": "anytime",
+        "text": "An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving TF (5.2.3). The attack uses the standard 7.3 sub-vs-TF torpedo procedure.",
         "ruleRefs": [
-          "5.2.1",
-          "5.2.2"
-        ]
-      },
-      {
-        "id": "act-sub-attack",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Submarine moves then attacks a Task Force",
-        "type": "operations-event",
-        "cost": 1,
-        "text": "The submarine moves into a zone containing a detected enemy TF, then resolves a torpedo attack against it.",
-        "ruleRefs": [
-          "5.2.1",
-          "7.3",
-          "7.3.1"
-        ]
+          "4.2.3.2",
+          "5.2.3",
+          "7.2",
+          "7.3"
+        ],
+        "content": {
+          "whenItComesUp": "An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving TF (5.2.3). The attack uses the standard 7.3 sub-vs-TF torpedo procedure.",
+          "whenItComesUpHtml": "<p>An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving TF (5.2.3). The attack uses the standard 7.3 sub-vs-TF torpedo procedure.</p>\n",
+          "procedure": [
+            {
+              "text": "An enemy TF moves into your On-Patrol sub's zone. Declare the reaction (5.2.3, 4.2.3.2).",
+              "html": "<p>An enemy TF moves into your On-Patrol sub&#39;s zone. Declare the reaction (5.2.3, 4.2.3.2).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Calculate dice from the sub's Anti-Surface value plus modifiers (Good Detection +1 die, Bad Weather -1, Fast target -1 or -2 if diesel).",
+              "html": "<p>Calculate dice from the sub&#39;s Anti-Surface value plus modifiers (Good Detection +1 die, Bad Weather -1, Fast target -1 or -2 if diesel).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:submarine-vs-task-force",
+                  "label": "Submarine vs. Task Force (DRMs)"
+                }
+              ]
+            },
+            {
+              "text": "Roll attack dice, apply Tactical Value, and look up results.",
+              "html": "<p>Roll attack dice, apply Tactical Value, and look up results.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:submarine-attack-results",
+                  "label": "Submarine Attack Results"
+                }
+              ]
+            },
+            {
+              "text": "If hits scored, calculate TF ASW total from its component units, then resolve the TF's defensive ASW roll.",
+              "html": "<p>If hits scored, calculate TF ASW total from its component units, then resolve the TF&#39;s defensive ASW roll.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:task-force-asw",
+                  "label": "Task Force ASW (per-unit values)"
+                },
+                {
+                  "slug": "pa3:task-force-asw-defense",
+                  "label": "Task Force ASW Defense (total + dice table)"
+                }
+              ]
+            },
+            {
+              "text": "Apply remaining hits.",
+              "html": "<p>Apply remaining hits.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:effects-of-hits-by-submarines",
+                  "label": "Effects of hits by Submarines"
+                },
+                {
+                  "slug": "pa3:hit-results",
+                  "label": "Hit Results (allocation rules)"
+                }
+              ]
+            },
+            {
+              "text": "Capital ships roll on the damage table.",
+              "html": "<p>Capital ships roll on the damage table.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:capital-ship-damage",
+                  "label": "Capital Ship Damage"
+                }
+              ]
+            },
+            {
+              "text": "The On-Patrol sub remains On Patrol unless the rules of the specific attack flip it (per 5.2.3, On Patrol units are not Spent by reacting unless the reaction text says so).",
+              "html": "<p>The On-Patrol sub remains On Patrol unless the rules of the specific attack flip it (per 5.2.3, On Patrol units are not Spent by reacting unless the reaction text says so).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-sub-on-patrol",
+                "title": "Submarine moves and goes On Patrol"
+              },
+              {
+                "id": "act-ship-asw",
+                "title": "ASW in current zone (instead of moving)"
+              },
+              {
+                "id": "act-anytime-mp-vs-sub",
+                "title": "On-Patrol MP attacks a crossing submarine"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.2",
+              "5.2.3",
+              "7.2",
+              "7.3",
+              "7.3.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-sub-attack-then-move",
@@ -109,12 +588,224 @@
         "side": "neutral",
         "title": "Submarine attacks then moves",
         "type": "operations-event",
+        "usage": "action",
+        "text": "A submarine already in the same zone as a detected enemy TF launches its torpedo attack first, then relocates. Same OPS cost as the move-then-attack variant; the order is the only difference (5.2.1).",
         "cost": 1,
-        "text": "The submarine resolves a torpedo attack against a detected TF in its current zone, then moves. Order matters: a sub that attacks first can disengage afterwards.",
         "ruleRefs": [
           "5.2.1",
-          "7.3"
-        ]
+          "7.3",
+          "7.3.1"
+        ],
+        "content": {
+          "whenItComesUp": "A submarine already in the same zone as a detected enemy TF launches its torpedo attack first, then relocates. Same OPS cost as the move-then-attack variant; the order is the only difference (5.2.1).",
+          "whenItComesUpHtml": "<p>A submarine already in the same zone as a detected enemy TF launches its torpedo attack first, then relocates. Same OPS cost as the move-then-attack variant; the order is the only difference (5.2.1).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS and select one Fresh submarine already in the target TF's Sea Zone.",
+              "html": "<p>Spend 1 OPS and select one Fresh submarine already in the target TF&#39;s Sea Zone.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve the torpedo attack per the standard procedure — declare target, calculate dice from the sub's Anti-Surface value, apply modifiers, roll, resolve TF ASW, then apply hits (7.3.1). See [Submarine moves then attacks](./act-sub-attack.md) for the full step-by-step.",
+              "html": "<p>Resolve the torpedo attack per the standard procedure — declare target, calculate dice from the sub&#39;s Anti-Surface value, apply modifiers, roll, resolve TF ASW, then apply hits (7.3.1). See <a href=\"./act-sub-attack.md\">Submarine moves then attacks</a> for the full step-by-step.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:submarine-vs-task-force",
+                  "label": "Submarine vs. Task Force (DRMs)"
+                },
+                {
+                  "slug": "pa3:submarine-attack-results",
+                  "label": "Submarine Attack Results"
+                },
+                {
+                  "slug": "pa3:task-force-asw-defense",
+                  "label": "Task Force ASW Defense"
+                },
+                {
+                  "slug": "pa3:effects-of-hits-by-submarines",
+                  "label": "Effects of hits by Submarines"
+                }
+              ]
+            },
+            {
+              "text": "After combat resolves, move the submarine using its normal movement allowance (5.2.2). Cross-zone Hydrophone Barrier reactions still apply (2.3.6).",
+              "html": "<p>After combat resolves, move the submarine using its normal movement allowance (5.2.2). Cross-zone Hydrophone Barrier reactions still apply (2.3.6).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Mark the submarine 'Spent'.",
+              "html": "<p>Mark the submarine &#39;Spent&#39;.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-sub-attack",
+                "title": "Submarine moves then attacks a TF"
+              },
+              {
+                "id": "act-sub-on-patrol",
+                "title": "Submarine moves and goes On Patrol"
+              }
+            ],
+            "ruleRefs": [
+              "5.2.1",
+              "7.3",
+              "7.3.1",
+              "5.2.2",
+              "2.3.6"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-sub-attack",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Submarine moves then attacks a Task Force",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "A submarine moves into a Sea Zone containing a detected enemy TF and resolves a torpedo attack against it (5.2.1, 7.3). The target TF must already be detected — Poor or Good — since submarine torpedo attacks need a known TF to engage.",
+        "cost": 1,
+        "ruleRefs": [
+          "5.2.1",
+          "7.3",
+          "7.3.1",
+          "7.3.2"
+        ],
+        "content": {
+          "whenItComesUp": "A submarine moves into a Sea Zone containing a detected enemy TF and resolves a torpedo attack against it (5.2.1, 7.3). The target TF must already be detected — Poor or Good — since submarine torpedo attacks need a known TF to engage.",
+          "whenItComesUpHtml": "<p>A submarine moves into a Sea Zone containing a detected enemy TF and resolves a torpedo attack against it (5.2.1, 7.3). The target TF must already be detected — Poor or Good — since submarine torpedo attacks need a known TF to engage.</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS and select one Fresh submarine.",
+              "html": "<p>Spend 1 OPS and select one Fresh submarine.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Move the submarine into the target TF's zone using its normal movement allowance (5.2.2). Resolve any Hydrophone Barrier reactions on crossing (2.3.6).",
+              "html": "<p>Move the submarine into the target TF&#39;s zone using its normal movement allowance (5.2.2). Resolve any Hydrophone Barrier reactions on crossing (2.3.6).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Announce the target TF (must be detected) and calculate dice using the submarine's Anti-Surface value plus modifiers (Good Detection +1 die, Bad Weather -1 die, Fast target -1 die or -2 if diesel attacker).",
+              "html": "<p>Announce the target TF (must be detected) and calculate dice using the submarine&#39;s Anti-Surface value plus modifiers (Good Detection +1 die, Bad Weather -1 die, Fast target -1 die or -2 if diesel attacker).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:submarine-vs-task-force",
+                  "label": "Submarine vs. Task Force (DRMs)"
+                }
+              ]
+            },
+            {
+              "text": "Roll the dice, adding the submarine's Tactical Value. Apply (T) super-heavy torpedo row shifts. Look up results on the attack table.",
+              "html": "<p>Roll the dice, adding the submarine&#39;s Tactical Value. Apply (T) super-heavy torpedo row shifts. Look up results on the attack table.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:submarine-attack-results",
+                  "label": "Submarine Attack Results"
+                }
+              ]
+            },
+            {
+              "text": "If no hits, combat ends — the sub failed to contact. Otherwise, set the hit dice aside and proceed.",
+              "html": "<p>If no hits, combat ends — the sub failed to contact. Otherwise, set the hit dice aside and proceed.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "**Escort submarine handling**: dice high enough to kill an escort sub may be spent now to do so (escort still gets save rolls). Then, if the attacking sub rolled a double and has SSM capability, it may launch a missile attack — all US/UK nuclear subs and (with Torpedo Technology) Soviet nuclear subs qualify.",
+              "html": "<p><strong>Escort submarine handling</strong>: dice high enough to kill an escort sub may be spent now to do so (escort still gets save rolls). Then, if the attacking sub rolled a double and has SSM capability, it may launch a missile attack — all US/UK nuclear subs and (with Torpedo Technology) Soviet nuclear subs qualify.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Calculate the TF's ASW total from its component units (each ship's ASW value, +2 per carrier (0 in Bad Weather), each MP On Patrol's ASW value, escort sub ASW ×3).",
+              "html": "<p>Calculate the TF&#39;s ASW total from its component units (each ship&#39;s ASW value, +2 per carrier (0 in Bad Weather), each MP On Patrol&#39;s ASW value, escort sub ASW ×3).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:task-force-asw",
+                  "label": "Task Force ASW (per-unit values)"
+                }
+              ]
+            },
+            {
+              "text": "Look up the ASW total to get dice + Tactical Value. Move up one row in Bad Weather; move up one row if TF is Fast (7.3.1).",
+              "html": "<p>Look up the ASW total to get dice + Tactical Value. Move up one row in Bad Weather; move up one row if TF is Fast (7.3.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:task-force-asw-defense",
+                  "label": "Task Force ASW Defense (total + dice table)"
+                }
+              ]
+            },
+            {
+              "text": "Roll TF ASW dice. Each die ≥ submarine's Defense value causes a step loss; (N) subs only die on a natural 10. Apply rocket torpedo special (TF may swap a double to an '8' if any ship has (R) and not Bad Weather).",
+              "html": "<p>Roll TF ASW dice. Each die ≥ submarine&#39;s Defense value causes a step loss; (N) subs only die on a natural 10. Apply rocket torpedo special (TF may swap a double to an &#39;8&#39; if any ship has (R) and not Bad Weather).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "For each TF ASW die ≥ 8, the TF may select and discard one of the submarine's hit dice — denying the hit (7.3.1 step 9).",
+              "html": "<p>For each TF ASW die ≥ 8, the TF may select and discard one of the submarine&#39;s hit dice — denying the hit (7.3.1 step 9).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve remaining submarine hits: triage each by target type, then apply step loss / capital-ship damage roll as appropriate.",
+              "html": "<p>Resolve remaining submarine hits: triage each by target type, then apply step loss / capital-ship damage roll as appropriate.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:effects-of-hits-by-submarines",
+                  "label": "Effects of hits by Submarines"
+                },
+                {
+                  "slug": "pa3:hit-results",
+                  "label": "Hit Results (allocation rules)"
+                }
+              ]
+            },
+            {
+              "text": "Capital-ship hits roll on the damage table. UK Illustrious carriers also get an 8+ save against any torpedo hit (7.3.3).",
+              "html": "<p>Capital-ship hits roll on the damage table. UK Illustrious carriers also get an 8+ save against any torpedo hit (7.3.3).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:capital-ship-damage",
+                  "label": "Capital Ship Damage"
+                }
+              ]
+            },
+            {
+              "text": "Mark the submarine 'Spent'.",
+              "html": "<p>Mark the submarine &#39;Spent&#39;.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-sub-attack-then-move",
+                "title": "Submarine attacks then moves"
+              },
+              {
+                "id": "act-sub-missile-3-zones",
+                "title": "Nuclear submarine missile attack"
+              },
+              {
+                "id": "act-sub-detect",
+                "title": "Submarine moves and detects"
+              }
+            ],
+            "ruleRefs": [
+              "5.2.1",
+              "7.3",
+              "7.3.1",
+              "7.3.2",
+              "7.3.3"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-sub-detect",
@@ -122,25 +813,74 @@
         "side": "neutral",
         "title": "Submarine moves and detects",
         "type": "operations-event",
+        "usage": "action",
+        "text": "A submarine moves into a zone with an Undetected (or Poor-detected) enemy TF and uses its sensors to upgrade the detection state — typically as a setup for a follow-up attack by the same submarine (via the move-then-attack action) or anothe",
         "cost": 1,
-        "text": "Move into a zone containing an enemy TF and attempt to detect it, applying or upgrading the Task Force's detection state.",
         "ruleRefs": [
           "5.2.1",
-          "6.1"
-        ]
-      },
-      {
-        "id": "act-sub-on-patrol",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Submarine moves and goes On Patrol",
-        "type": "operations-event",
-        "cost": 1,
-        "text": "Move the submarine to a zone within its range, then place it 'On Patrol' so it can react to enemy units crossing into the zone for the remainder of the turn.",
-        "ruleRefs": [
-          "5.2.1",
-          "5.2.3"
-        ]
+          "6.1",
+          "6.1.1"
+        ],
+        "content": {
+          "whenItComesUp": "A submarine moves into a zone with an Undetected (or Poor-detected) enemy TF and uses its sensors to upgrade the detection state — typically as a setup for a follow-up attack by the same submarine (via the move-then-attack action) or another unit that needs a Good detection (5.2.1).",
+          "whenItComesUpHtml": "<p>A submarine moves into a zone with an Undetected (or Poor-detected) enemy TF and uses its sensors to upgrade the detection state — typically as a setup for a follow-up attack by the same submarine (via the move-then-attack action) or another unit that needs a Good detection (5.2.1).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS and select one Fresh submarine.",
+              "html": "<p>Spend 1 OPS and select one Fresh submarine.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Move into the target zone using the sub's movement allowance (5.2.2). Resolve Hydrophone Barrier reactions if any (2.3.6).",
+              "html": "<p>Move into the target zone using the sub&#39;s movement allowance (5.2.2). Resolve Hydrophone Barrier reactions if any (2.3.6).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Attempt detection on the enemy TF in the zone. Subs detect TFs only during an ASW attack via a natural 10 (see 7.2.1's N10 option 1). For a pure detection action, resolve per the detection procedure for the sub type.",
+              "html": "<p>Attempt detection on the enemy TF in the zone. Subs detect TFs only during an ASW attack via a natural 10 (see 7.2.1&#39;s N10 option 1). For a pure detection action, resolve per the detection procedure for the sub type.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:detection-of-tfs",
+                  "label": "Detection of TFs (by MP, RORSAT, Tattletale)"
+                }
+              ]
+            },
+            {
+              "text": "If detection succeeds, place a Poor Detection marker, or upgrade an existing Poor to Good (6.1.1).",
+              "html": "<p>If detection succeeds, place a Poor Detection marker, or upgrade an existing Poor to Good (6.1.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Mark the submarine 'Spent'.",
+              "html": "<p>Mark the submarine &#39;Spent&#39;.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-sub-move",
+                "title": "Submarine move"
+              },
+              {
+                "id": "act-sub-attack",
+                "title": "Submarine moves then attacks"
+              },
+              {
+                "id": "act-air-mp-fly-attack",
+                "title": "Maritime Patrol flies and attacks or detects"
+              }
+            ],
+            "ruleRefs": [
+              "5.2.1",
+              "6.1",
+              "6.1.1",
+              "7.2.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-sub-missile-3-zones",
@@ -148,26 +888,370 @@
         "side": "neutral",
         "title": "Nuclear submarine missile attack",
         "type": "operations-event",
+        "usage": "action",
+        "text": "A nuclear submarine launches a missile attack against a TF (7.4) or a land facility (7.5) in its current zone. Per 7.4.1.1, submarine-launched missile attacks require the attacker to be in the same zone as the target — range is expressed by",
         "cost": 1,
-        "text": "A nuclear submarine launches a missile attack on a TF or facility in the same zone. The submarine must be in the same zone as the target (range expressed by movement, not missile reach).",
         "ruleRefs": [
           "5.2.1",
           "7.4",
-          "7.4.1.1"
-        ]
+          "7.4.1.1",
+          "7.4.2"
+        ],
+        "content": {
+          "whenItComesUp": "A nuclear submarine launches a missile attack against a TF (7.4) or a land facility (7.5) in its current zone. Per 7.4.1.1, submarine-launched missile attacks require the attacker to be in the same zone as the target — range is expressed by movement, not by the missile's reach.",
+          "whenItComesUpHtml": "<p>A nuclear submarine launches a missile attack against a TF (7.4) or a land facility (7.5) in its current zone. Per 7.4.1.1, submarine-launched missile attacks require the attacker to be in the same zone as the target — range is expressed by movement, not by the missile&#39;s reach.</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS and select one Fresh nuclear submarine in the target's Sea Zone.",
+              "html": "<p>Spend 1 OPS and select one Fresh nuclear submarine in the target&#39;s Sea Zone.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Roll 1 die (2 dice if Good Detection — use best). Apply DRMs (-2 if diesel attacker vs Fast TF; -2 per additional coordinating sub per 5.2.4). Look up result for No Attack / Long Range / Short Range / Short Range + Torpedo.",
+              "html": "<p>Roll 1 die (2 dice if Good Detection — use best). Apply DRMs (-2 if diesel attacker vs Fast TF; -2 per additional coordinating sub per 5.2.4). Look up result for No Attack / Long Range / Short Range / Short Range + Torpedo.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:submarine-launched-missiles-vs-task-force",
+                  "label": "Submarine Launched Missiles vs. Task Force"
+                }
+              ]
+            },
+            {
+              "text": "Defender resolves SAMs against the incoming missiles (7.4.2.1).",
+              "html": "<p>Defender resolves SAMs against the incoming missiles (7.4.2.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:sam-resolution",
+                  "label": "SAM Resolution"
+                }
+              ]
+            },
+            {
+              "text": "Resolve any remaining missiles (roll one die per 2 missiles, plus one for a remaining single) (7.4.2.2).",
+              "html": "<p>Resolve any remaining missiles (roll one die per 2 missiles, plus one for a remaining single) (7.4.2.2).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:incoming-missile-resolution",
+                  "label": "Incoming Missile Resolution"
+                }
+              ]
+            },
+            {
+              "text": "Allocate hits using the hit-selection sequence (N9/N10 first by attacker, then alternating per side's cadence).",
+              "html": "<p>Allocate hits using the hit-selection sequence (N9/N10 first by attacker, then alternating per side&#39;s cadence).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:missile-hit-selection",
+                  "label": "Missile Hit Selection"
+                }
+              ]
+            },
+            {
+              "text": "Apply hit effects: non-capital ships one step per hit; Amphibs/Convoys two hits per hit; capital ships roll on the damage table (7.4.2.3).",
+              "html": "<p>Apply hit effects: non-capital ships one step per hit; Amphibs/Convoys two hits per hit; capital ships roll on the damage table (7.4.2.3).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:capital-ship-damage",
+                  "label": "Capital Ship Damage"
+                }
+              ]
+            },
+            {
+              "text": "On a 10+ result, also resolve a 7.3 torpedo attack from the same submarine immediately afterwards.",
+              "html": "<p>On a 10+ result, also resolve a 7.3 torpedo attack from the same submarine immediately afterwards.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Mark the sub 'Spent' and apply 'Cruise Missiles Fired' marker if applicable (9.5.3).",
+              "html": "<p>Mark the sub &#39;Spent&#39; and apply &#39;Cruise Missiles Fired&#39; marker if applicable (9.5.3).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-sub-missile-coordination",
+                "title": "Multi-submarine missile coordination"
+              },
+              {
+                "id": "act-ship-fire-missiles",
+                "title": "Fire missiles with a Task Force"
+              },
+              {
+                "id": "act-sub-attack",
+                "title": "Submarine moves then attacks"
+              }
+            ],
+            "ruleRefs": [
+              "5.2.1",
+              "7.4",
+              "7.4.1.1",
+              "7.4.2",
+              "5.2.4"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-sub-missile-coordination",
         "cardNumber": "—",
         "side": "neutral",
-        "title": "Multi-submarine missile coordination (2–3 subs)",
+        "title": "Multi-submarine missile coordination (2-3 subs)",
         "type": "operations-event",
+        "usage": "action",
+        "text": "Two or three submarines pool a coordinated missile attack against a single Task Force or facility. All subs must move to the same zone and resolve as one attack. Costs 1 OPS per participating submarine (so 2 or 3 total) (5.2.4).",
         "cost": 2,
-        "text": "Two or three submarines all move to the same zone and resolve a single coordinated missile attack against one TF (7.4) or facility (7.5). Costs 1 OPS per participating submarine.",
         "ruleRefs": [
           "5.2.4",
+          "7.4",
           "7.4.1.1"
-        ]
+        ],
+        "content": {
+          "whenItComesUp": "Two or three submarines pool a coordinated missile attack against a single Task Force or facility. All subs must move to the same zone and resolve as one attack. Costs 1 OPS per participating submarine (so 2 or 3 total) (5.2.4).",
+          "whenItComesUpHtml": "<p>Two or three submarines pool a coordinated missile attack against a single Task Force or facility. All subs must move to the same zone and resolve as one attack. Costs 1 OPS per participating submarine (so 2 or 3 total) (5.2.4).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS per submarine participating (2 or 3 total) and select 2-3 Fresh submarines.",
+              "html": "<p>Spend 1 OPS per submarine participating (2 or 3 total) and select 2-3 Fresh submarines.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Move all participating subs to the same Sea Zone — the target's zone (5.2.4, 7.4.1.1). Resolve any Hydrophone reactions on crossings.",
+              "html": "<p>Move all participating subs to the same Sea Zone — the target&#39;s zone (5.2.4, 7.4.1.1). Resolve any Hydrophone reactions on crossings.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Designate one as the primary attacker. The rest contribute missiles and apply a -2 DRM each to the launch roll (5.2.4). Resolve a single launch roll for the combined attack — Long Range / Short Range / Short Range + Torpedo (or no attack).",
+              "html": "<p>Designate one as the primary attacker. The rest contribute missiles and apply a -2 DRM each to the launch roll (5.2.4). Resolve a single launch roll for the combined attack — Long Range / Short Range / Short Range + Torpedo (or no attack).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:submarine-launched-missiles-vs-task-force",
+                  "label": "Submarine Launched Missiles vs. Task Force"
+                }
+              ]
+            },
+            {
+              "text": "Add all participating subs' missile counts together for one combined incoming volley. Defender resolves SAMs against it (7.4.2.1).",
+              "html": "<p>Add all participating subs&#39; missile counts together for one combined incoming volley. Defender resolves SAMs against it (7.4.2.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:sam-resolution",
+                  "label": "SAM Resolution"
+                }
+              ]
+            },
+            {
+              "text": "Resolve any remaining missiles (7.4.2.2).",
+              "html": "<p>Resolve any remaining missiles (7.4.2.2).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:incoming-missile-resolution",
+                  "label": "Incoming Missile Resolution"
+                }
+              ]
+            },
+            {
+              "text": "Allocate hits.",
+              "html": "<p>Allocate hits.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:missile-hit-selection",
+                  "label": "Missile Hit Selection"
+                }
+              ]
+            },
+            {
+              "text": "Apply hit effects per 7.4.2.3. Capital ships roll on the damage table.",
+              "html": "<p>Apply hit effects per 7.4.2.3. Capital ships roll on the damage table.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:capital-ship-damage",
+                  "label": "Capital Ship Damage"
+                }
+              ]
+            },
+            {
+              "text": "Mark all participating subs 'Spent' and apply Cruise Missiles Fired markers as needed (9.5.3).",
+              "html": "<p>Mark all participating subs &#39;Spent&#39; and apply Cruise Missiles Fired markers as needed (9.5.3).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-sub-missile-3-zones",
+                "title": "Nuclear submarine missile attack"
+              },
+              {
+                "id": "act-ship-fire-missiles",
+                "title": "Fire missiles with a Task Force"
+              }
+            ],
+            "ruleRefs": [
+              "5.2.4",
+              "7.4",
+              "7.4.1.1",
+              "9.5.3"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-sub-move",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Submarine move",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "Repositioning a single fresh submarine. Submarine actions all cost 1 OPS unless specified and use a single submarine that must be fresh (5.2). A submarine that takes an action is marked 'Spent' (or 'On Patrol' if it took the patrol action) ",
+        "cost": 1,
+        "ruleRefs": [
+          "5.2",
+          "5.2.1",
+          "5.2.2"
+        ],
+        "content": {
+          "whenItComesUp": "Repositioning a single fresh submarine. Submarine actions all cost 1 OPS unless specified and use a single submarine that must be fresh (5.2). A submarine that takes an action is marked 'Spent' (or 'On Patrol' if it took the patrol action) for the rest of the turn.",
+          "whenItComesUpHtml": "<p>Repositioning a single fresh submarine. Submarine actions all cost 1 OPS unless specified and use a single submarine that must be fresh (5.2). A submarine that takes an action is marked &#39;Spent&#39; (or &#39;On Patrol&#39; if it took the patrol action) for the rest of the turn.</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS and select one Fresh submarine.",
+              "html": "<p>Spend 1 OPS and select one Fresh submarine.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Move the submarine according to its type:\n   - Diesel (D): 1 zone only, no Fast move (5.2.2).\n   - Small slow Diesel (S): 1 zone only.\n   - Nuclear-powered: 2 zones, or 3 zones via a Fast move (5.2.1).",
+              "html": "<p>Move the submarine according to its type:</p>\n<ul>\n<li>Diesel (D): 1 zone only, no Fast move (5.2.2).</li>\n<li>Small slow Diesel (S): 1 zone only.</li>\n<li>Nuclear-powered: 2 zones, or 3 zones via a Fast move (5.2.1).</li>\n</ul>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:submarines",
+                  "label": "Submarines (action menu + movement allowances)"
+                }
+              ]
+            },
+            {
+              "text": "A moving Soviet SSBN may take one non-diesel submarine with it for no extra cost. Both are marked 'Spent'. See [Soviet SSBN takes a nuclear sub along](./act-sub-ssbn-escort.md) (5.2.2, 2.2.7.1).",
+              "html": "<p>A moving Soviet SSBN may take one non-diesel submarine with it for no extra cost. Both are marked &#39;Spent&#39;. See <a href=\"./act-sub-ssbn-escort.md\">Soviet SSBN takes a nuclear sub along</a> (5.2.2, 2.2.7.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "If the submarine crosses a Hydrophone Barrier, the opposing player may resolve a Hydrophone reaction (2.3.6). See [Hydrophone Barrier reaction](./act-anytime-hydrophone.md).",
+              "html": "<p>If the submarine crosses a Hydrophone Barrier, the opposing player may resolve a Hydrophone reaction (2.3.6). See <a href=\"./act-anytime-hydrophone.md\">Hydrophone Barrier reaction</a>.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "After movement, mark the submarine 'Spent'.",
+              "html": "<p>After movement, mark the submarine &#39;Spent&#39;.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-sub-attack",
+                "title": "Submarine moves then attacks a TF"
+              },
+              {
+                "id": "act-sub-detect",
+                "title": "Submarine moves and detects"
+              },
+              {
+                "id": "act-sub-on-patrol",
+                "title": "Submarine moves and goes On Patrol"
+              },
+              {
+                "id": "act-sub-ssbn-escort",
+                "title": "Soviet SSBN takes a nuclear sub along"
+              }
+            ],
+            "ruleRefs": [
+              "5.2",
+              "5.2.1",
+              "5.2.2",
+              "2.3.6",
+              "2.2.7.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-sub-on-patrol",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Submarine moves and goes On Patrol",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "A submarine moves to a zone where the opponent is likely to send units later in the turn, then sets up to react. Going On Patrol arms the sub to interrupt enemy movement through its zone for the remainder of the turn (5.2.3).",
+        "cost": 1,
+        "ruleRefs": [
+          "5.2.1",
+          "5.2.3"
+        ],
+        "content": {
+          "whenItComesUp": "A submarine moves to a zone where the opponent is likely to send units later in the turn, then sets up to react. Going On Patrol arms the sub to interrupt enemy movement through its zone for the remainder of the turn (5.2.3).",
+          "whenItComesUpHtml": "<p>A submarine moves to a zone where the opponent is likely to send units later in the turn, then sets up to react. Going On Patrol arms the sub to interrupt enemy movement through its zone for the remainder of the turn (5.2.3).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS and select one Fresh submarine.",
+              "html": "<p>Spend 1 OPS and select one Fresh submarine.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Move the sub to a zone within its movement allowance instead of attacking (5.2.3). Resolve any Hydrophone Barrier crossings (2.3.6).",
+              "html": "<p>Move the sub to a zone within its movement allowance instead of attacking (5.2.3). Resolve any Hydrophone Barrier crossings (2.3.6).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Place the 'On Patrol' marker on the submarine.",
+              "html": "<p>Place the &#39;On Patrol&#39; marker on the submarine.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "For the remainder of the turn, this On Patrol sub can be triggered as a Use-At-Any-Time reaction:\n   \n   - Interrupt a moving enemy submarine and roll ASW against it. See [On-Patrol MP attacks a crossing submarine](./act-anytime-mp-vs-sub.md) — same trigger, sub version.\n   - Roll a torpedo attack against a moving TF entering the zone. See [On-Patrol Submarine ASW vs moving TF](./act-anytime-sub-asw-vs-tf.md).",
+              "html": "<p>For the remainder of the turn, this On Patrol sub can be triggered as a Use-At-Any-Time reaction:</p>\n<ul>\n<li>Interrupt a moving enemy submarine and roll ASW against it. See <a href=\"./act-anytime-mp-vs-sub.md\">On-Patrol MP attacks a crossing submarine</a> — same trigger, sub version.</li>\n<li>Roll a torpedo attack against a moving TF entering the zone. See <a href=\"./act-anytime-sub-asw-vs-tf.md\">On-Patrol Submarine ASW vs moving TF</a>.</li>\n</ul>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:use-at-any-time",
+                  "label": "Use At Any Time (reactions available to On-Patrol units)"
+                }
+              ]
+            },
+            {
+              "text": "Only one On Patrol unit per zone may react against a given moving unit (5.2.3).",
+              "html": "<p>Only one On Patrol unit per zone may react against a given moving unit (5.2.3).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-anytime-sub-asw-vs-tf",
+                "title": "On-Patrol Submarine ASW vs moving TF"
+              },
+              {
+                "id": "act-anytime-mp-vs-sub",
+                "title": "On-Patrol MP attacks a crossing submarine"
+              },
+              {
+                "id": "act-air-mp-on-patrol",
+                "title": "MP or Fighter goes On Patrol"
+              }
+            ],
+            "ruleRefs": [
+              "5.2.1",
+              "5.2.3",
+              "4.2.3.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-sub-ssbn-escort",
@@ -175,12 +1259,64 @@
         "side": "soviet",
         "title": "Soviet SSBN takes a nuclear sub along",
         "type": "operations-event",
+        "usage": "action",
+        "text": "A Soviet SSBN ('Boomer') wants to relocate with protection. Per the stacking exception in 2.2.7.1, a Task Force may only have one escorting submarine and it must be a nuclear attack sub (not diesel, not an SSBN). The SSBN movement rule (5.2",
         "cost": 1,
-        "text": "When a Soviet SSBN moves, it may take one non-diesel submarine with it for no extra cost. Both subs are marked 'Spent' at the end. The escorting sub must be a nuclear attack submarine (not diesel, not an SSBN).",
         "ruleRefs": [
           "2.2.7.1",
           "5.2.2"
-        ]
+        ],
+        "content": {
+          "whenItComesUp": "A Soviet SSBN ('Boomer') wants to relocate with protection. Per the stacking exception in 2.2.7.1, a Task Force may only have one escorting submarine and it must be a nuclear attack sub (not diesel, not an SSBN). The SSBN movement rule (5.2.2) extends this to subs travelling together: a moving Soviet SSBN may take one non-diesel submarine with it for no extra OPS cost.",
+          "whenItComesUpHtml": "<p>A Soviet SSBN (&#39;Boomer&#39;) wants to relocate with protection. Per the stacking exception in 2.2.7.1, a Task Force may only have one escorting submarine and it must be a nuclear attack sub (not diesel, not an SSBN). The SSBN movement rule (5.2.2) extends this to subs travelling together: a moving Soviet SSBN may take one non-diesel submarine with it for no extra OPS cost.</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS for the SSBN's move action and select a Fresh Soviet SSBN.",
+              "html": "<p>Spend 1 OPS for the SSBN&#39;s move action and select a Fresh Soviet SSBN.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Select one Fresh non-diesel, non-SSBN submarine (a nuclear attack sub) that starts in the same zone as the SSBN (5.2.2).",
+              "html": "<p>Select one Fresh non-diesel, non-SSBN submarine (a nuclear attack sub) that starts in the same zone as the SSBN (5.2.2).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Move both subs together using the SSBN's movement allowance (typically 2 zones for nuclear, or 3 on a Fast move).",
+              "html": "<p>Move both subs together using the SSBN&#39;s movement allowance (typically 2 zones for nuclear, or 3 on a Fast move).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve any Hydrophone Barrier reactions on each crossing — the NATO player may roll against either sub crossing (2.3.6).",
+              "html": "<p>Resolve any Hydrophone Barrier reactions on each crossing — the NATO player may roll against either sub crossing (2.3.6).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Mark both submarines 'Spent' at the end of the move.",
+              "html": "<p>Mark both submarines &#39;Spent&#39; at the end of the move.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-sub-move",
+                "title": "Submarine move"
+              },
+              {
+                "id": "act-sub-on-patrol",
+                "title": "Submarine moves and goes On Patrol"
+              }
+            ],
+            "ruleRefs": [
+              "2.2.7.1",
+              "5.2.2",
+              "2.3.6",
+              "9.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       }
     ]
   },
@@ -189,20 +1325,175 @@
     "label": "Air Unit Actions",
     "cards": [
       {
+        "id": "act-active-return-on-patrol-air",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Return an On-Patrol Air Unit to base",
+        "type": "use-when-active",
+        "usage": "active",
+        "text": "When it's your turn to play an action, you may rebase a Fresh On-Patrol Air Unit without spending OPS. This is a \"use when active\" option — it does not count as an action and costs nothing (4.2.2). Useful for pulling an On-Patrol unit back ",
+        "ruleRefs": [
+          "4.2.2.4",
+          "5.3.4.1",
+          "5.3.4.2"
+        ],
+        "content": {
+          "whenItComesUp": "When it's your turn to play an action, you may rebase a Fresh On-Patrol Air Unit without spending OPS. This is a \"use when active\" option — it does not count as an action and costs nothing (4.2.2). Useful for pulling an On-Patrol unit back to base so it can be used in an action next time it's your turn.",
+          "whenItComesUpHtml": "<p>When it&#39;s your turn to play an action, you may rebase a Fresh On-Patrol Air Unit without spending OPS. This is a &quot;use when active&quot; option — it does not count as an action and costs nothing (4.2.2). Useful for pulling an On-Patrol unit back to base so it can be used in an action next time it&#39;s your turn.</p>\n",
+          "procedure": [
+            {
+              "text": "On your action, declare you are returning an On-Patrol Air Unit (4.2.2.4).",
+              "html": "<p>On your action, declare you are returning an On-Patrol Air Unit (4.2.2.4).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:use-when-active",
+                  "label": "Use When Active (not an action)"
+                }
+              ]
+            },
+            {
+              "text": "The unit must currently be Fresh (not already Spent). Remove its 'On Patrol' marker and place it back at its base 'Fresh' (5.3.4.1, 5.3.4.2).",
+              "html": "<p>The unit must currently be Fresh (not already Spent). Remove its &#39;On Patrol&#39; marker and place it back at its base &#39;Fresh&#39; (5.3.4.1, 5.3.4.2).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "The unit is now available to take a normal action on a future activation.",
+              "html": "<p>The unit is now available to take a normal action on a future activation.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-air-mp-on-patrol",
+                "title": "MP or Fighter goes On Patrol"
+              },
+              {
+                "id": "act-anytime-fighter-vs-air",
+                "title": "On-Patrol Fighter intercepts enemy air"
+              },
+              {
+                "id": "act-anytime-mp-vs-sub",
+                "title": "On-Patrol MP attacks a crossing submarine"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.2.4",
+              "5.3.4.1",
+              "5.3.4.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
         "id": "act-air-mp-fly-attack",
         "cardNumber": "—",
         "side": "neutral",
         "title": "Maritime Patrol flies and attacks or detects",
         "type": "operations-event",
+        "usage": "action",
+        "text": "A Maritime Patrol unit flies a one-shot mission into a Sea Zone within its range — either to hunt a known submarine (ASW) or to attempt detection of an enemy Task Force (5.3, 5.3.1). The MP must be Fresh and the action costs 1 OPS per flyin",
         "cost": 1,
-        "text": "A Maritime Patrol unit flies within range and either attacks a known submarine via ASW or attempts to detect a Task Force. If a detection is placed or upgraded, the active player may take one further action against the same TF.",
         "ruleRefs": [
           "5.3",
           "5.3.1",
           "5.3.2",
           "6.1",
           "7.2"
-        ]
+        ],
+        "content": {
+          "whenItComesUp": "A Maritime Patrol unit flies a one-shot mission into a Sea Zone within its range — either to hunt a known submarine (ASW) or to attempt detection of an enemy Task Force (5.3, 5.3.1). The MP must be Fresh and the action costs 1 OPS per flying unit (escorting fighters and tankers fly free, see [Air Strike](./act-air-strike.md)).",
+          "whenItComesUpHtml": "<p>A Maritime Patrol unit flies a one-shot mission into a Sea Zone within its range — either to hunt a known submarine (ASW) or to attempt detection of an enemy Task Force (5.3, 5.3.1). The MP must be Fresh and the action costs 1 OPS per flying unit (escorting fighters and tankers fly free, see <a href=\"./act-air-strike.md\">Air Strike</a>).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS and select one Fresh MP unit at a base.",
+              "html": "<p>Spend 1 OPS and select one Fresh MP unit at a base.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Trace the route from the base to the destination Sea Zone — must remain within range (5.3.2).",
+              "html": "<p>Trace the route from the base to the destination Sea Zone — must remain within range (5.3.2).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:air-units-transit-to-a-zone",
+                  "label": "Air Units · Transit to a Zone"
+                }
+              ]
+            },
+            {
+              "text": "Check the route TO the target zone for enemy interceptions (On Patrol fighters, en-route carrier CAP), then resolve any interception in the target zone itself (5.3.2, 5.3.3.1).",
+              "html": "<p>Check the route TO the target zone for enemy interceptions (On Patrol fighters, en-route carrier CAP), then resolve any interception in the target zone itself (5.3.2, 5.3.3.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:air-units-intercepted-when",
+                  "label": "Air Units Intercepted when:"
+                }
+              ]
+            },
+            {
+              "text": "Resolve CAP from carriers or land bases protecting the target (5.3.3.2).",
+              "html": "<p>Resolve CAP from carriers or land bases protecting the target (5.3.3.2).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:cap-may-roll-to-attack-when",
+                  "label": "CAP may roll to attack when:"
+                }
+              ]
+            },
+            {
+              "text": "If the MP survives, resolve its chosen mission:\n   - **ASW vs known submarine**: roll ASW dice per the standard ASW procedure (7.2.1). MP units suffer -2 dice in Bad Weather.\n     \n   - **TF detection attempt**: roll for detection per 6.1.",
+              "html": "<p>If the MP survives, resolve its chosen mission:</p>\n<ul>\n<li><p><strong>ASW vs known submarine</strong>: roll ASW dice per the standard ASW procedure (7.2.1). MP units suffer -2 dice in Bad Weather.</p>\n</li>\n<li><p><strong>TF detection attempt</strong>: roll for detection per 6.1.</p>\n</li>\n</ul>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:anti-submarine-warfare",
+                  "label": "Anti-Submarine Warfare (die roll table + DRMs)"
+                },
+                {
+                  "slug": "pa4:detection-of-tfs",
+                  "label": "Detection of TFs (by MP, RORSAT, Tattletale)"
+                }
+              ]
+            },
+            {
+              "text": "**Free follow-on**: if the detection was placed or upgraded, the active player may take one further action of any type — but it must result in an attack against the newly detected TF (5.3.1).",
+              "html": "<p><strong>Free follow-on</strong>: if the detection was placed or upgraded, the active player may take one further action of any type — but it must result in an attack against the newly detected TF (5.3.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Mark the MP unit 'Spent' and return it to base.",
+              "html": "<p>Mark the MP unit &#39;Spent&#39; and return it to base.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-air-mp-on-patrol",
+                "title": "MP or Fighter goes On Patrol"
+              },
+              {
+                "id": "act-anytime-mp-vs-sub",
+                "title": "On-Patrol MP attacks a crossing submarine"
+              },
+              {
+                "id": "act-sub-detect",
+                "title": "Submarine moves and detects"
+              }
+            ],
+            "ruleRefs": [
+              "5.3",
+              "5.3.1",
+              "5.3.2",
+              "5.3.3",
+              "6.1",
+              "7.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-air-mp-on-patrol",
@@ -210,13 +1501,82 @@
         "side": "neutral",
         "title": "MP or Fighter goes On Patrol",
         "type": "operations-event",
+        "usage": "action",
+        "text": "Putting an MP or land-based Fighter into a zone where it will react later in the turn. Carrier-based Air Units cannot perform this mission type — they must protect their carrier (5.3.4.2). Only MP or Fighter units may go On Patrol (5.3.4).",
         "cost": 1,
-        "text": "An MP or Fighter unit moves to a zone within range and is placed 'On Patrol' so it can react later in the turn to enemy submarines, Task Forces, or air units crossing through.",
         "ruleRefs": [
           "5.3.4",
           "5.3.4.1",
           "5.3.4.2"
-        ]
+        ],
+        "content": {
+          "whenItComesUp": "Putting an MP or land-based Fighter into a zone where it will react later in the turn. Carrier-based Air Units cannot perform this mission type — they must protect their carrier (5.3.4.2). Only MP or Fighter units may go On Patrol (5.3.4).",
+          "whenItComesUpHtml": "<p>Putting an MP or land-based Fighter into a zone where it will react later in the turn. Carrier-based Air Units cannot perform this mission type — they must protect their carrier (5.3.4.2). Only MP or Fighter units may go On Patrol (5.3.4).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS and select one Fresh MP or Fighter unit.",
+              "html": "<p>Spend 1 OPS and select one Fresh MP or Fighter unit.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Move the unit to a Sea Zone within its range (5.3.4).",
+              "html": "<p>Move the unit to a Sea Zone within its range (5.3.4).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Enemy fighters in the zone may intercept and resolve CAP before the unit arrives on station (5.3.4.1, 5.3.3).",
+              "html": "<p>Enemy fighters in the zone may intercept and resolve CAP before the unit arrives on station (5.3.4.1, 5.3.3).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:air-units-intercepted-when",
+                  "label": "Air Units Intercepted when:"
+                }
+              ]
+            },
+            {
+              "text": "Place the 'On Patrol' marker on the unit. It is now armed to react for the rest of the turn:\n   \n   - **MP On Patrol** (5.3.4.1) can interrupt enemy submarines crossing the zone (roll ASW), or roll to detect a moving Task Force passing through. After reacting, the MP flips to Spent and returns to base.\n   - **Fighter On Patrol** (Interception, 5.3.4.2) attacks any Air Units entering its zone without spending the unit.",
+              "html": "<p>Place the &#39;On Patrol&#39; marker on the unit. It is now armed to react for the rest of the turn:</p>\n<ul>\n<li><strong>MP On Patrol</strong> (5.3.4.1) can interrupt enemy submarines crossing the zone (roll ASW), or roll to detect a moving Task Force passing through. After reacting, the MP flips to Spent and returns to base.</li>\n<li><strong>Fighter On Patrol</strong> (Interception, 5.3.4.2) attacks any Air Units entering its zone without spending the unit.</li>\n</ul>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:use-at-any-time",
+                  "label": "Use At Any Time (reactions available to On-Patrol units)"
+                }
+              ]
+            },
+            {
+              "text": "MP On Patrol also gives an additional defensive bonus to friendly TFs in the same zone (built into the combat tables) (5.3.4.1).",
+              "html": "<p>MP On Patrol also gives an additional defensive bonus to friendly TFs in the same zone (built into the combat tables) (5.3.4.1).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-anytime-mp-vs-sub",
+                "title": "On-Patrol MP attacks a crossing submarine"
+              },
+              {
+                "id": "act-anytime-mp-vs-tf",
+                "title": "On-Patrol MP attempts Task Force detection"
+              },
+              {
+                "id": "act-anytime-fighter-vs-air",
+                "title": "On-Patrol Fighter intercepts enemy air"
+              },
+              {
+                "id": "act-active-return-on-patrol-air",
+                "title": "Return an On-Patrol Air Unit to base"
+              }
+            ],
+            "ruleRefs": [
+              "5.3.4",
+              "5.3.4.1",
+              "5.3.4.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-air-strike",
@@ -224,68 +1584,186 @@
         "side": "neutral",
         "title": "Air Strike",
         "type": "operations-event",
+        "usage": "action",
+        "text": "One or more Strike units fly to a target TF or facility and attack with missiles, bombs, or both. Fighters fly as escort and Tankers extend range — both fly free of OPS cost when part of an air strike (5.3, 5.3.5, 5.3.6).",
         "cost": 1,
-        "text": "Strike units fly a mission against a TF or facility. Fighters (escort) and Tankers (range extension) fly with the strike at no additional OPS cost.",
         "ruleRefs": [
           "5.3.5",
           "5.3.6",
           "7.1.4",
           "7.4.1.3",
           "7.5.1"
-        ]
-      },
-      {
-        "id": "act-active-return-on-patrol-air",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Return an On-Patrol Air Unit to base",
-        "type": "use-when-active",
-        "text": "When it is your action, you may return 'Fresh' On-Patrol Air Units to base without spending OPS. The unit comes off On Patrol and becomes available for new actions.",
-        "ruleRefs": [
-          "4.2.2.4",
-          "5.3.4.1",
-          "5.3.4.2"
-        ]
-      },
-      {
-        "id": "act-anytime-fighter-vs-air",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "On-Patrol Fighter intercepts enemy air",
-        "type": "use-anytime",
-        "text": "An On-Patrol Fighter (Interception mission) attacks enemy Air Units entering its zone without spending the unit. CAP fighters at base may also roll to defend against strikes on their base.",
-        "ruleRefs": [
-          "4.2.3.2",
-          "4.2.3.3",
-          "5.3.3.1",
-          "7.1.4"
-        ]
-      },
-      {
-        "id": "act-anytime-mp-vs-sub",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "On-Patrol MP attacks a crossing submarine",
-        "type": "use-anytime",
-        "text": "An On-Patrol Maritime Patrol unit interrupts a moving enemy submarine in its zone and resolves an ASW attack against it.",
-        "ruleRefs": [
-          "4.2.3.2",
-          "5.3.4.1",
-          "7.2"
-        ]
-      },
-      {
-        "id": "act-anytime-mp-vs-tf",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "On-Patrol MP attempts Task Force detection",
-        "type": "use-anytime",
-        "text": "An On-Patrol MP rolls to detect an enemy Task Force moving through its zone, potentially applying or upgrading detection.",
-        "ruleRefs": [
-          "4.2.3.2",
-          "5.3.4.1",
-          "6.1"
-        ]
+        ],
+        "content": {
+          "whenItComesUp": "One or more Strike units fly to a target TF or facility and attack with missiles, bombs, or both. Fighters fly as escort and Tankers extend range — both fly free of OPS cost when part of an air strike (5.3, 5.3.5, 5.3.6).",
+          "whenItComesUpHtml": "<p>One or more Strike units fly to a target TF or facility and attack with missiles, bombs, or both. Fighters fly as escort and Tankers extend range — both fly free of OPS cost when part of an air strike (5.3, 5.3.5, 5.3.6).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS per Strike unit being flown (Fighters and Tankers fly free with the strike).",
+              "html": "<p>Spend 1 OPS per Strike unit being flown (Fighters and Tankers fly free with the strike).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Group strikes: units from different bases fly separate strikes (carriers in the same zone may fly as one strike). Strikes against different targets in the same zone are separate strikes (5.3.5).",
+              "html": "<p>Group strikes: units from different bases fly separate strikes (carriers in the same zone may fly as one strike). Strikes against different targets in the same zone are separate strikes (5.3.5).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Trace the path from base to target zone, respecting unit range. Tankers may extend a Strike's range: each 2-step Tanker extends one Strike by 2 zones or two Strikes by 1 zone; a 1-step Tanker extends one by 1 (5.3.6).",
+              "html": "<p>Trace the path from base to target zone, respecting unit range. Tankers may extend a Strike&#39;s range: each 2-step Tanker extends one Strike by 2 zones or two Strikes by 1 zone; a 1-step Tanker extends one by 1 (5.3.6).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:air-units-transit-to-a-zone",
+                  "label": "Air Units · Transit to a Zone"
+                }
+              ]
+            },
+            {
+              "text": "Resolve all en-route interceptions in order along the path TO the target (5.3.2, 5.3.3.1).",
+              "html": "<p>Resolve all en-route interceptions in order along the path TO the target (5.3.2, 5.3.3.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:air-units-intercepted-when",
+                  "label": "Air Units Intercepted when:"
+                }
+              ]
+            },
+            {
+              "text": "Resolve CAP defending the target (carrier-based fighters defend every TF in zone + adjacent land facilities; land fighters defend their bases).",
+              "html": "<p>Resolve CAP defending the target (carrier-based fighters defend every TF in zone + adjacent land facilities; land fighters defend their bases).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:cap-may-roll-to-attack-when",
+                  "label": "CAP may roll to attack when:"
+                }
+              ]
+            },
+            {
+              "text": "Resolve the air-to-air resolution based on the strike type:\n   - Unescorted strike: each defending Fighter rolls air-to-air dice per Strike unit (7.1.4).\n     \n   - Escorted strike: roll defending fighters against escorts first, allocate kills to escorts first except N10 (7.1.4.4).\n     \n     \n   - Apply Interceptor \"detected\" status forward and CAP-kill save rolls.",
+              "html": "<p>Resolve the air-to-air resolution based on the strike type:</p>\n<ul>\n<li><p>Unescorted strike: each defending Fighter rolls air-to-air dice per Strike unit (7.1.4).</p>\n</li>\n<li><p>Escorted strike: roll defending fighters against escorts first, allocate kills to escorts first except N10 (7.1.4.4).</p>\n</li>\n<li><p>Apply Interceptor &quot;detected&quot; status forward and CAP-kill save rolls.</p>\n</li>\n</ul>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:fighters-vs-strike-aircraft",
+                  "label": "Fighters vs. Strike Aircraft (CAP & Intercept)"
+                },
+                {
+                  "slug": "pa5:escorted-air-strikes",
+                  "label": "Escorted Air Strikes"
+                },
+                {
+                  "slug": "pa5:fighters-vs-fighters",
+                  "label": "Fighters vs. Fighters (and escorted strikes)"
+                },
+                {
+                  "slug": "pa5:interceptors",
+                  "label": "Interceptors"
+                },
+                {
+                  "slug": "pa5:saves-against-cap-kills",
+                  "label": "Saves Against CAP Kills"
+                }
+              ]
+            },
+            {
+              "text": "**vs TF target**: surviving Strike units launch missiles automatically (7.4.1.3). Defender resolves SAMs, then incoming missile resolution, then hit selection, then damage.",
+              "html": "<p><strong>vs TF target</strong>: surviving Strike units launch missiles automatically (7.4.1.3). Defender resolves SAMs, then incoming missile resolution, then hit selection, then damage.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:sam-resolution",
+                  "label": "SAM Resolution"
+                },
+                {
+                  "slug": "pa4:incoming-missile-resolution",
+                  "label": "Incoming Missile Resolution"
+                },
+                {
+                  "slug": "pa4:missile-hit-selection",
+                  "label": "Missile Hit Selection"
+                },
+                {
+                  "slug": "pa4:capital-ship-damage",
+                  "label": "Capital Ship Damage"
+                }
+              ]
+            },
+            {
+              "text": "**vs land target**: each remaining Strike step gets one bombing die (US CAGs also get 1 free SEAD die per 2 CAGs). Allocate to SEAD vs bombing, resolve SAM suppression, then SAM attack, then bombing.",
+              "html": "<p><strong>vs land target</strong>: each remaining Strike step gets one bombing die (US CAGs also get 1 free SEAD die per 2 CAGs). Allocate to SEAD vs bombing, resolve SAM suppression, then SAM attack, then bombing.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa6:air-units-bombing-land-targets",
+                  "label": "Air Units Bombing Land Targets"
+                },
+                {
+                  "slug": "pa6:sam-suppression-vs-bombing",
+                  "label": "SAM Suppression (SEAD) · vs Bombing"
+                },
+                {
+                  "slug": "pa6:sam-attack-vs-bombing",
+                  "label": "SAM Attack · vs Bombing"
+                },
+                {
+                  "slug": "pa6:bombing",
+                  "label": "Bombing (air-to-ground)"
+                }
+              ]
+            },
+            {
+              "text": "Apply collateral step losses, facility damage cumulative effects, and Kola First Strike Points if applicable (7.5.3, 7.5.4).",
+              "html": "<p>Apply collateral step losses, facility damage cumulative effects, and Kola First Strike Points if applicable (7.5.3, 7.5.4).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa6:collateral-damage",
+                  "label": "Collateral Damage"
+                },
+                {
+                  "slug": "pa6:facility-damage",
+                  "label": "Facility Damage · Effects cumulative"
+                },
+                {
+                  "slug": "pa6:the-kola-peninsula",
+                  "label": "The Kola Peninsula"
+                }
+              ]
+            },
+            {
+              "text": "Mark Strike units, escorting Fighters, and Tankers 'Spent'. Apply Cruise Missiles Fired markers per 9.5.3.",
+              "html": "<p>Mark Strike units, escorting Fighters, and Tankers &#39;Spent&#39;. Apply Cruise Missiles Fired markers per 9.5.3.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-ship-fire-missiles",
+                "title": "Fire missiles with a Task Force"
+              },
+              {
+                "id": "act-sub-missile-3-zones",
+                "title": "Nuclear submarine missile attack"
+              },
+              {
+                "id": "act-anytime-fighter-vs-air",
+                "title": "On-Patrol Fighter intercepts enemy air"
+              },
+              {
+                "id": "act-anytime-cap",
+                "title": "CAP attacks a strike on its base"
+              }
+            ],
+            "ruleRefs": [
+              "5.3.5",
+              "5.3.6",
+              "7.1.4",
+              "7.4.1.3",
+              "7.5.1",
+              "7.5.3",
+              "7.5.4"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-anytime-cap",
@@ -293,13 +1771,325 @@
         "side": "neutral",
         "title": "CAP attacks a strike on its base",
         "type": "use-anytime",
-        "text": "Every Fighter unit at base is always on CAP (even when Spent) and may roll to attack an enemy Air Strike attacking that base. Carrier-based fighters also defend Task Forces in their zone and adjacent land facilities.",
+        "usage": "anytime",
+        "text": "Every Fighter unit at home base is always performing a CAP (Combat Air Patrol) mission, even when 'Spent' — except for On-Patrol interceptors elsewhere (4.2.3.3). When an enemy strike arrives in a zone protected by CAP, the defending fighte",
         "ruleRefs": [
           "4.2.3.3",
           "5.3.3.2",
           "7.1.1.2",
           "7.1.4"
-        ]
+        ],
+        "content": {
+          "whenItComesUp": "Every Fighter unit at home base is always performing a CAP (Combat Air Patrol) mission, even when 'Spent' — except for On-Patrol interceptors elsewhere (4.2.3.3). When an enemy strike arrives in a zone protected by CAP, the defending fighter rolls air-to-air dice without spending OPS.",
+          "whenItComesUpHtml": "<p>Every Fighter unit at home base is always performing a CAP (Combat Air Patrol) mission, even when &#39;Spent&#39; — except for On-Patrol interceptors elsewhere (4.2.3.3). When an enemy strike arrives in a zone protected by CAP, the defending fighter rolls air-to-air dice without spending OPS.</p>\n",
+          "procedure": [
+            {
+              "text": "An enemy Strike (or in some cases MP or interceptor) arrives in a zone protected by your CAP. Determine eligibility (5.3.3.2):\n   - **Land-based fighters** protect land bases in their own zone (but not TFs at sea).\n   - **Carrier-based fighters** defend every TF in the carrier's Sea Zone and every land facility adjacent to that zone (the carrier itself does not have to be the target).",
+              "html": "<p>An enemy Strike (or in some cases MP or interceptor) arrives in a zone protected by your CAP. Determine eligibility (5.3.3.2):</p>\n<ul>\n<li><strong>Land-based fighters</strong> protect land bases in their own zone (but not TFs at sea).</li>\n<li><strong>Carrier-based fighters</strong> defend every TF in the carrier&#39;s Sea Zone and every land facility adjacent to that zone (the carrier itself does not have to be the target).</li>\n</ul>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:cap-may-roll-to-attack-when",
+                  "label": "CAP may roll to attack when:"
+                }
+              ]
+            },
+            {
+              "text": "Resolve CAP per the air-to-air procedure. One Fighter unit may roll its printed air-to-air dice for each enemy Strike unit. Apply mission modifiers (CAP Spent -2 dice, Detected by Interceptors +1, base damage, damaged CV, etc.) (7.1.1.2, 7.1.4).",
+              "html": "<p>Resolve CAP per the air-to-air procedure. One Fighter unit may roll its printed air-to-air dice for each enemy Strike unit. Apply mission modifiers (CAP Spent -2 dice, Detected by Interceptors +1, base damage, damaged CV, etc.) (7.1.1.2, 7.1.4).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:fighters-vs-strike-aircraft",
+                  "label": "Fighters vs. Strike Aircraft (CAP & Intercept)"
+                }
+              ]
+            },
+            {
+              "text": "Add the fighter's Tactical Value to each die. Apply the Soviet 'Air to Air Missile' Technology DRM if held. Resolve natural rolls: N10 kills a Strike step before weapon delivery; N9-10 kills before bomb release; F-14 N1-2 shoots down enemy missiles.",
+              "html": "<p>Add the fighter&#39;s Tactical Value to each die. Apply the Soviet &#39;Air to Air Missile&#39; Technology DRM if held. Resolve natural rolls: N10 kills a Strike step before weapon delivery; N9-10 kills before bomb release; F-14 N1-2 shoots down enemy missiles.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Apply save rolls based on the detection state of the firing fighter's base (8+ for Poor-detected carrier CAP if not at strike location; 6+ otherwise) (7.1.4.3).",
+              "html": "<p>Apply save rolls based on the detection state of the firing fighter&#39;s base (8+ for Poor-detected carrier CAP if not at strike location; 6+ otherwise) (7.1.4.3).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:saves-against-cap-kills",
+                  "label": "Saves Against CAP Kills"
+                }
+              ]
+            },
+            {
+              "text": "Surviving enemy Strike units proceed to deliver weapons.",
+              "html": "<p>Surviving enemy Strike units proceed to deliver weapons.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "CAP fighters are NOT marked Spent by performing CAP — they remain available to fight the next strike that arrives at the same base.",
+              "html": "<p>CAP fighters are NOT marked Spent by performing CAP — they remain available to fight the next strike that arrives at the same base.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-anytime-fighter-vs-air",
+                "title": "On-Patrol Fighter intercepts enemy air"
+              },
+              {
+                "id": "act-air-strike",
+                "title": "Air Strike"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.3",
+              "5.3.3.2",
+              "7.1.1.2",
+              "7.1.4",
+              "7.1.4.1",
+              "7.1.4.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-anytime-fighter-vs-air",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "On-Patrol Fighter intercepts enemy air",
+        "type": "use-anytime",
+        "usage": "anytime",
+        "text": "An enemy Air Unit (Strike, escorted Strike, MP, or fighter) enters or passes through a zone where you have a Fighter unit On Patrol. The on-patrol fighter rolls air-to-air dice to attack without being marked Spent (5.3.3.1, 5.3.4.2). This t",
+        "ruleRefs": [
+          "4.2.3.2",
+          "5.3.3.1",
+          "5.3.4.2",
+          "7.1.4"
+        ],
+        "content": {
+          "whenItComesUp": "An enemy Air Unit (Strike, escorted Strike, MP, or fighter) enters or passes through a zone where you have a Fighter unit On Patrol. The on-patrol fighter rolls air-to-air dice to attack without being marked Spent (5.3.3.1, 5.3.4.2). This trigger fires automatically whenever the enemy's path crosses your patrol zone (5.3.2 transit sequencing).",
+          "whenItComesUpHtml": "<p>An enemy Air Unit (Strike, escorted Strike, MP, or fighter) enters or passes through a zone where you have a Fighter unit On Patrol. The on-patrol fighter rolls air-to-air dice to attack without being marked Spent (5.3.3.1, 5.3.4.2). This trigger fires automatically whenever the enemy&#39;s path crosses your patrol zone (5.3.2 transit sequencing).</p>\n",
+          "procedure": [
+            {
+              "text": "The enemy declares an air mission. When their path enters your On-Patrol fighter's zone (en route to or arriving at the target), pause to resolve interception (5.3.2, 5.3.3.1).",
+              "html": "<p>The enemy declares an air mission. When their path enters your On-Patrol fighter&#39;s zone (en route to or arriving at the target), pause to resolve interception (5.3.2, 5.3.3.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:air-units-intercepted-when",
+                  "label": "Air Units Intercepted when:"
+                }
+              ]
+            },
+            {
+              "text": "Resolve based on the target type:\n   - **vs MP**: roll printed dice minus 2 (min 1). Step loss on 9+ vs plane (N10 = step + no search); 6+ vs helo (N8-10 = step + no search) (7.1.2).\n     \n   - **vs unescorted Strike**: roll printed air-to-air dice per Strike unit, applying mission/damage modifiers. N10 kills before weapon delivery; N9 also kills if bombs-only; F-14 N1-2 shoots down enemy missiles (7.1.4, 7.1.4.1, 7.1.4.2).\n     \n     \n   - **vs escorted Strike**: defender rolls fighters against escorts first; kills go to escorts first except N10. Then resolve fighter-vs-fighter (7.1.4.4).\n     \n     \n   - **vs Fighter** (no strike): both sides declare avoid-or-engage in order; if engaged, resolve simultaneously (7.1.3).",
+              "html": "<p>Resolve based on the target type:</p>\n<ul>\n<li><p><strong>vs MP</strong>: roll printed dice minus 2 (min 1). Step loss on 9+ vs plane (N10 = step + no search); 6+ vs helo (N8-10 = step + no search) (7.1.2).</p>\n</li>\n<li><p><strong>vs unescorted Strike</strong>: roll printed air-to-air dice per Strike unit, applying mission/damage modifiers. N10 kills before weapon delivery; N9 also kills if bombs-only; F-14 N1-2 shoots down enemy missiles (7.1.4, 7.1.4.1, 7.1.4.2).</p>\n</li>\n<li><p><strong>vs escorted Strike</strong>: defender rolls fighters against escorts first; kills go to escorts first except N10. Then resolve fighter-vs-fighter (7.1.4.4).</p>\n</li>\n<li><p><strong>vs Fighter</strong> (no strike): both sides declare avoid-or-engage in order; if engaged, resolve simultaneously (7.1.3).</p>\n</li>\n</ul>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:fighter-combat-vs-maritime-patrol",
+                  "label": "Fighter Combat vs Maritime Patrol (MP)"
+                },
+                {
+                  "slug": "pa5:fighters-vs-strike-aircraft",
+                  "label": "Fighters vs. Strike Aircraft (CAP & Intercept)"
+                },
+                {
+                  "slug": "pa5:interceptors",
+                  "label": "Interceptors"
+                },
+                {
+                  "slug": "pa5:escorted-air-strikes",
+                  "label": "Escorted Air Strikes"
+                },
+                {
+                  "slug": "pa5:fighters-vs-fighters",
+                  "label": "Fighters vs. Fighters (and escorted strikes)"
+                }
+              ]
+            },
+            {
+              "text": "Apply hits and proceed to the next interception zone (if any), then CAP at the target (5.3.2).",
+              "html": "<p>Apply hits and proceed to the next interception zone (if any), then CAP at the target (5.3.2).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "The intercepting fighter is NOT marked Spent — interception is free (5.3.4.2).",
+              "html": "<p>The intercepting fighter is NOT marked Spent — interception is free (5.3.4.2).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-air-mp-on-patrol",
+                "title": "MP or Fighter goes On Patrol"
+              },
+              {
+                "id": "act-anytime-cap",
+                "title": "CAP attacks a strike on its base"
+              },
+              {
+                "id": "act-air-strike",
+                "title": "Air Strike"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.2",
+              "5.3.3.1",
+              "5.3.4.2",
+              "7.1.2",
+              "7.1.3",
+              "7.1.4"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-anytime-mp-vs-sub",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "On-Patrol MP attacks a crossing submarine",
+        "type": "use-anytime",
+        "usage": "anytime",
+        "text": "An enemy submarine moves into or through a Sea Zone where you have an MP On Patrol. The MP can interrupt the move and roll a full ASW attack against the submarine (5.3.4.1). After reacting, the MP flips to Spent and returns to base.",
+        "ruleRefs": [
+          "4.2.3.2",
+          "5.3.4.1",
+          "7.2",
+          "7.2.1"
+        ],
+        "content": {
+          "whenItComesUp": "An enemy submarine moves into or through a Sea Zone where you have an MP On Patrol. The MP can interrupt the move and roll a full ASW attack against the submarine (5.3.4.1). After reacting, the MP flips to Spent and returns to base.",
+          "whenItComesUpHtml": "<p>An enemy submarine moves into or through a Sea Zone where you have an MP On Patrol. The MP can interrupt the move and roll a full ASW attack against the submarine (5.3.4.1). After reacting, the MP flips to Spent and returns to base.</p>\n",
+          "procedure": [
+            {
+              "text": "An enemy submarine moves into or through the MP's patrol zone. Declare the MP is reacting (5.3.4.1).",
+              "html": "<p>An enemy submarine moves into or through the MP&#39;s patrol zone. Declare the MP is reacting (5.3.4.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve a standard ASW attack: roll the MP's ASW dice, add Tactical Value, apply DRMs (Bad Weather -2 for MP, Arctic ice -1, Hydrophones +1). Each die ≥ the target submarine's Defense value causes a step loss. (N) submarines are only killed on a natural 10 when an MP is rolling (7.2.1).",
+              "html": "<p>Resolve a standard ASW attack: roll the MP&#39;s ASW dice, add Tactical Value, apply DRMs (Bad Weather -2 for MP, Arctic ice -1, Hydrophones +1). Each die ≥ the target submarine&#39;s Defense value causes a step loss. (N) submarines are only killed on a natural 10 when an MP is rolling (7.2.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:anti-submarine-warfare",
+                  "label": "Anti-Submarine Warfare (die roll table + DRMs)"
+                }
+              ]
+            },
+            {
+              "text": "Apply N10 effects (option to detect a TF in zone, destroy any sub step, etc.).",
+              "html": "<p>Apply N10 effects (option to detect a TF in zone, destroy any sub step, etc.).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "The defender applies non-N10 hits first, then the attacker allocates the rest. Apply sub 'save' rolls.",
+              "html": "<p>The defender applies non-N10 hits first, then the attacker allocates the rest. Apply sub &#39;save&#39; rolls.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Flip the MP's On Patrol marker to Spent and return it to base (5.3.4.1).",
+              "html": "<p>Flip the MP&#39;s On Patrol marker to Spent and return it to base (5.3.4.1).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-air-mp-on-patrol",
+                "title": "MP or Fighter goes On Patrol"
+              },
+              {
+                "id": "act-anytime-mp-vs-tf",
+                "title": "On-Patrol MP attempts Task Force detection"
+              },
+              {
+                "id": "act-ship-asw",
+                "title": "ASW in current zone (instead of moving)"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.2",
+              "5.3.4.1",
+              "7.2",
+              "7.2.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-anytime-mp-vs-tf",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "On-Patrol MP attempts Task Force detection",
+        "type": "use-anytime",
+        "usage": "anytime",
+        "text": "An enemy Task Force moves into or through the Sea Zone where you have an MP On Patrol. Instead of an ASW attack, the MP rolls to detect or upgrade detection on the moving TF (5.3.4.1). Same cost: free, but the MP is consumed on use.",
+        "ruleRefs": [
+          "4.2.3.2",
+          "5.3.4.1",
+          "5.3",
+          "6.1"
+        ],
+        "content": {
+          "whenItComesUp": "An enemy Task Force moves into or through the Sea Zone where you have an MP On Patrol. Instead of an ASW attack, the MP rolls to detect or upgrade detection on the moving TF (5.3.4.1). Same cost: free, but the MP is consumed on use.",
+          "whenItComesUpHtml": "<p>An enemy Task Force moves into or through the Sea Zone where you have an MP On Patrol. Instead of an ASW attack, the MP rolls to detect or upgrade detection on the moving TF (5.3.4.1). Same cost: free, but the MP is consumed on use.</p>\n",
+          "procedure": [
+            {
+              "text": "An enemy TF moves into or through the MP's patrol zone. Declare the MP is reacting for detection (5.3.4.1).",
+              "html": "<p>An enemy TF moves into or through the MP&#39;s patrol zone. Declare the MP is reacting for detection (5.3.4.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve a TF detection roll per the procedure for MP detection in 6.1.",
+              "html": "<p>Resolve a TF detection roll per the procedure for MP detection in 6.1.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:detection-of-tfs",
+                  "label": "Detection of TFs (by MP, RORSAT, Tattletale)"
+                }
+              ]
+            },
+            {
+              "text": "On success, apply a Poor Detection marker, or upgrade an existing Poor to Good (6.1.1).",
+              "html": "<p>On success, apply a Poor Detection marker, or upgrade an existing Poor to Good (6.1.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Flip the MP's On Patrol marker to Spent and return it to base (5.3.4.1).",
+              "html": "<p>Flip the MP&#39;s On Patrol marker to Spent and return it to base (5.3.4.1).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-air-mp-on-patrol",
+                "title": "MP or Fighter goes On Patrol"
+              },
+              {
+                "id": "act-anytime-mp-vs-sub",
+                "title": "On-Patrol MP attacks a crossing submarine"
+              },
+              {
+                "id": "act-air-mp-fly-attack",
+                "title": "Maritime Patrol flies and attacks or detects"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.2",
+              "5.3.4.1",
+              "5.3",
+              "6.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       }
     ]
   },
@@ -308,114 +2098,67 @@
     "label": "Miscellaneous Actions",
     "cards": [
       {
-        "id": "act-misc-repair",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Repair a facility",
-        "type": "operations-event",
-        "cost": 2,
-        "text": "Remove a Hit from a damaged facility. If the removal would change the damage status (Heavy→Light, or Light→Undamaged), a die roll of 5+ is required, otherwise the action is wasted.",
-        "ruleRefs": [
-          "5.4.1",
-          "2.3.8.4"
-        ]
-      },
-      {
-        "id": "act-misc-move-between-tfs",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Move ships between Task Forces",
-        "type": "operations-event",
-        "cost": 1,
-        "text": "Move any units from one Task Force to another existing Task Force(s) in the same zone. A unit moved from a detected force passes its detection status to the new TF unless the new TF already has a higher status.",
-        "ruleRefs": [
-          "5.1.1.2"
-        ]
-      },
-      {
-        "id": "act-misc-demine-port",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "De-Mine a Port",
-        "type": "operations-event",
-        "cost": 2,
-        "text": "Roll a die requiring 5+ to reduce a minefield by one level (7+ if the facility is damaged). Heavy mining → Light mining → Unmined.",
-        "ruleRefs": [
-          "5.4.2"
-        ]
-      },
-      {
-        "id": "act-misc-launch-rorsat",
-        "cardNumber": "—",
-        "side": "soviet",
-        "title": "Launch or move a RORSAT",
-        "type": "operations-event",
-        "cost": 2,
-        "text": "Launch a RORSAT from Tyuratam or move one already on the map to another zone. A roll of 1 destroys the satellite instead.",
-        "ruleRefs": [
-          "5.4.3",
-          "2.2.4.1"
-        ]
-      },
-      {
-        "id": "act-misc-attack-cuba",
-        "cardNumber": "—",
-        "side": "nato",
-        "title": "NATO may attack Cuba",
-        "type": "operations-event",
-        "cost": 6,
-        "text": "NATO spends 6 OPS to attack Cuba. Soviet deploys the Cuban sub on 8+; NATO resolves up to 3 OPS of free missile attacks then an immediate strike with the four US 'Cuba' units. Cuba becomes active afterwards.",
-        "ruleRefs": [
-          "5.4.4",
-          "8.4.5"
-        ]
-      },
-      {
-        "id": "act-misc-pass",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Pass",
-        "type": "operations-event",
-        "cost": 0,
-        "text": "If you have fewer Operations Points than your opponent, you may pass. The opponent then plays the next action, after which you have another chance to act.",
-        "ruleRefs": [
-          "5.4.5"
-        ]
-      },
-      {
         "id": "act-active-fsp",
         "cardNumber": "—",
         "side": "soviet",
         "title": "Spend a First Strike Point (Soviet)",
         "type": "use-when-active",
-        "text": "The Soviet player may spend First Strike Points on a variety of options. Free to use when active; does not count as an action.",
+        "usage": "active",
+        "text": "The Soviet player has accumulated First Strike Points from card play or end-of-turn SSBN payload checks (9.1.1) and chooses to spend one for a powerful in-game effect. FSPs are spent during the Soviet player's own action — does not count as",
         "ruleRefs": [
           "4.2.2.1",
           "9.1.1"
-        ]
-      },
-      {
-        "id": "act-active-soviet-spy",
-        "cardNumber": "—",
-        "side": "soviet",
-        "title": "Use a Soviet Spy (Soviet)",
-        "type": "use-when-active",
-        "text": "The Soviet player may use a Soviet spy from the Spies Track for various effects. Free to use when active; spending one may reduce the Soviet Spy Infiltration Track.",
-        "ruleRefs": [
-          "4.2.2.2",
-          "9.3"
-        ]
-      },
-      {
-        "id": "act-active-ops-card-event",
-        "cardNumber": "—",
-        "side": "neutral",
-        "title": "Play an event on one of your OPS cards",
-        "type": "use-when-active",
-        "text": "When it is your action, you may play the (non-Reaction) event on one of the two cards you used for OPS this turn, paying the event's printed OPS cost.",
-        "ruleRefs": [
-          "4.2.2.3"
-        ]
+        ],
+        "content": {
+          "whenItComesUp": "The Soviet player has accumulated First Strike Points from card play or end-of-turn SSBN payload checks (9.1.1) and chooses to spend one for a powerful in-game effect. FSPs are spent during the Soviet player's own action — does not count as an action and costs no OPS (4.2.2.1).",
+          "whenItComesUpHtml": "<p>The Soviet player has accumulated First Strike Points from card play or end-of-turn SSBN payload checks (9.1.1) and chooses to spend one for a powerful in-game effect. FSPs are spent during the Soviet player&#39;s own action — does not count as an action and costs no OPS (4.2.2.1).</p>\n",
+          "procedure": [
+            {
+              "text": "On your action, declare you are spending one or more First Strike Points (4.2.2.1).",
+              "html": "<p>On your action, declare you are spending one or more First Strike Points (4.2.2.1).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Reduce the First Strike Points marker on the track by the appropriate amount.",
+              "html": "<p>Reduce the First Strike Points marker on the track by the appropriate amount.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Apply the chosen FSP effect per 9.1.1.",
+              "html": "<p>Apply the chosen FSP effect per 9.1.1.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa8:first-strike-points",
+                  "label": "First Strike Points (spending options)"
+                }
+              ]
+            },
+            {
+              "text": "Play continues — this is not an action, so the next action belongs to you (or your opponent under the standard alternation).",
+              "html": "<p>Play continues — this is not an action, so the next action belongs to you (or your opponent under the standard alternation).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-anytime-spy-fs-evasion",
+                "title": "Soviet Spy for SSBN evasion"
+              },
+              {
+                "id": "act-active-soviet-spy",
+                "title": "Use a Soviet Spy"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.2.1",
+              "9.1.1",
+              "9.1.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-active-hand-card-event",
@@ -423,47 +2166,190 @@
         "side": "neutral",
         "title": "Play a hand card's event for +2 OPS",
         "type": "use-when-active",
-        "text": "Play the top (non-Reaction) event of a card from your hand by paying its printed event cost plus 2 additional OPS. The card is then discarded (or removed from play) per its instructions.",
+        "usage": "active",
+        "text": "You want to fire a (non-Reaction) event from a card sitting in your hand — one you have NOT spent on OPS this turn. This is allowed at a premium: pay 2 OPS surcharge on top of the event's printed cost (4.2.2.5).",
         "ruleRefs": [
           "4.2.2.5"
-        ]
+        ],
+        "content": {
+          "whenItComesUp": "You want to fire a (non-Reaction) event from a card sitting in your hand — one you have NOT spent on OPS this turn. This is allowed at a premium: pay 2 OPS surcharge on top of the event's printed cost (4.2.2.5).",
+          "whenItComesUpHtml": "<p>You want to fire a (non-Reaction) event from a card sitting in your hand — one you have NOT spent on OPS this turn. This is allowed at a premium: pay 2 OPS surcharge on top of the event&#39;s printed cost (4.2.2.5).</p>\n",
+          "procedure": [
+            {
+              "text": "On your action, declare you are playing the top (non-Reaction) event from a card in your hand (4.2.2.5).",
+              "html": "<p>On your action, declare you are playing the top (non-Reaction) event from a card in your hand (4.2.2.5).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:use-when-active",
+                  "label": "Use When Active (not an action)"
+                }
+              ]
+            },
+            {
+              "text": "Pay the event's printed OPS cost **plus** 2 additional OPS.",
+              "html": "<p>Pay the event&#39;s printed OPS cost <strong>plus</strong> 2 additional OPS.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve the event per the card text.",
+              "html": "<p>Resolve the event per the card text.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Place the card in the discard pile, or remove it from play if the event instructs you to.",
+              "html": "<p>Place the card in the discard pile, or remove it from play if the event instructs you to.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "If your hand drops below three cards as a result, draw up to three (4.2.3.6).",
+              "html": "<p>If your hand drops below three cards as a result, draw up to three (4.2.3.6).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-active-ops-card-event",
+                "title": "Play an event on one of your OPS cards"
+              },
+              {
+                "id": "act-anytime-reaction-event",
+                "title": "Play a Reaction event from hand"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.2.5",
+              "4.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
-        "id": "act-anytime-reaction-event",
+        "id": "act-active-ops-card-event",
         "cardNumber": "—",
         "side": "neutral",
-        "title": "Play a Reaction event from hand",
-        "type": "use-anytime",
-        "text": "Play a card from your hand as a reaction to a specific game event. The card itself specifies when it is playable. After resolving, discard. If your hand drops below three cards, draw up to three.",
+        "title": "Play an event on one of your OPS cards",
+        "type": "use-when-active",
+        "usage": "active",
+        "text": "Each turn each player will play two cards for OPS (4.2.2.3). Each card has one event printed on it — playable for the event's printed OPS cost. The cards you used for OPS this turn become available as event cards on your action. Either card",
         "ruleRefs": [
-          "4.2.3.1"
-        ]
+          "4.2.2.3",
+          "4.2"
+        ],
+        "content": {
+          "whenItComesUp": "Each turn each player will play two cards for OPS (4.2.2.3). Each card has one event printed on it — playable for the event's printed OPS cost. The cards you used for OPS this turn become available as event cards on your action. Either card's event may be played when active (and does not count as an action by itself, though it does cost OPS).",
+          "whenItComesUpHtml": "<p>Each turn each player will play two cards for OPS (4.2.2.3). Each card has one event printed on it — playable for the event&#39;s printed OPS cost. The cards you used for OPS this turn become available as event cards on your action. Either card&#39;s event may be played when active (and does not count as an action by itself, though it does cost OPS).</p>\n",
+          "procedure": [
+            {
+              "text": "On your action, declare you are playing one of your two OPS cards' (non-Reaction) events (4.2.2.3).",
+              "html": "<p>On your action, declare you are playing one of your two OPS cards&#39; (non-Reaction) events (4.2.2.3).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:use-when-active",
+                  "label": "Use When Active (not an action)"
+                }
+              ]
+            },
+            {
+              "text": "Pay the event's printed OPS cost from your remaining OPS pool.",
+              "html": "<p>Pay the event&#39;s printed OPS cost from your remaining OPS pool.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve the event per the card's text.",
+              "html": "<p>Resolve the event per the card&#39;s text.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Each card can be used only once per turn unless the event text specifies otherwise.",
+              "html": "<p>Each card can be used only once per turn unless the event text specifies otherwise.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-active-hand-card-event",
+                "title": "Play a hand card's event for +2 OPS"
+              },
+              {
+                "id": "act-anytime-reaction-event",
+                "title": "Play a Reaction event from hand"
+              }
+            ],
+            "ruleRefs": [
+              "4.2",
+              "4.2.2",
+              "4.2.2.3"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
-        "id": "act-anytime-sub-asw-vs-tf",
+        "id": "act-active-soviet-spy",
         "cardNumber": "—",
-        "side": "neutral",
-        "title": "On-Patrol Submarine ASW vs moving TF",
-        "type": "use-anytime",
-        "text": "An On-Patrol submarine may interrupt a Task Force entering its zone and roll to attack it.",
+        "side": "soviet",
+        "title": "Use a Soviet Spy (Soviet)",
+        "type": "use-when-active",
+        "usage": "active",
+        "text": "The Soviet player has spies remaining on the Soviet Spies Track and chooses to spend one. Spies provide a menu of effects (place a Poor Detection on a NATO TF, take the SSBN Hunting marker, re-roll up to 3 ASW dice, or auto-succeed on First",
         "ruleRefs": [
-          "4.2.3.2",
-          "5.2.3",
-          "7.2"
-        ]
-      },
-      {
-        "id": "act-anytime-hydrophone",
-        "cardNumber": "—",
-        "side": "nato",
-        "title": "Hydrophone Barrier reaction",
-        "type": "use-anytime",
-        "text": "When an enemy submarine crosses a Hydrophone Barrier (GIUK Gap, English Channel, Strait of Gibraltar), one Fresh or On-Patrol friendly unit in the entered or exited zone may interrupt to roll ASW. English Channel and Gibraltar also offer a permanent 2-die helo asset (unless Bad Weather).",
-        "ruleRefs": [
-          "4.2.3.4",
-          "2.3.6",
-          "7.2"
-        ]
+          "4.2.2.2",
+          "9.3"
+        ],
+        "content": {
+          "whenItComesUp": "The Soviet player has spies remaining on the Soviet Spies Track and chooses to spend one. Spies provide a menu of effects (place a Poor Detection on a NATO TF, take the SSBN Hunting marker, re-roll up to 3 ASW dice, or auto-succeed on First Strike sub evasion in a zone) (9.3).",
+          "whenItComesUpHtml": "<p>The Soviet player has spies remaining on the Soviet Spies Track and chooses to spend one. Spies provide a menu of effects (place a Poor Detection on a NATO TF, take the SSBN Hunting marker, re-roll up to 3 ASW dice, or auto-succeed on First Strike sub evasion in a zone) (9.3).</p>\n",
+          "procedure": [
+            {
+              "text": "On your action, declare you are spending a Soviet spy (4.2.2.2).",
+              "html": "<p>On your action, declare you are spending a Soviet spy (4.2.2.2).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Choose one effect from 9.3:\n   - Place a Poor Detection marker on any NATO Task Force.\n   - Take the SSBN Hunting marker.\n   - Re-roll up to three ASW dice rolled (one re-roll per unit maximum).\n   - Automatically succeed on all First Strike submarine evasion rolls in a single zone.",
+              "html": "<p>Choose one effect from 9.3:</p>\n<ul>\n<li>Place a Poor Detection marker on any NATO Task Force.</li>\n<li>Take the SSBN Hunting marker.</li>\n<li>Re-roll up to three ASW dice rolled (one re-roll per unit maximum).</li>\n<li>Automatically succeed on all First Strike submarine evasion rolls in a single zone.</li>\n</ul>\n",
+              "blocks": [
+                {
+                  "slug": "pa8:soviet-spies",
+                  "label": "Soviet Spies (effects menu)"
+                }
+              ]
+            },
+            {
+              "text": "Apply the chosen effect immediately.",
+              "html": "<p>Apply the chosen effect immediately.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "**Infiltration check**: roll a die and reference the current box on the Soviet Spy Infiltration Track. If the die falls within the box's indicated range, a spy has been caught — move the track down one box (to the left). This may reduce future spy availability.",
+              "html": "<p><strong>Infiltration check</strong>: roll a die and reference the current box on the Soviet Spy Infiltration Track. If the die falls within the box&#39;s indicated range, a spy has been caught — move the track down one box (to the left). This may reduce future spy availability.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-active-fsp",
+                "title": "Spend a First Strike Point"
+              },
+              {
+                "id": "act-anytime-spy-fs-evasion",
+                "title": "Soviet Spy for SSBN evasion"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.2.2",
+              "9.3"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-anytime-draw-card",
@@ -471,10 +2357,192 @@
         "side": "neutral",
         "title": "Draw a card (hand < 3)",
         "type": "use-anytime",
-        "text": "If you have fewer than three cards in your hand, draw a card.",
+        "usage": "anytime",
+        "text": "Your hand is below three cards — typically because you played a Reaction event or a hand-card event and discarded. This is the at-any-time hand top-up (4.2.3.6).",
         "ruleRefs": [
-          "4.2.3.6"
-        ]
+          "4.2.3.6",
+          "4.2"
+        ],
+        "content": {
+          "whenItComesUp": "Your hand is below three cards — typically because you played a Reaction event or a hand-card event and discarded. This is the at-any-time hand top-up (4.2.3.6).",
+          "whenItComesUpHtml": "<p>Your hand is below three cards — typically because you played a Reaction event or a hand-card event and discarded. This is the at-any-time hand top-up (4.2.3.6).</p>\n",
+          "procedure": [
+            {
+              "text": "Verify your hand size is fewer than three cards (4.2.3.6).",
+              "html": "<p>Verify your hand size is fewer than three cards (4.2.3.6).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:use-at-any-time",
+                  "label": "Use At Any Time (not an action)"
+                }
+              ]
+            },
+            {
+              "text": "Draw one card from the deck.",
+              "html": "<p>Draw one card from the deck.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Repeat as needed until your hand reaches three cards (unless the action is interrupted).",
+              "html": "<p>Repeat as needed until your hand reaches three cards (unless the action is interrupted).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-anytime-reaction-event",
+                "title": "Play a Reaction event from hand"
+              },
+              {
+                "id": "act-misc-pass",
+                "title": "Pass"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.6",
+              "4.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-anytime-hydrophone",
+        "cardNumber": "—",
+        "side": "nato",
+        "title": "Hydrophone Barrier reaction",
+        "type": "use-anytime",
+        "usage": "anytime",
+        "text": "An enemy submarine crosses a Hydrophone Barrier shown on the map: the GIUK Gap (East 6, East 9-10, North 3-4), the English Channel (East 4), or the Strait of Gibraltar (Med 1-2). NATO can react with whatever Fresh or On-Patrol unit happens ",
+        "ruleRefs": [
+          "4.2.3.4",
+          "2.3.6",
+          "7.2"
+        ],
+        "content": {
+          "whenItComesUp": "An enemy submarine crosses a Hydrophone Barrier shown on the map: the GIUK Gap (East 6, East 9-10, North 3-4), the English Channel (East 4), or the Strait of Gibraltar (Med 1-2). NATO can react with whatever Fresh or On-Patrol unit happens to be sitting in the entered or exited zone (2.3.6). This is the SOSUS feature in game terms.",
+          "whenItComesUpHtml": "<p>An enemy submarine crosses a Hydrophone Barrier shown on the map: the GIUK Gap (East 6, East 9-10, North 3-4), the English Channel (East 4), or the Strait of Gibraltar (Med 1-2). NATO can react with whatever Fresh or On-Patrol unit happens to be sitting in the entered or exited zone (2.3.6). This is the SOSUS feature in game terms.</p>\n",
+          "procedure": [
+            {
+              "text": "A submarine crosses a Hydrophone Barrier. Declare the reaction (2.3.6, 4.2.3.4).",
+              "html": "<p>A submarine crosses a Hydrophone Barrier. Declare the reaction (2.3.6, 4.2.3.4).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Choose one of three options:\n   - **Option 1 — Free single die**: a Fresh or On-Patrol friendly unit in the entered/exited zone rolls one die on the ASW table against the submarine, adding the unit's Tactical Value. **No** Spent marker applied — this is free.\n   - **Option 2 — Full ASW attack**: the same unit rolls a normal ASW attack with **+1 die** as though attacking the sub. After resolving, mark the unit Spent.\n   - **Option 3 — Local helo asset** (English Channel and Strait of Gibraltar only): use the permanent 2-dice helo asset, rolling as though it were an MP unit (apply Bad Weather and (N) modifiers normally). Used **instead of** one of the other two options.",
+              "html": "<p>Choose one of three options:</p>\n<ul>\n<li><strong>Option 1 — Free single die</strong>: a Fresh or On-Patrol friendly unit in the entered/exited zone rolls one die on the ASW table against the submarine, adding the unit&#39;s Tactical Value. <strong>No</strong> Spent marker applied — this is free.</li>\n<li><strong>Option 2 — Full ASW attack</strong>: the same unit rolls a normal ASW attack with <strong>+1 die</strong> as though attacking the sub. After resolving, mark the unit Spent.</li>\n<li><strong>Option 3 — Local helo asset</strong> (English Channel and Strait of Gibraltar only): use the permanent 2-dice helo asset, rolling as though it were an MP unit (apply Bad Weather and (N) modifiers normally). Used <strong>instead of</strong> one of the other two options.</li>\n</ul>\n",
+              "blocks": []
+            },
+            {
+              "text": "Apply Bad Weather: weather in the zone the submarine is moving INTO matters (not the one moving out of). Option 3's helo asset is reduced to zero dice in Bad Weather.",
+              "html": "<p>Apply Bad Weather: weather in the zone the submarine is moving INTO matters (not the one moving out of). Option 3&#39;s helo asset is reduced to zero dice in Bad Weather.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve the ASW roll per 7.2.1 — the \"Hydrophone Interruption\" line in the ASW DRM table applies here (+1 die or roll 1 die and not spent, optional always-one-die for submarines).",
+              "html": "<p>Resolve the ASW roll per 7.2.1 — the &quot;Hydrophone Interruption&quot; line in the ASW DRM table applies here (+1 die or roll 1 die and not spent, optional always-one-die for submarines).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:anti-submarine-warfare",
+                  "label": "Anti-Submarine Warfare (Hydrophone Interruption DRM in DRM table)"
+                }
+              ]
+            },
+            {
+              "text": "A single sub can be re-rolled against by each different Fresh unit in the zone using Option 1 — every Fresh unit gets a free shot.",
+              "html": "<p>A single sub can be re-rolled against by each different Fresh unit in the zone using Option 1 — every Fresh unit gets a free shot.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-anytime-mp-vs-sub",
+                "title": "On-Patrol MP attacks a crossing submarine"
+              },
+              {
+                "id": "act-ship-asw",
+                "title": "ASW in current zone (instead of moving)"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.4",
+              "2.3.6",
+              "7.2",
+              "7.2.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-anytime-reaction-event",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Play a Reaction event from hand",
+        "type": "use-anytime",
+        "usage": "anytime",
+        "text": "The opponent (or you) is resolving an action and a card in your hand has a Reaction event whose trigger condition has been met. The card itself specifies when it is playable. Reactions are free to play (the card text may impose other costs)",
+        "ruleRefs": [
+          "4.2.3.1",
+          "4.2"
+        ],
+        "content": {
+          "whenItComesUp": "The opponent (or you) is resolving an action and a card in your hand has a Reaction event whose trigger condition has been met. The card itself specifies when it is playable. Reactions are free to play (the card text may impose other costs).",
+          "whenItComesUpHtml": "<p>The opponent (or you) is resolving an action and a card in your hand has a Reaction event whose trigger condition has been met. The card itself specifies when it is playable. Reactions are free to play (the card text may impose other costs).</p>\n",
+          "procedure": [
+            {
+              "text": "Trigger condition occurs during an action being resolved (4.2.3.1).",
+              "html": "<p>Trigger condition occurs during an action being resolved (4.2.3.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:use-at-any-time",
+                  "label": "Use At Any Time (not an action)"
+                }
+              ]
+            },
+            {
+              "text": "Declare you are playing the card's Reaction event (the bottom event on a card).",
+              "html": "<p>Declare you are playing the card&#39;s Reaction event (the bottom event on a card).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve the event per the card text. Reactions usually trigger immediately and modify or interrupt the current action.",
+              "html": "<p>Resolve the event per the card text. Reactions usually trigger immediately and modify or interrupt the current action.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Discard the card. If your hand drops below three cards, draw back up to three (4.2.3.6).",
+              "html": "<p>Discard the card. If your hand drops below three cards, draw back up to three (4.2.3.6).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-active-ops-card-event",
+                "title": "Play an event on one of your OPS cards"
+              },
+              {
+                "id": "act-active-hand-card-event",
+                "title": "Play a hand card's event for +2 OPS"
+              },
+              {
+                "id": "act-anytime-draw-card",
+                "title": "Draw a card (hand < 3)"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.1",
+              "4.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       },
       {
         "id": "act-anytime-spy-fs-evasion",
@@ -482,11 +2550,470 @@
         "side": "soviet",
         "title": "Soviet Spy for SSBN evasion",
         "type": "use-anytime",
-        "text": "During the NATO action, the Soviet player may spend a Soviet spy to evade SSBN-hunt resolution. May reduce the Soviet Spy Infiltration Track.",
+        "usage": "anytime",
+        "text": "During a NATO action that would resolve First Strike submarine evasion against a Soviet SSBN, the Soviet player may spend a spy to automatically succeed at all evasion rolls in a single zone (even after rolling). This is a reactive use of t",
         "ruleRefs": [
           "4.2.3.5",
           "9.3"
-        ]
+        ],
+        "content": {
+          "whenItComesUp": "During a NATO action that would resolve First Strike submarine evasion against a Soviet SSBN, the Soviet player may spend a spy to automatically succeed at all evasion rolls in a single zone (even after rolling). This is a reactive use of the spy menu (4.2.3.5, 9.3).",
+          "whenItComesUpHtml": "<p>During a NATO action that would resolve First Strike submarine evasion against a Soviet SSBN, the Soviet player may spend a spy to automatically succeed at all evasion rolls in a single zone (even after rolling). This is a reactive use of the spy menu (4.2.3.5, 9.3).</p>\n",
+          "procedure": [
+            {
+              "text": "During NATO's First Strike submarine evasion resolution, declare you are spending a Soviet spy (4.2.3.5).",
+              "html": "<p>During NATO&#39;s First Strike submarine evasion resolution, declare you are spending a Soviet spy (4.2.3.5).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Apply the 9.3 effect: automatically succeed on all First Strike submarine evasion rolls in a single zone (even if you have already rolled and failed).",
+              "html": "<p>Apply the 9.3 effect: automatically succeed on all First Strike submarine evasion rolls in a single zone (even if you have already rolled and failed).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa8:soviet-spies",
+                  "label": "Soviet Spies (effects menu)"
+                },
+                {
+                  "slug": "pa8:soviet-first-strike-submarines",
+                  "label": "Soviet First Strike Submarines (the evasion this saves)"
+                }
+              ]
+            },
+            {
+              "text": "**Infiltration check**: roll a die against the current box on the Soviet Spy Infiltration Track. If the die falls within the box's range, a spy has been caught — move the track down one box (left) (9.3).",
+              "html": "<p><strong>Infiltration check</strong>: roll a die against the current box on the Soviet Spy Infiltration Track. If the die falls within the box&#39;s range, a spy has been caught — move the track down one box (left) (9.3).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-active-soviet-spy",
+                "title": "Use a Soviet Spy"
+              },
+              {
+                "id": "act-active-fsp",
+                "title": "Spend a First Strike Point"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.5",
+              "9.3",
+              "9.1.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-misc-attack-cuba",
+        "cardNumber": "—",
+        "side": "nato",
+        "title": "NATO may attack Cuba",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "Cuba begins as an inactive Soviet ally — it shelters the Lourdes intelligence station, allows limited Soviet basing, and supports Cuban air units and a submarine. The NATO player may pay 6 OPS to attack and activate Cuba (5.4.4, 8.4.5). Aft",
+        "cost": 6,
+        "ruleRefs": [
+          "5.4.4",
+          "8.4.5",
+          "2.2.4.1"
+        ],
+        "content": {
+          "whenItComesUp": "Cuba begins as an inactive Soviet ally — it shelters the Lourdes intelligence station, allows limited Soviet basing, and supports Cuban air units and a submarine. The NATO player may pay 6 OPS to attack and activate Cuba (5.4.4, 8.4.5). After the attack, Cuban Soviet forces become available to the Soviet player.",
+          "whenItComesUpHtml": "<p>Cuba begins as an inactive Soviet ally — it shelters the Lourdes intelligence station, allows limited Soviet basing, and supports Cuban air units and a submarine. The NATO player may pay 6 OPS to attack and activate Cuba (5.4.4, 8.4.5). After the attack, Cuban Soviet forces become available to the Soviet player.</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 6 OPS (NATO only) and declare the attack on Cuba (5.4.4).",
+              "html": "<p>Spend 6 OPS (NATO only) and declare the attack on Cuba (5.4.4).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "The Soviet player deploys the Cuban submarine: on a roll of 8+, deploy within one zone of Cuba; otherwise it begins in port. Deploy Cuban Air Units on Cuba with the SAM marker (8.4.5).",
+              "html": "<p>The Soviet player deploys the Cuban submarine: on a roll of 8+, deploy within one zone of Cuba; otherwise it begins in port. Deploy Cuban Air Units on Cuba with the SAM marker (8.4.5).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "NATO may resolve up to 3 OPS worth of submarine or Task Force cruise missile attacks against Cuba — these are **free** (no additional OPS cost).",
+              "html": "<p>NATO may resolve up to 3 OPS worth of submarine or Task Force cruise missile attacks against Cuba — these are <strong>free</strong> (no additional OPS cost).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Place the four US units marked 'Cuba' in Florida and fly an immediate Strike mission with them against Cuba.",
+              "html": "<p>Place the four US units marked &#39;Cuba&#39; in Florida and fly an immediate Strike mission with them against Cuba.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa5:air-units-transit-to-a-zone",
+                  "label": "Air Units · Transit to a Zone"
+                },
+                {
+                  "slug": "pa6:air-units-bombing-land-targets",
+                  "label": "Air Units Bombing Land Targets"
+                },
+                {
+                  "slug": "pa6:sam-suppression-vs-bombing",
+                  "label": "SAM Suppression (SEAD) · vs Bombing"
+                },
+                {
+                  "slug": "pa6:sam-attack-vs-bombing",
+                  "label": "SAM Attack · vs Bombing"
+                },
+                {
+                  "slug": "pa6:bombing",
+                  "label": "Bombing (air-to-ground)"
+                }
+              ]
+            },
+            {
+              "text": "Resolve damage to the Lourdes Facility per 2.2.4.1 (loss of Lourdes triggers RORSAT consequences).",
+              "html": "<p>Resolve damage to the Lourdes Facility per 2.2.4.1 (loss of Lourdes triggers RORSAT consequences).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa6:collateral-damage",
+                  "label": "Collateral Damage"
+                }
+              ]
+            },
+            {
+              "text": "Cuba is now active. The Soviet player may use Cuban forces as his own, and may immediately deploy up to three air units from any Soviet base to Cuba (all marked 'Spent').",
+              "html": "<p>Cuba is now active. The Soviet player may use Cuban forces as his own, and may immediately deploy up to three air units from any Soviet base to Cuba (all marked &#39;Spent&#39;).</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-air-strike",
+                "title": "Air Strike"
+              },
+              {
+                "id": "act-misc-launch-rorsat",
+                "title": "Launch or move a RORSAT"
+              }
+            ],
+            "ruleRefs": [
+              "5.4.4",
+              "8.4.5",
+              "2.2.4.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-misc-demine-port",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "De-Mine a Port",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "A friendly port has been mined and you need to clear it to allow ship traffic. Spending 2 OPS attempts to step the minefield down one level. Heavy mining → Light mining → Unmined (5.4.2).",
+        "cost": 2,
+        "ruleRefs": [
+          "5.4.2"
+        ],
+        "content": {
+          "whenItComesUp": "A friendly port has been mined and you need to clear it to allow ship traffic. Spending 2 OPS attempts to step the minefield down one level. Heavy mining → Light mining → Unmined (5.4.2).",
+          "whenItComesUpHtml": "<p>A friendly port has been mined and you need to clear it to allow ship traffic. Spending 2 OPS attempts to step the minefield down one level. Heavy mining → Light mining → Unmined (5.4.2).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 2 OPS and select one mined friendly port.",
+              "html": "<p>Spend 2 OPS and select one mined friendly port.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Roll a die. Required result depends on facility damage:\n   - **Undamaged facility**: 5+ succeeds.\n   - **Damaged facility**: 7+ succeeds.",
+              "html": "<p>Roll a die. Required result depends on facility damage:</p>\n<ul>\n<li><strong>Undamaged facility</strong>: 5+ succeeds.</li>\n<li><strong>Damaged facility</strong>: 7+ succeeds.</li>\n</ul>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:miscellaneous",
+                  "label": "Miscellaneous (de-mine roll thresholds)"
+                },
+                {
+                  "slug": "pa7:port-mines",
+                  "label": "Port Mines (what the minefield does)"
+                }
+              ]
+            },
+            {
+              "text": "On success, reduce the minefield by one level. Remove the Mine marker entirely if the port reaches Unmined.",
+              "html": "<p>On success, reduce the minefield by one level. Remove the Mine marker entirely if the port reaches Unmined.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "On failure, the action is wasted but may be retried on a future activation.",
+              "html": "<p>On failure, the action is wasted but may be retried on a future activation.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-misc-repair",
+                "title": "Repair a facility"
+              }
+            ],
+            "ruleRefs": [
+              "5.4.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-misc-launch-rorsat",
+        "cardNumber": "—",
+        "side": "soviet",
+        "title": "Launch or move a RORSAT",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "The Soviet player wants to extend or reposition satellite coverage. RORSATs are Soviet reconnaissance satellites used to detect NATO Task Forces. They start on the ground at Tyuratam and can be launched into space (5.4.3, 2.2.4.1).",
+        "cost": 2,
+        "ruleRefs": [
+          "5.4.3",
+          "2.2.4.1"
+        ],
+        "content": {
+          "whenItComesUp": "The Soviet player wants to extend or reposition satellite coverage. RORSATs are Soviet reconnaissance satellites used to detect NATO Task Forces. They start on the ground at Tyuratam and can be launched into space (5.4.3, 2.2.4.1).",
+          "whenItComesUpHtml": "<p>The Soviet player wants to extend or reposition satellite coverage. RORSATs are Soviet reconnaissance satellites used to detect NATO Task Forces. They start on the ground at Tyuratam and can be launched into space (5.4.3, 2.2.4.1).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 2 OPS (Soviet only). Choose to either:\n   - Launch a RORSAT from Tyuratam into a Sea Zone, or\n   - Move a RORSAT already on the map to a different zone.",
+              "html": "<p>Spend 2 OPS (Soviet only). Choose to either:</p>\n<ul>\n<li>Launch a RORSAT from Tyuratam into a Sea Zone, or</li>\n<li>Move a RORSAT already on the map to a different zone.</li>\n</ul>\n",
+              "blocks": []
+            },
+            {
+              "text": "Roll a die. On a result of 1, the action fails catastrophically — the satellite is destroyed and placed in the Destroyed box (2.2.4.1).",
+              "html": "<p>Roll a die. On a result of 1, the action fails catastrophically — the satellite is destroyed and placed in the Destroyed box (2.2.4.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa2:miscellaneous",
+                  "label": "Miscellaneous (RORSAT cost, destroy-on-1, stack-at-4 rules)"
+                }
+              ]
+            },
+            {
+              "text": "On any other result, place the RORSAT in the target zone.",
+              "html": "<p>On any other result, place the RORSAT in the target zone.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "**Stacking**: RORSATs can be newly stacked together only if there are at least four already in play. Once 4+ are aloft, any further launches/moves may stack. Stacked RORSATs roll more detection dice (1 die per RORSAT present).",
+              "html": "<p><strong>Stacking</strong>: RORSATs can be newly stacked together only if there are at least four already in play. Once 4+ are aloft, any further launches/moves may stack. Stacked RORSATs roll more detection dice (1 die per RORSAT present).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Note: RORSATs may also be lost as collateral damage to Soviet facilities (7.5.3). If Lourdes is destroyed (8.4.5), one RORSAT is permanently removed and another temporarily removed.",
+              "html": "<p>Note: RORSATs may also be lost as collateral damage to Soviet facilities (7.5.3). If Lourdes is destroyed (8.4.5), one RORSAT is permanently removed and another temporarily removed.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-air-mp-fly-attack",
+                "title": "Maritime Patrol flies and attacks or detects"
+              },
+              {
+                "id": "act-sub-detect",
+                "title": "Submarine moves and detects"
+              }
+            ],
+            "ruleRefs": [
+              "5.4.3",
+              "2.2.4.1",
+              "7.5.3",
+              "8.4.5"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-misc-move-between-tfs",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Move ships between Task Forces",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "Two Task Forces are in the same Sea Zone and you want to shuffle units between them — typically to consolidate damaged ships, peel off escorts, or break apart a force without spending the 2 OPS to form a brand new TF (5.1.1.2).",
+        "cost": 1,
+        "ruleRefs": [
+          "5.1.1.2"
+        ],
+        "content": {
+          "whenItComesUp": "Two Task Forces are in the same Sea Zone and you want to shuffle units between them — typically to consolidate damaged ships, peel off escorts, or break apart a force without spending the 2 OPS to form a brand new TF (5.1.1.2).",
+          "whenItComesUpHtml": "<p>Two Task Forces are in the same Sea Zone and you want to shuffle units between them — typically to consolidate damaged ships, peel off escorts, or break apart a force without spending the 2 OPS to form a brand new TF (5.1.1.2).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 1 OPS. Select source and destination Task Forces — they must be in the same Sea Zone (5.1.1.2).",
+              "html": "<p>Spend 1 OPS. Select source and destination Task Forces — they must be in the same Sea Zone (5.1.1.2).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Move any units from the source TF to the destination TF (or to multiple destination TFs) as desired.",
+              "html": "<p>Move any units from the source TF to the destination TF (or to multiple destination TFs) as desired.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "**Detection propagation**: a unit moved from a detected force grants the detection status of the originating TF to the destination TF — unless the destination already has a higher status.",
+              "html": "<p><strong>Detection propagation</strong>: a unit moved from a detected force grants the detection status of the originating TF to the destination TF — unless the destination already has a higher status.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa4:detection-of-tfs",
+                  "label": "Detection of TFs (Poor / Good states)"
+                }
+              ]
+            },
+            {
+              "text": "Each remaining TF must still contain at least one Surface Unit (5.1.2). Empty TF markers return to the Task Force display.",
+              "html": "<p>Each remaining TF must still contain at least one Surface Unit (5.1.2). Empty TF markers return to the Task Force display.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "The TFs may become Slow or Fast depending on whether (S) slow units are present after the swap.",
+              "html": "<p>The TFs may become Slow or Fast depending on whether (S) slow units are present after the swap.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-ship-form-tf",
+                "title": "Form a new Task Force"
+              },
+              {
+                "id": "act-ship-move",
+                "title": "Move ships in a Task Force"
+              }
+            ],
+            "ruleRefs": [
+              "5.1.1.2",
+              "5.1.2",
+              "5.1.2.1"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-misc-pass",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Pass",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "You have fewer Operations Points than your opponent and would rather wait for them to commit. Passing burns the action slot at zero cost so the opponent must play next, after which you get another chance to act (5.4.5).",
+        "cost": 0,
+        "ruleRefs": [
+          "5.4.5",
+          "4.2"
+        ],
+        "content": {
+          "whenItComesUp": "You have fewer Operations Points than your opponent and would rather wait for them to commit. Passing burns the action slot at zero cost so the opponent must play next, after which you get another chance to act (5.4.5).",
+          "whenItComesUpHtml": "<p>You have fewer Operations Points than your opponent and would rather wait for them to commit. Passing burns the action slot at zero cost so the opponent must play next, after which you get another chance to act (5.4.5).</p>\n",
+          "procedure": [
+            {
+              "text": "Verify your remaining OPS total is less than your opponent's (5.4.5).",
+              "html": "<p>Verify your remaining OPS total is less than your opponent&#39;s (5.4.5).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Declare Pass. No OPS is spent.",
+              "html": "<p>Declare Pass. No OPS is spent.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "The opponent plays the next action.",
+              "html": "<p>The opponent plays the next action.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Play returns to you for another action choice. You may pass again if the OPS imbalance still holds.",
+              "html": "<p>Play returns to you for another action choice. You may pass again if the OPS imbalance still holds.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-anytime-draw-card",
+                "title": "Draw a card (hand < 3)"
+              }
+            ],
+            "ruleRefs": [
+              "5.4.5",
+              "4.2"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
+      },
+      {
+        "id": "act-misc-repair",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "Repair a facility",
+        "type": "operations-event",
+        "usage": "action",
+        "text": "A facility (port, airbase, etc.) has taken damage. Spending 2 OPS removes one Hit; if the removal would change the damage status (Heavy → Light, Light → Undamaged), a die roll is required (5.4.1).",
+        "cost": 2,
+        "ruleRefs": [
+          "5.4.1",
+          "2.3.8.4"
+        ],
+        "content": {
+          "whenItComesUp": "A facility (port, airbase, etc.) has taken damage. Spending 2 OPS removes one Hit; if the removal would change the damage status (Heavy → Light, Light → Undamaged), a die roll is required (5.4.1).",
+          "whenItComesUpHtml": "<p>A facility (port, airbase, etc.) has taken damage. Spending 2 OPS removes one Hit; if the removal would change the damage status (Heavy → Light, Light → Undamaged), a die roll is required (5.4.1).</p>\n",
+          "procedure": [
+            {
+              "text": "Spend 2 OPS and select one damaged facility.",
+              "html": "<p>Spend 2 OPS and select one damaged facility.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Remove one Hit marker from the facility.",
+              "html": "<p>Remove one Hit marker from the facility.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "If removing this Hit would change the damage status, roll a die. Result of 5+ confirms the status change. On 1-4, the action is wasted (the Hit is still removed but the status does not improve).",
+              "html": "<p>If removing this Hit would change the damage status, roll a die. Result of 5+ confirms the status change. On 1-4, the action is wasted (the Hit is still removed but the status does not improve).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa6:facility-damage",
+                  "label": "Facility Damage · Effects cumulative"
+                }
+              ]
+            },
+            {
+              "text": "See (2.3.8.4) for the effects of facility damage on hosted units.",
+              "html": "<p>See (2.3.8.4) for the effects of facility damage on hosted units.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-misc-demine-port",
+                "title": "De-Mine a Port"
+              }
+            ],
+            "ruleRefs": [
+              "5.4.1",
+              "2.3.8.4",
+              "2.3.8.5"
+            ]
+          },
+          "whyAndWatchFor": "",
+          "whyAndWatchForHtml": ""
+        }
       }
     ]
   }

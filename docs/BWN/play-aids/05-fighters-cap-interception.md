@@ -32,8 +32,6 @@
 
 ## Fighter Combat vs Maritime Patrol (MP)
 
-> §7.5
-
 Includes vs Intrinsic carrier MP
 
 Roll air-to-air dice -2 (min=1) with one fresh fighter unit.
@@ -42,9 +40,9 @@ Die roll + Tactical Value = kills allowed
 
 | Combat | Result |
 |---|---|
-| 9+ vs. plane | -1 search, **-1 die** |
+| 9+ vs. plane | -1 search, per die |
 | N10 vs. plane | Step loss and no search |
-| 6+ vs. helo | -1 search, **-1 die** |
+| 6+ vs. helo | -1 search, per die |
 | N8–10 vs. helo | Step loss and no search |
 
 Air to Air Technology - Soviet +1 DRM
@@ -57,7 +55,7 @@ Intrinsic MPs are always helos except for US carriers.
 
 ## Escorted Air Strikes
 
-- The defending player may roll with one defending fighter for each strike aircraft or each escorting fighter.
+- The defending player may roll with one defending fighter for each strike aircraft **or** each escorting fighter.
 - All damages must be allocated to escorting fighters first except for N10 results.
 - Any strike air killed by fighters in an escorted mission does not attack.
 
@@ -79,17 +77,17 @@ Roll all fighter dice with one fighter for each strike unit. CAP must come from 
 Air to Air Technology - Soviet +1 DRM
 *(Optional: F-14 missile defence)*
 
-### Interceptors
-
 | Result | Effect |
 |---|---|
 | N10 | CAP kill before launch |
 | N9 | As per **N10** if strike bombing |
 | N1–2 with F-14 rolling | Kill this number of missiles |
 
+## Interceptors
+
 Killing or failing to kill by one pip causes the strike to count as 'detected by interceptors' from then on. An intercepted strike may abort after all fighters in the Sea Zone roll.
 
-### Saves Against CAP Kills
+## Saves Against CAP Kills
 
 All kills by CAP (not by interceptors) may be saved based on the detection status of the base from which the fighter flew.
 
@@ -111,13 +109,14 @@ DR + tactical value = kills allowed
 | Intercepting Fighter unit 'On Patrol' | -1 die |
 | CAP 'Spent' | -2 dice |
 | Detected by Interceptors | +1 die |
-| Damaged Carrier (CV) **or** light damage | -1 die |
+| Damaged Carrier (CV) | -1 die |
+| Facility light damage | -1 die |
 
 Air to Air Technology - Soviet +1 DRM
 
 | Result | Effect |
 |---|---|
-| N10 (Defending Player) | Step loss on Strike unit *(N10 if attacker is using fighters)* |
+| N10 (Defending Player) | Step loss on Strike unit |
 
 All step losses are selected by the rolling player. Fighters must be killed before strike units can be selected *(except N10)*.
 

@@ -1,20 +1,28 @@
 import { useState, useMemo } from "react";
-import type { CardCategory, GameCard } from "../../types/goss";
+import type { CardCategory, GameCard, PlayAidBlocksMap } from "../../types/goss";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
 interface ActionsPanelProps {
   cards: CardCategory[];
+  /** Map of pa<N>:<slug> → play-aid block (pre-rendered HTML). BWN-only; empty for other games. */
+  playAidBlocks?: PlayAidBlocksMap;
   title?: string;
   subtitle?: string;
   emptyMessage?: string;
 }
 
 const TYPE_LABEL: Record<string, string> = {
-  "operations-event": "Operations Event",
-  "reaction-event": "Reaction Event",
+  "operations-event": "Action",
+  "reaction-event": "Reaction",
   "use-when-active": "Use When Active",
-  "use-anytime": "Use At Any Time",
+  "use-anytime": "Use Anytime",
+};
+
+const USAGE_BADGE: Record<string, { label: string; cls: string }> = {
+  action: { label: "ACTION", cls: "bg-sky-200 text-sky-900 dark:bg-sky-900/40 dark:text-sky-200" },
+  active: { label: "ACTIVE", cls: "bg-amber-200 text-amber-900 dark:bg-amber-900/40 dark:text-amber-200" },
+  anytime: { label: "ANYTIME", cls: "bg-violet-200 text-violet-900 dark:bg-violet-900/40 dark:text-violet-200" },
 };
 
 const SIDE_BADGE: Record<string, { label: string; cls: string }> = {
@@ -25,14 +33,14 @@ const SIDE_BADGE: Record<string, { label: string; cls: string }> = {
 
 export function ActionsPanel({
   cards,
+  playAidBlocks = {},
   title = "Actions",
-  subtitle = "Operations Phase actions and event cards. Click any item for details.",
+  subtitle = "Operations Phase actions. Click any item to see procedure and play-aid tables inline.",
   emptyMessage = "No actions catalog for this game.",
 }: ActionsPanelProps) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
 
-  // Flatten + filter
   const filtered = useMemo<CardCategory[]>(() => {
     if (!query.trim()) return cards;
     const q = query.toLowerCase();
@@ -44,7 +52,8 @@ export function ActionsPanel({
             c.title.toLowerCase().includes(q) ||
             c.cardNumber.toLowerCase().includes(q) ||
             (c.text ?? "").toLowerCase().includes(q) ||
-            (c.clarification ?? "").toLowerCase().includes(q),
+            (c.clarification ?? "").toLowerCase().includes(q) ||
+            (c.content?.whenItComesUp ?? "").toLowerCase().includes(q),
         ),
       }))
       .filter((cat) => cat.cards.length > 0);
@@ -94,6 +103,7 @@ export function ActionsPanel({
                 {cat.cards.map((c) => {
                   const isSel = c.id === selectedId;
                   const sideBadge = SIDE_BADGE[c.side];
+                  const usageBadge = c.usage ? USAGE_BADGE[c.usage] : null;
                   return (
                     <li key={c.id}>
                       <button
@@ -109,6 +119,11 @@ export function ActionsPanel({
                             <span className="font-mono text-xs text-stone-400">#{c.cardNumber}</span>
                           )}
                           <span className="flex-1 font-medium">{c.title}</span>
+                          {usageBadge && c.usage !== "action" && (
+                            <span className={`rounded px-1.5 py-0.5 text-[9px] font-bold tracking-wide ${usageBadge.cls}`}>
+                              {usageBadge.label}
+                            </span>
+                          )}
                           {sideBadge.label && (
                             <span className={`rounded px-1.5 py-0.5 text-[10px] font-bold ${sideBadge.cls}`}>
                               {sideBadge.label}
@@ -121,7 +136,7 @@ export function ActionsPanel({
                           )}
                         </div>
                         {(c.text || c.clarification) && (
-                          <div className="mt-0.5 truncate text-xs text-stone-500 dark:text-stone-400">
+                          <div className="mt-0.5 line-clamp-2 text-xs text-stone-500 dark:text-stone-400">
                             {c.text || c.clarification}
                           </div>
                         )}
@@ -143,7 +158,7 @@ export function ActionsPanel({
       {/* Right: detail panel */}
       <div className="hidden flex-1 overflow-y-auto rounded-lg border border-stone-200 bg-stone-50 p-5 dark:border-stone-700 dark:bg-stone-800/50 md:block">
         {selectedCard ? (
-          <CardDetail card={selectedCard} />
+          <CardDetail card={selectedCard} playAidBlocks={playAidBlocks} />
         ) : (
           <div className="flex h-full items-center justify-center text-sm text-stone-400">
             Select an action to see details.
@@ -154,8 +169,11 @@ export function ActionsPanel({
   );
 }
 
-function CardDetail({ card }: { card: GameCard }) {
+function CardDetail({ card, playAidBlocks }: { card: GameCard; playAidBlocks: PlayAidBlocksMap }) {
   const sideBadge = SIDE_BADGE[card.side];
+  const usageBadge = card.usage ? USAGE_BADGE[card.usage] : null;
+  const hasRichContent = !!card.content?.procedure?.length;
+
   return (
     <div>
       <div className="mb-3 flex flex-wrap items-center gap-2">
@@ -164,14 +182,21 @@ function CardDetail({ card }: { card: GameCard }) {
             #{card.cardNumber}
           </span>
         )}
+        {usageBadge && (
+          <span className={`rounded px-2 py-1 text-xs font-bold tracking-wide ${usageBadge.cls}`}>
+            {usageBadge.label}
+          </span>
+        )}
+        {!usageBadge && (
+          <span className="rounded border border-stone-300 px-2 py-1 text-xs text-stone-600 dark:border-stone-600 dark:text-stone-300">
+            {TYPE_LABEL[card.type] ?? card.type}
+          </span>
+        )}
         {sideBadge.label && (
           <span className={`rounded px-2 py-1 text-xs font-bold ${sideBadge.cls}`}>
             {sideBadge.label}
           </span>
         )}
-        <span className="rounded border border-stone-300 px-2 py-1 text-xs text-stone-600 dark:border-stone-600 dark:text-stone-300">
-          {TYPE_LABEL[card.type] ?? card.type}
-        </span>
         {typeof card.cost === "number" && (
           <span className="rounded bg-amber-200 px-2 py-1 text-xs font-bold text-amber-900 dark:bg-amber-900/40 dark:text-amber-300">
             {card.cost} OPS
@@ -181,6 +206,101 @@ function CardDetail({ card }: { card: GameCard }) {
 
       <h3 className="mb-3 text-xl font-bold">{card.title}</h3>
 
+      {hasRichContent ? (
+        <RichActionContent card={card} playAidBlocks={playAidBlocks} />
+      ) : (
+        <SimpleActionContent card={card} />
+      )}
+    </div>
+  );
+}
+
+/** Render the rich content from BWN merge pipeline. */
+function RichActionContent({ card, playAidBlocks }: { card: GameCard; playAidBlocks: PlayAidBlocksMap }) {
+  const c = card.content!;
+  return (
+    <div>
+      {c.whenItComesUpHtml && (
+        <section className="mb-5">
+          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-stone-500">
+            When does this come up?
+          </h4>
+          <div
+            className="prose-action text-sm leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: c.whenItComesUpHtml }}
+          />
+        </section>
+      )}
+
+      {c.procedure && c.procedure.length > 0 && (
+        <section className="mb-5">
+          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-stone-500">
+            Procedure
+          </h4>
+          <ol className="space-y-3 list-decimal pl-6">
+            {c.procedure.map((step, i) => (
+              <li key={i} className="text-sm leading-relaxed">
+                <div className="prose-action" dangerouslySetInnerHTML={{ __html: step.html }} />
+                {step.blocks.map((ref, j) => {
+                  const block = playAidBlocks[ref.slug];
+                  return (
+                    <PlayAidInline
+                      key={`${ref.slug}-${j}`}
+                      slug={ref.slug}
+                      label={ref.label}
+                      block={block}
+                    />
+                  );
+                })}
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      {c.seeAlso && (c.seeAlso.actions.length > 0 || c.seeAlso.ruleRefs.length > 0 || (card.ruleRefs && card.ruleRefs.length > 0)) && (
+        <section className="mb-5">
+          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-stone-500">
+            See also
+          </h4>
+          {c.seeAlso.actions.length > 0 && (
+            <ul className="mb-2 space-y-1 text-sm">
+              {c.seeAlso.actions.map((a) => (
+                <li key={a.id} className="text-accent-700 dark:text-accent-300">
+                  → {a.title}
+                </li>
+              ))}
+            </ul>
+          )}
+          {(card.ruleRefs && card.ruleRefs.length > 0) && (
+            <div className="flex flex-wrap gap-1.5">
+              {card.ruleRefs.map((ref) => (
+                <RuleRefBadge key={ref} ruleRef={ref} />
+              ))}
+            </div>
+          )}
+        </section>
+      )}
+
+      {c.whyAndWatchFor && (
+        <section className="mb-5 rounded-md border-l-4 border-emerald-500 bg-emerald-50 p-3 dark:bg-emerald-900/20">
+          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
+            Why and what to watch for
+          </h4>
+          <div
+            className="prose-action text-sm leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: c.whyAndWatchForHtml ?? "" }}
+          />
+        </section>
+      )}
+    </div>
+  );
+}
+
+/** Fallback simple rendering when the card doesn't have rich content (e.g. event cards). */
+function SimpleActionContent({ card }: { card: GameCard }) {
+  return (
+    <>
       {card.text && (
         <div className="mb-4 text-sm leading-relaxed">
           <RuleInlineText text={card.text} />
@@ -215,6 +335,52 @@ function CardDetail({ card }: { card: GameCard }) {
             ))}
           </div>
         </div>
+      )}
+    </>
+  );
+}
+
+/** Inline render of a play-aid block, collapsed by default. */
+function PlayAidInline({
+  slug,
+  label,
+  block,
+}: {
+  slug: string;
+  label: string;
+  block: import("../../types/goss").PlayAidBlock | undefined;
+}) {
+  const [open, setOpen] = useState(true);
+
+  if (!block) {
+    // Unresolved ref — render as a warning chip
+    return (
+      <div className="mt-2 ml-1 rounded-md border-l-4 border-red-500 bg-red-50 p-2 text-xs text-red-900 dark:bg-red-900/20 dark:text-red-300">
+        <span className="font-mono">{slug}</span> · {label} (unresolved play-aid reference)
+      </div>
+    );
+  }
+
+  return (
+    <div className="mt-2 ml-1 overflow-hidden rounded-md border border-amber-300 bg-amber-50 dark:border-amber-700 dark:bg-amber-950/30">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="flex w-full items-center justify-between gap-2 bg-amber-100 px-3 py-1.5 text-left text-xs font-semibold text-amber-900 hover:bg-amber-200 dark:bg-amber-900/40 dark:text-amber-200 dark:hover:bg-amber-900/60"
+      >
+        <span className="flex items-center gap-2">
+          <span className="rounded bg-amber-300 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wide text-amber-900 dark:bg-amber-700 dark:text-amber-100">
+            PA{block.paNumber}
+          </span>
+          <span>{block.title}</span>
+        </span>
+        <span className="text-amber-700 dark:text-amber-400">{open ? "−" : "+"}</span>
+      </button>
+      {open && (
+        <div
+          className="prose-action px-3 py-2 text-sm leading-relaxed text-stone-800 dark:text-stone-200"
+          dangerouslySetInnerHTML={{ __html: block.html }}
+        />
       )}
     </div>
   );

@@ -4,14 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node scripts/ensure-forum-knowledge.mjs && vite",
-    "build": "node scripts/ensure-forum-knowledge.mjs && tsc -b && vite build",
+    "dev": "node scripts/ensure-forum-knowledge.mjs && npm run merge:bwn && vite",
+    "build": "node scripts/ensure-forum-knowledge.mjs && npm run merge:bwn && tsc -b && vite build",
     "build:single": "node scripts/strip-forum-for-singlefile.mjs -- node scripts/build-single-inner.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "scrape:bgg": "node scripts/scrape-bgg-bwn.mjs",
     "curate:bgg": "node scripts/curate-bgg-forum.mjs",
-    "refresh:bgg": "node scripts/scrape-bgg-bwn.mjs && node scripts/curate-bgg-forum.mjs"
+    "refresh:bgg": "node scripts/scrape-bgg-bwn.mjs && node scripts/curate-bgg-forum.mjs",
+    "merge:bwn": "node scripts/merge-bwn-play-aids.mjs && node scripts/merge-bwn-actions.mjs",
+    "build:bwn-pdf": "node scripts/build-bwn-print-pdf.mjs"
   },
   "dependencies": {
     "@xyflow/react": "^12.10.1",

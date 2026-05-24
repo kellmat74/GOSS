@@ -13,19 +13,19 @@
 
 - Die roll + Tactical Value = kills allowed
 - Torpedo Tech — Soviet nuclear submarines Tactical Value = 1
-- *(Optional: MP & sub - sub rolls with +2 dice. Both apply)*
+- *(Optional: MP & sub - sub rolls with +2 dice. Both spent)*
 
-Select any submarine targets with the die roll for any natural result. Defender selects first target killed, attacker selects others.
+Select any submarine targets with the D value equal or lower. Defender selects first target killed, attacker selects others.
 
 | Die roll | Effect |
 |---|---|
-| N 1 (NATO rolling) | One step loss in the Bastion (one-roll) |
-| N10 | • Any submarine flat by the attacker per...<br>• TF detected, may activate all other dice and attack it or...<br>• Soviet nuclear submarine take up SSBN Hunting marker, set in Barents or Norwegian Seas (North 5–6 & 7–8) or Black or Baltic Seas. |
+| N 1 (NATO rolling) | One step loss in the Bastion (one-/roll) |
+| N10 | • Any submarine hit by the attacker or...<br>• TF detected, may ignore all other dice and attack it or...<br>• Soviet nuclear submarine take or use SSBN Hunting marker, not in Barents or Norwegian Seas (North 5–6 & 7–8) or Black or Baltic Seas. |
 | Any payoffs <10 | Any Soviet sub rolling: kill 1 step |
-| **Arctic** | -1 die; All subs 6+ save or upgrade 6+ save to 4+. Square rocket Torpedo |
+| **Arctic** | -1 die; All subs 6+ save or upgrade 6+ save to 4+. Ignore rocket Torpedo |
 | **Bad Weather** | -1 die; -2 dice for MP units |
 | **Hydrophone Interruption** | +1 die or roll 1 die and not spent *(Optional: always one die, not spent, if submarine)* |
-| **Subs marked ◆** | Cannot be killed by MP unless on N10 |
+| **Non-Magnetic Subs** | Cannot be killed by MP unless on N10 |
 | **'Save' subs** | Ignore any hit on a roll of a 6+ |
 
 *N = natural roll*
@@ -34,15 +34,13 @@ Select any submarine targets with the die roll for any natural result. Defender 
 
 ## Anti-Submarine Warfare by Task Forces
 
-> §17.9
-
 A Task Force may search for submarines instead of moving.
 
-Use the TF ASW values and dice totals from the submarine vs. Task Force section (immediately right) but for a Poor detection on the TF after its search.
+Use the TF ASW values and dice totals from the submarine vs. Task Force section but ignore the modification for a fasy TF. Place a Poor detection on the TF after its search.
 
 - If the TF rolls any two N1-2 results instead place a Good detection on the TF after its search.
-- Resolve using the Anti-Submarine Warfare process. Ships with rocket torpedoes ◆ kill on doubles ◆.
-- Hits are not on N10 only.
+- Resolve using the Anti-Submarine Warfare process. Ships with rocket torpedoes kill on doubles <10.
+- Non-Magnetic units are hit on N10 only.
 
 *N = natural roll*
 
@@ -50,31 +48,29 @@ Use the TF ASW values and dice totals from the submarine vs. Task Force section 
 
 ## Effects of hits by Submarines
 
-> §17.9
-
 | Outcome | Effect |
 |---|---|
 | **Convoys** | Increase the hit marker by 1 |
 | **Capital Ship** | See Capital Ship Damage Procedure |
 | **Other unit** | Cause a step loss |
 
-### Hit Results
+## Hit Results
 
-#### Capital Ships, Carriers & ◆
+- **Hit**: Non-capital ship without Prairie Masker — step loss, chosen by attacker.
+- **Amph / Convoy / Prairie Masker**: Non-capital ship step loss or hit on Amph/Convoy. Attacker selects first hit & others to Convoys or allows defender to allocate after the first.
 
-- **Hit**: Non-capital ship without ◆ — step loss, chosen by attacker.
-- **Amph / Convoy / ◆**: Non-capital ship step loss or hit on Amph/Convoy. Attacker selects first hit & others to Convoys or allows defender to allocate after the first.
+##### Capital Ships: Carriers, Big Target, Huge Target, or Limited Ammunition
 
 ---
 
 ## Submarine Launched Missiles vs. Task Force
 
-Roll a die if 'Good detection' & use the best roll.
+Roll 1 die, 2 if 'Good detection' & use the best roll.
 
 | Roll | Effect |
 |---|---|
 | 1–3 | No attack |
-| 4–7 | Long Range attack *(Charlie II only)* |
+| 4–7 | Long Range attack *(Optional: no attack for Charlie II)* |
 | 8–9 | Short Range attack *(gives a bonus effect vs. SAMs)* |
 | 10 | Short Range attack and submarine vs Task Force |
 
@@ -85,8 +81,6 @@ Roll a die if 'Good detection' & use the best roll.
 
 ## Submarine vs. Task Force
 
-> §17.11
-
 Roll anti-surface dice (Minimum = 1). DR + Tactical value = results on sub vs TF table.
 
 | Detection | DRM |
@@ -95,26 +89,26 @@ Roll anti-surface dice (Minimum = 1). DR + Tactical value = results on sub vs TF
 | **Bad Weather** | -1 die |
 | **Target TF is Fast** | -1 die; -2 dice if diesel sub attacking |
 
-### Submarine Attack Table
+## Submarine Attack Results
 
 | Die Roll | Result |
 |---|---|
 | 1–5 | — |
-| 6 | Hit ★ |
-| 7–9 | Amph, Convoy or ◆ |
-| 10+ | 2 Convoy (once) ★ |
+| 6 | Hit & (Super Heavy Torp) |
+| 7–9 | Amph, Convoy or Prairie Masker |
+| 10+ | 2 Convoy (once) & (Super Heavy Torp) |
 | N10 | Hit vs any or as 10 |
 
 *N = natural roll*
 
 Set dice to the side for possible defender cancellation.
 
-- ◆ submarines rolling this result may move row down, alter the dice. Dice may also be used to kill escort submarines.
+- Super Heavy Torp submarines rolling this result may move one row down (improve), alter the dice. Dice may also be used to kill escort submarines.
 - If no hits, combat ends.
-- If US or UK nuclear subs, Torpedo tech — Soviets can also use a double 1-6 may immediately resolve as hit.
+- If US or UK nuclear subs, (Torpedo tech — Soviets can also use) a double 1-6 may immediately resolve as hit.
 - A double 7-10 may immediately resolve as PM/Amph/Can.
 
-### Task Force ASW
+## Task Force ASW
 
 | Unit | Value |
 |---|---|
@@ -123,11 +117,11 @@ Set dice to the side for possible defender cancellation.
 | 'On Patrol' MP | ASW; 1 in Bad Weather |
 | Ship | ASW |
 
-### Task Force ASW Defense
+## Task Force ASW Defense
 
-Calculate ASW value then roll the ASW dice.
+Calculate ASW total and then roll the ASW dice.
 
-### Task Force ASW Total
+#### Task Force ASW Total
 
 | ASW | Dice/Tactical |
 |---|---|
@@ -139,10 +133,11 @@ Calculate ASW value then roll the ASW dice.
 | 13–17 | 4 |
 | 18+ | 4 + 1 |
 
+*Up one row in Bad Weather*<br>
+*Up one row if TF is fast*
+
 | Defender | Effect |
 |---|---|
-| **Any double** | TF owner may offer one die to an 8 and discard the other if any ships have ◆ rocket torpedoes and it is not Bad Weather. |
-| **Each 8+** | TF owner may remove one submarine attack die of their choice. DR + tactical value = kills allowed. ◆ subs killed on N10 |
+| **Any double** | TF owner may alter one die to an 8 and discard the other if any ships have rocket torpedoes and it is not Bad Weather. |
+| **Each 8+** | TF owner may remove one submarine attack die of their choice. DR + tactical value = kills allowed. Non-magnetic subs killed on N10 |
 
-*Up one row in Bad Weather*
-*Up one row if TF is fast*

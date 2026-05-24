@@ -59,6 +59,7 @@ export const blueWaterNavyConfig: GameSystemConfig = {
         rules: () => Promise.resolve({ default: [] }),
         actions: () => import("./actions.json"),
         cards: () => import("./cards.json"),
+        playAidBlocks: () => import("./play-aid-blocks.json"),
         scenarioBook: () => import("./scenario-book.json"),
         coachContext: () => import("./coach-context.json"),
         // Forum-knowledge.json is gitignored (full BGG post text not mirrored

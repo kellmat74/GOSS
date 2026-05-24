@@ -1,0 +1,457 @@
+{
+  "pa2:actions": {
+    "paNumber": 2,
+    "title": "Actions (overview)",
+    "body": "Each unit action costs **one OPS** unless stated otherwise.",
+    "html": "<p>Each unit action costs <strong>one OPS</strong> unless stated otherwise.</p>\n",
+    "sourceFile": "02-actions-and-turn-sequence.md"
+  },
+  "pa2:ops-track-events": {
+    "paNumber": 2,
+    "title": "OPS Track Events",
+    "body": "Trigger after both players' OPS markers move to/past the relevant box on the Operations Points Record Track.\n\n#### Fast\n\nFast Task Forces may move (not perform ASW) one Sea Zone. Ignore in day two. Resolve as per the ships event ignoring 2 & 4 and applying only to fast groups & zones they occupy.\n\n#### Ships\n\n1. All TFs may move one Sea Zone, resolve ASW, mark 'landing' or land if already marked 'landing'.\n   - Roll 1 detection against any marked 'landing'.\n   - Perform movement in order of detection status (Full/Partial/None, Soviet First).\n   - NATO may dissolve TFs. Submarines may join a TF if not spent or 'on-patrol'.\n   - 'On Patrol' units may react to enemy movement. 'On Patrol' air may move with a moving TF (check range).\n2. Degrade detection not placed in step 1 *(Fast Ignore)*\n3. RORSATs search\n4. Air unit spent marker removed except for MP *(Fast Ignore)*\n5. Resolve fighter vs. fighter combat due to movement of TF\n6. Intrinsic detection units are attacked and then search\n\n#### Repair\n\nRemove one hit from each damaged facility.\n\n#### Next Day\n\nBoth play 2nd card (Soviet first) then continue the game.",
+    "html": "<p>Trigger after both players&#39; OPS markers move to/past the relevant box on the Operations Points Record Track.</p>\n<h4>Fast</h4>\n<p>Fast Task Forces may move (not perform ASW) one Sea Zone. Ignore in day two. Resolve as per the ships event ignoring 2 &amp; 4 and applying only to fast groups &amp; zones they occupy.</p>\n<h4>Ships</h4>\n<ol>\n<li>All TFs may move one Sea Zone, resolve ASW, mark &#39;landing&#39; or land if already marked &#39;landing&#39;.<ul>\n<li>Roll 1 detection against any marked &#39;landing&#39;.</li>\n<li>Perform movement in order of detection status (Full/Partial/None, Soviet First).</li>\n<li>NATO may dissolve TFs. Submarines may join a TF if not spent or &#39;on-patrol&#39;.</li>\n<li>&#39;On Patrol&#39; units may react to enemy movement. &#39;On Patrol&#39; air may move with a moving TF (check range).</li>\n</ul>\n</li>\n<li>Degrade detection not placed in step 1 <em>(Fast Ignore)</em></li>\n<li>RORSATs search</li>\n<li>Air unit spent marker removed except for MP <em>(Fast Ignore)</em></li>\n<li>Resolve fighter vs. fighter combat due to movement of TF</li>\n<li>Intrinsic detection units are attacked and then search</li>\n</ol>\n<h4>Repair</h4>\n<p>Remove one hit from each damaged facility.</p>\n<h4>Next Day</h4>\n<p>Both play 2nd card (Soviet first) then continue the game.</p>\n",
+    "sourceFile": "02-actions-and-turn-sequence.md"
+  },
+  "pa2:submarines": {
+    "paNumber": 2,
+    "title": "Submarines",
+    "body": "- Diesels move 1, Nuclear moves 2\n- A soviet SSBN may take a nuclear sub with it, both spent.\n- Slow subs may move **or** attack **or** go 'on patrol'. If moving, move 2.\n  - 1 sub move and attack\n  - 1 sub attack and then move\n  - 1 sub move and go 'on patrol'\n  - 1 nuclear sub fast move 3 zones\n*(Optional: Noise — except for Akula, Oscar, Alfa, Sierra)*\n  - 2–3 subs missile coordinate — all attacks to same zone and perform a missile attack.",
+    "html": "<ul>\n<li>Diesels move 1, Nuclear moves 2</li>\n<li>A soviet SSBN may take a nuclear sub with it, both spent.</li>\n<li>Slow subs may move <strong>or</strong> attack <strong>or</strong> go &#39;on patrol&#39;. If moving, move 2.<ul>\n<li>1 sub move and attack</li>\n<li>1 sub attack and then move</li>\n<li>1 sub move and go &#39;on patrol&#39;</li>\n<li>1 nuclear sub fast move 3 zones\n<em>(Optional: Noise — except for Akula, Oscar, Alfa, Sierra)</em></li>\n<li>2–3 subs missile coordinate — all attacks to same zone and perform a missile attack.</li>\n</ul>\n</li>\n</ul>\n",
+    "sourceFile": "02-actions-and-turn-sequence.md"
+  },
+  "pa2:air-units": {
+    "paNumber": 2,
+    "title": "Air Units",
+    "body": "- 1 Maritime Patrol fly and attack or detect TF\n  - If a detection is placed or upgraded, active player may then play one further action to attack a detected TF.\n- 1 MP / Fighter fly and go 'on patrol'.\n- 1+ Strike units fly an air strike. Fighters & tankers may fly for free and fighters may escort part-way.",
+    "html": "<ul>\n<li>1 Maritime Patrol fly and attack or detect TF<ul>\n<li>If a detection is placed or upgraded, active player may then play one further action to attack a detected TF.</li>\n</ul>\n</li>\n<li>1 MP / Fighter fly and go &#39;on patrol&#39;.</li>\n<li>1+ Strike units fly an air strike. Fighters &amp; tankers may fly for free and fighters may escort part-way.</li>\n</ul>\n",
+    "sourceFile": "02-actions-and-turn-sequence.md"
+  },
+  "pa2:ships": {
+    "paNumber": 2,
+    "title": "Ships",
+    "body": "- Form a new TF: **Cost 2**\n- Move ships between TFs in the same zone: **Cost 1**\n- Fire missiles with a TF: **Cost 1**\n\nAutomatic vs. facilities, may require a roll vs. other TFs.",
+    "html": "<ul>\n<li>Form a new TF: <strong>Cost 2</strong></li>\n<li>Move ships between TFs in the same zone: <strong>Cost 1</strong></li>\n<li>Fire missiles with a TF: <strong>Cost 1</strong></li>\n</ul>\n<p>Automatic vs. facilities, may require a roll vs. other TFs.</p>\n",
+    "sourceFile": "02-actions-and-turn-sequence.md"
+  },
+  "pa2:miscellaneous": {
+    "paNumber": 2,
+    "title": "Miscellaneous",
+    "body": "- Repair a facility, remove a hit marker: **Cost 2**\n  - Requires a 5+ roll if the damage level will change.\n- De-Mine a port: **Cost 2**\n  - Requires a 5+ if undamaged facility, otherwise 7+.\n- Launch or move a RORSAT: **Cost 2**\n  - Destroyed on roll of a 1. Cannot stack until 4 aloft.\n- NATO may attack Cuba (See 21.5): **Cost 6**\n- Pass, if you have less ops than the enemy.",
+    "html": "<ul>\n<li>Repair a facility, remove a hit marker: <strong>Cost 2</strong><ul>\n<li>Requires a 5+ roll if the damage level will change.</li>\n</ul>\n</li>\n<li>De-Mine a port: <strong>Cost 2</strong><ul>\n<li>Requires a 5+ if undamaged facility, otherwise 7+.</li>\n</ul>\n</li>\n<li>Launch or move a RORSAT: <strong>Cost 2</strong><ul>\n<li>Destroyed on roll of a 1. Cannot stack until 4 aloft.</li>\n</ul>\n</li>\n<li>NATO may attack Cuba (See 21.5): <strong>Cost 6</strong></li>\n<li>Pass, if you have less ops than the enemy.</li>\n</ul>\n",
+    "sourceFile": "02-actions-and-turn-sequence.md"
+  },
+  "pa2:use-when-active": {
+    "paNumber": 2,
+    "title": "Use When Active (not an action)",
+    "body": "- Use a First Strike Point to buy an effect.\n- Use a Soviet Spy.\n- Use an event on either of your OPS cards & mark used.\n- Play an event on a card in your hand at +2 cost.\n- Return an 'on patrol' air unit to its base, fresh.",
+    "html": "<ul>\n<li>Use a First Strike Point to buy an effect.</li>\n<li>Use a Soviet Spy.</li>\n<li>Use an event on either of your OPS cards &amp; mark used.</li>\n<li>Play an event on a card in your hand at +2 cost.</li>\n<li>Return an &#39;on patrol&#39; air unit to its base, fresh.</li>\n</ul>\n",
+    "sourceFile": "02-actions-and-turn-sequence.md"
+  },
+  "pa2:use-at-any-time": {
+    "paNumber": 2,
+    "title": "Use At Any Time (not an action)",
+    "body": "- Play a Reaction event from a card in your hand.\n- On patrol units may attack enemy units moving through their zone:\n  - Fighters vs Air; MP/Subs vs subs; MP vs Task Force Detection; Subs via ASW vs Task Forces.\n- CAP may roll to attack air unit attacking their base.\n  - Carriers defend all bases and TFs in their Sea Zone.\n- Hydrophone detection when enemy subs move across.\n- Draw a card if you have less than 3 cards in hand.\n- Use a Soviet spy for First Strike evasion.",
+    "html": "<ul>\n<li>Play a Reaction event from a card in your hand.</li>\n<li>On patrol units may attack enemy units moving through their zone:<ul>\n<li>Fighters vs Air; MP/Subs vs subs; MP vs Task Force Detection; Subs via ASW vs Task Forces.</li>\n</ul>\n</li>\n<li>CAP may roll to attack air unit attacking their base.<ul>\n<li>Carriers defend all bases and TFs in their Sea Zone.</li>\n</ul>\n</li>\n<li>Hydrophone detection when enemy subs move across.</li>\n<li>Draw a card if you have less than 3 cards in hand.</li>\n<li>Use a Soviet spy for First Strike evasion.</li>\n</ul>\n",
+    "sourceFile": "02-actions-and-turn-sequence.md"
+  },
+  "pa3:anti-submarine-warfare": {
+    "paNumber": 3,
+    "title": "Anti-Submarine Warfare",
+    "body": "**Roll** anti-submarine warfare dice (minimum = 0 die). Resolve in order of lowest die to highest die.\n\n- Die roll + Tactical Value = kills allowed\n- Torpedo Tech — Soviet nuclear submarines Tactical Value = 1\n- *(Optional: MP & sub - sub rolls with +2 dice. Both spent)*\n\nSelect any submarine targets with the D value equal or lower. Defender selects first target killed, attacker selects others.\n\n| Die roll | Effect |\n|---|---|\n| N 1 (NATO rolling) | One step loss in the Bastion (one-/roll) |\n| N10 | • Any submarine hit by the attacker or...<br>• TF detected, may ignore all other dice and attack it or...<br>• Soviet nuclear submarine take or use SSBN Hunting marker, not in Barents or Norwegian Seas (North 5–6 & 7–8) or Black or Baltic Seas. |\n| Any payoffs <10 | Any Soviet sub rolling: kill 1 step |\n| **Arctic** | -1 die; All subs 6+ save or upgrade 6+ save to 4+. Ignore rocket Torpedo |\n| **Bad Weather** | -1 die; -2 dice for MP units |\n| **Hydrophone Interruption** | +1 die or roll 1 die and not spent *(Optional: always one die, not spent, if submarine)* |\n| **Non-Magnetic Subs** | Cannot be killed by MP unless on N10 |\n| **'Save' subs** | Ignore any hit on a roll of a 6+ |\n\n*N = natural roll*",
+    "html": "<p><strong>Roll</strong> anti-submarine warfare dice (minimum = 0 die). Resolve in order of lowest die to highest die.</p>\n<ul>\n<li>Die roll + Tactical Value = kills allowed</li>\n<li>Torpedo Tech — Soviet nuclear submarines Tactical Value = 1</li>\n<li><em>(Optional: MP &amp; sub - sub rolls with +2 dice. Both spent)</em></li>\n</ul>\n<p>Select any submarine targets with the D value equal or lower. Defender selects first target killed, attacker selects others.</p>\n<table>\n<thead>\n<tr>\n<th>Die roll</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>N 1 (NATO rolling)</td>\n<td>One step loss in the Bastion (one-/roll)</td>\n</tr>\n<tr>\n<td>N10</td>\n<td>• Any submarine hit by the attacker or...<br>• TF detected, may ignore all other dice and attack it or...<br>• Soviet nuclear submarine take or use SSBN Hunting marker, not in Barents or Norwegian Seas (North 5–6 &amp; 7–8) or Black or Baltic Seas.</td>\n</tr>\n<tr>\n<td>Any payoffs &lt;10</td>\n<td>Any Soviet sub rolling: kill 1 step</td>\n</tr>\n<tr>\n<td><strong>Arctic</strong></td>\n<td>-1 die; All subs 6+ save or upgrade 6+ save to 4+. Ignore rocket Torpedo</td>\n</tr>\n<tr>\n<td><strong>Bad Weather</strong></td>\n<td>-1 die; -2 dice for MP units</td>\n</tr>\n<tr>\n<td><strong>Hydrophone Interruption</strong></td>\n<td>+1 die or roll 1 die and not spent <em>(Optional: always one die, not spent, if submarine)</em></td>\n</tr>\n<tr>\n<td><strong>Non-Magnetic Subs</strong></td>\n<td>Cannot be killed by MP unless on N10</td>\n</tr>\n<tr>\n<td><strong>&#39;Save&#39; subs</strong></td>\n<td>Ignore any hit on a roll of a 6+</td>\n</tr>\n</tbody></table>\n<p><em>N = natural roll</em></p>\n",
+    "sourceFile": "03-attacks-on-and-by-submarines.md"
+  },
+  "pa3:anti-submarine-warfare-by-task-forces": {
+    "paNumber": 3,
+    "title": "Anti-Submarine Warfare by Task Forces",
+    "body": "A Task Force may search for submarines instead of moving.\n\nUse the TF ASW values and dice totals from the submarine vs. Task Force section but ignore the modification for a fasy TF. Place a Poor detection on the TF after its search.\n\n- If the TF rolls any two N1-2 results instead place a Good detection on the TF after its search.\n- Resolve using the Anti-Submarine Warfare process. Ships with rocket torpedoes kill on doubles <10.\n- Non-Magnetic units are hit on N10 only.\n\n*N = natural roll*",
+    "html": "<p>A Task Force may search for submarines instead of moving.</p>\n<p>Use the TF ASW values and dice totals from the submarine vs. Task Force section but ignore the modification for a fasy TF. Place a Poor detection on the TF after its search.</p>\n<ul>\n<li>If the TF rolls any two N1-2 results instead place a Good detection on the TF after its search.</li>\n<li>Resolve using the Anti-Submarine Warfare process. Ships with rocket torpedoes kill on doubles &lt;10.</li>\n<li>Non-Magnetic units are hit on N10 only.</li>\n</ul>\n<p><em>N = natural roll</em></p>\n",
+    "sourceFile": "03-attacks-on-and-by-submarines.md"
+  },
+  "pa3:effects-of-hits-by-submarines": {
+    "paNumber": 3,
+    "title": "Effects of hits by Submarines",
+    "body": "| Outcome | Effect |\n|---|---|\n| **Convoys** | Increase the hit marker by 1 |\n| **Capital Ship** | See Capital Ship Damage Procedure |\n| **Other unit** | Cause a step loss |",
+    "html": "<table>\n<thead>\n<tr>\n<th>Outcome</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Convoys</strong></td>\n<td>Increase the hit marker by 1</td>\n</tr>\n<tr>\n<td><strong>Capital Ship</strong></td>\n<td>See Capital Ship Damage Procedure</td>\n</tr>\n<tr>\n<td><strong>Other unit</strong></td>\n<td>Cause a step loss</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "03-attacks-on-and-by-submarines.md"
+  },
+  "pa3:hit-results": {
+    "paNumber": 3,
+    "title": "Hit Results",
+    "body": "- **Hit**: Non-capital ship without Prairie Masker — step loss, chosen by attacker.\n- **Amph / Convoy / Prairie Masker**: Non-capital ship step loss or hit on Amph/Convoy. Attacker selects first hit & others to Convoys or allows defender to allocate after the first.\n\n##### Capital Ships: Carriers, Big Target, Huge Target, or Limited Ammunition",
+    "html": "<ul>\n<li><strong>Hit</strong>: Non-capital ship without Prairie Masker — step loss, chosen by attacker.</li>\n<li><strong>Amph / Convoy / Prairie Masker</strong>: Non-capital ship step loss or hit on Amph/Convoy. Attacker selects first hit &amp; others to Convoys or allows defender to allocate after the first.</li>\n</ul>\n<h5>Capital Ships: Carriers, Big Target, Huge Target, or Limited Ammunition</h5>\n",
+    "sourceFile": "03-attacks-on-and-by-submarines.md"
+  },
+  "pa3:submarine-launched-missiles-vs-task-force": {
+    "paNumber": 3,
+    "title": "Submarine Launched Missiles vs. Task Force",
+    "body": "Roll 1 die, 2 if 'Good detection' & use the best roll.\n\n| Roll | Effect |\n|---|---|\n| 1–3 | No attack |\n| 4–7 | Long Range attack *(Optional: no attack for Charlie II)* |\n| 8–9 | Short Range attack *(gives a bonus effect vs. SAMs)* |\n| 10 | Short Range attack and submarine vs Task Force |\n\n- -2 DRM if diesel submarine and target TF is Fast\n- -2 DRM for missile coordination per unit after the 1st (example: -2 DRM for 2 units, -4 DRM for 3 units)",
+    "html": "<p>Roll 1 die, 2 if &#39;Good detection&#39; &amp; use the best roll.</p>\n<table>\n<thead>\n<tr>\n<th>Roll</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–3</td>\n<td>No attack</td>\n</tr>\n<tr>\n<td>4–7</td>\n<td>Long Range attack <em>(Optional: no attack for Charlie II)</em></td>\n</tr>\n<tr>\n<td>8–9</td>\n<td>Short Range attack <em>(gives a bonus effect vs. SAMs)</em></td>\n</tr>\n<tr>\n<td>10</td>\n<td>Short Range attack and submarine vs Task Force</td>\n</tr>\n</tbody></table>\n<ul>\n<li>-2 DRM if diesel submarine and target TF is Fast</li>\n<li>-2 DRM for missile coordination per unit after the 1st (example: -2 DRM for 2 units, -4 DRM for 3 units)</li>\n</ul>\n",
+    "sourceFile": "03-attacks-on-and-by-submarines.md"
+  },
+  "pa3:submarine-vs-task-force": {
+    "paNumber": 3,
+    "title": "Submarine vs. Task Force",
+    "body": "Roll anti-surface dice (Minimum = 1). DR + Tactical value = results on sub vs TF table.\n\n| Detection | DRM |\n|---|---|\n| **Good Detection** | +1 die |\n| **Bad Weather** | -1 die |\n| **Target TF is Fast** | -1 die; -2 dice if diesel sub attacking |",
+    "html": "<p>Roll anti-surface dice (Minimum = 1). DR + Tactical value = results on sub vs TF table.</p>\n<table>\n<thead>\n<tr>\n<th>Detection</th>\n<th>DRM</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Good Detection</strong></td>\n<td>+1 die</td>\n</tr>\n<tr>\n<td><strong>Bad Weather</strong></td>\n<td>-1 die</td>\n</tr>\n<tr>\n<td><strong>Target TF is Fast</strong></td>\n<td>-1 die; -2 dice if diesel sub attacking</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "03-attacks-on-and-by-submarines.md"
+  },
+  "pa3:submarine-attack-results": {
+    "paNumber": 3,
+    "title": "Submarine Attack Results",
+    "body": "| Die Roll | Result |\n|---|---|\n| 1–5 | — |\n| 6 | Hit & (Super Heavy Torp) |\n| 7–9 | Amph, Convoy or Prairie Masker |\n| 10+ | 2 Convoy (once) & (Super Heavy Torp) |\n| N10 | Hit vs any or as 10 |\n\n*N = natural roll*\n\nSet dice to the side for possible defender cancellation.\n\n- Super Heavy Torp submarines rolling this result may move one row down (improve), alter the dice. Dice may also be used to kill escort submarines.\n- If no hits, combat ends.\n- If US or UK nuclear subs, (Torpedo tech — Soviets can also use) a double 1-6 may immediately resolve as hit.\n- A double 7-10 may immediately resolve as PM/Amph/Can.",
+    "html": "<table>\n<thead>\n<tr>\n<th>Die Roll</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–5</td>\n<td>—</td>\n</tr>\n<tr>\n<td>6</td>\n<td>Hit &amp; (Super Heavy Torp)</td>\n</tr>\n<tr>\n<td>7–9</td>\n<td>Amph, Convoy or Prairie Masker</td>\n</tr>\n<tr>\n<td>10+</td>\n<td>2 Convoy (once) &amp; (Super Heavy Torp)</td>\n</tr>\n<tr>\n<td>N10</td>\n<td>Hit vs any or as 10</td>\n</tr>\n</tbody></table>\n<p><em>N = natural roll</em></p>\n<p>Set dice to the side for possible defender cancellation.</p>\n<ul>\n<li>Super Heavy Torp submarines rolling this result may move one row down (improve), alter the dice. Dice may also be used to kill escort submarines.</li>\n<li>If no hits, combat ends.</li>\n<li>If US or UK nuclear subs, (Torpedo tech — Soviets can also use) a double 1-6 may immediately resolve as hit.</li>\n<li>A double 7-10 may immediately resolve as PM/Amph/Can.</li>\n</ul>\n",
+    "sourceFile": "03-attacks-on-and-by-submarines.md"
+  },
+  "pa3:task-force-asw": {
+    "paNumber": 3,
+    "title": "Task Force ASW",
+    "body": "| Unit | Value |\n|---|---|\n| Submarine | ASW x3 |\n| Carrier | +2; +0 in Bad Weather |\n| 'On Patrol' MP | ASW; 1 in Bad Weather |\n| Ship | ASW |",
+    "html": "<table>\n<thead>\n<tr>\n<th>Unit</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Submarine</td>\n<td>ASW x3</td>\n</tr>\n<tr>\n<td>Carrier</td>\n<td>+2; +0 in Bad Weather</td>\n</tr>\n<tr>\n<td>&#39;On Patrol&#39; MP</td>\n<td>ASW; 1 in Bad Weather</td>\n</tr>\n<tr>\n<td>Ship</td>\n<td>ASW</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "03-attacks-on-and-by-submarines.md"
+  },
+  "pa3:task-force-asw-defense": {
+    "paNumber": 3,
+    "title": "Task Force ASW Defense",
+    "body": "Calculate ASW total and then roll the ASW dice.\n\n#### Task Force ASW Total\n\n| ASW | Dice/Tactical |\n|---|---|\n| 0 | 0 |\n| 1–2 | 2 |\n| 3–5 | 2 + 1 |\n| 6–8 | 3 |\n| 9–12 | 3 + 1 |\n| 13–17 | 4 |\n| 18+ | 4 + 1 |\n\n*Up one row in Bad Weather*<br>\n*Up one row if TF is fast*\n\n| Defender | Effect |\n|---|---|\n| **Any double** | TF owner may alter one die to an 8 and discard the other if any ships have rocket torpedoes and it is not Bad Weather. |\n| **Each 8+** | TF owner may remove one submarine attack die of their choice. DR + tactical value = kills allowed. Non-magnetic subs killed on N10 |",
+    "html": "<p>Calculate ASW total and then roll the ASW dice.</p>\n<h4>Task Force ASW Total</h4>\n<table>\n<thead>\n<tr>\n<th>ASW</th>\n<th>Dice/Tactical</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>0</td>\n<td>0</td>\n</tr>\n<tr>\n<td>1–2</td>\n<td>2</td>\n</tr>\n<tr>\n<td>3–5</td>\n<td>2 + 1</td>\n</tr>\n<tr>\n<td>6–8</td>\n<td>3</td>\n</tr>\n<tr>\n<td>9–12</td>\n<td>3 + 1</td>\n</tr>\n<tr>\n<td>13–17</td>\n<td>4</td>\n</tr>\n<tr>\n<td>18+</td>\n<td>4 + 1</td>\n</tr>\n</tbody></table>\n<p><em>Up one row in Bad Weather</em><br>\n<em>Up one row if TF is fast</em></p>\n<table>\n<thead>\n<tr>\n<th>Defender</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Any double</strong></td>\n<td>TF owner may alter one die to an 8 and discard the other if any ships have rocket torpedoes and it is not Bad Weather.</td>\n</tr>\n<tr>\n<td><strong>Each 8+</strong></td>\n<td>TF owner may remove one submarine attack die of their choice. DR + tactical value = kills allowed. Non-magnetic subs killed on N10</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "03-attacks-on-and-by-submarines.md"
+  },
+  "pa4:detection-of-tfs": {
+    "paNumber": 4,
+    "title": "Detection of TFs (by MP, RORSAT, Tattletale)",
+    "body": "Roll number of TF detection dice. Resolve in order of lowest die to highest die.\n\n| Modifier | Effect |\n|---|---|\n| US CV detecting | 2 dice each |\n| Other CV detecting | 1 die each |\n| >2 enemy TF in the zone | +1 die per TF over 2 |\n| Soviet anti-submarine usage | -1 DRM per FSP |\n\n| Die Roll | TF Detection |\n|---|---|\n| 1–2 | No Effect |\n| 3–5 | **Poor Detection** — may upgrade any Poor detection to Good. Placed by TF owner unless upgrading. |\n| 6–8 | **Poor Detection** — may upgrade any Poor detection to Good. Placed by rolling player. |\n| 9–10 | **Good Detection** — placed by rolling player. Change to result '6' in Bad Weather. RORSAT change to '1'. |\n\n### Detection Results\n\n- **Poor Detection**: Reveal Amph, Convoys, 1 FTR of each type\n- **Good Detection**: Reveal entire group",
+    "html": "<p>Roll number of TF detection dice. Resolve in order of lowest die to highest die.</p>\n<table>\n<thead>\n<tr>\n<th>Modifier</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>US CV detecting</td>\n<td>2 dice each</td>\n</tr>\n<tr>\n<td>Other CV detecting</td>\n<td>1 die each</td>\n</tr>\n<tr>\n<td>&gt;2 enemy TF in the zone</td>\n<td>+1 die per TF over 2</td>\n</tr>\n<tr>\n<td>Soviet anti-submarine usage</td>\n<td>-1 DRM per FSP</td>\n</tr>\n</tbody></table>\n<table>\n<thead>\n<tr>\n<th>Die Roll</th>\n<th>TF Detection</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–2</td>\n<td>No Effect</td>\n</tr>\n<tr>\n<td>3–5</td>\n<td><strong>Poor Detection</strong> — may upgrade any Poor detection to Good. Placed by TF owner unless upgrading.</td>\n</tr>\n<tr>\n<td>6–8</td>\n<td><strong>Poor Detection</strong> — may upgrade any Poor detection to Good. Placed by rolling player.</td>\n</tr>\n<tr>\n<td>9–10</td>\n<td><strong>Good Detection</strong> — placed by rolling player. Change to result &#39;6&#39; in Bad Weather. RORSAT change to &#39;1&#39;.</td>\n</tr>\n</tbody></table>\n<h3>Detection Results</h3>\n<ul>\n<li><strong>Poor Detection</strong>: Reveal Amph, Convoys, 1 FTR of each type</li>\n<li><strong>Good Detection</strong>: Reveal entire group</li>\n</ul>\n",
+    "sourceFile": "04-task-force-combat.md"
+  },
+  "pa4:missile-attacks-on-tfs-vs-task-forces": {
+    "paNumber": 4,
+    "title": "Missile Attacks on TFs vs. Task Forces",
+    "body": "### Soviet Task Force Missile Attack\n\n- May fire yellow & black vs NATO Good detection TF in same zone, or vs Poor detection TF if Soviet TF is fast (or 6+).\n- If the target TF has F-14's, roll 1 die if the attacking Soviet TF is poor or 2 dice if good detected & remove that number of missiles on 1's & 2's.\n- White & red missiles by card only. *Except in Baltic Sea* — may fire vs Good detection TF in same zone. 1 ship only.\n- Missiles of different colors can be attacked at the NATO players option but declare before the dice are rolled.\n\n### NATO Task Force Missile Attack\n\nAnti-ship missiles by card event only. *Except in Baltic Sea* — may fire vs Good detection TF in same zone. 1 ship only.",
+    "html": "<h3>Soviet Task Force Missile Attack</h3>\n<ul>\n<li>May fire yellow &amp; black vs NATO Good detection TF in same zone, or vs Poor detection TF if Soviet TF is fast (or 6+).</li>\n<li>If the target TF has F-14&#39;s, roll 1 die if the attacking Soviet TF is poor or 2 dice if good detected &amp; remove that number of missiles on 1&#39;s &amp; 2&#39;s.</li>\n<li>White &amp; red missiles by card only. <em>Except in Baltic Sea</em> — may fire vs Good detection TF in same zone. 1 ship only.</li>\n<li>Missiles of different colors can be attacked at the NATO players option but declare before the dice are rolled.</li>\n</ul>\n<h3>NATO Task Force Missile Attack</h3>\n<p>Anti-ship missiles by card event only. <em>Except in Baltic Sea</em> — may fire vs Good detection TF in same zone. 1 ship only.</p>\n",
+    "sourceFile": "04-task-force-combat.md"
+  },
+  "pa4:capital-ship-damage": {
+    "paNumber": 4,
+    "title": "Capital Ship Damage",
+    "body": "Roll the number of dice indicated, and compare to the table.\n\nDamage Dice to roll based on Weapon Used §14.1:\n\n| No. of Dice | Weapon |\n|---|---|\n| 1 | NATO missile, Soviet white missile from a ship<br>Soviet red missile, Townsend missile (card). |\n| 2 | Soviet yellow, black or submarine white missile<br>Soviet or NATO torpedo. |\n| 3 | Soviet torpedo from Super Heavy Torp submarine. |\n| +1 die | Already damaged |\n| +1 die | Each additional hit taken at the same time. |\n\n| Target | Damaged | Sunk |\n|---|---|---|\n| **Big Target** | All dice 1–7 | Any 8–10 |\n| **Huge Target** | All dice 1–9 | Any 10 |\n\n### Damaged Carriers (CVs)\n\n- Half of all air must roll & take a step loss on a 6+.\n- Do not count as a carrier for sub vs Task Force attacks.\n- No intrinsic detection capability.\n- Only CAP may fly, with a modifier.\n- May immediately break off & form their own TF with escorts from previous force, allowing them to retire.",
+    "html": "<p>Roll the number of dice indicated, and compare to the table.</p>\n<p>Damage Dice to roll based on Weapon Used §14.1:</p>\n<table>\n<thead>\n<tr>\n<th>No. of Dice</th>\n<th>Weapon</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1</td>\n<td>NATO missile, Soviet white missile from a ship<br>Soviet red missile, Townsend missile (card).</td>\n</tr>\n<tr>\n<td>2</td>\n<td>Soviet yellow, black or submarine white missile<br>Soviet or NATO torpedo.</td>\n</tr>\n<tr>\n<td>3</td>\n<td>Soviet torpedo from Super Heavy Torp submarine.</td>\n</tr>\n<tr>\n<td>+1 die</td>\n<td>Already damaged</td>\n</tr>\n<tr>\n<td>+1 die</td>\n<td>Each additional hit taken at the same time.</td>\n</tr>\n</tbody></table>\n<table>\n<thead>\n<tr>\n<th>Target</th>\n<th>Damaged</th>\n<th>Sunk</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Big Target</strong></td>\n<td>All dice 1–7</td>\n<td>Any 8–10</td>\n</tr>\n<tr>\n<td><strong>Huge Target</strong></td>\n<td>All dice 1–9</td>\n<td>Any 10</td>\n</tr>\n</tbody></table>\n<h3>Damaged Carriers (CVs)</h3>\n<ul>\n<li>Half of all air must roll &amp; take a step loss on a 6+.</li>\n<li>Do not count as a carrier for sub vs Task Force attacks.</li>\n<li>No intrinsic detection capability.</li>\n<li>Only CAP may fly, with a modifier.</li>\n<li>May immediately break off &amp; form their own TF with escorts from previous force, allowing them to retire.</li>\n</ul>\n",
+    "sourceFile": "04-task-force-combat.md"
+  },
+  "pa4:sam-resolution": {
+    "paNumber": 4,
+    "title": "SAM Resolution",
+    "body": "A TF may fire with more SAMs than incoming missiles depending on the number of incoming missiles as follows:\n\n| Incoming Missiles | SAM shots allowed |\n|---|---|\n| 1–5 | # Incoming Missiles +1 |\n| 6–10 | # Incoming Missiles +2 |\n| 11–15 | # Incoming Missiles +3 |\n| 16–20 | # Incoming Missiles +4 |\n| 21–25 | # Incoming Missiles +5 |\n| 26–30 | # Incoming Missiles +6 |\n| 31–35 | # Incoming Missiles +7 |\n| 36–40 | # Incoming Missiles +8 |\n\nTF owner rolls 1 die per SAM point, applying all DRMs.\n\n| DR | Effect |\n|---|---|\n| 1–2 | Miss |\n| 3-8 | 1 Hit |\n| 9-10 | 2 Hits |\n\n### DRMs\n\n- Soviet red & yellow missiles incoming: -2\n- NATO missiles incoming: -1\n- Bad Weather: -1\n- Shooting at a non-yellow sub short range attack: -2\n- White submarine-launched missiles: +2\n- SAM Technology — Soviets SAMs rolling: +1",
+    "html": "<p>A TF may fire with more SAMs than incoming missiles depending on the number of incoming missiles as follows:</p>\n<table>\n<thead>\n<tr>\n<th>Incoming Missiles</th>\n<th>SAM shots allowed</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–5</td>\n<td># Incoming Missiles +1</td>\n</tr>\n<tr>\n<td>6–10</td>\n<td># Incoming Missiles +2</td>\n</tr>\n<tr>\n<td>11–15</td>\n<td># Incoming Missiles +3</td>\n</tr>\n<tr>\n<td>16–20</td>\n<td># Incoming Missiles +4</td>\n</tr>\n<tr>\n<td>21–25</td>\n<td># Incoming Missiles +5</td>\n</tr>\n<tr>\n<td>26–30</td>\n<td># Incoming Missiles +6</td>\n</tr>\n<tr>\n<td>31–35</td>\n<td># Incoming Missiles +7</td>\n</tr>\n<tr>\n<td>36–40</td>\n<td># Incoming Missiles +8</td>\n</tr>\n</tbody></table>\n<p>TF owner rolls 1 die per SAM point, applying all DRMs.</p>\n<table>\n<thead>\n<tr>\n<th>DR</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–2</td>\n<td>Miss</td>\n</tr>\n<tr>\n<td>3-8</td>\n<td>1 Hit</td>\n</tr>\n<tr>\n<td>9-10</td>\n<td>2 Hits</td>\n</tr>\n</tbody></table>\n<h3>DRMs</h3>\n<ul>\n<li>Soviet red &amp; yellow missiles incoming: -2</li>\n<li>NATO missiles incoming: -1</li>\n<li>Bad Weather: -1</li>\n<li>Shooting at a non-yellow sub short range attack: -2</li>\n<li>White submarine-launched missiles: +2</li>\n<li>SAM Technology — Soviets SAMs rolling: +1</li>\n</ul>\n",
+    "sourceFile": "04-task-force-combat.md"
+  },
+  "pa4:incoming-missile-resolution": {
+    "paNumber": 4,
+    "title": "Incoming Missile Resolution",
+    "body": "Roll one die per 2 missiles remaining, and a single die for an odd remaining missile. Apply DRMs.\n\n#### 2 Missiles\n\n| DR | Effect |\n|---|---|\n| 1–7 | 1 Hit |\n| 8–10 | 2 Hits |\n\n#### 1 Missile\n\n| DR | Effect |\n|---|---|\n| 1–2 | Miss |\n| 3–10 | 1 Hit |\n\n#### DRMs\n\n- Good Detection: +1\n- Bad Weather: -1",
+    "html": "<p>Roll one die per 2 missiles remaining, and a single die for an odd remaining missile. Apply DRMs.</p>\n<h4>2 Missiles</h4>\n<table>\n<thead>\n<tr>\n<th>DR</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–7</td>\n<td>1 Hit</td>\n</tr>\n<tr>\n<td>8–10</td>\n<td>2 Hits</td>\n</tr>\n</tbody></table>\n<h4>1 Missile</h4>\n<table>\n<thead>\n<tr>\n<th>DR</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–2</td>\n<td>Miss</td>\n</tr>\n<tr>\n<td>3–10</td>\n<td>1 Hit</td>\n</tr>\n</tbody></table>\n<h4>DRMs</h4>\n<ul>\n<li>Good Detection: +1</li>\n<li>Bad Weather: -1</li>\n</ul>\n",
+    "sourceFile": "04-task-force-combat.md"
+  },
+  "pa4:missile-hit-selection": {
+    "paNumber": 4,
+    "title": "Missile Hit Selection",
+    "body": "Roll two dice: Any N9 / N10 **first** hit allocated by attacker.\n\n*(Optional: Soviet yellow missiles roll three dice)*\n\n- NATO attacker allocates every 2nd hit (2–4–6–8–10–12)\n- Soviet attacker allocates every 3rd hit (3–6–9–12–15)\n- Missile Technology — Soviets may resolve as NATO\n\n*N = natural roll*\n\n### Effect of Hits Caused\n\nEach hit causes one step loss; causes 2 hits to convoys/amph or causes a damage roll against capital ships.",
+    "html": "<p>Roll two dice: Any N9 / N10 <strong>first</strong> hit allocated by attacker.</p>\n<p><em>(Optional: Soviet yellow missiles roll three dice)</em></p>\n<ul>\n<li>NATO attacker allocates every 2nd hit (2–4–6–8–10–12)</li>\n<li>Soviet attacker allocates every 3rd hit (3–6–9–12–15)</li>\n<li>Missile Technology — Soviets may resolve as NATO</li>\n</ul>\n<p><em>N = natural roll</em></p>\n<h3>Effect of Hits Caused</h3>\n<p>Each hit causes one step loss; causes 2 hits to convoys/amph or causes a damage roll against capital ships.</p>\n",
+    "sourceFile": "04-task-force-combat.md"
+  },
+  "pa5:air-units-transit-to-a-zone": {
+    "paNumber": 5,
+    "title": "Air Units-Transit to a Zone",
+    "body": "1. Check the round TO (but not Back from) the target for interceptions and resolve each in turn.\n2. Resolve any interception in the target zone.\n3. Resolve CAP by eligible units protecting the attacked target.",
+    "html": "<ol>\n<li>Check the round TO (but not Back from) the target for interceptions and resolve each in turn.</li>\n<li>Resolve any interception in the target zone.</li>\n<li>Resolve CAP by eligible units protecting the attacked target.</li>\n</ol>\n",
+    "sourceFile": "05-fighters-cap-interception.md"
+  },
+  "pa5:air-units-intercepted-when": {
+    "paNumber": 5,
+    "title": "Air Units Intercepted when:",
+    "body": "- Entering a zone with a fighter unit on patrol.\n- **Leaving** a zone with an enemy carrier.\n- **Overflying Denmark or Turkey.** The War Track Symbols show the number of dice to roll.",
+    "html": "<ul>\n<li>Entering a zone with a fighter unit on patrol.</li>\n<li><strong>Leaving</strong> a zone with an enemy carrier.</li>\n<li><strong>Overflying Denmark or Turkey.</strong> The War Track Symbols show the number of dice to roll.</li>\n</ul>\n",
+    "sourceFile": "05-fighters-cap-interception.md"
+  },
+  "pa5:cap-may-roll-to-attack-when": {
+    "paNumber": 5,
+    "title": "CAP may roll to attack when:",
+    "body": "- A strike attacks a location being protected.\n- Carrier based fighters defend **every** Task Force in the Sea Zone and **every** land facility adjacent to the zone (the carrier does not have to be a target). Land based fighters protect land bases in **their** land area (but not Task Forces out at sea).\n- An air unit enters a Sea Zone with carrier based fighters prior to rolling to complete whatever mission it was sent to perform (eg: MP aircraft are attacked by CAP prior to attempting Task Force detection).",
+    "html": "<ul>\n<li>A strike attacks a location being protected.</li>\n<li>Carrier based fighters defend <strong>every</strong> Task Force in the Sea Zone and <strong>every</strong> land facility adjacent to the zone (the carrier does not have to be a target). Land based fighters protect land bases in <strong>their</strong> land area (but not Task Forces out at sea).</li>\n<li>An air unit enters a Sea Zone with carrier based fighters prior to rolling to complete whatever mission it was sent to perform (eg: MP aircraft are attacked by CAP prior to attempting Task Force detection).</li>\n</ul>\n",
+    "sourceFile": "05-fighters-cap-interception.md"
+  },
+  "pa5:fighter-combat-vs-maritime-patrol": {
+    "paNumber": 5,
+    "title": "Fighter Combat vs Maritime Patrol (MP)",
+    "body": "Includes vs Intrinsic carrier MP\n\nRoll air-to-air dice -2 (min=1) with one fresh fighter unit.\n\nDie roll + Tactical Value = kills allowed\n\n| Combat | Result |\n|---|---|\n| 9+ vs. plane | -1 search, per die |\n| N10 vs. plane | Step loss and no search |\n| 6+ vs. helo | -1 search, per die |\n| N8–10 vs. helo | Step loss and no search |\n\nAir to Air Technology - Soviet +1 DRM\n\nIntrinsic MPs are always helos except for US carriers.\n\n*N = natural roll*",
+    "html": "<p>Includes vs Intrinsic carrier MP</p>\n<p>Roll air-to-air dice -2 (min=1) with one fresh fighter unit.</p>\n<p>Die roll + Tactical Value = kills allowed</p>\n<table>\n<thead>\n<tr>\n<th>Combat</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>9+ vs. plane</td>\n<td>-1 search, per die</td>\n</tr>\n<tr>\n<td>N10 vs. plane</td>\n<td>Step loss and no search</td>\n</tr>\n<tr>\n<td>6+ vs. helo</td>\n<td>-1 search, per die</td>\n</tr>\n<tr>\n<td>N8–10 vs. helo</td>\n<td>Step loss and no search</td>\n</tr>\n</tbody></table>\n<p>Air to Air Technology - Soviet +1 DRM</p>\n<p>Intrinsic MPs are always helos except for US carriers.</p>\n<p><em>N = natural roll</em></p>\n",
+    "sourceFile": "05-fighters-cap-interception.md"
+  },
+  "pa5:escorted-air-strikes": {
+    "paNumber": 5,
+    "title": "Escorted Air Strikes",
+    "body": "- The defending player may roll with one defending fighter for each strike aircraft **or** each escorting fighter.\n- All damages must be allocated to escorting fighters first except for N10 results.\n- Any strike air killed by fighters in an escorted mission does not attack.",
+    "html": "<ul>\n<li>The defending player may roll with one defending fighter for each strike aircraft <strong>or</strong> each escorting fighter.</li>\n<li>All damages must be allocated to escorting fighters first except for N10 results.</li>\n<li>Any strike air killed by fighters in an escorted mission does not attack.</li>\n</ul>\n",
+    "sourceFile": "05-fighters-cap-interception.md"
+  },
+  "pa5:fighters-vs-strike-aircraft": {
+    "paNumber": 5,
+    "title": "Fighters vs. Strike Aircraft (CAP & Intercept)",
+    "body": "Roll all fighter dice with one fighter for each strike unit. CAP must come from target TF unless better fighters available. # of dice to roll is modified per unit rolling: (min = 1 die) DR + Tactical Value = kills allowed.\n\n| Roll Type | Modifier |\n|---|---|\n| Intercepting Fighter unit 'On Patrol' | -1 die |\n| CAP 'Spent' | -2 dice |\n| Detected by Interceptors | +1 die |\n| Base damage light | -1 die |\n| Base damage heavy | 1 die only |\n| Damaged Carrier (CV) | -1 die |\n\nAir to Air Technology - Soviet +1 DRM\n*(Optional: F-14 missile defence)*\n\n| Result | Effect |\n|---|---|\n| N10 | CAP kill before launch |\n| N9 | As per **N10** if strike bombing |\n| N1–2 with F-14 rolling | Kill this number of missiles |",
+    "html": "<p>Roll all fighter dice with one fighter for each strike unit. CAP must come from target TF unless better fighters available. # of dice to roll is modified per unit rolling: (min = 1 die) DR + Tactical Value = kills allowed.</p>\n<table>\n<thead>\n<tr>\n<th>Roll Type</th>\n<th>Modifier</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Intercepting Fighter unit &#39;On Patrol&#39;</td>\n<td>-1 die</td>\n</tr>\n<tr>\n<td>CAP &#39;Spent&#39;</td>\n<td>-2 dice</td>\n</tr>\n<tr>\n<td>Detected by Interceptors</td>\n<td>+1 die</td>\n</tr>\n<tr>\n<td>Base damage light</td>\n<td>-1 die</td>\n</tr>\n<tr>\n<td>Base damage heavy</td>\n<td>1 die only</td>\n</tr>\n<tr>\n<td>Damaged Carrier (CV)</td>\n<td>-1 die</td>\n</tr>\n</tbody></table>\n<p>Air to Air Technology - Soviet +1 DRM\n<em>(Optional: F-14 missile defence)</em></p>\n<table>\n<thead>\n<tr>\n<th>Result</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>N10</td>\n<td>CAP kill before launch</td>\n</tr>\n<tr>\n<td>N9</td>\n<td>As per <strong>N10</strong> if strike bombing</td>\n</tr>\n<tr>\n<td>N1–2 with F-14 rolling</td>\n<td>Kill this number of missiles</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "05-fighters-cap-interception.md"
+  },
+  "pa5:interceptors": {
+    "paNumber": 5,
+    "title": "Interceptors",
+    "body": "Killing or failing to kill by one pip causes the strike to count as 'detected by interceptors' from then on. An intercepted strike may abort after all fighters in the Sea Zone roll.",
+    "html": "<p>Killing or failing to kill by one pip causes the strike to count as &#39;detected by interceptors&#39; from then on. An intercepted strike may abort after all fighters in the Sea Zone roll.</p>\n",
+    "sourceFile": "05-fighters-cap-interception.md"
+  },
+  "pa5:saves-against-cap-kills": {
+    "paNumber": 5,
+    "title": "Saves Against CAP Kills",
+    "body": "All kills by CAP (not by interceptors) may be saved based on the detection status of the base from which the fighter flew.\n\n| Detection | Save |\n|---|---|\n| Good detection on shooting carrier CAP | 6+ |\n| CAP from any airfield | 6+ |\n| Poor detection on shooting carrier CAP and not the strike location | 8+ |",
+    "html": "<p>All kills by CAP (not by interceptors) may be saved based on the detection status of the base from which the fighter flew.</p>\n<table>\n<thead>\n<tr>\n<th>Detection</th>\n<th>Save</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Good detection on shooting carrier CAP</td>\n<td>6+</td>\n</tr>\n<tr>\n<td>CAP from any airfield</td>\n<td>6+</td>\n</tr>\n<tr>\n<td>Poor detection on shooting carrier CAP and not the strike location</td>\n<td>8+</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "05-fighters-cap-interception.md"
+  },
+  "pa5:fighters-vs-fighters": {
+    "paNumber": 5,
+    "title": "Fighters vs. Fighters (and escorted strikes)",
+    "body": "Roll all fighter dice for both sides (max 1 v 1) (minimum 1 die)\nDR + tactical value = kills allowed\n\n| Result | Effect |\n|---|---|\n| Intercepting Fighter unit 'On Patrol' | -1 die |\n| CAP 'Spent' | -2 dice |\n| Detected by Interceptors | +1 die |\n| Damaged Carrier (CV) | -1 die |\n| Facility light damage | -1 die |\n\nAir to Air Technology - Soviet +1 DRM\n\n| Result | Effect |\n|---|---|\n| N10 (Defending Player) | Step loss on Strike unit |\n\nAll step losses are selected by the rolling player. Fighters must be killed before strike units can be selected *(except N10)*.\n\n*N = natural roll*",
+    "html": "<p>Roll all fighter dice for both sides (max 1 v 1) (minimum 1 die)\nDR + tactical value = kills allowed</p>\n<table>\n<thead>\n<tr>\n<th>Result</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Intercepting Fighter unit &#39;On Patrol&#39;</td>\n<td>-1 die</td>\n</tr>\n<tr>\n<td>CAP &#39;Spent&#39;</td>\n<td>-2 dice</td>\n</tr>\n<tr>\n<td>Detected by Interceptors</td>\n<td>+1 die</td>\n</tr>\n<tr>\n<td>Damaged Carrier (CV)</td>\n<td>-1 die</td>\n</tr>\n<tr>\n<td>Facility light damage</td>\n<td>-1 die</td>\n</tr>\n</tbody></table>\n<p>Air to Air Technology - Soviet +1 DRM</p>\n<table>\n<thead>\n<tr>\n<th>Result</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>N10 (Defending Player)</td>\n<td>Step loss on Strike unit</td>\n</tr>\n</tbody></table>\n<p>All step losses are selected by the rolling player. Fighters must be killed before strike units can be selected <em>(except N10)</em>.</p>\n<p><em>N = natural roll</em></p>\n",
+    "sourceFile": "05-fighters-cap-interception.md"
+  },
+  "pa6:air-units-bombing-land-targets": {
+    "paNumber": 6,
+    "title": "Air Units Bombing Land Targets",
+    "body": "1 die per step, US CAGS get 1 free SEAD die per 2 CAGs.",
+    "html": "<p>1 die per step, US CAGS get 1 free SEAD die per 2 CAGs.</p>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:sam-suppression-vs-bombing": {
+    "paNumber": 6,
+    "title": "SAM Suppression (SEAD) — vs Bombing",
+    "body": "Allocate dice to SEAD. These dice do not bomb.\n\n| Die Roll | Result |\n|---|---|\n| 1–2 | Miss, No Effect |\n| 3–5 | -1 SAM value, *temporary* |\n| 6–8 | -1 SAM value, place 1 hit |\n| 9–10 | -2 SAM value, place 2 hits |",
+    "html": "<p>Allocate dice to SEAD. These dice do not bomb.</p>\n<table>\n<thead>\n<tr>\n<th>Die Roll</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–2</td>\n<td>Miss, No Effect</td>\n</tr>\n<tr>\n<td>3–5</td>\n<td>-1 SAM value, <em>temporary</em></td>\n</tr>\n<tr>\n<td>6–8</td>\n<td>-1 SAM value, place 1 hit</td>\n</tr>\n<tr>\n<td>9–10</td>\n<td>-2 SAM value, place 2 hits</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:sam-attack-vs-bombing": {
+    "paNumber": 6,
+    "title": "SAM Attack — vs Bombing",
+    "body": "Roll a die per remaining SAM before the attackers bomb:\n\n| Die Roll | Result |\n|---|---|\n| 6+ | Ignore 1 bombing die |\n| =>D | 1 attacking step loss **and** ignore 1 bombing die |\n\nSAM Technology - Soviet +1 DRM",
+    "html": "<p>Roll a die per remaining SAM before the attackers bomb:</p>\n<table>\n<thead>\n<tr>\n<th>Die Roll</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>6+</td>\n<td>Ignore 1 bombing die</td>\n</tr>\n<tr>\n<td>=&gt;D</td>\n<td>1 attacking step loss <strong>and</strong> ignore 1 bombing die</td>\n</tr>\n</tbody></table>\n<p>SAM Technology - Soviet +1 DRM</p>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:bombing": {
+    "paNumber": 6,
+    "title": "Bombing (air-to-ground)",
+    "body": "| Die Roll | Result |\n|---|---|\n| 1–3 | Miss |\n| 4–8 | 1 hit, 1 kill (collateral) |\n| 9–10 | 2 hits, 2 kills (collateral) |\n\n| DRM | Effect |\n|---|---|\n| +1 | If some range to the target not used |\n| -1 | Bad Weather |\n\nPlace the number of hits scored on each facility. Maximum of 5.",
+    "html": "<table>\n<thead>\n<tr>\n<th>Die Roll</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–3</td>\n<td>Miss</td>\n</tr>\n<tr>\n<td>4–8</td>\n<td>1 hit, 1 kill (collateral)</td>\n</tr>\n<tr>\n<td>9–10</td>\n<td>2 hits, 2 kills (collateral)</td>\n</tr>\n</tbody></table>\n<table>\n<thead>\n<tr>\n<th>DRM</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>+1</td>\n<td>If some range to the target not used</td>\n</tr>\n<tr>\n<td>-1</td>\n<td>Bad Weather</td>\n</tr>\n</tbody></table>\n<p>Place the number of hits scored on each facility. Maximum of 5.</p>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:collateral-damage": {
+    "paNumber": 6,
+    "title": "Collateral Damage",
+    "body": "- 'Kills' cause damage to units stationed at the facility.\n- Even kills are allocated by defender, odd by attacker.\n- **Soviet Kola, Baltic, Black Sea**: NATO may force fighter casualties or Bear, Badger, Backfire (Soviet selects type).\n- Either side may cause one RORSAT loss additionally (6+ Soviet selects) returning 3 turns from the current turn.",
+    "html": "<ul>\n<li>&#39;Kills&#39; cause damage to units stationed at the facility.</li>\n<li>Even kills are allocated by defender, odd by attacker.</li>\n<li><strong>Soviet Kola, Baltic, Black Sea</strong>: NATO may force fighter casualties or Bear, Badger, Backfire (Soviet selects type).</li>\n<li>Either side may cause one RORSAT loss additionally (6+ Soviet selects) returning 3 turns from the current turn.</li>\n</ul>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:the-kola-peninsula": {
+    "paNumber": 6,
+    "title": "The Kola Peninsula",
+    "body": "For each hit caused to the Kola Peninsula, the Soviet player takes one First Strike Point.",
+    "html": "<p>For each hit caused to the Kola Peninsula, the Soviet player takes one First Strike Point.</p>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:facility-damage": {
+    "paNumber": 6,
+    "title": "Facility Damage - Effects cumulative",
+    "body": "| Type | Damage Effects |\n|---|---|\n| **Airbase (Light)** | No air may fly, return to base on patrol interceptors & MP units and mark spent. Also applies a CAP modifier. |\n| **Airbase (Heavy)** | All CAP is reduced to one die per unit. Do not remove spent markers on air units when ships move or at turn end. |\n| **Port (Light)** | +1 hit to Convoys/Amphs arriving for delay. Subs moving from this port cost 2 OPS each. Applies -2 mine clearance penalty. |\n| **Port (Heavy)** | +2 hits to Convoys/Amphs arriving for delay (instead of +1).<br>+1 OPS to form a TF at this port. |",
+    "html": "<table>\n<thead>\n<tr>\n<th>Type</th>\n<th>Damage Effects</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Airbase (Light)</strong></td>\n<td>No air may fly, return to base on patrol interceptors &amp; MP units and mark spent. Also applies a CAP modifier.</td>\n</tr>\n<tr>\n<td><strong>Airbase (Heavy)</strong></td>\n<td>All CAP is reduced to one die per unit. Do not remove spent markers on air units when ships move or at turn end.</td>\n</tr>\n<tr>\n<td><strong>Port (Light)</strong></td>\n<td>+1 hit to Convoys/Amphs arriving for delay. Subs moving from this port cost 2 OPS each. Applies -2 mine clearance penalty.</td>\n</tr>\n<tr>\n<td><strong>Port (Heavy)</strong></td>\n<td>+2 hits to Convoys/Amphs arriving for delay (instead of +1).<br>+1 OPS to form a TF at this port.</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:cruise-missile-attacks-vs-land-targets": {
+    "paNumber": 6,
+    "title": "Cruise Missile Attacks Vs. Land Targets",
+    "body": "Soviet missiles (ship black & yellow, all submarine, all air).\n\n| No. of Missiles | No. of Dice |\n|---|---|\n| 1–3 | 2 dice, keep lowest |\n| 4–7 | 1 die |\n| 8–12 | 2 dice |\n| 13+ | 3 dice |\n\n### Soviet Green background missiles\n\nMay fly 2 zones to the target, roll # dice on counter(s).\n\n### NATO Green background missiles\n\nMay fly 1 zone to the target, roll # dice on counter(s).",
+    "html": "<p>Soviet missiles (ship black &amp; yellow, all submarine, all air).</p>\n<table>\n<thead>\n<tr>\n<th>No. of Missiles</th>\n<th>No. of Dice</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–3</td>\n<td>2 dice, keep lowest</td>\n</tr>\n<tr>\n<td>4–7</td>\n<td>1 die</td>\n</tr>\n<tr>\n<td>8–12</td>\n<td>2 dice</td>\n</tr>\n<tr>\n<td>13+</td>\n<td>3 dice</td>\n</tr>\n</tbody></table>\n<h3>Soviet Green background missiles</h3>\n<p>May fly 2 zones to the target, roll # dice on counter(s).</p>\n<h3>NATO Green background missiles</h3>\n<p>May fly 1 zone to the target, roll # dice on counter(s).</p>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:sam-suppression-vs-cruise-missiles": {
+    "paNumber": 6,
+    "title": "SAM Suppression (SEAD) — vs Cruise Missiles",
+    "body": "Allocate dice to SEAD. These dice do not attack.\n\n| Die Roll | Result |\n|---|---|\n| 1–2 | Miss, No Effect |\n| 3–5 | -1 SAM value, *temporary* |\n| 6–8 | -1 SAM value, place 1 hit |\n| 9–10 | -2 SAM value, place 2 hits |",
+    "html": "<p>Allocate dice to SEAD. These dice do not attack.</p>\n<table>\n<thead>\n<tr>\n<th>Die Roll</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–2</td>\n<td>Miss, No Effect</td>\n</tr>\n<tr>\n<td>3–5</td>\n<td>-1 SAM value, <em>temporary</em></td>\n</tr>\n<tr>\n<td>6–8</td>\n<td>-1 SAM value, place 1 hit</td>\n</tr>\n<tr>\n<td>9–10</td>\n<td>-2 SAM value, place 2 hits</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:sam-attack-vs-cruise-missiles": {
+    "paNumber": 6,
+    "title": "SAM Attack — vs Cruise Missiles",
+    "body": "Roll a die per remaining SAM before cruise missile attack:\n\n| Die Roll | Result |\n|---|---|\n| 1–5 | Miss, No Effect |\n| 6–7 | Degrade one die, applying -2 DRM to attack |\n| 8–10 | Shoot down one cruise missile point |\n\nSAM Technology - Soviet +1 DRM",
+    "html": "<p>Roll a die per remaining SAM before cruise missile attack:</p>\n<table>\n<thead>\n<tr>\n<th>Die Roll</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–5</td>\n<td>Miss, No Effect</td>\n</tr>\n<tr>\n<td>6–7</td>\n<td>Degrade one die, applying -2 DRM to attack</td>\n</tr>\n<tr>\n<td>8–10</td>\n<td>Shoot down one cruise missile point</td>\n</tr>\n</tbody></table>\n<p>SAM Technology - Soviet +1 DRM</p>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:cruise-missile-attack": {
+    "paNumber": 6,
+    "title": "Cruise Missile Attack",
+    "body": "Roll a die per remaining cruise missle point:\n\n| Die Roll | Result | DRM | Cause |\n|---|---|---|---|\n| 1–3 | Miss | -1 | Attacking Troops |\n| 4–6 | 1 hit | -1 | Bad Weather |\n| 7–9 | 1 hit, 1 kill |  |  |\n| 10 | 2 hits, 2 kills | | |\n\nPlace the number of hits scored on each facility. Maximum of 5.",
+    "html": "<p>Roll a die per remaining cruise missle point:</p>\n<table>\n<thead>\n<tr>\n<th>Die Roll</th>\n<th>Result</th>\n<th>DRM</th>\n<th>Cause</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–3</td>\n<td>Miss</td>\n<td>-1</td>\n<td>Attacking Troops</td>\n</tr>\n<tr>\n<td>4–6</td>\n<td>1 hit</td>\n<td>-1</td>\n<td>Bad Weather</td>\n</tr>\n<tr>\n<td>7–9</td>\n<td>1 hit, 1 kill</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>10</td>\n<td>2 hits, 2 kills</td>\n<td></td>\n<td></td>\n</tr>\n</tbody></table>\n<p>Place the number of hits scored on each facility. Maximum of 5.</p>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:striking-soviet-troops": {
+    "paNumber": 6,
+    "title": "Striking Soviet Troops (Europe South War Track, Norway, Denmark)",
+    "body": "Roll escort fighter air-to-attacks: DR + Tactical Value needing 8+. The number of hits gives the # Soviet attacks:\n\n| Hits | Result |\n|---|---|\n| 0–1 | 2 attacks vs each striking air unit |\n| 2–3 | 1 attack vs each striking air unit |\n| 4+ | 1 attack in total |\n\nResolve each Soviet attack as follows:\n\n| Die | Result |\n|---|---|\n| 6+ | Ignores 1 bombing die |\n| =>D | 1 attacking step loss **and** ignore that die |\n| N10 | Soviet may choose to kill 1 step of fighters |\n\nAir-to-Air Technology - Soviet +1 DRM",
+    "html": "<p>Roll escort fighter air-to-attacks: DR + Tactical Value needing 8+. The number of hits gives the # Soviet attacks:</p>\n<table>\n<thead>\n<tr>\n<th>Hits</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>0–1</td>\n<td>2 attacks vs each striking air unit</td>\n</tr>\n<tr>\n<td>2–3</td>\n<td>1 attack vs each striking air unit</td>\n</tr>\n<tr>\n<td>4+</td>\n<td>1 attack in total</td>\n</tr>\n</tbody></table>\n<p>Resolve each Soviet attack as follows:</p>\n<table>\n<thead>\n<tr>\n<th>Die</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>6+</td>\n<td>Ignores 1 bombing die</td>\n</tr>\n<tr>\n<td>=&gt;D</td>\n<td>1 attacking step loss <strong>and</strong> ignore that die</td>\n</tr>\n<tr>\n<td>N10</td>\n<td>Soviet may choose to kill 1 step of fighters</td>\n</tr>\n</tbody></table>\n<p>Air-to-Air Technology - Soviet +1 DRM</p>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa6:port-capabilities": {
+    "paNumber": 6,
+    "title": "Port Capabilities",
+    "body": "| Port Type | Capability |\n|---|---|\n| **Minor Port** | May rearm one submarine unit per turn<br>May only rearm surface units of that nation |\n| **Major Port** | May rearm any number of submarine units<br>May rearm surface units |",
+    "html": "<table>\n<thead>\n<tr>\n<th>Port Type</th>\n<th>Capability</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Minor Port</strong></td>\n<td>May rearm one submarine unit per turn<br>May only rearm surface units of that nation</td>\n</tr>\n<tr>\n<td><strong>Major Port</strong></td>\n<td>May rearm any number of submarine units<br>May rearm surface units</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "06-attacking-land-targets.md"
+  },
+  "pa7:convoys": {
+    "paNumber": 7,
+    "title": "Convoys",
+    "body": "| Hits | Result |\n|---|---|\n| 0–2 | Full Convoy (cancel Soviet advance) |\n| 3–4 | Partial Convoy (two combine to a full Convoy) |\n| 5–6 | — |\n| 7–9 | Convoy Massacre |\n| 10 | Additional Convoy Massacre & remove Convoy |",
+    "html": "<table>\n<thead>\n<tr>\n<th>Hits</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>0–2</td>\n<td>Full Convoy (cancel Soviet advance)</td>\n</tr>\n<tr>\n<td>3–4</td>\n<td>Partial Convoy (two combine to a full Convoy)</td>\n</tr>\n<tr>\n<td>5–6</td>\n<td>—</td>\n</tr>\n<tr>\n<td>7–9</td>\n<td>Convoy Massacre</td>\n</tr>\n<tr>\n<td>10</td>\n<td>Additional Convoy Massacre &amp; remove Convoy</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa7:mines": {
+    "paNumber": 7,
+    "title": "Mines",
+    "body": "Cause a hit on each 1-2 rolled. Odd hits to Convoy/Amph.\n\n| Type | Dice |\n|---|---|\n| **Light** | 2 dice |\n| **Heavy** | 4 dice |",
+    "html": "<p>Cause a hit on each 1-2 rolled. Odd hits to Convoy/Amph.</p>\n<table>\n<thead>\n<tr>\n<th>Type</th>\n<th>Dice</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Light</strong></td>\n<td>2 dice</td>\n</tr>\n<tr>\n<td><strong>Heavy</strong></td>\n<td>4 dice</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa7:port-damage": {
+    "paNumber": 7,
+    "title": "Port Damage",
+    "body": "| Damage | Effect |\n|---|---|\n| **Light Damage** | +1 hit each Convoy |\n| **Heavy Damage** | +2 hits each Convoy |",
+    "html": "<table>\n<thead>\n<tr>\n<th>Damage</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Light Damage</strong></td>\n<td>+1 hit each Convoy</td>\n</tr>\n<tr>\n<td><strong>Heavy Damage</strong></td>\n<td>+2 hits each Convoy</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa7:alternate-convoy-ports": {
+    "paNumber": 7,
+    "title": "Alternate Convoy Ports",
+    "body": "| Delivery to: | Effects |\n|---|---|\n| **Belgian Port** | Treat 5 hits as a Partial Convoy |\n| **Taranto** | Treat 5 hits as a Partial Convoy |\n| **Turkish Port** | Treat 5 & 6 hits as a Partial Convoy |",
+    "html": "<table>\n<thead>\n<tr>\n<th>Delivery to:</th>\n<th>Effects</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Belgian Port</strong></td>\n<td>Treat 5 hits as a Partial Convoy</td>\n</tr>\n<tr>\n<td><strong>Taranto</strong></td>\n<td>Treat 5 hits as a Partial Convoy</td>\n</tr>\n<tr>\n<td><strong>Turkish Port</strong></td>\n<td>Treat 5 &amp; 6 hits as a Partial Convoy</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa7:convoy-massacres": {
+    "paNumber": 7,
+    "title": "Convoy Massacres",
+    "body": "- **One marker**: No effect\n- **Two markers**: +2 Soviet OPS\n- **Three markers**: +1 NATO losses and return all markers.",
+    "html": "<ul>\n<li><strong>One marker</strong>: No effect</li>\n<li><strong>Two markers</strong>: +2 Soviet OPS</li>\n<li><strong>Three markers</strong>: +1 NATO losses and return all markers.</li>\n</ul>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa7:war-tracks": {
+    "paNumber": 7,
+    "title": "War Tracks",
+    "body": "- 3 hits on troops prevents one advance on the War Track this turn.\n- Remove 3 hits (only) at the end of each turn.",
+    "html": "<ul>\n<li>3 hits on troops prevents one advance on the War Track this turn.</li>\n<li>Remove 3 hits (only) at the end of each turn.</li>\n</ul>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa7:captor-mines": {
+    "paNumber": 7,
+    "title": "CAPTOR Mines",
+    "body": "When a submarine moves into or through the zone, roll dice on counter as an ASW attack.\n\n- Bad Weather: -1 die. Minimum = 0 die\n- N1 = flip/remove mines",
+    "html": "<p>When a submarine moves into or through the zone, roll dice on counter as an ASW attack.</p>\n<ul>\n<li>Bad Weather: -1 die. Minimum = 0 die</li>\n<li>N1 = flip/remove mines</li>\n</ul>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa7:port-mines": {
+    "paNumber": 7,
+    "title": "Port Mines",
+    "body": "Submarine enter/leave: 1 die light, 2 dice heavy\n- Hit on 1-2. -1 die if Slow or Non-magnetic;  minimum = 0 dice\n- TF enter/leave: 2 dice light, 4 dice heavy\n- Hit on 1-2. Odd hits to Convoy/Amph, others by TF owner\n\n**Mined Danish Straits**: Units are hit on rolls of 1-4.",
+    "html": "<p>Submarine enter/leave: 1 die light, 2 dice heavy</p>\n<ul>\n<li>Hit on 1-2. -1 die if Slow or Non-magnetic;  minimum = 0 dice</li>\n<li>TF enter/leave: 2 dice light, 4 dice heavy</li>\n<li>Hit on 1-2. Odd hits to Convoy/Amph, others by TF owner</li>\n</ul>\n<p><strong>Mined Danish Straits</strong>: Units are hit on rolls of 1-4.</p>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa7:nuclear-weapons-at-sea": {
+    "paNumber": 7,
+    "title": "Nuclear Weapons at Sea",
+    "body": "### USSR submarines\n\nUSSR nuclear submarine taking a step loss caused by a NATO submarine's **N10** roll also causes a step loss to the attacking submarine.\n\n### Attacking surface ships with nuclear torpedoes\n\nSoviet submarine hits have the following effects:\n\n- **Convoys & amphs**: Mark two hits for the first 7–9 scored.\n- **Non-capital ships**: No change.\n- **Capital ships**: Destroyed or step loss if multiple ships.\n\n### Attacking surface ships with Anti-Ship Missiles\n\n- Every 3rd missile through the SAMs is nuclear. Resolve nukes first, then resolve remaining non-nuclear missiles. Nuclear weapons automatically hit something.\n- Roll a die, on an 8+ the Soviet player allocates it, otherwise the NATO player allocates it.\n- Any hit kills the target counter entirely, except for a Convoy or Amph unit which takes three hits.\n\n### Soviet SAM Defenses\n\nIf the Soviet SAM level of a target is at least two, treat it as being worth +2 more than its current value against air units only *(not against cruise missiles)*.",
+    "html": "<h3>USSR submarines</h3>\n<p>USSR nuclear submarine taking a step loss caused by a NATO submarine&#39;s <strong>N10</strong> roll also causes a step loss to the attacking submarine.</p>\n<h3>Attacking surface ships with nuclear torpedoes</h3>\n<p>Soviet submarine hits have the following effects:</p>\n<ul>\n<li><strong>Convoys &amp; amphs</strong>: Mark two hits for the first 7–9 scored.</li>\n<li><strong>Non-capital ships</strong>: No change.</li>\n<li><strong>Capital ships</strong>: Destroyed or step loss if multiple ships.</li>\n</ul>\n<h3>Attacking surface ships with Anti-Ship Missiles</h3>\n<ul>\n<li>Every 3rd missile through the SAMs is nuclear. Resolve nukes first, then resolve remaining non-nuclear missiles. Nuclear weapons automatically hit something.</li>\n<li>Roll a die, on an 8+ the Soviet player allocates it, otherwise the NATO player allocates it.</li>\n<li>Any hit kills the target counter entirely, except for a Convoy or Amph unit which takes three hits.</li>\n</ul>\n<h3>Soviet SAM Defenses</h3>\n<p>If the Soviet SAM level of a target is at least two, treat it as being worth +2 more than its current value against air units only <em>(not against cruise missiles)</em>.</p>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa7:nato-losses": {
+    "paNumber": 7,
+    "title": "NATO Losses",
+    "body": "6 Loss Points gives the Soviet player one Hammer & Sickle:\n\n- 1 for a damaged US carrier *(if not already damaged)*\n- 2 for a sunk US carrier\n- +1 if the damaging/sinking is North of the SOSUS line\n- 1 for every 3rd Convoy Massacre marker earned",
+    "html": "<p>6 Loss Points gives the Soviet player one Hammer &amp; Sickle:</p>\n<ul>\n<li>1 for a damaged US carrier <em>(if not already damaged)</em></li>\n<li>2 for a sunk US carrier</li>\n<li>+1 if the damaging/sinking is North of the SOSUS line</li>\n<li>1 for every 3rd Convoy Massacre marker earned</li>\n</ul>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa7:sam-ammo-for-limited-ammunition": {
+    "paNumber": 7,
+    "title": "SAM Ammo for Limited Ammunition",
+    "body": "- **Tico VLS** Fire 2–4 SAMS, mark \"2–4 fired\" SAM value now 4.\n\t- If fired 5+ mark no ammo.\n- **Kirov/Kalinin** has 2 volleys total. 1 volley is 2+ shots.\n\t- When out Kirov is SAM 1, Kalinin SAM 2.",
+    "html": "<ul>\n<li><strong>Tico VLS</strong> Fire 2–4 SAMS, mark &quot;2–4 fired&quot; SAM value now 4.<ul>\n<li>If fired 5+ mark no ammo.</li>\n</ul>\n</li>\n<li><strong>Kirov/Kalinin</strong> has 2 volleys total. 1 volley is 2+ shots.<ul>\n<li>When out Kirov is SAM 1, Kalinin SAM 2.</li>\n</ul>\n</li>\n</ul>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa7:repairing-capital-ships": {
+    "paNumber": 7,
+    "title": "Repairing Capital Ships",
+    "body": "Roll when the ship arrives at a friendly major port and place on the Turn Track the indicated number of turns from the current turn.\n\n| Die Roll | Result |\n|---|---|\n| 1–3 | 5 Turns |\n| 4–7 | 4 Turns |\n| 8–10 | 3 Turns |",
+    "html": "<p>Roll when the ship arrives at a friendly major port and place on the Turn Track the indicated number of turns from the current turn.</p>\n<table>\n<thead>\n<tr>\n<th>Die Roll</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–3</td>\n<td>5 Turns</td>\n</tr>\n<tr>\n<td>4–7</td>\n<td>4 Turns</td>\n</tr>\n<tr>\n<td>8–10</td>\n<td>3 Turns</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "07-convoys-mines-tracks-repair-nukes.md"
+  },
+  "pa8:nato-boomer-hunting": {
+    "paNumber": 8,
+    "title": "NATO Boomer Hunting",
+    "body": "The USSR player may claim the 'SSBN Hunting' marker:\n- Via spy action\n- By using a nuclear submarine **N10** ASW roll\n\nThe USSR player may spend the 'SSBN Hunting' marker:\n- By using a nuclear submarine **N10** ASW roll\n\nRoll on the following table with 1 die.\nAdd the Tactical Value of the attacking submarine.\n\n| Die Roll | Result |\n|---|---|\n| 1–3 | **Counter Attack**: Soviet unit takes a step loss |\n| 4–7 | **Near Miss**: Soviet receives 1 FSP |\n| 8–10 | **Sunk**: Soviet receives 1 FSP & removes 3 sunk Soviet SSBN Payload value from the current total **OR** takes an extra FSP. |",
+    "html": "<p>The USSR player may claim the &#39;SSBN Hunting&#39; marker:</p>\n<ul>\n<li>Via spy action</li>\n<li>By using a nuclear submarine <strong>N10</strong> ASW roll</li>\n</ul>\n<p>The USSR player may spend the &#39;SSBN Hunting&#39; marker:</p>\n<ul>\n<li>By using a nuclear submarine <strong>N10</strong> ASW roll</li>\n</ul>\n<p>Roll on the following table with 1 die.\nAdd the Tactical Value of the attacking submarine.</p>\n<table>\n<thead>\n<tr>\n<th>Die Roll</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–3</td>\n<td><strong>Counter Attack</strong>: Soviet unit takes a step loss</td>\n</tr>\n<tr>\n<td>4–7</td>\n<td><strong>Near Miss</strong>: Soviet receives 1 FSP</td>\n</tr>\n<tr>\n<td>8–10</td>\n<td><strong>Sunk</strong>: Soviet receives 1 FSP &amp; removes 3 sunk Soviet SSBN Payload value from the current total <strong>OR</strong> takes an extra FSP.</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "08-soviet-specific.md"
+  },
+  "pa8:soviet-spies": {
+    "paNumber": 8,
+    "title": "Soviet Spies",
+    "body": "- Place a Poor detection on any Task Force.\n- Take the SSBN Hunting marker.\n- Re-roll up to three Anti-Submarine Warfare dice rolled by any Soviet unit (one re-roll per unit maximum).\n- Automatically succeed on all First Strike submarine evasion rolls in a single zone — even after rolling.",
+    "html": "<ul>\n<li>Place a Poor detection on any Task Force.</li>\n<li>Take the SSBN Hunting marker.</li>\n<li>Re-roll up to three Anti-Submarine Warfare dice rolled by any Soviet unit (one re-roll per unit maximum).</li>\n<li>Automatically succeed on all First Strike submarine evasion rolls in a single zone — even after rolling.</li>\n</ul>\n",
+    "sourceFile": "08-soviet-specific.md"
+  },
+  "pa8:first-strike-points": {
+    "paNumber": 8,
+    "title": "First Strike Points",
+    "body": "- Anti-Satellite: place 1–2 in ASAT system boxes. While present, prevents NATO play of 'Whitecloud' and 'Snoopers detect raid' and applies DRM to NATO detection. Also, if two FSPs are present, removes one OPS from each NATO card. Remove one at the end of the turn on a 6+.\n- Take a step from the strategic reserve - 1 point/step.\n- Trigger the use of nuclear weapons at sea - 3 points.\n- Use battlefield nuclear weapons - 5 points (move a Front 2 boxes, reducing victory locations to 1 H&S. More Soviet stability 1 right. Prevents NATO use of nuclear weapons).\n- Prevent NATO use of battlefield nuclear weapons when entering the Ruhr space - 2 points or 4 if chemicals used.",
+    "html": "<ul>\n<li>Anti-Satellite: place 1–2 in ASAT system boxes. While present, prevents NATO play of &#39;Whitecloud&#39; and &#39;Snoopers detect raid&#39; and applies DRM to NATO detection. Also, if two FSPs are present, removes one OPS from each NATO card. Remove one at the end of the turn on a 6+.</li>\n<li>Take a step from the strategic reserve - 1 point/step.</li>\n<li>Trigger the use of nuclear weapons at sea - 3 points.</li>\n<li>Use battlefield nuclear weapons - 5 points (move a Front 2 boxes, reducing victory locations to 1 H&amp;S. More Soviet stability 1 right. Prevents NATO use of nuclear weapons).</li>\n<li>Prevent NATO use of battlefield nuclear weapons when entering the Ruhr space - 2 points or 4 if chemicals used.</li>\n</ul>\n",
+    "sourceFile": "08-soviet-specific.md"
+  },
+  "pa8:soviet-first-strike-submarines": {
+    "paNumber": 8,
+    "title": "Soviet First Strike Submarines",
+    "body": "Any SSBN in or adjacent to a First Strike zone may roll to evade when an Anti-Submarine Warfare attack is declared. On a 6+ (8+ if spent) move the submarine and one non-diesel escort to an adjacent zone. The attacker is spent regardless of targets. The SSBN & escort are spent.",
+    "html": "<p>Any SSBN in or adjacent to a First Strike zone may roll to evade when an Anti-Submarine Warfare attack is declared. On a 6+ (8+ if spent) move the submarine and one non-diesel escort to an adjacent zone. The attacker is spent regardless of targets. The SSBN &amp; escort are spent.</p>\n",
+    "sourceFile": "08-soviet-specific.md"
+  },
+  "pa8:amphibious-invasions": {
+    "paNumber": 8,
+    "title": "Amphibious Invasions",
+    "body": "Number of dice available to NATO (minimum = 1)\n\n| Location | Turn 1–2 | Turn 3–4 | Turn 5+ |\n|---|---|---|---|\n| Norway | 4 | 3 | 2 |\n| | -1 die if invading Bodo | | |\n| Denmark | 6 | 4 | 3 |\n\n| DRMs | Effect |\n|---|---|\n| -2 dice | If Soviet troops ashore in this location |\n| -1 dice | If base at landing site is damaged |\n\nEach die causes a hit to an amph but can be cancelled if the Soviet player has the relevant capabilities within the Task Force. No capability can be counted more than once.\nRoll all dice and resolve starting with the lowest value.\n\n| Die Roll | Result |\n|---|---|\n| 1–3 | **FAC**: Cancel by expending 3 white (not vs Denmark) or red missiles. For each not cancelled, change the die to a 6 and resolve later. |\n| 4–5 | **Ships**: Cancel by expending 2 black/yellow missiles. For each not cancelled, change the die to a 6 and resolve later. |\n| 6–8 | **Missile/Air Strike**: Cancel by expending 4 SAMs. Cancel one if TF is not marked with a Good detection. |\n| 9 | **Mines**: Cancel by taking a step loss on any ship. |\n| 10 | **Guns**: Cancel one if Sverdlov is present. |",
+    "html": "<p>Number of dice available to NATO (minimum = 1)</p>\n<table>\n<thead>\n<tr>\n<th>Location</th>\n<th>Turn 1–2</th>\n<th>Turn 3–4</th>\n<th>Turn 5+</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Norway</td>\n<td>4</td>\n<td>3</td>\n<td>2</td>\n</tr>\n<tr>\n<td></td>\n<td>-1 die if invading Bodo</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Denmark</td>\n<td>6</td>\n<td>4</td>\n<td>3</td>\n</tr>\n</tbody></table>\n<table>\n<thead>\n<tr>\n<th>DRMs</th>\n<th>Effect</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>-2 dice</td>\n<td>If Soviet troops ashore in this location</td>\n</tr>\n<tr>\n<td>-1 dice</td>\n<td>If base at landing site is damaged</td>\n</tr>\n</tbody></table>\n<p>Each die causes a hit to an amph but can be cancelled if the Soviet player has the relevant capabilities within the Task Force. No capability can be counted more than once.\nRoll all dice and resolve starting with the lowest value.</p>\n<table>\n<thead>\n<tr>\n<th>Die Roll</th>\n<th>Result</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1–3</td>\n<td><strong>FAC</strong>: Cancel by expending 3 white (not vs Denmark) or red missiles. For each not cancelled, change the die to a 6 and resolve later.</td>\n</tr>\n<tr>\n<td>4–5</td>\n<td><strong>Ships</strong>: Cancel by expending 2 black/yellow missiles. For each not cancelled, change the die to a 6 and resolve later.</td>\n</tr>\n<tr>\n<td>6–8</td>\n<td><strong>Missile/Air Strike</strong>: Cancel by expending 4 SAMs. Cancel one if TF is not marked with a Good detection.</td>\n</tr>\n<tr>\n<td>9</td>\n<td><strong>Mines</strong>: Cancel by taking a step loss on any ship.</td>\n</tr>\n<tr>\n<td>10</td>\n<td><strong>Guns</strong>: Cancel one if Sverdlov is present.</td>\n</tr>\n</tbody></table>\n",
+    "sourceFile": "08-soviet-specific.md"
+  },
+  "pa8:landing-troops": {
+    "paNumber": 8,
+    "title": "Landing Troops",
+    "body": "NATO landing in Oslo land only one troop unless Soviets are in the Orland box.\n\n| Landing | Place |\n|---|---|\n| **with 0–2 hits** | Place 2 Troops |\n| **with 3–4 hits** | Place 1 Troop |\n\nSoviet landing at least 1 Troop in Bodo/Orland may place War marker in that box & roll for facility capture. Soviets landing in Orland - Bodo is also captured (heavy damage).",
+    "html": "<p>NATO landing in Oslo land only one troop unless Soviets are in the Orland box.</p>\n<table>\n<thead>\n<tr>\n<th>Landing</th>\n<th>Place</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>with 0–2 hits</strong></td>\n<td>Place 2 Troops</td>\n</tr>\n<tr>\n<td><strong>with 3–4 hits</strong></td>\n<td>Place 1 Troop</td>\n</tr>\n</tbody></table>\n<p>Soviet landing at least 1 Troop in Bodo/Orland may place War marker in that box &amp; roll for facility capture. Soviets landing in Orland - Bodo is also captured (heavy damage).</p>\n",
+    "sourceFile": "08-soviet-specific.md"
+  },
+  "pa8:capturing-facilities": {
+    "paNumber": 8,
+    "title": "Capturing Facilities",
+    "body": "Heavily damaged by default.\nRoll 1 dice per troop landed. Roll of 8+ to reduce damage by one level, place hit markers to match the facility damage box. May rebase 2 fighters & 2 strike. Mark strike units spent.",
+    "html": "<p>Heavily damaged by default.\nRoll 1 dice per troop landed. Roll of 8+ to reduce damage by one level, place hit markers to match the facility damage box. May rebase 2 fighters &amp; 2 strike. Mark strike units spent.</p>\n",
+    "sourceFile": "08-soviet-specific.md"
+  },
+  "pa8:soviet-technology": {
+    "paNumber": 8,
+    "title": "Soviet Technology",
+    "body": "- **SAMs**: +1 DRM all SAM rolls - land and sea.\n- **ASMs**: Resolve missile hit selection as NATO, allocating every 2nd hit instead of every 3rd hit.\n- **Torpedoes**: All Soviet non-diesel submarines +1 tactical vs submarines, & Soviets may use Harpoon(sk).\n  - **ECM**: Backfire & Bear-G receive 8+ save when airborne vs. any step loss. Ignore if a better save already applies.\n- **Air-to-Air missiles**: +1 DRM on all air to air.",
+    "html": "<ul>\n<li><strong>SAMs</strong>: +1 DRM all SAM rolls - land and sea.</li>\n<li><strong>ASMs</strong>: Resolve missile hit selection as NATO, allocating every 2nd hit instead of every 3rd hit.</li>\n<li><strong>Torpedoes</strong>: All Soviet non-diesel submarines +1 tactical vs submarines, &amp; Soviets may use Harpoon(sk).<ul>\n<li><strong>ECM</strong>: Backfire &amp; Bear-G receive 8+ save when airborne vs. any step loss. Ignore if a better save already applies.</li>\n</ul>\n</li>\n<li><strong>Air-to-Air missiles</strong>: +1 DRM on all air to air.</li>\n</ul>\n",
+    "sourceFile": "08-soviet-specific.md"
+  }
+}
