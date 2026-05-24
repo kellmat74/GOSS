@@ -29,7 +29,9 @@
   --accent-900: #151809;
 }
 
-/* Inline play-aid HTML rendered inside the Actions tab. */
+/* Inline play-aid HTML rendered inside the Actions tab + QuickRef play-aid pages. */
+.prose-action { color: #1c1917; /* stone-900 */ }
+.dark .prose-action { color: #f5f5f4; /* stone-100 */ }
 .prose-action h3 { font-size: 0.95rem; font-weight: 600; margin: 0.75rem 0 0.25rem; }
 .prose-action h4 { font-size: 0.85rem; font-weight: 600; margin: 0.5rem 0 0.25rem; }
 .prose-action h5,

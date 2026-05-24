@@ -19,7 +19,7 @@ export function TableModal() {
       className="fixed inset-0 z-[110] flex items-center justify-center bg-black/60 p-4 animate-in fade-in duration-150"
       onClick={(e) => { if (e.target === e.currentTarget) closeTable(); }}
     >
-      <div className="relative flex max-h-[85vh] w-fit min-w-[320px] max-w-[92vw] flex-col rounded-xl border border-stone-200 bg-white shadow-2xl dark:border-stone-700 dark:bg-stone-900">
+      <div className="relative flex max-h-[85vh] w-fit min-w-[320px] max-w-[92vw] flex-col rounded-xl border border-stone-200 bg-white text-stone-900 shadow-2xl dark:border-stone-700 dark:bg-stone-900 dark:text-stone-100">
         {/* Header */}
         <div className="flex items-center justify-between border-b border-stone-200 px-5 py-3 dark:border-stone-700">
           <div className="flex items-center gap-2">
