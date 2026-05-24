@@ -374,11 +374,21 @@ function RuleAwareHtml({ html, className }: { html: string; className?: string }
   const ref = useRef<HTMLDivElement>(null);
 
   const processed = useMemo(() => {
-    // Match (1.2), (1.2.3), (1.2.3a), (1.2.3b) etc. Avoid wrapping inside <a> or attributes.
-    return html.replace(
-      /\(([\d]+(?:\.[\d]+){1,3}(?:[a-z])?)\)/g,
-      '(<button type="button" class="rule-ref-inline" data-rule="$1">$1</button>)'
-    );
+    // Mirrors src/utils/parseRuleRefs.tsx: find a parenthesized group that
+    // STARTS with a digit, then wrap each individual section ref inside it
+    // separately so comma-separated lists like (5.2.1, 7.3) yield two
+    // independent clickable links.
+    const SECTION_RE = /\d+\.\d+(?:\.\d+(?:\.\d+)?)?(?:[a-z])?/g;
+    const GROUP_RE = /\((\d[^)]{0,200})\)/g;
+
+    return html.replace(GROUP_RE, (_full, inner) => {
+      const wrapped = inner.replace(
+        SECTION_RE,
+        (ref: string) =>
+          `<button type="button" class="rule-ref-inline" data-rule="${ref}">${ref}</button>`
+      );
+      return `(${wrapped})`;
+    });
   }, [html]);
 
   useEffect(() => {
