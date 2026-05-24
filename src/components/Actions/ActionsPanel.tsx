@@ -1,7 +1,8 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import type { CardCategory, GameCard, PlayAidBlocksMap } from "../../types/goss";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
+import { useRules } from "../../context/RulesContext";
 
 interface ActionsPanelProps {
   cards: CardCategory[];
@@ -241,9 +242,9 @@ function RichActionContent({
           <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-stone-500">
             When does this come up?
           </h4>
-          <div
+          <RuleAwareHtml
             className="prose-action text-sm leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: c.whenItComesUpHtml }}
+            html={c.whenItComesUpHtml}
           />
         </section>
       )}
@@ -256,7 +257,7 @@ function RichActionContent({
           <ol className="space-y-3 list-decimal pl-6">
             {c.procedure.map((step, i) => (
               <li key={i} className="text-sm leading-relaxed">
-                <div className="prose-action" dangerouslySetInnerHTML={{ __html: step.html }} />
+                <RuleAwareHtml className="prose-action" html={step.html} />
                 {step.blocks.map((ref, j) => {
                   const block = playAidBlocks[ref.slug];
                   return (
@@ -309,9 +310,9 @@ function RichActionContent({
           <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
             Why and what to watch for
           </h4>
-          <div
+          <RuleAwareHtml
             className="prose-action text-sm leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: c.whyAndWatchForHtml ?? "" }}
+            html={c.whyAndWatchForHtml ?? ""}
           />
         </section>
       )}
@@ -362,6 +363,49 @@ function SimpleActionContent({ card }: { card: GameCard }) {
   );
 }
 
+/**
+ * Renders pre-rendered HTML (from marked) but wires up clickable rule refs.
+ * Walks the HTML string at render time, wrapping any `(X.Y.Z)` (and variants
+ * including a trailing letter) in a styled button. Uses delegated click on
+ * the container to dispatch to `openRule`.
+ */
+function RuleAwareHtml({ html, className }: { html: string; className?: string }) {
+  const { openRule } = useRules();
+  const ref = useRef<HTMLDivElement>(null);
+
+  const processed = useMemo(() => {
+    // Match (1.2), (1.2.3), (1.2.3a), (1.2.3b) etc. Avoid wrapping inside <a> or attributes.
+    return html.replace(
+      /\(([\d]+(?:\.[\d]+){1,3}(?:[a-z])?)\)/g,
+      '(<button type="button" class="rule-ref-inline" data-rule="$1">$1</button>)'
+    );
+  }, [html]);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const handler = (e: MouseEvent) => {
+      const t = e.target as HTMLElement;
+      if (t && t.classList.contains("rule-ref-inline")) {
+        e.preventDefault();
+        e.stopPropagation();
+        const r = t.getAttribute("data-rule");
+        if (r) openRule(r);
+      }
+    };
+    el.addEventListener("click", handler);
+    return () => el.removeEventListener("click", handler);
+  }, [openRule, processed]);
+
+  return (
+    <div
+      ref={ref}
+      className={className}
+      dangerouslySetInnerHTML={{ __html: processed }}
+    />
+  );
+}
+
 /** Inline render of a play-aid block, collapsed by default. */
 function PlayAidInline({
   slug,
@@ -399,9 +443,9 @@ function PlayAidInline({
         <span className="text-amber-700 dark:text-amber-400">{open ? "−" : "+"}</span>
       </button>
       {open && (
-        <div
+        <RuleAwareHtml
           className="prose-action px-3 py-2 text-sm leading-relaxed text-stone-800 dark:text-stone-200"
-          dangerouslySetInnerHTML={{ __html: block.html }}
+          html={block.html}
         />
       )}
     </div>

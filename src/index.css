@@ -70,6 +70,25 @@
 .prose-action hr { border: none; border-top: 1px solid #d6d3d1; margin: 0.5rem 0; }
 .dark .prose-action hr { border-color: #57534e; }
 
+/* Clickable inline rule references inside .prose-action HTML. */
+.prose-action button.rule-ref-inline {
+  display: inline-block;
+  background: var(--accent-500);
+  color: #fff;
+  padding: 0.05rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.78em;
+  font-weight: 500;
+  line-height: 1.2;
+  border: none;
+  cursor: pointer;
+  vertical-align: baseline;
+  transition: background-color 0.12s;
+}
+.prose-action button.rule-ref-inline:hover { background: var(--accent-600); }
+.dark .prose-action button.rule-ref-inline { background: #44403c; color: var(--accent-400); }
+.dark .prose-action button.rule-ref-inline:hover { background: #57534e; color: var(--accent-300); }
+
 /* Dark theme: amber accents */
 .dark {
   --accent-50: #fffbeb;
