@@ -28,7 +28,7 @@ export const blueWaterNavyConfig: GameSystemConfig = {
   name: "Blue Water Navy",
   shortName: "BWN",
   subtitle: "Compass Games · 1980s NATO/Soviet naval conflict",
-  draft: true, // Hidden unless ?draft=true
+  draft: false, // Publicly visible
 
   features: {
     flowchart: false,
