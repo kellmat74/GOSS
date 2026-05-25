@@ -380,7 +380,7 @@ function RichActionContent({
       )}
 
       {c.whyAndWatchFor && (
-        <CollapsibleCoach className="mb-5">
+        <CollapsibleCoach key={`coach-${card.id}`} className="mb-5">
           <RuleAwareHtml
             className="prose-action text-sm leading-relaxed"
             html={c.whyAndWatchForHtml ?? ""}

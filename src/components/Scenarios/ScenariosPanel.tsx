@@ -115,7 +115,7 @@ function ScenarioDetail({ scenario: s }: { scenario: ScenarioContent }) {
       </Section>
 
       {s.coachNotes && (
-        <CollapsibleCoach>
+        <CollapsibleCoach key={`coach-${s.id}`}>
           <ProseBlock text={s.coachNotes} />
         </CollapsibleCoach>
       )}

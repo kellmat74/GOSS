@@ -205,9 +205,9 @@ export function PhaseStepper({
         </div>
       )}
 
-      {/* AI Coach — design intent, when to use, gotchas, synergies, example beat (collapsed by default) */}
+      {/* AI Coach — design intent, when to use, gotchas, synergies, example beat (collapsed by default). Keyed on phase id so state resets when navigating between SoP pages. */}
       {active.coachContent && (
-        <CollapsibleCoach>
+        <CollapsibleCoach key={`coach-${active.id}`}>
           <SoPMarkdown content={active.coachContent} onTabSwitch={onTabSwitch} />
         </CollapsibleCoach>
       )}

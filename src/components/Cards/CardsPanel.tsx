@@ -219,9 +219,9 @@ function PhysicalCardDetail({ card }: { card: PhysicalCard }) {
       {/* Reaction Event */}
       <CardEventBlock event={card.reaction} />
 
-      {/* AI Coach note — when to play for event vs OPS, reaction timing, pairings (collapsed by default) */}
+      {/* AI Coach note — when to play for event vs OPS, reaction timing, pairings (collapsed by default). Keyed on card id so state resets between cards. */}
       {card.coachNotes && (
-        <CollapsibleCoach className="mt-4">
+        <CollapsibleCoach key={`coach-${card.id}`} className="mt-4">
           <div className="text-stone-700 dark:text-stone-300">
             <CardText text={card.coachNotes} />
           </div>
