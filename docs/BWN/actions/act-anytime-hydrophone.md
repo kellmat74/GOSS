@@ -36,6 +36,10 @@ An enemy submarine crosses a Hydrophone Barrier shown on the map: the GIUK Gap (
 - [ASW in current zone (instead of moving)](./act-ship-asw.md)
 - Related rules: (4.2.3.4), (2.3.6), (7.2), (7.2.1)
 
+## Coach
+
+Take Option 1 (free single die, no Spent) every time a Soviet sub crosses a barrier, every different Fresh unit in zone gets its own free shot (2.3.6). Reserve Option 2 (full ASW +1 die then Spent) for high-value kills like Akula or Typhoon. TFs and anything inside a TF cannot use Hydrophone reactions. Bad Weather applies to the zone the sub is moving INTO, and the English Channel and Gibraltar helo assets drop to zero dice in Bad Weather.
+
 ## Why and what to watch for
 
 Hydrophone Barriers are SOSUS in game form: the GIUK Gap (East 6 / East 9-10 / North 3-4 borders), the English Channel (East 4 border), and the Strait of Gibraltar (Med 1-2 border) (2.3.6). When an enemy sub crosses one, NATO gets a free reaction, but only with a Fresh or On-Patrol friendly unit in the entered or exited zone. The design models cold-war passive acoustic detection at chokepoints, layered on top of NATO's active ASW posture.

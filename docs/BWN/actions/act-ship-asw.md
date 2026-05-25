@@ -39,6 +39,10 @@ A Task Force that wants to hunt a known submarine in its zone — instead of mov
 - [Hydrophone Barrier reaction](./act-anytime-hydrophone.md)
 - Related rules: (7.2), (7.2.1), (7.2.2), (7.2.2.1)
 
+## Coach
+
+Hunting marks your TF Poor immediately, and rolling any two N1-2 results auto-upgrades you to Good detection (7.2.2.1), so only hunt when killing the sub beats the cost of being seen. The Fast TF row shift is ignored on this action unlike the defensive ASW roll (7.2.2), do not pad your dice by habit. Stack carriers (+2 each, 0 in Bad Weather) and any escort sub at ASW x3.
+
 ## Why and what to watch for
 
 A TF that stops moving to actively hunt a submarine is the game's expression of dedicated ASW search operations: sonar pings, MAD runs, distributed sonobuoy patterns. The 1 OPS cost and the automatic Poor Detection (7.2.2.1) capture the doctrinal reality that hunting subs makes the hunter loud and locatable. You traded mobility and concealment for the chance to kill the threat below you.

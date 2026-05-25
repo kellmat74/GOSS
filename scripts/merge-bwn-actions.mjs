@@ -271,6 +271,8 @@ function processAction(filename) {
 
   const whenItComesUp = sections["When does this come up?"] || "";
   const whyAndWatchFor = sections["Why and what to watch for"] || "";
+  // Short Coach lives in a new `## Coach` H2 above the verbose section.
+  const whyAndWatchForShort = (sections["Coach"] || "").replace(/<!-- COACH-PASS -->/g, "").trim();
 
   const id = frontmatter.id;
   const card = {
@@ -290,6 +292,8 @@ function processAction(filename) {
       whenItComesUpHtml: marked.parse(whenItComesUp),
       procedure,
       seeAlso,
+      whyAndWatchForShort,
+      whyAndWatchForShortHtml: whyAndWatchForShort ? marked.parse(whyAndWatchForShort) : "",
       whyAndWatchFor: whyAndWatchFor.replace(/<!-- COACH-PASS -->/g, "").trim(),
       whyAndWatchForHtml: marked.parse(whyAndWatchFor.replace(/<!-- COACH-PASS -->/g, "").trim()),
     },

@@ -40,6 +40,10 @@ Repositioning a single fresh submarine. Submarine actions all cost 1 OPS unless 
 - [Soviet SSBN takes a nuclear sub along](./act-sub-ssbn-escort.md)
 - Related rules: (5.2), (5.2.1), (5.2.2), (2.3.6), (2.2.7.1)
 
+## Coach
+
+Map your route around Hydrophone Barriers, each crossing invites a reaction roll that can place Poor detection on you for the rest of the turn (2.3.6). Diesels move 1 zone only with no Fast option (5.2.2); nuclear boats get 2 zones, or 3 on a Fast move. A moving Soviet SSBN should almost always bring its free non-diesel escort sub (5.2.2, 2.2.7.1) to enable the Evasion roll.
+
 ## Why and what to watch for
 
 Submarines are the heart of BWN combat, and the bare move action is the building block of every sub campaign. A 1 OPS reposition models a submarine running quiet from one operating area to another, with movement allowances calibrated to capture the real difference between nuclear and diesel propulsion: nuclear runs at sustained speed for days, diesels crawl while submerged (5.2, 5.2.1, 5.2.2).

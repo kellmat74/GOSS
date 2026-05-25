@@ -37,6 +37,10 @@ Ships only move as a Task Force group, and only when the SHIPS event triggers on
 - [Prepare and resolve an Amphibious Landing](./act-ship-amphib-land.md)
 - Related rules: (5.1.3), (4.2.1.3), (5.1.3.1), (5.1.3.6), (5.1.3.7)
 
+## Coach
+
+Manage OPS pace so SHIPS fires when weather and detection favor you, the trigger is bookkeeping but the timing is strategy (4.2.1.3). Good-detected TFs move first, then Poor, then Undetected, and Soviet moves before NATO in each tier (5.1.3), so a detected TF must telegraph its plan first. Bad Weather strands the TF in place with a Moved marker (5.1.3.1).
+
 ## Why and what to watch for
 
 BWN deliberately keeps surface movement infrequent and synchronized. Ships do not move on demand the way subs and aircraft do, they only move when the SHIPS event fires on the OPS Track (4.2.1.3). This is the system's way of representing the long signal lag and reaction time of fleet maneuvering compared to the rapid tempo of submarine and air operations.

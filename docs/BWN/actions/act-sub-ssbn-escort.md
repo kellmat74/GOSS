@@ -31,6 +31,10 @@ A Soviet SSBN ('Boomer') wants to relocate with protection. Per the stacking exc
 - [Submarine moves and goes On Patrol](./act-sub-on-patrol.md)
 - Related rules: (2.2.7.1), (5.2.2), (2.3.6), (9.1)
 
+## Coach
+
+Bring the escort almost every time, it is free protection on 1 OPS and enables the SSBN Evasion roll that slips both subs out before NATO ASW lands (2.3.5.1). The escort must be a nuclear attack sub (not diesel, not another SSBN per 2.2.7.1) and must start in the same zone as the SSBN (5.2.2). NATO chooses which sub to target on each Hydrophone Barrier reaction (2.3.6), and both subs end Spent.
+
 ## Why and what to watch for
 
 The Soviet SSBN escort rule models the Cold War practice of running a Boomer with a fast attack sub as protection during transits. Per 2.2.7.1 a TF can only have one nuclear escort sub (not SSBN, not diesel), and 5.2.2 extends that principle to subs moving together: a Soviet SSBN moving on its own action may bring one non-diesel attack sub for no extra OPS cost. The free-ride is BWN's nod to the importance of preserving First Strike Points, which depend on SSBN survival in First Strike zones (9.1.1, 2.3.5).

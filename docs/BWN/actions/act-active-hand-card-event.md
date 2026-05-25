@@ -31,6 +31,10 @@ You want to fire a (non-Reaction) event from a card sitting in your hand — one
 - [Play a Reaction event from hand](./act-anytime-reaction-event.md)
 - Related rules: (4.2.2.5), (4.2)
 
+## Coach
+
+Reserve the +2 OPS surcharge (4.2.2.5) for events the opponent would specifically play around if revealed, KGB Assassination, Surge, hidden-timing kills. Otherwise just play the card for OPS and fire the event normally. Reactions cannot use this route (they fire free on trigger, 4.2.3.1), and the Soviet First Strike card explicitly cannot be played from hand because +2 OPS itself counts as spending points (9.1.1). Hand drops below three trigger a redraw (4.2.3.6).
+
 ## Why and what to watch for
 
 Playing a top (non-Reaction) event from your hand instead of from your face-up OPS cards costs a +2 OPS surcharge on top of the event's printed cost (4.2.2.5). The design intent is explicit: keep events hidden in hand to use at a time of your choosing, at a premium. The hidden-information value is the entire point, your opponent doesn't know you have the card until you fire it.

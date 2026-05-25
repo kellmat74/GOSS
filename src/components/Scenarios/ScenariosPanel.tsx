@@ -114,10 +114,12 @@ function ScenarioDetail({ scenario: s }: { scenario: ScenarioContent }) {
         <ProseBlock text={s.victoryConditions} />
       </Section>
 
-      {s.coachNotes && (
-        <CollapsibleCoach key={`coach-${s.id}`}>
-          <ProseBlock text={s.coachNotes} />
-        </CollapsibleCoach>
+      {(s.coachNotesShort || s.coachNotes) && (
+        <CollapsibleCoach
+          key={`coach-${s.id}`}
+          short={s.coachNotesShort ? <ProseBlock text={s.coachNotesShort} /> : undefined}
+          long={s.coachNotes ? <ProseBlock text={s.coachNotes} /> : undefined}
+        />
       )}
 
       {s.specialRules && (

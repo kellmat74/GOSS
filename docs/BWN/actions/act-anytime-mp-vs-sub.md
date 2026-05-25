@@ -36,6 +36,10 @@ An enemy submarine moves into or through a Sea Zone where you have an MP On Patr
 - [ASW in current zone (instead of moving)](./act-ship-asw.md)
 - Related rules: (4.2.3.2), (5.3.4.1), (7.2), (7.2.1)
 
+## Coach
+
+React almost reflexively when a sub crosses your MP's patrol zone, you already paid 1 OPS and get a free full ASW attack (5.3.4.1, 7.2). Exception: if the sub is in a Hydrophone Barrier zone, the +1-die free reaction (2.3.6) may be better since it does not Spend the MP. The MP can react to a sub OR a TF this turn, not both, and goes Spent either way. Bad Weather is -2 dice for MP, and (N) subs only die on natural 10 (7.2.1).
+
 ## Why and what to watch for
 
 An On-Patrol MP that catches an enemy sub in transit is BWN's most efficient ASW play in OPS terms, you paid 1 OPS to deploy the patrol, and now you get a full ASW attack for free against a moving submarine (5.3.4.1, 7.2). The design captures airborne ASW catching boats moving submerged through known chokepoints, without using the action turn that would otherwise be spent flying.

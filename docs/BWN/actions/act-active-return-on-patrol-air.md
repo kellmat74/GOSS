@@ -33,6 +33,10 @@ When it's your turn to play an action, you may rebase a Fresh On-Patrol Air Unit
 - [On-Patrol MP attacks a crossing submarine](./act-anytime-mp-vs-sub.md)
 - Related rules: (4.2.2.4), (5.3.4.1), (5.3.4.2)
 
+## Coach
+
+Free rebase, not an action, no OPS (4.2.2.4). Use it to recover a Fresh fighter whose patrol zone no longer matters so you can re-task next turn as escort, CAG, or new patrol. Don't pull a fighter that still gates a likely enemy transit lane, On-Patrol fighters intercept for free all turn (5.3.4.2) and the unit must be Fresh to return.
+
 ## Why and what to watch for
 
 Returning an On-Patrol unit to base is the free recall option. It does not count as an action and costs no OPS (4.2.2.4). The design intent is to let you redeploy a unit whose mission has lapsed, the threat it was watching for did not materialize, or you need it for something else, without paying twice for the round trip.

@@ -35,6 +35,10 @@ An enemy Task Force moves into or through the Sea Zone where you have an MP On P
 - [Maritime Patrol flies and attacks or detects](./act-air-mp-fly-attack.md)
 - Related rules: (4.2.3.2), (5.3.4.1), (5.3), (6.1)
 
+## Coach
+
+Trade the MP for detection when a Poor needs upgrading to Good (6.1.1) so your next action can fire missiles, missile attacks require Good (7.4). The big gotcha: an On-Patrol MP can react to ASW OR TF detection in a turn, not both, and goes Spent either way (5.3.4.1). Reactive detection does NOT trigger the free follow-on chain, that chain only fires from a flying MP attack (5.3.1).
+
 ## Why and what to watch for
 
 An On-Patrol MP that catches an enemy TF moving through its zone can trade itself for detection on that TF, instead of an ASW roll (5.3.4.1, 6.1). The design models long-range maritime aviation visually identifying a contact, fixing position, and burning its endurance to do so. After the roll the MP flips to Spent and returns home.

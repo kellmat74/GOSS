@@ -44,6 +44,10 @@ An enemy Air Unit (Strike, escorted Strike, MP, or fighter) enters or passes thr
 - [Air Strike](./act-air-strike.md)
 - Related rules: (4.2.3.2), (5.3.3.1), (5.3.4.2), (7.1.2), (7.1.3), (7.1.4)
 
+## Coach
+
+Interception is mandatory and free, the patrolling fighter is NOT marked Spent (5.3.4.2), so park your best air-to-air at chokepoints the opponent must transit. Apply the DRM stack carefully: Intercepting -1 die, Detected by Interceptors +1 (carries forward to CAP), Soviet Air-to-Air Tech +1 DRM (10.1). N10 kills before weapons release, N9 also kills if bombs-only (7.1.4.1), F-14 N1-2 shoots down incoming missiles (7.1.4.2).
+
 ## Why and what to watch for
 
 Interception is the standing reaction that makes On-Patrol Fighters terrifying. Any enemy air mission that enters or transits the patrol zone gets attacked, and the fighter is not marked Spent (5.3.3.1, 5.3.4.2). The design models a CAP barrier at sea: the patrolling fighter has the gas to keep fighting, and successive waves all run the same gauntlet.

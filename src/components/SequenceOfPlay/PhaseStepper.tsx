@@ -205,11 +205,21 @@ export function PhaseStepper({
         </div>
       )}
 
-      {/* AI Coach — design intent, when to use, gotchas, synergies, example beat (collapsed by default). Keyed on phase id so state resets when navigating between SoP pages. */}
-      {active.coachContent && (
-        <CollapsibleCoach key={`coach-${active.id}`}>
-          <SoPMarkdown content={active.coachContent} onTabSwitch={onTabSwitch} />
-        </CollapsibleCoach>
+      {/* AI Coach — collapsed by default. Short version shown first; "Show more" swaps to verbose. Keyed on phase id so state resets on navigation. */}
+      {(active.coachContentShort || active.coachContent) && (
+        <CollapsibleCoach
+          key={`coach-${active.id}`}
+          short={
+            active.coachContentShort ? (
+              <SoPMarkdown content={active.coachContentShort} onTabSwitch={onTabSwitch} />
+            ) : undefined
+          }
+          long={
+            active.coachContent ? (
+              <SoPMarkdown content={active.coachContent} onTabSwitch={onTabSwitch} />
+            ) : undefined
+          }
+        />
       )}
 
       {/* Scenario appended content */}

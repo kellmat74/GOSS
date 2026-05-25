@@ -33,6 +33,10 @@ The opponent (or you) is resolving an action and a card in your hand has a React
 - [Draw a card (hand < 3)](./act-anytime-draw-card.md)
 - Related rules: (4.2.3.1), (4.2)
 
+## Coach
+
+Read the trigger language literally before firing, Submarine Pairing fires on any step loss (not just sub combat), Distant Support requires an adjacent strike and commits F-14 as CAP, NATO Counter Attack can fire on a Convoy that just arrived at port. Reactions chain: yours may trigger your opponent's. Free to play (4.2.3.1) but discarded immediately, redraw triggers if hand drops below three (4.2.3.6).
+
 ## Why and what to watch for
 
 Reaction events are free-to-play from hand when their trigger condition occurs (4.2.3.1). The design lets the hand-card layer respond to enemy action without consuming OPS or an action, interception cards, counter-attack cards, save cards, and "no, but" responses live here. The card itself specifies when it is playable; resolving it usually modifies or interrupts whatever the opponent just did.

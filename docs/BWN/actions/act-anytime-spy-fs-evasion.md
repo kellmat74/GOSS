@@ -31,6 +31,10 @@ During a NATO action that would resolve First Strike submarine evasion against a
 - [Spend a First Strike Point](./act-active-fsp.md)
 - Related rules: (4.2.3.5), (9.3), (9.1.1)
 
+## Coach
+
+The killer feature: this works AFTER ROLLING (9.3), so let NATO commit and roll evasion before deciding to burn the spy. Reserve for high-Payload boomers (Typhoon, Delta IV) where the FSP and Nuclear Strike Capability Track math (9.1.1, 9.1.2) outweighs the infiltration risk; don't burn it on a 1-step Yankee. Every spy use rolls an infiltration check that can shift the track left, so each reactive save compounds future spy scarcity.
+
 ## Why and what to watch for
 
 This is the reactive spy use: NATO is rolling First Strike submarine evasion against a Soviet SSBN, and the Soviet player burns a spy to auto-succeed all evasion rolls in that zone (4.2.3.5, 9.3). The design models Soviet covert intelligence diverting NATO ASW efforts at the critical moment when an SSBN is under attack. Crucially this works EVEN AFTER ROLLING, if you've already rolled the SSBN evasion and failed, spend the spy and the evasion succeeds anyway.

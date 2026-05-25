@@ -35,6 +35,10 @@ A submarine moves into a zone with an Undetected (or Poor-detected) enemy TF and
 - [Maritime Patrol flies and attacks or detects](./act-air-mp-fly-attack.md)
 - Related rules: (5.2.1), (6.1), (6.1.1), (7.2.1)
 
+## Coach
+
+Spend this OPS to set up a follow-up strike, Good detection adds +1 die to torpedo and missile attacks (7.3.1, 7.4.1.1), and surface missile launches against a Poor target need Fast or 6+ ASuW (7.4.1.2). Subs do not have a clean dedicated detection roll, they primarily upgrade TFs via N10 during an ASW attack (7.2.1), so read your sub type's detection rule before committing. The sub is Spent even if detection fails.
+
 ## Why and what to watch for
 
 Submarines can use their sonar suites to find and refine the picture on enemy surface forces, modeling the role boats actually played as scouts and shadowers in the Cold War (5.2.1, 6.1, 6.1.1). The dedicated detection action exists because the game wants you to be able to invest a sub's turn in setup work without having to also fire torpedoes, which is critical for the kill chain where one boat finds and a second boat (or a TF, or a missile salvo) finishes.

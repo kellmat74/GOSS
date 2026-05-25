@@ -6,7 +6,9 @@ export interface SubPhase {
   player: Player;
   description: string;
   content?: string;
-  /** AI Coach paragraph: design intent, when to use, gotchas, synergies, example beat. Optional. */
+  /** AI Coach — short, direct counsel (~60-90 words). Default displayed. */
+  coachContentShort?: string;
+  /** AI Coach — verbose 5-paragraph version (design intent, gotchas, synergies, example beat). Accessed via "Show more" toggle. */
   coachContent?: string;
   notes: string[];
   checklist: string[];
@@ -29,7 +31,9 @@ export interface Phase {
   player: Player;
   description: string;
   content?: string;
-  /** AI Coach paragraph: design intent, when to use, gotchas, synergies, example beat. Optional. */
+  /** AI Coach — short, direct counsel (~60-90 words). Default displayed. */
+  coachContentShort?: string;
+  /** AI Coach — verbose 5-paragraph version. Accessed via "Show more" toggle. */
   coachContent?: string;
   notes: string[];
   subPhases: SubPhase[];
@@ -134,6 +138,10 @@ export interface ActionContent {
   whenItComesUpHtml?: string;
   procedure?: ProcedureStep[];
   seeAlso?: ActionSeeAlso;
+  /** AI Coach — short, direct counsel (~60-90 words). Default displayed. */
+  whyAndWatchForShort?: string;
+  whyAndWatchForShortHtml?: string;
+  /** AI Coach — verbose 5-paragraph version. Accessed via "Show more". */
   whyAndWatchFor?: string;
   whyAndWatchForHtml?: string;
 }
@@ -207,7 +215,9 @@ export interface PhysicalCard {
   side: CardSide;
   ops: CardEvent;
   reaction: CardEvent;
-  /** AI Coach note (~60-100 words) on when to play the event vs spend for OPS, reaction timing, and one pairing. Optional. */
+  /** AI Coach — short, direct counsel (~40-60 words). Default displayed. */
+  coachNotesShort?: string;
+  /** AI Coach note (~60-100 words) on when to play the event vs spend for OPS, reaction timing, and one pairing. Verbose. Accessed via "Show more". */
   coachNotes?: string;
 }
 
@@ -279,7 +289,9 @@ export interface ScenarioContent {
   /** Era variants (Campaign Game: 1983 / 1985 / 1989). */
   yearVariants?: ScenarioYearVariant[];
   notes?: string[];
-  /** AI Coach paragraph (~400 words): strategic shape, NATO/Soviet priorities, decision points, pitfalls. Optional. */
+  /** AI Coach — short, direct counsel (~60-90 words). Default displayed. */
+  coachNotesShort?: string;
+  /** AI Coach paragraph (~400 words): strategic shape, NATO/Soviet priorities, decision points, pitfalls. Verbose. Accessed via "Show more". */
   coachNotes?: string;
 }
 

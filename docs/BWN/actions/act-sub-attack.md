@@ -50,6 +50,10 @@ A submarine moves into a Sea Zone containing a detected enemy TF and resolves a 
 - [Submarine moves and detects](./act-sub-detect.md)
 - Related rules: (5.2.1), (7.3), (7.3.1), (7.3.2), (7.3.3)
 
+## Coach
+
+Set up Good Detection before launching, it is worth +1 die (7.3.1). Diesels against Fast TFs eat -2 dice; only nuclear boats should chase Fast strike groups. TF ASW dice rolling 8+ each cancel one of your hit dice, and N10 is the only way to sink a capital ship outright via the damage table (7.3.2). Non-Magnetic subs die only on a natural 10.
+
 ## Why and what to watch for
 
 The torpedo attack is the iconic submarine engagement and the centerpiece of BWN's sub-vs-TF model. A boat moves quietly into firing range and shoots, then absorbs the defender's frantic ASW counter-search (7.3, 7.3.1). The two-stage resolution (sub rolls anti-surface first, defender responds with ASW) reproduces the actual sequence of a Cold War torpedo engagement: the attack reveals the attacker, and the screen reacts.

@@ -44,6 +44,10 @@ When a Task Force wants to attack a detected enemy TF with its ship-launched ant
 - [Air Strike](./act-air-strike.md)
 - Related rules: (5.1.1.3), (7.4), (7.4.1.2), (7.4.2), (7.4.2.4)
 
+## Coach
+
+Only Soviet yellow and black missiles fire on this 1 OPS action; white, red, and NATO blue ship-launched missiles are card-only outside the Baltic exception (5.1.1.3). Stack missiles in one launch because SAM shots scale slower than incoming count (7.4.2.1). Poor detection works only if the firing TF is Fast or has 6+ ASuW (7.4.1.2), so set up Good first when you can.
+
 ## Why and what to watch for
 
 Surface-launched anti-ship missiles model the Soviet doctrine of long-range, mass-saturation strikes from cruisers and destroyers. The Cold War threat that kept US carrier captains awake was a Kirov-led surface action group ripple-firing yellow Shipwrecks and black Sandboxes. This action is the in-game expression of that doctrine, and the OPS-cost-1 trigger reflects that surface missile launches are routine combat events for the Soviet side, not card-driven specials (5.1.1.3, 7.4).

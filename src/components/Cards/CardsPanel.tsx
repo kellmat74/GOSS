@@ -219,13 +219,26 @@ function PhysicalCardDetail({ card }: { card: PhysicalCard }) {
       {/* Reaction Event */}
       <CardEventBlock event={card.reaction} />
 
-      {/* AI Coach note — when to play for event vs OPS, reaction timing, pairings (collapsed by default). Keyed on card id so state resets between cards. */}
-      {card.coachNotes && (
-        <CollapsibleCoach key={`coach-${card.id}`} className="mt-4">
-          <div className="text-stone-700 dark:text-stone-300">
-            <CardText text={card.coachNotes} />
-          </div>
-        </CollapsibleCoach>
+      {/* AI Coach note (collapsed by default; short shown first, "Show more" swaps to verbose). Keyed on card id so state resets between cards. */}
+      {(card.coachNotesShort || card.coachNotes) && (
+        <CollapsibleCoach
+          key={`coach-${card.id}`}
+          className="mt-4"
+          short={
+            card.coachNotesShort ? (
+              <div className="text-stone-700 dark:text-stone-300">
+                <CardText text={card.coachNotesShort} />
+              </div>
+            ) : undefined
+          }
+          long={
+            card.coachNotes ? (
+              <div className="text-stone-700 dark:text-stone-300">
+                <CardText text={card.coachNotes} />
+              </div>
+            ) : undefined
+          }
+        />
       )}
     </div>
   );

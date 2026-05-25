@@ -30,6 +30,10 @@ Your hand is below three cards — typically because you played a Reaction event
 - [Pass](./act-misc-pass.md)
 - Related rules: (4.2.3.6), (4.2)
 
+## Coach
+
+Draw immediately after a Reaction or +2 OPS hand-card play (4.2.3.6) so your reaction cushion is back before the opponent's next action. Wait until the current resolution closes, don't draw mid-attack. Late-game card scarcity is real, deck shuffles aren't infinite.
+
 ## Why and what to watch for
 
 Drawing back to three cards is bookkeeping after a hand-card play (4.2.3.6). The intent is to keep both players holding a meaningful hand of cards through every turn so the reaction layer and the +2 OPS hand-card layer stay active. There is no choice involved, if you drop below three, draw back to three at any time.

@@ -28,6 +28,10 @@ You have fewer Operations Points than your opponent and would rather wait for th
 - [Draw a card (hand < 3)](./act-anytime-draw-card.md)
 - Related rules: (5.4.5), (4.2)
 
+## Coach
+
+Pass when you want the opponent to commit first, holding a high-value action or a Reaction card and needing to see what they reveal (5.4.5). Eligibility is strict: your remaining OPS must be less than theirs, ties cannot pass. The opponent's next action drops their OPS, often closing the gap, so passes naturally alternate. You cannot reaction or hand-card play and then also pass in the same slot.
+
 ## Why and what to watch for
 
 Pass is the tempo tool. When you have fewer OPS than your opponent you can declare Pass and force them to play next, after which you act again (5.4.5). The design intent is to prevent the OPS-rich player from front-loading every important action, the OPS-poor side gets the right to wait and counter-punch.

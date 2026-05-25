@@ -31,6 +31,10 @@ Two Task Forces are in the same Sea Zone and you want to shuffle units between t
 - [Move ships in a Task Force](./act-ship-move.md)
 - Related rules: (5.1.1.2), (5.1.2), (5.1.2.1)
 
+## Coach
+
+Use this to consolidate damaged ships or peel off escorts for 1 OPS instead of 2, but the detection moves with the unit, you cannot launder a Good detection by shifting that ship into a Fresh TF (5.1.1.2). Every remaining TF still needs one Surface Unit (5.1.2). Adding an (S) Convoy or Amphib turns the destination Slow on the swap, with downstream ASW defense consequences.
+
 ## Why and what to watch for
 
 Two TFs in the same Sea Zone can shuffle ships between them for 1 OPS, modeling underway transfers of escorts, breaking off damaged ships, or restructuring a force without the full 2 OPS overhead of creating a brand-new TF (5.1.1.2). The 1 OPS price reflects the lower friction: ships in the same zone are already steaming in formation, so the staff work is minimal compared to forming a TF from scratch (5.1.2).

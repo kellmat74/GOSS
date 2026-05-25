@@ -39,6 +39,10 @@ Cuba begins as an inactive Soviet ally — it shelters the Lourdes intelligence 
 - [Launch or move a RORSAT](./act-misc-launch-rorsat.md)
 - Related rules: (5.4.4), (8.4.5), (2.2.4.1)
 
+## Coach
+
+Worth the 6 OPS only when Lourdes is producing real detection and NATO has OPS slack, you get 3 free OPS of sub/TF cruise missiles plus a free Strike from the four Florida units (5.4.4). Activation immediately gives Soviet the Cuban sub, Cuban air with SAM, and up to 3 Spent air units transferred from any Soviet base, so accept that downside. Lourdes destruction permanently removes one RORSAT and temporarily another for 3 turns (2.2.4.1).
+
 ## Why and what to watch for
 
 Attacking Cuba is NATO's nuclear option against the Soviet Caribbean position, 6 OPS to neutralize the Lourdes intelligence station and the Cuban basing privileges (5.4.4, 8.4.5). The design models a strategic decision: NATO surrenders a major OPS commitment in exchange for permanently degrading Soviet intelligence and removing a forward basing option. After the attack, Cuba "activates", Soviet may now use Cuban forces freely and deploy up to 3 air units there.

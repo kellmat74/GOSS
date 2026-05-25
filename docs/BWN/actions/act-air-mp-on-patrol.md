@@ -40,6 +40,10 @@ Putting an MP or land-based Fighter into a zone where it will react later in the
 - [Return an On-Patrol Air Unit to base](./act-active-return-on-patrol-air.md)
 - Related rules: (5.3.4), (5.3.4.1), (5.3.4.2)
 
+## Coach
+
+Put fighters and MP on chokepoints (GIUK, North 7-8, Norwegian Sea) so 1 OPS buys a standing reaction for the rest of the turn. Key asymmetry: a reacting MP fires once and goes Spent, an On-Patrol Fighter intercepts every enemy mission through its zone without spending (5.3.4.1, 5.3.4.2). Carrier-based air cannot patrol, and units must arrive Fresh through any enemy interception in transit.
+
 ## Why and what to watch for
 
 On Patrol turns one action into a standing reaction. You pay 1 OPS once and the unit stays armed in a zone for the rest of the turn, ready to interrupt any sub or TF that walks through it. The design models air units holding station at high cost (an MP that reacts is consumed) versus fighters orbiting an interception lane (free re-rolls all turn) (5.3.4, 5.3.4.1, 5.3.4.2).

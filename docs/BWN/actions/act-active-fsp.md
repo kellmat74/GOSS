@@ -31,6 +31,10 @@ The Soviet player has accumulated First Strike Points from card play or end-of-t
 - [Use a Soviet Spy](./act-active-soviet-spy.md)
 - Related rules: (4.2.2.1), (9.1.1), (9.1.2)
 
+## Coach
+
+The 2-FSP ASAT spend is the most under-rated lever, it removes 1 OPS from every NATO card for the turn (9.1.1) and only clears on a 6+ end-of-turn roll. Save toward the 5-FSP battlefield nukes spend when you need to move a Front 2 boxes; that typically demands 3-4 turns of accumulation. The First Strike event card cannot be played from hand via +2 OPS (9.1.1), the +2 itself counts as spending points.
+
 ## Why and what to watch for
 
 First Strike Points are the Soviet nuclear-posture currency. They are earned by event card play and at the end of First Strike turns when on-station SSBN Payload value is high enough (4-7 = 1 FSP, 8+ = 2 FSP, per the FIRST STRIKE card clarification) (9.1.1). Spending one is free of OPS and not an action, it's a "use when active" lever that converts strategic credibility into immediate game effect (4.2.2.1).

@@ -32,6 +32,10 @@ Surface ships can never move outside a Task Force, so getting ships from port to
 - [Move ships in a Task Force](./act-ship-move.md)
 - Related rules: (5.1.1.1), (5.1.2), (5.1.2.1)
 
+## Coach
+
+Spend the 2 OPS to break a Good-detected TF apart only if you accept that detection rides along (5.1.1.2), splitting does not launder it. Every resulting TF must keep at least one Surface Unit (5.1.2), and a single (S) Convoy or Amphib drops the new TF to Slow. Pair with Move Ships Between TFs (1 OPS) when shuffling beats a full reformation.
+
 ## Why and what to watch for
 
 Surface ships exist only inside Task Forces in BWN, so this action models the operational reality that warships put to sea as named groups (the Eisenhower Battle Group, the Kirov Surface Action Group) rather than as individual hulls. Spending 2 OPS to form one is the cost of doctrine: it represents staff work, sortie orders, and the logistics tail that gets a force from harbor to operating area (5.1.2).

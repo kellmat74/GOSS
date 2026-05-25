@@ -29,6 +29,10 @@ A facility (port, airbase, etc.) has taken damage. Spending 2 OPS removes one Hi
 - [De-Mine a Port](./act-misc-demine-port.md)
 - Related rules: (5.4.1), (2.3.8.4), (2.3.8.5)
 
+## Coach
+
+Prioritize the repair that crosses the status threshold (Heavy to Light, Light to Undamaged), the operational effects on hosted units (2.3.8.4) live entirely at status boundaries, not in raw hit counts. The status-change roll is 5+ on a die, so you are betting 2 OPS on a 60% chance of the real benefit. Repair before you de-mine on combined facilities: damaged ports de-mine at 7+, undamaged at 5+ (5.4.2).
+
 ## Why and what to watch for
 
 Repair lets you spend 2 OPS to take a Hit off a damaged facility (5.4.1). The design intent is to give you a tempo of recovery against bombing campaigns, a damaged airbase, port, or combined facility can be partially restored over multiple turns, but never instantly. The 5+ status-change roll models the fact that going from Heavy to Light or from Light to fully Undamaged requires actual repair-crew work, not just paperwork.

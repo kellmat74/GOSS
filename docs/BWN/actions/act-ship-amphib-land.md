@@ -40,6 +40,10 @@ A Task Force carrying Amphibious units sits in a zone with an Amphibious Landing
 - [Form a new Task Force](./act-ship-form-tf.md)
 - Related rules: (5.1.3.2), (5.1.3.3), (5.1.3.4), (5.1.3.5), (8.1), (8.1.1), (8.1.3), (8.1.4)
 
+## Coach
+
+Placing the Landing marker triggers a free Detection roll on the TF (5.1.2.1, 8.1.1), so soften the zone first with strikes and time it around good weather, Bad Weather forces a Moved marker and delays a full turn. Subs already in the invaded port sortie immediately and roll torpedoes at 1 OPS each (8.1.1). Each Amphib's hits drive troops landed (1-2 hits = 2 troops, 3-4 = 1, 5+ = 0 per 8.1.4).
+
 ## Why and what to watch for
 
 Amphibious landings model the largest naval operation possible: putting troops on a hostile shore. BWN treats this with a two-beat sequence (mark Landing this turn, resolve next move chance) to capture the real-world reality that an amphibious assault is a vulnerable, telegraphed operation. The Soviets use it to grab Norway, Denmark, or Iceland; NATO normally delivers through friendly ports (5.1.3.5), with the Iceland recapture as the major exception (8.4.4).

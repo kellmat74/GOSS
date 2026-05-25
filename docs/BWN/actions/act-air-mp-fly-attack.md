@@ -45,6 +45,10 @@ A Maritime Patrol unit flies a one-shot mission into a Sea Zone within its range
 - [Submarine moves and detects](./act-sub-detect.md)
 - Related rules: (5.3), (5.3.1), (5.3.2), (5.3.3), (6.1), (7.2)
 
+## Coach
+
+Fly MP to set up the free follow-on, place or upgrade a detection (5.3.1) and the active player immediately chains another attack action against that TF on its own OPS. Resolve interceptions in path order (5.3.2) before the mission die hits the table. Watch Bad Weather (-2 dice for MP) and remember (N) subs only die on natural 10 (7.2.1).
+
 ## Why and what to watch for
 
 Maritime Patrol is the one-shot version of BWN's air search-and-strike loop. Send the MP to the zone, take one swing (ASW or detection), and the unit goes home Spent. The design captures that long-range maritime aviation finds its target, attacks once, and recovers, there is no loiter, no second pass (5.3, 5.3.1).

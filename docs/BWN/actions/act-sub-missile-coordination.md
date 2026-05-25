@@ -40,6 +40,10 @@ Two or three submarines pool a coordinated missile attack against a single Task 
 - [Fire missiles with a Task Force](./act-ship-fire-missiles.md)
 - Related rules: (5.2.4), (7.4), (7.4.1.1), (9.5.3)
 
+## Coach
+
+Each extra sub past the first applies -2 DRM to the single launch roll (5.2.4), so a 3-sub coordination launches at -4, almost always set up Good Detection first to get the 2-dice-take-best (7.4.1.1). Save coordination for high-value Good-detected carrier targets where one massive volley swamps the SAM screen; SAM shots scale slower than incoming missiles (7.4.2.1). All participating subs end Spent with Cruise Missiles Fired markers (9.5.3).
+
 ## Why and what to watch for
 
 Coordinated missile attacks model the Soviet doctrine of pulse-firing multiple SSGN/SSGs simultaneously to saturate a high-value target's SAM defenses. Two or three subs (5.2.4) sortie to the same Sea Zone and fire as one volley, pooling their missile counts into a single resolution that overwhelms even a strong defender. The 1 OPS per participating sub is a real cost (so 2 or 3 OPS total), but the strategic upside is enormous: SAM shots scale slower than incoming missiles, so doubling missiles roughly halves the percentage stopped (7.4.2.1).

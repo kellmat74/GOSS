@@ -36,6 +36,10 @@ A submarine moves to a zone where the opponent is likely to send units later in 
 - [MP or Fighter goes On Patrol](./act-air-mp-on-patrol.md)
 - Related rules: (5.2.1), (5.2.3), (4.2.3.2)
 
+## Coach
+
+On-Patrol subs are not Spent by reacting (5.2.3), so one high-Anti-Surface, high-ASW boat in a chokepoint can fire repeatedly across the turn. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so two SSNs in the same zone waste overlap unless multiple enemies cross. The sub uses ASW dice (not torpedo) when targeting another sub, and is not protected from being ASW'd itself.
+
 ## Why and what to watch for
 
 Going On Patrol is the submarine's standing-guard posture: the boat sits in a Sea Zone with sonar up, ready to react when something walks through (5.2.3). It models the actual operational pattern of Cold War submarine deployments, with NATO SSNs lurking in the GIUK gap and Soviet boats in choke points waiting for the next transit. Unlike a single attack action, On Patrol is investment: it commits the sub for the rest of the turn but yields multiple potential reactions.

@@ -35,6 +35,10 @@ A submarine already in the same zone as a detected enemy TF launches its torpedo
 - [Submarine moves and goes On Patrol](./act-sub-on-patrol.md)
 - Related rules: (5.2.1), (7.3), (7.3.1), (5.2.2), (2.3.6)
 
+## Coach
+
+Use this when you start the turn in the target zone and expect a strong ASW reaction next turn, the post-attack move lets you clear out before the counter-search lands. Combat math is identical to move-then-attack (7.3.1), no extra range or dice. The post-attack move still respects Hydrophone Barriers and movement allowance (5.2.2, 2.3.6), so a diesel only crawls one zone away after firing.
+
 ## Why and what to watch for
 
 The attack-then-move action exists so a submarine already sitting in the same zone as a detected enemy TF can shoot first and relocate afterwards, modeling the classic post-attack evasion: torpedo away, then run silent to a new operating area before the counter-search lands. Same OPS cost as the move-then-attack variant (5.2.1), but the sequencing matters because moving after the attack lets the sub clear the zone before the next enemy turn opens.

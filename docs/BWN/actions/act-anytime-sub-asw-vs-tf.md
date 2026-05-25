@@ -44,6 +44,10 @@ An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. 
 - [On-Patrol MP attacks a crossing submarine](./act-anytime-mp-vs-sub.md)
 - Related rules: (4.2.3.2), (5.2.3), (7.2), (7.3), (7.3.1)
 
+## Coach
+
+This reaction is free in OPS and the sub stays On Patrol after firing (5.2.3), so a high Anti-Surface boat can attack multiple TFs across a turn. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so hold fire on a screening Convoy TF if a carrier TF is coming next. TF still gets its full ASW defense roll with Fast and Bad Weather row shifts (7.3.1).
+
 ## Why and what to watch for
 
 An On-Patrol submarine reacting to an enemy TF crossing into its zone is the in-game expression of every Cold War submarine-vs-surface engagement that mattered: the boat sat silent, the target group steamed through, the boat fired. The reaction is free in OPS terms because the on-patrol stance was already paid for when the sub went On Patrol (5.2.3, 4.2.3.2), and the reaction uses the standard 7.3 sub-vs-TF combat procedure. The action is BWN's punishment for routing a TF through a known submarine zone.

@@ -43,6 +43,10 @@ A nuclear submarine launches a missile attack against a TF (7.4) or a land facil
 - [Submarine moves then attacks](./act-sub-attack.md)
 - Related rules: (5.2.1), (7.4), (7.4.1.1), (7.4.2), (5.2.4)
 
+## Coach
+
+Good Detection doubles the launch roll (1 die becomes 2, take best per 7.4.1.1), going from ~70% any attack to ~91%, set it up first. The sub must be in the target's zone, not adjacent (7.4.1.1). A 10+ launch result triggers a bonus 7.3 torpedo attack right after the missile salvo, one of the best outcomes a sub player can get. Diesels vs Fast TFs eat -2 on the launch roll.
+
 ## Why and what to watch for
 
 Submarine-launched cruise and anti-ship missiles model the SLCM and SSM weapons that put Soviet SSGNs and some NATO SSNs in the strike role. The single-zone range rule (7.4.1.1) reflects the design choice that BWN treats missile reach as movement-equivalent: the sub must close to the target's Sea Zone to fire, rather than ranging from adjacent. The launch-roll-then-resolve sequence captures the real uncertainty of an undersea cruise launch: target solution quality drives outcome.

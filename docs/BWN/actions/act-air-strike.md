@@ -65,6 +65,10 @@ One or more Strike units fly to a target TF or facility and attack with missiles
 - [CAP attacks a strike on its base](./act-anytime-cap.md)
 - Related rules: (5.3.5), (5.3.6), (7.1.4), (7.4.1.3), (7.5.1), (7.5.3), (7.5.4)
 
+## Coach
+
+Drive detection to Good before launching, and flip Missiles or Steps Bombing markers BEFORE CAP rolls so N10 (and N9 on bombs-only) kills resolve cleanly before weapons release (7.1.4.1). Defender rolls fighters against escorts first with kills going to escorts except on N10 (7.1.4.4). Save rolls use the firing fighter's base detection state, not the strike's (7.1.4.3). Tankers escort free but losing one collapses range mid-mission (5.3.6).
+
 ## Why and what to watch for
 
 Air Strike is BWN's high-leverage action and its most rules-heavy. The price is 1 OPS per Strike step flown (escorting fighters and tankers ride free), and the payoff is missiles on a TF or bombs on a facility (5.3.5, 5.3.6, 7.4.1.3, 7.5.1). The design layers defenses in order, en-route interception, target-zone interception, CAP, SAMs, missile/SAM defense, hit selection, to model the layered nature of a modern strike package against a defended target.

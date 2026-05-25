@@ -34,6 +34,10 @@ The Soviet player wants to extend or reposition satellite coverage. RORSATs are 
 - [Submarine moves and detects](./act-sub-detect.md)
 - Related rules: (5.4.3), (2.2.4.1), (7.5.3), (8.4.5)
 
+## Coach
+
+Push to four RORSATs aloft as fast as you can stomach the 10% destroy-on-1 risk per launch (2.2.4.1), stacking unlocks only after four are in play, after which each additional satellite in a zone adds a detection die when NATO TFs move. Concentrate stacks in mandatory transit zones (East 4, North 5-6, Med 4-5). RORSATs detect only on ship movement, not at other triggers, and Lourdes loss permanently removes one plus temporarily removes another (8.4.5).
+
 ## Why and what to watch for
 
 RORSATs are the Soviet wide-area TF detection layer. Launching from Tyuratam or moving an existing satellite costs 2 OPS, with a 10% catastrophic failure on a roll of 1 that destroys the satellite (5.4.3, 2.2.4.1). Once aloft, RORSATs roll detection automatically when ships move, free reconnaissance with no further OPS cost, which is the entire reason to invest in them early.

@@ -31,6 +31,10 @@ A friendly port has been mined and you need to clear it to allow ship traffic. S
 - [Repair a facility](./act-misc-repair.md)
 - Related rules: (5.4.2)
 
+## Coach
+
+Repair the facility before you de-mine: 5+ on undamaged versus 7+ on damaged (5.4.2) drops your odds from 60% to 40% per 2-OPS attempt. There is no double-step clear, Heavy must drop to Light before Light drops to Unmined, so expect multi-turn recovery. Mines are placed only by cards (5.4.2) and do not affect amphibious landings (those use a separate marker).
+
 ## Why and what to watch for
 
 De-Mining is the slow recovery from card-driven port mining. Mines only get placed by cards (5.4.2 clarification), so this action specifically counters that one threat vector. The design models minesweeping as a multi-turn operation: Heavy mining steps down to Light, Light down to Unmined, and the roll difficulty climbs if the facility itself is also damaged.

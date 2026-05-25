@@ -379,14 +379,29 @@ function RichActionContent({
         </section>
       )}
 
-      {c.whyAndWatchFor && (
-        <CollapsibleCoach key={`coach-${card.id}`} className="mb-5">
-          <RuleAwareHtml
-            className="prose-action text-sm leading-relaxed"
-            html={c.whyAndWatchForHtml ?? ""}
-            onNavigateAction={onNavigate}
-          />
-        </CollapsibleCoach>
+      {(c.whyAndWatchForShort || c.whyAndWatchFor) && (
+        <CollapsibleCoach
+          key={`coach-${card.id}`}
+          className="mb-5"
+          short={
+            c.whyAndWatchForShortHtml ? (
+              <RuleAwareHtml
+                className="prose-action text-sm leading-relaxed"
+                html={c.whyAndWatchForShortHtml}
+                onNavigateAction={onNavigate}
+              />
+            ) : undefined
+          }
+          long={
+            c.whyAndWatchForHtml ? (
+              <RuleAwareHtml
+                className="prose-action text-sm leading-relaxed"
+                html={c.whyAndWatchForHtml}
+                onNavigateAction={onNavigate}
+              />
+            ) : undefined
+          }
+        />
       )}
     </div>
   );

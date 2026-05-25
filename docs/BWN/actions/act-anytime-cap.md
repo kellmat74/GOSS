@@ -39,6 +39,10 @@ Every Fighter unit at home base is always performing a CAP (Combat Air Patrol) m
 - [Air Strike](./act-air-strike.md)
 - Related rules: (4.2.3.3), (5.3.3.2), (7.1.1.2), (7.1.4), (7.1.4.1), (7.1.4.2)
 
+## Coach
+
+CAP is free standing defense and never gets Spent by resolving combat (4.2.3.3). Eligibility: land fighters defend their own base only, carrier fighters defend every TF in their Sea Zone plus adjacent land facilities (5.3.3.2). A strike passing through without attacking does not trigger CAP, that is interception (5.3.3.1). Carrier CAP defending a TF that is NOT the strike's target uses Poor-detection saves of 8+ (7.1.4.3), and heavy base damage drops CAP to 1 die per unit.
+
 ## Why and what to watch for
 
 CAP is the free standing defense over every base and TF. Fighters at home base are always performing CAP, even when their counter shows Spent (4.2.3.3, 5.3.3.2). The design models air defense as a baseline, the fighter doesn't have to take an action to defend its own ship or airbase, and CAP is never spent by resolving combat (the unit's eligibility to roll the next time a strike arrives is unchanged).

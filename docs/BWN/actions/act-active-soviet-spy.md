@@ -35,6 +35,10 @@ The Soviet player has spies remaining on the Soviet Spies Track and chooses to s
 - [Soviet Spy for SSBN evasion](./act-anytime-spy-fs-evasion.md)
 - Related rules: (4.2.2.2), (9.3)
 
+## Coach
+
+Spend earlier-game when the infiltration track is healthier and effects matter most: a spy-placed Poor Detection seeds the MP upgrade chain to Good for missile capability (9.3, 7.4), and the SSBN Hunting marker grab dodges the natural-10 dependency. Every use rolls an infiltration check that may shift the track left and reduce future spy availability. KGB Assassination requires a spy on top of its OPS cost.
+
 ## Why and what to watch for
 
 Soviet Spies are a finite, depleting resource on the Spy Infiltration Track that converts to one of four effects per use (9.3). The design models Soviet covert intelligence networks doing things that no in-game unit can: placing arbitrary Poor Detection markers on NATO TFs, claiming the SSBN Hunting marker without combat, re-rolling ASW dice, and auto-succeeding SSBN evasion. The active version (this action) is the proactive use; 4.2.3.5 is the reactive evasion version.

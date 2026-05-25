@@ -31,6 +31,10 @@ Each turn each player will play two cards for OPS (4.2.2.3). Each card has one e
 - [Play a Reaction event from hand](./act-anytime-reaction-event.md)
 - Related rules: (4.2), (4.2.2), (4.2.2.3)
 
+## Coach
+
+Fire the event when its printed cost beats the OPS you would otherwise spend to replicate the effect, free strikes, free detection, and anti-tech effects are the obvious wins. Each event can only fire once per turn unless the text says otherwise (4.2.2.3), and the card goes to discard at turn end whether you used it or not. Watch for opponent reaction cards that may interrupt your event resolution (4.2.3.1).
+
 ## Why and what to watch for
 
 Each turn each player plays two cards face-up for their printed OPS value (4.2.2.3). The card text, both ops event and reaction event, remains available throughout that turn at its printed OPS cost. Playing an event during your action is "use when active": free of an action slot but still costs OPS. The design models the dual nature of these cards as both an economic resource (OPS for actions) and a strategic intervention (events).
