@@ -5,6 +5,7 @@ import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 import { SoPMarkdown } from "./SoPMarkdown";
 import { useTables } from "../../context/TablesContext";
+import { CollapsibleCoach } from "../CollapsibleCoach";
 
 interface PhaseStepperProps {
   phase: Phase | null;
@@ -204,14 +205,11 @@ export function PhaseStepper({
         </div>
       )}
 
-      {/* AI Coach — design intent, when to use, gotchas, synergies, example beat */}
+      {/* AI Coach — design intent, when to use, gotchas, synergies, example beat (collapsed by default) */}
       {active.coachContent && (
-        <div className="mb-4 rounded-md border-l-4 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-900/20">
-          <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
-            Coach
-          </div>
+        <CollapsibleCoach>
           <SoPMarkdown content={active.coachContent} onTabSwitch={onTabSwitch} />
-        </div>
+        </CollapsibleCoach>
       )}
 
       {/* Scenario appended content */}

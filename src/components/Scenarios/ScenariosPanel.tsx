@@ -8,6 +8,7 @@ import type {
   ScenarioYearVariant,
 } from "../../types/goss";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
+import { CollapsibleCoach } from "../CollapsibleCoach";
 
 interface ScenariosPanelProps {
   book: ScenarioBook | null;
@@ -114,12 +115,9 @@ function ScenarioDetail({ scenario: s }: { scenario: ScenarioContent }) {
       </Section>
 
       {s.coachNotes && (
-        <div className="mb-4 rounded-md border-l-4 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-900/20">
-          <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
-            Coach
-          </div>
+        <CollapsibleCoach>
           <ProseBlock text={s.coachNotes} />
-        </div>
+        </CollapsibleCoach>
       )}
 
       {s.specialRules && (

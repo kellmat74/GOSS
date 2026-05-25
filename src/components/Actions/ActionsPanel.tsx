@@ -3,6 +3,7 @@ import type { CardCategory, GameCard, PlayAidBlocksMap } from "../../types/goss"
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 import { RuleAwareHtml } from "./RuleAwareHtml";
+import { CollapsibleCoach } from "../CollapsibleCoach";
 
 interface ActionsPanelProps {
   cards: CardCategory[];
@@ -379,16 +380,13 @@ function RichActionContent({
       )}
 
       {c.whyAndWatchFor && (
-        <section className="mb-5 rounded-md border-l-4 border-emerald-500 bg-emerald-50 p-3 dark:bg-emerald-900/20">
-          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
-            Why and what to watch for
-          </h4>
+        <CollapsibleCoach className="mb-5">
           <RuleAwareHtml
             className="prose-action text-sm leading-relaxed"
             html={c.whyAndWatchForHtml ?? ""}
             onNavigateAction={onNavigate}
           />
-        </section>
+        </CollapsibleCoach>
       )}
     </div>
   );
