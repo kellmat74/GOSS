@@ -156,43 +156,47 @@ export function ActionsPanel({
 
   return (
     <div className="flex h-full gap-4" style={{ height: "calc(100vh - 8rem)" }}>
-      {/* Left: category tabs + filtered actions */}
-      <div className="flex w-full md:w-1/2 lg:w-2/5">
-        {/* Category tabs (vertical) */}
-        <nav className="flex w-28 shrink-0 flex-col border-r border-stone-200 pr-2 dark:border-stone-700">
-          <h2 className="mb-2 text-base font-bold">{title}</h2>
-          {cards.map((cat) => {
-            const isActive = cat.id === activeCategoryId && !q;
-            return (
-              <button
-                key={cat.id}
-                onClick={() => {
-                  setActiveCategoryId(cat.id);
-                  setQuery("");
-                }}
-                className={`mb-0.5 flex items-center justify-between rounded px-2 py-1.5 text-left text-sm transition-colors ${
-                  isActive
-                    ? "bg-accent-500 text-white"
-                    : "hover:bg-stone-100 dark:hover:bg-stone-700/60"
-                }`}
-              >
-                <span className="font-medium">{cat.label}</span>
-                <span
-                  className={`shrink-0 rounded px-1.5 py-0 text-[10px] font-bold ${
+      {/* Left: category tabs + filtered actions
+          - lg+ (desktop, iPad landscape): vertical category column on the left, actions list to its right
+          - md and below (iPad portrait, phones): horizontal category pill row on top, actions list below
+          min-w-0 + overflow-hidden keep long action titles from bleeding into the right detail pane. */}
+      <div className="flex w-full min-w-0 overflow-hidden md:w-1/2 xl:w-2/5">
+        <div className="flex w-full min-w-0 flex-col xl:flex-row">
+          {/* Category nav — horizontal scroll strip below lg; vertical column at lg+ */}
+          <nav className="flex shrink-0 gap-1 overflow-x-auto pb-2 xl:w-28 xl:flex-col xl:gap-0 xl:overflow-x-visible xl:border-r xl:border-stone-200 xl:pb-0 xl:pr-2 xl:dark:border-stone-700">
+            <h2 className="hidden xl:mb-2 xl:block xl:text-base xl:font-bold">{title}</h2>
+            {cards.map((cat) => {
+              const isActive = cat.id === activeCategoryId && !q;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => {
+                    setActiveCategoryId(cat.id);
+                    setQuery("");
+                  }}
+                  className={`flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded px-2 py-1.5 text-left text-sm transition-colors xl:mb-0.5 xl:w-full xl:justify-between xl:gap-2 ${
                     isActive
-                      ? "bg-white/25 text-white"
-                      : "bg-stone-200 text-stone-600 dark:bg-stone-700 dark:text-stone-300"
+                      ? "bg-accent-500 text-white"
+                      : "hover:bg-stone-100 dark:hover:bg-stone-700/60"
                   }`}
                 >
-                  {categoryCounts[cat.id] ?? 0}
-                </span>
-              </button>
-            );
-          })}
-        </nav>
+                  <span className="font-medium">{cat.label}</span>
+                  <span
+                    className={`shrink-0 rounded px-1.5 py-0 text-[10px] font-bold ${
+                      isActive
+                        ? "bg-white/25 text-white"
+                        : "bg-stone-200 text-stone-600 dark:bg-stone-700 dark:text-stone-300"
+                    }`}
+                  >
+                    {categoryCounts[cat.id] ?? 0}
+                  </span>
+                </button>
+              );
+            })}
+          </nav>
 
-        {/* Actions list for the active (or search-matched) category */}
-        <div className="flex flex-1 flex-col pl-3">
+          {/* Actions list for the active (or search-matched) category */}
+          <div className="flex min-w-0 flex-1 flex-col xl:pl-3">
           <div className="mb-2 shrink-0">
             <input
               type="search"
@@ -226,6 +230,7 @@ export function ActionsPanel({
               </div>
             )}
           </div>
+        </div>
         </div>
       </div>
 
