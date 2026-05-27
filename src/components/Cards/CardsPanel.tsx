@@ -210,14 +210,21 @@ function PhysicalCardDetail({ card }: { card: PhysicalCard }) {
         )}
       </div>
 
-      {/* Operations Event */}
-      <CardEventBlock event={card.ops} />
+      {/* Operations (top) Event — OPS Value (ops.cost) + Event Cost (reaction.cost, the top event's
+          play cost, paid from the granted OPS per 2.4). */}
+      <CardEventBlock
+        event={card.ops}
+        valueRows={[
+          { label: "OPS Value", value: card.ops.cost },
+          { label: "Event Cost", value: card.reaction.cost },
+        ]}
+      />
 
       {/* Divider between events */}
       <div className="my-4 border-t border-stone-300 dark:border-stone-600" />
 
-      {/* Reaction Event */}
-      <CardEventBlock event={card.reaction} />
+      {/* Reaction (bottom) Event — free to play on trigger (2.4); no cost shown. */}
+      <CardEventBlock event={card.reaction} hideCost />
 
       {/* AI Coach note (collapsed by default; short shown first, "Show more" swaps to verbose). Keyed on card id so state resets between cards. */}
       {(card.coachNotesShort || card.coachNotes) && (
@@ -244,15 +251,26 @@ function PhysicalCardDetail({ card }: { card: PhysicalCard }) {
   );
 }
 
-function CardEventBlock({ event }: { event: CardEvent }) {
+function CardEventBlock({
+  event,
+  valueRows,
+  hideCost,
+}: {
+  event: CardEvent;
+  /** Stacked labeled values shown under the type label (e.g. OPS Value / Event Cost). */
+  valueRows?: { label: string; value?: number }[];
+  /** Suppress the default single-cost chip (used for the free reaction event). */
+  hideCost?: boolean;
+}) {
   const isBlank = !event.text && event.title.toLowerCase() === "none";
+  const rows = (valueRows ?? []).filter((r) => typeof r.value === "number");
   return (
     <div>
       <div className="mb-2 flex flex-wrap items-baseline gap-2">
         <span className="text-xs font-semibold uppercase tracking-wide text-stone-500">
           {TYPE_LABEL[event.type] ?? event.type}
         </span>
-        {typeof event.cost === "number" && (
+        {!valueRows && !hideCost && typeof event.cost === "number" && (
           <span className="rounded bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900 dark:bg-amber-900/40 dark:text-amber-300">
             {event.cost} OPS
           </span>
@@ -266,6 +284,17 @@ function CardEventBlock({ event }: { event: CardEvent }) {
           </span>
         )}
       </div>
+
+      {rows.length > 0 && (
+        <div className="mb-3 inline-block rounded-md bg-stone-100 px-3 py-1.5 dark:bg-stone-800">
+          {rows.map((r) => (
+            <div key={r.label} className="flex justify-between gap-6 text-sm">
+              <span className="font-medium text-stone-500 dark:text-stone-400">{r.label}</span>
+              <span className="font-bold text-stone-800 dark:text-stone-200">{r.value}</span>
+            </div>
+          ))}
+        </div>
+      )}
 
       <h3 className="mb-2 text-lg font-bold">{event.title}</h3>
 
