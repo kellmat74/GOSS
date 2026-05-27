@@ -24,7 +24,6 @@ Ships only move as a Task Force group, and only when the SHIPS event triggers on
 
 1. Wait for the SHIPS event to be triggered on the OPS track (4.2.1.3). Both players' OPS markers reaching or passing the SHIPS box fires the event immediately after the current action.
 2. Resolve movement in detection order: all Good Detected TFs first, then Poor Detected, then Undetected. Within each category, Soviet moves all TFs before NATO (5.1.3).
-   {{PA-BLOCK: pa2:ops-track-events — OPS Track Events (Ships event movement sequence)}}
 3. For each TF, move up to one Sea Zone in any direction. TFs starting in Bad Weather zones place a 'Moved' marker instead and skip movement this beat (5.1.3.1).
 4. When entering or leaving a port, some or all units may move into the adjacent port instead. Bad Weather is ignored when leaving a port (5.1.3.6).
 5. Place the TF counter on the new zone border close to its previous zone, so the opponent can tell where it came from (5.1.3.8).

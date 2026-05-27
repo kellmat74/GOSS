@@ -21,7 +21,6 @@ Two Task Forces are in the same Sea Zone and you want to shuffle units between t
 1. Spend 1 OPS. Select source and destination Task Forces — they must be in the same Sea Zone (5.1.1.2).
 2. Move any units from the source TF to the destination TF (or to multiple destination TFs) as desired.
 3. **Detection propagation**: a unit moved from a detected force grants the detection status of the originating TF to the destination TF — unless the destination already has a higher status.
-   {{PA-BLOCK: pa4:detection-of-tfs — Detection of TFs (Poor / Good states)}}
 4. Each remaining TF must still contain at least one Surface Unit (5.1.2). Empty TF markers return to the Task Force display.
 5. The TFs may become Slow or Fast depending on whether (S) slow units are present after the swap.
 
