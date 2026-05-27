@@ -133,6 +133,8 @@ export interface GameSystemConfig {
     actions?: boolean;   // card-driven action catalog (e.g. Blue Water Navy)
     cards?: boolean;     // separate Event Cards browser (e.g. Blue Water Navy)
     scenarios?: boolean; // rich scenario book browser (e.g. Blue Water Navy)
+    /** Embed the phase tree as a two-pane panel inside the SoP tab and hide the global sidebar (e.g. Blue Water Navy). */
+    nestedSoP?: boolean;
   };
 
   /** Buttons shown in the right-edge quick-reference sidebar strip. */

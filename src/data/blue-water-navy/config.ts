@@ -40,6 +40,7 @@ export const blueWaterNavyConfig: GameSystemConfig = {
     actions: true,   // Card-driven game — Actions tab enabled
     cards: true,     // Event Cards browser tab
     scenarios: true, // Scenarios tab with rich per-scenario content
+    nestedSoP: true, // Phase tree embedded in the SoP tab; global sidebar hidden
   },
   quickRefButtons: bwnQuickRefButtons,
   glossaryConfig: bwnGlossaryConfig,

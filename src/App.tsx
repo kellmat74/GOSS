@@ -446,22 +446,49 @@ function App() {
         onToggleTheme={toggleTheme}
         title={gameConfig ? `${gameConfig.shortName} Assistant` : "Wargame Companion"}
         subtitle={gameConfig?.subtitle ?? ""}
+        hideSidebar={!!gameConfig?.features.nestedSoP}
       >
         {view === "sop" && (
-          <PhaseStepper
-            phase={currentPhase}
-            subPhase={currentSubPhase}
-            segment={currentSegment}
-            progress={progress}
-            totalPhases={phases.length}
-            onNext={nextStep}
-            onPrev={prevStep}
-            onToggleChecklist={toggleChecklist}
-            onClearChecklist={clearChecklist}
-            onAdvanceTurn={resetProgress}
-            onGoToPhase={goToPhase}
-            onTabSwitch={(tab) => setView(tab as View)}
-          />
+          gameConfig?.features.nestedSoP ? (
+            // Nested SoP: phase tree (left) + step detail (right), self-contained
+            // in the content area. Global sidebar is hidden for this game.
+            <div className="flex h-full flex-col gap-4 md:flex-row" style={{ height: "calc(100vh - 8rem)" }}>
+              <div className="max-h-56 shrink-0 overflow-y-auto rounded-lg border border-stone-200 dark:border-stone-700 md:max-h-none md:w-64">
+                {sidebar}
+              </div>
+              <div className="min-w-0 flex-1 overflow-y-auto">
+                <PhaseStepper
+                  phase={currentPhase}
+                  subPhase={currentSubPhase}
+                  segment={currentSegment}
+                  progress={progress}
+                  totalPhases={phases.length}
+                  onNext={nextStep}
+                  onPrev={prevStep}
+                  onToggleChecklist={toggleChecklist}
+                  onClearChecklist={clearChecklist}
+                  onAdvanceTurn={resetProgress}
+                  onGoToPhase={goToPhase}
+                  onTabSwitch={(tab) => setView(tab as View)}
+                />
+              </div>
+            </div>
+          ) : (
+            <PhaseStepper
+              phase={currentPhase}
+              subPhase={currentSubPhase}
+              segment={currentSegment}
+              progress={progress}
+              totalPhases={phases.length}
+              onNext={nextStep}
+              onPrev={prevStep}
+              onToggleChecklist={toggleChecklist}
+              onClearChecklist={clearChecklist}
+              onAdvanceTurn={resetProgress}
+              onGoToPhase={goToPhase}
+              onTabSwitch={(tab) => setView(tab as View)}
+            />
+          )
         )}
         {view === "flowchart" && gameConfig?.features.flowchart && <SoPFlowchart />}
         {view === "rules" && <RulesSearch rules={allRules} />}
