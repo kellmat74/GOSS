@@ -17,8 +17,8 @@
       "frequency": 2,
       "cost": 0
     },
-    "coachNotes": "Spy Trawler is OPS-fodder most days. Nine OPS to drop a poor detection on a NATO TF is rarely worth it unless you have a SLCM submarine ready to capitalize and the target is the carrier group or a convoy. Pair the event with a same-turn submarine attack so the detection actually shoots back. Missile Coordination is cheap insurance for a planned submarine missile shot, especially against escorted carriers. Hold it if a Charlie or Echo is teed up to fire; otherwise discard freely to draw a replacement.",
-    "coachNotesShort": "Pocket the 9 OPS unless a sub is teed up to exploit the detection same turn. Hold Missile Coordination only when a Charlie or Echo is ready for a coordinated +2 DRM shot."
+    "coachNotes": "Spy Trawler is OPS-fodder most days. The card grants 9 OPS and the detection event is free to fire (Event Cost 0), but a poor detection on a NATO TF rarely pays unless you have a SLCM submarine ready to capitalize on the carrier group or a convoy. Pair the event with a same-turn submarine attack so the detection actually shoots back. Missile Coordination is cheap insurance for a planned submarine missile shot, especially against escorted carriers. Hold it if a Charlie or Echo is teed up to fire; otherwise discard freely to draw a replacement.",
+    "coachNotesShort": "Pocket the 9 OPS unless a sub is teed up to exploit the detection same turn. The detection event is free to fire (Event Cost 0). Hold Missile Coordination only when a Charlie or Echo is ready for a coordinated +2 DRM shot."
   },
   {
     "id": "soviet-2",
@@ -38,8 +38,8 @@
       "frequency": 3,
       "cost": 0
     },
-    "coachNotes": "Spy Trawler's event is marginal at nine OPS, mostly useful when an immediate submarine attack will exploit the detection. Default: play for OPS and put the points into activating subs or aircraft. Counter Attack is a revenge swing only when a NATO sub kills a Soviet nuke. It is a slim 6+ on one die, so do not hold the card waiting for that exact moment. Discard it for the redraw if your hand has better reactions for missile shots or escorted carrier defense.",
-    "coachNotesShort": "Take the 9 OPS; the detection event rarely pays without an immediate sub follow-up. Counter Attack is a slim one-die 6+ revenge swing, so discard it for redraw if better reactions sit in hand."
+    "coachNotes": "Spy Trawler's event is marginal even though it is free to fire (Event Cost 0): the card grants 9 OPS and you keep all of them, but the detection only matters when an immediate submarine attack will exploit it. Default: play for OPS and put the points into activating subs or aircraft. Counter Attack is a revenge swing only when a NATO sub kills a Soviet nuke. It is a slim 6+ on one die, so do not hold the card waiting for that moment. Discard it for the redraw if your hand has better reactions.",
+    "coachNotesShort": "Take the 9 OPS; the detection event is free to fire (Event Cost 0) but rarely pays without an immediate sub follow-up. Counter Attack is a slim one-die 6+ revenge swing, so discard it for redraw if better reactions sit in hand."
   },
   {
     "id": "soviet-3",
@@ -82,8 +82,8 @@
       "frequency": 14,
       "cost": 4
     },
-    "coachNotes": "Top of the deck for Soviets. Fifteen OPS makes it tempting to spend, but the event is devastating early: NATO loses their highest card and only gets six OPS that round, on top of trimming the Soviet Spies track. Play it Turn 1 or 2 before NATO sets up CAP and SOSUS. Removed from play after use, so this is a one-shot weapon. NATO card 12 (Intelligence Agencies) cannot cancel it. No reaction event to hold for, so the only question is whether to burn it now or next turn.",
-    "coachNotesShort": "Burn the event Turn 1 or 2 before NATO sets up CAP and SOSUS. NATO loses their highest card plus draws only 6 OPS that round, and NATO card 12 cannot cancel it. Removed from play, no reaction."
+    "coachNotes": "Top of the deck for Soviets. The card grants 15 OPS and firing the event costs only 4 of them (Event Cost 4), so you still net 11, and the effect is devastating early: NATO loses their highest card and only gets six OPS that round, on top of trimming the Soviet Spies track. Play it Turn 1 or 2 before NATO sets up CAP and SOSUS. Removed from play after use, a one-shot weapon. NATO card 12 (Intelligence Agencies) cannot cancel it. No reaction event, so the only question is whether to burn it now or next turn.",
+    "coachNotesShort": "Burn the event Turn 1 or 2 before NATO sets up CAP and SOSUS. The card grants 15 OPS; firing costs only 4 (Event Cost 4), so you net 11. NATO loses their highest card plus draws only 6 OPS that round, and card 12 cannot cancel it. Removed from play, no reaction."
   },
   {
     "id": "soviet-5",
@@ -124,8 +124,8 @@
       "frequency": 2,
       "cost": 3
     },
-    "coachNotes": "Spetsnaz Assault is one die on the Air-to-Ground Bombing Table against any facility, removed from play after use. Decent for nine OPS if you target a damaged NATO airbase or SOSUS station to finish it off, but average roll. Default to OPS unless the strike completes a kill chain. Leaker! salvages a missile attack the SAMs shut down completely (R8). Hold it any turn a Backfire or Bear-D raid is planned against an escorted carrier.",
-    "coachNotesShort": "Default to OPS unless the strike completes a kill chain on a damaged airbase or SOSUS station. Hold Leaker on any planned Backfire or Bear-D raid where SAMs could shut you out."
+    "coachNotes": "Spetsnaz Assault is one die on the Air-to-Ground Bombing Table against any facility, removed from play after use. The card grants 9 OPS and firing costs only 3 of them (Event Cost 3), so you still net 6; decent if you target a damaged NATO airbase or SOSUS station to finish it off, but average roll. Default to OPS unless the strike completes a kill chain. Leaker! salvages a missile attack the SAMs shut down completely (R8). Hold it any turn a Backfire or Bear-D raid is planned against an escorted carrier.",
+    "coachNotesShort": "Default to OPS unless the strike completes a kill chain on a damaged airbase or SOSUS station. The card grants 9 OPS; firing costs only 3 of them (Event Cost 3). Hold Leaker on any planned Backfire or Bear-D raid where SAMs could shut you out."
   },
   {
     "id": "soviet-7",
@@ -146,8 +146,8 @@
       "frequency": 14,
       "cost": 2
     },
-    "coachNotes": "Cost is 2 plus the strike cost, and one full regiment in the raid carries no missiles (only NATO's CAP and interceptors target the live regiment). Pricey but transformative for a Backfire alpha strike against a carrier: NATO ignores the first two step losses. Play it when you have a fully fresh Bear or Backfire force and a Good-detected carrier worth the investment. Otherwise pocket the 12 OPS. No reaction event.",
-    "coachNotesShort": "Save it for a Backfire alpha strike against a Good-detected carrier worth the 12 OPS plus strike cost; the first two CAP step losses get ignored. Otherwise pocket the OPS."
+    "coachNotes": "The card grants 12 OPS; firing the event costs only 2 of them plus the strike cost (Event Cost 2), and one full regiment in the raid carries no missiles (only NATO's CAP and interceptors target the live regiment). Transformative for a Backfire alpha strike against a carrier: NATO ignores the first two step losses. Play it when you have a fully fresh Bear or Backfire force and a Good-detected carrier worth the strike. Otherwise pocket the 12 OPS. No reaction event.",
+    "coachNotesShort": "Save it for a Backfire alpha strike against a Good-detected carrier; the event costs 2 plus the strike cost (Event Cost 2) out of the 12 OPS the card grants, and the first two CAP step losses get ignored. Otherwise pocket the OPS."
   },
   {
     "id": "soviet-8",
@@ -168,8 +168,8 @@
       "cost": 3,
       "clarification": "Cancels one step loss. First roll for save (if there is one)."
     },
-    "coachNotes": "Replacements just flips one reduced air step to full strength: nine OPS to undo one casualty. Take the OPS unless your Backfire force is below the threshold for a meaningful strike. Double Hull/Clusterguard is the stronger half: cancel a successful hit on a Soviet nuke sub. Always hold this in the GIUK approaches or whenever your Akulas/Sierras are exposed to Orion or sub-on-sub ASW. Reaction frequency is 5, so the deck has many, but each one is precious.",
-    "coachNotesShort": "Take the OPS; flipping one reduced air step is rarely worth 9 OPS. Always hold Double Hull and Clusterguard when your Akulas or Sierras face ASW pressure, the best defensive reaction in the deck."
+    "coachNotes": "Replacements just flips one reduced air step to full strength: the card grants 9 OPS and firing costs 3 of them (Event Cost 3), so you net 6 to undo one casualty. Take the OPS unless your Backfire force is below the threshold for a meaningful strike. Double Hull/Clusterguard is the stronger half: cancel a successful hit on a Soviet nuke sub. Always hold this in the GIUK approaches or whenever your Akulas/Sierras are exposed to Orion or sub-on-sub ASW. Reaction frequency is 5, so the deck has many, but each one is precious.",
+    "coachNotesShort": "Take the OPS; the card grants 9 OPS and flipping one reduced air step costs 3 of them (Event Cost 3), rarely worth it. Always hold Double Hull and Clusterguard when your Akulas or Sierras face ASW pressure, the best defensive reaction in the deck."
   },
   {
     "id": "soviet-9",
@@ -212,8 +212,8 @@
       "frequency": 2,
       "cost": 0
     },
-    "coachNotes": "Surge activates up to four submarines from ports for nine OPS, equivalent to four ops of activation packaged into the card. Strong early-game value when you need to flood the GIUK. Missile Coordination (+2 DRM on a sub missile attack) is great if you have an SSGN teed up. Surge plus Missile Coordination in the same hand is a natural pairing: surge the boats out, then unload coordinated missile shots once they reach attack zones.",
-    "coachNotesShort": "Play Surge for the event when you need to flood the GIUK; four sub activations for 9 OPS is a steal. Hold Missile Coordination if an SSGN is positioned for a +2 DRM missile shot."
+    "coachNotes": "Surge activates up to four submarines from ports, and the event is free to fire once the card is played for OPS (Event Cost 0), so you keep all 9 OPS while getting four ops of activation packaged into the card. Strong early-game value when you need to flood the GIUK. Missile Coordination (+2 DRM on a sub missile attack) is great if you have an SSGN teed up. Surge plus Missile Coordination in the same hand is a natural pairing: surge the boats out, then unload coordinated missile shots once they reach attack zones.",
+    "coachNotesShort": "Play Surge for the event when you need to flood the GIUK; the card grants 9 OPS and the event is free to fire (Event Cost 0), so four sub activations cost you nothing. Hold Missile Coordination if an SSGN is positioned for a +2 DRM missile shot."
   },
   {
     "id": "soviet-11",
@@ -233,8 +233,8 @@
       "frequency": 1,
       "cost": 0
     },
-    "coachNotes": "Port Mining for nine OPS is a great event whenever a fresh NATO nuke is adjacent to a Soviet port: free ASW dice plus residual mines. Good Intercept is one of the best Soviet sub reactions: treat any sub attack on a NATO TF as Good detection and ignore Fast TF modifiers. Hold it for a high-value undetected attack, especially against a fleeing convoy or a fast carrier group. Worth keeping even at the cost of a card slot.",
-    "coachNotesShort": "Fire Port Mining whenever a fresh NATO nuke sits adjacent to a Soviet port. Good Intercept is one of the best Soviet reactions; hold it for an undetected sub attack on a fast carrier or fleeing convoy."
+    "coachNotes": "Port Mining is a great event whenever a fresh NATO nuke is adjacent to a Soviet port: the card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9 while getting free ASW dice plus residual mines. Good Intercept is one of the best Soviet sub reactions: treat any sub attack on a NATO TF as Good detection and ignore Fast TF modifiers. Hold it for a high-value undetected attack, especially against a fleeing convoy or a fast carrier group. Worth keeping even at the cost of a card slot.",
+    "coachNotesShort": "Fire Port Mining whenever a fresh NATO nuke sits adjacent to a Soviet port; the card grants 9 OPS and the event is free to fire (Event Cost 0). Good Intercept is one of the best Soviet reactions; hold it for an undetected sub attack on a fast carrier or fleeing convoy."
   },
   {
     "id": "soviet-12",
@@ -254,8 +254,8 @@
       "frequency": 3,
       "cost": 0
     },
-    "coachNotes": "Repairs removes one hit from any Soviet facility for nine OPS. Worth the event only when a critical port (Kola, Murmansk) is degraded to the point it blocks operations. Most turns, take the OPS. Port Watch is a free detection roll against a NATO TF leaving port if a Soviet sub is in the zone. Hold it whenever you have boats off Norfolk, the UK, or French ports; otherwise discard for the redraw.",
-    "coachNotesShort": "Take the 9 OPS unless Kola or Murmansk is degraded enough to block ops. Hold Port Watch when your subs sit off Norfolk, the UK, or French ports."
+    "coachNotes": "Repairs removes one hit from any Soviet facility. The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9; only fire it when a critical port (Kola, Murmansk) is degraded to the point it blocks operations. Most turns, take the OPS. Port Watch is a free detection roll against a NATO TF leaving port if a Soviet sub is in the zone. Hold it whenever you have boats off Norfolk, the UK, or French ports; otherwise discard for the redraw.",
+    "coachNotesShort": "Take the 9 OPS unless Kola or Murmansk is degraded enough to block ops; the card grants 9 OPS and the repair event is free to fire (Event Cost 0). Hold Port Watch when your subs sit off Norfolk, the UK, or French ports."
   },
   {
     "id": "soviet-13",
@@ -297,8 +297,8 @@
       "frequency": 2,
       "cost": 2
     },
-    "coachNotes": "Arctic Transit teleports two Soviet subs from the Arctic into the Labrador Sea, a game-changing flank around the GIUK Gap if you want to threaten convoys from the west. Nine OPS is a bargain for that. Beware: a NATO sub in the Arctic gets a free ASW shot first. Play after you have cleared NATO subs from the Arctic. Air Force Neutralized ignores an interception over Denmark or Turkey; hold only when those theaters are active.",
-    "coachNotesShort": "Play Arctic Transit only after clearing NATO subs from the Arctic, since a NATO sub there gets a free ASW shot first. Hold Air Force Neutralized only when Denmark or Turkey strikes are planned."
+    "coachNotes": "Arctic Transit teleports two Soviet subs from the Arctic into the Labrador Sea, a game-changing flank around the GIUK Gap if you want to threaten convoys from the west. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 for that move. Beware: a NATO sub in the Arctic gets a free ASW shot first. Play after you have cleared NATO subs from the Arctic. Air Force Neutralized ignores an interception over Denmark or Turkey; hold only when those theaters are active.",
+    "coachNotesShort": "Play Arctic Transit only after clearing NATO subs from the Arctic, since a NATO sub there gets a free ASW shot first. The card grants 9 OPS; firing costs only 2 (Event Cost 2). Hold Air Force Neutralized only when Denmark or Turkey strikes are planned."
   },
   {
     "id": "soviet-15",
@@ -341,8 +341,8 @@
       "cost": 2,
       "clarification": "Cancels one step loss. First roll for save (if there is one)."
     },
-    "coachNotes": "Wake Detection lets a Bear-F, Victor III, or Akula re-roll ASW dice (not detection dice). Pricey at nine OPS but excellent when you have one of those units in position for an attack. Default to OPS unless the perfect target is teed up. Double Hull/Clusterguard is gold: always hold to cancel a step loss on a Soviet nuke sub when you have a boat exposed.",
-    "coachNotesShort": "Default to OPS unless a Bear-F, Victor III, or Akula is teed up for an ASW kill. Always hold Double Hull and Clusterguard when a Soviet nuke sub is exposed."
+    "coachNotes": "Wake Detection lets a Bear-F, Victor III, or Akula re-roll ASW dice (not detection dice). The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7; excellent when you have one of those units in position for an attack. Default to OPS unless the perfect target is teed up. Double Hull/Clusterguard is gold: always hold to cancel a step loss on a Soviet nuke sub when you have a boat exposed.",
+    "coachNotesShort": "Default to OPS unless a Bear-F, Victor III, or Akula is teed up for an ASW kill. The card grants 9 OPS; firing costs only 2 (Event Cost 2). Always hold Double Hull and Clusterguard when a Soviet nuke sub is exposed."
   },
   {
     "id": "soviet-17",
@@ -383,8 +383,8 @@
       "frequency": 3,
       "cost": 2
     },
-    "coachNotes": "Redeploy moves two Soviet aircraft to other bases for twelve OPS. Use the event to put Bears or Backfires into Cuba for transatlantic threat, or to consolidate after a NATO airbase strike. Not for or from a heavily damaged base. Port Watch is a free detection roll on a departing NATO TF. Hold whenever you have a sub off a NATO port. Discard if your hand has stronger sub-attack reactions.",
-    "coachNotesShort": "Spend the 12 OPS to put Bears or Backfires onto Cuba for transatlantic threat, or to consolidate after a NATO airbase strike. Hold Port Watch when you have a sub off a NATO port."
+    "coachNotes": "Redeploy moves two Soviet aircraft to other bases; the card grants 12 OPS and firing costs only 2 of them (Event Cost 2), so you net 10. Use the event to put Bears or Backfires into Cuba for transatlantic threat, or to consolidate after a NATO airbase strike. Not for or from a heavily damaged base. Port Watch is a free detection roll on a departing NATO TF. Hold whenever you have a sub off a NATO port. Discard if your hand has stronger sub-attack reactions.",
+    "coachNotesShort": "Fire Redeploy to put Bears or Backfires onto Cuba for transatlantic threat, or to consolidate after a NATO airbase strike. The card grants 12 OPS; firing costs only 2 (Event Cost 2). Hold Port Watch when you have a sub off a NATO port."
   },
   {
     "id": "soviet-19",
@@ -427,8 +427,8 @@
       "frequency": 1,
       "cost": 4
     },
-    "coachNotes": "Cuban Intelligence adds one Soviet Spy if Lourdes is intact (15 OPS). Strong if your Spies track is running low and Lourdes is undamaged, but easy to neutralize by losing Lourdes. Surprise Assault adds a Soviet troop on Norway or Denmark during war track calculation. Game-changing for a Scandinavian push. Hold it for the turn the war track moves on the front you want to crack.",
-    "coachNotesShort": "Play Cuban Intelligence early if Lourdes is intact and the Spies track is thin. Hold Surprise Assault for the turn the Northern or Southern war track moves on the front you need to crack."
+    "coachNotes": "Cuban Intelligence adds one Soviet Spy if Lourdes is intact. The card grants 15 OPS and firing costs only 4 of them (Event Cost 4), so you net 11. Strong if your Spies track is running low and Lourdes is undamaged, but easy to neutralize by losing Lourdes. Surprise Assault adds a Soviet troop on Norway or Denmark during war track calculation. Game-changing for a Scandinavian push. Hold it for the turn the war track moves on the front you want to crack.",
+    "coachNotesShort": "Play Cuban Intelligence early if Lourdes is intact and the Spies track is thin; the card grants 15 OPS and firing costs only 4 (Event Cost 4). Hold Surprise Assault for the turn the Northern or Southern war track moves on the front you need to crack."
   },
   {
     "id": "soviet-21",
@@ -536,8 +536,8 @@
       "cost": 3,
       "clarification": "Kill equals step loss."
     },
-    "coachNotes": "SSM Strikes is two bombing dice on a German, Dutch, or Norwegian airfield. Solid value at nine OPS if a NATO base is already damaged. Submarine Pairing is a revenge step loss when an enemy sub kills a Soviet nuke. It needs a friendly diesel in the same zone to spend. Useful in zones with sub pickets, less so for solo nuke patrols.",
-    "coachNotesShort": "Fire the event when a German, Dutch, or Norwegian airfield is already damaged. Hold Submarine Pairing only when a diesel sits in the same zone as a nuke patrol expecting NATO sub contact."
+    "coachNotes": "SSM Strikes is two bombing dice on a German, Dutch, or Norwegian airfield. The card grants 9 OPS and firing costs only 3 of them (Event Cost 3), so you net 6; solid value if a NATO base is already damaged. Submarine Pairing is a revenge step loss when an enemy sub kills a Soviet nuke. It needs a friendly diesel in the same zone to spend. Useful in zones with sub pickets, less so for solo nuke patrols.",
+    "coachNotesShort": "Fire the event when a German, Dutch, or Norwegian airfield is already damaged; the card grants 9 OPS and firing costs only 3 (Event Cost 3). Hold Submarine Pairing only when a diesel sits in the same zone as a nuke patrol expecting NATO sub contact."
   },
   {
     "id": "soviet-26",
@@ -646,8 +646,8 @@
       "cost": 0,
       "clarification": "Also applies when a TF adds ships from an adjacent port. Note: when adding ships from a port to a TF already at sea, the TF loses its next chance to move (use a spare 'formed TF' marker as indicator). No modifier for TF detection status."
     },
-    "coachNotes": "Politburo Approval grants +1 stability if a NATO SSBN is attacked with at least a near-miss this turn. Worth twelve OPS only if you have an SSBN attack genuinely planned; stability matters most when you are running stress. Attack while Forming Up is the reliable half: ambush a NATO TF forming up with a sub attack and two re-rolls. Hold near key NATO ports.",
-    "coachNotesShort": "Spend the 12 OPS only when an SSBN attack is genuinely planned and Soviet stability is under stress. Hold Attack while Forming Up to ambush a NATO TF forming near a port with a fresh Soviet sub in zone."
+    "coachNotes": "Politburo Approval grants +1 stability if a NATO SSBN is attacked with at least a near-miss this turn. The card grants 12 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 12. Worth firing only if you have an SSBN attack genuinely planned; stability matters most when you are running stress. Attack while Forming Up is the reliable half: ambush a NATO TF forming up with a sub attack and two re-rolls. Hold near key NATO ports.",
+    "coachNotesShort": "Fire Politburo Approval only when an SSBN attack is genuinely planned and Soviet stability is under stress; the card grants 12 OPS and the event is free to fire (Event Cost 0). Hold Attack while Forming Up to ambush a NATO TF forming near a port with a fresh Soviet sub in zone."
   },
   {
     "id": "soviet-31",
@@ -667,8 +667,8 @@
       "frequency": 3,
       "cost": 0
     },
-    "coachNotes": "GIUK Gap Infiltration lets three submarines ignore the SOSUS line during the card play. Combined with a Surge or activation push, this is how Soviets break the GIUK for nine OPS. Play the event when you have boats queued to transit. Port Watch is a free detection roll on a departing NATO TF. Hold whenever a Soviet sub sits off a NATO port.",
-    "coachNotesShort": "Play GIUK Gap Infiltration when three boats are queued to transit; combine with Surge for a clean break of the Gap. Hold Port Watch when a sub sits off a NATO port."
+    "coachNotes": "GIUK Gap Infiltration lets three submarines ignore the SOSUS line during the card play. The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9; combined with a Surge or activation push, this is how Soviets break the GIUK. Play the event when you have boats queued to transit. Port Watch is a free detection roll on a departing NATO TF. Hold whenever a Soviet sub sits off a NATO port.",
+    "coachNotesShort": "Play GIUK Gap Infiltration when three boats are queued to transit; the card grants 9 OPS and the event is free to fire (Event Cost 0). Combine with Surge for a clean break of the Gap. Hold Port Watch when a sub sits off a NATO port."
   },
   {
     "id": "soviet-32",
@@ -688,8 +688,8 @@
       "frequency": 2,
       "cost": 2
     },
-    "coachNotes": "Cubans distract CIA/NSA forces NATO to reveal two random cards and you pick one to discard, if Lourdes is intact. Excellent for nine OPS in the early turns to strip a key NATO reaction or remove option card. Lourdes-dependent, so attack-resistant. Air Force Neutralized ignores an interception over Denmark or Turkey; hold only when air strikes through those choke points are planned.",
-    "coachNotesShort": "Play the event early while Lourdes is intact to strip a key NATO reaction. Hold Air Force Neutralized only when Denmark or Turkey choke-point strikes are planned."
+    "coachNotes": "Cubans distract CIA/NSA forces NATO to reveal two random cards and you pick one to discard, if Lourdes is intact. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7; excellent in the early turns to strip a key NATO reaction or remove option card. Lourdes-dependent, so attack-resistant. Air Force Neutralized ignores an interception over Denmark or Turkey; hold only when air strikes through those choke points are planned.",
+    "coachNotesShort": "Play the event early while Lourdes is intact to strip a key NATO reaction; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Hold Air Force Neutralized only when Denmark or Turkey choke-point strikes are planned."
   },
   {
     "id": "soviet-33",
@@ -710,8 +710,8 @@
       "frequency": 2,
       "cost": 4
     },
-    "coachNotes": "Strike Supply Ports puts three hits on each of the French, Belgian, and Dutch ports for twelve OPS. Massive convoy disruption; play it whenever NATO's convoy chain is loaded with cargo. Speech for the Politburo is a high-variance FSP boost on a roll of 7+, but doubles erases all gains. Risk it on a First Strike turn when you can afford the bust.",
-    "coachNotesShort": "Play Strike Supply Ports whenever NATO's convoy chain is loaded with cargo at French, Belgian, or Dutch ports. Speech for the Politburo is doubles-busts risk best taken on a First Strike turn you can afford to lose."
+    "coachNotes": "Strike Supply Ports puts three hits on each of the French, Belgian, and Dutch ports. The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 for massive convoy disruption; play it whenever NATO's convoy chain is loaded with cargo. Speech for the Politburo is a high-variance FSP boost on a roll of 7+, but doubles erases all gains. Risk it on a First Strike turn when you can afford the bust.",
+    "coachNotesShort": "Play Strike Supply Ports whenever NATO's convoy chain is loaded with cargo at French, Belgian, or Dutch ports; the card grants 12 OPS and firing costs only 4 (Event Cost 4). Speech for the Politburo is doubles-busts risk best taken on a First Strike turn you can afford to lose."
   },
   {
     "id": "soviet-34",
@@ -732,8 +732,8 @@
       "cost": 0,
       "clarification": "Kill equals step loss."
     },
-    "coachNotes": "Backfire Rest and Refit removes spent markers on any three aircraft. Strong setup for a Day 2 alpha strike, especially after a first-day Backfire raid. Nine OPS is fair value. Submarine Pairing is a niche revenge: when an enemy sub kills a Soviet nuke, spend a diesel in the zone to inflict a step loss back. Useful only with paired patrols.",
-    "coachNotesShort": "Play the event when a Day 2 Backfire alpha strike needs spent markers cleared. Hold Submarine Pairing only when a diesel sits paired with a nuke patrol."
+    "coachNotes": "Backfire Rest and Refit removes spent markers on any three aircraft. The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9. Strong setup for a Day 2 alpha strike, especially after a first-day Backfire raid. Submarine Pairing is a niche revenge: when an enemy sub kills a Soviet nuke, spend a diesel in the zone to inflict a step loss back. Useful only with paired patrols.",
+    "coachNotesShort": "Play the event when a Day 2 Backfire alpha strike needs spent markers cleared; the card grants 9 OPS and the event is free to fire (Event Cost 0). Hold Submarine Pairing only when a diesel sits paired with a nuke patrol."
   },
   {
     "id": "soviet-35",
@@ -775,8 +775,8 @@
       "frequency": 14,
       "cost": 0
     },
-    "coachNotes": "North Sea Oil Sabotage spends four steps of fresh Soviet subs in the North Sea, costs NATO 2 OPS, and rolls three dice at 1-2 for British sub step losses. Removed from play. Conditional but high-impact if you have the force present. Worth twelve OPS only when those subs are already in the North Sea. No reaction event.",
-    "coachNotesShort": "Play only when four steps of fresh Soviet subs already sit in the North Sea. Costs NATO 2 OPS plus three dice at 1-2 for British sub step losses. No reaction event, so the call is OPS vs setup payoff."
+    "coachNotes": "North Sea Oil Sabotage spends four steps of fresh Soviet subs in the North Sea, costs NATO 2 OPS, and rolls three dice at 1-2 for British sub step losses. Removed from play. The card grants 12 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 12. Conditional but high-impact if you have the force present. Worth firing only when those subs are already in the North Sea. No reaction event.",
+    "coachNotesShort": "Play only when four steps of fresh Soviet subs already sit in the North Sea; the card grants 12 OPS and the event is free to fire (Event Cost 0). It costs NATO 2 OPS plus three dice at 1-2 for British sub step losses. No reaction event."
   },
   {
     "id": "soviet-37",
@@ -817,8 +817,8 @@
       "frequency": 1,
       "cost": 2
     },
-    "coachNotes": "Cuban Sabotage is two hits on a convoy if Cuba is active. Excellent nine-OPS event for convoy interdiction in the West, but useless if NATO has dealt with Cuba. Friendly Fire causes a hit on an enemy sub when their ASW scores no hits. Saved hits do not count as no-hit (CL). Hold against active NATO ASW pressure.",
-    "coachNotesShort": "Play Cuban Sabotage whenever Cuba is active and a US convoy is in range; two free hits is excellent value. Hold Friendly Fire when your sub pickets face active NATO ASW pressure."
+    "coachNotes": "Cuban Sabotage is two hits on a convoy if Cuba is active. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 for excellent convoy interdiction in the West, but it is useless if NATO has dealt with Cuba. Friendly Fire causes a hit on an enemy sub when their ASW scores no hits. Saved hits do not count as no-hit (CL). Hold against active NATO ASW pressure.",
+    "coachNotesShort": "Play Cuban Sabotage whenever Cuba is active and a US convoy is in range; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Two hits for that is excellent value. Hold Friendly Fire when your sub pickets face active NATO ASW pressure."
   },
   {
     "id": "soviet-39",
@@ -839,8 +839,8 @@
       "frequency": 14,
       "cost": 6
     },
-    "coachNotes": "Paratroops places a troop on Iceland (if Keflavik is heavily damaged) or stands up a Soviet airbase in Crete or Malta for up to two strike and two fighter units. Removed from play. Fifteen OPS, but a Med base completely reshapes the southern theater. Play it when you have committed to the Iceland or Med strategy. No reaction event.",
-    "coachNotesShort": "Spend the 15 OPS when you have committed to the Iceland or Med strategy; a Soviet airbase in Crete or Malta reshapes the southern theater. Removed from play, no reaction."
+    "coachNotes": "Paratroops places a troop on Iceland (if Keflavik is heavily damaged) or stands up a Soviet airbase in Crete or Malta for up to two strike and two fighter units. Removed from play. The card grants 15 OPS and firing costs only 6 of them (Event Cost 6), so you net 9, and a Med base completely reshapes the southern theater. Play it when you have committed to the Iceland or Med strategy. No reaction event.",
+    "coachNotesShort": "Fire Paratroops when you have committed to the Iceland or Med strategy; the card grants 15 OPS and firing costs only 6 (Event Cost 6). A Soviet airbase in Crete or Malta reshapes the southern theater. Removed from play, no reaction."
   },
   {
     "id": "soviet-40",
@@ -882,8 +882,8 @@
       "frequency": 2,
       "cost": 2
     },
-    "coachNotes": "MiG-29 Fulcrum deploys the MiG-29 to any base except Cuba, removed from play. Worth playing whenever you can position it at a Soviet airbase under threat. Strong fighter, but at nine OPS the cost is a real investment. Tigerfish ignores a British sub attack die (1985 only, max roll 9). Hold against UK sub threats in the East Atlantic or North Sea.",
-    "coachNotesShort": "Play the event when you can position the MiG-29 at a Soviet airbase under threat. Hold Tigerfish only when UK boats threaten your nukes in 1985; unplayable in 1989."
+    "coachNotes": "MiG-29 Fulcrum deploys the MiG-29 to any base except Cuba, removed from play. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 for a strong fighter; worth playing whenever you can position it at a Soviet airbase under threat. Tigerfish ignores a British sub attack die (1985 only, max roll 9). Hold against UK sub threats in the East Atlantic or North Sea.",
+    "coachNotesShort": "Play the event when you can position the MiG-29 at a Soviet airbase under threat; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Hold Tigerfish only when UK boats threaten your nukes in 1985; unplayable in 1989."
   },
   {
     "id": "soviet-42",
@@ -904,8 +904,8 @@
       "frequency": 14,
       "cost": 6
     },
-    "coachNotes": "Strategic Strike is the Tu-95 wildcard at fifteen OPS (four in 1983). Attacks any target with unlimited range; black missiles in 1983, green (range 2) in 1985+. Saved for the perfect target: an exposed convoy, a damaged airfield, or a high-value naval target out of normal range. CL: AS-15s only stopped by SAM. No reaction event, so this is purely an OPS-vs-event call.",
-    "coachNotesShort": "Save the Tu-95 for a perfect target: an exposed convoy, a damaged airfield, or a high-value target out of normal range. AS-15s are only stopped by SAM. No reaction event, so the call is OPS vs strike."
+    "coachNotes": "Strategic Strike is the Tu-95 wildcard. The card grants 15 OPS (four in 1983) and firing the strike costs only 6 of them (Event Cost 6), so you still net positive. Attacks any target with unlimited range; black missiles in 1983, green (range 2) in 1985+. Saved for the perfect target: an exposed convoy, a damaged airfield, or a high-value naval target out of normal range. CL: AS-15s only stopped by SAM. No reaction event, so this is purely an OPS-vs-event call.",
+    "coachNotesShort": "Save the Tu-95 for a perfect target: an exposed convoy, a damaged airfield, or a high-value target out of normal range. The card grants 15 OPS (four in 1983) and firing costs only 6 (Event Cost 6). AS-15s are only stopped by SAM. No reaction event."
   },
   {
     "id": "soviet-43",
@@ -925,8 +925,8 @@
       "frequency": 14,
       "cost": 4
     },
-    "coachNotes": "Second Strike is unplayable on turns 1 to 5. Once available, take two FSPs if NATO sits at 0-11 on the Soviet Nuclear Strike Capability track; one FSP at 12-17. Only one playable per turn. Twelve OPS is a steep cost, but two free FSPs is one of the best swings in the deck. Always play for the event in the late game. No reaction event.",
-    "coachNotesShort": "Unplayable on turns 1-5. Once available, always play for the event in the late game; two free FSPs is one of the deck's best swings. No reaction event."
+    "coachNotes": "Second Strike is unplayable on turns 1 to 5. Once available, take two FSPs if NATO sits at 0-11 on the Soviet Nuclear Strike Capability track; one FSP at 12-17. Only one playable per turn. The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 and gain the FSPs; one of the best swings in the deck. Always play for the event in the late game. No reaction event.",
+    "coachNotesShort": "Unplayable on turns 1-5. Once available, always play for the event in the late game; the card grants 12 OPS and firing costs only 4 (Event Cost 4), so two free FSPs is one of the deck's best swings. No reaction event."
   },
   {
     "id": "soviet-44",
@@ -947,8 +947,8 @@
       "cost": 0,
       "clarification": "Attacking submarine still receives hits — they do not remove rolled dice. Only natural 8-10 ignored, not a 7 with a tactical modifier."
     },
-    "coachNotes": "Norwegian Strikes is one Air-to-Ground die against any Norwegian facility. Decent ops fodder, occasionally worth the nine OPS to finish off a damaged Bodo or Bardufoss. Determined Attack ignores natural 8-10 NATO defense dice during a Soviet sub TF attack. CL: the sub still takes hits, and a 7 with modifier still counts. Hold when an SSGN is teed up against an escorted carrier.",
-    "coachNotesShort": "Fire the event on a Norwegian facility only when finishing off a damaged Bodo or Bardufoss. Hold Determined Attack for an SSGN shot against an escorted carrier; the sub still takes hits and only natural 8-10 are ignored."
+    "coachNotes": "Norwegian Strikes is one Air-to-Ground die against any Norwegian facility. The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9; decent ops fodder, occasionally worth firing to finish off a damaged Bodo or Bardufoss. Determined Attack ignores natural 8-10 NATO defense dice during a Soviet sub TF attack. CL: the sub still takes hits, and a 7 with modifier still counts. Hold when an SSGN is teed up against an escorted carrier.",
+    "coachNotesShort": "Fire the event on a Norwegian facility only when finishing off a damaged Bodo or Bardufoss; the card grants 9 OPS and the event is free to fire (Event Cost 0). Hold Determined Attack for an SSGN shot against an escorted carrier; the sub still takes hits and only natural 8-10 are ignored."
   },
   {
     "id": "soviet-45",
@@ -968,8 +968,8 @@
       "frequency": 1,
       "cost": 3
     },
-    "coachNotes": "RORSAT Replacement adds one RORSAT step (from Tyuratam) to any zone on the map. Twelve OPS for a permanent detection asset is fair value, especially if NATO has been hammering your RORSAT shell with ASM-135 or Space Shuttle. Escort out of Position lets you ignore one enemy die or re-roll up to two friendly attack dice on a sub-vs-TF attack. Hold for a high-value submarine alpha strike against an escorted carrier.",
-    "coachNotesShort": "Play RORSAT Replacement after NATO has hammered your detection shell with ASAT or Space Shuttle. Hold Escort out of Position for a high-value sub alpha strike against an escorted carrier."
+    "coachNotes": "RORSAT Replacement adds one RORSAT step (from Tyuratam) to any zone on the map. The card grants 12 OPS and firing costs only 3 of them (Event Cost 3), so you net 9 for a permanent detection asset, especially if NATO has been hammering your RORSAT shell with ASM-135 or Space Shuttle. Escort out of Position lets you ignore one enemy die or re-roll up to two friendly attack dice on a sub-vs-TF attack. Hold for a high-value submarine alpha strike against an escorted carrier.",
+    "coachNotesShort": "Play RORSAT Replacement after NATO has hammered your detection shell with ASAT or Space Shuttle; the card grants 12 OPS and firing costs only 3 (Event Cost 3). Hold Escort out of Position for a high-value sub alpha strike against an escorted carrier."
   },
   {
     "id": "soviet-46",
@@ -990,8 +990,8 @@
       "frequency": 14,
       "cost": 0
     },
-    "coachNotes": "Strike UK Early Warning places two target markers in the UK (Fylingdales and Menwith Hill); each destroyed earns one FSP. Removed from play. CL#10: new targets go into the UK airfield box and fly to that location for adjacency. No collateral airfield damage, and two hits from one die cannot be split. Worth twelve OPS if you have the air power to follow up; targets remain in play until destroyed, so they accumulate. No reaction event.",
-    "coachNotesShort": "Spend the 12 OPS to set up the targets only if you have the air power to follow up; each destroyed target earns one FSP. Targets remain in play and accumulate damage across turns. No reaction event."
+    "coachNotes": "Strike UK Early Warning places two target markers in the UK (Fylingdales and Menwith Hill); each destroyed earns one FSP. Removed from play. CL#10: new targets go into the UK airfield box and fly to that location for adjacency. No collateral airfield damage, and two hits from one die cannot be split. The card grants 12 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 12; worth it if you have the air power to follow up. Targets remain in play until destroyed, so they accumulate. No reaction event.",
+    "coachNotesShort": "Fire Strike UK Early Warning only if you have the air power to follow up; the card grants 12 OPS and the event is free to fire (Event Cost 0). Each destroyed target earns one FSP, and targets remain in play and accumulate damage across turns. No reaction event."
   },
   {
     "id": "soviet-47",
@@ -1011,8 +1011,8 @@
       "frequency": 14,
       "cost": 0
     },
-    "coachNotes": "Nuclear Strike ends the game. Playable only if battlefield nuclear weapons have been used. Roll a die with modifiers: 1-4 is strategic exchange (a Soviet strategic loss); 5+ is demonstration strikes with both sides showing restraint and Soviets adding 1 H&S. Stack modifiers (+2 if NATO used battlefield nukes; -1 if Soviets used chemicals; +1 with 2+ FSPs). Nine OPS but functionally a desperation play when the conventional game is lost. No reaction event.",
-    "coachNotesShort": "Desperation play when the conventional game is lost. Stack modifiers carefully: 1-4 is a strategic loss, 5+ adds 1 H&S. Removed from play, ends the game, no reaction event."
+    "coachNotes": "Nuclear Strike ends the game. Playable only if battlefield nuclear weapons have been used. Roll a die with modifiers: 1-4 is strategic exchange (a Soviet strategic loss); 5+ is demonstration strikes with both sides showing restraint and Soviets adding 1 H&S. Stack modifiers (+2 if NATO used battlefield nukes; -1 if Soviets used chemicals; +1 with 2+ FSPs). The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), but it is functionally a desperation play when the conventional game is lost. No reaction event.",
+    "coachNotesShort": "Desperation play when the conventional game is lost; the card grants 9 OPS and the event is free to fire (Event Cost 0). Stack modifiers carefully: 1-4 is a strategic loss, 5+ adds 1 H&S. Removed from play, ends the game, no reaction event."
   },
   {
     "id": "soviet-48",
@@ -1032,8 +1032,8 @@
       "frequency": 1,
       "cost": 4
     },
-    "coachNotes": "Air Defence Replacements restores up to four steps of MiG-21 or MiG-23 fighters. Removed from play. Strong rebuilding card for twelve OPS, especially after a NATO airbase strike has ground down your interceptors. MR-600 Top Sail rolls two extra TF defense dice after seeing the initial roll, against a NATO sub attack on a capital ship. Hold when a Slava or Kirov is exposed.",
-    "coachNotesShort": "Spend the 12 OPS to rebuild four MiG-21 or MiG-23 steps after NATO airbase strikes ground down your interceptors. Hold MR-600 Top Sail when a Slava or Kirov is exposed to a NATO sub attack."
+    "coachNotes": "Air Defence Replacements restores up to four steps of MiG-21 or MiG-23 fighters. Removed from play. The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 for a strong rebuild, especially after a NATO airbase strike has ground down your interceptors. MR-600 Top Sail rolls two extra TF defense dice after seeing the initial roll, against a NATO sub attack on a capital ship. Hold when a Slava or Kirov is exposed.",
+    "coachNotesShort": "Fire Air Defence Replacements to rebuild four MiG-21 or MiG-23 steps after NATO airbase strikes ground down your interceptors; the card grants 12 OPS and firing costs only 4 (Event Cost 4). Hold MR-600 Top Sail when a Slava or Kirov is exposed to a NATO sub attack."
   },
   {
     "id": "soviet-49",
@@ -1077,8 +1077,8 @@
       "cost": 0,
       "clarification": "Cancels one step loss. First roll for save (if there is one)."
     },
-    "coachNotes": "Surge activates up to four submarines from undamaged Soviet ports for nine OPS, the equivalent of four ops of activation rolled into one card. Play the event early to flood the GIUK or push boats forward fast. CL: cost is included in the card. Double Hull/Clusterguard cancels one hit on a Soviet nuke sub. First roll for save if applicable (CL). The best defensive reaction in the deck. Always hold.",
-    "coachNotesShort": "Play Surge early to flood the GIUK or push boats forward fast. Always hold Double Hull and Clusterguard when a Soviet nuke sub is exposed, the best defensive reaction in the deck."
+    "coachNotes": "Surge activates up to four submarines from undamaged Soviet ports. The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9 while getting four ops of activation rolled into one card. Play the event early to flood the GIUK or push boats forward fast. Double Hull/Clusterguard cancels one hit on a Soviet nuke sub. First roll for save if applicable (CL). The best defensive reaction in the deck. Always hold.",
+    "coachNotesShort": "Play Surge early to flood the GIUK or push boats forward fast; the card grants 9 OPS and the event is free to fire (Event Cost 0). Always hold Double Hull and Clusterguard when a Soviet nuke sub is exposed, the best defensive reaction in the deck."
   },
   {
     "id": "soviet-51",
@@ -1120,8 +1120,8 @@
       "frequency": 2,
       "cost": 2
     },
-    "coachNotes": "Redeploy moves two Soviet aircraft to other bases for twelve OPS. Mainly OPS-fodder; only worth the event to shift Bears or Backfires onto Cuba for transatlantic threat or out of a base under repeated NATO strike pressure. Not to or from a heavily damaged base. Tigerfish nullifies a British sub attack die (1985 only, max roll 9). Hold during turns when UK boats threaten your nukes; useless against US or French subs and unplayable in 1989.",
-    "coachNotesShort": "Take the OPS unless you need to shift Bears or Backfires onto Cuba or out of a base under repeated strike pressure. Hold Tigerfish only when UK boats threaten your nukes in 1985; unplayable in 1989."
+    "coachNotes": "Redeploy moves two Soviet aircraft to other bases. The card grants 12 OPS and firing costs only 2 of them (Event Cost 2), so you net 10. Mainly OPS-fodder; only worth firing to shift Bears or Backfires onto Cuba for transatlantic threat or out of a base under repeated NATO strike pressure. Not to or from a heavily damaged base. Tigerfish nullifies a British sub attack die (1985 only, max roll 9). Hold during turns when UK boats threaten your nukes; useless against US or French subs and unplayable in 1989.",
+    "coachNotesShort": "Take the OPS unless you need to shift Bears or Backfires onto Cuba or out of a base under repeated strike pressure; the card grants 12 OPS and firing costs only 2 (Event Cost 2). Hold Tigerfish only when UK boats threaten your nukes in 1985; unplayable in 1989."
   },
   {
     "id": "soviet-53",
@@ -1143,8 +1143,8 @@
       "cost": 0,
       "clarification": "Play as soon as the attack is declared, not after ASW roll."
     },
-    "coachNotes": "Category C Divisions places a troop on Norway or Denmark front, or advances either European war track on a 6+ (CL: only war tracks need the roll). Then triggers a Stability check. Removed from play. Worth nine OPS if you are pushing a land victory; the stability check is real risk. Stealthy Approach ignores one TF defense die on a sub attack. Hold for the big swing.",
-    "coachNotesShort": "Play the event only when pushing a land victory; the Stability check is real risk. Hold Stealthy Approach for a high-value Soviet sub attack on a Good-detected target, played the moment the attack is declared."
+    "coachNotes": "Category C Divisions places a troop on Norway or Denmark front, or advances either European war track on a 6+ (CL: only war tracks need the roll). Then triggers a Stability check. Removed from play. The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9; worth it if you are pushing a land victory, though the stability check is real risk. Stealthy Approach ignores one TF defense die on a sub attack. Hold for the big swing.",
+    "coachNotesShort": "Fire the event only when pushing a land victory; the card grants 9 OPS and the event is free to fire (Event Cost 0), but the Stability check is real risk. Hold Stealthy Approach for a high-value Soviet sub attack on a Good-detected target, played the moment the attack is declared."
   },
   {
     "id": "soviet-54",
@@ -1165,8 +1165,8 @@
       "frequency": 14,
       "cost": 0
     },
-    "coachNotes": "Strike US Targets places two markers in the US: Cape Canaveral in Florida (2 hits, 1 FSP, blocks NATO Space Shuttle and Space Tracking for the rest of the game) and Early Warning Radars in Washington (1 hit, 1 FSP). Removed from play. Targets remain until destroyed (CL), so multiple turns can chip away with cruise missile or air attacks under range rules. Twelve OPS is a setup investment; you still need attackers. No reaction event.",
-    "coachNotesShort": "Spend the 12 OPS to plant the targets only if you have follow-up attackers in range; Cape Canaveral blocks NATO Space Shuttle and Space Tracking after 2 hits. Targets remain until destroyed. No reaction event."
+    "coachNotes": "Strike US Targets places two markers in the US: Cape Canaveral in Florida (2 hits, 1 FSP, blocks NATO Space Shuttle and Space Tracking for the rest of the game) and Early Warning Radars in Washington (1 hit, 1 FSP). Removed from play. The card grants 12 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 12, but it only plants the markers and gives no free strike (CL). Targets remain until destroyed, so multiple turns can chip away with cruise missile or air attacks. No reaction event.",
+    "coachNotesShort": "Fire Strike US Targets only if you have follow-up attackers in range; the card grants 12 OPS and the event is free to fire (Event Cost 0). It only plants the markers. Cape Canaveral blocks NATO Space Shuttle and Space Tracking after 2 hits. No reaction event."
   },
   {
     "id": "soviet-55",
@@ -1186,8 +1186,8 @@
       "frequency": 14,
       "cost": 4
     },
-    "coachNotes": "Second Strike is unplayable on turns 1 to 5. Once available, take two FSPs if NATO sits at 0-11 on the Soviet Nuclear Strike Capability track; one FSP at 12-17. Only one playable per turn. Twelve OPS is a steep cost, but two free FSPs is one of the best swings in the deck. Always play for the event in the late game. No reaction event.",
-    "coachNotesShort": "Unplayable on turns 1-5. Once available, always play for the event in the late game; two free FSPs is one of the deck's best swings. No reaction event."
+    "coachNotes": "Second Strike is unplayable on turns 1 to 5. Once available, take two FSPs if NATO sits at 0-11 on the Soviet Nuclear Strike Capability track; one FSP at 12-17. Only one playable per turn. The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 and gain the FSPs; one of the best swings in the deck. Always play for the event in the late game. No reaction event.",
+    "coachNotesShort": "Unplayable on turns 1-5. Once available, always play for the event in the late game; the card grants 12 OPS and firing costs only 4 (Event Cost 4), so two free FSPs is one of the deck's best swings. No reaction event."
   },
   {
     "id": "nato-1",
@@ -1209,8 +1209,8 @@
       "cost": 0,
       "clarification": "This attack is not modified for bad weather — straight roll."
     },
-    "coachNotes": "Minesweepers degrades any mine counter, including Soviet port mines (CL). Nine OPS to clear a single mine is rarely worth it unless a port is mined and a critical TF needs to sail. Most days, take the OPS. Special Forces forces a Soviet land-based air strike to roll as Detected by Interceptor (+1 die). One of NATO's best CAP reactions; hold against expected Backfire raids.",
-    "coachNotesShort": "Take the OPS unless a key port is mined and a critical TF must sail. Hold Special Forces against expected Backfire raids to force the strike to roll as Detected by Interceptor."
+    "coachNotes": "Minesweepers degrades any mine counter, including Soviet port mines (CL). The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9, but clearing a single mine is rarely worth the play unless a port is mined and a critical TF needs to sail. Most days, take the OPS. Special Forces forces a Soviet land-based air strike to roll as Detected by Interceptor (+1 die). One of NATO's best CAP reactions; hold against expected Backfire raids.",
+    "coachNotesShort": "Take the OPS unless a key port is mined and a critical TF must sail. The card grants 9 OPS and the event is free to fire (Event Cost 0), but clearing one mine rarely pays. Hold Special Forces against expected Backfire raids to force the strike to roll as Detected by Interceptor."
   },
   {
     "id": "nato-2",
@@ -1230,8 +1230,8 @@
       "frequency": 1,
       "cost": 4
     },
-    "coachNotes": "Fast Convoy places a Fast convoy in the US if available, removed from play. Fifteen OPS is steep, but a Fast convoy shortens the supply window dramatically. Play in the early-to-mid game when you can spare the OPS and the Atlantic is contested. Top Gun/Moving Mud changes any two dice in a US carrier strike to ones or tens. Hold for the alpha strike against a Kola airbase or a Soviet TF.",
-    "coachNotesShort": "Spend the 15 OPS in the early-to-mid game when the Atlantic is contested; a Fast convoy shortens the supply window dramatically. Hold Top Gun/Moving Mud for the alpha strike against a Kola airbase or a Soviet TF."
+    "coachNotes": "Fast Convoy places a Fast convoy in the US if available, removed from play. The card grants 15 OPS and firing costs only 4 of them (Event Cost 4), so you net 11, and a Fast convoy shortens the supply window dramatically. Play in the early-to-mid game when the Atlantic is contested. Top Gun/Moving Mud changes any two dice in a US carrier strike to ones or tens. Hold for the alpha strike against a Kola airbase or a Soviet TF.",
+    "coachNotesShort": "Fire Fast Convoy in the early-to-mid game when the Atlantic is contested; the card grants 15 OPS and firing costs only 4 (Event Cost 4). A Fast convoy shortens the supply window dramatically. Hold Top Gun/Moving Mud for the alpha strike against a Kola airbase or a Soviet TF."
   },
   {
     "id": "nato-3",
@@ -1252,8 +1252,8 @@
       "cost": 0,
       "clarification": "CL#12. Treat the F-14 as CAP. The US Carrier must be adjacent to the air strike."
     },
-    "coachNotes": "Repairs removes one hit from any facility. Use the nine-OPS event to keep a critical airbase or convoy port operational; otherwise pocket the OPS. Distant Support commits a US carrier's F-14 unit to an adjacent zone's air defense if the strike is detected by an interceptor (CL#12: F-14 acts as CAP, carrier must be adjacent). Hold whenever a carrier is screening a Norwegian or UK base.",
-    "coachNotesShort": "Take the 9 OPS unless a critical airbase or convoy port is on the brink. Hold Distant Support whenever a US carrier screens an adjacent zone with a Norwegian or UK base under raid threat."
+    "coachNotes": "Repairs removes one hit from any facility. The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9; use it to keep a critical airbase or convoy port operational, otherwise pocket the OPS. Distant Support commits a US carrier's F-14 unit to an adjacent zone's air defense if the strike is detected by an interceptor (CL#12: F-14 acts as CAP, carrier must be adjacent). Hold whenever a carrier is screening a Norwegian or UK base.",
+    "coachNotesShort": "Take the 9 OPS unless a critical airbase or convoy port is on the brink. The card grants 9 OPS and the repair event is free to fire (Event Cost 0). Hold Distant Support whenever a US carrier screens an adjacent zone with a Norwegian or UK base under raid threat."
   },
   {
     "id": "nato-4",
@@ -1274,8 +1274,8 @@
       "frequency": 2,
       "cost": 2
     },
-    "coachNotes": "Norway Resists stops the Soviet advance on the Norway Invasion Track this turn regardless of troops present. Twelve OPS is a small price to deny Soviets a war track step. Play whenever the Soviets are about to make the Norway track move. ASM Coordinated Attack lets two friendly ships fire anti-ship missiles at a Good-detected enemy TF. Strong against detected Soviet surface groups.",
-    "coachNotesShort": "Spend the 12 OPS the turn Soviets are about to advance the Norway track; denying a war track step is worth it. Hold ASM Coordinated Attack for a high-value detected Soviet surface group."
+    "coachNotes": "Norway Resists stops the Soviet advance on the Norway Invasion Track this turn regardless of troops present. The card grants 12 OPS and firing costs only 2 of them (Event Cost 2), so you net 10, a small price to deny Soviets a war track step. Play whenever the Soviets are about to make the Norway track move. ASM Coordinated Attack lets two friendly ships fire anti-ship missiles at a Good-detected enemy TF. Strong against detected Soviet surface groups.",
+    "coachNotesShort": "Fire Norway Resists the turn Soviets are about to advance the Norway track; the card grants 12 OPS and firing costs only 2 (Event Cost 2). Denying a war track step is worth it. Hold ASM Coordinated Attack for a high-value detected Soviet surface group."
   },
   {
     "id": "nato-5",
@@ -1295,8 +1295,8 @@
       "frequency": 1,
       "cost": 2
     },
-    "coachNotes": "Naval Yard Expertise moves any capital ship in repair two turns closer to the current turn; if it advances to now, you receive it immediately. Nine OPS to accelerate a carrier or capital ship return is excellent value, especially mid-campaign after early losses. Radar Decoys ignores any successes rolled by RORSATs in one sea zone. Hold when you are moving a high-value TF through a zone with Soviet RORSAT coverage and cannot afford detection.",
-    "coachNotesShort": "Play the event mid-campaign to accelerate a carrier or capital ship back into the fight; 9 OPS for two turns saved is excellent value. Hold Radar Decoys when a high-value TF must transit RORSAT-covered water."
+    "coachNotes": "Naval Yard Expertise moves any capital ship in repair two turns closer to the current turn; if it advances to now, you receive it immediately. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 to accelerate a carrier or capital ship return, excellent mid-campaign after early losses. Radar Decoys ignores any successes rolled by RORSATs in one sea zone. Hold when you are moving a high-value TF through a zone with Soviet RORSAT coverage and cannot afford detection.",
+    "coachNotesShort": "Play the event mid-campaign to accelerate a carrier or capital ship back into the fight; the card grants 9 OPS and firing costs only 2 (Event Cost 2), so two turns saved nets 7. Hold Radar Decoys when a high-value TF must transit RORSAT-covered water."
   },
   {
     "id": "nato-6",
@@ -1339,8 +1339,8 @@
       "cost": 2,
       "clarification": "This attack is not modified for bad weather — straight roll."
     },
-    "coachNotes": "Deep Water SOSUS gives +1 ASW die in a nominated zone in East, Med, or West weather zones until next day. Excellent nine-OPS event for any zone with active NATO ASW pressure; mark the card to track. Useless in the Barents or Norwegian Sea (no East/Med/West weather there). Special Forces forces a Soviet land-based air strike to roll as Detected by Interceptor (+1 die). Hold against expected Backfire or Bear raids on convoys or UK bases.",
-    "coachNotesShort": "Play Deep Water SOSUS in any East, Med, or West weather zone where you are running active ASW; useless in Barents or Norwegian Sea. Hold Special Forces against expected Backfire or Bear raids."
+    "coachNotes": "Deep Water SOSUS gives +1 ASW die in a nominated zone in East, Med, or West weather zones until next day. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7; excellent for any zone with active NATO ASW pressure, and mark the card to track. Useless in the Barents or Norwegian Sea (no East/Med/West weather there). Special Forces forces a Soviet land-based air strike to roll as Detected by Interceptor (+1 die). Hold against expected Backfire or Bear raids on convoys or UK bases.",
+    "coachNotesShort": "Play Deep Water SOSUS in any East, Med, or West weather zone where you are running active ASW; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Useless in Barents or Norwegian Sea. Hold Special Forces against expected Backfire or Bear raids."
   },
   {
     "id": "nato-8",
@@ -1361,8 +1361,8 @@
       "frequency": 2,
       "cost": 4
     },
-    "coachNotes": "Replacement Air Wings restores two carrier air wings to full strength (CL: even destroyed wings, up to four air units total). Removed from play. Twelve OPS to undo a bad day for carrier strikes is huge value, especially mid-campaign. Emissions Control ignores detection successes by one Soviet maritime patrol aircraft. Hold when a high-value TF is moving through Bear-D coverage.",
-    "coachNotesShort": "Spend the 12 OPS mid-campaign to fully restore two carrier air wings; even destroyed wings come back. Hold Emissions Control when a high-value TF transits Bear-D coverage."
+    "coachNotes": "Replacement Air Wings restores two carrier air wings to full strength (CL: even destroyed wings, up to four air units total). Removed from play. The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 to undo a bad day for carrier strikes; huge value mid-campaign. Emissions Control ignores detection successes by one Soviet maritime patrol aircraft. Hold when a high-value TF is moving through Bear-D coverage.",
+    "coachNotesShort": "Fire Replacement Air Wings mid-campaign to fully restore two carrier air wings; the card grants 12 OPS and firing costs only 4 (Event Cost 4). Even destroyed wings come back. Hold Emissions Control when a high-value TF transits Bear-D coverage."
   },
   {
     "id": "nato-9",
@@ -1382,8 +1382,8 @@
       "frequency": 2,
       "cost": 0
     },
-    "coachNotes": "First Strike forces the Soviet player to discard 1 FSP if fewer than four payload of Soviet SSBN are in First Strike zones. Only one per turn. Best played early before Soviets establish their SSBN position. Nine OPS for a denial swing is worthwhile. Acoustic Simulators ignores a Soviet sub's detection 10 against a TF. Hold whenever a carrier or convoy is transiting contested water.",
-    "coachNotesShort": "Play First Strike early before Soviets establish their SSBN position; if fewer than four payload sit in First Strike zones, they discard 1 FSP. Hold Acoustic Simulators for contested-water transits."
+    "coachNotes": "First Strike forces the Soviet player to discard 1 FSP if fewer than four payload of Soviet SSBN are in First Strike zones. Only one per turn. The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9 and the denial swing is worthwhile. Best played early before Soviets establish their SSBN position. Acoustic Simulators ignores a Soviet sub's detection 10 against a TF. Hold whenever a carrier or convoy is transiting contested water.",
+    "coachNotesShort": "Play First Strike early before Soviets establish their SSBN position; the card grants 9 OPS and the event is free to fire (Event Cost 0). If fewer than four payload sit in First Strike zones, they discard 1 FSP. Hold Acoustic Simulators for contested-water transits."
   },
   {
     "id": "nato-10",
@@ -1448,8 +1448,8 @@
       "cost": 4,
       "clarification": "Cannot cancel Soviet card #4 'KGB Assassinations'."
     },
-    "coachNotes": "CAPTOR Mines places a torpedo-launching minefield in any sea zone (6+ to place in Barents or Baltic). Twelve OPS for a passive sub deterrent in a chokepoint is strong, especially the GIUK approaches. Intelligence Agencies cancels a Soviet spies use (Soviets still roll for Spy track reduction). Note: cannot cancel card 4 KGB Assassinations (CL). Hold when Soviets have spies stacked.",
-    "coachNotesShort": "Spend the 12 OPS to plant a CAPTOR field in a GIUK chokepoint or other sub corridor (6+ in Barents or Baltic). Hold Intelligence Agencies when Soviets have spies stacked; cannot cancel KGB Assassinations."
+    "coachNotes": "CAPTOR Mines places a torpedo-launching minefield in any sea zone (6+ to place in Barents or Baltic). The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 for a passive sub deterrent in a chokepoint, especially the GIUK approaches. Intelligence Agencies cancels a Soviet spies use (Soviets still roll for Spy track reduction). Note: cannot cancel card 4 KGB Assassinations (CL). Hold when Soviets have spies stacked.",
+    "coachNotesShort": "Fire CAPTOR Mines to plant a field in a GIUK chokepoint or other sub corridor (6+ in Barents or Baltic); the card grants 12 OPS and firing costs only 4 (Event Cost 4). Hold Intelligence Agencies when Soviets have spies stacked; cannot cancel KGB Assassinations."
   },
   {
     "id": "nato-13",
@@ -1470,8 +1470,8 @@
       "frequency": 1,
       "cost": 4
     },
-    "coachNotes": "Replacement Air Wings restores two carrier air wings to full strength (CL: even destroyed and removed from play wings, up to four air units total). Returned to carriers if possible, otherwise to local airfields. Removed from play. Twelve OPS is fair for refilling a carrier deck mid-campaign. Phalanx and Sea Sparrow ignores a missile hit on a US carrier on a 4+. Hold during any planned Backfire or SSGN strike on a carrier.",
-    "coachNotesShort": "Spend the 12 OPS mid-campaign to refill carrier decks; even destroyed wings return, up to four air units. Hold Phalanx and Sea Sparrow during any planned Backfire or SSGN strike on a US carrier."
+    "coachNotes": "Replacement Air Wings restores two carrier air wings to full strength (CL: even destroyed and removed from play wings, up to four air units total). Returned to carriers if possible, otherwise to local airfields. Removed from play. The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 to refill a carrier deck mid-campaign. Phalanx and Sea Sparrow ignores a missile hit on a US carrier on a 4+. Hold during any planned Backfire or SSGN strike on a carrier.",
+    "coachNotesShort": "Fire Replacement Air Wings mid-campaign to refill carrier decks; the card grants 12 OPS and firing costs only 4 (Event Cost 4). Even destroyed wings return, up to four air units. Hold Phalanx and Sea Sparrow during any planned Backfire or SSGN strike on a US carrier."
   },
   {
     "id": "nato-14",
@@ -1491,8 +1491,8 @@
       "frequency": 2,
       "cost": 0
     },
-    "coachNotes": "UNREP removes spent markers on up to four carrier air units (strike or fighters). Strong nine-OPS event for a multi-strike day, especially when one carrier needs to launch twice or refresh CAP after a Soviet alpha strike. Roaming Fighters lets a fighter unit intercept a Soviet air strike west of Iceland or the UK, ignoring negative modifiers. Hold when Atlantic-crossing Soviet raids on convoys or UK are likely.",
-    "coachNotesShort": "Play UNREP on a multi-strike day or to refresh CAP after a Soviet alpha strike. Hold Roaming Fighters when Atlantic-crossing Soviet raids on convoys or UK are likely."
+    "coachNotes": "UNREP removes spent markers on up to four carrier air units (strike or fighters). The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9; strong for a multi-strike day, especially when one carrier needs to launch twice or refresh CAP after a Soviet alpha strike. Roaming Fighters lets a fighter unit intercept a Soviet air strike west of Iceland or the UK, ignoring negative modifiers. Hold when Atlantic-crossing Soviet raids on convoys or UK are likely.",
+    "coachNotesShort": "Play UNREP on a multi-strike day or to refresh CAP after a Soviet alpha strike; the card grants 9 OPS and the event is free to fire (Event Cost 0). Hold Roaming Fighters when Atlantic-crossing Soviet raids on convoys or UK are likely."
   },
   {
     "id": "nato-15",
@@ -1512,8 +1512,8 @@
       "frequency": 2,
       "cost": 0
     },
-    "coachNotes": "False Contact spends a Soviet submarine for nine OPS. Useful if a Soviet sub is queued to attack your carrier or convoy this turn; otherwise OPS. Selecting an exhausted Soviet sub wastes the card; pick one with shots left. SAM Trap lets one ship CAP-fire SAM points at attacking Soviet strike aircraft. Hold for protecting a carrier or escorted convoy under raid threat.",
-    "coachNotesShort": "Spend the 9 OPS only on a Soviet sub with shots left that is queued to attack your carrier or convoy this turn; never burn it on a spent boat. Hold SAM Trap to defend a carrier or escorted convoy under raid threat."
+    "coachNotes": "False Contact spends a Soviet submarine. The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9; useful if a Soviet sub is queued to attack your carrier or convoy this turn, otherwise OPS. Selecting an exhausted Soviet sub wastes the card; pick one with shots left. SAM Trap lets one ship CAP-fire SAM points at attacking Soviet strike aircraft. Hold for protecting a carrier or escorted convoy under raid threat.",
+    "coachNotesShort": "Fire False Contact only on a Soviet sub with shots left that is queued to attack your carrier or convoy this turn; the card grants 9 OPS and the event is free to fire (Event Cost 0). Hold SAM Trap to defend a carrier or escorted convoy under raid threat."
   },
   {
     "id": "nato-16",
@@ -1536,8 +1536,8 @@
       "clarification": "Protects against nuclear torpedos but, as written, not against heavyweight torpedoes.",
       "notes": "Card shows a small 'T' icon after 'torpedoes' indicating heavyweight torpedo type"
     },
-    "coachNotes": "SURTASS rolls four ASW dice in a zone south of the GIUK Gap, optionally with a unit's tactical value (CL: any non-spent unit). Twelve OPS for a free four-dice ASW barrage is one of the best NATO event plays. Nixie ignores a torpedo hit on a NATO capital ship unless the shooting submarine has heavyweight torpedoes. Hold for any carrier or capital ship under sub threat.",
-    "coachNotesShort": "Spend the 12 OPS for four free ASW dice south of the GIUK Gap, optionally with a unit's tactical value applied. One of NATO's best ops events. Hold Nixie for any carrier or capital ship under sub threat."
+    "coachNotes": "SURTASS rolls four ASW dice in a zone south of the GIUK Gap, optionally with a unit's tactical value (CL: any non-spent unit). The card grants 12 OPS and firing costs only 2 of them (Event Cost 2), so you net 10 for a free four-dice ASW barrage, one of the best NATO event plays. Nixie ignores a torpedo hit on a NATO capital ship unless the shooting submarine has heavyweight torpedoes. Hold for any carrier or capital ship under sub threat.",
+    "coachNotesShort": "Fire SURTASS for four free ASW dice south of the GIUK Gap, optionally with a unit's tactical value applied; the card grants 12 OPS and firing costs only 2 (Event Cost 2). One of NATO's best ops events. Hold Nixie for any carrier or capital ship under sub threat."
   },
   {
     "id": "nato-17",
@@ -1558,8 +1558,8 @@
       "frequency": 1,
       "cost": 0
     },
-    "coachNotes": "Carriers Support Germany lets US carriers strike Soviet armies in Germany via the North Sea until next day, with SAM benefits if the strike is escorted (ignore the first two NATO hits when determining SAM defense). Every 5 hits places a partial convoy marker. Fifteen OPS is steep but transformative if the land war hinges on Germany. Planning and Preparation forms any two NATO TFs for free. Hold for a turn you need to surge multiple groups simultaneously.",
-    "coachNotesShort": "Spend the 15 OPS when the land war hinges on Germany; US carriers strike Soviet armies via the North Sea until next day. Hold Planning and Preparation for a turn you must surge multiple TFs simultaneously."
+    "coachNotes": "Carriers Support Germany lets US carriers strike Soviet armies in Germany via the North Sea until next day, with SAM benefits if the strike is escorted (ignore the first two NATO hits when determining SAM defense). Every 5 hits places a partial convoy marker. The card grants 15 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 15; transformative if the land war hinges on Germany. Planning and Preparation forms any two NATO TFs for free. Hold for a turn you need to surge multiple groups simultaneously.",
+    "coachNotesShort": "Fire Carriers Support Germany when the land war hinges on Germany; the card grants 15 OPS and the event is free to fire (Event Cost 0). US carriers strike Soviet armies via the North Sea until next day. Hold Planning and Preparation for a turn you must surge multiple TFs simultaneously."
   },
   {
     "id": "nato-18",
@@ -1601,8 +1601,8 @@
       "frequency": 2,
       "cost": 2
     },
-    "coachNotes": "Space Shuttle removes one RORSAT step on a 5+. Nine OPS for a coin-flip on a satellite kill is fine if the Soviets have multiple RORSATs threatening your TFs; otherwise take the OPS. Blocked if Cape Canaveral is destroyed (Soviet card 54). Acoustic Simulators ignores a Soviet sub 10 used to detect a TF. Hold for transits in contested water.",
-    "coachNotesShort": "Play the event only when multiple RORSATs threaten your TFs and a 5+ coin flip is worth the 9 OPS. Blocked if Cape Canaveral is destroyed. Hold Acoustic Simulators for contested-water transits."
+    "coachNotes": "Space Shuttle removes one RORSAT step on a 5+. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7; fine if the Soviets have multiple RORSATs threatening your TFs, otherwise take the OPS. Blocked if Cape Canaveral is destroyed (Soviet card 54). Acoustic Simulators ignores a Soviet sub 10 used to detect a TF. Hold for transits in contested water.",
+    "coachNotesShort": "Play the event only when multiple RORSATs threaten your TFs and the 5+ coin flip is worth firing; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Blocked if Cape Canaveral is destroyed. Hold Acoustic Simulators for contested-water transits."
   },
   {
     "id": "nato-20",
@@ -1622,8 +1622,8 @@
       "frequency": 1,
       "cost": 4
     },
-    "coachNotes": "Fast Convoy places a Fast convoy in the US for fifteen OPS, removed from play. Strong investment to shorten the Atlantic supply chain. Orders from Moscow forces the Soviet next-action attack on a detected convoy with at least four Naval Aviation steps (or pay 2 OPS and lose 1 FSP to refuse). One of NATO's best counter-Backfire cards if you have a detected convoy as bait.",
-    "coachNotesShort": "Spend the 15 OPS to place a Fast convoy and shorten the Atlantic supply chain. Hold Orders from Moscow for a detected convoy as bait, forcing Soviets to attack with at least four Naval Aviation steps or pay 2 OPS plus 1 FSP."
+    "coachNotes": "Fast Convoy places a Fast convoy in the US, removed from play. The card grants 15 OPS and firing costs only 4 of them (Event Cost 4), so you net 11 to shorten the Atlantic supply chain. Orders from Moscow forces the Soviet next-action attack on a detected convoy with at least four Naval Aviation steps (or pay 2 OPS and lose 1 FSP to refuse). One of NATO's best counter-Backfire cards if you have a detected convoy as bait.",
+    "coachNotesShort": "Fire Fast Convoy to shorten the Atlantic supply chain; the card grants 15 OPS and firing costs only 4 (Event Cost 4). Hold Orders from Moscow for a detected convoy as bait, forcing Soviets to attack with at least four Naval Aviation steps or pay 2 OPS plus 1 FSP."
   },
   {
     "id": "nato-21",
@@ -1645,8 +1645,8 @@
       "cost": 2,
       "clarification": "Only applies to interceptors, not CAP."
     },
-    "coachNotes": "Tomahawk Anti-ship Missile lets up to three US submarines in the same zone coordinate-fire 1 NATO missile each (2 if LA VLS/I, mark empty). Subs are not marked spent. Nine OPS for a coordinated three-sub strike is excellent against detected Soviet TFs, especially the Slava or Kirov groups. Air Patrols adds one die to an interception (CL: not CAP). Hold during expected Backfire raids.",
-    "coachNotesShort": "Play Tomahawk Anti-ship Missile against any detected Soviet TF; up to three US subs coordinate-fire without being marked spent. Hold Air Patrols against expected Backfire raids; applies only to interceptors, not CAP."
+    "coachNotes": "Tomahawk Anti-ship Missile lets up to three US submarines in the same zone coordinate-fire 1 NATO missile each (2 if LA VLS/I, mark empty). Subs are not marked spent. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 for a coordinated three-sub strike, excellent against detected Soviet TFs, especially the Slava or Kirov groups. Air Patrols adds one die to an interception (CL: not CAP). Hold during expected Backfire raids.",
+    "coachNotesShort": "Play Tomahawk Anti-ship Missile against any detected Soviet TF; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Up to three US subs coordinate-fire without being marked spent. Hold Air Patrols against expected Backfire raids; applies only to interceptors, not CAP."
   },
   {
     "id": "nato-22",
@@ -1667,8 +1667,8 @@
       "frequency": 3,
       "cost": 2
     },
-    "coachNotes": "Tomahawk Anti-ship Missile is one of NATO's best ops events: up to three US submarines in the same zone coordinate-fire 1 NATO missile each (2 if LA VLS or I, mark empty). Subs are not marked spent, so they can shoot again later. Nine OPS, well worth it against any detected Soviet surface group, especially the Slava or Kirov. Diesels Snorkeling causes one step loss to any diesel sub during ASW in a zone with an enemy diesel.",
-    "coachNotesShort": "Play Tomahawk Anti-ship Missile against any detected Soviet surface group, especially a Slava or Kirov; three coordinated subs without spent markers is huge value. Hold Diesels Snorkeling in zones with active Foxtrots or Tangos."
+    "coachNotes": "Tomahawk Anti-ship Missile is one of NATO's best ops events: up to three US submarines in the same zone coordinate-fire 1 NATO missile each (2 if LA VLS or I, mark empty). Subs are not marked spent, so they can shoot again later. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7; well worth it against any detected Soviet surface group, especially the Slava or Kirov. Diesels Snorkeling causes one step loss to any diesel sub during ASW in a zone with an enemy diesel.",
+    "coachNotesShort": "Play Tomahawk Anti-ship Missile against any detected Soviet surface group, especially a Slava or Kirov; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Three coordinated subs without spent markers is huge value. Hold Diesels Snorkeling in zones with active Foxtrots or Tangos."
   },
   {
     "id": "nato-23",
@@ -1689,8 +1689,8 @@
       "frequency": 2,
       "cost": 3
     },
-    "coachNotes": "Special Forces (ops event) rolls one die on the Air-to-Ground Bombing Table against any facility (CL: straight roll, not modified for bad weather). Removed from play. Twelve OPS for one die is steep; play it against a damaged Soviet airbase to finish the kill or against an isolated high-value target like a Soviet SSBN base. Emissions Control ignores detection successes by one Soviet maritime patrol aircraft (typically a Bear-D). Hold for high-value TF transits through MP coverage.",
-    "coachNotesShort": "Spend the 12 OPS to finish off a damaged Soviet airbase or hit an isolated high-value target like an SSBN base; one die only, straight roll. Hold Emissions Control when a high-value TF transits Bear-D coverage."
+    "coachNotes": "Special Forces (ops event) rolls one die on the Air-to-Ground Bombing Table against any facility (CL: straight roll, not modified for bad weather). Removed from play. The card grants 12 OPS and firing costs only 3 of them (Event Cost 3), so you net 9 for one die; play it against a damaged Soviet airbase to finish the kill or against an isolated high-value target like a Soviet SSBN base. Emissions Control ignores detection successes by one Soviet maritime patrol aircraft (typically a Bear-D). Hold for high-value TF transits through MP coverage.",
+    "coachNotesShort": "Fire Special Forces to finish off a damaged Soviet airbase or hit an isolated high-value target like an SSBN base; the card grants 12 OPS and firing costs only 3 (Event Cost 3), one die only, straight roll. Hold Emissions Control when a high-value TF transits Bear-D coverage."
   },
   {
     "id": "nato-24",
@@ -1711,8 +1711,8 @@
       "cost": 3,
       "notes": "Reaction cost shown as 3* (asterisk denotes conditional cost mentioned in Ops text)"
     },
-    "coachNotes": "Submarine UNREP removes spent and no-ammo markers from three subs south of the GIUK Gap (not Baltic, Black Sea, Med 7-8; cost 1 OPS if no ammo removed). Free refresh for forward NATO subs is huge value. GIUK Gap Patrol moves a NATO sub up to one zone, removes its spent marker, and lets it interrupt a Soviet unit entering an active hydrophone zone. Hold for GIUK choke defense.",
-    "coachNotesShort": "Play Submarine UNREP to refresh three forward NATO subs (cost 1 OPS if no ammo removed). Always strong value. Hold GIUK Gap Patrol for chokepoint defense when Soviets push through hydrophone zones."
+    "coachNotes": "Submarine UNREP removes spent and no-ammo markers from three subs south of the GIUK Gap (not Baltic, Black Sea, Med 7-8). The card grants 9 OPS and firing costs only 3 of them (Event Cost 3, dropping to just 1 OPS if no ammo is removed), so you net 6 or better refreshing forward NATO subs, huge value. GIUK Gap Patrol moves a NATO sub up to one zone, removes its spent marker, and lets it interrupt a Soviet unit entering an active hydrophone zone. Hold for GIUK choke defense.",
+    "coachNotesShort": "Play Submarine UNREP to refresh three forward NATO subs; the card grants 9 OPS and firing costs only 3 (Event Cost 3, or just 1 OPS if no ammo removed). Always strong value. Hold GIUK Gap Patrol for chokepoint defense when Soviets push through hydrophone zones."
   },
   {
     "id": "nato-25",
@@ -1755,8 +1755,8 @@
       "frequency": 1,
       "cost": 4
     },
-    "coachNotes": "Eagles adds one available F-15 to any NATO airbase, removed from play. Twelve OPS for a fresh fighter step is fair, especially in the UK or Norway theaters after Backfire attrition has ground down interceptors. ASM-135 ASAT places a RORSAT in the Destroyed Box on a 3+ when the Soviet rolls a RORSAT to detect a surface TF. Played immediately before the roll. Hold for RORSAT denial when a high-value TF must transit detected airspace.",
-    "coachNotesShort": "Spend the 12 OPS for a fresh F-15 in the UK or Norway after Backfire attrition has ground down interceptors. Hold ASM-135 ASAT to kill a RORSAT on a 3+ when a high-value TF must transit detected airspace."
+    "coachNotes": "Eagles adds one available F-15 to any NATO airbase, removed from play. The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 for a fresh fighter step, especially in the UK or Norway theaters after Backfire attrition has ground down interceptors. ASM-135 ASAT places a RORSAT in the Destroyed Box on a 3+ when the Soviet rolls a RORSAT to detect a surface TF. Played immediately before the roll. Hold for RORSAT denial when a high-value TF must transit detected airspace.",
+    "coachNotesShort": "Fire Eagles for a fresh F-15 in the UK or Norway after Backfire attrition has ground down interceptors; the card grants 12 OPS and firing costs only 4 (Event Cost 4). Hold ASM-135 ASAT to kill a RORSAT on a 3+ when a high-value TF must transit detected airspace."
   },
   {
     "id": "nato-27",
@@ -1777,8 +1777,8 @@
       "frequency": 2,
       "cost": 2
     },
-    "coachNotes": "Fighters to Norway/Denmark places two steps of fighters (UK, grounded F-14s, or Eagles) into Norway or Denmark airbases. Nine OPS is a strong forward-deployment for the Scandinavian theater when Soviets pressure those airfields. CL: grounded F-14s come off the turn track from a repairing carrier. Roaming Fighters intercepts a Soviet strike west of Iceland or UK ignoring negative modifiers. Hold for Atlantic-crossing Backfire raids.",
-    "coachNotesShort": "Spend the 9 OPS to push two fighter steps into Scandinavian airbases when Soviets are pressuring Norway or Denmark airspace. Hold Roaming Fighters for Atlantic-crossing Backfire raids on convoys or UK."
+    "coachNotes": "Fighters to Norway/Denmark places two steps of fighters (UK, grounded F-14s, or Eagles) into Norway or Denmark airbases. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 for a strong forward-deployment when Soviets pressure those airfields. CL: grounded F-14s come off the turn track from a repairing carrier. Roaming Fighters intercepts a Soviet strike west of Iceland or UK ignoring negative modifiers. Hold for Atlantic-crossing Backfire raids.",
+    "coachNotesShort": "Fire Fighters to Norway/Denmark to push two fighter steps into Scandinavian airbases when Soviets are pressuring that airspace; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Hold Roaming Fighters for Atlantic-crossing Backfire raids on convoys or UK."
   },
   {
     "id": "nato-28",
@@ -1798,8 +1798,8 @@
       "frequency": 2,
       "cost": 4
     },
-    "coachNotes": "CAPTOR Mines places a torpedo-launching minefield in any sea zone (6+ to place in Barents or Baltic). Twelve OPS for a passive chokepoint deterrent is strong value in the GIUK approaches or Norwegian Sea. GIUK Gap Patrol triggers on a Soviet unit entering an active hydrophone zone: move any NATO sub up to one zone, remove its spent marker, and if now in a hydrophone zone it may interrupt. Hold for GIUK defense; pairs naturally with CAPTOR coverage.",
-    "coachNotesShort": "Spend the 12 OPS to plant a CAPTOR field in the GIUK approaches or Norwegian Sea (6+ in Barents or Baltic). Hold GIUK Gap Patrol for chokepoint defense; pairs naturally with CAPTOR coverage."
+    "coachNotes": "CAPTOR Mines places a torpedo-launching minefield in any sea zone (6+ to place in Barents or Baltic). The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 for a passive chokepoint deterrent, strong in the GIUK approaches or Norwegian Sea. GIUK Gap Patrol triggers on a Soviet unit entering an active hydrophone zone: move any NATO sub up to one zone, remove its spent marker, and if now in a hydrophone zone it may interrupt. Hold for GIUK defense; pairs naturally with CAPTOR coverage.",
+    "coachNotesShort": "Fire CAPTOR Mines to plant a field in the GIUK approaches or Norwegian Sea (6+ in Barents or Baltic); the card grants 12 OPS and firing costs only 4 (Event Cost 4). Hold GIUK Gap Patrol for chokepoint defense; pairs naturally with CAPTOR coverage."
   },
   {
     "id": "nato-29",
@@ -1819,8 +1819,8 @@
       "frequency": 5,
       "cost": 6
     },
-    "coachNotes": "B-52 Strikes is a fifteen-OPS event (four in 1983) for a B-52 bombing run on any facility, or 2 cruise missile dice in 1989, or 12 NATO missiles against a TF from 1985. The signature NATO long-range event. Play when you have a clear high-value target: a Kola airbase, a Soviet SSBN base, or a detected TF. No reaction event.",
-    "coachNotesShort": "Spend the 15 OPS (4 in 1983) on a clear high-value target: a Kola airbase, a Soviet SSBN base, or a detected TF. The signature NATO long-range event. No reaction event."
+    "coachNotes": "B-52 Strikes flies a B-52 bombing run on any facility, or 2 cruise missile dice in 1989, or 12 NATO missiles against a TF from 1985. The card grants 15 OPS (four in 1983) and firing costs only 6 of them (Event Cost 6), so you still net positive. The signature NATO long-range event. Play when you have a clear high-value target: a Kola airbase, a Soviet SSBN base, or a detected TF. No reaction event.",
+    "coachNotesShort": "Fire B-52 Strikes on a clear high-value target: a Kola airbase, a Soviet SSBN base, or a detected TF. The card grants 15 OPS (4 in 1983) and firing costs only 6 (Event Cost 6). The signature NATO long-range event. No reaction event."
   },
   {
     "id": "nato-30",
@@ -1840,8 +1840,8 @@
       "frequency": 2,
       "cost": 2
     },
-    "coachNotes": "Patriot deploys a Patriot counter to any NATO facility for nine OPS. Strong passive air defense, but only impacts if the facility is targeted. Default to OPS unless a key base is under repeated strike pressure. Fighter Recovery places a damaged or sunk US carrier's air units at any airbase within two zones. Hold whenever a carrier is exposed to a Backfire raid.",
-    "coachNotesShort": "Take the OPS unless a key base is under repeated strike pressure; Patriot only impacts if the facility is targeted. Hold Fighter Recovery whenever a US carrier is exposed to a Backfire raid."
+    "coachNotes": "Patriot deploys a Patriot counter to any NATO facility. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 for strong passive air defense, but it only impacts if the facility is targeted. Default to OPS unless a key base is under repeated strike pressure. Fighter Recovery places a damaged or sunk US carrier's air units at any airbase within two zones. Hold whenever a carrier is exposed to a Backfire raid.",
+    "coachNotesShort": "Take the OPS unless a key base is under repeated strike pressure; the card grants 9 OPS and firing Patriot costs only 2 (Event Cost 2). Patriot only impacts if the facility is targeted. Hold Fighter Recovery whenever a US carrier is exposed to a Backfire raid."
   },
   {
     "id": "nato-31",
@@ -1883,8 +1883,8 @@
       "frequency": 2,
       "cost": 4
     },
-    "coachNotes": "Eagles adds one F-15 to any NATO airbase, removed from play. Twelve OPS for a fresh fighter is fair when UK or Norway air defense is thin from attrition, otherwise OPS-fodder. ASM Coordinated Attack lets two friendly ships fire anti-ship missiles at a Good-detected enemy TF in the same zone. Hold for a high-value detected Soviet surface group; one of NATO's strongest surface-strike reactions when paired with a forward AAW group.",
-    "coachNotesShort": "Spend the 12 OPS for a fresh F-15 when UK or Norway air defense is thin from attrition; otherwise OPS-fodder. Hold ASM Coordinated Attack for a high-value detected Soviet surface group with a forward AAW group in range."
+    "coachNotes": "Eagles adds one F-15 to any NATO airbase, removed from play. The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 for a fresh fighter when UK or Norway air defense is thin from attrition; otherwise OPS-fodder. ASM Coordinated Attack lets two friendly ships fire anti-ship missiles at a Good-detected enemy TF in the same zone. Hold for a high-value detected Soviet surface group; one of NATO's strongest surface-strike reactions when paired with a forward AAW group.",
+    "coachNotesShort": "Fire Eagles for a fresh F-15 when UK or Norway air defense is thin from attrition; the card grants 12 OPS and firing costs only 4 (Event Cost 4). Hold ASM Coordinated Attack for a high-value detected Soviet surface group with a forward AAW group in range."
   },
   {
     "id": "nato-33",
@@ -1904,8 +1904,8 @@
       "frequency": 2,
       "cost": 3
     },
-    "coachNotes": "RAF Replacements restores up to two steps of RAF fighters. Twelve OPS is a substantial cost; only play the event if RAF fighters are critical to a UK air defense plan and have been ground down by Backfire raids. Default to OPS otherwise. ASM Attack lets one ship fire anti-ship missiles at a Good-detected enemy TF in the same zone. Cannot be combined with another missile attack. Hold for detected Soviet surface groups in striking range.",
-    "coachNotesShort": "Take the 12 OPS unless RAF fighters are central to UK air defense and have been ground down by Backfires. Hold ASM Attack for a Good-detected Soviet surface group in striking range; cannot combine with another missile attack."
+    "coachNotes": "RAF Replacements restores up to two steps of RAF fighters. The card grants 12 OPS and firing costs only 3 of them (Event Cost 3), so you net 9; only fire the event if RAF fighters are critical to a UK air defense plan and have been ground down by Backfire raids. Default to OPS otherwise. ASM Attack lets one ship fire anti-ship missiles at a Good-detected enemy TF in the same zone. Cannot be combined with another missile attack. Hold for detected Soviet surface groups in striking range.",
+    "coachNotesShort": "Take the 12 OPS unless RAF fighters are central to UK air defense and have been ground down by Backfires; the card grants 12 OPS and firing costs only 3 (Event Cost 3). Hold ASM Attack for a Good-detected Soviet surface group in striking range; cannot combine with another missile attack."
   },
   {
     "id": "nato-34",
@@ -1926,8 +1926,8 @@
       "frequency": 2,
       "cost": 0
     },
-    "coachNotes": "Minesweepers degrades one mine counter (CL: Soviet port mines specifically). Rarely worth nine OPS for the event unless a critical TF must sail out of a mined port; default to OPS most days. ASM Attack lets one ship fire anti-ship missiles at a Good-detected enemy TF in the same zone. Free and reliable; hold whenever a NATO surface group is in striking range of a Soviet target. Cannot be combined with another missile attack.",
-    "coachNotesShort": "Take the 9 OPS unless a critical TF must sail out of a mined port. Hold ASM Attack for a Good-detected Soviet surface group in striking range; cannot combine with another missile attack."
+    "coachNotes": "Minesweepers degrades one mine counter (CL: Soviet port mines specifically). The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9, but it is rarely worth the play unless a critical TF must sail out of a mined port; default to OPS most days. ASM Attack lets one ship fire anti-ship missiles at a Good-detected enemy TF in the same zone. Free and reliable; hold whenever a NATO surface group is in striking range of a Soviet target. Cannot be combined with another missile attack.",
+    "coachNotesShort": "Take the 9 OPS unless a critical TF must sail out of a mined port; the card grants 9 OPS and the event is free to fire (Event Cost 0). Hold ASM Attack for a Good-detected Soviet surface group in striking range; cannot combine with another missile attack."
   },
   {
     "id": "nato-35",
@@ -1947,8 +1947,8 @@
       "frequency": 2,
       "cost": 0
     },
-    "coachNotes": "UNREP removes spent markers on up to four carrier air units (strike or fighters). Nine OPS is excellent value for a multi-strike day or a back-to-back CAP refresh during a Soviet alpha strike turn. Fighter Recovery places a damaged or sunk US carrier's air units at any airbase within two zones (including another carrier with empty slots); if the carrier is later repaired, the units can return. Hold whenever a US carrier is exposed to a Backfire raid or sub threat.",
-    "coachNotesShort": "Play UNREP on a multi-strike day or to refresh CAP back-to-back during a Soviet alpha strike turn. Always hold Fighter Recovery when a US carrier is exposed to a Backfire raid or sub threat."
+    "coachNotes": "UNREP removes spent markers on up to four carrier air units (strike or fighters). The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9; excellent for a multi-strike day or a back-to-back CAP refresh during a Soviet alpha strike turn. Fighter Recovery places a damaged or sunk US carrier's air units at any airbase within two zones (including another carrier with empty slots); if the carrier is later repaired, the units can return. Hold whenever a US carrier is exposed to a Backfire raid or sub threat.",
+    "coachNotesShort": "Play UNREP on a multi-strike day or to refresh CAP back-to-back during a Soviet alpha strike turn; the card grants 9 OPS and the event is free to fire (Event Cost 0). Always hold Fighter Recovery when a US carrier is exposed to a Backfire raid or sub threat."
   },
   {
     "id": "nato-36",
@@ -1968,8 +1968,8 @@
       "frequency": 5,
       "cost": 6
     },
-    "coachNotes": "Attack Tyuratam prevents Soviet RORSAT launches this turn (one next turn), rolls five dice killing one RORSAT in the Tyuratam Box per 6+, and grants Soviets one FSP. Removed from play. Fifteen OPS is steep, and the FSP is a real cost to give up. Play it when the Soviet RORSAT shell is overwhelming your TF detection and the launch pipeline must be choked. No reaction event.",
-    "coachNotesShort": "Spend the 15 OPS when the Soviet RORSAT shell is overwhelming your TF detection and the launch pipeline must be choked; Soviets gain 1 FSP as the price. No reaction event."
+    "coachNotes": "Attack Tyuratam prevents Soviet RORSAT launches this turn (one next turn), rolls five dice killing one RORSAT in the Tyuratam Box per 6+, and grants Soviets one FSP. Removed from play. The card grants 15 OPS and firing costs only 6 of them (Event Cost 6), so you still net positive, but the FSP given to the Soviets is a real cost. Play it when the Soviet RORSAT shell is overwhelming your TF detection and the launch pipeline must be choked. No reaction event.",
+    "coachNotesShort": "Fire Attack Tyuratam when the Soviet RORSAT shell is overwhelming your TF detection and the launch pipeline must be choked; the card grants 15 OPS and firing costs only 6 (Event Cost 6). Soviets gain 1 FSP as the price. No reaction event."
   },
   {
     "id": "nato-37",
@@ -1991,8 +1991,8 @@
       "cost": 4,
       "clarification": "Convoy is removed because it arrived at a convoy port — supplies are received as normal. Then the card effect is implemented. Per normal rules, convoy is then placed in the Convoy Holding Box."
     },
-    "coachNotes": "RAF Strike flies the British Buccaneer plus the printed unit (bombing only, no missiles). Fifteen OPS pays for the strike to fly (CL: a Buccaneer actual unit must join). Strong for a UK-based bombing on Norway or Soviet airbases. NATO Counter Attack moves the War Track one box right when a convoy arrives at Turn 3+ with 0 or 1 hit. Hold mid-game when convoys are running cleanly.",
-    "coachNotesShort": "Spend the 15 OPS when a UK-based Buccaneer plus printed unit can land a bombing strike on Norway or a Soviet airbase (no missiles). Hold NATO Counter Attack mid-game when convoys are running cleanly into port."
+    "coachNotes": "RAF Strike flies the British Buccaneer plus the printed unit (bombing only, no missiles). The card grants 15 OPS and firing the strike costs only 4 of them (Event Cost 4), so you net 11 (CL: a Buccaneer actual unit must join). Strong for a UK-based bombing on Norway or Soviet airbases. NATO Counter Attack moves the War Track one box right when a convoy arrives at Turn 3+ with 0 or 1 hit. Hold mid-game when convoys are running cleanly.",
+    "coachNotesShort": "Fire RAF Strike when a UK-based Buccaneer plus printed unit can land a bombing strike on Norway or a Soviet airbase (no missiles); the card grants 15 OPS and firing costs only 4 (Event Cost 4). Hold NATO Counter Attack mid-game when convoys are running cleanly into port."
   },
   {
     "id": "nato-38",
@@ -2013,8 +2013,8 @@
       "frequency": 1,
       "cost": 0
     },
-    "coachNotes": "NATO Flexibility gives +5 OPS in addition to the card's value, spendable only on non-US units (CL: not for facility repairs). Twelve OPS plus five non-US OPS is a huge spend if you have allied units to activate. Counter Intelligence auto-reduces the Soviet Spy track by one when spies are used. Hold when the Spy track is climbing.",
-    "coachNotesShort": "Spend the 12 OPS plus 5 non-US OPS when British, German, or Norwegian assets are central to your plan; cannot repair allied facilities. Hold Counter Intelligence when the Soviet Spy track is climbing."
+    "coachNotes": "NATO Flexibility gives +5 OPS in addition to the card's value, spendable only on non-US units (CL: not for facility repairs). The card grants 12 OPS and the event is free to fire once played for OPS (Event Cost 0), so you get 17 OPS total, five of them constrained, a huge spend if you have allied units to activate. Counter Intelligence auto-reduces the Soviet Spy track by one when spies are used. Hold when the Spy track is climbing.",
+    "coachNotesShort": "Fire NATO Flexibility when British, German, or Norwegian assets are central to your plan; the card grants 12 OPS and the event is free to fire (Event Cost 0), adding +5 non-US OPS for 17 total. Cannot repair allied facilities. Hold Counter Intelligence when the Soviet Spy track is climbing."
   },
   {
     "id": "nato-39",
@@ -2034,8 +2034,8 @@
       "frequency": 2,
       "cost": 2
     },
-    "coachNotes": "Space Tracking removes two RORSATs from the map; each returns to the game after ship movement, placed by the Soviet in any zone. Nine OPS for a temporary RORSAT clear is strong before a high-value TF transit. Blocked if Cape Canaveral is destroyed (Soviet card 54). Raid Aborts rolls 1 die per air unit in a detected strike, aborting on 5+. Hold to break up a Backfire raid.",
-    "coachNotesShort": "Play Space Tracking before a high-value TF transit; two RORSATs come off and return one per ship movement, placed by Soviets. Blocked if Cape Canaveral is destroyed. Hold Raid Aborts to break up a Backfire raid on a 5+ per unit."
+    "coachNotes": "Space Tracking removes two RORSATs from the map; each returns to the game after ship movement, placed by the Soviet in any zone. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 for a temporary RORSAT clear, strong before a high-value TF transit. Blocked if Cape Canaveral is destroyed (Soviet card 54). Raid Aborts rolls 1 die per air unit in a detected strike, aborting on 5+. Hold to break up a Backfire raid.",
+    "coachNotesShort": "Play Space Tracking before a high-value TF transit; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Two RORSATs come off, returning one per ship movement. Blocked if Cape Canaveral is destroyed. Hold Raid Aborts to break up a Backfire raid on a 5+ per unit."
   },
   {
     "id": "nato-40",
@@ -2057,8 +2057,8 @@
       "cost": 2,
       "clarification": "Protects against nuclear torpedos but, as written, not against heavyweight torpedoes."
     },
-    "coachNotes": "Perfectly Timed Strike causes one additional selected step loss against a Soviet airbase if you score one hit (CL: SEAD hits do not count). Twelve OPS for a guaranteed kill on a successful strike. Play when bombing Kola or Norway airbases is the focus. Nixie ignores a torpedo hit on a NATO capital ship (CL: not heavyweight torpedoes). Hold for sub-threat zones.",
-    "coachNotesShort": "Spend the 12 OPS when bombing Kola or Norway airbases is the focus; a guaranteed extra step loss on any successful strike (SEAD hits do not count). Hold Nixie for sub-threat zones with NATO capital ships."
+    "coachNotes": "Perfectly Timed Strike causes one additional selected step loss against a Soviet airbase if you score one hit (CL: SEAD hits do not count). The card grants 12 OPS and firing costs only 2 of them (Event Cost 2), so you net 10 for a guaranteed kill on a successful strike. Play when bombing Kola or Norway airbases is the focus. Nixie ignores a torpedo hit on a NATO capital ship (CL: not heavyweight torpedoes). Hold for sub-threat zones.",
+    "coachNotesShort": "Fire Perfectly Timed Strike when bombing Kola or Norway airbases is the focus; the card grants 12 OPS and firing costs only 2 (Event Cost 2). A guaranteed extra step loss on any successful strike (SEAD hits do not count). Hold Nixie for sub-threat zones with NATO capital ships."
   },
   {
     "id": "nato-41",
@@ -2078,8 +2078,8 @@
       "frequency": 2,
       "cost": 2
     },
-    "coachNotes": "Norwegian Sabotage rolls one die on the Air-to-Ground Bombing Table against a Soviet airbase in Norway, if one exists. Nine OPS is fair when there is a target on the ground; useless if Soviets have not captured a Norwegian airbase yet. Raid Aborts rolls 1 die per air unit in a detected strike, aborting each on 5+, then Soviets may voluntarily abort the rest. Hold during expected Backfire or Bear-D raids on convoys or bases.",
-    "coachNotesShort": "Spend the 9 OPS only if a Soviet airbase exists in Norway; useless otherwise. Hold Raid Aborts to break up expected Backfire or Bear-D raids on convoys or bases on a 5+ per unit."
+    "coachNotes": "Norwegian Sabotage rolls one die on the Air-to-Ground Bombing Table against a Soviet airbase in Norway, if one exists. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 when there is a target on the ground; useless if Soviets have not captured a Norwegian airbase yet. Raid Aborts rolls 1 die per air unit in a detected strike, aborting each on 5+, then Soviets may voluntarily abort the rest. Hold during expected Backfire or Bear-D raids on convoys or bases.",
+    "coachNotesShort": "Fire Norwegian Sabotage only if a Soviet airbase exists in Norway; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Useless otherwise. Hold Raid Aborts to break up expected Backfire or Bear-D raids on convoys or bases on a 5+ per unit."
   },
   {
     "id": "nato-42",
@@ -2100,8 +2100,8 @@
       "frequency": 1,
       "cost": 0
     },
-    "coachNotes": "NATO Flexibility gives +5 OPS spendable only on non-US units, tracked with markers on the card (CL: not for facility repairs). Strong allied-activation card when twelve OPS plus five constrained OPS still helps your plan, especially when British, German, or Norwegian assets are central. Phalanx and Sea Sparrow ignores a missile hit on a US carrier on a 4+. Hold whenever a US carrier sits exposed to a Backfire or SSGN strike.",
-    "coachNotesShort": "Spend the 12 OPS plus 5 non-US OPS when allied activations are central to your plan; cannot repair allied facilities. Hold Phalanx and Sea Sparrow during any planned Backfire or SSGN strike on a US carrier."
+    "coachNotes": "NATO Flexibility gives +5 OPS spendable only on non-US units, tracked with markers on the card (CL: not for facility repairs). The card grants 12 OPS and the event is free to fire once played for OPS (Event Cost 0), so you get 17 OPS total, five constrained, a strong allied-activation play when British, German, or Norwegian assets are central. Phalanx and Sea Sparrow ignores a missile hit on a US carrier on a 4+. Hold whenever a US carrier sits exposed to a Backfire or SSGN strike.",
+    "coachNotesShort": "Fire NATO Flexibility when allied activations are central to your plan; the card grants 12 OPS and the event is free to fire (Event Cost 0), adding +5 non-US OPS for 17 total. Cannot repair allied facilities. Hold Phalanx and Sea Sparrow during any planned Backfire or SSGN strike on a US carrier."
   },
   {
     "id": "nato-43",
@@ -2121,8 +2121,8 @@
       "frequency": 2,
       "cost": 0
     },
-    "coachNotes": "First Strike (NATO) forces Soviets to discard 1 FSP if their SSBN payload in First Strike zones is below four. Only one playable per turn. Nine OPS for a denial swing is worthwhile early before Soviet SSBNs are dispersed forward. SAM Trap CAP-fires one ship's SAM points (1 die per 2 SAM) at attacking Soviet strike aircraft; that ship sits out further combat resolution. Hold to protect carriers or escorted convoys under expected Backfire pressure.",
-    "coachNotesShort": "Play First Strike early before Soviet SSBNs are dispersed forward; below four payload in First Strike zones forces them to discard 1 FSP. Hold SAM Trap to protect a carrier or escorted convoy under expected Backfire pressure."
+    "coachNotes": "First Strike (NATO) forces Soviets to discard 1 FSP if their SSBN payload in First Strike zones is below four. Only one playable per turn. The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9 and the denial swing is worthwhile early, before Soviet SSBNs are dispersed forward. SAM Trap CAP-fires one ship's SAM points (1 die per 2 SAM) at attacking Soviet strike aircraft; that ship sits out further combat resolution. Hold to protect carriers or escorted convoys under expected Backfire pressure.",
+    "coachNotesShort": "Play First Strike early before Soviet SSBNs are dispersed forward; the card grants 9 OPS and the event is free to fire (Event Cost 0). Below four payload in First Strike zones forces them to discard 1 FSP. Hold SAM Trap to protect a carrier or escorted convoy under expected Backfire pressure."
   },
   {
     "id": "nato-44",
@@ -2143,8 +2143,8 @@
       "cost": 2,
       "clarification": "Required presence of MP triggers CAP interception per 17.2: 'An Air Unit is present within a Sea Zone with carrier-based FTR prior to completing whatever mission it was sent to perform'."
     },
-    "coachNotes": "Deep Water SOSUS gives +1 ASW die in a nominated East/Med/West zone until next day. Excellent nine-OPS event for boosting ASW where you expect Soviet subs to operate. Orion Harpoons triggers a free +2 ASW dice attack when an Echo II or Juliett launches missiles in a zone with an on-patrol US Orion. Any sunk Soviet sub steps from the harpoon shot do not fire their missiles. Hold against expected SSGN missile threats.",
-    "coachNotesShort": "Play Deep Water SOSUS in an East/Med/West zone where Soviet subs are expected to operate. Hold Orion Harpoons against expected SSGN missile threats; Echo II or Juliett triggers a free +2 ASW dice attack."
+    "coachNotes": "Deep Water SOSUS gives +1 ASW die in a nominated East/Med/West zone until next day. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 for boosting ASW where you expect Soviet subs to operate. Orion Harpoons triggers a free +2 ASW dice attack when an Echo II or Juliett launches missiles in a zone with an on-patrol US Orion. Any sunk Soviet sub steps from the harpoon shot do not fire their missiles. Hold against expected SSGN missile threats.",
+    "coachNotesShort": "Play Deep Water SOSUS in an East/Med/West zone where Soviet subs are expected to operate; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Hold Orion Harpoons against expected SSGN missile threats; Echo II or Juliett triggers a free +2 ASW dice attack."
   },
   {
     "id": "nato-45",
@@ -2164,8 +2164,8 @@
       "frequency": 1,
       "cost": 0
     },
-    "coachNotes": "Fighting in Iran spends two Soviet strike units in Syria. Twelve OPS to neutralize two Soviet Backfires or Bears in the Med is strong if you face a Syria-based threat; otherwise OPS. Quickstrike Mines converts a US carrier air group's port attack into a mine placement (heavy mine with 3+ steps). Hold for a planned Soviet port bombing turn.",
-    "coachNotesShort": "Spend the 12 OPS only if Syria-based Soviet strike units are an active threat. Hold Quickstrike Mines for a planned US carrier air group attack on a Soviet port to convert bombs into mines."
+    "coachNotes": "Fighting in Iran spends two Soviet strike units in Syria. The card grants 12 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 12 while neutralizing two Soviet Backfires or Bears in the Med, strong if you face a Syria-based threat; otherwise OPS. Quickstrike Mines converts a US carrier air group's port attack into a mine placement (heavy mine with 3+ steps). Hold for a planned Soviet port bombing turn.",
+    "coachNotesShort": "Fire Fighting in Iran only if Syria-based Soviet strike units are an active threat; the card grants 12 OPS and the event is free to fire (Event Cost 0). Hold Quickstrike Mines for a planned US carrier air group attack on a Soviet port to convert bombs into mines."
   },
   {
     "id": "nato-46",
@@ -2186,8 +2186,8 @@
       "frequency": 2,
       "cost": 2
     },
-    "coachNotes": "German Tornado removes German strike aircraft from the game and places a partial convoy in Europe (Northern war track per CL) if three or more steps are removed. Nine OPS is the price for trading Tornadoes for convoy supplies. Situational. Snoopers Detect Raid applies +1 die interception modifier if two NATO sub steps are adjacent to the strike base and Soviet ASAT is inactive. Hold against expected raids.",
-    "coachNotesShort": "Spend the 9 OPS only when trading German Tornadoes for a partial convoy on the Northern war track is the right call; situational. Hold Snoopers Detect Raid when NATO subs are adjacent to a Soviet strike base and ASAT is inactive."
+    "coachNotes": "German Tornado removes German strike aircraft from the game and places a partial convoy in Europe (Northern war track per CL) if three or more steps are removed. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 for trading Tornadoes for convoy supplies. Situational. Snoopers Detect Raid applies +1 die interception modifier if two NATO sub steps are adjacent to the strike base and Soviet ASAT is inactive. Hold against expected raids.",
+    "coachNotesShort": "Fire German Tornado only when trading Tornadoes for a partial convoy on the Northern war track is the right call; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Situational. Hold Snoopers Detect Raid when NATO subs are adjacent to a Soviet strike base and ASAT is inactive."
   },
   {
     "id": "nato-47",
@@ -2208,8 +2208,8 @@
       "cost": 3,
       "clarification": "Convoy is removed because it arrived at a convoy port — supplies are received as normal. Then the card effect is implemented. Per normal rules, convoy is then placed in the Convoy Holding Box."
     },
-    "coachNotes": "Politburo Interference must be the first NATO OPS card this turn (fifteen OPS). If the Soviet does not attack a NATO SSBN this turn, they discard 1 FSP and draw one less card next turn. Powerful denial card, but commits NATO to playing it first. NATO Counter Attack moves the War Track right when a convoy arrives at Turn 3+ with 0 or 1 hit. Hold for clean convoy turns.",
-    "coachNotesShort": "Must be the first NATO OPS card this turn; if Soviets do not attack a NATO SSBN, they discard 1 FSP and draw one less card next turn. Powerful denial. Hold NATO Counter Attack for clean convoy turns at Turn 3+."
+    "coachNotes": "Politburo Interference must be the first NATO OPS card this turn. The card grants 15 OPS and firing costs only 3 of them (Event Cost 3), so you net 12. If the Soviet does not attack a NATO SSBN this turn, they discard 1 FSP and draw one less card next turn. Powerful denial card, but commits NATO to playing it first. NATO Counter Attack moves the War Track right when a convoy arrives at Turn 3+ with 0 or 1 hit. Hold for clean convoy turns.",
+    "coachNotesShort": "Must be the first NATO OPS card this turn; the card grants 15 OPS and firing costs only 3 (Event Cost 3). If Soviets do not attack a NATO SSBN, they discard 1 FSP and draw one less card next turn. Hold NATO Counter Attack for clean convoy turns at Turn 3+."
   },
   {
     "id": "nato-48",
@@ -2229,8 +2229,8 @@
       "frequency": 3,
       "cost": 2
     },
-    "coachNotes": "Naval Yard Expertise moves a capital ship in repair two turns closer to the current turn; if it advances to now, you receive it immediately. Nine OPS to accelerate a carrier or major surface ship back into the fight is excellent value, especially after early-turn losses. Diesels Snorkeling causes one step loss to a diesel sub during ASW in a zone with an enemy diesel. Free reaction in zones with active Soviet Foxtrots or Tangos.",
-    "coachNotesShort": "Play the event mid-campaign to pull a carrier or capital ship back into the fight two turns sooner; excellent value after early losses. Hold Diesels Snorkeling for zones with active Soviet Foxtrots or Tangos."
+    "coachNotes": "Naval Yard Expertise moves a capital ship in repair two turns closer to the current turn; if it advances to now, you receive it immediately. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 to accelerate a carrier or major surface ship back into the fight, excellent value after early-turn losses. Diesels Snorkeling causes one step loss to a diesel sub during ASW in a zone with an enemy diesel. Free reaction in zones with active Soviet Foxtrots or Tangos.",
+    "coachNotesShort": "Play the event mid-campaign to pull a carrier or capital ship back into the fight two turns sooner; the card grants 9 OPS and firing costs only 2 (Event Cost 2), so it nets 7. Hold Diesels Snorkeling for zones with active Soviet Foxtrots or Tangos."
   },
   {
     "id": "nato-49",
@@ -2251,8 +2251,8 @@
       "frequency": 3,
       "cost": 2
     },
-    "coachNotes": "Fighters to Norway/Denmark places two steps of fighters (UK, grounded F-14s, or Eagles) into a Scandinavian airbase. Nine OPS for forward deployment when Soviets pressure Norway or Denmark airspace; otherwise OPS-fodder. CL: grounded F-14s are those parked on the turn track from a repairing carrier. Diesels Snorkeling causes one step loss to any diesel sub during ASW in a zone with an enemy diesel. Free to play and reliable in zones with Foxtrots or Tangos.",
-    "coachNotesShort": "Spend the 9 OPS to push two fighter steps into Scandinavian airbases when Soviets pressure Norway or Denmark airspace. Hold Diesels Snorkeling in zones with active Foxtrots or Tangos; free and reliable."
+    "coachNotes": "Fighters to Norway/Denmark places two steps of fighters (UK, grounded F-14s, or Eagles) into a Scandinavian airbase. The card grants 9 OPS and firing costs only 2 of them (Event Cost 2), so you net 7 for forward deployment when Soviets pressure Norway or Denmark airspace; otherwise OPS-fodder. CL: grounded F-14s are those parked on the turn track from a repairing carrier. Diesels Snorkeling causes one step loss to any diesel sub during ASW in a zone with an enemy diesel. Free to play and reliable in zones with Foxtrots or Tangos.",
+    "coachNotesShort": "Fire Fighters to Norway/Denmark to push two fighter steps into Scandinavian airbases when Soviets pressure that airspace; the card grants 9 OPS and firing costs only 2 (Event Cost 2). Hold Diesels Snorkeling in zones with active Foxtrots or Tangos; free and reliable."
   },
   {
     "id": "nato-50",
@@ -2274,8 +2274,8 @@
       "cost": 4,
       "clarification": "Only applies to interceptors, not CAP."
     },
-    "coachNotes": "Turkish Air Strike flies the printed units from a Turkish port facility (CL#6: cannot reach Sevastopol by design, not a range issue). Removed from play. Twelve OPS for a free Turkish-based strike package is strong when you want to pressure Soviet Black Sea or Syrian air assets. Air Patrols adds one die to an interception against a Soviet air strike (CL: applies only to interceptors, not CAP). Hold against expected Soviet raids on UK or Norway.",
-    "coachNotesShort": "Spend the 12 OPS to fly the printed Turkish strike package against Soviet Black Sea or Syrian air assets; the card cannot reach Sevastopol. Hold Air Patrols for expected Soviet raids on UK or Norway."
+    "coachNotes": "Turkish Air Strike flies the printed units from a Turkish port facility (CL#6: cannot reach Sevastopol by design, not a range issue). Removed from play. The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 for a Turkish-based strike package, strong when you want to pressure Soviet Black Sea or Syrian air assets. Air Patrols adds one die to an interception against a Soviet air strike (CL: applies only to interceptors, not CAP). Hold against expected Soviet raids on UK or Norway.",
+    "coachNotesShort": "Fire Turkish Air Strike to fly the printed strike package against Soviet Black Sea or Syrian air assets; the card grants 12 OPS and firing costs only 4 (Event Cost 4). The card cannot reach Sevastopol. Hold Air Patrols for expected Soviet raids on UK or Norway."
   },
   {
     "id": "nato-51",
@@ -2295,8 +2295,8 @@
       "frequency": 2,
       "cost": 0
     },
-    "coachNotes": "Submarine Breakdown causes a step loss on a selected Soviet submarine on a 9+ (+2 if Alfa). Twelve OPS for a long-shot on a single sub; only play the event against an Alfa with the +2 modifier to bring odds reasonable. Snoopers Detect Raid adds +1 interception die if two NATO sub steps are adjacent to the strike base. Hold against expected raids.",
-    "coachNotesShort": "Spend the 12 OPS only against an Alfa where the +2 modifier brings the 9+ to reasonable odds; otherwise a long shot. Hold Snoopers Detect Raid when NATO subs sit adjacent to a Soviet strike base."
+    "coachNotes": "Submarine Breakdown causes a step loss on a selected Soviet submarine on a 9+ (+2 if Alfa). The card grants 12 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 12, but it is a long shot on a single sub; only fire it against an Alfa with the +2 modifier to bring odds reasonable. Snoopers Detect Raid adds +1 interception die if two NATO sub steps are adjacent to the strike base. Hold against expected raids.",
+    "coachNotesShort": "Fire Submarine Breakdown only against an Alfa where the +2 modifier brings the 9+ to reasonable odds; the card grants 12 OPS and the event is free to fire (Event Cost 0). Otherwise a long shot. Hold Snoopers Detect Raid when NATO subs sit adjacent to a Soviet strike base."
   },
   {
     "id": "nato-52",
@@ -2317,8 +2317,8 @@
       "frequency": 5,
       "cost": 4
     },
-    "coachNotes": "Italian Air Strike flies the printed units; +1 OPS extends range to 2 (tanker). NAS Sigonella must be undamaged. If Soviets are not in Venice on the South War Track, take the card back at end of turn (refundable, rare for BWN). Twelve OPS for a free Mediterranean strike on the South War Track is strong. No reaction event.",
-    "coachNotesShort": "Spend the 12 OPS for a free Mediterranean strike against the South War Track; NAS Sigonella must be undamaged. Rare refund: take the card back at end of turn if Soviets are not yet in Venice. No reaction event."
+    "coachNotes": "Italian Air Strike flies the printed units; +1 OPS extends range to 2 (tanker). NAS Sigonella must be undamaged. If Soviets are not in Venice on the South War Track, take the card back at end of turn (refundable, rare for BWN). The card grants 12 OPS and firing costs only 4 of them (Event Cost 4), so you net 8 for a Mediterranean strike on the South War Track. No reaction event.",
+    "coachNotesShort": "Fire Italian Air Strike for a Mediterranean strike against the South War Track; the card grants 12 OPS and firing costs only 4 (Event Cost 4). NAS Sigonella must be undamaged. Rare refund: take the card back at end of turn if Soviets are not yet in Venice. No reaction event."
   },
   {
     "id": "nato-53",
@@ -2339,8 +2339,8 @@
       "cost": 0,
       "clarification": "Saved hits do not count as 'no hit'."
     },
-    "coachNotes": "Elite Submariner selects a NATO sub, optionally moves it one zone, and causes a step loss on a Soviet sub on a 6+. Nine OPS is fair for a reliable sub-vs-sub kill on a critical target like an Akula. Friendly Fire causes a hit on an enemy sub when their ASW scores no hits (CL: saved hits do not count). Free reaction in ASW-active zones.",
-    "coachNotesShort": "Spend the 9 OPS for a reliable 6+ sub-vs-sub kill on a critical target like an Akula; the NATO sub may move one zone first. Hold Friendly Fire for ASW-active zones; saved hits do not count."
+    "coachNotes": "Elite Submariner selects a NATO sub, optionally moves it one zone, and causes a step loss on a Soviet sub on a 6+. The card grants 9 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 9 for a reliable sub-vs-sub kill on a critical target like an Akula. Friendly Fire causes a hit on an enemy sub when their ASW scores no hits (CL: saved hits do not count). Free reaction in ASW-active zones.",
+    "coachNotesShort": "Fire Elite Submariner for a reliable 6+ sub-vs-sub kill on a critical target like an Akula; the card grants 9 OPS and the event is free to fire (Event Cost 0). The NATO sub may move one zone first. Hold Friendly Fire for ASW-active zones; saved hits do not count."
   },
   {
     "id": "nato-54",
@@ -2361,8 +2361,8 @@
       "frequency": 5,
       "cost": 0
     },
-    "coachNotes": "Strike Strategic Targets (Kola) places two markers in the Kola Peninsula: Ammo Storage (1 hit spends two Kola air units, no refresh this turn) and C3 Nodes (2 hits, Soviets discard their two highest cards and must play their lowest at next day). Removed from play. CL: no FSP granted to Soviet despite normal rules; attacked by any method (typically air strike or cruise missiles). Twelve OPS sets up a high-impact chain; you still need the attackers. No reaction event.",
-    "coachNotesShort": "Spend the 12 OPS to plant the Kola targets only if you have follow-up cruise missile or air strike attackers; Ammo Storage spends two Kola air units, C3 Nodes forces Soviets to dump their two highest cards. No reaction event."
+    "coachNotes": "Strike Strategic Targets (Kola) places two markers in the Kola Peninsula: Ammo Storage (1 hit spends two Kola air units, no refresh this turn) and C3 Nodes (2 hits, Soviets discard their two highest cards and must play their lowest at next day). Removed from play. CL: no FSP granted to Soviet despite normal rules; attacked by air strike or cruise missiles. The card grants 12 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 12, but it only sets up the chain and you still need the attackers. No reaction event.",
+    "coachNotesShort": "Fire Strike Strategic Targets (Kola) only if you have follow-up cruise missile or air strike attackers; the card grants 12 OPS and the event is free to fire (Event Cost 0). Ammo Storage spends two Kola air units, C3 Nodes forces Soviets to dump their two highest cards. No reaction event."
   },
   {
     "id": "nato-55",
@@ -2383,7 +2383,7 @@
       "frequency": 5,
       "cost": 0
     },
-    "coachNotes": "Strike Strategic Targets (Sevastopol) places two markers near Sevastopol: Nuclear Sites (2 hits trigger a Soviet stability check) and C3 Nodes (1 hit forces the Soviet to discard their highest card; if hand drops below 3, hand size stays reduced for the turn, an exception to the always-three-cards rule per CL). Removed from play. Twelve OPS for high-value strategic pressure if you have attackers in range (cruise missile or air strike). No reaction event.",
-    "coachNotesShort": "Spend the 12 OPS to plant the Sevastopol targets only if you have follow-up attackers; Nuclear Sites triggers a Soviet Stability check, C3 Nodes forces them to discard their highest card. No reaction event."
+    "coachNotes": "Strike Strategic Targets (Sevastopol) places two markers near Sevastopol: Nuclear Sites (2 hits trigger a Soviet stability check) and C3 Nodes (1 hit forces the Soviet to discard their highest card; if hand drops below 3, hand size stays reduced for the turn, an exception to the always-three-cards rule per CL). Removed from play. The card grants 12 OPS and the event is free to fire once played for OPS (Event Cost 0), so you keep all 12 for high-value strategic pressure, but you still need attackers in range (cruise missile or air strike). No reaction event.",
+    "coachNotesShort": "Fire Strike Strategic Targets (Sevastopol) only if you have follow-up attackers; the card grants 12 OPS and the event is free to fire (Event Cost 0). Nuclear Sites triggers a Soviet Stability check, C3 Nodes forces them to discard their highest card. No reaction event."
   }
 ]
