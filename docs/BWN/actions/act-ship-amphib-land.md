@@ -4,7 +4,7 @@ title: Prepare and resolve an Amphibious Landing
 category: ship-actions
 side: neutral
 usage: action
-cost: 1
+cost: null
 ruleRefs:
   - "5.1.3.2"
   - "8.1"

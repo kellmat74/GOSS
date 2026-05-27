@@ -4,7 +4,7 @@ title: Move ships in a Task Force
 category: ship-actions
 side: neutral
 usage: action
-cost: 1
+cost: null
 ruleRefs:
   - "5.1.3"
   - "4.2.1.3"

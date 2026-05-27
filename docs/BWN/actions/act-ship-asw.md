@@ -4,7 +4,7 @@ title: ASW in current zone (instead of moving)
 category: ship-actions
 side: neutral
 usage: action
-cost: 1
+cost: null
 ruleRefs:
   - "7.2"
   - "7.2.2"
@@ -17,11 +17,11 @@ seeAlso:
 
 ## When does this come up?
 
-A Task Force that wants to hunt a known submarine in its zone — instead of moving this beat — spends 1 OPS to roll ASW dice from its component ships (7.2.2). Doing so is loud: the TF is auto-marked with at least a Poor Detection and may even upgrade itself to Good Detection (7.2.2.1).
+A Task Force that wants to hunt a known submarine in its zone may conduct ASW instead of moving during the SHIPS event, rolling ASW dice from its component ships (7.2.2). It costs no OPS; it replaces that TF's move. Doing so is loud: the TF is auto-marked with at least a Poor Detection and may even upgrade itself to Good Detection (7.2.2.1).
 
 ## Procedure
 
-1. Spend 1 OPS and declare the TF is conducting ASW in its current zone (7.2.2). Mark the TF with a Poor Detection marker immediately (7.2.2.1).
+1. During the SHIPS event, declare the TF is conducting ASW in its current zone instead of moving (7.2.2). Mark the TF with a Poor Detection marker immediately (7.2.2.1).
 2. Per-ship ASW values: tally each ship's Anti-Submarine value, +2 per carrier (0 in Bad Weather), +ASW per On-Patrol MP in zone, and ASW ×3 for any escorting submarine.
    {{PA-BLOCK: pa3:task-force-asw — Task Force ASW (per-unit values)}}
 3. Compute the ASW total and look up dice + Tactical Value. Move up one row in Bad Weather (Fast modifier is **ignored** for the ASW-instead-of-moving action per 7.2.2).
@@ -45,7 +45,7 @@ Hunting marks your TF Poor immediately, and rolling any two N1-2 results auto-up
 
 ## Why and what to watch for
 
-A TF that stops moving to actively hunt a submarine is the game's expression of dedicated ASW search operations: sonar pings, MAD runs, distributed sonobuoy patterns. The 1 OPS cost and the automatic Poor Detection (7.2.2.1) capture the doctrinal reality that hunting subs makes the hunter loud and locatable. You traded mobility and concealment for the chance to kill the threat below you.
+A TF that stops moving to actively hunt a submarine is the game's expression of dedicated ASW search operations: sonar pings, MAD runs, distributed sonobuoy patterns. It costs no OPS (it is a SHIPS-event substitution for moving), but the automatic Poor Detection (7.2.2.1) captures the doctrinal reality that hunting subs makes the hunter loud and locatable. You traded mobility and concealment for the chance to kill the threat below you.
 
 Take this action when you know (or strongly suspect via Hydrophone reactions, MP detections, or card events) a hostile submarine is in your zone and the cost of letting it live exceeds the cost of being self-marked Poor. Carriers benefit you here because each adds +2 ASW (0 in Bad Weather), and any escorting sub triples its own ASW value. This is the move when a NATO carrier TF wants to clear a Soviet diesel out of GIUK chokepoints before sending Convoys through.
 
