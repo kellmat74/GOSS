@@ -17,15 +17,15 @@
 ## Air Units Intercepted when: (5.3.3.1)
 
 - Entering a zone with a fighter unit on patrol.
-- **Leaving** a zone with an enemy carrier.
-- **Overflying Denmark or Turkey.** The War Track Symbols show the number of dice to roll.
+- **Leaving** a zone with an enemy carrier. *The defending player may choose not to reveal the carrier — declaring it and rolling CAP is optional.*
+- **Overflying Denmark or Turkey.** The War Track Symbols show the number of dice to roll. *Roll once against the strike mission, not once per unit flying.*
 
 ---
 
 ## CAP may roll to attack when: (5.3.3.2)
 
 - A strike attacks a location being protected.
-- Carrier based fighters defend **every** Task Force in the Sea Zone and **every** land facility adjacent to the zone (the carrier does not have to be a target). Land based fighters protect land bases in **their** land area (but not Task Forces out at sea).
+- Carrier based fighters defend **every** Task Force in the Sea Zone and **every** land facility adjacent to the zone (the carrier does not have to be a target). Land based fighters protect land bases in **their** land area (but not Task Forces out at sea). *A carrier can only take part in one CAP roll per combat sequence.*
 - An air unit enters a Sea Zone with carrier based fighters prior to rolling to complete whatever mission it was sent to perform (eg: MP aircraft are attacked by CAP prior to attempting Task Force detection).
 
 ---
@@ -56,14 +56,14 @@ Intrinsic MPs are always helos except for US carriers.
 ## Escorted Air Strikes (7.1.4.4)
 
 - The defending player may roll with one defending fighter for each strike aircraft **or** each escorting fighter.
-- All damages must be allocated to escorting fighters first except for N10 results.
+- All damages must be allocated to escorting fighters first except for N10 results*; also, an N9 may be allocated to a strike unit if that unit is bombing (§7.1.4.4).*
 - Any strike air killed by fighters in an escorted mission does not attack.
 
 ---
 
 ## Fighters vs. Strike Aircraft (CAP & Intercept) (7.1.4)
 
-Roll all fighter dice with one fighter for each strike unit. CAP must come from target TF unless better fighters available. # of dice to roll is modified per unit rolling: (min = 1 die) DR + Tactical Value = kills allowed.
+Roll all fighter dice with one fighter for each strike unit. CAP must come from target TF first; *switch to other fighters only if the TF's own fighters are strictly worse based on air-to-air and tactical values.* # of dice to roll is modified per unit rolling: (min = 1 die) DR + Tactical Value = kills allowed.
 
 | Roll Type | Modifier |
 |---|---|
@@ -89,7 +89,7 @@ Killing or failing to kill by one pip causes the strike to count as 'detected by
 
 ## Saves Against CAP Kills (7.1.4)
 
-All kills by CAP (not by interceptors) may be saved based on the detection status of the base from which the fighter flew.
+All kills by CAP (not by interceptors) may be saved based on the detection status of the base from which the fighter flew. *In an escorted strike, strike units taking step losses from fighter combat do not receive a saving throw (§7.1.4).*
 
 | Detection | Save |
 |---|---|
@@ -111,6 +111,9 @@ DR + tactical value = kills allowed
 | Detected by Interceptors | +1 die |
 | Damaged Carrier (CV) | -1 die |
 | Facility light damage | -1 die |
+| *Base damage heavy* | *1 die only (total, not a modifier)* |
+
+*Damaged Carrier and Facility light damage are alternative modifiers — only one applies, not stackable.*
 
 Air to Air Technology - Soviet +1 DRM
 

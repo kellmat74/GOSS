@@ -21,7 +21,7 @@ Add the Tactical Value of the attacking submarine.
 |---|---|
 | 1–3 | **Counter Attack**: Soviet unit takes a step loss |
 | 4–7 | **Near Miss**: Soviet receives 1 FSP |
-| 8–10 | **Sunk**: Soviet receives 1 FSP & removes 3 sunk Soviet SSBN Payload value from the current total **OR** takes an extra FSP. |
+| 8–10 | **Sunk**: *Soviet gains 2 FSPs OR 1 FSP and reduces the Soviet SSBN killed total by 3 points.* |
 
 ---
 
@@ -31,6 +31,8 @@ Add the Tactical Value of the attacking submarine.
 - Take the SSBN Hunting marker.
 - Re-roll up to three Anti-Submarine Warfare dice rolled by any Soviet unit (one re-roll per unit maximum).
 - Automatically succeed on all First Strike submarine evasion rolls in a single zone — even after rolling.
+
+*After each spy use, roll a die and check the range on the Soviet Spy Infiltration Track for the current box. If the die falls within that range, the spy is caught — move the track one box to the left.*
 
 ---
 
@@ -98,6 +100,6 @@ Roll 1 dice per troop landed. Roll of 8+ to reduce damage by one level, place hi
 
 - **SAMs**: +1 DRM all SAM rolls - land and sea.
 - **ASMs**: Resolve missile hit selection as NATO, allocating every 2nd hit instead of every 3rd hit.
-- **Torpedoes**: All Soviet non-diesel submarines +1 tactical vs submarines, & Soviets may use Harpoon(sk).
+- **Torpedoes**: All Soviet non-diesel submarines +1 tactical vs submarines, & *Soviets may use the Harpoon rule (AS-20 Kayak equivalent — see §7.3.1 step 4)*.
   - **ECM**: Backfire & Bear-G receive 8+ save when airborne vs. any step loss. Ignore if a better save already applies.
 - **Air-to-Air missiles**: +1 DRM on all air to air.

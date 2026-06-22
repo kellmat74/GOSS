@@ -17,14 +17,14 @@ Trigger after both players' OPS markers move to/past the relevant box on the Ope
 
 #### Fast
 
-Fast Task Forces may move (not perform ASW) one Sea Zone. Ignore in day two. Resolve as per the ships event ignoring 2 & 4 and applying only to fast groups & zones they occupy.
+*If it is not Day Two:* Fast Task Forces may move (not perform ASW) one Sea Zone. *If it is Day Two, ignore this event entirely.* Resolve as per the ships event ignoring 2 & 4 and applying only to fast groups & zones they occupy.
 
 #### Ships
 
-1. All TFs may move one Sea Zone, resolve ASW, mark 'landing' or land if already marked 'landing'.
+1. All TFs may move one Sea Zone, resolve ASW, mark 'landing' or land if already marked 'landing'. *In Bad Weather: first place a 'Moved' marker; on the next chance to move you may move normally or place a 'Landing' marker.*
    - Roll 1 detection against any marked 'landing'.
    - Perform movement in order of detection status (Full/Partial/None, Soviet First).
-   - NATO may dissolve TFs. Submarines may join a TF if not spent or 'on-patrol'.
+   - NATO may dissolve TFs. Submarines may join a TF if not spent or 'on-patrol'. *A submarine may only join if it will be the sole submarine in that TF.*
    - 'On Patrol' units may react to enemy movement. 'On Patrol' air may move with a moving TF (check range).
 2. Degrade detection not placed in step 1 *(Fast Ignore)*
 3. RORSATs search
@@ -46,7 +46,7 @@ Both play 2nd card (Soviet first) then continue the game.
 
 - Diesels move 1, Nuclear moves 2
 - A soviet SSBN may take a nuclear sub with it, both spent.
-- Slow subs may move **or** attack **or** go 'on patrol'. If moving, move 2.
+- Slow subs may move **or** attack **or** go 'on patrol'. *If moving, move 1 zone; a single OPS action may activate any two (S) subs.*
   - 1 sub move and attack
   - 1 sub attack and then move
   - 1 sub move and go 'on patrol'
@@ -59,7 +59,7 @@ Both play 2nd card (Soviet first) then continue the game.
 ## Air Units (5.3)
 
 - 1 Maritime Patrol fly and attack or detect TF
-  - If a detection is placed or upgraded, active player may then play one further action to attack a detected TF.
+  - If a detection is placed or upgraded, active player may then play one further action *that results in an attack attempt* against a detected TF.
 - 1 MP / Fighter fly and go 'on patrol'.
 - 1+ Strike units fly an air strike. Fighters & tankers may fly for free and fighters may escort part-way.
 
@@ -71,7 +71,7 @@ Both play 2nd card (Soviet first) then continue the game.
 - Move ships between TFs in the same zone: **Cost 1**
 - Fire missiles with a TF: **Cost 1**
 
-Automatic vs. facilities, may require a roll vs. other TFs.
+Automatic vs. facilities, may require a roll vs. other TFs. *White, red, and NATO blue ship-launched missiles may only be fired via card play. When forming a TF at sea, you must already have a TF in that zone; a TF formed at sea or augmented from a port loses its next chance to move (§5.1.1.1).*
 
 ---
 
@@ -93,7 +93,7 @@ Automatic vs. facilities, may require a roll vs. other TFs.
 - Use a First Strike Point to buy an effect.
 - Use a Soviet Spy.
 - Use an event on either of your OPS cards & mark used.
-- Play an event on a card in your hand at +2 cost.
+- Play *the top (non-Reaction) event* on a card in your hand at +2 cost.
 - Return an 'on patrol' air unit to its base, fresh.
 
 ---
@@ -104,7 +104,7 @@ Automatic vs. facilities, may require a roll vs. other TFs.
 - On patrol units may attack enemy units moving through their zone:
   - Fighters vs Air; MP/Subs vs subs; MP vs Task Force Detection; Subs via ASW vs Task Forces.
 - CAP may roll to attack air unit attacking their base.
-  - Carriers defend all bases and TFs in their Sea Zone.
+  - Carriers defend all bases and TFs in their Sea Zone. *A carrier can only take part in one CAP roll per combat sequence.*
 - Hydrophone detection when enemy subs move across.
 - Draw a card if you have less than 3 cards in hand.
 - Use a Soviet spy for First Strike evasion.

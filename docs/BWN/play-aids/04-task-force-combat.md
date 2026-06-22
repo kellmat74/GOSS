@@ -15,7 +15,7 @@ Roll number of TF detection dice. Resolve in order of lowest die to highest die.
 | US CV detecting | 2 dice each |
 | Other CV detecting | 1 die each |
 | >2 enemy TF in the zone | +1 die per TF over 2 |
-| Soviet anti-submarine usage | -1 DRM per FSP |
+| *Soviet ASAT system active (NATO detection only)* | -1 DRM per FSP *in the ASAT box* |
 
 | Die Roll | TF Detection |
 |---|---|
@@ -54,7 +54,7 @@ Damage Dice to roll based on Weapon Used §14.1:
 
 | No. of Dice | Weapon |
 |---|---|
-| 1 | NATO missile, Soviet white missile from a ship<br>Soviet red missile, Townsend missile (card). |
+| 1 | NATO missile, Soviet white missile from a ship<br>Soviet red missile, *Tomahawk* missile (card). |
 | 2 | Soviet yellow, black or submarine white missile<br>Soviet or NATO torpedo. |
 | 3 | Soviet torpedo from Super Heavy Torp submarine. |
 | +1 die | Already damaged |
@@ -72,6 +72,8 @@ Damage Dice to roll based on Weapon Used §14.1:
 - No intrinsic detection capability.
 - Only CAP may fly, with a modifier.
 - May immediately break off & form their own TF with escorts from previous force, allowing them to retire.
+
+*Note: Carriers without a damage modifier represent multiple ships. They automatically lose half their air group (round up) per step loss, and all of it if sunk — they are never "damaged" per the procedure above (§5.1.5.1).*
 
 ---
 
@@ -138,7 +140,7 @@ Roll one die per 2 missiles remaining, and a single die for an odd remaining mis
 
 Roll two dice: Any N9 / N10 **first** hit allocated by attacker.
 
-*(Optional: Soviet yellow missiles roll three dice)*
+*(Optional: Soviet yellow missiles roll three dice — 2020 edition; not in v1.17)*
 
 - NATO attacker allocates every 2nd hit (2–4–6–8–10–12)
 - Soviet attacker allocates every 3rd hit (3–6–9–12–15)

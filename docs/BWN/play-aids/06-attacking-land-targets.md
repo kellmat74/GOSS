@@ -8,7 +8,7 @@
 
 ## Air Units Bombing Land Targets (7.5.1)
 
-1 die per step, US CAGS get 1 free SEAD die per 2 CAGs.
+1 die per step, US CAGS get 1 free SEAD die per 2 CAGs. *Two US CAGs receive this bonus die whether at one or two step strength.*
 
 ## SAM Suppression (SEAD) — vs Bombing (7.5.1.1)
 
@@ -45,14 +45,14 @@ SAM Technology - Soviet +1 DRM
 | +1 | If some range to the target not used |
 | -1 | Bad Weather |
 
-Place the number of hits scored on each facility. Maximum of 5.
+Place the number of hits scored on each facility. Maximum of 5. *If splitting dice between targets in the same zone, split before rolling any.*
 
 ## Collateral Damage (7.5.3)
 
 - 'Kills' cause damage to units stationed at the facility.
 - Even kills are allocated by defender, odd by attacker.
-- **Soviet Kola, Baltic, Black Sea**: NATO may force fighter casualties or Bear, Badger, Backfire (Soviet selects type).
-- Either side may cause one RORSAT loss additionally (6+ Soviet selects) returning 3 turns from the current turn.
+- **Soviet Kola, Baltic, Black Sea**: NATO may force fighter casualties or Bear, Badger, Backfire (Soviet selects type). *(2020 edition; does not appear in v1.17.)*
+- Either side may cause one RORSAT loss additionally (6+ Soviet selects) returning 3 turns from the current turn. *Collateral damage applies to aircraft currently flying in other zones as well.*
 
 ## The Kola Peninsula (7.5.4)
 
@@ -88,7 +88,7 @@ May fly 2 zones to the target, roll # dice on counter(s).
 
 ### NATO Green background missiles
 
-May fly 1 zone to the target, roll # dice on counter(s).
+May fly 1 zone to the target, roll # dice on counter(s). *Tomahawk is not available before 1985 — ignore the counter in 1983 scenarios.*
 
 ## SAM Suppression (SEAD) — vs Cruise Missiles (7.5.2.4)
 
@@ -115,7 +115,7 @@ SAM Technology - Soviet +1 DRM
 
 ## Cruise Missile Attack (7.5.2)
 
-Roll a die per remaining cruise missle point:
+*Each attacker type (submarine, air, ship) fires its cruise missiles separately — no coordination between types.* Roll a die per remaining cruise missile point:
 
 | Die Roll | Result | DRM | Cause |
 |---|---|---|---|
@@ -124,13 +124,13 @@ Roll a die per remaining cruise missle point:
 | 7–9 | 1 hit, 1 kill |  |  |
 | 10 | 2 hits, 2 kills | | |
 
-Place the number of hits scored on each facility. Maximum of 5.
+Place the number of hits scored on each facility. Maximum of 5. *If splitting between targets in the same zone, split before rolling any dice.*
 
 ---
 
 ## Striking Soviet Troops (Europe South War Track, Norway, Denmark) (7.5.5)
 
-Roll escort fighter air-to-attacks: DR + Tactical Value needing 8+. The number of hits gives the # Soviet attacks:
+*Strike units with missiles must use bombing dice, not missiles, when attacking troops. If there is a Soviet airbase at the attacked location, fighters based there roll CAP against the strike.* Roll escort fighter air-to-attacks: DR + Tactical Value needing 8+. The number of hits gives the # Soviet attacks:
 
 | Hits | Result |
 |---|---|

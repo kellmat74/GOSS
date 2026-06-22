@@ -8,6 +8,8 @@
 
 ## Convoys (5.1.4)
 
+*Med Convoys must go to Med Convoy Ports. Non-Med Convoys must go to Northern Convoy Ports.*
+
 | Hits | Result |
 |---|---|
 | 0–2 | Full Convoy (cancel Soviet advance) |
@@ -91,13 +93,15 @@ Soviet submarine hits have the following effects:
 
 - **Convoys & amphs**: Mark two hits for the first 7–9 scored.
 - **Non-capital ships**: No change.
-- **Capital ships**: Destroyed or step loss if multiple ships.
+- **Capital ships**: *Capital ships with a (B)/(H) damage modifier are destroyed outright; those without a modifier follow the standard capital ship damage roll (§5.1.5.1).*
 
 ### Attacking surface ships with Anti-Ship Missiles
 
 - Every 3rd missile through the SAMs is nuclear. Resolve nukes first, then resolve remaining non-nuclear missiles. Nuclear weapons automatically hit something.
 - Roll a die, on an 8+ the Soviet player allocates it, otherwise the NATO player allocates it.
 - Any hit kills the target counter entirely, except for a Convoy or Amph unit which takes three hits.
+
+*Note: Using battlefield nuclear weapons does not trigger nuclear weapons at sea.*
 
 ### Soviet SAM Defenses
 
@@ -119,9 +123,9 @@ If the Soviet SAM level of a target is at least two, treat it as being worth +2 
 ## SAM Ammo for Limited Ammunition (9.5)
 
 - **Tico VLS** Fire 2–4 SAMS, mark "2–4 fired" SAM value now 4.
-	- If fired 5+ mark no ammo.
+	- If fired 5+ mark no ammo. *Can be reloaded only at a Major Port.*
 - **Kirov/Kalinin** has 2 volleys total. 1 volley is 2+ shots.
-	- When out Kirov is SAM 1, Kalinin SAM 2.
+	- When out Kirov is SAM 1, Kalinin SAM 2. *Can be reloaded only at a Major Port.*
 
 ---
 

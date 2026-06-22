@@ -24,7 +24,7 @@ Select any submarine targets with the D value equal or lower. Defender selects f
 | Any payoffs <10 | Any Soviet sub rolling: kill 1 step |
 | **Arctic** | -1 die; All subs 6+ save or upgrade 6+ save to 4+. Ignore rocket Torpedo |
 | **Bad Weather** | -1 die; -2 dice for MP units |
-| **Hydrophone Interruption** | +1 die or roll 1 die and not spent *(Optional: always one die, not spent, if submarine)* |
+| **Hydrophone Interruption** | +1 die or roll 1 die and not spent *(Optional: always one die, not spent, if submarine — not in v1.17)* |
 | **Non-Magnetic Subs** | Cannot be killed by MP unless on N10 |
 | **'Save' subs** | Ignore any hit on a roll of a 6+ |
 
@@ -36,7 +36,7 @@ Select any submarine targets with the D value equal or lower. Defender selects f
 
 A Task Force may search for submarines instead of moving.
 
-Use the TF ASW values and dice totals from the submarine vs. Task Force section but ignore the modification for a fasy TF. Place a Poor detection on the TF after its search.
+Use the TF ASW values and dice totals from the submarine vs. Task Force section but ignore the modification for a fast TF. *The post-search detection placement rules below are from the 2020 edition and do not appear in v1.17.* Place a Poor detection on the TF after its search.
 
 - If the TF rolls any two N1-2 results instead place a Good detection on the TF after its search.
 - Resolve using the Anti-Submarine Warfare process. Ships with rocket torpedoes kill on doubles <10.
@@ -57,7 +57,7 @@ Use the TF ASW values and dice totals from the submarine vs. Task Force section 
 ## Hit Results (7.3.2)
 
 - **Hit**: Non-capital ship without Prairie Masker — step loss, chosen by attacker.
-- **Amph / Convoy / Prairie Masker**: Non-capital ship step loss or hit on Amph/Convoy. Attacker selects first hit & others to Convoys or allows defender to allocate after the first.
+- **Amph / Convoy / Prairie Masker**: Non-capital ship step loss or hit on Amph/Convoy. Attacker selects first hit, *then may choose to apply all remaining hits to Convoys/Amphibious units, or allow the defender to allocate the remainder.*
 
 ##### Capital Ships: Carriers, Big Target, Huge Target, or Limited Ammunition
 
@@ -107,6 +107,7 @@ Set dice to the side for possible defender cancellation.
 - If no hits, combat ends.
 - If US or UK nuclear subs, (Torpedo tech — Soviets can also use) a double 1-6 may immediately resolve as hit.
 - A double 7-10 may immediately resolve as PM/Amph/Can.
+- *Attack dice high enough to cause a step loss to an escorting submarine in the TF may be expended against that sub instead. If a US or UK nuclear sub (or Soviet with Torpedo Technology) rolls doubles, it may conduct an SSM missile attack if so armed (§7.3.1 step 4).*
 
 ## Task Force ASW (7.3.1)
 
