@@ -119,10 +119,13 @@ function buildSystemPrompt(
   let cardsSection = "";
   if (cardHits.length > 0) {
     const fmt = (c: CardSearchResult) => {
-      const opsLabel = c.ops?.title ? `OPS: "${c.ops.title}"` : "";
-      const reactionLabel = c.reaction?.title ? ` / Reaction: "${c.reaction.title}"` : "";
+      const opsValue = c.ops?.cost != null ? `OPS Value: ${c.ops.cost}` : "";
+      const eventCost = c.reaction?.cost != null ? ` | Event Cost: ${c.reaction.cost}` : "";
+      const opsTitle = c.ops?.title ? ` | OPS event: "${c.ops.title}"` : "";
+      const reactionTitle = c.reaction?.title ? ` | Reaction event: "${c.reaction.title}"` : "";
+      const stats = [opsValue, eventCost, opsTitle, reactionTitle].filter(Boolean).join("");
       const coach = c.coachNotes ?? c.coachNotesShort ?? "";
-      return `### Card ${c.cardNumber} (${c.side}) — ${opsLabel}${reactionLabel}\n${coach}`;
+      return `### Card ${c.cardNumber} (${c.side})${stats}\n${coach}`;
     };
     cardsSection = `\n\n## Relevant card coach notes:\n\n` + cardHits.map(fmt).join("\n\n---\n\n");
   }
