@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import type { RuleEntry, Phase } from "../../types/goss";
+import type { RuleEntry, Phase, PhysicalCard } from "../../types/goss";
 
-import { searchRules, searchSequence, searchLearn, searchForum, type SearchConfig, type LearnSearchResult, type ForumPostEntry, type ForumSearchResult } from "../../utils/rulesSearch";
+import { searchRules, searchSequence, searchLearn, searchForum, searchCards, type SearchConfig, type LearnSearchResult, type ForumPostEntry, type ForumSearchResult, type CardSearchResult } from "../../utils/rulesSearch";
 import type { LearnChapter } from "../../types/learn";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
 
@@ -21,6 +21,8 @@ interface AskPanelProps {
   coachContext?: unknown;
   /** Curated forum knowledge (Tier 1+2 designer/endorsed posts) — injected wholesale with provenance. */
   forumContext?: unknown;
+  /** Physical card deck — used to inject relevant card coach notes into RAG context. */
+  cards?: PhysicalCard[];
 }
 
 interface ChatMessage {
@@ -54,6 +56,7 @@ function buildSystemPrompt(
   coachContext?: unknown,
   forumHits: ForumSearchResult[] = [],
   preamble?: string,
+  cardHits: CardSearchResult[] = [],
 ): string {
   const fullText = topRules
     .map((r) => `[${r.section}] ${r.title}: ${r.text}`)
@@ -113,6 +116,17 @@ function buildSystemPrompt(
       forumHits.map(fmt).join("\n\n---\n\n");
   }
 
+  let cardsSection = "";
+  if (cardHits.length > 0) {
+    const fmt = (c: CardSearchResult) => {
+      const opsLabel = c.ops?.title ? `OPS: "${c.ops.title}"` : "";
+      const reactionLabel = c.reaction?.title ? ` / Reaction: "${c.reaction.title}"` : "";
+      const coach = c.coachNotes ?? c.coachNotesShort ?? "";
+      return `### Card ${c.cardNumber} (${c.side}) — ${opsLabel}${reactionLabel}\n${coach}`;
+    };
+    cardsSection = `\n\n## Relevant card coach notes:\n\n` + cardHits.map(fmt).join("\n\n---\n\n");
+  }
+
   const defaultPreamble = "You are a rules expert for a complex tabletop wargame system.";
   return `${preamble ?? defaultPreamble} Answer questions about the rules accurately, citing specific rule sections in parenthesized format like (3.2.1) so they render as clickable links.
 
@@ -124,7 +138,7 @@ ${fullText}
 
 ## Additional related rules (summaries):
 
-${summaries}${sequenceSection}${learnSection}${coachSection}${forumSection}`;
+${summaries}${sequenceSection}${learnSection}${coachSection}${cardsSection}${forumSection}`;
 }
 
 function CopyButton({ text, isUser, question }: { text: string; isUser: boolean; question?: string }) {
@@ -201,6 +215,7 @@ export function AskPanel({
   learnChapters = [],
   coachContext,
   forumContext,
+  cards = [],
 }: AskPanelProps) {
   const [messages, setMessages] = useState<ChatMessage[]>(() => loadHistory(gameId));
 
@@ -282,6 +297,10 @@ export function AskPanel({
           ? searchForum(messageText, forumPosts, 12, searchConfig)
           : [];
 
+        const cardHits = cards.length > 0
+          ? searchCards(messageText, cards, 8, searchConfig)
+          : [];
+
         const response = await fetch(workerUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -294,6 +313,7 @@ export function AskPanel({
               coachContext,
               forumHits,
               systemPromptPreamble,
+              cardHits,
             ),
             messages: newMessages.map((m) => ({
               role: m.role,

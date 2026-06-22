@@ -1,4 +1,4 @@
-import type { RuleEntry, Phase, SubPhase } from "../types/goss";
+import type { RuleEntry, Phase, SubPhase, PhysicalCard } from "../types/goss";
 import type { LearnChapter, LearnDecision } from "../types/learn";
 
 export interface SearchResult {
@@ -422,6 +422,63 @@ export function searchForum(
     score = (score + tierBonus) * (matched / tokens.length);
 
     results.push({ ...p, score });
+  }
+
+  results.sort((a, b) => b.score - a.score);
+  return results.slice(0, maxResults);
+}
+
+export interface CardSearchResult extends PhysicalCard {
+  score: number;
+}
+
+export function searchCards(
+  query: string,
+  cards: PhysicalCard[],
+  maxResults = 8,
+  config?: SearchConfig,
+): CardSearchResult[] {
+  if (!cards || cards.length === 0) return [];
+
+  const rawTokens = query
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((t) => t.length > 0 && !STOP_WORDS.has(t));
+
+  const synonyms = config?.synonyms;
+  const tokens = [...rawTokens];
+  if (synonyms) {
+    for (const token of rawTokens) {
+      const syns = synonyms[token];
+      if (syns) for (const s of syns) tokens.push(s);
+    }
+  }
+
+  if (tokens.length === 0) return [];
+
+  const results: CardSearchResult[] = [];
+  for (const c of cards) {
+    const opsTitleLower = (c.ops?.title ?? "").toLowerCase();
+    const reactionTitleLower = (c.reaction?.title ?? "").toLowerCase();
+    const opsTextLower = (c.ops?.text ?? "").toLowerCase();
+    const coachLower = ((c.coachNotes ?? "") + " " + (c.coachNotesShort ?? "")).toLowerCase();
+    let score = 0;
+    let matched = 0;
+    for (const token of tokens) {
+      const inOpsTitle = opsTitleLower.includes(token);
+      const inReactionTitle = reactionTitleLower.includes(token);
+      const inText = opsTextLower.includes(token);
+      const inCoach = coachLower.includes(token);
+      if (!inOpsTitle && !inReactionTitle && !inText && !inCoach) continue;
+      matched++;
+      if (inOpsTitle) score += 8;
+      if (inReactionTitle) score += 6;
+      if (inText) score += 3;
+      if (inCoach) score += 1;
+    }
+    if (matched === 0) continue;
+    score = score * (matched / tokens.length);
+    results.push({ ...c, score });
   }
 
   results.sort((a, b) => b.score - a.score);

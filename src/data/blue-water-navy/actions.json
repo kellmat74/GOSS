@@ -413,8 +413,8 @@
               "blocks": []
             },
             {
-              "text": "Place ship counters from the port (or the existing TF) into the new TF's holding box, along with up to one non-SSBN nuclear submarine. Each TF must contain at least one Surface Unit (5.1.2).",
-              "html": "<p>Place ship counters from the port (or the existing TF) into the new TF&#39;s holding box, along with up to one non-SSBN nuclear submarine. Each TF must contain at least one Surface Unit (5.1.2).</p>\n",
+              "text": "Place ship counters from the port (or the existing TF) into the new TF's holding box, along with up to one non-SSBN nuclear submarine. Each TF must contain at least one Surface Unit (5.1.2). *Ships in a port adjacent to the chosen sea zone may also join (§5.1.1.1).*",
+              "html": "<p>Place ship counters from the port (or the existing TF) into the new TF&#39;s holding box, along with up to one non-SSBN nuclear submarine. Each TF must contain at least one Surface Unit (5.1.2). <em>Ships in a port adjacent to the chosen sea zone may also join (§5.1.1.1).</em></p>\n",
               "blocks": []
             },
             {

@@ -517,6 +517,7 @@ function App() {
             learnChapters={learnChapters}
             coachContext={data?.coachContext}
             forumContext={data?.forumContext}
+            cards={data?.cards}
           />
         )}
         {view === "options" && gameConfig?.features.options && (
