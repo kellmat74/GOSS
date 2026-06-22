@@ -110,6 +110,7 @@ When adding or editing rule entries in `rules.json`, **always include rule secti
 ### Git / Deploy
 - GitHub Actions deploys on push to `main` — no service worker, but browser caching can serve stale assets
 - For iPad testing, use new incognito tabs after deploy (Safari caches aggressively within sessions)
+- **Version string lives in TWO places in `src/components/Layout/AppShell.tsx` (lines 64 and 84). Update both before every push. Never commit without bumping the version.**
 
 ### GOSS Terminology Landmines
 GOSS doesn't use standard hex-and-counter conventions verbatim. Verify against `rules.json` before writing content.
