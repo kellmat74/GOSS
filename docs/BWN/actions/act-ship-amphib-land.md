@@ -5,6 +5,7 @@ category: ship-actions
 side: neutral
 usage: action
 cost: null
+phase: ships
 ruleRefs:
   - "5.1.3.2"
   - "8.1"

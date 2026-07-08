@@ -347,7 +347,7 @@
     "section": "2.3.4",
     "title": "Soviet \"Boomer\" Bastion",
     "summary": "Fortified zone protecting Soviet SSBNs; has CAESAR hydrophones, mines, corvettes and air patrols.",
-    "text": "This special Sea Zone represents the area north of the Barents Sea where the Soviets created a fortified area to protect their SSBNs. It contains a Hydrophone System (\"CAESAR\") to help detect NATO submarines. It is mined and has its own defenses - corvettes and air patrols.\n\nIt has the following game effects:\n\nMovement:\n- The Soviet \"Boomer\" Bastion can be entered or exited by all unit types at the movement point cost indicated by the arrows on the map.\n\nCombat:\n- Hydrophone Reaction applies [6.8] to any NATO submarine entering the Bastion.\n- NATO submarines rolling one or more natural '1' result(s) when performing Anti-Submarine Warfare take a single step loss. (Representing the Bastion's defenses)",
+    "text": "This special Sea Zone represents the area north of the Barents Sea where the Soviets created a fortified area to protect their SSBNs. It contains a Hydrophone System (\"CAESAR\") to help detect NATO submarines. It is mined and has its own defenses - corvettes and air patrols.\n\nIt has the following game effects:\n\nMovement:\n- The Soviet \"Boomer\" Bastion can be entered or exited by all unit types at the movement point cost indicated by the arrows on the map.\n\nCombat:\n- Hydrophone Reaction applies (2.3.6) to any NATO submarine entering the Bastion.\n- NATO submarines rolling one or more natural '1' result(s) when performing Anti-Submarine Warfare take a single step loss. (Representing the Bastion's defenses)",
     "crossRefs": ["2.3.6", "7.2"],
     "legacyRef": "6.5"
   },

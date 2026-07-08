@@ -892,7 +892,7 @@
     "ops": {
       "title": "Strategic Strike",
       "type": "operations-event",
-      "text": "Cost 6 (4 in 1983). Soviet strategic asset (TU-95) may attack any target on the map. In 1983 use black missiles. From 1985 use stand-off (green) cruise missiles (AS-15) with a range of 2 zones and two dice. [TU-95MS Bear: 9 attack / 6 defense in 1983; 9 attack / 2 defense in 1985+]",
+      "text": "Cost 6 (4 in 1983). Soviet strategic asset (TU-95) may attack any target on the map. In 1983 use black missiles. From 1985 use stand-off (green) cruise missiles (AS-15) with a range of 2 zones and two dice. [TU-95MS Bear: 6 attack / 9 defense in 1983; 2 attack / 9 defense in 1985+]",
       "frequency": 1,
       "cost": 15,
       "clarification": "Must trace from somewhere, but with unlimited range. AS15s only shot down by SAM. In 85+, choose between black anti-ship missiles (range 0) and green land missiles (range 2). Tu95MS Bear is two-step: 3 black missiles on back / 1 green missile on back."

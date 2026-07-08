@@ -161,6 +161,8 @@ export interface GameCard {
   usage?: "action" | "active" | "anytime";
   /** Sub-grouping verb inside a category (BWN actions): setup / move / attack / detect / patrol-react / special. */
   verb?: "setup" | "move" | "attack" | "detect" | "patrol-react" | "special";
+  /** Game-track event that triggers this action instead of an OPS cost (e.g. "ships" for the SHIPS event on the OPS Track). BWN-specific. */
+  phase?: string;
   /** Rich per-action content from BWN merge pipeline. */
   content?: ActionContent;
 }

@@ -149,6 +149,11 @@ export function ActionsPanel({
               {c.cost} OPS
             </span>
           )}
+          {c.cost === undefined && c.phase && (
+            <span className="shrink-0 rounded bg-stone-200 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-stone-700 dark:bg-stone-700 dark:text-stone-300">
+              {c.phase}
+            </span>
+          )}
         </button>
       </li>
     );
@@ -287,6 +292,11 @@ function CardDetail({
         {typeof card.cost === "number" && (
           <span className="rounded bg-amber-200 px-2 py-1 text-xs font-bold text-amber-900 dark:bg-amber-900/40 dark:text-amber-300">
             {card.cost} OPS
+          </span>
+        )}
+        {card.cost === undefined && card.phase && (
+          <span className="rounded bg-amber-200 px-2 py-1 text-xs font-bold uppercase text-amber-900 dark:bg-amber-900/40 dark:text-amber-300">
+            {card.phase}
           </span>
         )}
       </div>

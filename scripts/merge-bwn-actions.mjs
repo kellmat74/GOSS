@@ -184,6 +184,7 @@ const CATEGORY_BY_ID = {
   "act-sub-missile-coordination": "sub",
   "act-sub-ssbn-escort": "sub",
   "act-anytime-sub-asw-vs-tf": "sub",
+  "act-anytime-sub-asw-vs-sub": "sub",
   // Air
   "act-air-mp-fly-attack": "air",
   "act-air-mp-on-patrol": "air",
@@ -233,6 +234,7 @@ const VERB_BY_ID = {
   "act-sub-missile-coordination": "attack",
   "act-sub-ssbn-escort": "move",
   "act-anytime-sub-asw-vs-tf": "patrol-react",
+  "act-anytime-sub-asw-vs-sub": "patrol-react",
 
   "act-air-mp-fly-attack": "attack",
   "act-air-mp-on-patrol": "patrol-react",
@@ -284,6 +286,7 @@ function processAction(filename) {
     usage: frontmatter.usage || "action",
     text: whenItComesUp.replace(/\n+/g, " ").slice(0, 240), // short blurb for list view
     cost: frontmatter.cost && frontmatter.cost !== "null" ? parseInt(frontmatter.cost, 10) : undefined,
+    phase: frontmatter.phase || undefined,
     ruleRefs: frontmatter.ruleRefs || [],
     category: CATEGORY_BY_ID[id] || "other",
     verb: VERB_BY_ID[id] || "special",

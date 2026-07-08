@@ -2,7 +2,6 @@ import { useState, useMemo } from "react";
 import type { PhysicalCard, CardEvent, CardSide } from "../../types/goss";
 import { RuleRefBadge } from "../RulesReference/RuleRefBadge";
 import { RuleInlineText } from "../RulesReference/RuleInlineText";
-import { CollapsibleCoach } from "../CollapsibleCoach";
 
 interface CardsPanelProps {
   cards: PhysicalCard[];
@@ -226,27 +225,8 @@ function PhysicalCardDetail({ card }: { card: PhysicalCard }) {
       {/* Reaction (bottom) Event — free to play on trigger (2.4); no cost shown. */}
       <CardEventBlock event={card.reaction} hideCost />
 
-      {/* AI Coach note (collapsed by default; short shown first, "Show more" swaps to verbose). Keyed on card id so state resets between cards. */}
-      {(card.coachNotesShort || card.coachNotes) && (
-        <CollapsibleCoach
-          key={`coach-${card.id}`}
-          className="mt-4"
-          short={
-            card.coachNotesShort ? (
-              <div className="text-stone-700 dark:text-stone-300">
-                <CardText text={card.coachNotesShort} />
-              </div>
-            ) : undefined
-          }
-          long={
-            card.coachNotes ? (
-              <div className="text-stone-700 dark:text-stone-300">
-                <CardText text={card.coachNotes} />
-              </div>
-            ) : undefined
-          }
-        />
-      )}
+      {/* AI Coach note hidden pending a full rewrite of card coach content (Matt: existing copy needs to be redone).
+          Data (coachNotes/coachNotesShort) is left in cards.json for reference when authoring the replacement. */}
     </div>
   );
 }

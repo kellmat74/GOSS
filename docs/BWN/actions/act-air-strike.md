@@ -11,6 +11,7 @@ ruleRefs:
   - "7.1.4"
   - "7.4.1.3"
   - "7.5.1"
+  - "7.5.2"
 seeAlso:
   - act-ship-fire-missiles
   - act-sub-missile-3-zones
@@ -46,16 +47,21 @@ One or more Strike units fly to a target TF or facility and attack with missiles
    {{PA-BLOCK: pa4:incoming-missile-resolution — Incoming Missile Resolution}}
    {{PA-BLOCK: pa4:missile-hit-selection — Missile Hit Selection}}
    {{PA-BLOCK: pa4:capital-ship-damage — Capital Ship Damage}}
-8. **vs land target**: each remaining Strike step gets one bombing die (US CAGs also get 1 free SEAD die per 2 CAGs). Allocate to SEAD vs bombing, resolve SAM suppression, then SAM attack, then bombing.
+8. **vs land target with bombs**: each remaining Strike step gets one bombing die (US CAGs also get 1 free SEAD die per 2 CAGs). Allocate to SEAD vs bombing, resolve SAM suppression, then SAM attack, then bombing.
    {{PA-BLOCK: pa6:air-units-bombing-land-targets — Air Units Bombing Land Targets}}
    {{PA-BLOCK: pa6:sam-suppression-vs-bombing — SAM Suppression (SEAD) · vs Bombing}}
    {{PA-BLOCK: pa6:sam-attack-vs-bombing — SAM Attack · vs Bombing}}
    {{PA-BLOCK: pa6:bombing — Bombing (air-to-ground)}}
-9. Apply collateral step losses, facility damage cumulative effects, and Kola First Strike Points if applicable (7.5.3, 7.5.4).
+9. **vs land target with cruise missiles (Soviet)**: instead of bombing, Soviet strike units (ship black & yellow missiles, all submarine missiles, all air) may attack a land target with cruise missiles (7.5.2). Dice rolled depend on the number of missiles fired, not the number of steps, and Soviet green-background missiles may fly 2 zones to the target. Allocate to SEAD vs the missile attack, resolve SAM suppression, then SAM attack, then the cruise missile attack itself.
+   {{PA-BLOCK: pa6:cruise-missile-attacks-vs-land-targets — Cruise Missile Attacks Vs. Land Targets}}
+   {{PA-BLOCK: pa6:sam-suppression-vs-cruise-missiles — SAM Suppression (SEAD) · vs Cruise Missiles}}
+   {{PA-BLOCK: pa6:sam-attack-vs-cruise-missiles — SAM Attack · vs Cruise Missiles}}
+   {{PA-BLOCK: pa6:cruise-missile-attack — Cruise Missile Attack}}
+10. Apply collateral step losses, facility damage cumulative effects, and Kola First Strike Points if applicable (7.5.3, 7.5.4).
    {{PA-BLOCK: pa6:collateral-damage — Collateral Damage}}
    {{PA-BLOCK: pa6:facility-damage — Facility Damage · Effects cumulative}}
    {{PA-BLOCK: pa6:the-kola-peninsula — The Kola Peninsula}}
-10. Mark Strike units, escorting Fighters, and Tankers 'Spent'. Apply Cruise Missiles Fired markers per 9.5.3.
+11. Mark Strike units, escorting Fighters, and Tankers 'Spent'. Apply Cruise Missiles Fired markers per 9.5.3.
 
 ## See also
 

@@ -77,6 +77,7 @@
         "type": "operations-event",
         "usage": "action",
         "text": "A Task Force carrying Amphibious units sits in a zone with an Amphibious Landing symbol on the map. To get the troops ashore, the TF skips a movement beat to mark itself 'Landing', then resolves the landing on its next chance to move (5.1.3",
+        "phase": "ships",
         "ruleRefs": [
           "5.1.3.2",
           "8.1",
@@ -185,6 +186,7 @@
         "type": "operations-event",
         "usage": "action",
         "text": "A Task Force that wants to hunt a known submarine in its zone may conduct ASW instead of moving during the SHIPS event, rolling ASW dice from its component ships (7.2.2). It costs no OPS; it replaces that TF's move. Doing so is loud: the TF",
+        "phase": "ships",
         "ruleRefs": [
           "7.2",
           "7.2.2",
@@ -459,6 +461,7 @@
         "type": "operations-event",
         "usage": "action",
         "text": "Ships only move as a Task Force group, and only when the SHIPS event triggers on the Operations Points Record Track (4.2.1.3). When the SHIPS event fires, both sides move every Task Force per the movement rules (5.1.3) — this is the main re",
+        "phase": "ships",
         "ruleRefs": [
           "5.1.3",
           "4.2.1.3",
@@ -537,13 +540,91 @@
     "label": "Submarine",
     "cards": [
       {
+        "id": "act-anytime-sub-asw-vs-sub",
+        "cardNumber": "—",
+        "side": "neutral",
+        "title": "On-Patrol Submarine ASW vs moving Sub",
+        "type": "use-anytime",
+        "usage": "anytime",
+        "text": "An enemy submarine moves into or through a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving submarine with a standard ASW attack (5.2.3, 7.2). Unlike reacting against a moving Task Force, ",
+        "ruleRefs": [
+          "4.2.3.2",
+          "5.2.3",
+          "7.2",
+          "7.2.1"
+        ],
+        "verb": "patrol-react",
+        "content": {
+          "whenItComesUp": "An enemy submarine moves into or through a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving submarine with a standard ASW attack (5.2.3, 7.2). Unlike reacting against a moving Task Force, the sub stays On Patrol afterward — it is not marked Spent.",
+          "whenItComesUpHtml": "<p>An enemy submarine moves into or through a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving submarine with a standard ASW attack (5.2.3, 7.2). Unlike reacting against a moving Task Force, the sub stays On Patrol afterward — it is not marked Spent.</p>\n",
+          "procedure": [
+            {
+              "text": "An enemy submarine moves into or through your On-Patrol sub's zone. Declare the reaction (5.2.3, 4.2.3.2).",
+              "html": "<p>An enemy submarine moves into or through your On-Patrol sub&#39;s zone. Declare the reaction (5.2.3, 4.2.3.2).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "Resolve a standard ASW attack: roll the sub's Anti-Submarine Warfare dice, add Tactical Value, apply DRMs (Bad Weather -1, Arctic ice -1, Hydrophones +1). Each die ≥ the target submarine's Defense value causes a step loss. (N) submarines are only killed on a natural 10 (7.2.1).",
+              "html": "<p>Resolve a standard ASW attack: roll the sub&#39;s Anti-Submarine Warfare dice, add Tactical Value, apply DRMs (Bad Weather -1, Arctic ice -1, Hydrophones +1). Each die ≥ the target submarine&#39;s Defense value causes a step loss. (N) submarines are only killed on a natural 10 (7.2.1).</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa3:anti-submarine-warfare",
+                  "label": "Anti-Submarine Warfare (die roll table + DRMs)"
+                }
+              ]
+            },
+            {
+              "text": "Apply N10 effects (option to detect a TF in zone, destroy any sub step, etc.).",
+              "html": "<p>Apply N10 effects (option to detect a TF in zone, destroy any sub step, etc.).</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "The defender applies non-N10 hits first, then the attacker allocates the rest. Apply sub 'save' rolls.",
+              "html": "<p>The defender applies non-N10 hits first, then the attacker allocates the rest. Apply sub &#39;save&#39; rolls.</p>\n",
+              "blocks": []
+            },
+            {
+              "text": "The On-Patrol sub remains On Patrol — reacting against a moving submarine does not flip it to Spent (5.2.3). It may react again later in the turn against another crossing.",
+              "html": "<p>The On-Patrol sub remains On Patrol — reacting against a moving submarine does not flip it to Spent (5.2.3). It may react again later in the turn against another crossing.</p>\n",
+              "blocks": []
+            }
+          ],
+          "seeAlso": {
+            "actions": [
+              {
+                "id": "act-sub-on-patrol",
+                "title": "Submarine moves and goes On Patrol"
+              },
+              {
+                "id": "act-anytime-sub-asw-vs-tf",
+                "title": "On-Patrol Submarine ASW vs moving TF"
+              },
+              {
+                "id": "act-anytime-mp-vs-sub",
+                "title": "On-Patrol MP attacks a crossing submarine"
+              }
+            ],
+            "ruleRefs": [
+              "4.2.3.2",
+              "5.2.3",
+              "7.2",
+              "7.2.1"
+            ]
+          },
+          "whyAndWatchForShort": "React whenever a target sub crosses your On-Patrol boat's zone and the math favors you, it costs nothing and the sub stays On Patrol afterward (5.2.3), so a good ambush spot can rack up multiple kills across a turn. (N) boats only die on a natural 10 (7.2.1). This is the sub-hunting mirror of the TF reaction, but the TF version flips the reactor to Spent (5.2.3) while this one does not.",
+          "whyAndWatchForShortHtml": "<p>React whenever a target sub crosses your On-Patrol boat&#39;s zone and the math favors you, it costs nothing and the sub stays On Patrol afterward (5.2.3), so a good ambush spot can rack up multiple kills across a turn. (N) boats only die on a natural 10 (7.2.1). This is the sub-hunting mirror of the TF reaction, but the TF version flips the reactor to Spent (5.2.3) while this one does not.</p>\n",
+          "whyAndWatchFor": "An On-Patrol submarine reacting to an enemy submarine crossing into its zone lets a quiet boat ambush passing traffic without spending an action. The reaction uses the standard 7.2 ASW procedure and, per 5.2.3, does not mark the reacting sub Spent, only the Task Force-reaction version of On-Patrol duty does that. This makes a well-placed On-Patrol boat in a chokepoint valuable across an entire turn, not just once.\n\nTake this whenever an enemy submarine moves into or through your On-Patrol sub's zone: roll ASW dice plus Tactical Value against the mover's Defense value, with the usual DRM stack (Bad Weather -1, Arctic -1, Hydrophones +1). (N) boats (Sierra, Akula) are only killed by a natural 10 (7.2.1). Because the sub stays On Patrol afterward, it remains available to react to the next submarine that crosses the same zone later in the turn, unlike the TF-reaction case, which flips to Spent and is done for the turn.\n\nThis pairs with [Hydrophone Barrier reaction](./act-anytime-hydrophone.md) firing first if the mover crossed a SOSUS line, and with [On-Patrol MP attacks a crossing submarine](./act-anytime-mp-vs-sub.md) when the on-patrol asset is air instead. Counter: route subs around known On-Patrol zones, or clear them with a strike first.\n\nA NATO Los Angeles On Patrol in North 5-6 reacts to a Soviet Akula transiting through. ASW 3 dice + 2 Tactical, but the Akula is (N) so only a natural 10 hits. Rolls 10, 6, 4, natural 10 lands a step loss. The Los Angeles stays On Patrol, ready to react again if another Soviet boat follows.",
+          "whyAndWatchForHtml": "<p>An On-Patrol submarine reacting to an enemy submarine crossing into its zone lets a quiet boat ambush passing traffic without spending an action. The reaction uses the standard 7.2 ASW procedure and, per 5.2.3, does not mark the reacting sub Spent, only the Task Force-reaction version of On-Patrol duty does that. This makes a well-placed On-Patrol boat in a chokepoint valuable across an entire turn, not just once.</p>\n<p>Take this whenever an enemy submarine moves into or through your On-Patrol sub&#39;s zone: roll ASW dice plus Tactical Value against the mover&#39;s Defense value, with the usual DRM stack (Bad Weather -1, Arctic -1, Hydrophones +1). (N) boats (Sierra, Akula) are only killed by a natural 10 (7.2.1). Because the sub stays On Patrol afterward, it remains available to react to the next submarine that crosses the same zone later in the turn, unlike the TF-reaction case, which flips to Spent and is done for the turn.</p>\n<p>This pairs with <a href=\"./act-anytime-hydrophone.md\">Hydrophone Barrier reaction</a> firing first if the mover crossed a SOSUS line, and with <a href=\"./act-anytime-mp-vs-sub.md\">On-Patrol MP attacks a crossing submarine</a> when the on-patrol asset is air instead. Counter: route subs around known On-Patrol zones, or clear them with a strike first.</p>\n<p>A NATO Los Angeles On Patrol in North 5-6 reacts to a Soviet Akula transiting through. ASW 3 dice + 2 Tactical, but the Akula is (N) so only a natural 10 hits. Rolls 10, 6, 4, natural 10 lands a step loss. The Los Angeles stays On Patrol, ready to react again if another Soviet boat follows.</p>\n"
+        }
+      },
+      {
         "id": "act-anytime-sub-asw-vs-tf",
         "cardNumber": "—",
         "side": "neutral",
         "title": "On-Patrol Submarine ASW vs moving TF",
         "type": "use-anytime",
         "usage": "anytime",
-        "text": "An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving TF (5.2.3). The attack uses the standard 7.3 sub-vs-TF torpedo procedure.",
+        "text": "An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving TF (5.2.3). The attack uses the standard 7.3 sub-vs-TF torpedo procedure. Unlike reacting against a moving",
         "ruleRefs": [
           "4.2.3.2",
           "5.2.3",
@@ -552,8 +633,8 @@
         ],
         "verb": "patrol-react",
         "content": {
-          "whenItComesUp": "An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving TF (5.2.3). The attack uses the standard 7.3 sub-vs-TF torpedo procedure.",
-          "whenItComesUpHtml": "<p>An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving TF (5.2.3). The attack uses the standard 7.3 sub-vs-TF torpedo procedure.</p>\n",
+          "whenItComesUp": "An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving TF (5.2.3). The attack uses the standard 7.3 sub-vs-TF torpedo procedure. Unlike reacting against a moving submarine, this flips the reacting sub to Spent (5.2.3).",
+          "whenItComesUpHtml": "<p>An enemy Task Force moves into a Sea Zone where you have a submarine On Patrol. The on-patrol sub can interrupt and attack the moving TF (5.2.3). The attack uses the standard 7.3 sub-vs-TF torpedo procedure. Unlike reacting against a moving submarine, this flips the reacting sub to Spent (5.2.3).</p>\n",
           "procedure": [
             {
               "text": "An enemy TF moves into your On-Patrol sub's zone. Declare the reaction (5.2.3, 4.2.3.2).",
@@ -619,8 +700,8 @@
               ]
             },
             {
-              "text": "The On-Patrol sub remains On Patrol unless the rules of the specific attack flip it (per 5.2.3, On Patrol units are not Spent by reacting unless the reaction text says so).",
-              "html": "<p>The On-Patrol sub remains On Patrol unless the rules of the specific attack flip it (per 5.2.3, On Patrol units are not Spent by reacting unless the reaction text says so).</p>\n",
+              "text": "Flip the On-Patrol sub to Spent (5.2.3). Reacting against a moving TF, unlike reacting against a moving submarine, ends the sub's on-patrol duty for the turn.",
+              "html": "<p>Flip the On-Patrol sub to Spent (5.2.3). Reacting against a moving TF, unlike reacting against a moving submarine, ends the sub&#39;s on-patrol duty for the turn.</p>\n",
               "blocks": []
             }
           ],
@@ -647,10 +728,10 @@
               "7.3.1"
             ]
           },
-          "whyAndWatchForShort": "This reaction is free in OPS and the sub stays On Patrol after firing (5.2.3), so a high Anti-Surface boat can attack multiple TFs across a turn. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so hold fire on a screening Convoy TF if a carrier TF is coming next. TF still gets its full ASW defense roll with Fast and Bad Weather row shifts (7.3.1).",
-          "whyAndWatchForShortHtml": "<p>This reaction is free in OPS and the sub stays On Patrol after firing (5.2.3), so a high Anti-Surface boat can attack multiple TFs across a turn. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so hold fire on a screening Convoy TF if a carrier TF is coming next. TF still gets its full ASW defense roll with Fast and Bad Weather row shifts (7.3.1).</p>\n",
-          "whyAndWatchFor": "An On-Patrol submarine reacting to an enemy TF crossing into its zone is the in-game expression of every Cold War submarine-vs-surface engagement that mattered: the boat sat silent, the target group steamed through, the boat fired. The reaction is free in OPS terms because the on-patrol stance was already paid for when the sub went On Patrol (5.2.3, 4.2.3.2), and the reaction uses the standard 7.3 sub-vs-TF combat procedure. The action is BWN's punishment for routing a TF through a known submarine zone.\n\nTake this reaction whenever an enemy TF moves into your On-Patrol sub's zone and the math looks favorable: Good Detection gives +1 die, Bad Weather -1, Fast target -1 (or -2 if diesel attacker). On-Patrol subs are not Spent by reacting unless the reaction text says so (5.2.3), so a high Anti-Surface boat can react to multiple TF crossings in one turn. This is why On-Patrol nuclear subs in chokepoints are devastating: they get repeated free attacks.\n\nThe most common confusion is whether to react with this sub or wait for a better target. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so a second crossing this turn might be a higher-value target (the carrier TF instead of the screening Convoy TF). If you have one On-Patrol sub, hold fire on the first TF if you can see a juicier second one coming. Second: the TF still gets its full ASW defense roll just like a normal sub-vs-TF combat (7.3.1), with Fast TF moving up one row, Bad Weather moving up one row, rocket torpedo swaps on doubles, 8+ dice discarding the sub's hits. Third: Hydrophone Barriers do not retrigger here because the TF, not the sub, is moving (the TF crossing a Hydrophone Barrier into the zone does trigger a separate Hydrophone reaction first, but that is a different action). Fourth: if the sub takes hits during the TF's ASW defense, those apply now, not at end of turn.\n\nThis pairs with [Hydrophone Barrier reaction](./act-anytime-hydrophone.md) firing first if the TF crossed a barrier and with [On-Patrol MP attacks a crossing submarine](./act-anytime-mp-vs-sub.md) when the on-patrol asset is air. [Submarine moves and goes On Patrol](./act-sub-on-patrol.md) is the setup action. Counter: the TF avoids known patrol zones, or sends ASW assets first.\n\nA NATO Trafalgar On Patrol in Mid 7-8 watches a Good-detected Soviet TF enter. Anti-Surface 3 +1 (Good) = 4 dice, scores 2 hits on 7s. Soviet TF ASW total 10 = 3 dice + 1 Tactical, rolls 9, 6, 5, discards one hit on the 9, the other hit lands as a step loss on a Sovremenny. The Trafalgar stays On Patrol, ready to react again.",
-          "whyAndWatchForHtml": "<p>An On-Patrol submarine reacting to an enemy TF crossing into its zone is the in-game expression of every Cold War submarine-vs-surface engagement that mattered: the boat sat silent, the target group steamed through, the boat fired. The reaction is free in OPS terms because the on-patrol stance was already paid for when the sub went On Patrol (5.2.3, 4.2.3.2), and the reaction uses the standard 7.3 sub-vs-TF combat procedure. The action is BWN&#39;s punishment for routing a TF through a known submarine zone.</p>\n<p>Take this reaction whenever an enemy TF moves into your On-Patrol sub&#39;s zone and the math looks favorable: Good Detection gives +1 die, Bad Weather -1, Fast target -1 (or -2 if diesel attacker). On-Patrol subs are not Spent by reacting unless the reaction text says so (5.2.3), so a high Anti-Surface boat can react to multiple TF crossings in one turn. This is why On-Patrol nuclear subs in chokepoints are devastating: they get repeated free attacks.</p>\n<p>The most common confusion is whether to react with this sub or wait for a better target. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so a second crossing this turn might be a higher-value target (the carrier TF instead of the screening Convoy TF). If you have one On-Patrol sub, hold fire on the first TF if you can see a juicier second one coming. Second: the TF still gets its full ASW defense roll just like a normal sub-vs-TF combat (7.3.1), with Fast TF moving up one row, Bad Weather moving up one row, rocket torpedo swaps on doubles, 8+ dice discarding the sub&#39;s hits. Third: Hydrophone Barriers do not retrigger here because the TF, not the sub, is moving (the TF crossing a Hydrophone Barrier into the zone does trigger a separate Hydrophone reaction first, but that is a different action). Fourth: if the sub takes hits during the TF&#39;s ASW defense, those apply now, not at end of turn.</p>\n<p>This pairs with <a href=\"./act-anytime-hydrophone.md\">Hydrophone Barrier reaction</a> firing first if the TF crossed a barrier and with <a href=\"./act-anytime-mp-vs-sub.md\">On-Patrol MP attacks a crossing submarine</a> when the on-patrol asset is air. <a href=\"./act-sub-on-patrol.md\">Submarine moves and goes On Patrol</a> is the setup action. Counter: the TF avoids known patrol zones, or sends ASW assets first.</p>\n<p>A NATO Trafalgar On Patrol in Mid 7-8 watches a Good-detected Soviet TF enter. Anti-Surface 3 +1 (Good) = 4 dice, scores 2 hits on 7s. Soviet TF ASW total 10 = 3 dice + 1 Tactical, rolls 9, 6, 5, discards one hit on the 9, the other hit lands as a step loss on a Sovremenny. The Trafalgar stays On Patrol, ready to react again.</p>\n"
+          "whyAndWatchForShort": "This reaction is free in OPS but flips the sub to Spent after firing (5.2.3), unlike reacting against a moving submarine, which leaves it On Patrol. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so hold fire on a screening Convoy TF if a carrier TF is coming next, since this is your one shot for the turn. TF still gets its full ASW defense roll with Fast and Bad Weather row shifts (7.3.1).",
+          "whyAndWatchForShortHtml": "<p>This reaction is free in OPS but flips the sub to Spent after firing (5.2.3), unlike reacting against a moving submarine, which leaves it On Patrol. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so hold fire on a screening Convoy TF if a carrier TF is coming next, since this is your one shot for the turn. TF still gets its full ASW defense roll with Fast and Bad Weather row shifts (7.3.1).</p>\n",
+          "whyAndWatchFor": "An On-Patrol submarine reacting to an enemy TF crossing into its zone is the in-game expression of every Cold War submarine-vs-surface engagement that mattered: the boat sat silent, the target group steamed through, the boat fired. The reaction is free in OPS terms because the on-patrol stance was already paid for when the sub went On Patrol (5.2.3, 4.2.3.2), and the reaction uses the standard 7.3 sub-vs-TF combat procedure. The action is BWN's punishment for routing a TF through a known submarine zone.\n\nTake this reaction whenever an enemy TF moves into your On-Patrol sub's zone and the math looks favorable: Good Detection gives +1 die, Bad Weather -1, Fast target -1 (or -2 if diesel attacker). Reacting against a TF flips the sub to Spent (5.2.3), so this is a one-shot decision for the turn, unlike reacting against a moving submarine, which leaves the boat On Patrol for further reactions.\n\nThe most common confusion is whether to react with this sub or wait for a better target. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), and since this reaction spends the sub for the turn, a second crossing this turn might be a higher-value target (the carrier TF instead of the screening Convoy TF). If you have one On-Patrol sub, hold fire on the first TF if you can see a juicier second one coming. Second: the TF still gets its full ASW defense roll just like a normal sub-vs-TF combat (7.3.1), with Fast TF moving up one row, Bad Weather moving up one row, rocket torpedo swaps on doubles, 8+ dice discarding the sub's hits. Third: Hydrophone Barriers do not retrigger here because the TF, not the sub, is moving (the TF crossing a Hydrophone Barrier into the zone does trigger a separate Hydrophone reaction first, but that is a different action). Fourth: if the sub takes hits during the TF's ASW defense, those apply now, not at end of turn.\n\nThis pairs with [Hydrophone Barrier reaction](./act-anytime-hydrophone.md) firing first if the TF crossed a barrier and with [On-Patrol MP attacks a crossing submarine](./act-anytime-mp-vs-sub.md) when the on-patrol asset is air. [Submarine moves and goes On Patrol](./act-sub-on-patrol.md) is the setup action. Counter: the TF avoids known patrol zones, or sends ASW assets first.\n\nA NATO Trafalgar On Patrol in Mid 7-8 watches a Good-detected Soviet TF enter. Anti-Surface 3 +1 (Good) = 4 dice, scores 2 hits on 7s. Soviet TF ASW total 10 = 3 dice + 1 Tactical, rolls 9, 6, 5, discards one hit on the 9, the other hit lands as a step loss on a Sovremenny. The Trafalgar flips to Spent, its patrol duty for the turn done.",
+          "whyAndWatchForHtml": "<p>An On-Patrol submarine reacting to an enemy TF crossing into its zone is the in-game expression of every Cold War submarine-vs-surface engagement that mattered: the boat sat silent, the target group steamed through, the boat fired. The reaction is free in OPS terms because the on-patrol stance was already paid for when the sub went On Patrol (5.2.3, 4.2.3.2), and the reaction uses the standard 7.3 sub-vs-TF combat procedure. The action is BWN&#39;s punishment for routing a TF through a known submarine zone.</p>\n<p>Take this reaction whenever an enemy TF moves into your On-Patrol sub&#39;s zone and the math looks favorable: Good Detection gives +1 die, Bad Weather -1, Fast target -1 (or -2 if diesel attacker). Reacting against a TF flips the sub to Spent (5.2.3), so this is a one-shot decision for the turn, unlike reacting against a moving submarine, which leaves the boat On Patrol for further reactions.</p>\n<p>The most common confusion is whether to react with this sub or wait for a better target. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), and since this reaction spends the sub for the turn, a second crossing this turn might be a higher-value target (the carrier TF instead of the screening Convoy TF). If you have one On-Patrol sub, hold fire on the first TF if you can see a juicier second one coming. Second: the TF still gets its full ASW defense roll just like a normal sub-vs-TF combat (7.3.1), with Fast TF moving up one row, Bad Weather moving up one row, rocket torpedo swaps on doubles, 8+ dice discarding the sub&#39;s hits. Third: Hydrophone Barriers do not retrigger here because the TF, not the sub, is moving (the TF crossing a Hydrophone Barrier into the zone does trigger a separate Hydrophone reaction first, but that is a different action). Fourth: if the sub takes hits during the TF&#39;s ASW defense, those apply now, not at end of turn.</p>\n<p>This pairs with <a href=\"./act-anytime-hydrophone.md\">Hydrophone Barrier reaction</a> firing first if the TF crossed a barrier and with <a href=\"./act-anytime-mp-vs-sub.md\">On-Patrol MP attacks a crossing submarine</a> when the on-patrol asset is air. <a href=\"./act-sub-on-patrol.md\">Submarine moves and goes On Patrol</a> is the setup action. Counter: the TF avoids known patrol zones, or sends ASW assets first.</p>\n<p>A NATO Trafalgar On Patrol in Mid 7-8 watches a Good-detected Soviet TF enter. Anti-Surface 3 +1 (Good) = 4 dice, scores 2 hits on 7s. Soviet TF ASW total 10 = 3 dice + 1 Tactical, rolls 9, 6, 5, discards one hit on the 9, the other hit lands as a step loss on a Sovremenny. The Trafalgar flips to Spent, its patrol duty for the turn done.</p>\n"
         }
       },
       {
@@ -1303,8 +1384,8 @@
               "blocks": []
             },
             {
-              "text": "For the remainder of the turn, this On Patrol sub can be triggered as a Use-At-Any-Time reaction:\n   \n   - Interrupt a moving enemy submarine and roll ASW against it. See [On-Patrol MP attacks a crossing submarine](./act-anytime-mp-vs-sub.md) — same trigger, sub version.\n   - Roll a torpedo attack against a moving TF entering the zone. See [On-Patrol Submarine ASW vs moving TF](./act-anytime-sub-asw-vs-tf.md).",
-              "html": "<p>For the remainder of the turn, this On Patrol sub can be triggered as a Use-At-Any-Time reaction:</p>\n<ul>\n<li>Interrupt a moving enemy submarine and roll ASW against it. See <a href=\"./act-anytime-mp-vs-sub.md\">On-Patrol MP attacks a crossing submarine</a> — same trigger, sub version.</li>\n<li>Roll a torpedo attack against a moving TF entering the zone. See <a href=\"./act-anytime-sub-asw-vs-tf.md\">On-Patrol Submarine ASW vs moving TF</a>.</li>\n</ul>\n",
+              "text": "For the remainder of the turn, this On Patrol sub can be triggered as a Use-At-Any-Time reaction:\n   \n   - Interrupt a moving enemy submarine and roll ASW against it, staying On Patrol afterward. See [On-Patrol Submarine ASW vs moving Sub](./act-anytime-sub-asw-vs-sub.md).\n   - Roll a torpedo attack against a moving TF entering the zone, flipping to Spent afterward. See [On-Patrol Submarine ASW vs moving TF](./act-anytime-sub-asw-vs-tf.md).",
+              "html": "<p>For the remainder of the turn, this On Patrol sub can be triggered as a Use-At-Any-Time reaction:</p>\n<ul>\n<li>Interrupt a moving enemy submarine and roll ASW against it, staying On Patrol afterward. See <a href=\"./act-anytime-sub-asw-vs-sub.md\">On-Patrol Submarine ASW vs moving Sub</a>.</li>\n<li>Roll a torpedo attack against a moving TF entering the zone, flipping to Spent afterward. See <a href=\"./act-anytime-sub-asw-vs-tf.md\">On-Patrol Submarine ASW vs moving TF</a>.</li>\n</ul>\n",
               "blocks": [
                 {
                   "slug": "pa2:use-at-any-time",
@@ -1325,6 +1406,10 @@
                 "title": "On-Patrol Submarine ASW vs moving TF"
               },
               {
+                "id": "act-anytime-sub-asw-vs-sub",
+                "title": "On-Patrol Submarine ASW vs moving Sub"
+              },
+              {
                 "id": "act-anytime-mp-vs-sub",
                 "title": "On-Patrol MP attacks a crossing submarine"
               },
@@ -1339,10 +1424,10 @@
               "4.2.3.2"
             ]
           },
-          "whyAndWatchForShort": "On-Patrol subs are not Spent by reacting (5.2.3), so one high-Anti-Surface, high-ASW boat in a chokepoint can fire repeatedly across the turn. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so two SSNs in the same zone waste overlap unless multiple enemies cross. The sub uses ASW dice (not torpedo) when targeting another sub, and is not protected from being ASW'd itself.",
-          "whyAndWatchForShortHtml": "<p>On-Patrol subs are not Spent by reacting (5.2.3), so one high-Anti-Surface, high-ASW boat in a chokepoint can fire repeatedly across the turn. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so two SSNs in the same zone waste overlap unless multiple enemies cross. The sub uses ASW dice (not torpedo) when targeting another sub, and is not protected from being ASW&#39;d itself.</p>\n",
-          "whyAndWatchFor": "Going On Patrol is the submarine's standing-guard posture: the boat sits in a Sea Zone with sonar up, ready to react when something walks through (5.2.3). It models the actual operational pattern of Cold War submarine deployments, with NATO SSNs lurking in the GIUK gap and Soviet boats in choke points waiting for the next transit. Unlike a single attack action, On Patrol is investment: it commits the sub for the rest of the turn but yields multiple potential reactions.\n\nTake this action when you can position a sub in a zone the opponent must move through and you do not have a current target. Classic uses: a NATO SSN On Patrol in North 7-8 to intercept Soviet sorties from the Bastion; a Soviet diesel On Patrol in the GIUK gap to ambush Convoys; an On-Patrol nuclear sub covering an amphibious approach route. The action is especially strong with high Anti-Surface and high ASW boats because the same sub can react to either a TF (torpedo) or a sub (ASW) crossing.\n\nThe biggest miss is that On Patrol units are **not** Spent by reacting (5.2.3), unless the specific reaction text says so, so one sub can fire multiple times across a turn. Players also forget the limit: only one On-Patrol unit per zone may react against a given moving unit (5.2.3). So having two SSNs On Patrol in the same zone wastes overlap unless multiple enemies cross. Second: On Patrol does not protect the sub from being attacked itself. An enemy can still send forces to ASW the zone. Third: the action also covers MP-style ASW vs subs crossing, but the sub uses ASW dice, not torpedo dice, when targeting another sub. Fourth: at end of turn the sub is normally marked Spent regardless of how many reactions it made, so it cannot patrol two turns in a row without coming off Spent first.\n\nPair with [On-Patrol Submarine ASW vs moving TF](./act-anytime-sub-asw-vs-tf.md) (the reaction that fires when a TF enters) and [Hydrophone Barrier reaction](./act-anytime-hydrophone.md) layered before. Counter: enemy routes around your patrol zone, or uses on-patrol MPs to soften the sub before crossing.\n\nSoviet Turn 3: a Charlie II spends 1 OPS to move into Mid 9-10 and go On Patrol, anticipating NATO's reinforcement Convoy. NATO's SHIPS event fires, the Convoy TF tries to cross Mid 9-10, and the Charlie reacts with a torpedo attack, then later in the turn reacts again to a transiting NATO SSN with an ASW roll.",
-          "whyAndWatchForHtml": "<p>Going On Patrol is the submarine&#39;s standing-guard posture: the boat sits in a Sea Zone with sonar up, ready to react when something walks through (5.2.3). It models the actual operational pattern of Cold War submarine deployments, with NATO SSNs lurking in the GIUK gap and Soviet boats in choke points waiting for the next transit. Unlike a single attack action, On Patrol is investment: it commits the sub for the rest of the turn but yields multiple potential reactions.</p>\n<p>Take this action when you can position a sub in a zone the opponent must move through and you do not have a current target. Classic uses: a NATO SSN On Patrol in North 7-8 to intercept Soviet sorties from the Bastion; a Soviet diesel On Patrol in the GIUK gap to ambush Convoys; an On-Patrol nuclear sub covering an amphibious approach route. The action is especially strong with high Anti-Surface and high ASW boats because the same sub can react to either a TF (torpedo) or a sub (ASW) crossing.</p>\n<p>The biggest miss is that On Patrol units are <strong>not</strong> Spent by reacting (5.2.3), unless the specific reaction text says so, so one sub can fire multiple times across a turn. Players also forget the limit: only one On-Patrol unit per zone may react against a given moving unit (5.2.3). So having two SSNs On Patrol in the same zone wastes overlap unless multiple enemies cross. Second: On Patrol does not protect the sub from being attacked itself. An enemy can still send forces to ASW the zone. Third: the action also covers MP-style ASW vs subs crossing, but the sub uses ASW dice, not torpedo dice, when targeting another sub. Fourth: at end of turn the sub is normally marked Spent regardless of how many reactions it made, so it cannot patrol two turns in a row without coming off Spent first.</p>\n<p>Pair with <a href=\"./act-anytime-sub-asw-vs-tf.md\">On-Patrol Submarine ASW vs moving TF</a> (the reaction that fires when a TF enters) and <a href=\"./act-anytime-hydrophone.md\">Hydrophone Barrier reaction</a> layered before. Counter: enemy routes around your patrol zone, or uses on-patrol MPs to soften the sub before crossing.</p>\n<p>Soviet Turn 3: a Charlie II spends 1 OPS to move into Mid 9-10 and go On Patrol, anticipating NATO&#39;s reinforcement Convoy. NATO&#39;s SHIPS event fires, the Convoy TF tries to cross Mid 9-10, and the Charlie reacts with a torpedo attack, then later in the turn reacts again to a transiting NATO SSN with an ASW roll.</p>\n"
+          "whyAndWatchForShort": "Reacting against a moving submarine does not flip the boat to Spent (5.2.3), so one high-ASW boat in a chokepoint can fire on multiple crossing subs across the turn. Reacting against a moving TF does flip it to Spent, so save that one for the target that matters. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so two SSNs in the same zone waste overlap unless multiple enemies cross.",
+          "whyAndWatchForShortHtml": "<p>Reacting against a moving submarine does not flip the boat to Spent (5.2.3), so one high-ASW boat in a chokepoint can fire on multiple crossing subs across the turn. Reacting against a moving TF does flip it to Spent, so save that one for the target that matters. Only one On-Patrol unit per zone may react against a given moving unit (5.2.3), so two SSNs in the same zone waste overlap unless multiple enemies cross.</p>\n",
+          "whyAndWatchFor": "Going On Patrol is the submarine's standing-guard posture: the boat sits in a Sea Zone with sonar up, ready to react when something walks through (5.2.3). It models the actual operational pattern of Cold War submarine deployments, with NATO SSNs lurking in the GIUK gap and Soviet boats in choke points waiting for the next transit. Unlike a single attack action, On Patrol is investment: it commits the sub for the rest of the turn but yields multiple potential reactions.\n\nTake this action when you can position a sub in a zone the opponent must move through and you do not have a current target. Classic uses: a NATO SSN On Patrol in North 7-8 to intercept Soviet sorties from the Bastion; a Soviet diesel On Patrol in the GIUK gap to ambush Convoys; an On-Patrol nuclear sub covering an amphibious approach route. The action is especially strong with high Anti-Surface and high ASW boats because the same sub can react to either a TF (torpedo) or a sub (ASW) crossing.\n\nThe biggest miss is treating both reaction types the same. Per 5.2.3, reacting against a moving submarine does **not** flip the reactor to Spent, so one sub can fire on multiple subs crossing across a turn. Reacting against a moving TF **does** flip it to Spent, ending its patrol duty for the turn. Players also forget the limit: only one On-Patrol unit per zone may react against a given moving unit (5.2.3). So having two SSNs On Patrol in the same zone wastes overlap unless multiple enemies cross. Second: On Patrol does not protect the sub from being attacked itself. An enemy can still send forces to ASW the zone. Third: the action also covers MP-style ASW vs subs crossing, but the sub uses ASW dice, not torpedo dice, when targeting another sub. Fourth: at end of turn the sub is normally marked Spent regardless of how many reactions it made, so it cannot patrol two turns in a row without coming off Spent first.\n\nPair with [On-Patrol Submarine ASW vs moving TF](./act-anytime-sub-asw-vs-tf.md) and [On-Patrol Submarine ASW vs moving Sub](./act-anytime-sub-asw-vs-sub.md) (the two reaction types) and [Hydrophone Barrier reaction](./act-anytime-hydrophone.md) layered before. Counter: enemy routes around your patrol zone, or uses on-patrol MPs to soften the sub before crossing.\n\nSoviet Turn 3: a Charlie II spends 1 OPS to move into Mid 9-10 and go On Patrol, anticipating NATO's reinforcement Convoy. A transiting NATO SSN crosses first, and the Charlie reacts with an ASW roll, staying On Patrol. Later in the turn NATO's SHIPS event fires and the Convoy TF tries to cross the same zone; the Charlie reacts again with a torpedo attack, and this time flips to Spent.",
+          "whyAndWatchForHtml": "<p>Going On Patrol is the submarine&#39;s standing-guard posture: the boat sits in a Sea Zone with sonar up, ready to react when something walks through (5.2.3). It models the actual operational pattern of Cold War submarine deployments, with NATO SSNs lurking in the GIUK gap and Soviet boats in choke points waiting for the next transit. Unlike a single attack action, On Patrol is investment: it commits the sub for the rest of the turn but yields multiple potential reactions.</p>\n<p>Take this action when you can position a sub in a zone the opponent must move through and you do not have a current target. Classic uses: a NATO SSN On Patrol in North 7-8 to intercept Soviet sorties from the Bastion; a Soviet diesel On Patrol in the GIUK gap to ambush Convoys; an On-Patrol nuclear sub covering an amphibious approach route. The action is especially strong with high Anti-Surface and high ASW boats because the same sub can react to either a TF (torpedo) or a sub (ASW) crossing.</p>\n<p>The biggest miss is treating both reaction types the same. Per 5.2.3, reacting against a moving submarine does <strong>not</strong> flip the reactor to Spent, so one sub can fire on multiple subs crossing across a turn. Reacting against a moving TF <strong>does</strong> flip it to Spent, ending its patrol duty for the turn. Players also forget the limit: only one On-Patrol unit per zone may react against a given moving unit (5.2.3). So having two SSNs On Patrol in the same zone wastes overlap unless multiple enemies cross. Second: On Patrol does not protect the sub from being attacked itself. An enemy can still send forces to ASW the zone. Third: the action also covers MP-style ASW vs subs crossing, but the sub uses ASW dice, not torpedo dice, when targeting another sub. Fourth: at end of turn the sub is normally marked Spent regardless of how many reactions it made, so it cannot patrol two turns in a row without coming off Spent first.</p>\n<p>Pair with <a href=\"./act-anytime-sub-asw-vs-tf.md\">On-Patrol Submarine ASW vs moving TF</a> and <a href=\"./act-anytime-sub-asw-vs-sub.md\">On-Patrol Submarine ASW vs moving Sub</a> (the two reaction types) and <a href=\"./act-anytime-hydrophone.md\">Hydrophone Barrier reaction</a> layered before. Counter: enemy routes around your patrol zone, or uses on-patrol MPs to soften the sub before crossing.</p>\n<p>Soviet Turn 3: a Charlie II spends 1 OPS to move into Mid 9-10 and go On Patrol, anticipating NATO&#39;s reinforcement Convoy. A transiting NATO SSN crosses first, and the Charlie reacts with an ASW roll, staying On Patrol. Later in the turn NATO&#39;s SHIPS event fires and the Convoy TF tries to cross the same zone; the Charlie reacts again with a torpedo attack, and this time flips to Spent.</p>\n"
         }
       },
       {
@@ -1696,7 +1781,8 @@
           "5.3.6",
           "7.1.4",
           "7.4.1.3",
-          "7.5.1"
+          "7.5.1",
+          "7.5.2"
         ],
         "verb": "attack",
         "content": {
@@ -1792,8 +1878,8 @@
               ]
             },
             {
-              "text": "**vs land target**: each remaining Strike step gets one bombing die (US CAGs also get 1 free SEAD die per 2 CAGs). Allocate to SEAD vs bombing, resolve SAM suppression, then SAM attack, then bombing.",
-              "html": "<p><strong>vs land target</strong>: each remaining Strike step gets one bombing die (US CAGs also get 1 free SEAD die per 2 CAGs). Allocate to SEAD vs bombing, resolve SAM suppression, then SAM attack, then bombing.</p>\n",
+              "text": "**vs land target with bombs**: each remaining Strike step gets one bombing die (US CAGs also get 1 free SEAD die per 2 CAGs). Allocate to SEAD vs bombing, resolve SAM suppression, then SAM attack, then bombing.",
+              "html": "<p><strong>vs land target with bombs</strong>: each remaining Strike step gets one bombing die (US CAGs also get 1 free SEAD die per 2 CAGs). Allocate to SEAD vs bombing, resolve SAM suppression, then SAM attack, then bombing.</p>\n",
               "blocks": [
                 {
                   "slug": "pa6:air-units-bombing-land-targets",
@@ -1810,6 +1896,28 @@
                 {
                   "slug": "pa6:bombing",
                   "label": "Bombing (air-to-ground)"
+                }
+              ]
+            },
+            {
+              "text": "**vs land target with cruise missiles (Soviet)**: instead of bombing, Soviet strike units (ship black & yellow missiles, all submarine missiles, all air) may attack a land target with cruise missiles (7.5.2). Dice rolled depend on the number of missiles fired, not the number of steps, and Soviet green-background missiles may fly 2 zones to the target. Allocate to SEAD vs the missile attack, resolve SAM suppression, then SAM attack, then the cruise missile attack itself.",
+              "html": "<p><strong>vs land target with cruise missiles (Soviet)</strong>: instead of bombing, Soviet strike units (ship black &amp; yellow missiles, all submarine missiles, all air) may attack a land target with cruise missiles (7.5.2). Dice rolled depend on the number of missiles fired, not the number of steps, and Soviet green-background missiles may fly 2 zones to the target. Allocate to SEAD vs the missile attack, resolve SAM suppression, then SAM attack, then the cruise missile attack itself.</p>\n",
+              "blocks": [
+                {
+                  "slug": "pa6:cruise-missile-attacks-vs-land-targets",
+                  "label": "Cruise Missile Attacks Vs. Land Targets"
+                },
+                {
+                  "slug": "pa6:sam-suppression-vs-cruise-missiles",
+                  "label": "SAM Suppression (SEAD) · vs Cruise Missiles"
+                },
+                {
+                  "slug": "pa6:sam-attack-vs-cruise-missiles",
+                  "label": "SAM Attack · vs Cruise Missiles"
+                },
+                {
+                  "slug": "pa6:cruise-missile-attack",
+                  "label": "Cruise Missile Attack"
                 }
               ]
             },
